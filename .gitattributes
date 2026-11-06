@@ -1,0 +1,3 @@
+*.json  diff=json
+*.gz    binary
+*.xlsx  binary
