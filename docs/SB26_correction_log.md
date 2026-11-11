@@ -95,3 +95,19 @@ Every atlas record with a GWM marker was checked against the positions of its ow
 | Saini et al. (2022) Mol Breed | meta-QTL source, no records | not added: the atlas does not keep meta-QTL |
 
 The Xfcp618 primers in Reddy et al. 2008 give no exact product on RefSeq v1.0 (the marker is dominant for the T. dicoccoides allele); Xpsp3000 amplifies at 1B 5.14 Mb.
+
+## Part 4. Septoria tritici blotch (STB) batch, Nov 2026
+
+Script: scripts/curation/stb44.py (records in stb44_recs.py; Riaz/Teagasc Table 5 in stb44_riaz_table5.json).
+
+- 174 new records S44-001 to S44-174 (grade A 62, B 28, C 45, D 39) replace 93 older STB records from 22 sources, which were deleted.
+- 19 sources added or re-keyed with corrected citations (Arraiano2007PP, Ghaffary2011TAG, Ghaffary2012TAG, Liu2013Eu, Ferjaoui2022BMC, LanglandsPerry2022 and 13 others).
+- Main corrections:
+  - Teagasc MAGIC (Riaz et al.) records had cM stored as Mb; now the printed Mbp intervals, highest-LOD dataset per QTL.
+  - Langlands-Perry 2022: 21 per-gene records merged into the 3 reported QTL.
+  - Chartrain 2005 "Stb12" corrected to Stb7 (probable).
+  - QStb.wai-3D moved from 3DS (Xgwm341) to 3DL (590.7-603.5 Mb).
+  - Stb9 placed at Xwmc317 (2BL, about 784 Mb); Stb3 placed on 7AS.
+- New in-silico PCR hits: gdm14 (6D 283.60 Mb), barc142 (5B 605.52 Mb).
+- Skipped: duplicate PDFs, theses that repeat the papers (Karlstedt, Cobertera, Harilal, Seed, Ghaffary), Saini 2022 (meta-QTL), Brown 2015 (review).
+- Not changed (outside this batch): A_STB_033 lists Stb17 on 3B; Stb17 is on 5AL.
