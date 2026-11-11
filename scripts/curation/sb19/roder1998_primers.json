@@ -1,0 +1,1870 @@
+{
+"gwm2": {
+"f": "CTGCAAGCCTGTGATCAACT",
+"r": "CATTCTCAAATGATCGAACA",
+"chrs": [
+"3A",
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm3": {
+"f": "GCAGCGGCACTGGTACATTT",
+"r": "AATATCGCATCACTATCCCA",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm4": {
+"f": "GCTGATGCATATAATGCTGT",
+"r": "CACTGTCTGTATCACTCTGCT",
+"chrs": [
+"4A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm5": {
+"f": "GCCAGCTACCTCGATACAACTC",
+"r": "AGAAAGGGCCAGGCTAGTAGT",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm6": {
+"f": "CGTATCACCTCCTAGCTAAACTAG",
+"r": "AGCCTTATCATGACCCTACCTT",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm10": {
+"f": "CGCACCATCTGTATCATTCTG",
+"r": "TGGTCGTACCAAAGTATACGG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm11": {
+"f": "GGATAGTCAGACAATTCTTGTG",
+"r": "GTGAATTGTGTCTTGTATGCTTCC",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm16": {
+"f": "GCTTGGACTAGCTAGAGTATCATAC",
+"r": "CAATCTTCAATTCTGTCGCACGG",
+"chrs": [
+"2B",
+"5D",
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm18": {
+"f": "TGGCGCCATGATTGCATTATCTTC",
+"r": "GGTTGCTGAAGAACCTTATTTAGG",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm30": {
+"f": "ATCTTAGCATAGAAGGGAGTGGG",
+"r": "TTCTGCACCCTGGGTGAT",
+"chrs": [
+"2D",
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm32": {
+"f": "TATGCCGAATTTGTGGACAA",
+"r": "TGCTTGGTCTTGAGCATCAC",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm33": {
+"f": "GGAGTCACACTTGTTTGTGCA",
+"r": "CACTGCACACCTAACTACCTGC",
+"chrs": [
+"1A",
+"1B",
+"1D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm37": {
+"f": "ACTTCATTGTTGATCTTGCATG",
+"r": "CGACGAATTCCCAGCTAAAC",
+"chrs": [
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm43": {
+"f": "CACCGACGGTTTCCCTAGAGT",
+"r": "GGTGAGTGCAAATGTCATGTG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm44": {
+"f": "GTTGAGCTTTTCAGTTCGGC",
+"r": "ACTGGCATCCACTGAGCTG",
+"chrs": [
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm46": {
+"f": "GCACGTGAATGGATTGGAC",
+"r": "TGACCCAATAGTGGTGGTCA",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm47": {
+"f": "TTGCTACCATGCATGACCAT",
+"r": "TTCACCTCGATTGAGGTCCT",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm52": {
+"f": "CTATGAGGCGGAGGTTGAAG",
+"r": "TGCGGTGCTCTTCCATTT",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm55": {
+"f": "GCATCTGGTACACTAGCTGCC",
+"r": "TCATGGATGCATCACATCCT",
+"chrs": [
+"6D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm60": {
+"f": "TGTCCTACACGGACCACGT",
+"r": "GCATTGACAGATGCACACG",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm63": {
+"f": "TCGACCTGATCGCCCCTA",
+"r": "CGCCCTGGGTGATGAATAGT",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm66": {
+"f": "CCAAAGACTGCCATCTTTCA",
+"r": "CATGACTAGCTAGGGTGTGACA",
+"chrs": [
+"4B",
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm67": {
+"f": "ACCACACAAACAAGGTAAGCG",
+"r": "CAACCCTCTTAATTTTGTTGGG",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm68": {
+"f": "AGGCCAGAATCTGGGAATG",
+"r": "CTCCCTAGATGGGAGAAGGG",
+"chrs": [
+"5B",
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm70": {
+"f": "AGTGGCTGGGAGAGTGTCAT",
+"r": "GCCCATTACCGAGGACAC",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm71": {
+"f": "GGCAGAGCAGCGAGACTC",
+"r": "CAAGTGGAGCATTAGGTACACG",
+"chrs": [
+"3D",
+"2A"
+],
+"src": "Roder 1998 Genetics",
+"genome_chrs": [
+"2A"
+]
+},
+"gwm72": {
+"f": "TGGTCCCTCTCCCTTTCTCT",
+"r": "ACAGAATTGAAGATTGTCGGTC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm77": {
+"f": "ACAAAGGTAAGCAGCACCTG",
+"r": "ACCCTCTTGCCCGTGTTG",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm88": {
+"f": "CACTACAACTATGCGCTCGC",
+"r": "TCCATTGGCTTCTCTCTCAA",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm95": {
+"f": "GATCAAACACACACCCCTCC",
+"r": "AATGCAAAGTGAAAAACCCG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm99": {
+"f": "AAGATGGACGTATGCATCACA",
+"r": "GCCATATTTGATGACGCATA",
+"chrs": [
+"1A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm106": {
+"f": "CTGTTCTTGCGTGGCATTAA",
+"r": "AATAAGGACACAATTGGGATGG",
+"chrs": [
+"1D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm107": {
+"f": "ATTAATACCTGAGGGAGGTGC",
+"r": "GGTCTCAGGAGCAAGAACAC",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm108": {
+"f": "CGACAATGGGGTCTTAGCAT",
+"r": "TGCACACTTAAATTACATCCGC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm111": {
+"f": "TCTGTAGGCTCTCTCCGACTG",
+"r": "ACCTGATCAGATCCCACTCG",
+"chrs": [
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm112": {
+"f": "CTAAACACGACAGCGGTGG",
+"r": "GATATGTGAGCAGCGGTCAG",
+"chrs": [
+"3B",
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm113": {
+"f": "ATTCGAGGTTAGGAGGAAGAGG",
+"r": "GAGGGTCGGCCTATAAGACC",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm114": {
+"f": "ACAAACAGAAAATCAAAACCCG",
+"r": "ATCCATCGCCATTGGAGTG",
+"chrs": [
+"3B",
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm120": {
+"f": "GATCCACCTTCCTCTCTCTC",
+"r": "GATTATACTGGTGCCGAAAC",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm121": {
+"f": "TCCTCTACAAACAAACACAC",
+"r": "CTCGCAACTAGAGGTGTATG",
+"chrs": [
+"5D",
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm122": {
+"f": "GGGTGGGAGAAAGGAGATG",
+"r": "AAACCATCCTCCATCCTGG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm124": {
+"f": "GCCATGGCTATCACCCAG",
+"r": "ACTGTTCGGTGCAATTTGAG",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm126": {
+"f": "CACACGCTCCACCATGAC",
+"r": "GTTGAGTTGATGCGGGAGG",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm129": {
+"f": "TCAGTGGGCAAGCTACACAG",
+"r": "AAAACTTAGTAGCCGCGT",
+"chrs": [
+"2B",
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm130": {
+"f": "AGCTCTGCTTCACGAGGAAG",
+"r": "CTCCTCTTTATATCGCGTCCC",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm131": {
+"f": "AATCCCCACCGATTCTTCTC",
+"r": "AGTTCGTGGGTCTCTGATGG",
+"chrs": [
+"1B",
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm132": {
+"f": "TACCAAATCGAAACACATCAGG",
+"r": "CATATCAAGGTCTCCTTCCCC",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm133": {
+"f": "ATCTAAACAAGACGGCGGTG",
+"r": "ATCTGTGACAACCGGTGAGA",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm135": {
+"f": "TGTCAACATCGTTTTGAAAAGG",
+"r": "ACACTGTCAACCTGGCAATG",
+"chrs": [
+"1A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm136": {
+"f": "GACAGCACCTTGCCCTTTG",
+"r": "CATCGGCAACATGCTCATC",
+"chrs": [
+"1A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm140": {
+"f": "ATGGAGATATTTGGCCTACAAC",
+"r": "CTTGACTTCAAGGCGTGACA",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm146": {
+"f": "CCAAAAAAACTGCCTGCATG",
+"r": "CTCTGGCATTGCTCCTTGG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm148": {
+"f": "GTGAGGCAGCAAGAGAGAAA",
+"r": "CAAAGCTTGACTCAGACCAAA",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm149": {
+"f": "CATTGTTTTCTGCCTCTAGCC",
+"r": "CTAGCATCGAACCTGAACAAG",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm153": {
+"f": "GATCTCGTCACCCGGAATTC",
+"r": "TGGTAGAGAAGGACGGAGAG",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm154": {
+"f": "TCACAGAGAGAGAGGGAGGG",
+"r": "ATGTGTACATGTTGCCTGCA",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm155": {
+"f": "CAATCATTTCCCCCTCCC",
+"r": "AATCATTGGAAATCCATATGCC",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm156": {
+"f": "CCAACCGTGCTATTAGTCATTC",
+"r": "CAATGCAGGCCCTCCTAAC",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm157": {
+"f": "GTCGTCGCGGTAAGCTTG",
+"r": "GAGTGAACACACGAGGCTTG",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm159": {
+"f": "GGGCCAACACTGGAACAC",
+"r": "GCAGAAGCTTGTTGGTAGGC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm160": {
+"f": "TTCAATTCAGTCTTGGCTTGG",
+"r": "CTGCAGGAAAAAAAGTACACCC",
+"chrs": [
+"4A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm161": {
+"f": "GATCGAGTGATGGCAGATGG",
+"r": "TGTGAATTACTTGGACGTGG",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm162": {
+"f": "AGTGGATCGACAAGGCTCTG",
+"r": "AGAAGAAGCAAAGCCTTCCC",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm164": {
+"f": "ACATTTCTCCCCCATCGTC",
+"r": "TTGTAAACAAATCGCATGCG",
+"chrs": [
+"1A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm165": {
+"f": "TGCAGTGGTCAGATGTTTCC",
+"r": "CTTTTCTTTCAGATTGCGCC",
+"chrs": [
+"4A",
+"4B",
+"4D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm169": {
+"f": "ACCACTGCAGAGAACACATACG",
+"r": "GTGCTCTGCTCTAAGTGTGGG",
+"chrs": [
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm174": {
+"f": "GGGTTCCTATCTGGTAAATCCC",
+"r": "GACACACATGTTCCTGCCAC",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm179": {
+"f": "AAGTTGAGTTGATGCGGGAG",
+"r": "CCATGACCAGCATCCACTC",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm181": {
+"f": "TCATTGGTAATGAGGAGAGA",
+"r": "GAACCATTCATGTGCATGTC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm182": {
+"f": "TGATGTAGTGAGCCCATAGGC",
+"r": "TTGCACACAGCCAAATAAGG",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm183": {
+"f": "GTCTTCCCATCTCGCAAGAG",
+"r": "CTCGACTCCCATGTGGATG",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm186": {
+"f": "GCAGAGCCTGGTTCAAAAAG",
+"r": "CGCCTCTAGCGAGAGCTATG",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm190": {
+"f": "GTGCTTGCTGAGCTATGAGTC",
+"r": "GTGCCACGTGGTACCTTTG",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm191": {
+"f": "AGACTGTTGTTTGCGGGC",
+"r": "TAGCACGACAGTTGTATGCATG",
+"chrs": [
+"2B",
+"5B",
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm192": {
+"f": "GGTTTTCTTTCAGATTGCGC",
+"r": "CGTTGTCTAATCTTGCCTTGC",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm193": {
+"f": "CTTTGTGCACCTCTCTCTCC",
+"r": "AATTGTGTTGATGATTTGGGG",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm194": {
+"f": "GATCTGCTCTACTCTCCTCC",
+"r": "CGACGCAGAACTTAAACAAG",
+"chrs": [
+"4D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm205": {
+"f": "CGACCCGGTTCACTTCAG",
+"r": "AGTCGCCGTTGTATAGTGCC",
+"chrs": [
+"5A",
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm210": {
+"f": "TGCATCAAGAATAGTGTGGAAG",
+"r": "TGAGAGGAAGGCTCACACCT",
+"chrs": [
+"2B",
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm212": {
+"f": "AAGCAACATTTGCTGCAATG",
+"r": "TGCAGTTAACTTGTTGAAAGGA",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm213": {
+"f": "TGCCTGGCTCGTTCTATCTC",
+"r": "CTAGCTTAGCACTGTCGCCC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm219": {
+"f": "GATGAGCGACACCTAGCCTC",
+"r": "GGGGTCCGAGTCCACAAC",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm232": {
+"f": "ATCTCAACGGCAAGCCG",
+"r": "CTGATGCAAGCAATCCACC",
+"chrs": [
+"1D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm233": {
+"f": "TCAAAACATAAATGTTCATTGGA",
+"r": "TCAACCGTGTGTAATTTTGTCC",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm234": {
+"f": "GAGTCCTGATGTGAAGCTGTTG",
+"r": "CTCATTGGGGTGTGTACGTG",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm247": {
+"f": "GCAATCTTTTTTCTGACCACG",
+"r": "ATGTGCATGTCGGACGC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm249": {
+"f": "CAAATGGATCGAGAAAGGGA",
+"r": "CTGCCATTTTTCTGGATCTACC",
+"chrs": [
+"2A",
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm251": {
+"f": "CAACTGGTTGCTACACAAGCA",
+"r": "GGGATGTCTGTTCCATCTTAG",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm257": {
+"f": "AGAGTGCATGGTGGGACG",
+"r": "CCAAGACGATGCTGAAGTCA",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm259": {
+"f": "AGGGAAAAGACATCTTTTTTTTC",
+"r": "CGACCGACTTCGGGTTC",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm260": {
+"f": "GCCCCCTTGCACAATC",
+"r": "CGCAGCTACAGGAGGCC",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm261": {
+"f": "CTCCCTGTACGCCTAAGGC",
+"r": "CTCGCGCTACTAGCCATTG",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm264": {
+"f": "GAGAAACATGCCGAACAACA",
+"r": "GCATGCATGAGAATAGGAACTG",
+"chrs": [
+"1B",
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm265": {
+"f": "TGTTGCGGATGGTCACTATT",
+"r": "GAGTACACATTTGGCCTCTGC",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm268": {
+"f": "AGGGGATATGTTGTCACTCCA",
+"r": "TTATGTGATTGCGTACGTACCC",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm269": {
+"f": "TGCATATAAACAGTCACACACCC",
+"r": "TTTGAGCTCCAAAGTGAGTTAGC",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm271": {
+"f": "CAAGATCGTGGAGCCAGC",
+"r": "AGCTGCTAGCTTTTGGGACA",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm272": {
+"f": "TGCTCTTTGGCGAATATATGG",
+"r": "GTTCAAAACAAATTAAAAGGCCC",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm273": {
+"f": "ATTGGACGGACAGATGCTTT",
+"r": "AGCAGTGAGGAAGGGGATC",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm274": {
+"f": "AACTTGCAAAACTGTTCTGA",
+"r": "TATTTGAAGCGGTTTGATTT",
+"chrs": [
+"1B",
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm275": {
+"f": "AATTTTCTTCCTCACTTATTCT",
+"r": "AACAAAAAATTAGGGCC",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm276": {
+"f": "ATTTGCCTGAAGAAAATATT",
+"r": "AATTTCACTGCATACACAAG",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm282": {
+"f": "TTGGCCGTGTAAGGCAG",
+"r": "TCTCATTCACACACAACACTAGC",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm284": {
+"f": "AATGAAAAAACACTTGCGTGG",
+"r": "GCACATTTTTCACTTTCGGG",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm285": {
+"f": "ATGACCCTTCTGCCAAACAC",
+"r": "ATCGACCGGGATCTAGCC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm291": {
+"f": "CATCCCTACGCCACTCTGC",
+"r": "AATGGTATCTATTCCGACCCG",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm292": {
+"f": "TCACCGTGGTCACCGAC",
+"r": "CCACCGAGCCGATAATGTAC",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm293": {
+"f": "TACTGGTTCACATTGGTGCG",
+"r": "TCGCCATCACTCGTTCAAG",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm294": {
+"f": "GGATTGGAGTTAAGAGAGAACCG",
+"r": "GCAGAGTGATCAATGCCAGA",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm295": {
+"f": "GTGAAGCAGACCCACAACAC",
+"r": "GACGGCTGCGACGTAGAG",
+"chrs": [
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm296": {
+"f": "AATTCAACCTACCAATCTCTG",
+"r": "GCCTAATAAACTGAAAACGAG",
+"chrs": [
+"2D",
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm297": {
+"f": "ATCGTCACGTATTTTGCAATG",
+"r": "TGCGTAAGTCTAGCATTTTCTG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm299": {
+"f": "ACTACTTAGGCCTCCCGCC",
+"r": "TGACCCACTTGCAATTCATC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm301": {
+"f": "GAGGAGTAAGACACATGCCC",
+"r": "GTGGCTGGAGATTCAGGTTC",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm302": {
+"f": "GCAAGAAGCAACAGCAGTAAC",
+"r": "CAGATGCTCTTCTCTGCTGG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm304": {
+"f": "AGGAAACAGAAATATCGCGG",
+"r": "AGGACTGTGGGGAATGAATG",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm311": {
+"f": "TCACGTGGAAGACGCTCC",
+"r": "CTACGTGCACCACCATTTTG",
+"chrs": [
+"2A",
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm312": {
+"f": "ATCGCATGATGCACGTAGAG",
+"r": "ACATGCATGCCTACCTAATGG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm314": {
+"f": "AGGAGCTCCTCTGTGCCAC",
+"r": "TTCGGGACTCTCTTCCCTG",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm319": {
+"f": "GGTTGCTGTACAAGTGTTCACG",
+"r": "CGGGTGCTGTGTGTAATGAC",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm320": {
+"f": "CGAGATACTATGGAAGGTGAGG",
+"r": "ATCTTTGCAAGGATTGCCC",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm325": {
+"f": "TTTCTTCTGTCGTTCTCTTCCC",
+"r": "TTTTTACGCGTCAACGACG",
+"chrs": [
+"6D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm328": {
+"f": "GCAATCCACGAGAAGAGAGG",
+"r": "CACAAACTCTTGACATGTGCG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm332": {
+"f": "AGCCAGCAAGTCACCAAAAC",
+"r": "AGTGCTGGAAAGAGTAGTGAAGC",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm333": {
+"f": "GCCCGGTCATGTAAAACG",
+"r": "TTTCAGTTTGCGTTAAGCTTTG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm334": {
+"f": "AATTTCAAAAAGGAGAGAGA",
+"r": "AACATGTGTTTTTAGCTATC",
+"chrs": [
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm335": {
+"f": "CGTACTCCACTCCACACGG",
+"r": "CGGTCCAAGTGCTACCTTTC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm337": {
+"f": "CCTCTTCCTCCCTCACTTAGC",
+"r": "TGCTAACTGGCCTTTGCC",
+"chrs": [
+"1D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm339": {
+"f": "AATTTTCTTCCTCACTTATT",
+"r": "AAACGAACAACCACTCAATC",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm340": {
+"f": "GCAATCTTTTTTCTGACCACG",
+"r": "ACGAGGCAAGAACACACATG",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm341": {
+"f": "TTCAGTGGTAGCGGTCGAG",
+"r": "CCGACATCTCATGGATCCAC",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm344": {
+"f": "CAAGGAAATAGGCGGTAACT",
+"r": "ATTTGAGTCTGAAGTTTGCA",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm349": {
+"f": "GGCTTCCAGAAAACAACAGG",
+"r": "ATCGGTGCGTACCATCCTAC",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm350": {
+"f": "ACCTCATCCACATGTTCTACG",
+"r": "GCATGGATAGGACGCCC",
+"chrs": [
+"7A",
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm356": {
+"f": "AGCGTTCTTGGGAATTAGAGA",
+"r": "CCAATCAGCCTGCAACAAC",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm357": {
+"f": "TATGGTCAAAGTTGGACCTCG",
+"r": "AGGCTGCAGCTCTTCTTCAG",
+"chrs": [
+"1A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm358": {
+"f": "AAACAGCGGATTTCATCGAG",
+"r": "TCCGCTGTTGTTCTGATCTC",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm359": {
+"f": "CTAATTGCAACAGGTCATGGG",
+"r": "TACTTGTGTTCTGGGACAATGG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm361": {
+"f": "GTAACTTGTTGCCAAAGGGG",
+"r": "ACAAAGTGGCAAAAGGAGACA",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm368": {
+"f": "CCATTTCACCTAATGCCTGC",
+"r": "AATAAAACCATGAGCTCACTTGC",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm369": {
+"f": "CTGCAGGCCATGATGATG",
+"r": "ACCGTGGGTGTTGTGAGC",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm371": {
+"f": "GACCAAGATATTCAAACTGGCC",
+"r": "AGCTCAGCTTGCTTGGTACC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm372": {
+"f": "AATAGAGCCCTGGGACTGGG",
+"r": "GAAGGACGACATTCCACCTG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm374": {
+"f": "ATAGTGTGTTGCATGCTGTGTG",
+"r": "TCTAATTAGCGTTGGCTGCC",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm376": {
+"f": "GGGCTAGAAAACAGGAAGGC",
+"r": "TCTCCCGGAGGGTAGGAG",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm382": {
+"f": "GTCAGATAACGCCGTCCAAT",
+"r": "CTACGTGCACCACCATTTTG",
+"chrs": [
+"2A",
+"2B",
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm383": {
+"f": "ACGCCAGTTGATCCGTAAAC",
+"r": "GACATCAATAACCGTGGATGG",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm388": {
+"f": "CTACAATTCGAAGGAGAGGGG",
+"r": "CACCGCGTCAACTACTTAAGC",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm389": {
+"f": "ATCATGTCGATCTCCTTGACG",
+"r": "TGCCATGCACATTAGCAGAT",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm391": {
+"f": "ATAGCGAAGTCTCCCTACTCCA",
+"r": "ATGTGCATGTCGGACGC",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm397": {
+"f": "TGTCATGGATTATTTGGTCGG",
+"r": "CTGCACTCTCGGTATACCAGC",
+"chrs": [
+"4A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm400": {
+"f": "GTGCTGCCACCACTTGC",
+"r": "TGTAGGCACTGCTTGGGAG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm403": {
+"f": "CGACATTGGCTTCGGTG",
+"r": "ATAAAACAGTGCGGTCCAGG",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm408": {
+"f": "TCGATTTATTTGGGCCACTG",
+"r": "GTATAATTCGTTCACAGCACGC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm410": {
+"f": "GCTTGAGACCGGCACAGT",
+"r": "CGAGACCTTGAGGGTCTAGA",
+"chrs": [
+"2B",
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm413": {
+"f": "TGCTTGTCTAGATTGCTTGGG",
+"r": "GATCGTCTCGTCCTTGGCA",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm415": {
+"f": "GATCTCCCATGTCCGCC",
+"r": "CGACAGTCGTCACTTGCCTA",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm425": {
+"f": "GAGCCCACAAGCTGGCA",
+"r": "TCGTTCTCCCAAGGCTTG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm427": {
+"f": "AAACTTAGAACTGTAATTTCAGA",
+"r": "AGTGTGTTCATTTGACAGTT",
+"chrs": [
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm428": {
+"f": "CGAGGCAGCGAGGATTT",
+"r": "TTCTCCACTAGCCCCGC",
+"chrs": [
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm429": {
+"f": "TTGTACATTAAGTTCCCATTA",
+"r": "TTTAAGGACCTACATGACAC",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm437": {
+"f": "GATCAAGACTTTTGTATCTCTC",
+"r": "GATGTCCAACAGTTAGCTTA",
+"chrs": [
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm443": {
+"f": "GGGTCTTCATCCGGAACTCT",
+"r": "CCATGATTTATAAATTCCACC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm445": {
+"f": "TTTGTTGGGGGTTAGGATTAG",
+"r": "CCTTAACACTTGCTGGTAGTGA",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm448": {
+"f": "AAACCATATTGGGAGGAAAGG",
+"r": "CACATGGCATCACATTTGTG",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm455": {
+"f": "ATTCGGTTCGCTAGCTACCA",
+"r": "ACGGAGAGCAACCTGCC",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm456": {
+"f": "TCTGAACATTACACAACCCTGA",
+"r": "TGCTCTCTCTGAACCTGAAGC",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm458": {
+"f": "AATGGCAATTGGAAGACATAGC",
+"r": "TTCGCAATGTTGATTTGGC",
+"chrs": [
+"1D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm459": {
+"f": "ATGGAGTGGTCACACTTTGAA",
+"r": "AGCTTCTCTGACCAACTTCTCG",
+"chrs": [
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm469": {
+"f": "CAACTCAGTGCTCACACAACG",
+"r": "CGATAACCACTCATCCACACC",
+"chrs": [
+"6D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm471": {
+"f": "CGGCCCTATCATGGCTG",
+"r": "GCTTGCAAGTTCCATTTTGC",
+"chrs": [
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm473": {
+"f": "TCATACGGGTATGGTTGGAC",
+"r": "CACCCCCTTGTTGGTCAC",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm480": {
+"f": "TGCTGCTACTTGTACAGAGGAC",
+"r": "CCGAATTGTCCGCCATAG",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm484": {
+"f": "ACATCGCTCTTCACAAACCC",
+"r": "AGTTCCGGTCATGGCTAGG",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm493": {
+"f": "TTCCCATAACTAAAACCGCG",
+"r": "GGAACATCATTTCTGGACTTTG",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm494": {
+"f": "ATTGAACAGGAAGACATCAGGG",
+"r": "TTCCTGGAGCTGTCTGGC",
+"chrs": [
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm495": {
+"f": "GAGAGCCTCGCGAAATATAGG",
+"r": "TGCTTCTGGTGTTCCTTCG",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm497": {
+"f": "GTAGTGAAGACAAGGGCATT",
+"r": "CCGAAAGTTGGGTGATATAC",
+"chrs": [
+"1A",
+"2A",
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm498": {
+"f": "GGTGGTATGGACTATGGACACT",
+"r": "TTTGCATGGAGGCACATACT",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm499": {
+"f": "ACTTGTATGCTCCATTGATTGG",
+"r": "GGGGAGTGGAAACTGCATAA",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm501": {
+"f": "GGCTATCTCTGGCGCTAAAA",
+"r": "TCCACAAACAAGTAGCGCC",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm508": {
+"f": "GTTATAGTAGCATATAATGGCC",
+"r": "GTGCTGCCATGATATTT",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm512": {
+"f": "AGCCACCATCAGCAAAAATT",
+"r": "GAACATGAGCAGTTTGGCAC",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm513": {
+"f": "ATCCGTAGCACCTACTGGTCA",
+"r": "GGTCTGTTCATGCCACATTG",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm515": {
+"f": "AACACAATGGCAAATGCAGA",
+"r": "CCTTCCTAGTAAGTGTGCCTCA",
+"chrs": [
+"2A",
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm518": {
+"f": "AATCACAACAAGGCGTGACA",
+"r": "CAGGGTGGTGCATGCAT",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm526": {
+"f": "CAATAGTTCTGTGAGAGCTGCG",
+"r": "CCAACCCAAATACACATTCTCA",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm537": {
+"f": "ACATAATGCTTCCTGTGCACC",
+"r": "GCCACTTTTGTGTCGTTCCT",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm538": {
+"f": "GCATTTCGGGTGAACCC",
+"r": "GTTGCATGTATACGTTAAGCGG",
+"chrs": [
+"4B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm539": {
+"f": "CTGCTCTAAGATTCATGCAACC",
+"r": "GAGGCTTGTGCCCTCTGTAG",
+"chrs": [
+"2D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm540": {
+"f": "TCTCGCTGTGAAATCCTATTTC",
+"r": "AGGCATGGATAGAGGGGC",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm544": {
+"f": "TAGAATTCTTTATGGGGTCTGC",
+"r": "AGGATTCCAATCCTTCAAAATT",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm547": {
+"f": "GTTGTCCCTATGAGAAGGAACG",
+"r": "TTCTGCTGCTGTTTTCATTTAC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm550": {
+"f": "CCCACAAGAACCTTTGAAGA",
+"r": "CATTGTGTGTGCAAGGCAC",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm554": {
+"f": "TGCCCACAACGGAACTTG",
+"r": "GCAACCACCAAGCACAAAGT",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm558": {
+"f": "GGGATTGCATATGAGACAACG",
+"r": "TGCCATGGTTGTAGTAGCCA",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm565": {
+"f": "GCGTCAGATATGCCTACCTAGG",
+"r": "AGTGAGTTAGCCCTGAGCCA",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm566": {
+"f": "TCTGTCTACCCATGGGATTTG",
+"r": "CTGGCTTCGAGGTAAGCAAC",
+"chrs": [
+"3B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm569": {
+"f": "GGAAACTTATTGATTGAAAT",
+"r": "TCAATTTTGACAGAAGAATT",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm570": {
+"f": "TCGCCTTTTACAGTCGGC",
+"r": "ATGGGTAGCTGAGAGCCAAA",
+"chrs": [
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm573": {
+"f": "AAGAGATAACATGCAAGAAA",
+"r": "TTCAAATATGTGGGAACTAC",
+"chrs": [
+"7A",
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm577": {
+"f": "ATGGCATAATTTGGTGAAATTG",
+"r": "TGTTTCAAGCCCAACTTCTATT",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm582": {
+"f": "AAGCACTACGAAAATATGAC",
+"r": "TCTTAAGGGGTGTTATCATA",
+"chrs": [
+"1B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm583": {
+"f": "TTCACACCCAACCAATAGCA",
+"r": "TCTAGGCAGACACATGCCTG",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm595": {
+"f": "GCATAGCATCGCATATGCAT",
+"r": "GCCACGCTTGGACAAGATAT",
+"chrs": [
+"5A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm601": {
+"f": "ATCGAGGACGACATGAAGGT",
+"r": "TTAAGTTGCTGCCAATGTTCC",
+"chrs": [
+"4A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm604": {
+"f": "TATATAGTTCAATATGACCCG",
+"r": "ATCTTTTGAACCAAATGTG",
+"chrs": [
+"5B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm608": {
+"f": "ACATTGTGTGTGCGGCC",
+"r": "GATCCCTCTCCGCTAGAAGC",
+"chrs": [
+"2D",
+"4D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm609": {
+"f": "GCGACATGACCATTTTGTTG",
+"r": "GATATTAAATCTCTCTATGTGTG",
+"chrs": [
+"4D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm610": {
+"f": "CTGCCTTCTCCATGGTTTGT",
+"r": "AATGGCCAAAGGTTATGAAGG",
+"chrs": [
+"4A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm611": {
+"f": "CATGGAAACACCTACCGAAA",
+"r": "CGTGCAAATCATGTGGTAGG",
+"chrs": [
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm613": {
+"f": "CCGACCCGACCTACTTCTCT",
+"r": "TTGCCGTCGTAGACTGG",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm614": {
+"f": "GATCACATGCATGCGTCATG",
+"r": "TTTTACCGTTCCGGCCTT",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm617": {
+"f": "GATCTTGGCGCTGAGAGAGA",
+"r": "CTCCGATGGATTACTCGCAC",
+"chrs": [
+"5A",
+"6A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm624": {
+"f": "TTGATATTAAATCTCTCTATGTG",
+"r": "AATTTTATTTGAGCTATGCG",
+"chrs": [
+"4D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm626": {
+"f": "GATCTAAAATGTTATTTTCTCTC",
+"r": "TGACTATCAGCTAAACGTGT",
+"chrs": [
+"6B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm630": {
+"f": "GTGCCTGTGCCATCGTC",
+"r": "CGAAAGTAACAGCGCAGTGA",
+"chrs": [
+"2B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm635": {
+"f": "TTCCTCACTGTAAGGGCGTT",
+"r": "CAGCCTTAGCCTTGGCG",
+"chrs": [
+"7A",
+"7D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm636": {
+"f": "CGGTAGTTTTTAGCAAAGAG",
+"r": "CCTTACAGTTCTTGGCAGAA",
+"chrs": [
+"2A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm637": {
+"f": "AAAGAGGTCTGCCGCTAACA",
+"r": "TATACGGTTTTGTGAGGGGG",
+"chrs": [
+"4A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm639": {
+"f": "CTCTCTCCATTCGGTTTTCC",
+"r": "CATGCCCCCCTTTTCTG",
+"chrs": [
+"5A",
+"5B",
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm642": {
+"f": "ACGGCGAGAAGGTGCTC",
+"r": "CATGAAAGGCAAGTTCGTCA",
+"chrs": [
+"1D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm644": {
+"f": "GTGGGTCAAGGCCAAGG",
+"r": "AGGAGTAGCGTGAGGGGC",
+"chrs": [
+"6B",
+"7B"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm645": {
+"f": "TGACCGGAAAAGGGCAGA",
+"r": "GCCCCTGCAGGAGTTTAAGT",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm654": {
+"f": "TGCTGATGTTGTAAGAAGGC",
+"r": "TGCGTCAGATATGCCTACCT",
+"chrs": [
+"5D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm664": {
+"f": "CAGTCAGTGCCGTTTAGCAA",
+"r": "AGCTTTGCTCTATTGGCGAG",
+"chrs": [
+"3D"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm666": {
+"f": "GCACCCACATCTTCGACC",
+"r": "TGCTGCTGGTCTCTGTGC",
+"chrs": [
+"1A",
+"5A",
+"7A"
+],
+"src": "Roder 1998 Genetics"
+},
+"gwm674": {
+"f": "TCGAGCGATTTTTCCTGC",
+"r": "TGACCGAGTTGACCAAAACA",
+"chrs": [
+"3A"
+],
+"src": "Roder 1998 Genetics"
+}
+}

@@ -15,7 +15,10 @@ import json, re, gzip, sys
 sys.path.insert(0, 'scripts/curation/sb19')
 import lift
 W = 'scripts/curation/sb19/'
-PCR = json.load(open(W + 'ispcr_res.json'))
+PCR = {}
+for f in ('ispcr_res.json', 'ispcr_res3.json', 'ispcr_roder.json'):   # ispcr_roder: GWM primers of Roder et al. 1998 (Genetics 149:2007)
+    for k, v in json.load(open(W + f)).items(): PCR.setdefault(k, []).extend(v)
+RODER = json.load(open(W + 'roder1998_primers.json'))
 MK = json.load(gzip.open('data/markerpos_all.json.gz'))
 LOG = []
 # positions from an earlier atlas session (primer search with mismatches); exact-match PCR here gives no product
@@ -37,7 +40,7 @@ def pos(m, ch, near=None):
         if len(hits) > 1 and near is None and max(h[1] for h in hits) - min(h[1] for h in hits) > 5:
             return None, '%s amplifies at %d sites on %s' % (m, len(hits), ch)
         return hits[0][1], 'in-silico PCR'
-    if PCR.get(k):   # primers amplify, but not on this chromosome: do not trust a dictionary copy
+    if PCR.get(k) and ch not in RODER.get(k, {}).get('chrs', []):   # primers amplify, but not on this chromosome: do not trust a dictionary copy
         return None, '%s amplifies only on %s' % (m, ','.join(sorted({h[0] for h in PCR[k]})))
     ent = MK.get(k, [])
     prim = {c for c, p, ref, src in ent if src == 'Zhao et al. 2019 J Genet'}

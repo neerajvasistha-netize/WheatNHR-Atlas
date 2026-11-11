@@ -1,0 +1,85 @@
+# Correction log: SNB and tan spot papers (Archive.zip) and Röder 1998 GWM primers
+
+November 2026. Positions are on IWGSC RefSeq v1.0 (atlas frame) with RefSeq v2.1 shown in the atlas. Scripts: `scripts/curation/sb26_fix.py`, `sb26_apply.py`, `r98_fix.py`, `r98_apply.py`.
+
+## Part 1. Septoria nodorum blotch and tan spot papers
+
+The zip held 29 PDFs, which are 26 unique papers (Abeysekara 2011/2012 appear three times, Gao 2015 twice, and Shi 2015.1 is the same file as Shi 2015b). Every QTL table was re-read. The 116 old atlas records from these papers were removed and replaced by 182 records (S26-001 to S26-182): grade A 34, B 44, C 58, D 46. All placed records have a RefSeq v2.1 position with flag ok, rechecked, reoriented_checked or v2.0_as_reported.
+
+### What was wrong in the old records
+
+| Paper | Problem found | Now |
+|---|---|---|
+| Lin et al. (2020), NIAB MAGIC | 19 "MTA" records stored cM values as Mb; wrong ends for 2A.3, 2A.4, 3A, 5B.1, 7D.3; 6A.2 peak was a cM value; QSnb.niab-2D.1 missing | 19 QTL from Table 3 bp positions (grade A). QSnb.niab-7D.3: the printed end, 724.13 Mb, lies beyond the end of 7D and is the 7A position of RAC875_c10022_23, so the locus sits at the 7D flank JD_c2708_1512 (grade B) |
+| Lin et al. (2021), BMWpop MAGIC | 3 records were Lin 2020 loci; point positions wrong; 5 QTL missing; citation year shown as 2020 | 10 QTL from Table 2 bp (grade A), new citation key Lin2021TAG |
+| Singh et al. (2019) | positions not from the paper | 7 tan spot and 5 SNB QTL; XFCP393 flank placed at Tsn1 |
+| Schnurbusch et al. (2003) | incomplete | 13 QSng loci from the SSR flanks |
+| Shankar et al. (2008) | incomplete | 28 records, each with its peak marker |
+| Rivera-Burgos et al. (2022) | positions not from the paper | 12 records; Qncb.snl-5Ac at the printed v2.0 position (579.7-579.8 Mb); Ppd-A1 and Ppd-D1 loci at the genes; the rest unplaced (markers only in Fig. 2) |
+| Czembor et al. (2019) | positions not checked | 5 QTL |
+| Abeysekara et al. (2012) | 5 duplicate records for 2 QTL | QSnb.fcu-1AS at Snn4; QSnb.fcu-7AS at XBF293121 (primers from the paper, 7A 61.43 Mb) |
+| Chu et al. (2010) | incomplete | Snn1 and Tsn1 loci plus 5 QSnb.fcu loci |
+| Francki et al. (2011) | 2A loci merged | 5 records, 2A in 2004 and 2005 kept apart |
+| Lu and Lillemo (2014) | positions not checked | 8 closest-marker QTL |
+| Li et al. (2021) | IWB27379 record not in the paper's table | 5 R-gene MTAs at printed bp plus Xfcp623 at Tsn1 |
+| Thapa et al. (2016) | its only record was Schnurbusch's QSng.sfr-3BS | 1 record at Xgwm389 (0.81 Mb) |
+| Hu et al. (2019) | only record was another study's QTL named in the text | 20 tan spot and SNB QTL from Tables 2 and 3 |
+| Francki et al. (2018) | positions not checked | 2D glume QTL IWB31450-IWB21124 |
+| Ruud et al. (2017) | incomplete | 16 QTL (5 seedling, 11 field) |
+| Arseniuk et al. (2004) | wrong PVE | QSnl.ihar-6A at Xgwm570 (14% and 36%); putative 6DL QTL at barc175 |
+| Liu et al. (2004), Gonzalez-Hernandez et al. (2009), Reszka et al. (2007), Zhang et al. (2009), Shi et al. (2016) | not in the atlas | added with new citation keys |
+
+Kept unchanged after checking: Shi et al. 2015 (Snn7), Gao et al. 2015 (Snn6), Friesen et al. 2012 (Snn5).
+
+## Part 2. Röder et al. 1998 primers used across the atlas
+
+Sources: Röder et al. (1998) Genetics 149:2007-2023 (Appendix, 229 GWM primer sets, 279 loci) and Röder et al. (1998) Genome 41:278-283 (Table 2, group 2 deletion-bin markers; it adds 2A for GWM71). Primers are in `scripts/curation/sb19/roder1998_primers.json`; the exact-match in-silico PCR hits on RefSeq v1.0 are in `ispcr_roder.json`.
+
+- 149 of the 229 primer sets amplify on every chromosome Röder mapped them to, 19 on some, 61 on none (exact matches fail where Chinese Spring differs from the mapping parents).
+- For 8 markers the Röder sequence differs by one base from the primer used before; the Röder version gives the product for gwm140, gwm153, gwm294, gwm295 and gwm361.
+- Rule: a GWM product is used only on a chromosome that Röder et al. mapped that primer set to. A Röder-mapped homoeologous locus without an exact product (for example gwm165 on 4B) keeps its marker-table position instead of being rejected.
+- The resolvers for both batches now read these primers. The 19 spot blotch papers gave the same positions as before. In the SNB batch the only change was that QSng.sfr-4BL keeps its gwm165 position.
+- QSb.bhu-3B and QSb.bhu-7B (Chirya 3) stay unplaced. Their markers (gwm533, gwm263, gwm1043) are not in Röder 1998.
+
+### Atlas-wide check
+
+Every atlas record with a GWM marker was checked against the positions of its own markers. Meta-QTL projections (Liu 2020, Sharma 2024, Z_1228, Pundir 2023) were left out. A record was corrected when its position lay more than 5 Mb outside the span of its placed markers, or more than 20 Mb from its only placed marker. That gave 35 corrections, all in the Tong et al. (2024) rust compilation. Its v2.1 anchor points often sat on the wrong arm (for example QLr.hebau-2DS at 383 Mb, whereas Xgwm261 and Xgwm484 lie at 19.6 and 48.2 Mb). Each corrected record has a new id (R98-001 to R98-035), its note names the record it replaces, and the old record was deleted. Yr46 was placed at the cloned Lr67/Yr46 gene (TraesCS4D02G364400, 509.28 Mb).
+
+| New id | Locus | Chr | Old (v1.0 Mb) | New (v1.0 Mb) | Grade |
+|---|---|---|---|---|---|
+| R98-001 | QLr.B22-1A | 1A | 0.000 | 570.05 | C |
+| R98-002 | QLr.hbu-2BS.1 | 2B | 369.446 | 88.83-95.34 | B |
+| R98-003 | QLr.hebau-2DS | 2D | 383.283 | 19.62-48.17 | B |
+| R98-004 | Lr66 | 3A | 164.016 | 214.14 | C |
+| R98-005 | QLr.cim-3DC | 3D | 203.617 | 109.55 | C |
+| R98-006 | (unnamed, Schnurbusch et al) | 4B | 115.169 | 59.61 | C |
+| R98-007 | (unnamed, William et al) | 4B | 235.223 | 59.61 | C |
+| R98-008 | QLr.hebau-4B | 4B | 456.525 | 544.65-568.56 | B |
+| R98-009 | Lr25 | 4B | 456.525 | 568.56 | C |
+| R98-010 | QLr.ubo-7B.1 | 7B | 66.084 | 97.94 | C |
+| R98-011 | (unnamed, Schnurbusch et al) | 7B | 131.896 | 97.94 | C |
+| R98-012 | (unnamed, Christiansen et al) | 2A | 136.766 | 2.32-31.83 | B |
+| R98-013 | QYr.uga-2AS | 2A | 246.770 | 28.20 | C |
+| R98-014 | QYr.inra-2AL | 2A | 686.103 | 716.55 | C |
+| R98-015 | QYr.ucw-2BS | 2B | 190.765 | 73.62 | C |
+| R98-016 | QYrlu.cau-2BS2 | 2B | 312.608 | 100.85 | C |
+| R98-017 | QYr.caas-2BS.1 | 2B | 408.946 | 100.85 | C |
+| R98-018 | Yr41 | 2B | 652.880 | 95.34 | C |
+| R98-019 | QYr.caas-2DS | 2D | 364.089 | 12.36-19.62 | B |
+| R98-020 | QYr.cim-3DC | 3D | 203.617 | 109.55 | C |
+| R98-021 | QYrid.ui-4A | 4A | 413.373 | 51.14 | C |
+| R98-022 | Yr62 | 4B | 253.688 | 568.56 | C |
+| R98-023 | QYr.ufs-4B | 4B | 448.266 | 482.82-509.04 | B |
+| R98-024 | QYr.caas-4BL | 4B | 478.995 | 509.04-544.65 | B |
+| R98-025 | QYrus.vt-4BL | 4B | 478.995 | 509.04-544.65 | B |
+| R98-026 | QYrhm.nwafu-4B | 4B | 493.934 | 531.34-568.56 | B |
+| R98-027 | Yr46 | 4D | 231.652 | 509.28-509.28 | B |
+| R98-028 | Yr-tem-5B.1 | 5B | 398.893 | 315.53 | C |
+| R98-029 | QYr.inra-5BL.1 | 5B | 416.968 | 504.30 | C |
+| R98-030 | QYrco.wpg-5B | 5B | 416.968 | 504.30 | C |
+| R98-031 | (unnamed, Yuan et al) | 6A | 530.501 | 579.13 | C |
+| R98-032 | (unnamed, Christiansen et al) | 6B | 300.720 | 89.00 | C |
+| R98-033 | QYrpi.vt-6BL | 6B | 344.798 | 430.08 | C |
+| R98-034 | QYrst.wgp.6BS.1 | 6B | 716.144 | 44.50 | C |
+| R98-035 | QYr.sgi-7A.2 | 7A | 24.440 | 681.39 | C |
+
