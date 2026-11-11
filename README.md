@@ -1,4 +1,6 @@
-# WheatNHR-Atlas
+# WheatRLA (Wheat Resistance Loci Atlas)
+
+Formerly WheatNHR-Atlas; renamed in November 2026 because the atlas now also covers biotrophic, viral, bacterial and nematode diseases.
 
 A physical genomic atlas and private web database of wheat disease resistance loci.
 

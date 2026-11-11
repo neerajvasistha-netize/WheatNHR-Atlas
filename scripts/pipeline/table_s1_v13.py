@@ -9,7 +9,7 @@ M=json.load(open('/home/claude/atlas/merged_v13_lifted.json'))
 ASM=['RefSeq v2.1','RefSeq v1.0','Alchemy','ArinaLrFor','Jagger','Julius','Kariega','Lancer','Landmark','Mace','Norin 61','Paragon','Renan','Stanley','SY Mattis']
 F='Arial'; H=Font(name=F,bold=True,color='FFFFFF',size=10); HF=PatternFill('solid',fgColor='1F4E78'); base=Font(name=F,size=10)
 wb=Workbook(); ws=wb.active; ws.title='README'
-txt=['WheatNHR-Atlas Table S1, release 1.3 (draft, not released)',
+txt=['WheatRLA Table S1, release 1.3 (draft, not released)',
  'One row per report (gene, QTL, MTA, QTN). Published position and assembly are kept as given in the source; positions are also given on IWGSC RefSeq v2.1 (atlas frame), RefSeq v1.0 and 13 chromosome-level pangenome assemblies (Ensembl Plants release 63).',
  'Conversion: gene-anchor liftover (IWGSC v1.1 to v2.1 gene mapping; pangenome by CDS matching, minimap2, identity >= 95%, coverage >= 60%). Quality flags: ok; as_reported = position given on v2.1 in the paper; v2.0_as_reported = v2.0 position used directly (v2.1 keeps the v2.0 layout); reoriented_checked = segment reversed between v1.0 and v2.1, both ends confirmed from the nearest anchor genes; rechecked = recalculated from the nearest anchor genes on both sides; inverted = gene order reversed relative to Chinese Spring; other_chromosome = on another chromosome in that cultivar; wide_gap/few_anchors = approximate; unmapped.',
  'Curation: "atlas v1.2" = previous release; "hand" = curated from the paper; "auto" = automatically extracted from paper text (grade B), must be checked against the paper (column "text in paper").',
@@ -53,4 +53,4 @@ for w in (r2,s3):
 r2.column_dimensions['B'].width=28; r2.column_dimensions[L(hdr.index('citation')+1)].width=50
 s3.column_dimensions['B'].width=90
 r2.auto_filter.ref=r2.dimensions
-wb.save('/mnt/user-data/outputs/Table_S1_WheatNHR_Atlas_v1.3.xlsx'); print('saved',r2.max_row-1,'rows')
+wb.save('/mnt/user-data/outputs/Table_S1_WheatRLA_v1.3.xlsx'); print('saved',r2.max_row-1,'rows')
