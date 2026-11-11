@@ -31,6 +31,7 @@ def build(reports, sources, with_asm):
     removed = [r for r in reports if r not in keep]
     new = []
     for i, x in enumerate(R, 1):
+        if x['source'] == 'Vasistha2024SR': continue   # meta-QTL not kept in the atlas (user decision, 11 Nov 2026)
         r = {k: v for k, v in x.items() if k != 'conflict'}
         r['id'] = SID(i); r['curation'] = 'hand'
         r['source'] = RENAME.get(r['source'], r['source'])

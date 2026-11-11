@@ -1,6 +1,6 @@
 # Correction log: 19 spot blotch / leaf spot papers re-read (11 Nov 2026)
 
-Every locus below was re-read from the paper's own results table and placed on RefSeq v1.0 (or kept on v2.0 where the paper prints v2.0), then lifted to RefSeq v2.1. Records carry IDs `S19-001` to `S19-160`; the 67 records they replace are retired (marked `deleted` in the live database, removed from `data/merged_v13f.json`). Scripts: `scripts/curation/sb19_fix.py` (the records) and `sb19_apply.py` (the merge).
+Every locus below was re-read from the paper's own results table and placed on RefSeq v1.0 (or kept on v2.0 where the paper prints v2.0), then lifted to RefSeq v2.1. Records carry IDs `S19-001` to `S19-160` (S19-100 to S19-115, the Vasistha 2024 meta-QTL, were dropped); the 67 records they replace are retired (marked `deleted` in the live database, removed from `data/merged_v13f.json`). Scripts: `scripts/curation/sb19_fix.py` (the records) and `sb19_apply.py` (the merge).
 
 SSR markers were placed by exact-match in-silico PCR of their primers on the IWGSC RefSeq v1.0 chromosomes from Ensembl Plants (`scripts/curation/sb19/ispcr.py`, results in `ispcr_res.json`). A marker is used only if it amplifies on the chromosome the paper states.
 
@@ -21,7 +21,7 @@ SSR markers were placed by exact-match in-silico PCR of their primers on the IWG
 | Roy et al. 2021 | 9 | 11 | 0 / 5 / 4 / 2 |
 | Singh et al. 2016 | 2 | 2 | 0 / 1 / 1 / 0 |
 | Singh et al. 2018 | 2 | 13 | 0 / 1 / 10 / 2 |
-| Vasistha et al. 2024 | 7 | 16 | 0 / 7 / 4 / 5 |
+| Vasistha et al. 2024 | 7 | 0 (meta-QTL not kept) | – |
 | Zhang et al. 2020 | 1 | 1 | 1 / 0 / 0 / 0 |
 | Zhu et al. 2014 | 4 | 5 | 0 / 1 / 4 / 0 |
 | Bemister et al. 2019 | 5 | 7 | 0 / 2 / 5 / 0 |
@@ -40,7 +40,7 @@ SSR markers were placed by exact-match in-silico PCR of their primers on the IWG
 - **Roy et al. 2021**: the two largest-effect QTL were missing: BC 4D (PVE up to 12.2%) and CC 5A 331–332 cM (PVE up to 12.6%, now 564.5–565.4 Mb). The CC 5B QTL flanks place 193 Mb apart for a 3 cM interval and are left unplaced.
 - **Singh et al. 2018**: only two unplaced 4B/4D records existed; all 13 QTL added.
 - **Singh et al. 2016**: QSb.iiwbr-7B is called 7BL in the paper but both flanks (Xwmc758 164.6 Mb, Xwmc335 233.2 Mb) are on 7BS. Xwmc653 amplifies only on 3B, not 7D.
-- **Vasistha et al. 2024 (your paper)**: replaced the preprint records (5 unplaced MQTL plus two QTL names) with all 16 MQTL. **Two internal conflicts to check**: MQTL3-1B candidate genes (Table 2) sit at 16.9–17.9 Mb, but its Table 1 flanking markers map to 604.6–622.6 Mb (one listed gene, TraesCS1B02G389000, is also at 622.7 Mb); MQTL8-5A candidate genes sit at 657.8–659.5 Mb but flank Tdurum_contig56267_180 maps to 575.6 Mb. The atlas uses the candidate-gene window and flags the conflict in the note.
+- **Vasistha et al. 2024**: meta-QTL are not kept in the atlas (decision 11 Nov 2026). The 7 preprint records (Sharma & Vasistha 2022) were removed and the 16 MQTL were not added. Noted while reading: MQTL3-1B candidate genes (16.9–17.9 Mb) and MQTL8-5A genes (about 658 Mb) do not match the positions of their Table 1 flanking markers (604–623 Mb and 575.6 Mb).
 - **Bemister et al. 2019**: the atlas had five of its markers as separate *tan spot* records taken second-hand from Liu et al. 2020. The paper scored the field leaf spot complex, not tan spot. Replaced by its 3 leaf spot, 2 leaf rust and 2 stripe rust QTL. New disease category "Leaf spot complex".
 - **Iqbal et al. 2023**: not in the atlas; all 32 QTL added (RefSeq v2.0 positions as printed): leaf spot, leaf rust, stripe rust and common bunt.
 - **Zhu et al. 2014**: QSb.cim-3B flank corrected to 990937–1123330 (the old record used 1002801); PVE added; unanchored QSb.cim-14 added, chromosome inferred (6B) and flagged.
