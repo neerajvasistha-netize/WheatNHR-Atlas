@@ -83,3 +83,15 @@ Every atlas record with a GWM marker was checked against the positions of its ow
 | R98-034 | QYrst.wgp.6BS.1 | 6B | 716.144 | 44.50 | C |
 | R98-035 | QYr.sgi-7A.2 | 7A | 24.440 | 681.39 | C |
 
+
+## Part 3. Five further SNB sources (11 Nov 2026, `scripts/curation/sb31.py`)
+
+| Source | In the atlas before | Now |
+|---|---|---|
+| Cockram et al. (2015) G3, file Cockram2010.pdf | absent | Snn1 MAGIC QTL, 1B 0.17-2.10 Mb, peak Excalibur_c21898_1423 at 1.42 Mb (grade B); QSnn.niab-5A.1, 5A 679.49-702.46 Mb, peak BS00068108_51 (grade B) |
+| Reddy et al. (2008) Plant Genome | absent | Snn1 high-resolution map (0.46 cM, Xksud14.2-XBF293222), placed at the cloned Snn1 gene (grade B) |
+| Virdi et al. (2016) G3 | absent | 7 loci: QTs.fcu-2B at Tsc2 (grade C), QTs.fcu-4B (Xiwa2126-Xgwm113, wide), QTs.fcu-5B at Xgwm234, QTs.fcu-6B (Xiwa5148-Xiwa967), QSnb.fcu-5B at Tsn1 in both populations, LD5B QTs.fcu-5B unplaced (RFLP flanks) |
+| Running (2022) PhD dissertation, front matter and chapter 2 only | Snn5-B2 placed on 4B "by analogy" (V1644) | Snn5-B2 corrected to 2BS (the abstract says so); left unplaced because chapter 5 with the markers was not supplied |
+| Saini et al. (2022) Mol Breed | meta-QTL source, no records | not added: the atlas does not keep meta-QTL |
+
+The Xfcp618 primers in Reddy et al. 2008 give no exact product on RefSeq v1.0 (the marker is dominant for the T. dicoccoides allele); Xpsp3000 amplifies at 1B 5.14 Mb.
