@@ -111,3 +111,19 @@ Script: scripts/curation/stb44.py (records in stb44_recs.py; Riaz/Teagasc Table 
 - New in-silico PCR hits: gdm14 (6D 283.60 Mb), barc142 (5B 605.52 Mb).
 - Skipped: duplicate PDFs, theses that repeat the papers (Karlstedt, Cobertera, Harilal, Seed, Ghaffary), Saini 2022 (meta-QTL), Brown 2015 (review).
 - Not changed (outside this batch): A_STB_033 lists Stb17 on 3B; Stb17 is on 5AL.
+
+## Part 5. Tan spot batch (Archive_1.zip), Nov 2026
+
+Script: scripts/curation/ts52.py (records in ts52_recs.py). New in-silico PCR hits for 36 SSRs and three Tsc2 EST markers were added to sb19/ispcr_res3.json.
+
+- 116 new records S52-001 to S52-116 (grade A 15, B 31, C 44, D 26) replace 61 older records from 12 sources (Chu 2008, Chu 2010, Dinglasan 2021, Faris and Friesen 2005, Faris 2012, Kalia 2018, Kariyawasam 2016 and 2018, Li 2011, Liu 2017, Shankar 2017, Zou 2017).
+- New sources: Abeysekara 2010 (Tsc2), Effertz 2002 (Tsc1), Corsi 2020 (Tsc2 MAGIC QTL, printed v1.0 positions), Faris 2020 (Tsr7), Cheong 2004, Liu 2006 (SNB at Tsn1), Liu 2020 (race 2, durum; printed Mbp intervals), Singh 2008 (tsn2 and tsn5), Sun 2010. Zwart 2010 yellow spot QTL added to the existing Zwart source. Chu 2010 and Li 2011 now carry the correct year.
+- Main corrections:
+  - Dinglasan 2021: the old records used DArTseq marker IDs as Mb (for example 3033029 read as 3.03 Mb). Now placed at the gene models named in the paper (1A 4.66, 5B 339.92, 5D 152.75, 6A 609.25 Mb) and the printed 2B span (137.81-215.93 Mb).
+  - Faris and Friesen 2005 QTs.fcu-3BL placed at Tsr7 (3B 466.3-470.0 Mb), following the re-analysis by Faris et al. (2020); the old position used Xbarc248 (162 Mb).
+  - Tsc1-related QTL (Kariyawasam 2018, Liu 2017, Effertz 2002) placed at the fine-mapped Tsc1 interval; Tsn1-related QTL at the Tsn1 gene.
+  - Shankar 2017: 23 QTL from both populations (old atlas had 2 unplaced); 2A QTL set by wPt-9320 and IWA5893 because the other interval markers place inconsistently.
+  - Faris 2012 QTs.fcu-5D set at Xwmc215 because Xcfd183 amplifies only on 5DS.
+- Two wide-gap liftovers fixed with 90K marker pairs (as in Part 1).
+- Skipped: Chu 2007 (screening only), See 2023 (race survey), Liu 2020 meta-QTL and Saini 2021/2022 (meta-QTL), Stadlmeier 2019 and thesis, Hu 2019, Singh 2019, Liu 2004 and Virdi 2016 (already done), Bemister 2019 (re-read in batch 1), duplicate PDFs.
+- Open: tsn2/tsn5 rest on Xgwm285 (3B 273 Mb), which lies on proximal 3BS although the genes are reported on 3BL; Zwart QYls.lrc-5A rests on Xgwm443 (5AS) although the paper relates it to 5AL.
