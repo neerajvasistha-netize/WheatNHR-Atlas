@@ -130,7 +130,7 @@ Script: scripts/curation/ts52.py (records in ts52_recs.py). New in-silico PCR hi
 
 ## Part 6. Meta-QTL studies removed (user request, Nov 2026)
 
-Script: scripts/curation/mq53.py. 497 records removed, all from meta-QTL studies:
+Script: scripts/curation/mq53.py. 504 records removed, all from meta-QTL studies:
 - Liu et al. 2020 (tan spot meta-QTL, 215), Sharma et al. 2024 (powdery mildew meta-QTL, 278), Mao et al. 2010 (FHB QTL meta-analysis, 2);
-- the 2 meta-QTL records of Pundir et al. 2023.
+- from Pundir et al. 2023, its 2 meta-QTL and the 7 earlier loci it compiled (QCcn-1B, QCre.srd-1B, QCre-ma2A, QCre.pau-2A, Cre5, QCcn-3A, QCcn-2A); its own 111 QTL from HUW 468 x C 306 are kept.
 A first pass also removed 5 records from studies that are not meta-QTL studies (Lhamo et al. 2024, 3; Arruda et al. 2016, 1; Goudemand et al. 2013, 1). These were restored the same day.

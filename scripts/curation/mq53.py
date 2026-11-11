@@ -7,7 +7,8 @@ WHOLE = {'Liu2020MQTL_TS', 'Sharma2024FPS', 'V_Mao2010'}
 PART = {'Pundir2023BMC'}   # meta-QTL study; its MQTL records only (corrected: Lhamo 2024, Arruda 2016 and Goudemand 2013 are not meta-QTL studies and are kept)
 def is_meta(r):
     if r['source'] in WHOLE: return True
-    return r['source'] in PART and (r.get('cls') == 'MQTL' or re.search(r'MQTL|meta-QTL', r.get('name', ''), re.I) is not None)
+    # Pundir et al. 2023: keep only the QTL mapped in the paper's own HUW 468 x C 306 RILs (QCcnr.ccsu-*); drop its meta-QTL and the earlier loci it compiled
+    return r['source'] in PART and 'ccsu' not in r.get('name', '')
 def strip(reports):
     gone = [r['id'] for r in reports if is_meta(r)]
     return [r for r in reports if not is_meta(r)], gone
