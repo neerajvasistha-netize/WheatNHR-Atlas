@@ -128,9 +128,9 @@ Script: scripts/curation/ts52.py (records in ts52_recs.py). New in-silico PCR hi
 - Skipped: Chu 2007 (screening only), See 2023 (race survey), Liu 2020 meta-QTL and Saini 2021/2022 (meta-QTL), Stadlmeier 2019 and thesis, Hu 2019, Singh 2019, Liu 2004 and Virdi 2016 (already done), Bemister 2019 (re-read in batch 1), duplicate PDFs.
 - Open: tsn2/tsn5 rest on Xgwm285 (3B 273 Mb), which lies on proximal 3BS although the genes are reported on 3BL; Zwart QYls.lrc-5A rests on Xgwm443 (5AS) although the paper relates it to 5AL.
 
-## Part 6. Meta-QTL records removed (user request, Nov 2026)
+## Part 6. Meta-QTL studies removed (user request, Nov 2026)
 
-Script: scripts/curation/mq53.py. 502 records removed, as the atlas is to hold only primary mapping results:
-- whole meta-analysis sources: Liu et al. 2020 (tan spot MQTL, 215), Sharma et al. 2024 (powdery mildew, 278), Mao et al. 2010 (FHB, 2), and the Goudemand et al. 2013 meta-analysis locus (1);
-- MQTL records only, from papers that also report primary QTL: Pundir et al. 2023 (2), Lhamo et al. 2024 (3), Arruda et al. 2016 (1).
-Primary QTL and MTAs from those three papers are kept. The Vasistha 2024 meta-QTL records had already been removed earlier.
+Script: scripts/curation/mq53.py. 497 records removed, all from meta-QTL studies:
+- Liu et al. 2020 (tan spot meta-QTL, 215), Sharma et al. 2024 (powdery mildew meta-QTL, 278), Mao et al. 2010 (FHB QTL meta-analysis, 2);
+- the 2 meta-QTL records of Pundir et al. 2023.
+A first pass also removed 5 records from studies that are not meta-QTL studies (Lhamo et al. 2024, 3; Arruda et al. 2016, 1; Goudemand et al. 2013, 1). These were restored the same day.

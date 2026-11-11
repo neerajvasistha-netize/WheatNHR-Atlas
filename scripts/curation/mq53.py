@@ -3,8 +3,8 @@ Whole sources that are meta-analyses: Liu et al. 2020 (tan spot MQTL), Sharma et
 and the Goudemand et al. 2013 meta-analysis locus. In primary-data papers only the MQTL records are removed (Pundir 2023, Lhamo 2024,
 Arruda 2016). Writes data/merged_v13f.json, web/index.html (seed) and /home/claude/work/mq53_del.json."""
 import json, re
-WHOLE = {'Liu2020MQTL_TS', 'Sharma2024FPS', 'V_Mao2010', 'A_STB_014'}
-PART = {'Pundir2023BMC', 'Z_1228', 'A_FHB_024'}
+WHOLE = {'Liu2020MQTL_TS', 'Sharma2024FPS', 'V_Mao2010'}
+PART = {'Pundir2023BMC'}   # meta-QTL study; its MQTL records only (corrected: Lhamo 2024, Arruda 2016 and Goudemand 2013 are not meta-QTL studies and are kept)
 def is_meta(r):
     if r['source'] in WHOLE: return True
     return r['source'] in PART and (r.get('cls') == 'MQTL' or re.search(r'MQTL|meta-QTL', r.get('name', ''), re.I) is not None)
