@@ -146,3 +146,10 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Checked and unchanged: Li 2020, Liu 2017, Jamil 2018, Singh 2023, Kumar 2022, Tomar 2021 QTL, Ahirwar 2018, Singh 2020.
 - Black point records stay under "Spot blotch" with "(black point)" in the name, as for Li 2020 and Liu 2017.
 - Papers reviewed: 890.
+
+## Part 8. GWAS batch 7 (STB, SNB, tan spot folders), Nov 2026 (gw70.py)
+- 52 PDFs checked (37 distinct papers after duplicates). 21 were already in the atlas and were left unchanged.
+- 15 papers added (202 records, S70-001 to S70-202; grades A 136, B 40, C 4, D 22): Alemu 2021, Aouini 2025, Chaudhary 2025 (RefSeq v2.1), Kassie 2025, Kidane 2017, Mahboubi 2022, Mikaberidze 2025 (resistance MTA only), Odilbekov 2019, Yates 2019, Miedaner 2013 (unplaced), Seed 2023 thesis, Liu 2015, Phan 2018, Berisha 2024 (2 MTAs from text; RefSeq v2.0), Mandal 2024.
+- Mandal 2024 positions match the RefSeq v1.0 array SNP positions and are read as v1.0.
+- Reviewed, no loci added: Thauvin 2024 (positions only in Table S5), Juliana 2017 (genomic prediction only), Gao 2016 (pathogen GWAS), Altameemi 2021 thesis (same data as AlTameemi 2021), Wang 2025 preprint (published version already in atlas).
+- Papers reviewed: 890 -> 909.
