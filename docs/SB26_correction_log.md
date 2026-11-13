@@ -134,3 +134,15 @@ Script: scripts/curation/mq53.py. 497 records removed, all from meta-QTL studies
 - Liu et al. 2020 (tan spot meta-QTL, 215), Sharma et al. 2024 (powdery mildew meta-QTL, 278), Mao et al. 2010 (FHB QTL meta-analysis, 2);
 - from Pundir et al. 2023, its 2 meta-QTL only. Its own 111 QTL (HUW 468 x C 306) and the 7 earlier CCN loci it anchored physically (QCcn-1B, QCre.srd-1B, QCre-ma2A, QCre.pau-2A, Cre5, QCcn-3A, QCcn-2A) are kept, as the original studies are not yet in the atlas.
 A first pass also removed 5 records from studies that are not meta-QTL studies (Lhamo et al. 2024, 3; Arruda et al. 2016, 1; Goudemand et al. 2013, 1). These were restored the same day.
+
+## Part 7. Spot blotch, black point and leaf spot GWAS batch (GWAS_SB_1, GWAS_BPR, GWAS_LS), Nov 2026
+
+Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gurung 2014 and Bainsla 2020 were in two folders).
+- New papers (118 records S60-001 to S60-118, all grade A, positions printed in the papers): Bainsla et al. 2020 (25 MTAs, FarmCPU and MLMM), Aggarwal et al. 2026 (7 stable MTAs), Lv et al. 2020 (27 black point SNPs and 3 linkage QTL), Tang et al. 2022 (11 black point QTL), Iqbal et al. 2022 (37 QTL for common bunt, leaf rust, leaf spot and stripe rust, RefSeq v2.0).
+- Chen et al. 2025 (black point): the 5 auto-extracted records (one at 3A 0.87 Mb) replaced by the 6 QTL of Table 2.
+- Juliana et al. 2022: 5B_68806 was a line-break truncation of 5B_688063050 (688.06 Mb, not 0.07 Mb); 5B_687326022 added.
+- Grades corrected without moving positions: Juliana 2022 and Tomar 2021 GBS markers (position in marker name), Kamble 2023, Lozano-Ramirez 2022, Thirunarayanan 2024 and two Liu 2017 records raised to A (position printed); Gurung 2014 (25) and two Ayana 2018 records lowered to B (paper gives cM only).
+- Thirunarayanan et al. 2024: citation corrected (it read "P et al.").
+- Checked and unchanged: Li 2020, Liu 2017, Jamil 2018, Singh 2023, Kumar 2022, Tomar 2021 QTL, Ahirwar 2018, Singh 2020.
+- Black point records stay under "Spot blotch" with "(black point)" in the name, as for Li 2020 and Liu 2017.
+- Papers reviewed: 890.
