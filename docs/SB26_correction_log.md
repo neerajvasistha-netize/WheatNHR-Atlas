@@ -153,3 +153,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Mandal 2024 positions match the RefSeq v1.0 array SNP positions and are read as v1.0.
 - Reviewed, no loci added: Thauvin 2024 (positions only in Table S5), Juliana 2017 (genomic prediction only), Gao 2016 (pathogen GWAS), Altameemi 2021 thesis (same data as AlTameemi 2021), Wang 2025 preprint (published version already in atlas).
 - Papers reviewed: 890 -> 909.
+
+## Part 9. Position fixes from re-uploaded papers, Nov 2026
+- Manan et al. 2025 TAG (bacterial leaf streak; mn25.py, S80-001 to S80-009): all positions in the paper are on the durum Svevo v1 assembly, not Chinese Spring. The 5A MTAs moved from 657 to 698 Mb (RefSeq v1.0); 6A MTA to 1.50 Mb; QBls.zhl-6A.1 now the CIM interval shifted to CS; 6A.2 and 3A use Svevo coordinates as an approximation (grade C); QBls.zhl-5A start corrected (was a v2.1 value). Duplicate per-trait MTAs merged; V3250-V3260 removed.
