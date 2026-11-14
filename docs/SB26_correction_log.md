@@ -194,3 +194,5 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - ad17.py: in-silico sweep of the 762 records with no v2.1 position. 261 name a marker; 10 resolve on their own chromosome; 7 of those had been left unplaced on purpose (arm conflict or paralogous flanks) and stay so; the 3 Navathe et al. (2023) DArTseq markers placed (S94-001 to S94-003, grade C). Resolver normalisation kept in scripts/curation/lib/insilico_res.py.
 
 - ad18.py: Lu et al. (2013) TAG 126:317 (cited as 2012), FHB in SHA3/CBRD x Naxos. 6 auto records (V1421-V1426) replaced by the 24 QTL of Tables 4-5 (S95-001 to S95-024): flanks placed in silico; 6 B, 13 C, 5 D (no placeable flank).
+
+- ad19.py: He et al. (2016) PLoS ONE 11:e0158052, FHB in Soru#1 x Naxos. 7 unplaced auto records (V1552-V1558) replaced by the 9 disease QTL of Tables 4-6 (S96-001 to S96-009): flanks placed in silico after expanding the paper marker abbreviations; Rht-D1, Vrn-A1 at gene positions. 4 B, 4 C, 1 D (2DL flanks map to 6D in CS). KASP primers for 2DLc added.
