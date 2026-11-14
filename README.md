@@ -87,7 +87,7 @@ python scripts/pipeline/table_s1_v13.py     # writes the spreadsheet
 
 The built page is a single HTML file that loads four JSON files from the same folder. It needs no
 server beyond static file hosting, and performs all of its analysis in the browser: physical
-meta-QTL, Meta-GWAS, genes in a region, gene search, gene-family and GO/KEGG enrichment,
+meta-QTL, meta-GWAS, genes in a region, gene search, gene-family and GO/KEGG enrichment,
 susceptibility gene panel, marker lookup, PCR and KASP primer design, CAPS enzyme finder, GWAS
 and QTL annotation, coordinate conversion and a sequence toolkit.
 
