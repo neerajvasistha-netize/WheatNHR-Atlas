@@ -168,3 +168,5 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - IDs S83-001 to S83-110.
 
 - ad5.py: V1600 (auto-extracted "QTL_1D", Arora et al. 2026 preprint) corrected to Pch4, cloned NLR for eyespot (O. yallundae) on 1DS. Kept grade D: the paper gives only Ae. tauschii TA1675 coordinates (6.23-6.93 Mb).
+
+- ad6.py: Martin et al. (2025) Crop Science, Fusarium crown rot. 9 auto records (V3423-V3431; 5 had no position, none lifted to v2.1) rebuilt from Table 4 and Table S3 printed CS positions as S84-001 to S84-018: 7 FCR QTL plus 4 white-head QTL (Table 4) and 5 FCR plus 2 white-head single-environment QTL (Table S3). 8 grade A, 10 grade C (interval > 100 Mb). Yield QTL not added.
