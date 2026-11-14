@@ -215,3 +215,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad24 – thirteen uploaded papers (Nov 2026)
 - Added S104-001 (Ban & Suenaga 2000, B1-linked Sumai 3 gene, 5AL), S105-001 to S105-011 (Buerstmayr et al. 1997 monosomic analysis, chromosome-level, grade D), S106-001/002 (Bertucci et al. 2014, Tsn1 and Snn3-B1 survey), S107-001/002 (Bokore et al. 2017, Fhb1 and Fhb5 validation), S108-001/002 (Anh et al. 2015, Rmg8 and Rmg7), S109-001/002 (Burt & Nicholson 2011, Pch1 and Pch2), S110-001/002 (Ceoloni et al. 2017, Fhb-7EL alien, grade D), S111-001 (Bernardo et al. 2012, Fhb1 SNP map), S112-001 (Cao et al. 2001, snbTM 3A durum, grade D).
 - Not added: Ban 2000 Breed Sci (RAPD QTL on unassigned linkage group), Ban & Suenaga 1997 (same B1-linked gene; RAPDs unplaced), Ansari et al. 2007 (transcript study), Belhadj Benyahia et al. 2020 (biocontrol).
+
+## ad25 – eight uploaded papers (Nov 2026)
+- Added S113-001 (Chaubey et al. 2023 preprint, Tsn1 spot blotch), S114-001 to 003 (Choupannejad et al. 2023 preprint, Tsn1/Snn1/Snn3-B1), S115-001 (Chartrain et al. 2005, Stb6 survey), S116-001 (Chapman et al. 2009, Pch2 candidates), S117-001 (Chen et al. 2007, Qfhs.ndsu-3AS at Xgwm2).
+- Not added: Chu et al. 2006 (hybrid necrosis Ne1/Ne2), Mol Breed 2017 37:141 (agronomic GWAS), Trop Plant Pathol 2025 (cultivar screening, no locus).
