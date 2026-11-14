@@ -186,3 +186,5 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - ad13.py: Liu et al. (2011) Czech J Genet Plant Breed 47:S109 (summary paper). V1585 (auto QTL_3B, unplaced) replaced by S90-001 Qcrs.cpi-3B (CSCR6), grade C at gwm0181 (2.2 cM from the QTL; flanking DArT markers unplaced). Ernie 3BL QTL not duplicated (primary record S88-001, Li et al. 2010); barley 3HL QTL outside the wheat atlas.
 
 - ad14.py: Alahmad et al. (2020) IJMS 21:5260, durum crown rot GWAS. V1627 (auto QTL_6B, unplaced) replaced by S91-001 qCR-6B (with co-located qWH1-6B, qWH2-6B), grade B, interval from DArTseq tags placed by BLAST (6B 667.20-674.33 Mb, v1.0); paper gives only Svevo cM. Plant height, stay-green and yield QTL not added.
+
+- ad15.py: Neupane et al. (2024) BMC Plant Biol 24:852, FHB/FDK/DON, DH D8006W/Superior. 30 records (Z0191-Z0194, V0285-V0310; 25 unplaced, 2 on the wrong chromosome) replaced by 29 disease QTL from Table 3 and Table S3 (S92-001 to S92-029). CI of the most significant row converted to RefSeq v1.0 with the Table S5 map-marker positions; grade B (26) or C (3, span > 100 Mb). PHT, DA and AE QTL not added.
