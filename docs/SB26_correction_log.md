@@ -182,3 +182,5 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - ad11.py: Erginbas-Orakci et al. (2018) IJMS 19:2666, crown rot (F. culmorum), CIMMYT spring panel. Table 3 has 3 MTAs; wPt-2193 and wPt-2766 are coincident (3B 39.1 cM), so V0454 (wPt-2193, unplaced) merged into V0455. V0455 and V0456 regraded B to C (single DArT marker), stats and notes from the paper; positions unchanged.
 
 - ad12.py: Li et al. (2024) TAG 137:43, FCR GWAS, 223 accessions. 35 per-SNP auto records (V0959-V0991, V1309, V1310), many labelled RefSeq v2.1 with wrong values and missing 3D-1/3D-2 positions, replaced by the 10 Table 4 QTL (S89-001 to S89-010, grade A, RefSeq v1.1 = v1.0 coordinates). KASP3D61373 and RIL validation on Qfcr.cau.3D-3. Candidate gene Z0256 (TraesCS3D02G524700) kept.
+
+- ad13.py: Liu et al. (2011) Czech J Genet Plant Breed 47:S109 (summary paper). V1585 (auto QTL_3B, unplaced) replaced by S90-001 Qcrs.cpi-3B (CSCR6), grade C at gwm0181 (2.2 cM from the QTL; flanking DArT markers unplaced). Ernie 3BL QTL not duplicated (primary record S88-001, Li et al. 2010); barley 3HL QTL outside the wheat atlas.
