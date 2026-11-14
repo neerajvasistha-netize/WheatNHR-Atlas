@@ -1,0 +1,58 @@
+[
+ {
+  "source": "Z_1308",
+  "population": "D8006W x Superior DH",
+  "origin": "Additional file 1, Table S5 (1,254 SNPs used for QTL analysis; bp on RefSeq v1.0)",
+  "file": "Z_1308_D8006W_x_Superior_DH.csv",
+  "markers": 1254,
+  "placed": 1218
+ },
+ {
+  "source": "V_Thambugala2020",
+  "population": "Cutler x AC Barrie RIL",
+  "origin": "ESM 1, Table S5 (10,177 SNPs)",
+  "file": "V_Thambugala2020_Cutler_x_AC_Barrie_RIL.csv",
+  "markers": 10178,
+  "placed": 7271
+ },
+ {
+  "source": "V_Thambugala2020",
+  "population": "AC Barrie x Reeder DH",
+  "origin": "ESM 1, Table S11 (10,877 SNPs)",
+  "file": "V_Thambugala2020_AC_Barrie_x_Reeder_DH.csv",
+  "markers": 10878,
+  "placed": 7677
+ },
+ {
+  "source": "Muellner2021TAG",
+  "population": "MP-CON (Muellner 2021 multiparent)",
+  "origin": "ESM 2, Table S7 (bp on RefSeq v1.0)",
+  "file": "Muellner2021TAG_MP_CON_Muellner_2021_multiparent.csv",
+  "markers": 3878,
+  "placed": 3529
+ },
+ {
+  "source": "Muellner2021TAG",
+  "population": "MP-BLI (Blizzard)",
+  "origin": "ESM 2, Table S7 (bp on RefSeq v1.0)",
+  "file": "Muellner2021TAG_MP_BLI_Blizzard.csv",
+  "markers": 4454,
+  "placed": 4042
+ },
+ {
+  "source": "Muellner2021TAG",
+  "population": "MP-BON (Bonneville)",
+  "origin": "ESM 2, Table S7 (bp on RefSeq v1.0)",
+  "file": "Muellner2021TAG_MP_BON_Bonneville.csv",
+  "markers": 5020,
+  "placed": 4568
+ },
+ {
+  "source": "V_Jia2005",
+  "population": "Wangshuibai x Alondra's DH",
+  "origin": "Figure 2 (chromosomes with QTL only; interval distances in cM)",
+  "file": "V_Jia2005_Wangshuibai_x_Alondra_s_DH.csv",
+  "markers": 37,
+  "placed": 23
+ }
+]
