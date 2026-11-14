@@ -204,3 +204,10 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad22 – Jia et al. (2005) Euphytica 146:183, FHB, Wangshuibai x Alondra's DH
 - Deleted 7 unplaced auto records V1457–V1463 (1D and 7D were single-marker hits not significant in CIM; not kept).
 - Added S99-001 to S99-014: 13 CIM QTL from Table 2 (same interval across years merged) and the epistasis-only 6A QTL (Table 3). SSRs placed in silico; grades B (4), C (9), D (1: 5B Xgwm443-Xbarc32, neither marker placed). 3BS placed at Xgwm493 only (Xgwm533 not resolved).
+
+## ad23 – six uploaded papers (Nov 2026)
+- Ballini et al. (2020) Euphytica 216:92, durum EPO GWAS: S100-001 to S100-016 (SNB, wheat blast, STB, leaf rust). Zavitan v2.0 positions; SNB_Tox1B placed at Snn1, WB_BR43_2A at Rmg7, WB_BR43_2B at Rmg8, STB_Pyc3A at TraesCS3A01G041800, STB_Nec3A 3.3 Mb distal of it; the rest use the Zavitan position as an approximate RefSeq v2.1 position (grade C).
+- Arraiano et al. (2007) TAG 116:113: S101-001 Hobbit sib 5BS susceptibility region; S101-002 Stb6 in Bezostaya 1.
+- Agostinelli et al. (2012) Euphytica 186:115: S102-001 Fhb1 and S102-002 QFhs.nau-2DL effects in the VA01W-476 cross.
+- Arruda et al. (2016) Mol Breed 36:84 reprints the GWAS MTAs of Arruda et al. 2016 Plant Genome: S103-001 to S103-009 added to that study (A_FHB_024); Fhb1-LD SNPs at Fhb1, others grade D (CSS scaffold names, cM only).
+- Not added: An et al. (2019) TAG (rye 4R addition) and Anderson et al. (2010) Euphytica (Lophopyrum substitutions): alien chromosomes, no wheat-genome position.
