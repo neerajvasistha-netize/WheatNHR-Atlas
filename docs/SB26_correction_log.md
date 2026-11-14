@@ -200,3 +200,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - ad20.py: Nannuru et al. (2022) TAG 135:2247, FHB, NMBU Nordic spring wheat GWAS. Table 3 prints 13 QTL regions on RefSeq v1.0: 8 existing records regraded A with notes (R116, R150, V1341-V1344, V1346, V1347); V1345 (6A.1 with the 6B.1 interval) replaced by S97-004 (450-531 Mb); 1A.1, 3A.1, 3B.1, 6A.2 added (S97-001 to S97-005). KASP primers (S14) on 7A.2.
 
 - ad21.py: Steiner et al. (2004) TAG 109:215, FHB in Frontana x Remus. 7 unplaced auto records (V1383-V1389) replaced by the 12 FHB QTL of Tables 4 and 6 (S98-001 to S98-012): SSRs placed in silico (3A at Xdupw227, flagged: paper says pericentromeric; 5A Xgwm129-Xbarc197; 6A Xgwm169), grade C; 9 AFLP-only QTL grade D.
+
+## ad22 – Jia et al. (2005) Euphytica 146:183, FHB, Wangshuibai x Alondra's DH
+- Deleted 7 unplaced auto records V1457–V1463 (1D and 7D were single-marker hits not significant in CIM; not kept).
+- Added S99-001 to S99-014: 13 CIM QTL from Table 2 (same interval across years merged) and the epistasis-only 6A QTL (Table 3). SSRs placed in silico; grades B (4), C (9), D (1: 5B Xgwm443-Xbarc32, neither marker placed). 3BS placed at Xgwm493 only (Xgwm533 not resolved).
