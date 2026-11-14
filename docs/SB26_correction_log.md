@@ -231,3 +231,8 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad28 – ten uploads (Nov 2026)
 - Added S127-001 to 006 (Grausgruber et al. 1997, substitution-line chromosome effects, grade D), S128-001/002 (Gyawali et al. 2023, Fhb1 and Fhb7), S129-001 (Guo et al. 2003, Fhb1 AFLP/STS), S130-001 (Hayden et al. 2004, Sr2 STMs), S131-001 to 003 (Gilsinger et al. 2005, FHB incidence/flower opening), S132-001 (Guo et al. 2015, Fhb7, alien), S133-001 to 003 (Herter et al. 2018, coded markers, grade D), S134-001 to 004 (Herter et al. 2019: Rht-D1 for FHB and STB, Fhb5, 4B), S135-001 to 003 (He et al. 2014 haplotyping: Wuhan 1 and CJ 9306 2D QTL, Fhb1).
 - Not added: Hiebert et al. 2010 (telocentric gene stacking, no mapping).
+
+## ad29 – ten uploads (Nov 2026)
+- Added S136-001/002 (Jiang et al. 2015: Rht-D1 and Ppd-D1 associations with FHB, at the genes), S137-001 (Islam et al. 2024: Rmg11 on 7AS, Svevo position used as approximate v2.1), S138-001 to 006 (Zhang et al. 2025 preprint: leaf rust APR QTL; 1BL.2 and 3A unplaced), S139-001 (Jin et al. 2020: crown rot 5DL region 218.6-232.4 Mb, grade A), S140-001 (Kage et al. 2018: QTL-2DL candidate genes, wide region).
+- S134-001 note corrected: Rht-D1 position confirmed from the gene table (TraesCS4D02G040400, 18.781 Mb on v1.0).
+- Not added: Joshi & Chand 2002, Joshi et al. 2007 (no mapping), J Bangladesh Agric Univ 2019 (in silico survey), TAG 2017 130:471 (no loci), Hu et al. 2019 correction (copyright only; original already in atlas).

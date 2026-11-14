@@ -67,7 +67,7 @@ def build(reports):
             note=HB + f'QTL at {cm} cM, resistance from {don}, additive effect {eff}%, {pg}% of genotypic variance, LOD {lod}.', evidence=f'Table 3: FHB {ch} {cm} cM'))
     HE = 'GWAS within two winter wheat data sets (438 and 585 lines from six and eight bi-parental families) used to fit QTL as fixed effects in genomic prediction. '
     N.append(mk('S134-001', name='Rht-D1 (FHB susceptibility; winter wheat families)', cls='MTA', disease='Fusarium head blight', chr='4D', source='Herter2019TAG', peak=RHTD1, grade='C', marker='Rht-D1 diagnostic marker',
-        note=HE + 'The Rht-D1 locus accounted for 62.3% of the genotypic variance for FHB severity in data set 1 (allele substitution effect -10.86%) and about 13% in data set 2; Rht-D1b increases susceptibility. Placed at the Rht-D1 gene (TraesCS4D01G040400; position entered from the atlas curator, Nov 2026).',
+        note=HE + 'The Rht-D1 locus accounted for 62.3% of the genotypic variance for FHB severity in data set 1 (allele substitution effect -10.86%) and about 13% in data set 2; Rht-D1b increases susceptibility. Placed at the Rht-D1 gene (TraesCS4D02G040400, 4D 18.781 Mb on RefSeq v1.0).',
         evidence='Results; Supplementary Table 4'))
     N.append(mk('S134-002', name='Rht-D1 (STB susceptibility; winter wheat families)', cls='MTA', disease='Septoria tritici blotch', chr='4D', source='Herter2019TAG', peak=RHTD1, grade='C', marker='Rht-D1 diagnostic marker',
         note=HE + 'In data set 2 the Rht-D1 marker was also significantly associated with STB severity (about 13% of genotypic variance). Placed at the Rht-D1 gene (TraesCS4D01G040400).', evidence='Results'))
