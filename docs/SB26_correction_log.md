@@ -227,3 +227,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad27 – eight uploads (Nov 2026)
 - Added S122-001 to 004 (Friesen & Faris 2004: tsc2 at Tsc2 position, three RFLP-only minor QTL grade D), S123-001 to 005 (Faris et al. 1997: 1AS QTL at Tsc1 position, four RFLP-only QTL grade D), S124-001 to 007 (Faris et al. 1999 candidate genes: Lr34 region at Lr34, others grade D), S125-001 (Forte et al. 2014, Fhb-7el2 alien, grade D), S126-001 (Gholizadeh Vazvani et al. 2025, take-all, Xbarc197; new disease Take-all).
 - Not added: Ferjaoui et al. 2021 preprint (already in atlas from BMC Genomics 2022), Gamba & Lamari 1998 (inheritance only), Faris et al. 2014 MGG (spike compactness).
+
+## ad28 – ten uploads (Nov 2026)
+- Added S127-001 to 006 (Grausgruber et al. 1997, substitution-line chromosome effects, grade D), S128-001/002 (Gyawali et al. 2023, Fhb1 and Fhb7), S129-001 (Guo et al. 2003, Fhb1 AFLP/STS), S130-001 (Hayden et al. 2004, Sr2 STMs), S131-001 to 003 (Gilsinger et al. 2005, FHB incidence/flower opening), S132-001 (Guo et al. 2015, Fhb7, alien), S133-001 to 003 (Herter et al. 2018, coded markers, grade D), S134-001 to 004 (Herter et al. 2019: Rht-D1 for FHB and STB, Fhb5, 4B), S135-001 to 003 (He et al. 2014 haplotyping: Wuhan 1 and CJ 9306 2D QTL, Fhb1).
+- Not added: Hiebert et al. 2010 (telocentric gene stacking, no mapping).
