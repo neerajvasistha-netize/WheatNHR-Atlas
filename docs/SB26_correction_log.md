@@ -211,3 +211,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Agostinelli et al. (2012) Euphytica 186:115: S102-001 Fhb1 and S102-002 QFhs.nau-2DL effects in the VA01W-476 cross.
 - Arruda et al. (2016) Mol Breed 36:84 reprints the GWAS MTAs of Arruda et al. 2016 Plant Genome: S103-001 to S103-009 added to that study (A_FHB_024); Fhb1-LD SNPs at Fhb1, others grade D (CSS scaffold names, cM only).
 - Not added: An et al. (2019) TAG (rye 4R addition) and Anderson et al. (2010) Euphytica (Lophopyrum substitutions): alien chromosomes, no wheat-genome position.
+
+## ad24 – thirteen uploaded papers (Nov 2026)
+- Added S104-001 (Ban & Suenaga 2000, B1-linked Sumai 3 gene, 5AL), S105-001 to S105-011 (Buerstmayr et al. 1997 monosomic analysis, chromosome-level, grade D), S106-001/002 (Bertucci et al. 2014, Tsn1 and Snn3-B1 survey), S107-001/002 (Bokore et al. 2017, Fhb1 and Fhb5 validation), S108-001/002 (Anh et al. 2015, Rmg8 and Rmg7), S109-001/002 (Burt & Nicholson 2011, Pch1 and Pch2), S110-001/002 (Ceoloni et al. 2017, Fhb-7EL alien, grade D), S111-001 (Bernardo et al. 2012, Fhb1 SNP map), S112-001 (Cao et al. 2001, snbTM 3A durum, grade D).
+- Not added: Ban 2000 Breed Sci (RAPD QTL on unassigned linkage group), Ban & Suenaga 1997 (same B1-linked gene; RAPDs unplaced), Ansari et al. 2007 (transcript study), Belhadj Benyahia et al. 2020 (biocontrol).
