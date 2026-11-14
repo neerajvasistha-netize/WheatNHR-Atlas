@@ -166,3 +166,5 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Muellner et al. (2021): 10 single-population common and dwarf bunt intervals (MP-BLI, MP-BON) from Tables 2 and 3 (grade A).
 - Pundir et al. (2023): nothing further to add.
 - IDs S83-001 to S83-110.
+
+- ad5.py: V1600 (auto-extracted "QTL_1D", Arora et al. 2026 preprint) corrected to Pch4, cloned NLR for eyespot (O. yallundae) on 1DS. Kept grade D: the paper gives only Ae. tauschii TA1675 coordinates (6.23-6.93 Mb).
