@@ -219,3 +219,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad25 – eight uploaded papers (Nov 2026)
 - Added S113-001 (Chaubey et al. 2023 preprint, Tsn1 spot blotch), S114-001 to 003 (Choupannejad et al. 2023 preprint, Tsn1/Snn1/Snn3-B1), S115-001 (Chartrain et al. 2005, Stb6 survey), S116-001 (Chapman et al. 2009, Pch2 candidates), S117-001 (Chen et al. 2007, Qfhs.ndsu-3AS at Xgwm2).
 - Not added: Chu et al. 2006 (hybrid necrosis Ne1/Ne2), Mol Breed 2017 37:141 (agronomic GWAS), Trop Plant Pathol 2025 (cultivar screening, no locus).
+
+## ad26 – seven uploads (Nov 2026)
+- Added S118-001 to 006 (Cruppe et al. 2023, wheat blast QTL incl. 2NvS), S119-001 (Esvelt Klos et al. 2014, Pch2), S120-001 to 011 (Dinglasan et al. 2019, yellow spot GWAS, DArTseq placed by BLAST), S121-001 (Dutta et al. 2021, Stb6 SNP at 26.46 Mb, grade A).
+- Not added: Duguid & Brule-Babel 2001 (inheritance only), Du et al. 2015 (alien 2Ns(2D) substitution).
