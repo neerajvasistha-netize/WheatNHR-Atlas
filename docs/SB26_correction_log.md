@@ -223,3 +223,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad26 – seven uploads (Nov 2026)
 - Added S118-001 to 006 (Cruppe et al. 2023, wheat blast QTL incl. 2NvS), S119-001 (Esvelt Klos et al. 2014, Pch2), S120-001 to 011 (Dinglasan et al. 2019, yellow spot GWAS, DArTseq placed by BLAST), S121-001 (Dutta et al. 2021, Stb6 SNP at 26.46 Mb, grade A).
 - Not added: Duguid & Brule-Babel 2001 (inheritance only), Du et al. 2015 (alien 2Ns(2D) substitution).
+
+## ad27 – eight uploads (Nov 2026)
+- Added S122-001 to 004 (Friesen & Faris 2004: tsc2 at Tsc2 position, three RFLP-only minor QTL grade D), S123-001 to 005 (Faris et al. 1997: 1AS QTL at Tsc1 position, four RFLP-only QTL grade D), S124-001 to 007 (Faris et al. 1999 candidate genes: Lr34 region at Lr34, others grade D), S125-001 (Forte et al. 2014, Fhb-7el2 alien, grade D), S126-001 (Gholizadeh Vazvani et al. 2025, take-all, Xbarc197; new disease Take-all).
+- Not added: Ferjaoui et al. 2021 preprint (already in atlas from BMC Genomics 2022), Gamba & Lamari 1998 (inheritance only), Faris et al. 2014 MGG (spike compactness).
