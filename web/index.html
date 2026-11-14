@@ -399,7 +399,7 @@ td.num{font-size:13px}
     <h2>Analysis tools <span class="muted small">· computed inside the atlas on IWGSC RefSeq v2.1</span></h2>
     <div class="ttabs">
       <button class="ttab on" type="button" data-t="pmq">Physical meta-QTL</button>
-      <button class="ttab" type="button" data-t="pmg">Physical meta-GWAS</button>
+      <button class="ttab" type="button" data-t="pmg">Meta-GWAS</button>
       <button class="ttab" type="button" data-t="genes">Genes in a region</button>
       <button class="ttab" type="button" data-t="gsearch">Gene search</button>
       <button class="ttab" type="button" data-t="enrich">Gene-family enrichment</button>
@@ -430,7 +430,7 @@ td.num{font-size:13px}
       <label>Min. studies<br><input id="pmgMinS" type="number" value="2" style="width:60px"></label>
       <label class="small"><input type="checkbox" id="pmgAssume" checked> include MTAs without a reported p, assuming p =</label><label><br><input id="pmgPa" type="number" step="any" value="0.0001" style="width:90px"></label></div>
       <div class="small" style="margin:4px 0"><b>Diseases</b> (none ticked = all): <span id="pmgDisBox"></span></div>
-      <div class="row tform"><button class="btn primary" id="pmgGo" type="button">Run physical meta-GWAS</button></div><div id="pmgOut"></div></div>
+      <div class="row tform"><button class="btn primary" id="pmgGo" type="button">Run meta-GWAS</button></div><div id="pmgOut"></div></div>
     <div class="tpane" id="tp-genes" style="display:none"><p class="small muted">All 104,634 high-confidence genes with gene-family class and description, plus the atlas loci next to each gene.</p>
       <div class="row tform"><label>Chromosome<br><select id="tgChr"></select></label><label>From (Mb)<br><input id="tgFrom" type="number" step="0.001" value="20"></label><label>To (Mb)<br><input id="tgTo" type="number" step="0.001" value="25"></label>
       <label>Gene family<br><select id="tgCls"><option value="all">All genes</option><option value="def">Defence-related only</option></select></label><label>Keyword<br><input id="tgKw" type="text" placeholder="e.g. kinase"></label><button class="btn primary" id="tgGo" type="button">List genes</button></div><div id="tgOut"></div></div>
@@ -1025,7 +1025,7 @@ function hookPMQ(){const s=$("#pmqChr");if(s&&s.options.length<2)CHRS.forEach(c=
   const d=$("#pmqDisBox");if(d&&!d.children.length)DIS.forEach(x=>d.insertAdjacentHTML("beforeend",`<label class="small" style="margin-right:10px"><input type="checkbox" class="pmqDis" value="${esc(x[0])}"> ${esc(x[0])}</label>`));
   const b=$("#pmqGo");if(b)b.onclick=runPMQ;}
 
-/* ---- Physical meta-GWAS: combination of published MTA/QTN p-values within LD windows ---- */
+/* ---- Meta-GWAS: combination of published MTA/QTN p-values within LD windows ---- */
 function parseP(st_){st_=String(st_||"");let m=st_.match(/(\d+(?:\.\d+)?)\s*[eE]\s*[-−–]\s*(\d+)/);if(m)return +m[1]*Math.pow(10,-m[2]);
   m=st_.match(/(\d+(?:\.\d+)?)\s*×\s*10\s*[-−–]\s*(\d+)/);if(m)return +m[1]*Math.pow(10,-m[2]);
   m=st_.match(/log10\s*\(?p\)?\s*[:=]?\s*(\d+(?:\.\d+)?)/i);if(m)return Math.pow(10,-m[1]);m=st_.match(/\bp\s*[=<]?\s*(0?\.\d+)/i);if(m)return +m[1];return null;}
