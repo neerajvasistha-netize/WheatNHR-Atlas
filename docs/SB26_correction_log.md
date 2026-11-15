@@ -246,3 +246,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad32 – Liu et al. 2008 (Nov 2026)
 - Added S145-001 Fhb1 261 kb BAC interval and UMN10, from the abstract; placed at the cloned Fhb1 position.
+
+## ad33 – eight uploads (Nov 2026)
+- Added S146-001 SbWE35 (Li et al. 2026; 4BL 581.16-582.11 Mb from interval genes, grade A) and S146-002 Sb3 (WE35); S147-001/002 Qcrs.cpi-3B and Qcrs.cpi-4B (Ma et al. 2010); S148-001 Qcrs.cpi-3B NILs (Ma et al. 2012).
+- Not added: Lorrain et al. preprint and Nature Plants 2026 (pathogen), Mackintosh et al. 2006 (transgenics), Ma et al. 2015 MGG (MDA QTL), Loffler et al. 2009 (meta-QTL, excluded by rule).
