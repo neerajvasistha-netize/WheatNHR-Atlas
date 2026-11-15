@@ -318,3 +318,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad52 (Nov 2026)
 - Zhu et al. (2014) ESM1 Supplementary Table 2 linked markers: S19-118 QSb.cim-3B 2.10-25.18 Mb (C to B); S19-121 QSb.cim-14 688.30-698.46 Mb on 6BL (C to B; three markers support 6B); S19-117 QSb.cim-1B 237.0-367.4 Mb (C, 130 Mb region). S19-119 5A unchanged (only 1086218 placeable).
+
+## ad53 (Nov 2026)
+- Roy et al. (2021) Table 3 re-checked against S19-074 to S19-084: markers, PVE and resistance sources match; mean-population LOD added to stat.
