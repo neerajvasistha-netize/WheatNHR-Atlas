@@ -257,3 +257,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad35 (Nov 2026)
 - Added S155-001 to S155-003 (Puskas et al. 2006; 3BS, 2BS, 6A FHB from Ning8331; from page images, Table 1 pages 629-630) and S156-001 to S156-003 (Kalih et al. 2014 triticale; 5A grade D, rye 5RL Ddw1 and 6R as alien grade D).
+
+## ad36 (Nov 2026)
+- Added S157 (Rahman et al. 2021, 3 crown rot resistance QTL), S158 (Nishio et al. 2008), S159 (Rawat et al. 2016, Fhb1 PFT), S160 (Mohler et al. 2002, 1DS FHB), S161 (Rosyara et al. 2009), S162 (Salameh et al. 2011), S163 (Miedaner et al. 2011, 9 associations incl. Rht-D1).
+- Not added: Shen et al. 2004 (substitution lines), Mirdita et al. 2015 (genomic prediction, no loci), Running et al. 2025 (already in atlas), Muhovski et al. 2014 (expression, arm assignment only); Rahman 2021 tolerance QTL.
