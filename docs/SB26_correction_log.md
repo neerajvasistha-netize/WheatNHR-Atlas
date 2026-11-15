@@ -287,3 +287,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Herter et al. (2018): S133-001 to S133-003 placed by decoding the marker codes with Supplementary Table 2 (ESM2): 5B 587.3-589.1 Mb (B), 2D 636.0 Mb (C), 7D 501.0-517.3 Mb (B).
 - Capo x Arina (Online Resource 3, first map): V1433 1BS gains Xgwm11 (216.0 Mb) as proximal anchor; S195-001 2A re-placed from the 2AS end to wPt-1657 (0-47.2 Mb), the map orientation fixed by Xgwm558, Xgwm312 and Xgwm294.
 - Dinglasan et al. (2019) Online Resources 2-3: DArTseq IDs and consensus cM only; no new placements.
+
+## ad43 (Nov 2026)
+- Jin et al. (2020) Table S6 (ESM9): 104 crown rot SNPs (RefSeq v1.0 positions as printed) grouped into 13 regions; 12 new records S196-001 to S196-012 (grade A), 5DL summarised in S139-001 (35 SNPs, 189.7-246.8 Mb).
