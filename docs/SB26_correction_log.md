@@ -261,3 +261,8 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad36 (Nov 2026)
 - Added S157 (Rahman et al. 2021, 3 crown rot resistance QTL), S158 (Nishio et al. 2008), S159 (Rawat et al. 2016, Fhb1 PFT), S160 (Mohler et al. 2002, 1DS FHB), S161 (Rosyara et al. 2009), S162 (Salameh et al. 2011), S163 (Miedaner et al. 2011, 9 associations incl. Rht-D1).
 - Not added: Shen et al. 2004 (substitution lines), Mirdita et al. 2015 (genomic prediction, no loci), Running et al. 2025 (already in atlas), Muhovski et al. 2014 (expression, arm assignment only); Rahman 2021 tolerance QTL.
+
+## ad37 / ad37b (Nov 2026)
+- Added S164 (Soresi et al. 2017, Qfhs.ndsu-3AS), S165 (Simon et al. 2004, 5 STB QTL, RFLP, grade D), S166 (Simon et al. 2007, Stb5), S167 (Somers et al. 2005, 6 FHB QTL), S168 (Srinivasachary et al. 2008 TAG 116, 9 FHB QTL incl. Rht-D1), S169/S170 (Sheng et al. 2012, 2014, Ae. longissima eyespot QTL, alien D), S171 (Su et al. 2018), S172 (Slominska-Durdasiak et al. 2020, D), S173 (Tadesse et al. 2008, D), S174 (Shen and Ohm 2007, alien D), S175 (Singh et al. 2010, Tsr1, Tsr6).
+- ad37b: erratum Euphytica 200:27; V1478-V1483 repointed to SzaboHever2014Euph (author names corrected).
+- Not added: Song et al. TaNDC1 preprint and TaU11/U12-35K (functional gene studies), Stewart et al. 2016 (method), Steed et al. 2002 (conference version of Steed et al. 2005), Shi et al. 2008 (haplotype survey).
