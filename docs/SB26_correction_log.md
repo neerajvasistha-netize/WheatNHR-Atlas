@@ -239,3 +239,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad30 – Kwiatek et al. 2015 (Nov 2026)
 - Added S141-001 Pch1 survey of 372 breeding lines (EpD1b, XustSSR2001-7DL), from the abstract; placed at the Pch1 interval.
+
+## ad31 – five uploads (Nov 2026)
+- Added S142-001 to 004 (Kharina et al. 2025: Stb2, Stb9, Stb11, Stb13 survey at diagnostic SSRs), S143-001 (Kwiatek et al. 2012: Pch1 survey), S144-001 (Leonard et al. 2008: Pch1/Ep-D1 STS markers, placed across Xwmc14/Xbarc97/Xcfd175, grade B).
+- Not added: Lendenmann et al. 2016 (pathogen QTL), Khodarahmi et al. 2020 (inheritance only).
