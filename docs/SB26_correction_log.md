@@ -293,3 +293,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad44 (Nov 2026)
 - Kokhmetova et al. (2021) Supplementary Table S5: 11 race-specific tan spot MTA SNPs (race 1: 8, race 5: 3) added as S197-001 to S197-010 (7B pair merged); 6 placed by DArT tag BLAST (1 B, 5 C), 4 unplaced (D). Main paper not uploaded.
+
+## ad45 (Nov 2026)
+- Martin et al. (2015) Supplementary Figure 1 (ESM1 EMF linkage maps): 9 crown rot QTL re-placed from the markers inside or flanking each QTL bar (S150-001, -002, -003, -004, -006, -007, -008, -013, -014; D to C for 2BS, 3BS, 4BS; C to B for 1AS, 1DL, 3BL x2, 6DL); two Janz-derived QTL added (S150-015 2BS, S150-016 2DS).
