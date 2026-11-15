@@ -324,3 +324,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad54 (Nov 2026)
 - Zanke et al. (2017) Online Resource 4B (69 SNP MTAs on BLUEs): S185-003 2AS refined with 44 SNPs (2.64-36.04 Mb; peak block 11.91-17.66 Mb). Added S199-008 1BL 559.97-588.50 Mb (B), S199-009 2AL 747.61 Mb (C), S199-010 2B (D), S199-011 2D (D; same statistics as the 2A block, possibly homoeologous), S199-012 3B 457.01-470.61 Mb (B). 7D SNPs (613.6-630.5 Mb) belong to the Pch1 region (S185-001).
+
+## ad55 (Nov 2026)
+- User rule: where a preprint was later published and both were in the atlas, the preprint was removed. 116 records deleted (live DB tombstones; list in docs/ad55_preprint_removed.json): Tomar et al. 2020 preprint 74 (published version Tomar et al. 2021 Front Genet re-analysed 139 lines and kept 8 QTL), Aouini et al. 2025 12, Gardner et al. 2025 11, Chaudhary et al. 2024 9, Concepcion et al. 2024 3, Winn et al. 2022 2, Liu et al. 2021 2, Ren et al. 2023 2, Peters Haugrud et al. 2023 1. Ten preprint source keys removed (incl. empty Ferjaoui et al. 2021).
