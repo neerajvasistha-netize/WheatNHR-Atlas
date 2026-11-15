@@ -303,3 +303,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad47 (Nov 2026)
 - Singh et al. (2018) IJMS Supplementary Table S1 (QTL with DH and PH as covariates): five covariate-only spot blotch QTL added, S198-001 BC 3AL (D), S198-002 BC 3B 21.86-23.95 Mb (B), S198-003 BC 5B (D), S198-004 BC 7A 448.59 Mb (C), S198-005 WC 2A 71.08 Mb (C). Other Table S1 QTL match existing S19-087 to S19-099 records; unchanged.
+
+## ad48 (Nov 2026)
+- Slominska-Durdasiak et al. (2020) Online Resource 2 primers (T3/T7 tails removed) by in-silico PCR: S172-001 Dicer1 placed in TraesCS5A02G516000 (5A 679.66 Mb) and S172-002 Ara6 in TraesCS4D02G267900 (4D 439.12 Mb), both D to C.
