@@ -296,3 +296,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad45 (Nov 2026)
 - Martin et al. (2015) Supplementary Figure 1 (ESM1 EMF linkage maps): 9 crown rot QTL re-placed from the markers inside or flanking each QTL bar (S150-001, -002, -003, -004, -006, -007, -008, -013, -014; D to C for 2BS, 3BS, 4BS; C to B for 1AS, 1DL, 3BL x2, 6DL); two Janz-derived QTL added (S150-015 2BS, S150-016 2DS).
+
+## ad46 (Nov 2026)
+- Pankaj et al. (2022) ESM1 Table S3 primer sequences run by exact-match in-silico PCR on RefSeq v1.0: S19-059 (5B) placed at wmc173 119.165 Mb and S19-068 (1B) at cfd59 205.421 Mb (tentative, 1,464 bp product), both D to C. Primers for wmc109, gwm312, gwm213, gwm608, gwm614, gwm497 gave no product on the mapped chromosome; S19-064, S19-072, S19-073 stay D.
+- Rahman et al. (2021) Supplementary Table S3: QTL_8 SNP Excalibur_c65830_82; S157-002 placed at 246.133 Mb (v1.0), D to C.
