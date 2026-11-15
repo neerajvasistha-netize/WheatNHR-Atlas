@@ -254,3 +254,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad34 (Nov 2026)
 - Added S149-001 Stb7 (McCartney et al. 2003); S150-001 to S150-014 crown rot QTL (Martin et al. 2015; arm check discards markers placed on the wrong arm); S151-001 to S151-005 FHB alleles in Canadian backgrounds (McCartney et al. 2007); S152-001 to S152-003 stacked FHB QTL (Miedaner et al. 2006); S153-001 Pch1 markers (Meyer et al. 2011); S154-001 Fhb1 multiplex PCR (Matus-Cadiz et al. 2006).
 - Not added: Mahboubi et al. preprint (published version already in atlas); McCartney et al. 2004 (haplotype survey, no new loci).
+
+## ad35 (Nov 2026)
+- Added S155-001 to S155-003 (Puskas et al. 2006; 3BS, 2BS, 6A FHB from Ning8331; from page images, Table 1 pages 629-630) and S156-001 to S156-003 (Kalih et al. 2014 triticale; 5A grade D, rye 5RL Ddw1 and 6R as alien grade D).
