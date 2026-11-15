@@ -236,3 +236,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Added S136-001/002 (Jiang et al. 2015: Rht-D1 and Ppd-D1 associations with FHB, at the genes), S137-001 (Islam et al. 2024: Rmg11 on 7AS, Svevo position used as approximate v2.1), S138-001 to 006 (Zhang et al. 2025 preprint: leaf rust APR QTL; 1BL.2 and 3A unplaced), S139-001 (Jin et al. 2020: crown rot 5DL region 218.6-232.4 Mb, grade A), S140-001 (Kage et al. 2018: QTL-2DL candidate genes, wide region).
 - S134-001 note corrected: Rht-D1 position confirmed from the gene table (TraesCS4D02G040400, 18.781 Mb on v1.0).
 - Not added: Joshi & Chand 2002, Joshi et al. 2007 (no mapping), J Bangladesh Agric Univ 2019 (in silico survey), TAG 2017 130:471 (no loci), Hu et al. 2019 correction (copyright only; original already in atlas).
+
+## ad30 – Kwiatek et al. 2015 (Nov 2026)
+- Added S141-001 Pch1 survey of 372 breeding lines (EpD1b, XustSSR2001-7DL), from the abstract; placed at the Pch1 interval.
