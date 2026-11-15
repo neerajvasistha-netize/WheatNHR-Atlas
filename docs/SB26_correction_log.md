@@ -274,3 +274,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad39 (Nov 2026)
 - Added S186 (Yang et al. 2010, Qcrs.cpi-4B soil-less assay), S187 (Wilde et al. 2007, Fhb1, Fhb5, Frontana 3A), S188 (Timonova et al. 2013, QLr.icg-5B/2A/1A, T. timopheevii, D), S189 (Xiao et al. 2016, Qfhs.pur-7EL and Lr19, alien D), S184-002 (Zhang et al. 2011, Lr19, alien D), S190 (Zhang et al. 2016, Fhb1 and Sr2), S191 (Zheng et al. 2017, Qcrs.cpi-3B/5D/2D), S192 (Wang et al. 2025, PFT not required for Fhb1), S193 (Yu et al. 2008, SSCP markers at Fhb1), S194 (Zhang et al. 2021, Snn3-D1 cloned).
 - Not added: Walter et al. 2008 (expression), Yang et al. 2006 (SSR survey), Tessmann and Van Sanford 2019 Euphytica (morphology), Soltanloo et al. 2011 (diallel), Sucur et al. 2026 (Stb survey); duplicate PDF of Zhang et al. 2016.
+
+## ad40 (Nov 2026)
+- Buerstmayr and Buerstmayr (2015) Capo x Arina: from Online Resource 3 (Fig. S1 linkage maps and LOD profiles) the six auto records V1429-V1434 (five unplaced) were rebuilt with flanking markers (1BS B, 5AL at B1 B, 3B, 6BL, 3D, 7D C) and two QTL added (S195-001 2A, S195-002 4A, C). Main paper not uploaded; LOD and PVE not entered. Removed from the supplementary-needed list.
