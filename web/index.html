@@ -48,7 +48,7 @@ main{padding:16px 20px 40px;max-width:1500px;margin:0 auto}
 .panel h2{font:700 16px/1.2 var(--display);margin:0 0 10px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;margin:6px 0 0}
 .legend button{display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid transparent;border-radius:999px;padding:2px 8px;cursor:pointer;color:var(--ink)}
-.legend button[aria-pressed="false"]{opacity:.4} #fWild[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);font-weight:600}
+.legend button[aria-pressed="false"]{opacity:.4} #wildMap[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);font-weight:600}
 .sw{width:12px;height:12px;border-radius:3px;display:inline-block}
 .ideo-wrap{overflow-x:auto}
 svg.ideo{width:100%;min-width:760px;height:auto;display:block}
@@ -334,7 +334,6 @@ td.num{font-size:13px}
     <label for="fCur">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
     <label for="fTo">To (Mb)<input class="mb" type="number" id="fTo" step="0.1" min="0"></label>
-    <button class="btn" id="fWild" type="button" aria-pressed="false" title="Show only loci that come from wild relatives or species other than bread wheat: Aegilops, wild emmer (T. dicoccoides), T. timopheevii, Thinopyrum/Lophopyrum, Elymus, Leymus, rye, triticale, synthetic hexaploids, and loci on alien chromosomes">Wild / alien origin</button>
     <button class="btn" id="reset" type="button">Clear filters</button>
     <span style="flex:1"></span>
     <button class="btn" id="dlCsv" type="button">Download CSV</button>
@@ -406,6 +405,7 @@ td.num{font-size:13px}
       <button class="ttab" type="button" data-t="enrich">Gene-family enrichment</button>
       <button class="ttab" type="button" data-t="gokegg">GO and KEGG enrichment</button>
       <button class="ttab" type="button" data-t="sgene">Susceptibility genes</button>
+      <button class="ttab" type="button" data-t="wild">Wild / alien origin</button>
       <button class="ttab" type="button" data-t="markers">Marker lookup</button>
       <button class="ttab" type="button" data-t="pcr">PCR primer design</button>
       <button class="ttab" type="button" data-t="kasp">KASP primer design</button>
@@ -448,6 +448,8 @@ td.num{font-size:13px}
       <div class="row tform"><button class="btn primary" id="sgGo" type="button">List susceptibility genes</button></div><div id="sgOut"></div>
       <h3 style="font-size:15px;margin-top:18px">Homoeolog lookup</h3><p class="small muted">Any gene ID: find its copies in the other two sub-genomes.</p>
       <div class="row tform"><label style="flex:1">Gene ID<br><input id="shQ" type="text" placeholder="TraesCS1B02G004100" style="width:100%"></label><button class="btn primary" id="shGo" type="button">Find copies</button></div><div id="shOut"></div></div>
+    <div class="tpane" id="tp-wild" style="display:none"><p class="small muted">Resistance loci that come from wild relatives or species other than bread wheat (Aegilops species, wild emmer, T. timopheevii, Thinopyrum, Elymus, Leymus, rye and triticale, synthetic hexaploid donors, and loci on alien chromosomes), with the donor species of each.</p>
+      <div class="row tform"><button class="btn primary" id="wildGo" type="button">List wild / alien-origin loci</button></div><div id="wildOut"></div></div>
     <div class="tpane" id="tp-markers" style="display:none"><p class="small muted">Physical position of SSR, DArT, 90K (names or IWB numbers) and 35K/55K Axiom markers, with primers or SNP sequence and the atlas records that use them. Paste up to 300 names.</p>
       <div class="row tform"><label style="flex:1">Marker names<br><textarea id="tmQ" rows="3" style="width:100%" placeholder="Xgwm149 IWB55365 AX-94850241 BS00067878_51"></textarea></label><button class="btn primary" id="tmGo" type="button">Look up</button></div><div id="tmOut"></div></div>
     <div class="tpane" id="tp-pcr" style="display:none"><p class="small muted">Design PCR primer pairs in a sequence. Load up to 20 kb of Chinese Spring sequence for a region, or paste your own.</p>
@@ -603,9 +605,30 @@ function clusters(loci){const by={};loci.forEach(l=>(by[l.chr]??=[]).push(l));co
     arr.forEach(l=>{if(!cur||l.lo>cur.hi){cur={chr:c,lo:l.lo,hi:l.hi,loci:[l]};out.push(cur);}else{cur.hi=Math.max(cur.hi,l.hi);cur.loci.push(l);}});});
   return out.filter(c=>new Set(c.loci.map(l=>l.disease)).size>1).sort((a,b)=>CHRS.indexOf(a.chr)-CHRS.indexOf(b.chr)||a.lo-b.lo);}
 /* ---------- filters ---------- */
-const WILD_RE=/\balien\b|\bAe\.\s|Aegilops|tauschii|dicoccoides|timopheevii|Thinopyrum|Th\. ponticum|Lophopyrum|L\. ponticum|elongatum|Elymus|Dasypyrum|Haynaldia|ventricos|Secale|\brye\b|\b1RS\b|\b2NS\b|longissima|Agropyron|wheatgrass|wild relative|wild emmer|synthetic hexaploid|synthetic wheat|\bSyn[ -]?\d|Leymus|Psathyrostachys|speltoides|umbellulata|triticale/i,WILD_GENE=/^\s*(Fhb3|Fhb6|Fhb7|Pch1|Pch4|Ep-D1|Rmg10|Stb5|2NS|QWb-2NS|Qfhs\.ndsu-3A|Qfhs\.pur-7E|FhbLoP)\b/i;
-function isWild(r){if(r.chr&&!/^[1-7][ABD]$/.test(r.chr))return true;if(/^alien/i.test(r.ref||""))return true;if(WILD_GENE.test(r.name||""))return true;
+const WILD_RE=/\balien\b|\bAe\.\s|Aegilops|tauschii|dicoccoides|timopheevii|Thinopyrum|Th\. ponticum|Lophopyrum|L\. ponticum|elongatum|Elymus|Dasypyrum|Haynaldia|ventricos|Secale|\brye\b|\b1RS\b|\b2NS\b|longissima|Agropyron|wheatgrass|wild relative|wild emmer|synthetic hexaploid|synthetic wheat|\bSyn[ -]?\d|Leymus|Psathyrostachys|huashanica|speltoides|umbellulata|triticale/i,WILD_GENE=/^\s*(Fhb3|Fhb6|Fhb7|Pch1|Pch4|Ep-D1|Rmg10|Stb5|2NS|QWb-2NS|Qfhs\.ndsu-3A|Qfhs\.pur-7E|FhbLoP)\b/i;
+function isWild(r){if(r.chr&&/^[1-7][A-Z]$/.test(r.chr)&&!/^[1-7][ABD]$/.test(r.chr))return true;if(/^alien/i.test(r.ref||""))return true;if(WILD_GENE.test(r.name||""))return true;
   const t=((r.name||"")+" "+(r.note||"")).replace(/(wild emmer )?(Zavitan|Svevo)[^.;]*/gi,"");return WILD_RE.test(t);}
+const WSP=[[/ventricos|^\s*(Pch1|Ep-D1|2NS|QWb-2NS)\b|\b2NS\b/i,"Aegilops ventricosa"],[/longissima|^[1-7]S$/i,"Aegilops longissima"],[/speltoides/i,"Aegilops speltoides"],[/umbellulata/i,"Aegilops umbellulata"],
+ [/tauschii|^\s*(Pch4|Rmg10|Stb5)\b/i,"Aegilops tauschii"],[/synthetic hexaploid|synthetic wheat|\bSyn[ -]?\d/i,"Aegilops tauschii (via synthetic hexaploid wheat)"],
+ [/dicoccoides|wild emmer|^\s*Qfhs\.ndsu-3A/i,"Triticum dicoccoides (wild emmer)"],[/timopheevii/i,"Triticum timopheevii"],
+ [/ponticum|Lophopyrum|^\s*(Qfhs\.pur-7E|FhbLoP)\b|^7E$/i,"Thinopyrum ponticum (syn. Lophopyrum ponticum)"],[/elongatum|^\s*Fhb7\b/i,"Thinopyrum elongatum"],
+ [/Elymus|^\s*Fhb6\b/i,"Elymus spp."],[/Leymus|^\s*Fhb3\b/i,"Leymus racemosus"],[/Dasypyrum|Haynaldia/i,"Dasypyrum villosum"],[/Agropyron/i,"Agropyron spp."],[/Psathyrostachys|huashanica/i,"Psathyrostachys huashanica"],
+ [/triticale|Triticosecale/i,"Secale cereale (in triticale)"],[/Secale|\brye\b|\b1RS\b|^[1-7]R$/i,"Secale cereale (rye)"]];
+function wildSpecies(r){const t=((r.name||"")+" "+(r.note||"")+" "+(r.ref||"")).replace(/(wild emmer )?(Zavitan|Svevo)[^.;]*/gi,"");const out=[];
+  for(const [re,sp] of WSP){if(re.test(t)||re.test(r.name||"")||re.test(r.chr||"")){if(sp.startsWith("Thinopyrum elongatum")&&out.some(s=>s.startsWith("Thinopyrum ponticum")))continue;
+    if(sp.startsWith("Aegilops tauschii (via")&&out.includes("Aegilops tauschii"))continue;if(sp.startsWith("Secale cereale (rye)")&&out.some(s=>s.startsWith("Secale")))continue;out.push(sp);}}
+  return out.length?out.join("; "):"Alien species (see note)";}
+function runWild(){const out=$("#wildOut");const rows=Object.values(st.reports).filter(isWild).map(r=>({r,sp:wildSpecies(r)})).sort((a,b)=>a.sp.localeCompare(b.sp)||CHRS.indexOf(a.r.chr)-CHRS.indexOf(b.r.chr)||(a.r.name||"").localeCompare(b.r.name||""));
+  const cnt={};rows.forEach(x=>x.sp.split("; ").forEach(s=>cnt[s]=(cnt[s]||0)+1));
+  const posOf=r=>{const x=co(r,MAIN)||{};return x.start!=null&&x.start!==""?`${fmt(x.start)}–${fmt(x.end)}`:(x.peak!=null&&x.peak!==""?fmt(x.peak):"–");};
+  out.innerHTML=`<p class="small"><b>${rows.length}</b> atlas records trace to a wild relative or a species other than bread wheat. ${Object.entries(cnt).sort((a,b)=>b[1]-a[1]).map(([s,n])=>`<span class="dchip"><i>${esc(s)}</i> ${n}</span>`).join(" ")}</p>
+  <p class="small"><button class="btn" id="wildMap" type="button" aria-pressed="${!!st.wild}">${st.wild?"Showing only these on the map and table":"Show only these on the map and table"}</button> <button class="btn" id="wildCsv" type="button">Save (CSV)</button></p>
+  <div class="tscroll"><table class="tbl" id="wildTbl"><thead><tr><th>Locus</th><th>Disease</th><th>Wild / donor species</th><th>Chr</th><th>Position (v2.1, Mb)</th><th>Grade</th><th>Source</th></tr></thead><tbody>
+  ${rows.map(({r,sp})=>`<tr data-id="${esc(r.id)}" style="cursor:pointer"><td><b>${esc(r.name)}</b></td><td class="small"><span class="dchip"><span class="sw" style="background:${DCOL[r.disease]||"#888"}"></span>${esc(r.disease)}</span></td><td class="small"><i>${esc(sp)}</i></td><td>${esc(r.chr)}</td><td class="num">${posOf(r)}</td><td>${esc(r.grade||"")}</td><td class="small">${esc(srcShort(r.source))}</td></tr>`).join("")}</tbody></table></div>
+  <p class="small muted">Donor species are read from each record's name and source note (for example Aegilops, wild emmer, Thinopyrum, Elymus, Leymus, rye, triticale or a synthetic hexaploid parent). Loci found in panels of synthetic-derived lines may sit on the A or B genome; check the note. Click a row for the full record.</p>`;
+  $("#wildTbl tbody").onclick=e=>{const tr=e.target.closest("tr[data-id]");if(tr)renderDrawer(tr.dataset.id);};
+  $("#wildMap").onclick=()=>{st.wild=!st.wild;renderTable();runWild();};
+  $("#wildCsv").onclick=()=>saveText("WheatRLA_wild_alien_origin.csv",toCSV([["id","locus","disease","wild_species","chr","position_v2.1_Mb","grade","source","citation"]].concat(rows.map(({r,sp})=>[r.id,r.name,r.disease,sp,r.chr,posOf(r),r.grade,srcShort(r.source),st.sources[r.source]?.citation||""]))));}
 function filtered(){const q=$("#q").value.trim().toLowerCase(),c=$("#fChr").value,k=$("#fCls").value,g=$("#fGrade").value,f=num($("#fFrom").value),t=num($("#fTo").value);
   const cu=$("#fCur")?$("#fCur").value:"";
   return Object.values(st.reports).filter(r=>{if(!st.dOn.has(r.disease))return false;if(cu&&(r.curation||"atlas v1.2")!==cu)return false;if(c&&r.chr!==c)return false;if(k&&r.cls!==k)return false;if(g&&r.grade!==g)return false;if(st.wild&&!isWild(r))return false;
@@ -1118,15 +1141,14 @@ function runHomo(){const o=$("#shOut"),q=($("#shQ").value||"").trim();
    <tr style="background:rgba(217,165,33,.13)"><td><b>${esc(c)}</b> (query)</td><td class="mono">${gidOf(c,n)}<div class="small muted">${gid21(c,h.g)}</div></td><td class="num">${h.g[0].toFixed(3)}</td><td class="num">${lociNear(c,h.g[0],1).length}</td></tr>
    ${h.homo.map(x=>`<tr><td>${esc(x.c)}</td><td class="mono">${esc(x.id)}<div class="small muted">${esc(x.id21)}</div></td><td class="num">${x.p.toFixed(3)}</td><td class="num">${lociNear(x.c,x.p,1).length}</td></tr>`).join("")}</tbody></table>
    <p class="small">${esc(h.desc)}${h.cls!=="other"?` · <b>${esc(h.cls)}</b>`:""} · ${1+h.homo.length} copies found. <span class="muted">Putative homoeologs: same annotation, syntenic position; confirm by sequence.</span></p>`;}
-function hookSG(){const b=$("#sgGo");if(b)b.onclick=runSG;const h=$("#shGo");if(h)h.onclick=runHomo;}
+function hookSG(){const b=$("#sgGo");if(b)b.onclick=runSG;const w=$("#wildGo");if(w)w.onclick=runWild;const h=$("#shGo");if(h)h.onclick=runHomo;}
 
 function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<option>${c}</option>`);$("#rChr").insertAdjacentHTML("beforeend",`<option${c==="1B"?" selected":""}>${c}</option>`);});
   CLASSES.forEach(c=>$("#fCls").insertAdjacentHTML("beforeend",`<option>${c}</option>`));
   [...new Set(Object.values(st.papers).map(p=>p.disease))].sort().forEach(d=>$("#pDis").insertAdjacentHTML("beforeend",`<option>${esc(d)}</option>`));
   ["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).addEventListener("input",renderTable));
   
-  $("#fWild").onclick=()=>{st.wild=!st.wild;$("#fWild").setAttribute("aria-pressed",String(!!st.wild));renderTable();};
-  $("#reset").onclick=()=>{["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.wild=false;$("#fWild").setAttribute("aria-pressed","false");st.dOn=new Set(DIS.map(d=>d[0]));renderLegend();renderTable();};
+  $("#reset").onclick=()=>{["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.wild=false;if($("#wildMap"))runWild();st.dOn=new Set(DIS.map(d=>d[0]));renderLegend();renderTable();};
   $("#legend").onclick=e=>{const b=e.target.closest("button");if(!b)return;
      if(b.dataset.g){const ls=b.dataset.g==="Biotrophs"?["Biotroph"]:["Necrotroph","Hemibiotroph"];const names=DIS.filter(x=>ls.includes(x[2])).map(x=>x[0]);const on=names.every(n=>st.dOn.has(n));names.forEach(n=>on?st.dOn.delete(n):st.dOn.add(n));renderLegend();renderTable();return;}
      const d=b.dataset.d;
