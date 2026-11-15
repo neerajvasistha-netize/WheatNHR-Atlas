@@ -315,3 +315,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad51 (Nov 2026)
 - Zanke et al. (2017) Online Resource 3 (SSR MTAs): S185-003 2AS eyespot region placed 4.98-28.20 Mb (gwm636-gwm359), D to B. Seven BLUEs-significant SSR MTAs outside 7D added (S199-001 to -007): 2D gwm539, 5A gwm156, 6A wmc256 placed (C); 1D gwm4780, 3D cfd36, 5D gwm1527, 7A wmc488 unplaced (D). 7D SSRs belong to the Pch1 region (S185-001); unmapped SSRs skipped. SNP MTAs (Online Resource 4) not uploaded.
+
+## ad52 (Nov 2026)
+- Zhu et al. (2014) ESM1 Supplementary Table 2 linked markers: S19-118 QSb.cim-3B 2.10-25.18 Mb (C to B); S19-121 QSb.cim-14 688.30-698.46 Mb on 6BL (C to B; three markers support 6B); S19-117 QSb.cim-1B 237.0-367.4 Mb (C, 130 Mb region). S19-119 5A unchanged (only 1086218 placeable).
