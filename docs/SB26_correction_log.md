@@ -312,3 +312,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad50 (Nov 2026)
 - Virdi et al. (2016) Table S1 AL map checked against the AL tan spot QTL. S31-004 Tsc2 confirmed between Xiwa2304 (16.90 Mb) and Xwmc154 (36.45 Mb). S31-005 4B: map gap 9.7-44.2 cM, cannot be narrowed; grade B to C (242 Mb span). S31-006, S31-007, S31-008 unchanged.
+
+## ad51 (Nov 2026)
+- Zanke et al. (2017) Online Resource 3 (SSR MTAs): S185-003 2AS eyespot region placed 4.98-28.20 Mb (gwm636-gwm359), D to B. Seven BLUEs-significant SSR MTAs outside 7D added (S199-001 to -007): 2D gwm539, 5A gwm156, 6A wmc256 placed (C); 1D gwm4780, 3D cfd36, 5D gwm1527, 7A wmc488 unplaced (D). 7D SSRs belong to the Pch1 region (S185-001); unmapped SSRs skipped. SNP MTAs (Online Resource 4) not uploaded.
