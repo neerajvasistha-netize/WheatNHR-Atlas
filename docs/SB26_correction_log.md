@@ -321,3 +321,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad53 (Nov 2026)
 - Roy et al. (2021) Table 3 re-checked against S19-074 to S19-084: markers, PVE and resistance sources match; mean-population LOD added to stat.
+
+## ad54 (Nov 2026)
+- Zanke et al. (2017) Online Resource 4B (69 SNP MTAs on BLUEs): S185-003 2AS refined with 44 SNPs (2.64-36.04 Mb; peak block 11.91-17.66 Mb). Added S199-008 1BL 559.97-588.50 Mb (B), S199-009 2AL 747.61 Mb (C), S199-010 2B (D), S199-011 2D (D; same statistics as the 2A block, possibly homoeologous), S199-012 3B 457.01-470.61 Mb (B). 7D SNPs (613.6-630.5 Mb) belong to the Pch1 region (S185-001).
