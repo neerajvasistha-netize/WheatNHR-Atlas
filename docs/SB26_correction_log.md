@@ -290,3 +290,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad43 (Nov 2026)
 - Jin et al. (2020) Table S6 (ESM9): 104 crown rot SNPs (RefSeq v1.0 positions as printed) grouped into 13 regions; 12 new records S196-001 to S196-012 (grade A), 5DL summarised in S139-001 (35 SNPs, 189.7-246.8 Mb).
+
+## ad44 (Nov 2026)
+- Kokhmetova et al. (2021) Supplementary Table S5: 11 race-specific tan spot MTA SNPs (race 1: 8, race 5: 3) added as S197-001 to S197-010 (7B pair merged); 6 placed by DArT tag BLAST (1 B, 5 C), 4 unplaced (D). Main paper not uploaded.
