@@ -282,3 +282,8 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Ferjaoui et al. (2022) Additional Table 4: Qstb7A, Qstb2B_1 and Qstb2B_2 (S44-023 to S44-025) placed from the Svevo positions of their flanking tags (approximate v2.1, grade C; Qstb2B_1 spans two inconsistent hits 230 Mb apart); Qstb1A note updated; Qstb5B is not in the table and stays D.
 - Dinglasan et al. (2019) Online Resource 3 (89 MTAs on the DArTseq consensus map, cM only): no additional DArTseq clone could be placed near the 11 QTL, so records are unchanged; kept for the planned consensus-map conversion.
 - Both removed from the supplementary-needed list.
+
+## ad42 (Nov 2026)
+- Herter et al. (2018): S133-001 to S133-003 placed by decoding the marker codes with Supplementary Table 2 (ESM2): 5B 587.3-589.1 Mb (B), 2D 636.0 Mb (C), 7D 501.0-517.3 Mb (B).
+- Capo x Arina (Online Resource 3, first map): V1433 1BS gains Xgwm11 (216.0 Mb) as proximal anchor; S195-001 2A re-placed from the 2AS end to wPt-1657 (0-47.2 Mb), the map orientation fixed by Xgwm558, Xgwm312 and Xgwm294.
+- Dinglasan et al. (2019) Online Resources 2-3: DArTseq IDs and consensus cM only; no new placements.
