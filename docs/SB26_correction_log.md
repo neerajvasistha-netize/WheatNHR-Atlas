@@ -306,3 +306,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad48 (Nov 2026)
 - Slominska-Durdasiak et al. (2020) Online Resource 2 primers (T3/T7 tails removed) by in-silico PCR: S172-001 Dicer1 placed in TraesCS5A02G516000 (5A 679.66 Mb) and S172-002 Ara6 in TraesCS4D02G267900 (4D 439.12 Mb), both D to C.
+
+## ad49 (Nov 2026)
+- Tessmann et al. (2019) Supplementary Table S3 decodes the panel SNP IDs to 90K names. Placed: S177-001 7B 673.96-678.64 Mb (B); S177-003 3A, S177-004 2B, S177-006 4A, S177-007 6B (C). Same IDs in Tessmann and Van Sanford (2018): S176-007 4A, S176-008 6B, S176-010 6B (C). S177-002 (SNP on 5D only) and S177-005 (no position) stay D; the other nine 2018 IDs are not in Table S3 and stay D.
