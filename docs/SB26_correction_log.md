@@ -277,3 +277,8 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad40 (Nov 2026)
 - Buerstmayr and Buerstmayr (2015) Capo x Arina: from Online Resource 3 (Fig. S1 linkage maps and LOD profiles) the six auto records V1429-V1434 (five unplaced) were rebuilt with flanking markers (1BS B, 5AL at B1 B, 3B, 6BL, 3D, 7D C) and two QTL added (S195-001 2A, S195-002 4A, C). Main paper not uploaded; LOD and PVE not entered. Removed from the supplementary-needed list.
+
+## ad41 (Nov 2026)
+- Ferjaoui et al. (2022) Additional Table 4: Qstb7A, Qstb2B_1 and Qstb2B_2 (S44-023 to S44-025) placed from the Svevo positions of their flanking tags (approximate v2.1, grade C; Qstb2B_1 spans two inconsistent hits 230 Mb apart); Qstb1A note updated; Qstb5B is not in the table and stays D.
+- Dinglasan et al. (2019) Online Resource 3 (89 MTAs on the DArTseq consensus map, cM only): no additional DArTseq clone could be placed near the 11 QTL, so records are unchanged; kept for the planned consensus-map conversion.
+- Both removed from the supplementary-needed list.
