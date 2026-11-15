@@ -309,3 +309,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad49 (Nov 2026)
 - Tessmann et al. (2019) Supplementary Table S3 decodes the panel SNP IDs to 90K names. Placed: S177-001 7B 673.96-678.64 Mb (B); S177-003 3A, S177-004 2B, S177-006 4A, S177-007 6B (C). Same IDs in Tessmann and Van Sanford (2018): S176-007 4A, S176-008 6B, S176-010 6B (C). S177-002 (SNP on 5D only) and S177-005 (no position) stay D; the other nine 2018 IDs are not in Table S3 and stay D.
+
+## ad50 (Nov 2026)
+- Virdi et al. (2016) Table S1 AL map checked against the AL tan spot QTL. S31-004 Tsc2 confirmed between Xiwa2304 (16.90 Mb) and Xwmc154 (36.45 Mb). S31-005 4B: map gap 9.7-44.2 cM, cannot be narrowed; grade B to C (242 Mb span). S31-006, S31-007, S31-008 unchanged.
