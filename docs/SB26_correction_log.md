@@ -243,3 +243,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad31 – five uploads (Nov 2026)
 - Added S142-001 to 004 (Kharina et al. 2025: Stb2, Stb9, Stb11, Stb13 survey at diagnostic SSRs), S143-001 (Kwiatek et al. 2012: Pch1 survey), S144-001 (Leonard et al. 2008: Pch1/Ep-D1 STS markers, placed across Xwmc14/Xbarc97/Xcfd175, grade B).
 - Not added: Lendenmann et al. 2016 (pathogen QTL), Khodarahmi et al. 2020 (inheritance only).
+
+## ad32 – Liu et al. 2008 (Nov 2026)
+- Added S145-001 Fhb1 261 kb BAC interval and UMN10, from the abstract; placed at the cloned Fhb1 position.
