@@ -250,3 +250,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad33 – eight uploads (Nov 2026)
 - Added S146-001 SbWE35 (Li et al. 2026; 4BL 581.16-582.11 Mb from interval genes, grade A) and S146-002 Sb3 (WE35); S147-001/002 Qcrs.cpi-3B and Qcrs.cpi-4B (Ma et al. 2010); S148-001 Qcrs.cpi-3B NILs (Ma et al. 2012).
 - Not added: Lorrain et al. preprint and Nature Plants 2026 (pathogen), Mackintosh et al. 2006 (transgenics), Ma et al. 2015 MGG (MDA QTL), Loffler et al. 2009 (meta-QTL, excluded by rule).
+
+## ad34 (Nov 2026)
+- Added S149-001 Stb7 (McCartney et al. 2003); S150-001 to S150-014 crown rot QTL (Martin et al. 2015; arm check discards markers placed on the wrong arm); S151-001 to S151-005 FHB alleles in Canadian backgrounds (McCartney et al. 2007); S152-001 to S152-003 stacked FHB QTL (Miedaner et al. 2006); S153-001 Pch1 markers (Meyer et al. 2011); S154-001 Fhb1 multiplex PCR (Matus-Cadiz et al. 2006).
+- Not added: Mahboubi et al. preprint (published version already in atlas); McCartney et al. 2004 (haplotype survey, no new loci).
