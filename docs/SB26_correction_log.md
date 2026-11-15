@@ -270,3 +270,7 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 ## ad38 (Nov 2026)
 - Added S176 (Tessmann and Van Sanford 2018, 12 MTAs, D), S177 (Tessmann et al. 2019, 7 MTAs, D), S178 (Tadesse et al. 2010, tsr4), S179 (Waldron et al. 1999, 4 QTL), S180 (Tidakbi et al. 2026, 20 loci on v2.1 incl. Jamestown 1BL haplotype), S181 (Yoshioka et al. 2024, Rmg10), S182 (Tagle et al. 2015, Rmg7), S183 (Wang et al. 2024, Fhb8), S184 (Zhang et al. 2011, FhbLoP, alien D), S185 (Zanke et al. 2017, Pch1, 5A, 2AS).
 - Not added: Wang et al. preprint (Elymus 1StL telosome addition), Zheng et al. 2021 (meta-QTL), Cardozo Tellez et al. 2022 (screening), Zhong et al. 2021 (pathogen), Wilhelm et al. 2013, Yao et al. 2019, Zhang et al. 2022 (already in), Zhao et al. 2018 (functional).
+
+## ad39 (Nov 2026)
+- Added S186 (Yang et al. 2010, Qcrs.cpi-4B soil-less assay), S187 (Wilde et al. 2007, Fhb1, Fhb5, Frontana 3A), S188 (Timonova et al. 2013, QLr.icg-5B/2A/1A, T. timopheevii, D), S189 (Xiao et al. 2016, Qfhs.pur-7EL and Lr19, alien D), S184-002 (Zhang et al. 2011, Lr19, alien D), S190 (Zhang et al. 2016, Fhb1 and Sr2), S191 (Zheng et al. 2017, Qcrs.cpi-3B/5D/2D), S192 (Wang et al. 2025, PFT not required for Fhb1), S193 (Yu et al. 2008, SSCP markers at Fhb1), S194 (Zhang et al. 2021, Snn3-D1 cloned).
+- Not added: Walter et al. 2008 (expression), Yang et al. 2006 (SSR survey), Tessmann and Van Sanford 2019 Euphytica (morphology), Soltanloo et al. 2011 (diallel), Sucur et al. 2026 (Stb survey); duplicate PDF of Zhang et al. 2016.
