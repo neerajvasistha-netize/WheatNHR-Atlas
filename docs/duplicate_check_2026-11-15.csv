@@ -1,0 +1,100 @@
+type,source_A,id_A,name_A,source_B,id_B,name_B,chr,pos_A_v1,pos_B_v1,grade_A,grade_B
+preprint vs article,Aouini2025bR,S70-013,S1D_8183618,A_STB_039,R0812,S1D_8183618,1D,8.183618,8.1836,A,B
+preprint vs article,Aouini2025bR,S70-013,S1D_8183618,A_STB_039,R0813,S1D_8183661,1D,8.183618,8.1837,A,B
+preprint vs article,Aouini2025bR,S70-014,S1D_8183661,A_STB_039,R0812,S1D_8183618,1D,8.183661,8.1836,A,B
+preprint vs article,Aouini2025bR,S70-014,S1D_8183661,A_STB_039,R0813,S1D_8183661,1D,8.183661,8.1837,A,B
+preprint vs article,Aouini2025bR,S70-015,S6A_611714334,A_STB_039,R0803,S6A_611714334,6A,611.714334,611.7143,A,B
+preprint vs article,Aouini2025bR,S70-016,S1A_500074551,A_STB_039,R0806,S1A_500074551,1A,500.074551,500.0746,A,B
+preprint vs article,Aouini2025bR,S70-017,S1A_577377232,A_STB_039,R0807,S1A_577377232,1A,577.377232,577.3772,A,B
+preprint vs article,Aouini2025bR,S70-018,S4A_605028654,A_STB_039,R0809,S4A_605028654,4A,605.028654,605.0287,A,B
+preprint vs article,Aouini2025bR,S70-019,S4A_729925867,A_STB_039,R0811,S4A_729925867,4A,729.925867,729.9259,A,B
+preprint vs article,Aouini2025bR,S70-020,S6A_48048307,A_STB_039,R0804,S6A_48048307,6A,48.048307,48.0483,A,B
+preprint vs article,Aouini2025bR,S70-021,S6A_532657432,A_STB_039,R0805,S6A_532657432,6A,532.657432,532.6574,A,B
+preprint vs article,Aouini2025bR,S70-022,S7A_719723711,A_STB_039,R0810,S7A_719723711,7A,719.723711,719.7237,A,B
+preprint vs article,Aouini2025bR,S70-023,S3B_726510291,A_STB_039,R0808,S3B_726510291,3B,726.510291,726.5103,A,B
+preprint vs article,Aouini2025bR,S70-024,S5B_519034813,A_STB_039,R0814,S5B_519034813,5B,519.034813,519.0348,A,B
+preprint vs article,V_Gardner2025,V0894,BS00009715_51,Z_1123,V0852,BS00009715_51,1B,118.5969,118.5969,B,B
+preprint vs article,V_Gardner2025,V0895,BS00004089_51,Z_1123,V0853,BS00004089_51,2A,17.8831,17.8831,B,B
+preprint vs article,V_Gardner2025,V0896,Excalibur_c40617_983,Z_1123,Z0373,Excalibur_c40617_983,2A,703.9765,703.98,B,B
+preprint vs article,V_Gardner2025,V0897,Kukri_c40764_367,Z_1123,Z0374,Kukri_c40764_367,2B,29.3121,26.3,B,B
+preprint vs article,V_Gardner2025,V0898,BS00069685_51,Z_1123,V0854,BS00069685_51,2B,648.6204,648.6204,B,B
+preprint vs article,V_Gardner2025,V0899,RAC875_c19685_944,Z_1123,V0855,RAC875_c19685_944,2B,777.3303,777.3303,B,B
+preprint vs article,V_Gardner2025,V0900,BobWhite_c15073_502,Z_1123,V0856,BobWhite_c15073_502,2D,14.6029,14.6029,B,B
+preprint vs article,V_Gardner2025,V0901,BobWhite_c35303_192,Z_1123,V0857,BobWhite_c35303_192,3A,145.766,145.766,B,B
+preprint vs article,V_Gardner2025,V0902,Tdurum_contig42131_1300,Z_1123,Z0376,Tdurum_contig42131_1300,3B,826.0919,810.33,B,B
+preprint vs article,V_Gardner2025,V0903,BobWhite_c20306_111,Z_1123,Z0377,BobWhite_c20306_111,4A,713.5203,698.04,B,B
+preprint vs article,A_spot_blotch_026,R0527,S5B_683352145,Tomar2021FG,R0241,Q.Sb.bisa-5B,5B,683.3521,682.96,B,A
+preprint vs article,A_spot_blotch_026,R0537,S5B_683514734,Tomar2021FG,R0241,Q.Sb.bisa-5B,5B,683.5147,682.96,B,A
+"same paper, two source keys",ML2023FHB,R041,QTN3B (Fhb1 region),A_FHB_041,R0920,candidate gene TraesCS3B02G024900,3B,10.71,10.7124,A,B
+"same paper, two source keys",Hubei2020FHB,R139,QFhb.hbaas-1AS,A_FHB_030,V1023,IWB75039,1A,10.0,11.4183,A,B
+"same paper, two source keys",Hubei2020FHB,R140,QFhb.hbaas-7DS,A_FHB_030,V1025,IWB15569,7D,23.5,24.4558,B,B
+"same paper, two source keys",Guixie2025,R045,Qfhb.gaas.2D.1-1,A_FHB_050,R0923,Qfhb.gaas.2D.1 (TraesCS2D02G084600),2D,35.68,36.6594,A,B
+"same paper, two source keys",Downie2018,R053,Snn3-B1,A_SNB_005,R0634,GENE-3324_338 (TraesCS5B01G005000),5B,6.648,6.647,A,B
+"same paper, two source keys",Downie2018,R053,Snn3-B1,A_SNB_005,V1170,BobWhite_c4838_58,5B,6.648,6.6541,A,B
+"same paper, two source keys",Downie2018,R053,Snn3-B1,A_SNB_005,V1173,RAC875_c39204_91,5B,6.648,6.8526,A,B
+"same paper, two source keys",Navathe2023,R060,Tsn1-associated MTA 5BL:5324846,A_SNB_012,R0665,5B:566047792,5B,566.04,566.0478,B,B
+"same paper, two source keys",Juliana2022,R072,2AS SB cluster (21 GBS markers),A_spot_blotch_017,R0441,2A_718152,2A,0.718,0.7182,A,A
+"same paper, two source keys",Juliana2022,R073,5BS SB locus 5B_78260518,A_spot_blotch_017,R0444,5B_78260518,5B,78.26,78.2605,A,A
+"same paper, two source keys",Juliana2022,R073,5BS SB locus 5B_78260518,A_spot_blotch_017,R0445,5B_78260589,5B,78.26,78.2606,A,A
+"same paper, two source keys",He2021Her,R076,2NS/2AS translocation,A_blast_002,N0075,QWb-2NS (2AS),2A,4.0,4.0,A,B
+"same paper, two source keys",He2021Her,R159,WB QTL 7AL (Alondra/Caninde pops),A_blast_002,N0076,QWb-7AL (Oki18a),7A,675.4,675.4,A,B
+"same paper, two source keys",Tomar2021FG,R091,QSb.bisa-1A,A_spot_blotch_013,R0367,S1A_497201550,1A,497.2,497.2015,A,A
+"same paper, two source keys",Tomar2021FG,R091,QSb.bisa-1A,A_spot_blotch_013,R0379,S1A_497201682,1A,497.2,497.2017,A,A
+"same paper, two source keys",Tomar2021FG,R092,QSb.bisa-1D,A_spot_blotch_013,R0369,S1D_89835681,1D,89.84,89.8357,A,A
+"same paper, two source keys",Tomar2021FG,R093,Q.Sb.bisa-2B,A_spot_blotch_013,R0384,S2B_421708152,2B,421.92,421.7082,A,A
+"same paper, two source keys",Tomar2021FG,R093,Q.Sb.bisa-2B,A_spot_blotch_013,R0385,S2B_422031949,2B,421.92,422.0319,A,A
+"same paper, two source keys",Tomar2021FG,R093,Q.Sb.bisa-2B,A_spot_blotch_013,R0386,S2B_422190984,2B,421.92,422.191,A,A
+"same paper, two source keys",Tomar2021FG,R093,Q.Sb.bisa-2B,A_spot_blotch_013,R0387,S2B_422191033,2B,421.92,422.191,A,A
+"same paper, two source keys",Tomar2021FG,R093,Q.Sb.bisa-2B,A_spot_blotch_013,R0388,S2B_422507900,2B,421.92,422.5079,A,A
+"same paper, two source keys",Tomar2021FG,R094,QSb.bisa-6D,A_spot_blotch_013,R0378,S6D_6395796,6D,6.84,6.3958,A,A
+"same paper, two source keys",Tomar2021FG,R094,QSb.bisa-6D,A_spot_blotch_013,R0393,S6D_6944636,6D,6.84,6.9446,A,A
+"same paper, two source keys",Tomar2021FG,R094,QSb.bisa-6D,A_spot_blotch_013,R0394,S6D_7194112,6D,6.84,7.1941,A,A
+"same paper, two source keys",Tomar2021FG,R0238,Q.Sb.bisa-1B,A_spot_blotch_013,V1176,S1B_636840957,1B,636.84,636.841,A,A
+"same paper, two source keys",Tomar2021FG,R0239,Q.Sb.bisa-2A,A_spot_blotch_013,R0371,S2A_703358397,2A,703.11,703.3584,A,A
+"same paper, two source keys",Tomar2021FG,R0239,Q.Sb.bisa-2A,A_spot_blotch_013,R0372,S2A_703391915,2A,703.11,703.3919,A,A
+"same paper, two source keys",Tomar2021FG,R0239,Q.Sb.bisa-2A,A_spot_blotch_013,R0373,S2A_703391992,2A,703.11,703.392,A,A
+"same paper, two source keys",Tomar2021FG,R0239,Q.Sb.bisa-2A,A_spot_blotch_013,R0374,S2A_703427639,2A,703.11,703.4276,A,A
+"same paper, two source keys",Tomar2021FG,R0239,Q.Sb.bisa-2A,A_spot_blotch_013,V1177,S2A_703111105,2A,703.11,703.1111,A,A
+"same paper, two source keys",Tomar2021FG,R0240,Q.Sb.bisa-4A,A_spot_blotch_013,R0375,S4A_725660945,4A,725.54,725.6609,A,A
+"same paper, two source keys",Tomar2021FG,R0240,Q.Sb.bisa-4A,A_spot_blotch_013,R0392,S4A_725880148,4A,725.54,725.8801,A,A
+"same paper, two source keys",Tomar2021FG,R0240,Q.Sb.bisa-4A,A_spot_blotch_013,V1178,S4A_725538462,4A,725.54,725.5385,A,A
+"same paper, two source keys",Tomar2021FG,R0241,Q.Sb.bisa-5B,A_spot_blotch_013,R0377,S5B_683240735,5B,682.96,683.2407,A,A
+"same paper, two source keys",Tomar2021FG,R0241,Q.Sb.bisa-5B,A_spot_blotch_013,V1179,S5B_682958475,5B,682.96,682.9585,A,A
+"same paper, two source keys",HAAS2025FHB,R108,QFhb.haas-3BL,A_FHB_052,R0928,QFhb.haas-3BL (TraesCS3B01G358200),3B,571.1,571.022,B,B
+"same paper, two source keys",Adhikari2004,R121,Stb1,A_STB_041,Z021,Stb1,5B,418.808,418.808,C,B
+"same paper, two source keys",Ghimire2022SRWW,R128,QFhb-1BL.1,A_FHB_034,V1187,S1B_325985493,1B,326.0,325.9855,A,B
+"same paper, two source keys",Ghimire2022SRWW,R129,QFhb-1BL.2,A_FHB_034,V1188,S1B_327027585,1B,327.0,327.0276,A,B
+"same paper, two source keys",Ghimire2022SRWW,R130,QFhb-3AL (DON),A_FHB_034,V1189,S3A_661557724,3A,661.6,661.5577,A,B
+"same paper, two source keys",Ghimire2022SRWW,R131,QFhb-3BL (SRWW),A_FHB_034,R0877,S3B_789661730,3B,790.5,789.6617,A,B
+"same paper, two source keys",Ghimire2022SRWW,R131,QFhb-3BL (SRWW),A_FHB_034,V1190,S3B_790522562,3B,790.5,790.5226,A,B
+"same paper, two source keys",Juliana2020WB,R161,WB 4AL MTA (CIMMYT nurseries),A_blast_015,N0047,4A_572238009,4A,572.2,572.238,B,B
+"same paper, two source keys",Juliana2020WB,R161,WB 4AL MTA (CIMMYT nurseries),A_blast_015,N0048,4A_572238015,4A,572.2,572.238,B,B
+exact duplicate within source,AlTameemi2021,V0525,QSnb.sdsu-2A,AlTameemi2021,V0528,QSnb.sdsu.2A,2A,,,D,D
+exact duplicate within source,Tong2024TAG,V1676,Lr46-Yr29-Sr58,Tong2024TAG,V1978,Lr46-Yr29-Sr58,1B,661.855,661.855,B,B
+exact duplicate within source,Tong2024TAG,V1676,Lr46-Yr29-Sr58,Tong2024TAG,V2398,Lr46-Yr29-Sr58,1B,661.855,661.855,B,B
+exact duplicate within source,Tong2024TAG,V1781,Sr2-Lr27-Yr30,Tong2024TAG,V2137,Sr2-Lr27-Yr30,3B,1.17,1.17,B,B
+exact duplicate within source,Tong2024TAG,V1781,Sr2-Lr27-Yr30,Tong2024TAG,V2453,Sr2-Lr27-Yr30,3B,1.17,1.17,B,B
+exact duplicate within source,Tong2024TAG,V1825,Lr67-Yr46-Sr55,Tong2024TAG,V2220,Lr67-Yr46-Sr55,4D,405.67,405.67,B,B
+exact duplicate within source,Tong2024TAG,V1825,Lr67-Yr46-Sr55,Tong2024TAG,V2494,Lr67-Yr46-Sr55,4D,405.67,405.67,B,B
+exact duplicate within source,Tong2024TAG,V1932,Lr34-Yr18-Sr57,Tong2024TAG,V2371,Lr34-Yr18-Sr57,7D,48.94,48.94,B,B
+exact duplicate within source,Tong2024TAG,V1932,Lr34-Yr18-Sr57,Tong2024TAG,V2563,Lr34-Yr18-Sr57,7D,48.94,48.94,B,B
+orphan duplicate source key (no records),Agron2021Mandub,,,A_STB_024,,,,,,,
+orphan duplicate source key (no records),Rahman2020FCR,,,PD2023FCR,,,,,,,
+orphan duplicate source key (no records),IHAR_STB,,,A_STB_013,,,,,,,
+orphan duplicate source key (no records),Teagasc_STB,,,A_STB_021,,,,,,,
+orphan duplicate source key (no records),A_spot_blotch_022,,,Thirunarayanan2024PMPP,,,,,,,
+orphan duplicate source key (no records),A_SNB_010,,,Lin2021TAG,,,,,,,
+orphan duplicate source key (no records),A_Tan_spot_009,,,Galagedara2020,,,,,,,
+orphan duplicate source key (no records),A_STB_005,,,Ghaffary2012TAG,,,,,,,
+orphan duplicate source key (no records),A_STB_006,,,Liu2013Eu,,,,,,,
+orphan duplicate source key (no records),A_Tan_spot_025,,,Chu2010MBts,,,,,,,
+orphan duplicate source key (no records),Z_1223,,,LanglandsPerry2022,,,,,,,
+orphan duplicate source key (no records),V_Arraiano2006,,,Arraiano2007PP,,,,,,,
+orphan duplicate source key (no records),V_Li2010b,,,Li2011TAG,,,,,,,
+orphan duplicate source key (no records),V_Ágnes2014,,,SzaboHever2014Euph,,,,,,,
+orphan duplicate source key (no records),V_Pb,,,Ferjaoui2022BMC,,,,,,,
+preprint vs article (unplaced),V_Ren2023,V0432,QFhb.nwafu-2BL,Z_1350,V0318,QFhb.nwafu-2BL,2B,,,D,D
+preprint vs article (unplaced),V_Ren2023,V0433,QFhb.nwafu-5AS,Z_1350,V0319,QFhb.nwafu-5AS,5A,,,D,D
+preprint vs article (unplaced),V_Concepcion2024b,V1597,MTA_2A,V_Concepcion2024,V1521,MTA_2A,2A,,,D,D
+preprint vs article (unplaced),V_Concepcion2024b,V1598,MTA_2B,V_Concepcion2024,V1522,MTA_2B,2B,,,D,D
+preprint vs article (unplaced),V_Concepcion2024b,V1599,MTA_3A,V_Concepcion2024,V1523,MTA_3A,3A,,,D,D
