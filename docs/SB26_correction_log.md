@@ -346,3 +346,8 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## 2026-11-17: wild / alien-origin list
 - The list matched records only by text (names, notes, alien chromosomes). Designated genes of known donor species (Catalogue of Gene Symbols for Wheat; 130 genes, e.g. Lr21, Sr35, Yr15, Lr19, Pm21, Sr2) now count by name, with the donor shown, even where the note does not name it.
+
+## ad58 (2026-11-18): Singh et al. (2023) spot blotch GWAS re-curated
+- Earlier 56 records were one per SNP named "MTA M2266", with no trait or environment. Now 57 main-effect records, one per SNP and trait (AUDPC, incubation period, lesion number; Table 2), each with environments (E1-E4, BLUP), P, MAF; Table 4 MTAs flagged, the five AUDPC MTAs recommended for MAS noted, M8330 within QSb.bhu-2A.
+- Added M4854 (LN, 4A 200.8 Mb), missing before, and the eight epistatic pairs of Table 3 (16 SNP records; the two AUDPC pairs are the other recommended MTAs).
+- Table 2 reads down the left column then the right; environment assignment follows that order and matches the counts in the trait headings and Table 4.
