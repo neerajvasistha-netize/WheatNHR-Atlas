@@ -1,0 +1,54 @@
+Pm2b|DG|PM|5D|Xcfd81|11049|||PmKM2939 (PmPB3558); putatively from Agropyron cristatum; bin C-5DS1-0-0.63; Xscar112 – 0.5 cM – Pm2b – 1.3 cM – Xscar203/Xmag6176/Xcfd81-5D
+Pm2c|DG|PM|5D|Xcfd81;Xcfd78|11061|||PmNM; 5DS bin 5DS-1-0-0.63; Niaomai; Xcfd81-5D – 0.1-0.4 cM – Pm2c – 4.9-7.5 cM – Xcfd78-5D
+Pm46 (cloned)|DG|PM|4D|-|11070|||Lr67/Yr46/Sr55/Pm46 locus identified as a hexose transporter (STP13 family, 12 transmembrane helices); Chapingo 48
+Pm51 (corrected)|DG|PM|2B|Xwmc332|11026|||Xwmc332-2B – 3.2 cM – Pm51 – 1.5 cM – BQ246670
+Pm54|DG|PM|6B|Xgpw2344;Xbarc134|11050|||PmA2K; 6BL bin 6BL-0.45-1.00; AGS 2000 PI 612956; Xgpw2344-6B – 1.00 cM – wPt-9256 – Pm54 – 1.2 cM – Xbarc134-6B
+Pm55|DG|PM|5D|-|11108|||Pm5VS; from Dasypyrum villosum; 5VS.5AL (NAU421) and 5VS.5DL (NAU415) translocations; adult resistance increases to immunity; alien segment
+MlIW172|DG|PM|7A|-|11095|||7AL bin 7AL-16-0.86-0.90; T. dicoccoides IW172; WGGC4664/4665/4668 – 0.44 cM – MlIW172 – 0.7 cM – WGGC4659
+PmSE5785|DG|PM|2D|Xbarc59;Xwmc817|11084|||Recessive; 2DL; SE5785 (synthetic-derived); Xbarc59-2D – 3.6 cM – PmSE5785 – 4.6 cM – Xwmc817-2D
+Fhb6|DG|FHB|1A|-|11048|||From Elymus tsukushiensis (Roegneria kamoji); T1AL.1AS-1Ets#1S (TA5660, TA5093); CAPS and KASP (wg1S-snp1) markers; alien segment
+Fhb7|DG|FHB|7D|-|11060|||From Thinopyrum ponticum; T7DS.7DL-7el2L (SDAU1881, SDAU1886); flanked by 7el2 markers Xcfa2240 and XsdauK66 in a 1.7 cM interval; alien segment
+FHB QTL 3A (T. dicoccoides Mt Gerizim 36)|QTL|FHB|3A|Xbarc45;Xbarc67|11088|||T. dicoccoides Mt Gerizim#36/*2 Helidur F6; type 2 resistance; Xbarc45-3A – Xbarc67-3A
+FHB QTL 6B (T. dicoccoides Mt Gerizim 36)|QTL|FHB|6B|Xgwm626|11088|||T. dicoccoides Mt Gerizim#36/*2 Helidur; type 2; Xs13m22_2 – Xgwm626-6B
+Cre8 (wri15)|DG|CCN|6B|-|11081|||Map in {10343} reversed: Cre8 closer to the end of 6BL; six KASP markers and wri15 (SNP) reported
+Rmg7 (2AL)|DG|WB|2A|Xcfd50;Xhbg327|11083|||2AL; T. dicoccum; Xcfd50-2A – 5.6 cM – Rmg7 – 15.1 cM – Xhbg327-2A
+Rmg8|DG|WB|2B|Xwmc317;Xbarc159|11083|||2BL bin 2BL6-0.89-1.00; S615; Xwmc317-2B – 12.1 cM – Rmg8 – 22.4 cM – Xbarc159-2B
+Sr9h (DArT)|DG|SR|2B|-|11010|||Matlabas; wPt-3132 – 1.9 cM – Sr9h – 1.9 cM – wPt-8460; Sr9h – 20.7 cM – Sr28
+Sr12|DG|SR|3B|-|11104|||3BS/centromere or 3BL; RL6058; IWA6086 – Sr12 – IWA4613; associated with field resistance
+Sr21|DG|SR|2A|-|11110|||From einkorn (CI 2433); FD52726 – 0.25 cM – Sr21 – 0.05 cM – EX594406; 2AL as in the Catalogue main entry
+Sr42 (haplotypes)|DG|SR|6D|Xcfd49|11087|||Xcfd49-6D – Sr42/IWB31561/IWB30767 – FSDRSA; co-locates with SrCad, SrNini, SrSha7 and SrTmp
+Sr43|DG|SR|7D|-|11076|||7DL; 7DS-7el2S.7el2L from Thinopyrum ponticum; shortened derivatives RWG33 and RWG34; alien segment
+Sr49 (map)|DG|SR|5B|Xwmc471|10704|||Mahmoudi AUS 28011; sun479 – 0.9 cM – Sr49 – 1.5 cM – sun209 – 0.5 cM – Xwmc471-5B
+Sr59|DG|SR|2D|-|11066|||From rye (triticale VT828041); T2DS.2RL (TA5094); alien segment
+SrND643|DG|SR|4A|Xwmc776;Xgwm350;Xwmc219|11092|||4AL bin 4AL4-0.8-1.00; durum ND643, Kenya Sunbird; Xwmc776-4A – 2.9 cM – Xgwm350-4A – 0.5 cM – SrND643 – 4.1 cM – Xwmc219-4A
+SrTm4|DG|SR|2A|Xgwm526;Xgdm93|11111|||Recessive; 2AmL from T. monococcum PI 306540; BQ461276 – 1.6 cM – SrTm4 – 0.5 cM – DR732348/Xgwm526/Xgdm93-2A
+SrTmp (SrSha7)|DG|SR|6D|-|11057|||SrSha7; 6DS; Digalu, Kenya Robin
+Yr51 (map)|DG|YR|4A|Xgwm160|10850|||sun106 – 0.6 cM – owm45F3R3 – 1.2 cM – Yr51 – 2.5 cM – sun104 – 1.8 cM – Xgwm160-4A
+Yr57 (corrected)|DG|YR|3B|Xgwm389;Xbarc75|10963|||sts3B15 – 4.5 cM – BS00062676 – 2.3 cM – Yr57 – Xgwm389-3B – 2.0 cM – Xbarc75-3B
+Yr58 (3BS)|DG|YR|3B|-|10964|||Location revised to 3BS bin 3BS3-0.87-1.00; 1121669/3023704 – 3.9 cM – Yr58 – 4.6 cM – 100016328/1233292
+Yr68|DG|YR|4B|-|11051|||Adult plant resistance; 4BL bin 4BL1-0.86-1.00; csAvYr4BL; IWB74301 – 0.5 cM – Yr68/IWA4640 – 0.5 cM – IWB28394
+Yr69|DG|YR|2A|Xwmc25|11052|||YrCH86; 2AS bin 2AS5-0.78-1.00; CH7086; Xwmc25-2A – 2.7 cM – X2AS33 – 1.9 cM – Yr69 – 3.1 cM – Xmag3807-2A
+Yr70|DG|YR|5D|Xgwm190|11055|||YrUmb; from Ae. umbellulata Pau 3732; 5DS (IL 393-4); Yr70 – 7.6 cM – Xgwm190-5D; allele of Yr40; alien segment
+Yr71|DG|YR|3D|Xgwm114|11056|||Adult plant resistance; YrSA3; 3DL; Sunco; Yr71 – 1.6 cM – IWB17207 ... – Xgwm114b-3D – 5.6 cM – Sr24/Lr24
+Yr72|DG|YR|2B|-|11059|||YrAW4; 2BL bin 2BL-5-0.59-0.89; AUS27507; Xsun481-2BL – 1.8 cM – Yr72 – 1.2 cM – IWB12294 – 1.5 cM – Xsun482-2BL
+Yr73|DG|YR|3D|-|11062|||Complementary gene of the YrA specificity; 3DL; Avocet R; DArT-seq mapped
+Yr74|DG|YR|5B|-|11062|||Complementary gene of the YrA specificity; 5BL; Avocet R; DArT-seq mapped
+Yr75|DG|YR|7A|Xcfa2016|11065|||Adult plant resistance; YrAxe; 7AL bin 7AL16-0.86-0.90; Xcfa2016-7A – 1.0 cM – Yr75 – 0.3 cM – IWB36240
+Yr76|DG|YR|3A|-|11067|||YrTye; 3AS bin 3AS4-0.45-1.00 (earlier 6D); Tyee; markers listed with -6D suffixes: Xbarc321 – 6.2 cM – Xbarc57 – 4.3 cM – Xwmc11 – 2.6 cM – Yr76 – 3.4 cM – Xwmc532
+YrC591 (map)|DG|YR|7B|Xbarc182|11099|||7BL bin 7BL-3-0.85-1.00; Xmag1714-7B – 1.2 cM – YrC591 – 0.4 cM – Xbarc182-7B
+YrHA|DG|YR|1A|Xwmc469;Xgwm497|11100|||1AL; H901414-121-5-5-9; Xwmc469-1A – 3.4 cM – YrHA – 4.6 cM – Xgwm497-1A
+YrSD|DG|YR|5B|Xwmc640;Xbarc59;Xwmc783|11085|||5BL; Strubes Dickkopf; Xwmc640-5B – 3.6 cM – YrSD – 2.4 cM – Xbarc59-5B – 3.0 cM – Xwmc783-5B; different from Yr25
+YrSP (map)|DG|YR|2B|Xwmc332|11091|||Bin 2BL-C-0.5; IWA638 – 0.6 cM – YrSP – 1.5 cM – dp269 – 1.9 cM – Xwmc332-2B
+Lr3d|DG|LR|6B|-|11054|||RL6062 = Thatcher*6/PI 268316; Lr3 allele
+Lr11|DG|LR|2D|Xgwm614|11074|||LrBP2; 2DS; Buck Poncho; Lr11 – 0.3 cM – SCAR32/35 – 1.6 cM – Xgwm614-2D
+Lr13 (Ne2)|DG|LR|2B|Xbarc55;Xbarc18|11068|||Xbarc55-2B – 1.1 cM – Xkwh37 – 4.9 cM – Lr13/Ne2 – 5.8 cM – Xgpw1109 – 3.7 cM – Xbarc18-2B
+Lr28|DG|LR|4A|Xbarc343;Xwmc219|11069|||Sunland; Xbarc343-4A – 7.7 cM – Lr28/Psr119/SCS421/mag3092 – 1.1 cM – Xwmc219-4A; from Ae. speltoides
+Lr48 (SNP)|DG|LR|2B|Xgwm429;Xbarc67|11112|||Xgwm429b-2B – 4.2 cM – Sun563/Sun497 – 0.6 cM – IWB31002/IWB39834/IWB34324/IWB72894/Lr48 – 0.3 cM – IWB70147 – 2.0 cM – Xbarc67-2B
+Lr74 (3BS)|DG|LR|3B|Xgwm533|11031|||Revised: 3BS bin 3BS8-0.78-0.87; Spark; Xcfb5006-3B – 1.9 cM – Lr74 – 2.2 cM – BS00009992 – 2.7 cM – Xgwm533-3B
+Lr75|DG|LR|1B|Xgwm18|11053|||Adult plant resistance; QLrP.sfr-1BS; 1BS; ArinaLr75; Lr75 – 2.74 cM – Xgwm18-1B
+Lr76|DG|LR|5D|Xgwm190|11055|||LrUmb; from Ae. umbellulata Pau 3732; 5DS (IL 393-4); Lr76 – 7.6 cM – Xgwm190-5D; allele of Lr57; alien segment
+LrBi16 (map)|DG|LR|7B|Xcfa2257;Xgwm344|11082|||Bin 7BL-10; Xcfa2257-7B – 2.8 cM – LrBi16 – 2.5 cM – Xgwm344-7B; allelic with Lr14c
+Lr6Ai#2|DG|LR|6D|-|11079|||On Thinopyrum intermedium chromosome 6Ai#2; Tulaikoskaya 5, 10, 100; alien chromosome
+Qym.njau-5A.1|QTL|WYMV|5A|Xwmc415|11073|26-54||Xifeng (R)/Zhen 9523 (S) RILs; closely associated with Xwmc415.1, CINAU152 and CINAU153; behaved as a single Mendelian gene
+QYm.njau-3B.1|QTL|WYMV|3B|-|11073|1-3||Xifeng/Zhen 9523 RILs
+QYm.njau-7B.1|QTL|WYMV|7B|-|11073|3-5||Xifeng/Zhen 9523 RILs; some trials

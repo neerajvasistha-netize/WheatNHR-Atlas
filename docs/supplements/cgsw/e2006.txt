@@ -1,0 +1,64 @@
+Pm16|DG|PM|5B|Xgwm159|10217|||Line 70281 = Norman/*3 Beijing 837; Pm16 – 5.3 cM – Xgwm159-5B; may be the same as Pm30
+Pm33 (map)|DG|PM|2B|Xgwm536;Xwmc317;Xgwm111;Xgwm383|10205|||Xgwm536-2B – 18.1 cM – Pm33 – 1.1 cM – Xwmc317-2B – 1.1 cM – Xgwm111-2B – 1.8 cM – Xgwm383-2B
+Pm34|DG|PM|5D|Xbarc177;Xbarc144|10241|||5DL; PI 604033 = NC97BGTD7 = Saluda*3/Ae. tauschii TA2492; Xbarc177-5D – 5.4 cM – Pm34 – 2.6 cM – Xbarc144-5D
+PM gene 7AL (NC96BGTA4, T. monococcum)|DG|PM|7A|-|10274|||Single gene on 7AL proximal to Pm1, from a T. monococcum derivative (NC96BGTA4)
+PM gene 7AL (NC99BGTAG11, T. timopheevii)|DG|PM|7A|-|10274|||Single gene on 7AL proximal to Pm1, from a T. timopheevii subsp. armeniacum derivative (NC99BGTAG11); possibly allelic to the NC96BGTA4 gene
+PmPS5A|DG|PM|2A|Xgwm356|10205|||2AL; AM4; Xgwm356-2A – 10.2 cM – PmPS5A; at or near the Pm4 locus
+MlZec1|DG|PM|2B|Xwmc356|10227|||Xwmc356-2B – 2.0 cM – MlZec1 (previously MlZec)
+Fhb1|DG|FHB|3B|-|10214|||QFhs.ndsu-3BS; 3BS; designated gene
+Fhb2|DG|FHB|6B|Xgwm644|10225|||BW278; Xgwm-6B (marker number missing in the Catalogue text) – 2.6 cM – Fhb2 – 3.1 cM – Xgwm644-6B
+FHB QTL 3BS (W14 x Pioneer 2684)|QTL|FHB|3B|Xbarc133;Xgwm493|10239|33-35||W14 (R)/Pioneer 2684 (S); 3BS and 5AS QTL together explained 33-35% of spread, kernel infection and DON in greenhouse and 26-34% of field incidence and severity; flanks Xbarc133-3B and Xgwm493-3B
+FHB QTL 5AS (W14 x Pioneer 2684)|QTL|FHB|5A|Xbarc117;Xbarc56|10239|||W14 (R)/Pioneer 2684 (S); flanks Xbarc117-5A and Xbarc56-5A
+FHB QTL 6AL (Dream x Lynx)|QTL|FHB|6A|-|10260|19||Dream (R)/Lynx (S) RILs; F. culmorum AUDPC
+FHB QTL 1B (Dream x Lynx)|QTL|FHB|1B|-|10260|12||Dream/Lynx RILs; resistance from Lynx, associated with T1BL.1RS
+FHB QTL 2BL (Dream x Lynx)|QTL|FHB|2B|-|10260|11||Dream/Lynx RILs; F. culmorum AUDPC
+FHB QTL 7BS (Dream x Lynx)|QTL|FHB|7B|-|10260|21||Dream/Lynx RILs; F. culmorum AUDPC
+Qfhi.nau-4B|QTL|FHB|4B|Xwmc349;Xgwm149|10282|17.5||Nanda2419/Wangshuibai; type I resistance from Wangshuibai, detected in at least 3 of 4 years; Xwmc349-4B – Xgwm149-4B
+Qfhi.nau-5A|QTL|FHB|5A|Xwmc96;Xgwm304|10282|27||Nanda2419/Wangshuibai; type I resistance from Wangshuibai; Xwmc96-5A – Xgwm304-5A
+Qfhi.nau-5B|QTL|FHB|5B|Xgwm408;Xbarc140|10282|||Nanda2419/Wangshuibai; type I resistance from Wangshuibai; Xgwm408-5B – Xbarc140-5B
+FHB QTL 3BS (Wangshuibai x Seri 82)|QTL|FHB|3B|Xgwm533|10264|17||Wangshuibai/Seri 82 F3:F5; Xgwm533-3B – Xs18/m12-3B
+FHB QTL 2DL (Wangshuibai x Seri 82)|QTL|FHB|2D|Xgwm539|10264|11||Wangshuibai/Seri 82 F3:F5; Xgwm539-2D – Xs15/m24-2D
+FHB QTL 3BS (Wangshuibai x Alondra)|QTL|FHB|3B|Xgwm533|10268|||Wangshuibai/Alondra 'S'; stable in each of three years, at Xgwm533-3B
+FHB QTL 5B (Wangshuibai x Alondra)|QTL|FHB|5B|Xgwm335|10268|||Wangshuibai/Alondra 'S'; detected in two years; Xgwm335-5B (QTL on 2D and 7A also in two years)
+Qfhb.ksu-5DL.1|QTL|FHB|5D|Xbarc239|10276|24||Chokwang (R)/Clark (S); associated with Xbarc239-5D
+Qfhb.ksu-4BL.1|QTL|FHB|4B|Xbarc1096|10276|13||Chokwang (R)/Clark (S); associated with Xbarc1096-4B
+Qfhs.ksu-3BS.1|QTL|FHB|3B|-|10276|10||Chokwang/Clark; marginally associated with the Fhb1 region
+FHB QTL 2BS (Patterson x Goldfield, flower opening)|QTL|FHB|2B|Xbarc200;Xgwm210|10243|29||Patterson (open)/Goldfield (closed) RILs; narrow flower opening and low FHB incidence; Xbarc200 – Xgwm210, probably 2BS
+FHB QTL 4A (T. macha)|QTL|FHB|4A|Xgwm601;Xgwm165|10254|||Hobbit Sib/T. macha 4A DH; type I resistance and DON; distal to Xgwm601-4A, co-segregating with Xgwm165-4A
+Crown rot QTL 1D (2-49 x Janz)|QTL|CR|1D|-|10132|21||2-49 (partially resistant)/Janz DH; seedling resistance; minor QTL also on 2A, 2B (from Janz), 4B and 7B
+Crown rot QTL 1A (2-49 x Janz)|QTL|CR|1A|-|10132|9||2-49/Janz DH; seedling resistance
+Stb7|DG|STB|4A|Xwmc313|10011|||Kavkaz-K4500; closer to Xwmc313-4A than to Xwmc219-4A
+Stb10|DG|STB|1D|Xwmc848|10011|||Kavkaz-K4500 L6.A.4; resistance to IPO94269 and ISR8036; associated with Xwmc848-1D
+Stb11|DG|STB|1B|Xbarc8|10012|||1BS; TE 9111; resistance to IPO90012; distal to Xbarc008-1B
+Stb12|DG|STB|4A|Xwmc219|10011|||4AL; Kavkaz-K4500; closer to Xwmc219-4A than to Xwmc313-4A
+SNG QTL 5A q (Oberkulmer spelt x Forno)|QTL|SNB|5A|-|10250|35.8||Forno (S)/Oberkulmer spelt (R) 204 RILs; major glume blotch QTL associated with the q locus (5AL); ten SNG QTL, six from Forno
+SNL QTL 3D (Oberkulmer x Forno)|QTL|SNB|3D|-|10250|>13||Forno/Oberkulmer RILs; leaf blotch QTL considered for MAS
+SNL QTL 4B (Oberkulmer x Forno)|QTL|SNB|4B|-|10250|>13||Forno/Oberkulmer RILs; leaf blotch QTL considered for MAS
+SNL QTL 7B (Oberkulmer x Forno)|QTL|SNB|7B|-|10250|>13||Forno/Oberkulmer RILs; leaf blotch QTL considered for MAS
+Sr22|DG|SR|7A|Xcfa2123;Xcfa2019|10263|||Xcfa2123-7A – 6 cM – Sr22 – 5.9 cM – Xcfa2019-7A
+Yr18|DG|YR|7D|Xgwm120;Xgwm295|10259|||Xgwm120-7D – 0.9 cM – Yr18 – 0.7 cM – Xgwm295-7D
+Yr29|DG|YR|1B|Xwmc44;Xgwm140|10281|||Lalbahadur(Parula 1B); Xwmc44-1B – 3.6 cM – Yr29 – 2.1 cM – XtG818/XBac17R ... Xgwm140-1B; with Lr46 and Ltn2
+Yr36 (map)|DG|YR|6B|Xbarc101|10272|||Nor-B2 ... Xucw68-6B – Xucw69-6B/Xbarc101-6B/Yr36 – Xucw66-6B; 2-4 cM proximal to Gpc-B1
+Yr38|DG|YR|6A|-|10224|||YrS12; 6AL-6Lsh.6Ssh translocation from Ae. sharonensis-174 (line 0352-4); alien segment
+YrCK|DG|YR|2D|-|10220|||2DS; temperature sensitive; Cook and Sunco
+YrCN19|DG|YR|2B|Xgwm410|10228|||2BS; Chuannong 19; complete linkage to the 391 bp allele of Xgwm410-2B
+QYr.inra-2BL (Rsp)|QTL|YR|2B|-|10279|42-61||Camp Remy/Recital 217 RILs; APR over four years; corresponds largely to seedling gene Rsp, possibly Yr7
+QYr.inra-2AL|QTL|YR|2A|-|10279|||Camp Remy/Recital RILs; APR
+QYr.inra-2DS|QTL|YR|2D|-|10279|||Camp Remy/Recital RILs; APR; perhaps Yr16
+QYr.inra-5BL.1|QTL|YR|5B|-|10279|||Camp Remy/Recital RILs; APR
+QYr.inra-5BL.2|QTL|YR|5B|-|10279|||Camp Remy/Recital RILs; APR
+YR QTL 2BL (Deben, multiple cross)|QTL|YR|2B|Xwmc149;Xwmc317|10283|||Multiple-cross analysis; Xwmc149-2B – Xwmc317a-2B in Deben
+YR QTL 6BL (Soloist, Kris)|QTL|YR|6B|Xwmc397;Xwmc105|10283|||Multiple-cross analysis; Xwmc397-6B – Xwmc105b-6B in Soloist and Kris
+YR QTL 2AL (Yr32, multiple cross)|QTL|YR|2A|-|10283|||Multiple-cross analysis; probably Yr32 in Deben, Kris and Soloist
+YR QTL 2AS (Yr17, Kris)|QTL|YR|2A|-|10283|||Multiple-cross analysis; probably Yr17 in Kris
+Lr19|DG|LR|7D|-|10255|||7DL; in the Xwg420-7Ag – Xmwg2062-7Ag interval of the Th. ponticum 7Ag segment (Sears' transfer 7D-7Ag no. 1); alien segment
+Lr20|DG|LR|7A|-|10263|||Lr20 – STS638, 7.1 cM; 7AL as in the Catalogue main entry
+Lr34|DG|LR|7D|Xgwm120;Xgwm295|10259|||Xgwm120-7D – 0.9 cM – Lr34 – 2.7 cM – Xgwm295-7D
+Lr46|DG|LR|1B|Xwmc44;Xgwm140|10281|||Xwmc44-1B – 3.6 cM – Lr46 – 2.1 cM – XtG818/XBac17R ... Xgwm140-1B; with Yr29 and Ltn2
+Lr52 (map)|DG|LR|5B|Xgwm443|10035|||Lr52 – 16.5 cM – Xgwm443-5B
+Lr56|DG|LR|6A|-|10224|||LrS12; 6AL-6Lsh.6Ssh translocation from Ae. sharonensis-174; alien segment
+Lr 5BS (PI 289824)|DG|LR|5B|Xgwm234|10253|||Potentially novel gene in Iranian landrace PI 289824; Xgwm234-5B – 8.9 cM – Lr – 2.3 cM – STS Xtxw200
+QTs.fcu-1BS|QTL|TS|1B|-|10248|13-29||Grandin (S)/BR34 (R) RILs; resistance to four races; five other race-specific QTL
+QTs.fcu-3BL|QTL|TS|3B|-|10248|13-41||Grandin/BR34 RILs; resistance to four races
+QSbv.ksu-5D|QTL|SBCMV|5D|-|10273|38||Karl 92*2/TA 4152-4; resistance from Karl 92
+YmYF|DG|WYMV|2D|Xwmc181;Xgwm349|10258|||2DL; Yangfu 9311; Xpsp3039-2D/Xwmc181-2D – 0.7 cM – YmYF – 8.1 cM – Xgwm349-2D

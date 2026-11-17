@@ -1,0 +1,85 @@
+Pm4b|DG|PM|2A|Xgwm382|10553|||STS241 – 4.9 cM – Pm4b – 7.1 cM – SRAP Me8/Em7 220 – 4.7 cM – Xgwm382-2A
+Pm4c|DG|PM|2A|Xbarc122;Xgwm356|10583|||Pm23; 2AL (earlier reported on 5AL); 81-7241; Xbarc122-2A – 1.4 cM – Pm4c – 3.5 cM – Xgwm356-2A
+Pm5d|DG|PM|7B|Xgwm611;Xgwm577;Xwmc581|10542|||7BL, FL 0.86; Dream; Xgwm611-7B – 2.1 cM – Pm5d – 2.0 cM – Xgwm577-7B – 1.0 cM – Xwmc581-7B
+Pm6|DG|PM|2B|-|10576|||Prins derivatives; STS markers NAU/STSBCD135-1 and -2 from Xbcd135-2B, 0.8 cM from Pm6
+Pm36 (map)|DG|PM|5B|Xcfd7|10356|||Bin 5BL6-0.29-0.76; Xcfd7-5B – 10.7 cM – Pm36 – 0.8 cM – EST BJ261636 – 8.9 cM – Xwmc75-5B
+Pm40|DG|PM|7B|-|10539|||From Thinopyrum intermedium; 7BS; GRY19; mapped relative to several SSR markers (Xwmc426 – 5.9 cM – Xwmc334 – 0.2 cM – Pm40 – 0.7 cM – Xgwm297 in the 2010 Supplement)
+Pm41|DG|PM|3B|Xwmc687|10551|||From T. dicoccoides IW2; 3BL; BE489472 – 0.8 cM – Pm41 – 1.9 cM – Xwmc687-3B
+Pm42|DG|PM|2B|Xgwm148|10559|||From T. dicoccoides G303-1M; recessive; 2BS bin 0.75-0.84; BF146221 – 0.9 cM – Pm42 – Xgwm148-2B
+Pm43|DG|PM|2D|Xwmc41;Xbarc11|10560|||From Thinopyrum intermedium (line CH5025); 2DL; Xwmc41-2D – 2.3 cM – Pm43 – 4.2 cM – Xbarc11-2D
+MlIw72|DG|PM|7A|Xgwm344|0908|||7AL FL 0.86; from T. dicoccoides IW72; Xmag1759-7A – 8.2 cM – MlIw72 – 3.3 cM – Xmag2185-7A – 1.6 cM – Xgwm344-7A
+PmYm66|DG|PM|2A|-|10619|||2AL; Yumai 66; XKsum193-2A – 2.4 and 3.6 cM – PmYm66
+Pm2026|DG|PM|5A|Xcfd39;Xgwm126|10604|||Recessive; 5AmL from T. monococcum TA2026; bin 5AL17-0.78-1.00; Xcfd39-5A – 1.8 cM – Xcfd1493-5A/Xmg2170-5A – 0.9 cM – Pm2026 – 2.5 cM – Xgwm126-5A
+PM QTL 4BL (Avocet R x Saar)|QTL|PM|4B|-|10481|||Avocet R (S)/Saar (R) F6 RILs; resistance allele from Avocet R; near XwPt-6209 (QTL at 1BL Pm39 and 7DS Pm38 also detected)
+FHB QTL 1A (G16-92 x Hussar)|QTL|FHB|1A|-|10588|1||G16-92 (R)/Hussar (S); F. culmorum; resistance from Hussar
+FHB QTL 2B (G16-92 x Hussar)|QTL|FHB|2B|-|10588|14||G16-92/Hussar; F. culmorum; resistance from G16-92
+QFdk.nau-2B|QTL|FHB|2B|-|10577|>20||Nanda2419/Wangshuibai; type IV (Fusarium-damaged kernels); resistance from Nanda 2419
+QFdk.nau-3B|QTL|FHB|3B|-|10577|>20||Nanda2419/Wangshuibai; type IV; from Wangshuibai
+QFdk.nau-4B|QTL|FHB|4B|-|10577|>20||Nanda2419/Wangshuibai; type IV; from Wangshuibai
+Qfhs.lfl-7BS/5BL|QTL|FHB|7B|-|10594|||Pelikan (S)/G93010 (R); from Ning 8026; reduced severity by 30%
+Qfhs.lfl-6BS|QTL|FHB|6B|-|10594|||Pelikan/G93010; from Ning 8026, probably Fhb2; reduced severity by 24% (46% with Qfhs.lfl-7BS/5BL)
+Qfhs.lfl-1AS|QTL|FHB|1A|-|10594|||Pelikan/G93010; resistance from Pelikan; further QTL on 2AL and 7AL from Ning 8026
+Qfhs.jic-4D.2|QTL|FHB|4D|-|10603|||Spark (MR)/Rialto (S) DH; largest effect on type 1 resistance, associated with Rht-D1b in Rialto (susceptibility); nine QTL across environments
+FSB seedling QTL 5B (Wuhan x Nyubai)|QTL|FHB|5B|Xwmc75|10624|13.8||Wuhan/Nyubai; seedling resistance to F. graminearum; associated with Xwmc75-5B
+FHB susceptibility 2A (T. dicoccoides Israel A)|QTL|FHB|2A|Xgwm558;Xgwm445|10613|||Langdon/Langdon(DIC-2A) RICL; increased susceptibility of the T. dicoccoides line mapped to a 22 cM interval Xgwm558-2A – Xgwm445-2A
+Rmg4|DG|WB|4A|-|10639|||Norin 4, Norin 26, Norin 29; resistance to Digitaria isolate Dig41 at 26 C
+Rmg5|DG|WB|6D|-|10639|||Mg5; CS (Red Egyptian 6D); resistance to Dig41 at 26 C
+Stb3 (7AS)|DG|STB|7A|-|10556|||Relocated to 7AS (earlier 6DS location not correct)
+QSnl.daw-2DL|QTL|SNB|2D|-|10584|||HRWSN125 (R)/WAWHT2074 (S); flag leaf resistance, constant over two years
+QSng.daw-4BL|QTL|SNB|4B|-|10584|||HRWSN125/WAWHT2074; glume resistance over two years
+QSnb.ndsu-5B|QTL|SNB|5B|-|10597|38||Langdon/Langdon (T. dicoccoides Israel-A 5B); 8.3 cM proximal to tsn1
+Sr8b|DG|SR|6A|Xgwm334|10607|||Durum Arrivato; Sr8b – 4.6 cM – Xgwm334-6A
+Sr9e|DG|SR|2B|Xgwm191;Xgwm47|10607|||Arrivato; Xgwm191-2B – 5.5 cM – Sr9e – 0.7 cM – Xgwm47-2B
+Sr13|DG|SR|6A|Xwmc59|10607|||Arrivato; Xwmc59-6A – 5.7 cM – Sr13
+Sr17|DG|SR|7B|Xwmc273|10565|||7BL; Forno; Xwmc273-7B – 15.3 cM – Sr17
+Sr36|DG|SR|2B|Xgwm319;Xwmc477|10609|||Xgwm319-2B – 0.9 cM – Sr36/Xstm773-2-2B/Xwmc477-2B
+Sr47|DG|SR|2B|-|10549|||From Ae. speltoides PI 369590; 2BL-2SL.2SS translocation in durum DAS15; alien segment
+Sr48|DG|SR|2A|-|10564|||SrAn1; 2AL bin 2AL1-0.85-1.00; Arina; Yr1 – 16.5 cM – Sr48, distal to all published markers
+Qsr.sun-5BL|QTL|SR|5B|-|10565|11-12||Arina/Forno; resistance from Arina; associated with Xglk356-5B
+Qsr.sun-7DS|QTL|SR|7D|-|10565|||Arina/Forno; resistance from Forno; markers XcsLV34 and Xswm10 (Lr34/Yr18)
+QSr.sun-3BS|QTL|SR|3B|-|10632|9-15||HD2009/WL711 RILs; probably Sr2
+QSr.sun-5DL|QTL|SR|5D|-|10632|20-44||HD2009/WL711 RILs; probably Sr30
+QSr.sun-7A|QTL|SR|7A|-|10632|7-13||HD2009/WL711 RILs; nearest marker wPt-4515
+Yr1|DG|YR|2A|-|10564|||Bin 2AL1-0.85-1.00; Xfba-2A – 1.3 cM – Xstm673acag – 1.1 cM – Yr1
+Yr26|DG|YR|1B|Xbarc181;Xwmc419|10544|||1BL bin C-1BL6-0.32; Nannong 9918; Xwe173-1B – 1.4 cM – Yr26 – 6.7 cM – Xbarc181-1BL – 3.0 cM – Xwmc419-1BL
+Yr33|DG|YR|7D|Xgwm111;Xgwm437|10039|||7DL; linkage with Xgwm111-7D and Xgwm437-7D
+Yr36 (WKS1)|DG|YR|6B|-|10649|||Cloned: wheat kinase-START 1 (WKS1, ACF33182); absent in almost all modern wheats
+Yr42|DG|YR|6A|-|10537|||From Ae. neglecta 155; 6AL-6AenL.6AenS translocation (line 03M119-71A); alien segment
+YrCN17|DG|YR|1B|-|10562|||On 1BL.1RS from rye L155; alien segment
+YrC591|DG|YR|7B|Xcfa2040|10606|||7BL; C591, Zhongzhi 1; Xcfa2040-7B – 8.0 cM – YrC591 – 11.7 cM – SC-P35M48
+YrExp1|DG|YR|1B|Xwmc631|10601|||1BL; Express; Xwgp78-1B – 4.2 cM – YrExp1 – 3.4 cM – Xwmc631-1B
+YrExp2|DG|YR|5B|Xgwm639|10601|||5BL; Express; Xgwm639-5B – 9.2 cM – Xwgp81-5B – 1 cM – YrExp2 – 0.7 cM – Xwgp82-5B
+YrR212|DG|YR|1B|-|10562|||On 1BL.1RS from rye R212; alien segment
+YrS2199|DG|YR|2B|-|10618|||2BL bin 0.89-1.00; S2199; Xgwm120-2B – 11.0 cM – YrS2199 – 0.7 cM – Xdp269-2B
+QYrlu.cau-2BS.1|QTL|YR|2B|Xwmc154;Xgwm148|10582|36.6||Luke (R)/Aquileja (R); high-temperature APR from Luke; distal, Xwmc154-2B – Xgwm148-2B
+QYrlu.cau-2BS.2|QTL|YR|2B|Xgwm148;Xbarc167|10582|41.5||Luke/Aquileja; HTAP from Luke; proximal, Xgwm148-2B – Xbarc167-2B
+QYraq.cau-2BL|QTL|YR|2B|Xwmc175;Xwmc332|10582|61.5||Luke/Aquileja; from Aquileja, stripe number; Xwmc175-2B – Xwmc332-2B
+YR QTL 2BS (Avocet S x Attila)|QTL|YR|2B|-|10586|||Avocet S/Attila; probably Yr27
+YR QTL 2BL (Avocet S x Attila)|QTL|YR|2B|-|10586|||Avocet S/Attila; race-specific effect
+YR QTL 7BL (Avocet S x Attila)|QTL|YR|7B|Xgwm344|10586|||Avocet S/Attila; XP32/M59 – Xgwm344-7B
+QPst.jic-1BL|QTL|YR|1B|Xgwm818;Xgwm259|10589|up to 45||Guardian/Avocet S F3; major QTL from Guardian in the Yr29 region; Xgwm818 – Xgwm259-1B; minor QTL on 2D and 4B
+QYrst.wgp-6BS.1|QTL|YR|6B|Xbarc101;Xbarc136|10602|||Stephens/Michigan Amber; HTAP; 3.9 cM region Xbarc101-6B – Xbarc136-6B
+QYrst.wgp-6BS.2|QTL|YR|6B|Xgwm132;Xgdm113|10602|||Stephens/Michigan Amber; HTAP; 17.5 cM region Xgwm132-6B – Xgdm113-6B
+Lr1 (cloned)|DG|LR|5D|-|10561|||Cloned, CC-NBS-LRR, 1,344 aa (EF567063); co-segregation with RGA567-5
+Lr13 (map)|DG|LR|2B|Xbarc163|0329|||Xbarc163-2B – 5.1 cM – Lr13 – 8.7 cM – Xstm773b-2B
+Lr17a|DG|LR|2A|Xgwm614;Xwmc407|10572|||Bin 2AS-5; Xgwm614-2A – 0.7 cM – Lr17a – Xwmc407-2A
+Lr19 (AG15)|DG|LR|7A|-|10575|||Candidate sequence AG15 (1,258 aa, CC-NBS-LRR); 7AL translocation in durum
+Lr34 (cloned)|DG|LR|7D|-|10648|||Cloned: ABC transporter, 11,805 bp, 1,401 aa (FJ436983); identical to Yr18, Pm38 and Ltn
+Lr48|DG|LR|2B|Xgwm429;Xbarc7|0329|||2BS; CSP44/5*Lal Bahadur; Xgwm429b-2B – 6.1 cM – Lr48 – 7.3 cM – Xbarc7-2B
+Lr49|DG|LR|4B|Xbarc163;Xwmc349|0329|||4BL; VL404/5*Lal Bahadur; Xbarc163-4B – 8.1 cM – Lr49 – 10.1 cM – Xwmc349-4B
+Lr60 (map)|DG|LR|1D|Xbarc149|10400|||Lr60 – 8.4 cM – Xbarc149-1D/Lr21
+Lr62|DG|LR|6A|-|10537|||From Ae. neglecta 155; 6AL-6AenL.6AenS (line 03M119-71A); alien segment
+Lr63|DG|LR|3A|Xbarc321|10550|||From T. monococcum; 3AS; RL6137; very closely linked to Xbarc321-3A
+Lr64|DG|LR|6A|Xbarc104;Xgwm427|10550|||6AL; RL6149 = Thatcher*6/T. dicoccoides 8404; Xbarc104-6A – 13.9 cM – Lr64 – 21.9 cM – Xgwm427-6A
+Lr66|DG|LR|3A|-|10591|||LrS13; from Ae. speltoides accession 691 (line 07M101-127); SCAR S15-t3; alien segment
+LrZH84|DG|LR|1B|Xbarc8;Xgwm582|10581|||1BL; Zhou 8425B; Xbarc8-1B – 5.2 cM – LrZH84 – 3.9 cM – Xgwm582-1B
+QLr.ubo-7B.2|QTL|LR|7B|Xgwm344|10600|||Durum Colosseo/Lloyd; seedling and adult resistance from Colosseo; between Xgwm344.2-7B and DArT 378059, bin 7BL10-0.78-1.00
+TsrHar|DG|TS|3B|-|10590|||Dashen, HAR 604, HAR 2562; effective against races 1 (ASC1a) and DW-16
+QTs.fcu-2AS|QTL|TS|2A|-|10580|||TA4152-60 (R)/ND495 (S) DH; resistance to all races
+QTs.fcu-5BL.1|QTL|TS|5B|-|10580|||TA4152-60/ND495 DH; resistance to all races
+QTs.fcu-5AL|QTL|TS|5A|-|10580|||TA4152-60/ND495 DH; races 1, 2 and 5
+QTs.fcu-5B.2|QTL|TS|5B|-|10580|||TA4152-60/ND495 DH; races 1 and 2
+QTs.fcu-4AL|QTL|TS|4A|-|10580|||TA4152-60/ND495 DH; race 3
+Qts.ksu-3AS|QTL|TS|3A|Xbarc45;Xbarc86|10552|23|LOD 5.4|WH542 (R)/HD29 (S) RILs; flanked by Xbarc45-3A and Xbarc86-3A
+Qts.ksu-5BL|QTL|TS|5B|Xgwm499|10552|27|LOD 6.5|WH542/HD29 RILs; probably Tsn1; Xgwm499-5B – Xest.stsbe968-5B
+Sbm1 (map)|DG|SBCMV|5D|Xbarc110;Xwmc765;Xbarc144|10614|||5DL; Tonic; Xbarc110-5D – 14.7 cM – Sbm1 – 2.1 cM – Xwmc765-5D – 3.1 cM – Xbarc144-5D/Xwmc443-5D

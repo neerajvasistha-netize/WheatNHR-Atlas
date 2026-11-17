@@ -1,0 +1,84 @@
+Sb1|DG|SB|7D|Xgwm1220;Xswm10|10856|||Partial resistance; 7DS; pleiotropic or closely linked with Lr34/Yr18/Pm38/Sr57, between Xgwm1220-7DS and Xswm10-7DS (1.0 cM); putative ABC transporter
+Pm3e (map)|DG|PM|1A|Xwmc818|10843|||Pm3e – 7.1 cM – Xwmc818-1A
+Pm21 (Stpk-V)|DG|PM|6A|-|10859|||6VS bin 0.45-0.58 (T6AL.6VS from Dasypyrum villosum); likely the serine/threonine kinase Stpk-V; alien segment
+Pm46|DG|PM|4D|Xgwm165;Xgwm192|10847|||Partial resistance; 4DL distal to 0.56; RL6077; pleiotropic or closely linked with Lr67/Yr46/Sr55; associated with Xgwm165-4D and Xgwm192-4DL
+Pm47|DG|PM|7B|Xgwm46|10912|||Recessive; PmHYLZ; 7BS bin 7BS-1 c-0.27; Hongyanglazi; Xgpw2097-7B – 0.9 cM – Pm47 – 3.6 cM – Xgwm46-7B
+PmG16|DG|PM|7A|Xgwm344;Xwmc809|10886|||7AL bin 7AL16 0.86-0.90; T. dicoccoides G18-16; Xgwm1061/Xgwm344-7A – 1.2 cM – PmG16/wPt-1424/wPt6019 – 2.4 cM – wPt-0494/wPt9217/Xwmc809-7A
+PmHNK54|DG|PM|2A|Xgwm372;Xgwm312|10897|||2AL bin 2AL1 C-0.85; Zheng 9754; Xgwm372-2A – 5 cM – PmHNK54 – 6.0 cM – Xgwm312-2A
+Ml3D232|DG|PM|5B|Xwmc415|10892|||5BL bin 0.59-0.76; T. dicoccoides I222 (3D232); Xwmc415-5B – 1.3 cM – Ml3D232 – 3.3 cM – CJ832481
+MlAB10|DG|PM|2B|Xwmc445|10873|||2BL bin 2BL6 0.89-1.00; NC97BGTAB10 PI 604036 from T. dicoccoides PI 471746; Xwmc445-2B – 7 cM – MlAB10
+QCs.orp-2D.1|QTL|CS|2D|-|10836|11||Coda (more resistant)/Brundage RILs; whiteheads; from Coda
+QCs.orp-2B|QTL|CS|2B|Xwmc453|10836|8||Coda/Brundage RILs; from Coda; nearest marker Xwmc453-2B
+QCs.orp-5B|QTL|CS|5B|-|10836|12||Coda/Brundage RILs; from Coda; nearest marker given as Xgwm639-5A
+QCs.orp-2D.2|QTL|CS|2D|Xbarc206|10836|4||Coda/Brundage RILs; from Brundage; nearest marker Xbarc206-2D
+QCs.orp-4B|QTL|CS|4B|-|10836|5||Coda/Brundage RILs; from Brundage; nearest marker wPt-3908
+QCs.orp-5A.1|QTL|CS|5A|-|10836|8||Coda/Brundage RILs; from Brundage; nearest marker wPt-3563
+QCs.orp-5A.2|QTL|CS|5A|-|10836|5||Coda/Brundage RILs; from Brundage; nearest marker B1
+Fhb4|DG|FHB|4B|Xgwm149|10883|||Qfhi.nau-4B; 4BL bin 4BL5-0.86-1.00; Wangshuibai; in a 1.7 cM segment flanked by Xhbg226-4B and Xgwm149/Xmag4580-4B
+Fhb5|DG|FHB|5A|Xbarc117;Xgwm293;Xgwm304;Xgwm415|10896|||Qfhi.nau-5A; 5AS bin C-5AS3 0.75; Wangshuibai; 0.3 cM interval between Xbarc117/Xbarc358/Xgwm293/Xgwm304-5A and Xgwm415-5A
+FHB QTL 3BSc (Ernie x MO 94-317)|QTL|FHB|3B|-|10831|||Ernie/MO 94-317 RILs; with 4BL and 5AS QTL explained 31% of DON and 42% of FDK variance
+Qfhb.rwg-5A.1|QTL|FHB|5A|-|0147|6-20||Grandin (S)/PI 277012 DH; 5AS; type I and II resistance, reduced DON
+Qfhb.rwg-5A.2|QTL|FHB|5A|-|10860|12-20||Grandin/PI 277012 DH; 5AL; closely but not completely linked with q
+Qfhb.uhgl-7D|QTL|FHB|7D|Xwmc121|10837|16-20||Wheaton/Haiyanzhong RILs; from Haiyanzhong; nearest marker Xwmc121-7D
+Qfhb.uhgl-6B.1|QTL|FHB|6B|-|10837|40||Wheaton/Haiyanzhong RILs; from Haiyanzhong
+Qfhb.uhgl-6B.2|QTL|FHB|6B|-|10837|7||Wheaton/Haiyanzhong RILs; from Haiyanzhong
+Qfhb.uhgl-5A|QTL|FHB|5A|-|10837|4-7||Wheaton/Haiyanzhong RILs; from Haiyanzhong
+Qfhb.uhgl-1A|QTL|FHB|1A|-|10837|5||Wheaton/Haiyanzhong RILs; from Wheaton
+QCr.usq-1D.1|QTL|CR|1D|-|10883|||2-49/W21MMT70 and Sunco/2-49 DH; seedling resistance from 2-49
+QCr.usq-3B.1|QTL|CR|3B|-|10883|41||2-49/W21MMT70 DH; seedling resistance from W21MMT70
+QCr.usq-4B.1|QTL|CR|4B|-|10883|19||Sunco/2-49 DH; seedling resistance from 2-49
+QCr.usq-2B.1|QTL|CR|2B|-|10883|||Sunco/2-49 DH; seedling resistance from Sunco
+Stb9|DG|STB|2B|-|10027|||2BL; Courtot, Tonic; culture IPO89011; Xfbb226-2B – 3 cM – Stb9 – 9 cM – XksuF1b-2B
+Stb16q|DG|STB|3D|Xgwm494|10879|40-70||3DL; seedling and adult resistance; synthetic W-7976; associated with Xgwm494-3D (adult R2 0.28-0.31)
+Stb17|DG|STB|5A|-|10879|12-32||5AL; adult plant resistance; synthetic W-7976; associated with Xhbg247-5A
+Stb18|DG|STB|6D|-|10827|||6DS; Balance; resistance to IPO323, IPO98022, IPO98046; 8.8 cM region Xgpw3087-6D – Xgpw5176-6D
+STB QTL 7DL (Apache x Balance)|QTL|STB|7D|-|10827|||Apache/Balance; from Apache
+STB QTL 3B (Florett x Biscay)|QTL|STB|3B|-|10901|||Florett/Biscay (S) RILs; APR
+STB QTL 6D (Florett x Biscay)|QTL|STB|6D|-|10901|||Florett/Biscay RILs; APR
+STB QTL 4B (Tuareg x Biscay)|QTL|STB|4B|-|10901|||Tuareg/Biscay (S) RILs; APR
+STB QTL 6B (Tuareg x Biscay)|QTL|STB|6B|-|10901|||Tuareg/Biscay RILs; APR
+QSnb.fcu-1A (Snn4)|QTL|SNB|1A|-|10867|24||Salamouni/Katepwa RILs; isolate Sn99CH 1A7a; Snn4
+QSnb.fcu-7A|QTL|SNB|7A|-|10867|16||Salamouni/Katepwa RILs; isolate Sn99CH 1A7a
+Sr6 (map)|DG|SR|2D|Xgwm102;Xwmc453;Xcfd43|10870|||Xgwm102-2D – 0.9 cM – Xgpw94049-2D – 5.6 cM – Sr6 – 1.5 cM – Xwmc453/Xcfd43-2D
+Sr24|DG|SR|3D|-|10845|||Xbarc71-3Ag better marker than STS Sr24#12; Thinopyrum 3Ag segment on 3DL; alien segment
+Sr30|DG|SR|5D|Xcfd12;Xgwm292|10858|||Xcfd12-5D – 9.0 cM – Sr30 – 16.6 cM – Xgwm292-5D
+Sr35 (map)|DG|SR|3A|-|10876|||3AL bin 3AL8 0.85-1.00; Marquis*5/G2919; 2.2-3.1 cM region between Xbf483299 and XCJ656351 (174 kb in Brachypodium)
+Sr36 (map)|DG|SR|2B|Xgwm429;Xgwm319;Xwmc477|10824|||Xgwm429-2B – 0.8 cM – Sr36/Xstm773-2/Xgwm319/Xwmc477-2B; Xwmc477 best but not perfect
+Sr40|DG|SR|2B|Xwmc661;Xwmc344;Xwmc477|10825|||Xwmc661-2B – 6.4 cM – Sr40 – 0.7 cM – Xwmc344-2B – 2.0 cM – Xwmc477-2B
+Sr47 (map)|DG|SR|2B|Xgwm47|10872|||2BL-2SL-2BL.2BS (RWG35, RWG36); in the interval Xgwm47-2B – Xgpw4165-2B; alien segment from Ae. speltoides
+Sr54|DG|SR|2D|-|10816|||2DL; Norin 40
+Sr55|DG|SR|4D|Xgwm165;Xgwm192|10847|||Adult plant resistance; 4DL distal to 0.56; RL6077; pleiotropic or closely linked with Lr67 and Yr46
+Sr56|DG|SR|5B|Xgwm118|10851|||QSr.sun-5BL; adult plant resistance; 5BL bin 5BL16; AF533; Xgwm118-5BL – 13.6 cM – wPt9116 – 5.4 cM – Sr56 – 6.9 cM – wPt0484
+Sr57|DG|SR|7D|-|10861|||Adult plant resistance at the Lr34 locus; 7DS bin 7DS4; putative ABC transporter
+SrAes7t|DG|SR|2B|-|10872|||2BS = T2BL.2BS-2SS-2BS (line 0797); marker Sr39#50s; may be identical to Sr39; alien segment
+SrWeb|DG|SR|2B|Xgwm47;Xwmc332|10858|||2BL; Webster RL6201; Xgwm47-2B – 1.4 cM – SrWeb – 12.5 cM – Xwmc332-2B; Ug99 resistance
+Sr1RSAmigo|DG|SR|1A|-|10845|||T1AL.1RS (Amigo); marker Xscm09-1R224; carries Pm17; alien segment
+SR QTL 2BL (RL6058)|QTL|SR|2B|-|10902|||RL6071/RL6058 (R) RILs; enhancement of resistance in Kenya and North America; region wPt5044 – Xgwm-2B on 2BL
+Yr5 (map)|DG|YR|2B|Xwmc175;Xbarc349|10826|||Xwmc175-2B – 1.1 cM – YrSTS-7/8 – 0.3 cM – Yr5 – 0.4 cM – Xbarc349-2B
+Yr15 (map)|DG|YR|1B|Xwmc128;Xgwm273;Xgwm582;Xgwm413;Xbarc8|10826|||Xwmc128/Xgwm273/Xgwm582-1B – 0.4 cM – Yr15/Xwgp34/Xgwm413/Xbarc8
+Yr47 (map)|DG|YR|5B|Xgwm234;Xcfb309|10679|||5BS; Xgwm234-5B – 10.9 cM – Lr52 – 4.1 cM – Yr47 – 9.6 cM – Xcfb309-5B
+Yr48 (map)|DG|YR|5A|Xwmc727;Xcfa2149;Xwmc74;Xwmc410|10705|||Qyr.ucw-5AL; 5AL bin 5AL23 0.87-1.00; Xwmc727-5AL – 3.7 cM – Vrn-A2 – 0.1 cM – Yr48/BE444566/Xcfa2149/Xgpw2181a/Xwmc74/Xwmc410-5AL
+Yr50|DG|YR|4B|Xbarc1096|10849|||From Thinopyrum intermedium; 4BL; CH233; cent – Xbarc1096-4B – 6.9 cM – Yr50 – 7.2 cM – Xbarc-4B
+Yr51|DG|YR|4A|Xgwm160|10850|||4AL bin 4AL4-0.80-1.00; line 5515 AUS 91456; wPt4487 – 9.8 cM – Yr51 – 4.4 cM – wPt0763 – 7.9 cM – Xgwm160
+Yr52|DG|YR|7B|Xbarc182;Xcfa2040|10852|||Adult plant resistance; 7BL bin 7BL-3 0.86-1.00; PI 183527; Xbarc182-7B – 1.2 cM – Yr52 – 1.1 cM – Xwgp5258 – 5.7 cM – Xcfa2040-7B
+Yr53|DG|YR|2B|Xwmc441;Xwmc149|10854|||2BL; durum PI 480148; Xwmc441-2B – 5.6 cM – Yr53 – 2.7 cM – XLRRrev/NLRRrev350 – 6.5 cM – Xwmc149-2B
+YrAS2388|DG|YR|4D|Xwmc617;Xwmc285|10822|||From Ae. tauschii AS2388; Xwmc617-4DS – 34.6 cM – YrAS2388 – 1.7 cM – Xwmc285-4DS
+YrR61|DG|YR|2A|Xbarc124;Xgwm359|10914|56||QYr.uga-2AS; 2AS; Pioneer 26R61 (R)/AGS2000 (S) RILs; flanked by Xbarc124-2A and Xgwm359-2A
+QYr.uga-6AS|QTL|YR|6A|-|10914|6||Pioneer 26R61/AGS2000 RILs; minor QTL
+Yrxy1|DG|YR|7A|Xbarc49|10829|||High temperature resistance; Xiaoyan 54; Xbarc49-7AS – 15.8 cM – Yrxy1
+Yrxy2|DG|YR|2A|Xwmc794;Xbarc5|10829|||High temperature resistance; Xiaoyan 54; Xwmc794-2AS – 4.0 cM – Yrxy2 – 6.4 cM – Xbarc5-2AL
+Qyr.ucw-3BS|QTL|YR|3B|Xgwm522|10705|22||UC1110 (MR)/PI 610750 (MR) RILs; from UC1110; associated with Xgwm522-3B.1 (differs from Xgwm533-3B.2 of Yr30)
+Qyr.ucw-2BS|QTL|YR|2B|Xwmc474|10705|4.5||UC1110/PI 610750 RILs; from UC1110; centromeric, near Xwmc474-2BS
+Qyr.ucw-2AS|QTL|YR|2A|-|10705|2.3||UC1110/PI 610750 RILs; from PI 610750; near wPt-5839
+Lr32|DG|LR|3D|Xbarc128;Xwmc43;Xbarc235|10874|||RL6086 and BW196; Xbarc128-3D – 9.1 cM – Lr32 – Xwmc43/Xbarc235-3D
+Lr42|DG|LR|1D|Xwmc432|10840|||1D; AR93005; from Ae. tauschii TA2450 (KS91WGRC11); Lr42 – 0.8 cM – Xwmc432-1D – 1.6 cM – Xcfd-1D
+Lr48 (2BS)|DG|LR|2B|Xwmc175;Xwmc332|10842|||Xwmc175-2B – 10.3 cM – Lr48 – 2.5 cM – Xwmc332-2B; centromere – 27.5 cM – Lr48
+Lr63 (map)|DG|LR|3A|Xbarc321;Xbarc57|10875|||Xbarc321/Xbarc57-3A – 2.9 cM – Lr63
+Lr65|DG|LR|2A|Xbarc212;Xwmc382;Xgwm636;Xbarc124;Xgwm614|10848|||LrAlt; 2AS; T. spelta Altgold Rotkorn (ARK 0); XE41M57-165 – 3 cM – Lr65 – 2 cM – Xbarc124/Xbarc222/Xgwm614-2A
+Lr67 (map)|DG|LR|4D|Xcfd71|10675|||4DL bin C-0.53; Xcfd71-4D – 1.5 cM – Lr67; pleiotropic or closely linked with Sr55 and Yr46
+Lr68|DG|LR|7B|Xgwm146|10817|||Adult plant resistance; 7BL; Arula 1 and 2; flanked by Xpsy1-1 and Xgwm146-7BL at 0.4 and 0.6 cM; distinct from but closely linked to Lr14b
+Lr69|DG|LR|3D|-|10903|||3DL; Toropi-6.3
+Lr70|DG|LR|5D|Xgwm190|10904|||5DS; Lr70 – Xgwm190-5D (KU3198)
+Lr71|DG|LR|1B|Xgwm18;Xbarc187|10911|||LrARK12c; T. spelta Altgold Rotkorn selection; 1B centromere region; Xgwm11-1B – 3.3 cM – Xgwm18-1B – 1.0 cM – Lr71 – 1.3 cM – Xbarc187-1B – 0.5 cM – Xbarc137-1B
+Tsc2 (map)|SG|TS|2B|-|10871|54||2BS bin 2BS3 0.84-1.00; Katepwa; Xmag681-2B/XTC339813 – 2.7 cM – Tsc2/XBE444541 – 0.6 cM – XBE517745; Salamouni/Katepwa RILs: Tsc2 explained 54% of response to race DW5
+Wsm2 (map)|DG|WSMV|3B|Xgwm389;Xgwm566|10898|||RonL; Xgwm389-3B – 30.8 cM – Wsm2 – 45.2 cM – Xgwm566-3B

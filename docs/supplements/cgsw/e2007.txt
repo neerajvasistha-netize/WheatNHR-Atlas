@@ -1,0 +1,70 @@
+Pm2|DG|PM|5D|Xcfd81|10366|||Xcfd81-5D – 2.0 cM – Pm2
+Pm35|DG|PM|5D|Xcfd26|10342|||5DL; NC96BGTD3 = PI 603250 = Saluda*3/Ae. tauschii TA2377; Xcfd26-5D – 11.9 cM – Pm35
+Pm36|DG|PM|5B|-|10356|||5BL; from T. dicoccoides MG29896 (durum backcross line 5BIL-29); less than 15 cM linkage with three SSR and one EST-SSR marker
+Pm37|DG|PM|7A|-|10372|||7AL; PmAG11 from T. timopheevii ssp. armeniacum (NC99BGTAG11); about 15 cM proximal to the marker cluster co-segregating with Pm1
+Pm38|DG|PM|7D|Xgwm1220|10374|||7DS; adult plant resistance at the Lr34/Yr18 locus (RL6058); Xgwm1220-7D – 0.9 cM – Lr34/Yr18/Pm38 – 2.7 cM
+Mlm2033|DG|PM|7A|Xgwm344|10393|||7AL; from T. monococcum TA2033; Xmag1757/Xmag2185 – 2.7 cM – Mlm2033/Xmag2185 – 1.3 cM – Xgwm344-7A; probably allelic with Pm1
+Mlm80|DG|PM|7A|Xgwm344|10393|||7AL; from T. monococcum ssp. aegilopoides M80; Xmag1757/Xmag1759 – 3.6 cM – Mlm80 – 0.7 cM – Xmag2166/Xgwm344-7A; allelic with Mlm2033
+PmY39|DG|PM|2B|-|10367|||On a 2U(2B) substitution from Ae. umbellulata Y39; associated with 2U markers Xgwm257, Xgwm296 and Xgwm319; alien chromosome
+PM QTL 1AS (Fukuho-komugi x Oligoculm)|QTL|PM|1A|Xgdm33;Xpsp2999|10335|22||Fukuho-komugi/Oligoculm DH; APR from Fukuho-komugi; Pm3 region, Xgdm33 – Xpsp2999
+PM QTL 2BL (Fukuho-komugi x Oligoculm)|QTL|PM|2B|Xwmc877;Xwmc435|10335|8||Fukuho-komugi/Oligoculm DH; APR from Fukuho-komugi; Xwmc877.1 – Xwmc435.1
+PM QTL 7DS (Fukuho-komugi x Oligoculm)|QTL|PM|7D|Xgwm295|10335|10||Fukuho-komugi/Oligoculm DH; APR from Fukuho-komugi; flanked by Xgwm295.1-7D and Ltn, likely Lr34/Yr18
+PM QTL 4BL (Fukuho-komugi x Oligoculm)|QTL|PM|4B|Xgwm373;Xgwm251|10335|6||Fukuho-komugi/Oligoculm DH; APR from Oligoculm, one of two sites; Xgwm373 – Xgwm251
+PM APR 1AS (Suwon 92)|QTL|PM|1A|Xpsp2999|10340|||CI 13227 (S)/Suwon 92 (R) SSD; field APR closely associated with Hg, Xpsp2999-1A and Pm3b-derived markers
+QPm.inra-2B|QTL|PM|2B|-|10360|10.3-36.6||RE9001 (R)/Courtot (S) RILs; near Pm6, consistent over environments; 11 QTL detected in at least one environment
+Fhb1 (fine map)|DG|FHB|3B|-|10403|||XSTS3B-80 – 0.2 cM – Fhb1 – 1.1 cM – XSTS3B-142; placed in a 1.2 cM interval flanked by XSTS3B-189 and XSTS3B-206
+Fhb2 (map)|DG|FHB|6B|Xgwm133;Xgwm644|10225|||6BS; Xgwm133-6B – 4 cM – Fhb2 – 2 cM – Xgwm644-6B
+FHB QTL 1BL (Frontana x Seri 82)|QTL|FHB|1B|-|10349|7.9||Frontana (MR)/Seri 82 (S); flanked by AFLP markers
+FHB QTL 3AL (Frontana x Seri 82)|QTL|FHB|3A|Xgwm720;Xgwm121|10349|7.7||Frontana/Seri 82; flanked by Xgwm720-3A and Xgwm121-3A
+FHB QTL 7AS (Frontana x Seri 82)|QTL|FHB|7A|Xgwm233|10349|7.6||Frontana/Seri 82; flanked by an AFLP marker and Xgwm233-7A
+FHB QTL 3B (Wangshuibai x Annong 8455)|QTL|FHB|3B|Xgwm533;Xbarc133|10447|17||Wangshuibai/Annong 8455 RILs; FHB response; Xgwm533-3B – Xbarc133-3B (DON QTL R2 6%)
+FHB QTL 2A (Wangshuibai x Annong 8455)|QTL|FHB|2A|Xgwm425|10447|12||Wangshuibai/Annong 8455 RILs; FHB response and DON; Xgwm425-2A
+DON QTL 5A (Wangshuibai x Annong 8455)|QTL|FHB|5A|Xgwm186;Xgwm156|10447|13||Wangshuibai/Annong 8455 RILs; DON content; Xgwm186-5A – Xgwm156-5A
+Qfhs.crc-2BL|QTL|FHB|2B|Xgwm55|10445|23||Durum Strongfield/T. carthlicum Blackbird; spans 16 cM, peak at Xgwm55-2B
+Qfhs.ndsu-3AS|QTL|FHB|3A|Xgwm2|10402|37||Tetraploid; from T. dicoccoides (LDN-DIC3A); 29.3 cM interval, peak marker Xgwm2-3A
+Qfhs.crc-6BS|QTL|FHB|6B|Xwmc397|10445|23||From T. carthlicum Blackbird; spans 23 cM, peak at Xwmc397; coincident with Fhb2
+Qfhs.fcu-7AL|QTL|FHB|7A|Xbarc121|10401|19||Langdon/LDN-DIC 7A RILs; from T. dicoccoides PI 478742; 39.6 cM interval, nearest marker Xbarc121-7AL
+Crown rot QTL 5D (W21MMT70 x Mendos)|QTL|CR|5D|-|10358|||W21MMT70/Mendos DH; seedling resistance from W21MMT70
+Crown rot QTL 2D (W21MMT70 x Mendos)|QTL|CR|2D|-|10358|||W21MMT70/Mendos DH; seedling resistance from W21MMT70
+Crown rot QTL 2B (W21MMT70 x Mendos)|QTL|CR|2B|-|10358|||W21MMT70/Mendos DH; seedling resistance from Mendos
+Cre5 (Trident x Molineux)|DG|CCN|2A|Xgwm359;Xwmc177|10343|7-8||Trident/Molineux; Xgwm359-2A (R2 8%) – Xwmc177-2A (R2 7%) region
+Cre8 (Trident x Molineux)|DG|CCN|6B|Xgdm147|10343|12-24||Trident/Molineux; Xgdm147-6B (R2 24%) – Xcdo247-6B (R2 12%) region
+Qcre.srd-1B|QTL|CCN|1B|Xwmc719;Xgwm140|10343|12||Trident/Molineux; Xwmc719-1B – Xgwm140-1B region
+Stb13|DG|STB|7B|Xwmc396|10347|||7BL; resistance to Canadian MG96-13 and MG2; DH lines 90S05B*01 and 98S08C*03 (Salamouni); Xwmc396-7B – 7-9 cM – Stb13
+Stb14|DG|STB|3B|Xwmc500;Xwmc632|10348|||3BS; resistance to MG2; Xwmc500-3B – 2 cM – Stb14 – 5 cM – Xwmc632-3B
+Stb15|DG|STB|6A|-|10341|||6AS; Riband; resistance to Ethiopian IPO88004; Stb15 – 14 cM – Xpsr904-6A
+QStb.psr-7D.1|QTL|STB|7D|-|10341|||Weak QTL, partial resistance to Portuguese IPO92006, Xcdo475b – Xswm5 region on 7DS
+Snn1 (map)|SG|SNB|1B|-|10008|||1BS; Snn1 – 4.7 cM – XksuD14-1B; CS, Grandin, Kulm, ND 495 sensitive
+SNB QTL 1BS (ITMI, Snn1)|QTL|SNB|1B|-|10009|58||ITMI; major QTL coinciding with Snn1; minor QTL on 3AS, 3DL, 4AL, 4BL, 5DL, 6AL and 7BL
+Yr3a|DG|YR|2B|Xwmc356|10370|||YrV23 (Vilmorin 23); Yr3 – Xwmc356-2B, 9.4 cM
+Yr7|DG|YR|2B|Xgwm526|10371|||Yr7 – Xgwm526-2B, 5.3 cM
+Yr9 (map)|DG|YR|1B|Xgwm582|10365|||1BL.1RS; Yr9 – 3.7 cM – Xgwm582-1BL
+Yr24/Yr26|DG|YR|1B|Xbarc187;Xgwm498|10339|||YrCH42 (Chuanmai 42); Xbarc187-1B – 2.3 cM – Yr24 – 1.6 cM – Xgwm498-1B; Yr24 is identical to Yr26
+Yr34 (map)|DG|YR|5A|Xgwm410|10040|||Xgwm410.2-5A – 8.2 cM – B1 – 12.2 cM – Yr34
+Yr39|DG|YR|7B|-|10416|||7BL; high-temperature adult-plant resistance in Alpowa; closely linked to RGAP markers
+Yr40|DG|YR|5D|-|10328|||From Ae. geniculata; 5DS (T5DL.5DS-5MgS); completely linked with Lr57 and alleles of Gsp, Xfbb276 and Xbcd873; alien segment
+YrAlp|DG|YR|1B|Xgwm18;Xgwm11|10416|||1BS; Alpowa; YrAlp – 15.2 cM – Xgwm18-1B – 1.1 cM – Xgwm11-1B
+YrSp (map)|DG|YR|2B|-|10352|||2B, probably 2BL; Spaldings Prolific; YrSp – Xwmc-2B, 12.1 cM
+YrZH84|DG|YR|7B|Xwmc276;Xcfa2040;Xbarc32|10331|||7BL; Zhoumai 11 and 12; Xwmc276-7B – 0.6 cM – Xcfa2040-7B – YrZH84 – 4.8 cM – Xbarc32-7B
+Yrns-B1|DG|YR|3B|Xgwm493|10383|||As a QTL, in a 3 cM interval between Xgwm493-3B and Xgwm1329-3B
+YR QTL 1BL (Avocet S x Pavon76)|QTL|YR|1B|Xgwm259|10443|||Avocet S/Pavon76; Xgwm259
+YR QTL 3BS (Avocet S x Pavon76)|QTL|YR|3B|-|10443|||Avocet S/Pavon76; AFLP PstAATMseCAC2
+YR QTL 4BL (Avocet S x Pavon76)|QTL|YR|4B|Xgwm495|10443|||Avocet S/Pavon76; Xgwm495
+YR QTL 6AL (Avocet S x Pavon76)|QTL|YR|6A|Xgwm617|10443|||Avocet S/Pavon76; Xgwm617
+YR QTL 6BL (Avocet S x Pavon76)|QTL|YR|6B|-|10443|||Avocet S/Pavon76; AFLP PstAAGGMseCGA1
+Lr1 (candidate)|DG|LR|5D|-|10408|||Mapped to 0.7 cM in Ae. tauschii and 0.075 cM in wheat; candidate gene Lr1RGA1 (CC-NBS-LRR) co-segregated with Lr1
+Lr21|DG|LR|1D|-|10420|||Cloned, NBS-LRR; Xksu-1D is part of Lr21 (Lr40 = Lr21)
+Lr22a|DG|LR|2D|Xgwm296|10446|||Xgwm296-2DS – 2.0 cM – Lr22a
+Lr34 (map)|DG|LR|7D|-|10387|||STS CsLV34 (from wEST BQ788742): CsLV34a – 0.4 cM – Lr34; Lr34 ... XsfrBF473324 – 0.5 cM – Xsfr.cdo475-7D – 0.7 cM – Xswm10-7D {10380}
+Lr57|DG|LR|5D|-|10328|||From Ae. geniculata; 5DS (T5DL.5DS-5MgS); completely linked with Yr40; alien segment
+Lr58|DG|LR|2B|-|10375|||From Ae. triuncialis; terminal 2BL translocation T2BS.2BL-2tL(0.95) in TA5605; alien segment
+Lr59|DG|LR|1A|-|10399|||From Ae. peregrina 680; 1AL, probable centric fusion (line 0306); alien segment
+Lr60|DG|LR|1D|-|10400|||LrW2; 1DS; RL6172 = Thatcher*3/V860
+LR QTL 1BL (Avocet S x Pavon76)|QTL|LR|1B|-|10443|||Avocet S/Pavon76; AFLP PstAFAMseCAC1&2
+LR QTL 4BL (Avocet S x Pavon76)|QTL|LR|4B|Xgwm368|10443|||Avocet S/Pavon76; Xgwm368
+LR QTL 6AL (Avocet S x Pavon76)|QTL|LR|6A|Xgwm617|10443|||Avocet S/Pavon76; Xgwm617
+LR QTL 6BL (Avocet S x Pavon76)|QTL|LR|6B|-|10443|||Avocet S/Pavon76; AFLP PstAGGMseCGA1
+Tsn1 (fine map)|SG|TS|5B|-|10413|||Placed in a 2.1 cM region spanned by XBF483506 and XBF138151.1/XBE425878/Xfcc/XBE443610; Xfcg17-5B – 0.2 cM – Tsn1 – 0.6 cM – Xfcg9-5B {10207}
+tsn2|DG|TS|3B|Xgwm285;Xwmc366|10344|91||3BL; resistance to race 3 from T. turgidum (LDN-DIC 3B); Xgwm285-3B – 2.1 cM – tsn2 – 15.2 cM – Xwmc366.2-3B
+tsn3|DG|TS|3D|Xgwm2|10419|||3DS; from Ae. tauschii CI 00017 (XX41, XX45, XX110); Xgwm2a – tsn3, 9.5-15.3 cM
+tsn4|DG|TS|3A|-|10350|||Resistance to race 1 (ASC1a) in Salamouni; 3A

@@ -1,0 +1,56 @@
+QSb.bhu-2AL|QTL|SB|2A|Xbarc353;Xgwm445|10719|14.8||Yangmai 6 (R)/Sonalika (S) RILs; AUDPC; resistance from Yangmai 6; Xbarc353-2A – Xgwm445-2A
+QSb.bhu-2BS|QTL|SB|2B|Xgwm148;Xgwm375|10719|20.5||Yangmai 6/Sonalika RILs; from Yangmai 6; Xgwm148 – Xgwm375-2B
+QSb.bhu-5BL|QTL|SB|5B|Xgwm67;Xgwm371|10719|38.6||Yangmai 6/Sonalika RILs; from Yangmai 6; Xgwm67-5BL – Xgwm371-5BL
+QSb.bhu-6DL|QTL|SB|6D|Xbarc173;Xgwm732|10719|22.5||Yangmai 6/Sonalika RILs; from Yangmai 6; Xbarc173-6D – Xgwm732-6DL
+Pm40 (map)|DG|PM|7B|Xwmc426;Xwmc334;Xgwm297;Xwmc364|10539|||Yu24; Xwmc426-7B – 5.9 cM – Xwmc334-7B – 0.2 cM – Pm40 – 0.7 cM – Xgwm297-7B – 1.2 cM – Xwmc364-7B
+PmCn17|DG|PM|1B|-|10686|||1BS = 1BL.1RS; Chuannong 17; from rye R14; alien segment
+PmHNK|DG|PM|3B|Xgwm108;Xwmc291|10706|||3BL; Zhoumai 22; Xgwm108-3BL – 10.3 cM – PmHNK – 3.8 cM – Xwmc291-3BL
+QPm.caas-1A|QTL|PM|1A|Xbarc148;Xwmc550|10680|7.4-9.9||Bainong 64 (R)/Jingshuang 16 (S) DH; from Bainong 64; Xbarc148-1A – Xwmc550-1A interval
+QPm.caas-4DL|QTL|PM|4D|Xwmc331|10680|15-23||Bainong 64/Jingshuang 16 DH; proximal to Xwmc331-4D
+QPm.caas-6BS|QTL|PM|6B|Xbarc79|10680|9-13||Bainong 64/Jingshuang 16 DH; proximal to Xbarc79-6BS
+QPm.caas-7AL|QTL|PM|7A|Xbarc174|10680|6.7-7.1||Bainong 64/Jingshuang 16 DH; proximal to Xbarc174-7AL
+QPm.caas-2BS|QTL|PM|2B|Xbarc98;Xbarc1147|10707|10.6-20.6||Lumai 21 (R)/Jingshuang 16 (S) F3; Xbarc98-2BS – Xbarc1147-2BS
+QPm.caas-2BL|QTL|PM|2B|Xbarc1139;Xgwm47|10707|5.2-10.1||Lumai 21/Jingshuang 16 F3; Xbarc1139-2BL – Xgwm47-2BL
+QPm.caas-2DL|QTL|PM|2D|Xwmc18;Xcfd233|10707|5.7-11.6||Lumai 21/Jingshuang 16 F3; Xwmc18-2DL – Xcfd233-2DL
+QFhs.jic-4D (Rht-D1)|QTL|FHB|4D|-|10718|10.6-16.1||Soissons (relatively resistant)/Orvantis (S); associated with Rht-D1a (tall allele)
+Qcrs.cpi-3BL (2010)|QTL|CR|3B|-|10703|49||Lang (S)/CSCR6 (R) RILs; F. pseudograminearum and F. graminearum, controlled conditions; from CSCR6
+Qcrs.cpi-4B (2010)|QTL|CR|4B|-|10703|23||Lang/CSCR6 RILs; from Lang
+Tsn1 (tetraploid)|SG|SNB|5B|-|10688|||Xbcd183-5B – 1.2 cM – Tsn1/Xbcd1030-5B – 2.4 cM – Xrz575-5B
+Sr6|DG|SR|2D|Xwmc453;Xcfd43|10714|||Bin 2DS5-0.47-1.00; Sr6 – 1.1 cM – Xwmc453-2D – 0.4 cM – Xcfd43-2D
+Sr35|DG|SR|3A|-|10712|||Mapped to a 5.1 cM interval between XBF483299 and XCJ656351 in diploid wheat; 3AL as in the Catalogue main entry
+Sr49|DG|SR|5B|Xwmc471|10704|||5BL; AUS 28011; Sr49 – Xwmc471-5BL, 7.8 cM
+Yr4 (YrRub)|DG|YR|3B|Xbarc75|10720|||3BS bin 3BS3-0.87-1.00; Rubric, Avalon; Yr4 – 2.9 cM – Xcfb3530-3B – 2.4 cM – Xbarc75-3B
+Yr43|DG|YR|2B|Xgwm501;Xbarc139|10673|||2BL; IDO377s; Xwms501-2B – 11.6 cM – Xwgp110-2B – 4.4 cM – Yr43 – 5.5 cM – Xwgp103-2B – 12.8 cM – Xbarc139-2B
+Yr44|DG|YR|2B|Xgwm501|10674|||YrZak; 2BL; Zak; XSTS7/8/Yr5 – 12.7 cM – Yr44 – 3.9 cM – Xwgp100 – 1.1 cM – Xgwm501-2B
+Yr45|DG|YR|3D|Xbarc6;Xwmc656|10677|||3DL; PI 181434; Xbarc6-3D – 0.9 cM – Xwmc656-3D – 6.9 cM – Xwp118-3D – 4.8 cM – Yr45 – 5.8 cM – Xwp115-3D
+Yr46|DG|YR|4D|Xcfd71;Xbarc98;Xcfd23|10678|||Adult plant resistance; RL6077 = Thatcher*6/PI 250413; close linkage with Xcfd71-4D and Xbarc98-4D (4.4 cM) and Xcfd23-4D (5.2 cM)
+Yr47|DG|YR|5B|-|10679|||5BS bin 5BS5-0.71-0.81; AUS28183 = V336; 5 cM proximal to Lr52; seedling resistance
+Yr48|DG|YR|5A|Xwmc727;Xgwm291|10705|||Adult plant resistance; 5AL bin 5AL23; PI 610750 (synthetic); Xwmc727-5AL – 4.4 cM – Yr48 – 0.3 cM – Xwms291-5AL
+YrC142|DG|YR|1B|Xbarc187;Xgwm273|10667|||1BS; synthetic CI142; near Xbarc187-1B and Xgwm273-1B in the Yr24/Yr26 region; likely Yr24/Yr26
+YrCn17|DG|YR|1B|-|10686|||1BS = 1BL.1RS; Chuannong 17; from rye R14; alien segment
+YrP81|DG|YR|2B|Xgwm429;Xwmc770|10696|||2BS; P81, Xu29; Xgwm429-2B – 1.8 cM – YrP81 – 4.1 cM – Xwmc770-2B
+QYr.caas-2BS|QTL|YR|2B|Xbarc13;Xbarc230|10693|5-9||Pingyuan 50 (R)/Mingxian 169 (S) DH; APR; Xbarc13-2BS – Xbarc230-2BS
+QYr.caas-5AL|QTL|YR|5A|Xwmc410;Xbarc261|10693|5-20||Pingyuan 50/Mingxian 169 DH; APR; Xwmc410-5AL – Xbarc261-5AL
+QYr.caas-6BS|QTL|YR|6B|Xgwm361;Xbarc136|10693|5-8||Pingyuan 50/Mingxian 169 DH; APR; Xgwm361-6BS – Xbarc136-6BS
+QYr.inra-2AS.2|QTL|YR|2A|-|10689|45||Renan (R)/Recital (S) RILs; = Yr17; 1995/6
+QYr.inra-2AS.1|QTL|YR|2A|-|10689|9-90||Renan/Recital RILs; 2005/6
+QYr.inra-2BS|QTL|YR|2B|-|10689|11-13||Renan/Recital RILs; from Renan
+QYr.inra-3Bcent|QTL|YR|3B|-|10689|6||Renan/Recital RILs; from Renan; 2005/6
+QYr.inra-6B|QTL|YR|6B|-|10689|4-6||Renan/Recital RILs; from Renan
+QYr.inra-3DS|QTL|YR|3D|-|10689|8-12||Renan/Recital RILs; from Recital
+QYrex.wgp-6AS|QTL|YR|6A|Xgwm334;Xwgp56|10672|32.6||Express/Avocet S RILs; HTAP; interval Xgwm334-6A – Xwgp56-6A
+QYrex.wgp-3BS|QTL|YR|3B|Xgwm299;Xwgp66|10672|27.4||Express/Avocet S RILs; HTAP; interval Xgwm299-3B – Xwgp66-3B
+QYrex.wgp-1BL|QTL|YR|1B|Xwmc631;Xwgp78|10672|9.4||Express/Avocet S RILs; HTAP; interval Xwmc631-1B – Xwgp78-1B
+Lr67|DG|LR|4D|Xcfd71;Xbarc98;Xcfd23|10675|||Adult plant resistance; 4DS (later 4DL); RL6077; associated with Xcfd71-4D; pleiotropic with Yr46
+LR QTL 4BS (Beaver x Soissons)|QTL|LR|4B|Xbarc20|10687|||Beaver/Soissons DH; proximal to Xbarc20-4B; consistent over three years
+QTLBvr5AS|QTL|LR|5A|Xbarc10|10687|||Beaver/Soissons DH; 5AS, proximal to Xbarc10-5A; near wPt-8756 and wPt-1931
+LR QTL 1B (Beaver x Soissons, 1BL.1RS)|QTL|LR|1B|-|10687|||Beaver/Soissons DH; 1BL.1RS
+QLr.fcu-3AL (map)|QTL|LR|3A|Xcfa2183;Xgwm666|10717|18||TA4152-60/ND495 DH; Xcfa2183-3AL – Xgwm666-3AL; seedling resistance to three races
+QLr.fcu-3BL (map)|QTL|LR|3B|Xbarc164|10717|19||TA4152-60/ND495 DH; Xbarc164-3BL – Xfcp544-3BL; effective only with the Xgwm359-5DS allele
+QLr.fcu-6BL (map)|QTL|LR|6B|Xbarc5;Xgwm469|10717|12||TA4152-60/ND495 DH; Xbarc5-6BL – Xgwm469.2-6BL
+QLr.fcu-4DL (map)|QTL|LR|4D|Xgdm61;Xcfa2173|10717|13||TA4152-60/ND495 DH; from ND495; Xgdm61-4DL – Xcfa2173-4DL
+Tsr6|DG|TS|2B|Xwmc382|10668|||Recessive; 2BS; ND-735; Xwmc382-2B – 15.3 cM – wPt-0289 – 4.6 cM – Tsr6 – 18.7 cM; should be identical to tsc2
+SbmTmr1|DG|SBCMV|5D|-|10683|||TAM 107-R7; 5D
+SBWMV (Ae. tauschii TA2397)|DG|SBCMV|5D|Xcfd10;Xbarc144|10685|||KS96WGRC40; from Ae. tauschii TA2397; Xcfd010-5DL – 9.5 cM – gene – 11.1 cM – Xbarc144-5D
+Bt10|DG|CB|6D|Xgwm469;Xwmc749|10721|||6DS; Bt10/FSD_RSA – 19.3 cM – Xgwm469-6D – 1.8 cM – Xwmc749-6D
+Utd1|DG|LS|5B|Xgwm234|10684|||5BS; durum D93213, P9163-BJ08*B, VIR 51658; SCAR – 3.2 cM – Utd1 – 5.9 cM – Xgwm234-5B

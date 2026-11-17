@@ -1,0 +1,85 @@
+Pm24|DG|PM|1D|Xgwm789;Xgwm603;Xbarc229|10109|||Xgwm789-1D/Xgwm603-1D – 2.4 cM – Pm24 – 3.6 cM – Xbarc229-1D
+Pm32|DG|PM|1B|-|10025|||On 1BL.1SS translocation from Aegilops speltoides (line L501 = Rodina*6/Ae. speltoides); alien segment, no wheat marker given
+QFhs.ndsu-3B (Sumai 3)|QTL|FHB|3B|Xgwm533;Xbarc133;Xbarc147;Xgwm493|10073|||Associated with Xgwm533, Xbarc133, Xbarc147 and Xgwm493 on 3BS; mainly resistance to fungal spread (type II)
+Qfhs.ifa-5A|QTL|FHB|5A|Xgwm293;Xgwm304;Xbarc117;Xbarc186;Xbarc100;Xbarc40|10073|||Remus/CM-82036; associated with Xgwm293, Xgwm304, Xgwm1057, Xbarc117, Xbarc186, Xbarc100 and Xbarc40; mainly resistance to fungal penetration (type I)
+QFhs.inra-2A|QTL|FHB|2A|Xgwm382|10069|14.4|LOD 6.3|Renan/Recital; resistance from Renan; associated with Xgwm382c-2A; averages of three years
+QFhs.inra-2B|QTL|FHB|2B|Xgwm374|10069|12|LOD 7.6|Renan/Recital; resistance from Renan; associated with Xgwm374-2B
+QFhs.inra-3A|QTL|FHB|3A|-|10069|6.2|LOD 3.7|Renan/Recital; resistance from Recital; associated with RFLP Xbcd372-3A
+QFhs.inra-3B|QTL|FHB|3B|Xgwm383|10069|10.5|LOD 5.4|Renan/Recital; resistance from Renan; associated with Xgwm383b-3B
+QFhs.inra-5A.1|QTL|FHB|5A|-|10069|5|LOD 3.8|Renan/Recital; resistance from Renan; associated with RFLP Xpsr170a-5A
+QFhs.inra-5A.2|QTL|FHB|5A|Xgwm639|10069|14|LOD 6.6|Renan/Recital; resistance from Renan; associated with Xgwm639b-5A
+QFhs.inra-5A.3|QTL|FHB|5A|-|10069|8.5|LOD 6.3|Renan/Recital; resistance from Renan; associated with the awn inhibitor B1 on 5AL
+QFhs.inra-5D|QTL|FHB|5D|Xcfd29|10069|7|LOD 4.4|Renan/Recital; resistance from Renan; associated with Xcfd29-5D
+QFhs.inra-6D|QTL|FHB|6D|Xcfd42|10069|6.6|LOD 2.7|Renan/Recital; resistance from Renan; associated with Xcfd42-6D
+QFhs.pur-2D|QTL|FHB|2D|Xgwm296;Xgwm261|10085|||Alondra; located on 2DS between Xgwm296-2D and Xgwm261-2D
+FHB QTL 3BS (Huapei 57-2)|QTL|FHB|3B|Xbarc133|10026|||Huapei 57-2/Patterson; resistance from Huapei 57-2; associated with Xbarc133-3B
+FHB QTL 3BL (Huapei 57-2)|QTL|FHB|3B|Xgwm247|10026|||Huapei 57-2/Patterson; resistance from Huapei 57-2; associated with Xgwm247-3B
+FHB QTL 3AS (Huapei 57-2)|QTL|FHB|3A|Xgwm5|10026|||Huapei 57-2/Patterson; resistance from Huapei 57-2; associated with Xgwm5-3A
+FHB QTL 5BL (Patterson)|QTL|FHB|5B|Xbarc59|10026|||Huapei 57-2/Patterson; resistance from Patterson; associated with Xbarc59-5B
+FHB QTL 2DL (Wuhan-1, type II)|QTL|FHB|2D|-|10020|||Wuhan-1/Maringa; type II resistance; no marker given in the Catalogue
+FHB QTL 3BS distal (Wuhan-1, type II)|QTL|FHB|3B|-|10020|||Wuhan-1/Maringa; type II resistance, distal 3BS; no marker given in the Catalogue
+FHB QTL 2DS (Wuhan-1, field)|QTL|FHB|2D|-|10020|||Wuhan-1/Maringa; field resistance; no marker given in the Catalogue
+FHB QTL 3BS proximal (Wuhan-1, field)|QTL|FHB|3B|-|10020|||Wuhan-1/Maringa; field resistance, proximal 3BS; no marker given in the Catalogue
+FHB QTL 4B (Wuhan-1, field)|QTL|FHB|4B|-|10020|||Wuhan-1/Maringa; field resistance; no marker given in the Catalogue
+DON QTL 2DL (Wuhan-1)|QTL|FHB|2D|-|10020|||Wuhan-1/Maringa; DON accumulation; no marker given in the Catalogue
+DON QTL 5DS (Wuhan-1)|QTL|FHB|5D|-|10020|||Wuhan-1/Maringa; DON accumulation; no marker given in the Catalogue
+FHB QTL 1BL (Patterson x Fundulea 201R)|QTL|FHB|1B|Xbarc8;Xgwm131|10114|19||Patterson/Fundulea 201R RILs; Xbarc8-1BS – Xgwm131-1BL region
+FHB QTL 3AS (Patterson x Fundulea 201R)|QTL|FHB|3A|Xgwm674;Xbarc67|10114|13||Patterson/Fundulea 201R RILs; Xgwm674-3A/Xbarc67-3A region
+FHB QTL 3D (Patterson x Fundulea 201R)|QTL|FHB|3D|-|10114|||Patterson/Fundulea 201R RILs; weak QTL, Patterson allele; no marker given
+FHB QTL 5AS (Patterson x Fundulea 201R)|QTL|FHB|5A|-|10114|||Patterson/Fundulea 201R RILs; weak QTL; no marker given
+Crown rot QTL 4B (Kukri x Janz)|QTL|CR|4B|Xgwm251|10034|48||Kukri (R)/Janz (S) DH; simple interval mapping in the region PstI ACG.MseI CAC – Xgwm251-4B
+Cre1|DG|CCN|2B|-|10013|||Co-segregates with Xcsl107-2B; Xcdo36-2B – 7.5 cM – Xbcd1231-2B/XAtPPr5/Xcsl107-2B/Cre1
+Cre3|DG|CCN|2D|-|10013|||Colinear with 2BL: Xcdo36-2D and XAtPPr5/Xbcd1231-2D/G4/G12/Cre3
+Cre8|DG|CCN|6B|-|0220|||6BL; linked to RFLP loci Xbcd1-6B and Xcdo347-6B
+Stb1|DG|STB|5B|Xbarc74|10123|||5BL, FL 5BL-11 to 5BL-14; Xbarc74-5B – 2.8 cM – Stb1 (P881072-75-1)
+Stb2|DG|STB|3B|Xgwm389;Xgwm533;Xgwm493|10105|||3BS; Xgwm389-3B/Xgwm533-3B – 1.0 cM – Stb2 – 3.7 cM – Xgwm493-3B
+Stb3|DG|STB|6D|Xgdm132|10105|||6DS; Stb3 – 3.0 cM – Xgdm132-6D
+Stb4|DG|STB|7D|Xgwm111|10106|||7DS; XAGG/CAT10 – 4.0 cM – Stb4 – 0.7 cM – Xgwm111-7D
+Stb6 (Senat)|DG|STB|3A|Xgwm369|10067|||A resistance gene from Senat at or near Stb6, 5 cM from Xgwm369 on 3AS
+QStb.riso-6B|QTL|STB|6B|Xwmc494;Xwmc341|10067|>68|LOD >16|Savannah/Senat DH; resistance from Senat; centromeric, between Xwmc494-6B and Xwmc341-6B; also at seedling stage
+QStb.riso-3A.2|QTL|STB|3A|Xwmc489;Xwmc388;Xwmc505|10067|>18|LOD >4|Savannah/Senat DH; resistance from Senat; 3AS, linked to Xwmc489, Xwmc388 and Xwmc505; also at seedling stage
+QStb.riso-2B|QTL|STB|2B|Xwmc175|10067|>17|LOD >5|Savannah/Senat DH; resistance from Senat; 2BL, linked to Xwmc175-2B
+QStb.riso-7B|QTL|STB|7B|Xwmc517|10067|>11|LOD >4|Savannah/Senat DH; resistance from Senat; close to Xwmc517-7B
+SNB QTL 1B (ITMI)|QTL|SNB|1B|-|10009|||ITMI population; probably Snn1; no marker given in the Catalogue
+SNB QTL 4BL (ITMI)|QTL|SNB|4B|-|10009|||ITMI population; no marker given in the Catalogue
+SNB QTL 7BL (ITMI)|QTL|SNB|7B|-|10009|||ITMI population; effective at a later stage of disease; no marker given
+SNB QTL 2BL (Liwilla x Begra)|QTL|SNB|2B|-|10045|||Liwilla x Begra DH; proximal part of 2BL; resistance from Liwilla
+SNB QTL 3BS (Liwilla x Begra)|QTL|SNB|3B|-|10045|||Liwilla x Begra DH; distal 3BS; resistance from Liwilla
+SNB QTL 5B (Liwilla x Begra)|QTL|SNB|5B|-|10045|||Liwilla x Begra DH; resistance from Liwilla
+SNB QTL 5D (Liwilla x Begra)|QTL|SNB|5D|-|10045|||Liwilla x Begra DH; resistance from Liwilla
+QSng.sfr-3BS|QTL|SNB|3B|Xgwm389|10065|31.2||Arina x Forno RILs, glume blotch under natural infection; resistance from Arina; associated with Xgwm389-3B
+QSng.sfr-4BL|QTL|SNB|4B|Xgwm251|10065|19.1||Arina x Forno RILs, glume blotch; resistance from Forno; associated with Xgwm251-4B
+QSng.sfr-5BL|QTL|SNB|5B|-|10065|||Arina x Forno RILs, glume blotch; overlaps QTL for height and heading time
+Snn1|SG|SNB|1B|-|10009|||1BS; sensitivity to SnTox1 is dominant; CS and W-7984 sensitive
+Sr2|DG|SR|3B|Xgwm533|0358|||Xglk683 (STS Xsun2-3B) – 0.5 cM – Xgwm533-3B; FL 0.87–0.75 of 3BS; all 27 Sr2 lines carried the 120 bp Xgwm533 allele
+Sr38|DG|SR|2A|-|10073|||On the 2NS (Aegilops ventricosa) translocation replacing distal 2AS (25-38 cM, Xcmwg682 to XksuH9); alien segment
+Yr5|DG|YR|2B|-|10096|||2BL as in the Catalogue main entry; Completely linked to RGAP markers Xwgp17-2B, Xwgp19-2B and Xwgp26-2B
+Yr15|DG|YR|1B|Xgwm11|10112|||Gene order Yr15 – Yr24 – Xgwm11-1B
+Yr24|DG|YR|1B|Xgwm11|10112|||Gene order Yr15 – Yr24 – Xgwm11-1B
+Yr17|DG|YR|2A|-|10073|||On the 2NS translocation replacing distal 2AS (Xcmwg682 to XksuH9); alien segment
+Yr32|DG|YR|2A|-|10016|||2AS; Carstens V; allelic or closely linked to Yr1 region
+YrBat|DG|YR|7D|-|10039|||Batavia; 18% linkage with a 7DL marker; more readily detected in seedling tests at elevated temperature
+Yr34|DG|YR|5A|Xgwm6|10040|||5AL; WAWHT2046; Xgwm6-5A – 13.5 cM – B1 – 12.2 cM – Yr34; weak seedling, strong adult plant resistance
+YrSP|DG|YR|2B|-|10018|||2BS; Spaldings Prolific (Cx1 = Avocet S*4/Spaldings Prolific)
+YR QTL 3BS (Fukuho-komugi x Oligoculm, severity)|QTL|YR|3B|Xgwm389|10060|0.2-4.9||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm; joint analysis of five datasets
+YR QTL 4BL (Fukuho-komugi x Oligoculm, severity)|QTL|YR|4B|Xgwm538|10060|1.8-12.3||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm
+YR QTL 4DL (Fukuho-komugi x Oligoculm, severity)|QTL|YR|4D|Xwmc399|10060|2.5-8.0||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm
+YR QTL 5BL (Fukuho-komugi x Oligoculm, severity)|QTL|YR|5B|Xwmc415|10060|2.4-16.1||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm; also detected for infection (6.4-12.7%)
+YR QTL 6BS (Fukuho-komugi x Oligoculm, severity)|QTL|YR|6B|Xgwm935|10060|0.5-3.8||Fukuho-komugi/Oligoculm DH; centromeric 6BS; resistance from Oligoculm
+YR QTL 7BS (Fukuho-komugi x Oligoculm, severity)|QTL|YR|7B|Xgwm935|10060|1-5.2||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm
+YR QTL 7DS (Fukuho-komugi x Oligoculm, severity)|QTL|YR|7D|Xgwm295|10060|10.7-23.7||Fukuho-komugi/Oligoculm DH; resistance from Fukuho-komugi; probably Yr18
+YR QTL 2DL (Fukuho-komugi x Oligoculm, infection)|QTL|YR|2D|Xgwm349|10060|6.5-9.6||Fukuho-komugi/Oligoculm DH; resistance from Fukuho-komugi; joint analysis of three datasets
+YR QTL 3BS (Fukuho-komugi x Oligoculm, infection)|QTL|YR|3B|Xgwm389|10060|15.1-24.5||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm; probably Yr30
+YR QTL 7BL (Fukuho-komugi x Oligoculm, infection)|QTL|YR|7B|Xwmc166|10060|2.5-9||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm
+Lr3|DG|LR|6B|-|10058|||Chromosome 6BL as in the Catalogue main entry; cDNA marker TaR16 completely linked to Lr3 in 109 gametes
+Lr10|DG|LR|1A|-|10033|||1AS as in the Catalogue main entry; Cloned: T10rga1 (GenBank AY270157), CC-NBS-LRR protein of 919 aa
+Lr52|DG|LR|5B|-|10035|||5BS; Tc-LrW = RL6107 (formerly LrW)
+LrTt1|DG|LR|2A|Xgwm812|10031|||Recessive (lrTt1); line 842 = Saratovskaya*2/T. timopheevii ssp. viticulosum; Xgwm812-2A – 1.5 cM – LrTt1
+LR QTL 1BL (Fukuho-komugi x Oligoculm)|QTL|LR|1B|Xwmc44|10060|15||Fukuho-komugi/Oligoculm DH; resistance from Oligoculm; distal 1BL, may correspond to Lr46
+LR QTL 7DS (Fukuho-komugi x Oligoculm)|QTL|LR|7D|Xgwm295|10060|41||Fukuho-komugi/Oligoculm DH; resistance from Fukuho-komugi; corresponds to Lr34
+LR QTL 7D (Arina x Forno)|QTL|LR|7D|-|10066|32||Arina/Forno RILs; resistance from Forno; most likely Lr34
+QLr.sfr-1BS|QTL|LR|1B|Xgwm604|10066|||Arina/Forno RILs; resistance from Forno; associated with Xgwm604-1B
+Tsc2|SG|TS|2B|-|10015|||2BS; sensitivity to Ptr ToxB is dominant; W-7984 sensitive
+Ptr ToxB QTL 2AS|QTL|TS|2A|-|10015|||ITMI; response to Ptr ToxB; no marker given
+Ptr ToxB QTL 4AL|QTL|TS|4A|-|10015|||ITMI; response to Ptr ToxB; no marker given
+Pch1|DG|EYE|7D|-|10070|||Linked to Ep-D1; 2 cM from XustSSR2001-7D

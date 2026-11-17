@@ -1,0 +1,97 @@
+Pm24b|DG|PM|1D|Xgwm789;Xgwm603;Xbarc229|10994|||1DS bin 1DS1-0.59-1.00; Baihulu; Xgwm789/Xgwm603-1D – 2.4 cM – Pm24b – 3.6 cM – Xbarc229-1D
+Pm48|DG|PM|5D|Xgwm205;Xcfd81|10935|||5DS bin 5DS1; Tabasco; Xgwm205-5D – 17.6 cM – Pm48 – 1.3 cM – Xmp510 – 1.8 cM – Xcfd81-5D
+Pm49|DG|PM|2B|-|10937|||Ml5323; 2BS bin 2BS3-0.84-1.00; T. dicoccum MG5323; Xcau516-2B – 7.2 cM – Pm49 – 4.1 cM – XCA695634
+Pm50|DG|PM|2A|Xgwm294|10942|||2AL bin C-2AL1-0.85; K2 from T. dicoccum M129; Xgwm294-2A – 2.9 cM – Pm50
+Pm51|DG|PM|2B|Xwmc332|11026|||PmCH86; putative Th. ponticum derivative; 2BL bin 2BL6-0.89-1.00; CH7086; Xwmc332-2B – 4.7 cM – Pm51 – 1.4 cM – BQ246670
+Pm52|DG|PM|2B|Xcfd73;Xwmc441;Xgwm120|11028|||MlLX99; bin 2BL2-0.35-0.50; Liangxing 99; Xcfd73-2B – 5.3 cM – Xwmc441-2B – 0.2 cM – XBE604758 – Pm52 – 2.9 cM – Xgwm120-2B
+Pm53|DG|PM|5B|Xwmc759;Xgwm499;Xgwm408|11045|||PmNC-S16; from Ae. speltoides TAU829; 5BL; Xwmc759/Xgwm499-5B/IWA6024 – 0.7 cM – Pm53 – IWA2454 – 5.9 cM – Xgwm408-5B
+MlIw170|DG|PM|2B|Xcfd238;Xwmc243|10921|||2BS bin 2BS3-0.84-1.00; T. dicoccoides IW170; XcauG2 – 0.6 cM – MlIw170/Xcau516/Xcfd238-2B – 2.15 cM – XcauG8/BF201235/Xwmc243-2B; region of Pm26
+MlNCD1|DG|PM|7D|Xgwm635|11004|||7DS bin 7DS4-0.61-1.00; NC96BGD1 PI 597348 (Saluda*3/TA2570); Xgwm635-7D – 5.5-8.3 cM – MlNCD1 – 13.6-16.2 cM – Xgpw328-7D
+PmAS846|DG|PM|5B|-|10927|||5BL bin 5BL14-0.75-0.76; T. dicoccoides AS846 (N9134); XMAG2498-5B – 1.3 cM – Pm36/XBJ261635 – 1.1 cM – PmAS846 – 1.3 cM – XFCP1-5B
+PmTm4|DG|PM|7B|Xgwm611;Xbarc1073;Xbarc82|10961|||7BL bin 7BL10-0.78-1.00; Tangmai 4; Xgwm611-7B – 7.0 cM – PmTm4 – 14.6 cM – Xest92 – 2.9 cM – Xbarc1073/Xbarc82-7B
+Pmx|DG|PM|2A|-|11009|||Recessive; 2AL bin 2AL1-0.58-1.00; Xiaohongpi; Xhbg327-2A – 0.6 cM – Pmx/Xsts-bcd1231 – 8.9 cM – XresPm4/Xgpw4456-2A
+QPm.uga-7AL|QTL|PM|7A|Xcfa2257;Xwmc525|11025|||AGS 2000/Pioneer 26R61; from Pioneer 26R61; flanked by Xcfa2257-7A and Xwmc525-7A in the Pm1 region
+PM QTL 1AS (Naxos)|QTL|PM|1A|-|10934|35||SHA3/CBRD (S)/Naxos (R) RILs; major QTL; other QTL from Naxos on 2DL, 2BL and 7AL
+Rcc1|DG|ANT|5A|Xbarc165;Xgwm671;Xwmc415|10939|||5AL; resistance to Colletotrichum cereale; Chinese Spring, Norin 4; Xbarc165-5A – 1.2 cM – Rcc1 – 12.8 cM – Xgwm671-5A – 0.7 cM – Xwmc415-5A
+Qfhb.hwwg-3BSc|QTL|FHB|3B|-|10950|9||Baishanyuehuang (R)/Jagger (S) RILs; from Baishanyuehuang (with Fhb1, R2 0.16)
+Qfhb.hwwg-3A|QTL|FHB|3A|-|10950|5-8||Baishanyuehuang/Jagger RILs; from Baishanyuehuang
+Qfhb.hwwg-5A|QTL|FHB|5A|-|10950|5||Baishanyuehuang/Jagger RILs; one trial
+FHB QTL 3BS (Sumai 3 x Y1193-6)|QTL|FHB|3B|-|11001|26||Sumai 3 (R)/Y1193-6 (S) RILs; from Sumai 3
+FHB QTL 6BL (Sumai 3 x Y1193-6)|QTL|FHB|6B|-|11001|11||Sumai 3/Y1193-6 RILs; from Sumai 3
+FHB QTL 2DS (Sumai 3 x Y1193-6)|QTL|FHB|2D|-|11001|19||Sumai 3/Y1193-6 RILs; from Y1193-6
+Qfhb.hwwg-3AS|QTL|FHB|3A|-|11005|up to 18||Treho (S)/Heyne (MR) RILs; from Heyne
+Qfhb.hwwg-4DL|QTL|FHB|4D|-|11005|14-23||Treho/Heyne RILs; from Heyne
+Qfhb.hwwg-4AL|QTL|FHB|4A|-|11005|up to 18||Treho/Heyne RILs; from Heyne
+FHB QTL 2DL (VA00W-38)|QTL|FHB|2D|-|11022|||VA00W-38 (mod R)/Pioneer 26R46 (S) RILs; decreased FHB index; QTL also on 1BL, 2A, 6A, 7A (6.5-21.3% each)
+FHB QTL 6A (VA00W-38)|QTL|FHB|6A|-|11022|||VA00W-38/Pioneer 26R46 RILs; decreased Fusarium-damaged kernels
+FHB QTL 5B (VA00W-38)|QTL|FHB|5B|-|11022|||VA00W-38/Pioneer 26R46 RILs; decreased DON
+Qcrs.wsu-3BL (Macon)|QTL|CR|3B|Xgwm247;Xgwm299|10932|||Sunco/Macon RILs; most effective, from Macon; flanked by Xgwm247-3B and Xgwm299-3B; other QTL on 2B, 4B, 4D
+Qcrs.wsu-3BL (Otis)|QTL|CR|3B|-|10932|||Sunco/Otis RILs; most effective, from Otis; other QTL on 2B, 4B, 7A
+Rmg6|DG|WB|1D|Xwmc432;Xwmc222|10948|||1DS; Chinese Spring, Norin 4; Xwmc432-1D – 9.6 cM – Rmg6 – 6.6 cM – Xwmc222-1D
+RmgTd(t)|DG|WB|7B|-|10949|||7BL; T. dicoccoides KU109; Xhbg338-7B – 10.5 cM – RmgTd(t)
+Stb2 (1BS)|DG|STB|1B|Xwmc406;Xbarc8|10976|||1BS (not 3BS); Xwmc406-1B – 6.0 cM – Stb2 – 5.0 cM – Xbarc008-1B
+STB QTL 5BL (Steele-ND)|QTL|STB|5B|-|10992|10||Steele-ND (R)/ND735 (S) RILs; seedling resistance; flanked by wPt-7101 and X377410 in the Stb1 region
+STB QTL 5A (Solitar)|QTL|STB|5A|-|10984|||Solitar (R)/Mazurka (S) DH; field resistance from Solitar (with 6D and 7D QTL, 20% of genotypic variation)
+STB QTL 6D (Solitar)|QTL|STB|6D|-|10984|||Solitar/Mazurka DH; from Solitar
+STB QTL 7D (Solitar)|QTL|STB|7D|-|10984|||Solitar/Mazurka DH; from Solitar
+Snn5|SG|SNB|4B|Xbarc163;Xwmc349|10925|||4BL bin 4BL-6 0.85-1.00; T. carthlicum PI 94749; Xbarc163/Xcfd-4B – 13.3 cM – Snn5 – 2.8 cM – Xwmc349-4B
+Cr1|DG|CRR|5D|Xwmc41;Xgdm63|10956|||5DL; resistance to P. coronata var. hordei; Chris CItr 14108; Xwmc41.2-5D – 11.3 cM – Cr1 – 16.8 cM – Xgdm63-5DL
+Sr9h|DG|SR|2B|Xgwm47;Xwmc332|11010|||SrWeb; 2BL; RL6203; Xgwm47-2B – 1.4 cM – Sr9h – 12.5 cM – Xwmc332-2B
+Sr33|DG|SR|1D|Xwmc432;Xwmc336;Xwmc222;Xcfa2158|11012|||From Ae. tauschii; Xwmc432-1D – 0.3 cM – Xwmc336-1D – 1.0 cM – Sr33 – 4.2 cM – Xwmc222/Xcfa2158-1D; cloned CC-NBS-LRR orthologous to Mla {10987}
+Sr35 (cloned)|DG|SR|3A|-|10988|||Cloned CC-NBS-LRR gene
+Sr42|DG|SR|6D|Xcfd49;Xbarc183;Xbarc301|10952|||6DS; Xcfd49-6D – 5.5 cM – Xbarc183-6D – 0.5 cM – Sr42/FSD_RSA – 11.8 cM – Xbarc301-6D; possibly the same as SrTmp and SrSha7
+Sr54 (map)|DG|SR|2D|Xwmc167|10816|||Xcfd283-2D – 8.1 cM – Sr54/linkage block of 18 markers – 15.8 cM – Xwmc167-2D
+Sr58|DG|SR|1B|-|10965|||1BL; adult plant resistance at the Lr46 locus (Lalbahadur(Pavon1B))
+SrTA1662|DG|SR|1D|Xwmc432;Xwmc222|11012|||1DS; Ae. tauschii TA1662; Xwmc432-1D – 4.4 cM – SrTA1662 – 4.4 cM – Xwmc222-1D
+SrTA10171|DG|SR|7D|Xgdm88;Xwmc827;Xcfd30|10936|||7DS; Ae. tauschii TA10171; Sr10171 – 0.9 cM – Xgdm88/Xwmc827-7D – 1.9 cM – Xcfd30-7D
+SrTA10187|DG|SR|6D|Xcfd49;Xbarc173|10936|||6DS; Ae. tauschii TA10187; Xcfd49-6D – 1.9 cM – SrTA10187 – 13.6 cM – Xbarc173-6D
+QSr.cim-3D|QTL|SR|3D|-|10975|20||Avocet S/Pavon 76 RILs lacking Sr26; from Pavon 76 (QSr.cim-3B = Sr2 and QSr.cim-1B = Lr46 region also from Pavon 76)
+QSr.cim-4B|QTL|SR|4B|-|10975|||Avocet S/Pavon 76 RILs; from Avocet S
+QSr.cim-5A|QTL|SR|5A|-|10975|||Avocet S/Pavon 76 RILs; from Avocet S
+QSr.cim-2BS|QTL|SR|2B|-|11019|||PBW343 (S)/Muu RILs; from Muu
+QSr.cim-7AS|QTL|SR|7A|-|11019|||PBW343/Muu RILs; from Muu
+QSr.cim-5BL|QTL|SR|5B|-|11019|||PBW343/Muu RILs; from PBW343
+Yr54|DG|YR|2D|Xgwm301|10944|||Adult plant resistance; 2DL; Quaiu 3; Yr54 – 0.4 cM – Xgwm301-2D
+Yr55|DG|YR|2D|-|10953|||2DL; Frelon; Xmag4089-2D – 11.4 cM – Yr55 – 8.4 cM – Xmag3385-2D
+Yr56|DG|YR|2A|Xbarc212;Xbarc124;Xgwm512|10955|||Qyr.sun-2A; 2AS; durum AUS 91575 and Wollaroi; Xbarc124-2A – 2.1 cM – Xsun167-2A – 5.7 cM – Yr56 – 7.6 cM – Xsun168-2A ... Xgwm512-2A
+Yr57|DG|YR|3B|Xgwm389|10963|||3BS bin 3BS8-0.78-1.00; AUS 91463; Xsts3B-15 – 4.9 cM – Yr57 – 2.0 cM – Xgwm389/Xcfp140/Xmag2095-3B
+Yr58|DG|YR|3B|-|10964|||3BL bin 3BL7-0.63-1.00; Sonora W195 AUS 19292; DArT 100016328/123392 – 4.6 cM – Yr58 – 3.9 cM – 1121669/3023704
+Yr59|DG|YR|7B|Xwmc557;Xbarc32;Xbarc182|10966|||Adult plant resistance; 7BL bin 0.86-1.00; PI 178759; Xwmc557-7B – 2.2 cM – Xwgp5175 – 2.1 cM – Yr59 – 1.1 cM – Xbarc32 – 0.5 cM – Xbarc182-7B
+Yr60|DG|YR|4A|Xwmc776;Xwmc313;Xwmc219|10968|||4AL; Lal Bahadur; Yr60/Xwmc776-4A – 0.51 cM – Xwmc313/Xwmc219-4A
+Yr61|DG|YR|7A|-|10970|||Yrdp34; 7AS; Pindong 34; Xwgp5765b – 3.9 cM – Yr61 – 1.9 cM – Xwp5467 – 12.5 cM – Xcfa2174
+Yr62|DG|YR|4B|Xgwm251;Xgwm192;Xgwm495;Xgwm513|11023|||Adult plant resistance; 4BL bin 4BL5-0.86-1.00; PI 192252; ... Xgwm251-4B – 3.3 cM – Yr62 – 2.0 cM – Xgwm192-4B – 0.6 cM – Xgwm495-4B
+Yr63|DG|YR|7B|Xwmc606|11027|||7BS bin 7BS1-0.27-1.00; AUS 27955; IWB33120 – 0.9 cM – Yr63 – 1.5 cM – IWB52844 – 10.5 cM – Xwmc606-7B
+Yr64|DG|YR|1B|Xgwm413;Xgdm33|11030|||1BS bin 1BS9-0.84-1.00; durum PI 331260; Xgwm413-1B – 3.5 cM – Yr64 – 2.0 cM – Xgdm33-1B
+Yr65|DG|YR|1B|Xgwm18;Xgwm11|11030|||1BS bin 1BS10-0.5-centromere; durum PI 480016; Xgwm18-1B – 1.2 cM – Yr65 – 2.1 cM – Xgwm11-1B
+Yr66|DG|YR|3D|-|11032|||YrVL1; 3DS bin 3DS6-0.55-1.00; IWB47165 – 3.1 cM – Yr66 – 2.9 cM – IWB18087/IWB56281
+Yr67|DG|YR|7B|Xbarc182|11032|||YrVL2 = YrC591; 7BL bin 7BL10-0.78-1.00; Xbarc182-7BL – 5.2 cM – IWB62475/IWB37096 – 1.1 cM – Yr67 – 0.6 cM – IWB71995
+YrH9020|DG|YR|2D|Xgwm455;Xgwm261|10979|||From Psathyrostachys huashanica; 2DS; Xgwm455-2D – 5.8 cM – YrH9020 – 4.4 cM – Xgwm261-2D; alien-derived
+YrKK|DG|YR|2B|Xgwm148;Xwmc474|11034|||Adult plant resistance; 2BS bin 2BS-1; Kenya Kuku; Xgwm148-2BS – 3.2 cM – YrKK – 1.8 cM – Xwmc474
+YR QTL 3DS (Avocet x Chapio)|QTL|YR|3D|-|11020|||Avocet (S)/Chapio RILs; effective in Mexico 2009 and China 2013 (Yr31 2BS, Yr30 3BS, Yr18 7DS also detected)
+YR QTL 5BL (Avocet x Chapio, China)|QTL|YR|5B|-|11020|||Avocet/Chapio RILs; effective in China
+YR QTL 5A (Avocet x Pastor)|QTL|YR|5A|-|10928|||Avocet (S)/Pastor RILs; with Yr29 (1BL), Yr31 (2BS), 6B and 7AL QTL
+YR QTL 6B (Avocet x Pastor)|QTL|YR|6B|-|10928|||Avocet/Pastor RILs
+YR QTL 7AL (Avocet x Pastor)|QTL|YR|7A|-|10928|||Avocet/Pastor RILs
+Qyr.niab-2D.1|QTL|YR|2D|-|10962|10-25||Claire/Lemhi DH; APR at or near Yr16
+Qyr.niab-2DL.2|QTL|YR|2D|-|10962|14-32||Claire/Lemhi DH; APR
+Qyr.niab-2BL|QTL|YR|2B|-|10962|||Claire/Lemhi DH; APR
+Qyr.niab-7B|QTL|YR|7B|-|10962|11-13||Claire/Lemhi DH; APR
+QYr.osu-5A|QTL|YR|5A|Xgwm156|10973|||Jagger (MR)/2174 (MS) RILs; from Jagger; Xgwm156-5A – centromere region
+Qyr.ufs-2A|QTL|YR|2A|-|10933|||Yr16DH70/Palmiet DH; major QTL from Yr16DH70; less effective QTL on 2D (possibly Yr16), 5B and 6D
+Lr12|DG|LR|4B|Xgwm251;Xgwm149|10951|||4BL bin 4BL5-0.86-1.00; Xgwm251-4B – 0.9 cM – Lr12 – 1.9 cM – Xgwm149-4B
+Lr14a (durum map)|DG|LR|7B|Xwmc10;Xgwm344|11015|||7BL bin 7BL10-0.78-1.00; Creso, Colosseo and other durums; Xwmc10/Xgwm344/wPt1085-7B – 1.1 cM – wPt4038-HRM – 0.1 cM – Lr14a – 1.0 cM – wPt4140-HRM
+Lr68 (map)|DG|LR|7B|Xcfa2257;Xgwm146|10817|||Xwmc232 – 0.2 cM – Xcfa2257 – 1.1 cM – Cs7BLNLRR – 0.3 cM – Psy1-1 – 0.5 cM – Lr68 – 0.6 cM – Xgwm146-7B
+Lr72|DG|LR|7B|Xwmc606|10947|||7BS; durum Altar C84 and Atil C2000; Lr72 – 5.0 cM – Xwmc606-7B
+Lr73|DG|LR|2B|-|10969|||2BS; Morocco; wPt8760 – 4 cM – Lr73 – 1.4 cM – wPt8235
+Lr74|DG|LR|3B|-|11031|||Adult plant resistance; 3BL bin 3BL7-0.63-1.00; BT-Schomburgk selection; GBS2256311 – 3.9 cM – Lr74 – 2.5 cM – IWB69699/IWB20762
+LrBi16|DG|LR|7B|Xcfa2257;Xgwm344|11042|||7BL; Bimai 16; Xcfa2257-7B – 2.8 cM – LrBi16 – 2.9 cM – Xgwm344-7B
+LrFun|DG|LR|7B|Xgwm344;Xwmc70|11038|||7BL bin 7BL-10; Fundulea 90; Xgwm344-7B – 4.4 cM – LrFun – 5.7 cM – Xwmc70-7B
+LrGam6|DG|LR|2B|Xgwm382;Xgwm528|10929|||2BL; Sinvalocho MA; Xbarc-2B – 0.6 cM – Xgwm382-2B – 0.6 cM – LrGam6 – 17.9 cM – Xgwm528-2B
+LrNJ97|DG|LR|2B|Xwmc317;Xbarc159;Xwmc356|11043|||2BL; Neijiang 977671; Xwmc317-2B – 4.2 cM – LrNJ97 – 2.2 cM – Xbarc159-2B – 2.3 cM – Xwmc356-2B
+LrSV1|DG|LR|2D|Xgwm296;Xgwm261|10929|||Adult plant resistance; 2DS; Sinvalocho MA; Xgwm296-2D – 1.4 cM – LrSV1 – 7.1 cM – Xgwm261-2D
+LrSV2|DG|LR|3B|Xgwm389;Xgwm533;Xgwm493|10929|||Adult plant resistance; 3BS; Sinvalocho MA; Xgwm389-3B – 3.0 cM – LrSV2/Xgwm533-3B – 4.2 cM – Xgwm49(3)-3B
+LR QTL 2BS (Avocet x Pastor)|QTL|LR|2B|-|10928|||Avocet/Pastor RILs; with Lr46 (1BL), 5A, 6B and 7BL QTL
+LR QTL 7BL (Avocet x Pastor)|QTL|LR|7B|-|10928|||Avocet/Pastor RILs
+CB gene 1BS (Trintella x Piko)|QTL|CB|1B|Xgwm273|11003|||Trintella/Piko DH; one major gene in the 1BS centromere region, nearest marker Xgwm273-1B
+Ut5|DG|LS|5B|Xbarc232|10940|||Ut-Fore; 5BL; Foremost; race T10; Xgpw5029 – 2.8 cM – Ut5 – 1.3 cM – Xbarc232-5B
+Wsm2 (map 2013)|DG|WSMV|3B|Xbarc87;Xbarc102|10982|||Xbarc87-3B – 4.4 cM – Wsm2 – 3.9 cM – Xbarc102-3B; Xbarc102-3B219 allele best predictor

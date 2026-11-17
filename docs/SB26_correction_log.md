@@ -327,3 +327,11 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## ad55 (Nov 2026)
 - User rule: where a preprint was later published and both were in the atlas, the preprint was removed. 116 records deleted (live DB tombstones; list in docs/ad55_preprint_removed.json): Tomar et al. 2020 preprint 74 (published version Tomar et al. 2021 Front Genet re-analysed 139 lines and kept 8 QTL), Aouini et al. 2025 12, Gardner et al. 2025 11, Chaudhary et al. 2024 9, Concepcion et al. 2024 3, Winn et al. 2022 2, Liu et al. 2021 2, Ren et al. 2023 2, Peters Haugrud et al. 2023 1. Ten preprint source keys removed (incl. empty Ferjaoui et al. 2021).
+
+## ad56 (2026-11-17): Catalogue of Gene Symbols for Wheat, Supplements 2004-2017
+- 805 disease-resistance entries read from the 2004-2013, 2015 and 2017 supplements (insects, mites and non-disease traits excluded); entry tables in docs/supplements/cgsw/.
+- 68 skipped: same paper and locus already in the atlas. 737 new records K0001-K0737 (B 58, C 296, D 383).
+- Each record cites the original paper from the supplement reference list (398 new sources CGS_<ref>); unlisted references fall back to the supplement (CGSW_<year>).
+- Placement: in-silico marker positions; where markers place loosely or not at all, an existing A/B atlas position of the same designated gene (or Lr34 gene model TraesCS7D02G080300) is reused at grade C.
+- Six diseases added to the list: Crown rust, Cephalosporium stripe, Anthracnose, Soil-borne cereal mosaic virus, Wheat spindle streak mosaic virus, Root-knot nematode.
+- Live page: records shipped as seed_cgsw.json and merged into the seed at load.

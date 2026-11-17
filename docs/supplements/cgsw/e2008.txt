@@ -1,0 +1,64 @@
+Bdv2|DG|BYD|7D|-|10491|||On T7DS-7Ai#1S.7Ai#1L (Thinopyrum intermedium) translocation; Glover (with TC6); alien segment
+Pm12|DG|PM|6B|-|10517|||From Ae. speltoides; on the long arm of 6S between Xwmc105 and Xcau127 (secondary recombination); alien segment
+Pm37 (map)|DG|PM|7A|Xgwm332;Xwmc790|10372|||PI 615588 = NC99BgTAG11; Xgwm332-7A – 0.5 cM – Pm37 – 0.5 cM – Xwmc790-7A – 15.5 cM – Pm1
+Pm39|DG|PM|1B|Xwmc719|10481|||1BL; adult plant resistance at the Lr46/Yr29 locus; Xwmc719-1BL – 4.3 cM – Lr46/Yr29/Pm39 – 2.5 cM – Xhbe248-1BL
+PM gene (T. monococcum PI 427772)|DG|PM|7A|-|10479|||A further gene from T. monococcum PI 427772 in BCBGT96A = PI 599036 = Saluda*3/PI 427772; listed with the 7AL genes (chromosome not stated)
+PmLK906|DG|PM|2A|Xgwm265;Xgdm93|10476|||Recessive; 2AL; Lankao 90(6)21-12; TacsAetPR5-2A/Pm4 – 3.9 cM – Xgwm265-2A – 3.72 cM – PmLK906 – 6.15 cM – Xgdm93-2A
+Fhb3|DG|FHB|7A|-|10529|||On T7AL.7Lr#1S translocation from Leymus racemosus (TA5608); type 2 resistance similar to Sumai 3; alien segment
+Qfhs.ndsu-3AS (TRAP)|QTL|FHB|3A|-|10482|||Placed within an 11.5 cM region flanked by TRAP loci Xfcp401-3A and Xfcp397.2-3A; unlikely to be a homoeologue of Fhb1
+Qfhs.pur-7EL|QTL|FHB|7D|Xcfa2270|10489|||From Thinopyrum elongatum 7el2 (K2630; K11695 = 7DS.7DL-7el2); flanked by BE445653 and Xcfa2270-7D; alien segment
+Qfhs.umc-2B|QTL|FHB|2B|Xgwm278|10456|4||Ernie (R)/MO94-317 (S) 243 RILs; resistance from Ernie; linked to Xgwm278-2BS
+Qfhs.umc-3B|QTL|FHB|3B|Xgwm285|10456|13||Ernie/MO94-317 RILs; linked to Xgwm285-3BS
+Qfhs.umc-4B|QTL|FHB|4B|Xgwm495|10456|9||Ernie/MO94-317 RILs; linked to Xgwm495-4BL
+Qfhs.umc-5A|QTL|FHB|5A|Xgwm165|10456|17||Ernie/MO94-317 RILs; linked to Xgwm165-5A
+FHB QTL 4DS (Arina x Riband, Rht-D1)|QTL|FHB|4D|-|10464|||Arina/Riband DH; most effective QTL, appeared to be an effect of Rht-D1a; other QTL on 1BL (2), 2B, 6BL, 7AL (Arina) and 7AL, 7BL (Riband)
+QFhs.whs-1BS|QTL|FHB|1B|-|10503|||Cansas (MR)/Ritmo (S); 1RS; seven QTL together R2 0.56
+QFhs.whs-3B|QTL|FHB|3B|-|10503|||Cansas/Ritmo; not Fhb1
+QFhs.whs-3DL|QTL|FHB|3D|-|10503|||Cansas/Ritmo
+QFhs.whs-5BL|QTL|FHB|5B|-|10503|||Cansas/Ritmo
+QFhs.whs-7AL|QTL|FHB|7A|-|10503|||Cansas/Ritmo
+QFhs.whs-7BL|QTL|FHB|7B|-|10503|||Cansas/Ritmo
+QFhs.ndsu-3BS (CJ 9306)|QTL|FHB|3B|Xgwm533;Xgwm493|10490|31||Veery (S)/CJ 9306 (R); Xgwm533b – Xgwm493; DON QTL R2 0.23 at Xgwm533b {10496}
+QFhs.nau-2DL|QTL|FHB|2D|Xgwm157;Xwmc41|10490|16||Veery/CJ 9306; Xgwm157 – Xwmc041; DON QTL R2 0.2 at Xgwm539 {10496}
+QFhs.nau-1AS|QTL|FHB|1A|Xwmc24;Xbarc148|10490|10||Veery/CJ 9306; Xwmc024 – Xbarc148
+QFhs.nau-7BS|QTL|FHB|7B|Xgwm400;Xgwm573|10490|7||Veery/CJ 9306; Xgwm400 – Xgwm573
+QFhs.nau-5AS (DON)|QTL|FHB|5A|Xgwm425|10496|5||Veery/CJ 9306; resistance to DON accumulation; nearest marker Xgwm425
+QFhs.lfl-6AL|QTL|FHB|6A|-|10470|||Dream*4/Lynx lines; QTL effect verified
+QFhs.lfl-7BS|QTL|FHB|7B|-|10470|||Dream*4/Lynx lines; QTL effect verified
+CreX|DG|CCN|2A|-|10486|||From Ae. variabilis; 2AS or 2DS; RAPD markers OP021000, OpR41600, OpV3450; alien segment
+CreY|DG|CCN|3B|-|10486|||From Ae. variabilis; 3BL; co-segregates with RAPD OpY161065 converted to SCAR16; may be the same gene as Rkn-mn1; alien segment
+Rmg1|DG|WB|1D|-|10462|||CS (Cheyenne 1D); Cheyenne, Norin 26, Shin-chunaga
+Rmg2|DG|WB|7A|-|10461|||CS (Thatcher 7A)
+Rmg3|DG|WB|6B|-|10461|||CS (Thatcher 6B)
+Snb1|DG|SNB|3A|-|856|||3AL; Red Chief
+Snb2|DG|SNB|2A|-|856|||2AL; EE8
+Snb3|DG|SNB|5D|-|1594|||5DL; from Ae. tauschii (CS*/Synthetic 5D)
+SnbTM|DG|SNB|3A|-|857|||3AL; from T. timopheevii; UBC521650 – 15 cM – SnbTM – 13.1 cM – RC37510
+QSng.sfr-3BS (Xsun2)|QTL|SNB|3B|-|10465|||Peaks 0.6 cM proximal to Xsun2-3B; association retained in 44 European cultivars
+Qsnb.fcu-5BL.1|QTL|SNB|5B|-|10458|63||BR34/Grandin; Tsn1; resistance from BR34
+Qsnb.fcu-5BL.2|QTL|SNB|5B|-|10458|6||BR34/Grandin; resistance from BR34
+Qsnb.fcu-1BS|QTL|SNB|1B|Xgdm125|10507|10-11||BR34/Grandin; vicinity of Snn1; associated with Xgdm125-1BS
+Qsnb.fcu-2DS|QTL|SNB|2D|-|10507|30-49||BR34/Grandin RILs with culture Sn6; associated with Snn2
+Qsnb.fcu-5AL|QTL|SNB|5A|-|10507|0-13||BR34/Grandin RILs with Sn6; associated with Xfcp13-5A
+QSng.pur-2DL.1|QTL|SNB|2D|Xgwm526;Xcfd50|10471|12.3-38.1||P91193D1/P92201D5 RILs, glume blotch, Indiana and Western Australia; from P91193D1; Xgwm526.1-2D – Xcfd50.2-2D
+QSng.pur-2DL.2|QTL|SNB|2D|Xcfd50|10471|6.9-11.2||P91193D1/P92201D5 RILs; from P92201D5; Xcfd50.3-2D – wPt9848
+Snn2|SG|SNB|2D|Xgwm614;Xbarc95|10507|||2DS; sensitivity to SnTox2 is dominant; BG223; Xgwm614-2D – 7.6 cM – Snn2 – 5.9 cM – Xbarc95-2D
+Tsc1|SG|TS|1A|-|344|||1AS; sensitivity to Ptr ToxC; Gli-A1 – 5.7 cM – Tsc1 – 11.7 cM – XksuD14-1A
+Tsr5|DG|TS|3B|Xgwm285|10509|||3BL; T. turgidum no. 283 (PI 352519); Tsr5 – 8.3 cM – Xgwm285-3B – 2.7 cM – Tsr2
+QTsc.ndsu-4A|QTL|TS|4A|-|0090|||4AL; ITMI, resistance from W-7984; associated with Xksu916(Oxo2)-4A and Xksu915-4A; minor adult QTL on 1AL, 7DS, 5AL and 3BL
+Sr9a|DG|SR|2B|Xgwm47;Xwmc175|10472|||Xbarc101-2B/Xgwm12-2B – 2.7 cM – Xgwm47-2B – 0.9 cM – Sr9a/Xwmc175-2B
+Sr8b (ST464)|DG|SR|6A|-|10473|||Possibly the gene on chromosome 6A in ST464-A1 (durum)
+Yr21|DG|YR|1B|-|10450|||Lemhi; mapped with RGAP markers; Yr21 – YrRpsLem 0.3 cM
+Yr41|DG|YR|2B|Xgwm410|10502|||YrCN19; 2BS; Chuannong 19; Xgwm410-2B – 0.3 cM – Yr41
+QYrtm.pau-2A|QTL|YR|2A|Xwmc407;Xwmc170|10518|14||T. monococcum PAU14087/T. boeoticum PAU5088 RILs; APR from PAU14087; 3.6 cM interval Xwmc407-2A – Xwmc170-2A
+QYrtb.pau-5A|QTL|YR|5A|Xbarc151;Xcfd12|10518|24||T. monococcum/T. boeoticum RILs; APR from PAU5088; 8.9 cM interval Xbarc151-5A – Xcfd12-5A
+Lr3 (Storlom)|DG|LR|6B|-|10469|||Durum Storlom likely Lr3a or Lr3b; co-segregated with STS derivative of Xmwg798-6B
+Lr14a|DG|LR|7B|Xwmc273;Xgwm344|0871|||LrLla (durum Lloreta INIA); Xwmc273-7B – 13 cM – Lr14a – 10 cM – Xgwm344-7B
+Lr13|DG|LR|2B|Xgwm630|10463|||Lr13 – 10.3-10.7 cM – Xgwm630-2BS
+Lr22a (map)|DG|LR|2D|Xgwm455;Xgwm296|10467|||Xgwm455-2D – 1.5 cM – Lr22a – 2.9 cM – Xgwm296-2D
+Lr61|DG|LR|6B|Xwmc487|10485|||6BS; durum Guayacan 2 and Guayacan INIA; about 22 cM distal to Xwmc487-6B
+QSbv.ksu-5D (map)|QTL|SBCMV|5D|Xcfd86;Xcfd10|10521|||TA 4152-4/Karl 92; interval Xcfd86-5D – Xcfd10-5D
+Pch1 (Xorw1)|DG|EYE|7D|-|10513|||Complete linkage with STS Xorw1 (from oligopeptidase B EST) in Coda/Brundage RILs
+Qkb.ksu-4BL.1|QTL|KB|4B|Xgwm538|10498|25||WL711/HD29 (R) RILs; associated with Xgwm538-4B; also WH542/W485 (R2 0.15, Xgwm6 – Xwmc349) {10499}
+Qkb.ksu-5BL.1|QTL|KB|5B|Xgdm116;Xwmc235|10499|19||WH542/HD29 (R) RILs; Xgdm116-5BL – Xwmc235-5BL
+Qkb.ksu-6BS.1|QTL|KB|6B|Xwmc105;Xgwm88|10499|13||WH542/HD29 (R) RILs; Xwmc105-6BS – Xgwm88-6BS

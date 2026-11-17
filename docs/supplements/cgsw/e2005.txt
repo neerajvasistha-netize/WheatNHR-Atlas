@@ -1,0 +1,52 @@
+Bdv3|DG|BYD|7D|-|10157|||Derived from Thinopyrum intermedium; on 7DS.7DL-7EL translocation (P961341); alien segment
+Pm3h|DG|PM|1A|Xgwm905|10199|||Abessi; tel – Pm3h – 3.7 cM – Xgwm905-1A
+Pm3i|DG|PM|1A|Xgwm905|10199|||N324; tel – Pm3i – 7.2 cM – Xgwm905-1A
+Pm3j|DG|PM|1A|Xgwm905|10199|||Gus 122; tel – Pm3j – 1.2 cM – Xgwm905-1A
+Pm4a|DG|PM|2A|Xgwm356|10176|||Yangmai 10, Yangmai 11; Xgwm356-2A – 4.8 cM – Pm4a; Xbcd1231-2A converted to an STS and a Pm4a-specific dominant PCR marker
+Pm17|DG|PM|1B|-|10167|||On 1RS (rye); Pm17 – 7.8 cM – Xmwg68-1R – 10.9 cM – Sec-1; alien segment
+Pm31|DG|PM|6A|-|0301|||mlG; 6AL; cent – Pm31 – 0.6 cM – Xpsp3029.1 – 2.5 cM – Xpsp3071-6A
+Pm33|DG|PM|2B|-|10205|||PmPS5B; 2BL; from T. carthlicum PS5 (line Am9//3*Laizhou 953)
+mlRD30|DG|PM|7A|Xgwm344;Xksuh9|10175|||Recessive; 7AL; RD30 and TA2682c; Xgwm344-7A – 1.8 cM – mlRD30 – 2.3 cM – Xksuh9-7A
+MlZec1|DG|PM|2B|-|10127|||Distal 2BL; from T. dicoccoides Mo49 (Zecoi 1 = Ralle*3/T. dicoccoides)
+QFhs.fal-6DL|QTL|FHB|6D|-|10172|22||Arina (R)/Forno (S); resistance from Arina
+QFhs.fal-5BL.1|QTL|FHB|5B|-|10172|14||Arina (R)/Forno (S); resistance from Forno
+QFhs.fal-4AL|QTL|FHB|4A|-|10172|10||Arina (R)/Forno (S); resistance from Arina; five further minor QTL on 2AL, 3AL, 3BL, 3DS and 5DL
+FHB QTL 3AL (Frontana x Remus)|QTL|FHB|3A|Xgwm270|10174|16||Frontana (R)/Remus (S); Xgwm270-3AL – Xdupw227-3A region; mainly type I resistance, three years
+FHB QTL 5A (Frontana x Remus)|QTL|FHB|5A|Xgwm129|10174|9||Frontana (R)/Remus (S); Xgwm129-5A – Xbarc-5A region; mainly type I resistance
+FHB QTL 3BS (Wangshuibai x Nanda2419)|QTL|FHB|3B|Xgwm533|10190|||Nanda2419 (S)/Wangshuibai (R); large-effect QTL, Xgwm533-3B.3 – Xgwm533-3B.1; resistance from Wangshuibai
+FHB QTL 6B (Wangshuibai x Nanda2419)|QTL|FHB|6B|Xwmc539|10190|||Nanda2419/Wangshuibai; large-effect QTL at Xwmc539-6B; resistance from Wangshuibai
+FHB QTL 2B (Wangshuibai x Nanda2419)|QTL|FHB|2B|Xgwm47|10190|||Nanda2419/Wangshuibai; large-effect QTL, Xs1021m-2B – Xgwm47-2B
+FHB QTL 3BS (Wangshuibai x Wheaton)|QTL|FHB|3B|Xbarc147|10200|37||Wangshuibai (R)/Wheaton (S); Xbarc147-3B (a second 3BS QTL at Xbarc344-3B, R2 7%)
+FHB QTL 3BS.2 (Wangshuibai x Wheaton)|QTL|FHB|3B|Xbarc344|10200|7||Wangshuibai (R)/Wheaton (S); Xbarc344-3B
+FHB QTL 7AL (Wangshuibai x Wheaton)|QTL|FHB|7A|Xgwm1083|10200|10||Wangshuibai (R)/Wheaton (S); Xwms1083-7A
+FHB QTL 1BL (Wangshuibai x Wheaton)|QTL|FHB|1B|Xgwm759|10200|12||Wangshuibai (R)/Wheaton (S); Xwms759-1B
+Stb4 (Tadinia)|DG|STB|7D|Xgwm111|10140|||7DS; Stb4 – 0.7 cM – Xgwm111-7D
+QStb.ipk-1DS|QTL|STB|1D|-|10151|||ITMI population; seedling resistance to two isolates
+QStb.ipk-2DS|QTL|STB|2D|-|10151|||ITMI population; seedling resistance to two isolates
+QStb.ipk-6DS|QTL|STB|6D|-|10151|||ITMI population; seedling resistance to two isolates
+QStb.ipk-3DL|QTL|STB|3D|-|10151|||ITMI population; adult-stage resistance to one isolate
+QStb.ipk-7BL|QTL|STB|7B|-|10151|||ITMI population; adult-stage resistance to the other isolate
+QSnl.ihar-6A|QTL|SNB|6A|-|10143|36||Alba (R)/Begra (S) DH; 6AL; 36% of variance in disease severity and 14% in incubation period
+Yr32 (Tres)|DG|YR|2A|Xwmc198|10016|||Correct location 2AL; Xwmc198-2A – 2 cM – Yr32; co-incident with one AFLP marker
+Yr35|DG|YR|6B|-|10203|||YrS8; 6BS; from T. dicoccoides 479 (98M71 = AUS 91388)
+Yr36|DG|YR|6B|-|10138|||Adult plant resistance; 6BS; between Xucw74-6B and Xucw77-6B, 3-7 cM proximal to Nor-B2; from T. dicoccoides FA-15, linked to the high grain protein locus
+Yr37|DG|YR|2D|-|10139|||From Aegilops kotschyi; 2DL; line S14; alien segment
+YR QTL 7DS (Otane x Tiritea)|QTL|YR|7D|Xgwm44|10150|||Otane (R)/Tiritea (S) DH; probably Yr18, 7 cM from Xgwm44-7D
+YR QTL 5DL (Otane x Tiritea)|QTL|YR|5D|-|10150|||Otane/Tiritea DH; resistance from Otane
+YR QTL 7BL (Otane x Tiritea)|QTL|YR|7B|-|10150|||Otane/Tiritea DH; resistance from Tiritea
+QYr.sgi-7D|QTL|YR|7D|-|10184|29||Kariega/Avocet S DH; probably Yr18
+QYr.sgi-2B.1|QTL|YR|2B|Xgwm148|10184|30||Kariega/Avocet S DH; nearest marker Xgwm148-2B
+Lr1|DG|LR|5D|-|10191|||Terminal 5DL; in Ae. tauschii gene order Xpsr567-5D – Lr1 – Xabc718-5D
+Lr16|DG|LR|2B|Xwmc764|10170|||Distal 2BS; Lr16 – Xwmc764-2B at 1, 9 and 3 cM in RL4452/AC Domain, BW278/AC Foremost and HY644/McKenzie
+Lr24|DG|LR|3D|-|10147|||Chromosome 3DL as in the Catalogue main entry; Linked with SCAR marker SCS73719 (earlier thought to tag Lr19)
+Lr50|DG|LR|2B|Xgwm382;Xgdm87|0221|||From T. timopheevii ssp. armeniacum; linked with Xgwm382-2B (6.7 cM) and Xgdm87-2B (9.4 cM)
+Lr53|DG|LR|6B|-|10203|||LrS8; 6BS; from T. dicoccoides 479
+Lr54|DG|LR|2D|-|10139|||From Aegilops kotschyi; 2DL; line S14; alien segment
+Lr55|DG|LR|1B|-|10180|||From Elymus trachycaulus; 1BL.1HtS translocation (KS04WGRC45); alien segment
+QLr.osu-2B|QTL|LR|2B|Xbarc18;Xbarc167|10211|9-18||CI 13227 (R)/Suwon (S) SSD; slow rusting; resistance from CI 13227
+QLr.osu-7BL|QTL|LR|7B|Xbarc182|10211|12-15||CI 13227/Suwon SSD; slow rusting; resistance from CI 13227
+tsn1 (Fcg markers)|SG|TS|5B|-|10207|||Completely linked to Xfcg1-5B, Xfcg10-5B, Xfcg16-5B and Xfcg17-5B
+tsc2|SG|TS|2B|-|10015|69||ITMI; tsc2 explained 69% of variation in response to race 5
+Race 5 QTL 4AL (ITMI)|QTL|TS|4A|-|10015|20||ITMI; QTL at Xksu916(Oxo)-4AS, from W-7984
+Sbm1|DG|SBCMV|5D|-|10132|||Chromosome 5DL from the Catalogue main entry (not given in this supplement); SbmCz1; Cadenza; identified in Avalon (S)/Cadenza DH
+Wss1|DG|WSSMV|4D|-|10154|||From Haynaldia villosa; 4DL.4VS translocation (NAU413); alien segment
