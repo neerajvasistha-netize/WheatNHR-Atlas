@@ -343,3 +343,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Winn et al. (2022): Qfhb.nc-1A, Qfhb.nc-4A and Fhb1 KASP haplotypes added (S203-001 to -003); Z0137 corrected (accuracy values had been read as Mb); V0353/V0354 removed.
 - Chaudhary et al. (2024) G3: three foot rot disease-score MTAs (S204-001 to -003), placed in silico.
 - Live page: seed_ad57.json; the seed-file loader now replaces records by id and drops listed ids.
+
+## 2026-11-17: wild / alien-origin list
+- The list matched records only by text (names, notes, alien chromosomes). Designated genes of known donor species (Catalogue of Gene Symbols for Wheat; 140 genes, e.g. Lr21, Sr35, Yr15, Lr19, Pm21, Sr2) now count by name, with the donor shown, even where the note does not name it.
