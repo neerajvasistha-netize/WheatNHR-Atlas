@@ -351,3 +351,9 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Earlier 56 records were one per SNP named "MTA M2266", with no trait or environment. Now 57 main-effect records, one per SNP and trait (AUDPC, incubation period, lesion number; Table 2), each with environments (E1-E4, BLUP), P, MAF; Table 4 MTAs flagged, the five AUDPC MTAs recommended for MAS noted, M8330 within QSb.bhu-2A.
 - Added M4854 (LN, 4A 200.8 Mb), missing before, and the eight epistatic pairs of Table 3 (16 SNP records; the two AUDPC pairs are the other recommended MTAs).
 - Table 2 reads down the left column then the right; environment assignment follows that order and matches the counts in the trait headings and Table 4.
+
+## ad59 (2026-11-18): Singh et al. (2023) DArT-seq key
+- Key file supplied by the user (SNP__TAG_GBS.xlsx: 17,937 M-codes with DArT CloneID and 69-bp tag); the 90 codes used are in docs/supplements/singh2023_dartseq_key.json.
+- Clone ID and tag added to all records. 69 of 73 tags lie exactly at the printed positions.
+- Corrected from the tag: M1654 (797.278 Mb, misprint), M119 (529.988 Mb), M238 (2B 682.939 Mb), M5103 (2D 73.592 Mb; Table 2 says 2A).
+- 17 MTAs on unassigned SNPs added (S205-018 to -034): six placed from the tag (M7254 6A, M8026 6D, M9397 4B, M4958 2A, M7868 7D, M992 1A), eleven unplaced (no single-locus match).
