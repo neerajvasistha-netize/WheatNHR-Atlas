@@ -335,3 +335,11 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Placement: in-silico marker positions; where markers place loosely or not at all, an existing A/B atlas position of the same designated gene (or Lr34 gene model TraesCS7D02G080300) is reused at grade C.
 - Six diseases added to the list: Crown rust, Cephalosporium stripe, Anthracnose, Soil-borne cereal mosaic virus, Wheat spindle streak mosaic virus, Root-knot nematode.
 - Live page: records shipped as seed_cgsw.json and merged into the seed at load.
+
+## ad57 (2026-11-17): journal PDFs for removed preprints, plus Chaudhary et al. (2024) G3
+- Peters Haugrud et al. (2023): Table 4 entered (S200-001 to -010: Tsn1, Snn1, Snn3-B1, Snn5, Snn7, two SnTox5 SNPs, 2AL SNB, 7DS tan spot, 5BS SnTox3 pair). R0633 Tsc1 relabelled tan spot.
+- Gardner et al. (2025): all 24 records were labelled Septoria tritici blotch; Table 2 has brown rust, powdery mildew and yellow rust only. Corrected in place and ten loci added (S201-001 to -010); 34 loci in total. Misprints noted (BR_1B117 interval, YR_3A746 peak, YR_6A610 interval).
+- Liu et al. (2021): QBp.caas-3BL added (S202-001, 638.96-640.07 Mb). V1442/V1443 removed (QTL of another study cited in the introduction).
+- Winn et al. (2022): Qfhb.nc-1A, Qfhb.nc-4A and Fhb1 KASP haplotypes added (S203-001 to -003); Z0137 corrected (accuracy values had been read as Mb); V0353/V0354 removed.
+- Chaudhary et al. (2024) G3: three foot rot disease-score MTAs (S204-001 to -003), placed in silico.
+- Live page: seed_ad57.json; the seed-file loader now replaces records by id and drops listed ids.
