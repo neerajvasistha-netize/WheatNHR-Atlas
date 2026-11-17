@@ -345,4 +345,4 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Live page: seed_ad57.json; the seed-file loader now replaces records by id and drops listed ids.
 
 ## 2026-11-17: wild / alien-origin list
-- The list matched records only by text (names, notes, alien chromosomes). Designated genes of known donor species (Catalogue of Gene Symbols for Wheat; 140 genes, e.g. Lr21, Sr35, Yr15, Lr19, Pm21, Sr2) now count by name, with the donor shown, even where the note does not name it.
+- The list matched records only by text (names, notes, alien chromosomes). Designated genes of known donor species (Catalogue of Gene Symbols for Wheat; 130 genes, e.g. Lr21, Sr35, Yr15, Lr19, Pm21, Sr2) now count by name, with the donor shown, even where the note does not name it.
