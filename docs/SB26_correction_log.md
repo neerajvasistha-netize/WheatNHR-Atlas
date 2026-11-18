@@ -382,3 +382,10 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Names corrected to the paper form Q.Sb.bisa-; all eight QTL now span their Table 2 SNPs with peak SNP, environments, P, MAF and allele effects; Table 3 genes in notes.
 - R093 (2B) and R094 (6D) had the abstract positions; Table 2 positions used. R0238-R0241 had the allele effect (Effect 10X) stored as PVE; moved to effect (the paper gives no PVE).
 - Live database documents for R091-R094 and R164 held older versions that override the page data; rewritten. Other records changed in ad57-ad61 have no database override.
+
+## ad62 (2026-11-18): open-access biotroph papers read automatically
+- Europe PMC: 1,647 of 2,555 listed papers indexed; 531 with open full text, 494 retrieved.
+- Tables read for locus name, chromosome, printed physical position (only with a stated RefSeq version), markers, PVE, LOD/P; markers placed in silico otherwise. Reviews and meta-analyses skipped.
+- 81 papers gave 1,092 records (A 485, B 70, C 352, D 185), all curation auto with a verify note: stripe rust 670, leaf rust 265, powdery mildew 73, stem rust 51, Karnal bunt 29, common bunt 3, dwarf bunt 1.
+- 90 Tong et al. (2024) compilation records replaced by the original-paper records (same locus and chromosome).
+- Remaining papers: docs/literature/WheatRLA_biotroph_remaining_papers.bib (2,474).
