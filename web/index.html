@@ -230,7 +230,6 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 @media (max-width:700px){header.top.hero .inst{display:none}header.top.hero .brand h1{font-size:28px!important}}
 #homeFilt{justify-content:space-between}#homeFilt>#addBtn{order:99}
 @media (min-width:1000px){#homeFilt{flex-wrap:nowrap;gap:12px}#homeFilt>label{flex:1 1 0;min-width:0}#homeFilt>label:first-of-type{flex-grow:2.2}#homeFilt>label>input,#homeFilt>label>select{width:100%!important;min-width:0}#homeFilt>.btn{flex:0 0 auto;white-space:nowrap}}
-#tqGene{background:#d32f2f!important;border-color:#d32f2f!important;color:#fff!important}#tqGene:hover{background:#b71c1c!important;border-color:#b71c1c!important}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -518,7 +517,7 @@ td.num{font-size:13px}
       <textarea id="tcIn" rows="6" class="mono" style="width:100%" placeholder="5B 123456789&#10;chr2A:45.6&#10;S3B_7734567"></textarea>
       <div class="row tform"><label>Direction<br><select id="tcDir"><option value="10to21">v1.0 → v2.1</option><option value="21to10">v2.1 → v1.0</option></select></label><button class="btn primary" id="tcGo" type="button">Convert</button></div><div id="tcOut"></div></div>
     <div class="tpane" id="tp-seqkit" style="display:none"><p class="small muted">Length, GC content, Tm (up to 60 nt), reverse complement, six-frame translation and gene structure prediction (exons, introns, CDS and protein).</p>
-      <textarea id="tqSeq" rows="4" class="mono" style="width:100%" placeholder="Paste a DNA sequence"></textarea><div class="row tform"><button class="btn primary" id="tqGo" type="button">Analyse</button><button class="btn" id="tqGene" type="button">Gene structure prediction</button></div><div id="tqOut"></div></div>
+      <textarea id="tqSeq" rows="4" class="mono" style="width:100%" placeholder="Paste a DNA sequence"></textarea><div class="row tform"><button class="btn primary" id="tqGo" type="button">Analyse</button><button class="btn primary" id="tqGene" type="button">Gene structure prediction</button></div><div id="tqOut"></div></div>
   </div>
 </section>
 
