@@ -17,8 +17,10 @@ Never edit the artifact without committing the same files here.
 1. Call `list_files` on the artifact, save the JSON, run `python3 -I scripts/sync/compare.py <file>`.
 2. For CHANGED/NEW files up to 4 MB: fetch them with `read_file` (`paths`, at most 4 MB per call),
    copy them into `web/`, commit "Sync from Claude artifact" and push.
-3. A CHANGED file over 4 MB (index.html is about 8 MB) cannot be fetched this way: do not overwrite
-   anything; report it so the owner can open the artifact in a signed-in browser for a one-time export.
+3. A CHANGED file over 4 MB (index.html is about 8 MB) cannot be fetched this way, and live database
+   edits are not files at all. Use the page's "Export for GitHub" button (bottom left, Claude only): it saves
+   index.html and seed_live.json (all live database records) to the owner's Downloads; stage them from
+   ~/Downloads with the device tools, copy into web/, commit and push.
 
 Keep large data out of index.html where possible: put records in separate JSON files that the page
 loads, so updates stay small and can be synced.
