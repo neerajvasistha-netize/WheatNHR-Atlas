@@ -58,7 +58,7 @@ for doi, rows in by.items():
         mks = [m for m in re.split(r'[\s,;/]+|(?<=\w)[\-–](?=[Xxw])', re.sub(r'\([^)]*\)', ' ', x['marker'] or '')) if m and MK.match(m)]
         if not mks and MK.match(name): mks = [name]
         isgene = bool(GENE.match(name.split()[0])) and not MK.match(name)
-        disp = name if isgene else f'{x["dis"]} locus {ch} ({name})'
+        disp = name   # the locus name as reported (gene, QTL, MTA marker, QTN)
         r = dict(cls='QTL' if re.match(r'^Q', name) else ('DG' if re.match(r'^(Yr|Lr|Sr|Pm|Bt|Ut)\d', name) else 'MTA'), curation='auto', name=disp, disease=x['dis'], chr=ch,
                  source=key, marker=', '.join(mks) if mks else (x['marker'] or ''), pve=(x['pve'] or '')[:20], stat=('LOD ' + x['lod'][:12]) if x['lod'] else (((x.get('ph') or 'P') + ' ' + x['p'][:14]) if x['p'] else ''),
                  evidence=x['cap'], start=None, end=None, peak=None)

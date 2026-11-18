@@ -389,3 +389,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - 81 papers gave 1,092 records (A 485, B 70, C 352, D 185), all curation auto with a verify note: stripe rust 670, leaf rust 265, powdery mildew 73, stem rust 51, Karnal bunt 29, common bunt 3, dwarf bunt 1.
 - 90 Tong et al. (2024) compilation records replaced by the original-paper records (same locus and chromosome).
 - Remaining papers: docs/literature/WheatRLA_biotroph_remaining_papers.bib (2,474).
+
+## 2026-11-18: ad62 names
+- 581 auto-extracted records had been named "<disease> locus <chr> (<name>)"; the reported locus name (QTL, MTA marker, QTN) is now the name, as for all other records.
