@@ -215,19 +215,19 @@ tbody tr:hover{background:var(--accent-soft)}
 .flash{animation:flash 1.2s}@keyframes flash{0%{box-shadow:0 0 0 3px var(--gold)}100%{box-shadow:var(--shadow)}}
 .seqbox{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;max-height:320px;overflow:auto}
 
-/* compact, light, fixed header */
-header.top.hero{position:sticky!important;top:0;z-index:25;background:var(--surface)!important;color:var(--ink)!important;padding:0!important;margin:0!important;border-bottom:1px solid var(--line);box-shadow:0 1px 8px rgba(0,0,0,.06);min-height:0!important;background-image:none!important}
+/* compact, vibrant, fixed header */
+header.top.hero{position:sticky!important;top:0;z-index:25;background:var(--surface)!important;color:var(--ink)!important;padding:0!important;margin:0!important;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.10);min-height:0!important;background-image:none!important}
 header.top.hero::before,header.top.hero::after{display:none!important}
-header.top.hero .hero-in{display:flex!important;align-items:center;gap:16px;padding:8px 20px!important;min-height:0!important;max-width:none;background:var(--surface)!important;background-image:none!important;color:var(--ink)!important;overflow:visible!important}
+header.top.hero .hero-in{display:flex!important;align-items:center;gap:18px;padding:18px 24px!important;min-height:0!important;max-width:none;background:linear-gradient(100deg,#0b5d3b 0%,#109a52 55%,#17b3a3 100%)!important;color:#fff!important;overflow:visible!important}
 header.top.hero .hero-in::before,header.top.hero .hero-in::after{display:none!important}
-header.top.hero .brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0;padding:0}
-header.top.hero .brand h1{font:700 22px/1 var(--display)!important;margin:0!important;color:var(--accent)!important;letter-spacing:-.01em}
-header.top.hero .brand h1 span{color:inherit!important;opacity:.75}
-header.top.hero .eyebrow{font-size:12px!important;color:var(--muted)!important;margin:0!important;letter-spacing:0;text-transform:none;font-weight:500}
-header.top.hero .inst{margin-left:auto!important;text-align:right;font-size:11.5px;line-height:1.35;color:var(--muted);padding:0!important}
-header.top.hero .inst b{color:var(--ink);font-weight:600}
+header.top.hero .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0;padding:0}
+header.top.hero .brand h1{font:800 34px/1 var(--display)!important;margin:0!important;color:#fff!important;letter-spacing:-.01em;text-shadow:0 1px 2px rgba(0,0,0,.18)}
+header.top.hero .brand h1 span{color:#ffd23f!important;opacity:1}
+header.top.hero .eyebrow{font-size:14px!important;color:#eafff3!important;margin:0!important;letter-spacing:0;text-transform:none;font-weight:600}
+header.top.hero .inst{margin-left:auto!important;text-align:right;font-size:12.5px;line-height:1.4;color:#e6fff5;padding:0!important}
+header.top.hero .inst b{color:#fff;font-weight:700}
 header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margin:0!important}
-@media (max-width:700px){header.top.hero .inst{display:none}}
+@media (max-width:700px){header.top.hero .inst{display:none}header.top.hero .brand h1{font-size:28px!important}}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
