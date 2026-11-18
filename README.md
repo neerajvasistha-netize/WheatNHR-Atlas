@@ -1,12 +1,16 @@
 # WheatNHR-Atlas
 
-A physical genomic atlas and private web database of wheat disease resistance loci.
+A physical genomic atlas and web database of wheat disease resistance loci (WheatRLA, Wheat Resistance Loci Atlas).
+
+**Website:** https://neerajvasistha-netize.github.io/WheatNHR-Atlas/
 
 Maintained by **Neeraj Kumar Vasistha**, Molecular Plant Biology Lab, Department of Genetics and
 Plant Breeding, Rajiv Gandhi University, Rono Hills, Itanagar, Arunachal Pradesh 791112, India.
 ORCID [0000-0001-5527-340X](https://orcid.org/0000-0001-5527-340X).
 
-> **Status: under curation, not released.** The contents of this repository have not been
+> **Status: public preview, under curation.** The website shows the 6 Nov 2026 build; newer curated
+> records (biotrophic diseases and Catalogue of Gene Symbols loci) are in `data/latest_seeds_2026-11-18/`
+> and will be added to the website in the next build. The contents of this repository have not been
 > hand-verified end to end. See *Curation status* below before using any record.
 
 ## What this is
