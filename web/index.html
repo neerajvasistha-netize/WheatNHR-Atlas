@@ -600,14 +600,14 @@ td.num{font-size:13px}
     </div>
     <div>
       <h4>Data use</h4>
-      <p class="small">Free for academic and non-commercial research with citation. Positions are compiled from published studies and converted between assemblies; please verify against the original publication before use in breeding or cloning decisions.</p>
+      <p class="small">WheatRLA is free to use for academic and non-commercial research, provided both the atlas and the original studies are cited. Positions are compiled from published studies and converted between genome assemblies, so please check them against the original publication before using them in breeding or gene-cloning decisions. For commercial use of any locus, please contact the authors of the original study.</p>
       <p class="small muted">Release v1.3 · November 2026 · Reference assembly IWGSC RefSeq v2.1</p>
     </div>
   </div>
   <p class="foot-base small">© 2026 Molecular Plant Biology Lab, Rajiv Gandhi University, Itanagar</p>
 </footer>
 <script>
-(function(){try{var l=document.querySelector('.rgu-logo');var f=document.getElementById('footLogo');if(l&&f)f.src=l.src;}catch(e){}
+(function(){try{var l=document.querySelector('.rgu-logo');var f=document.getElementById('footLogo');if(l&&f)f.src=l.src;else if(f)f.style.display='none';}catch(e){}
 var b=document.getElementById('citeCopy');if(b)b.addEventListener('click',function(){var t=document.getElementById('citeTxt').textContent,m=document.getElementById('citeMsg');try{navigator.clipboard.writeText(t).then(function(){m.textContent='Copied';},function(){m.textContent='Select the text to copy';});}catch(e){m.textContent='Select the text to copy';}});})();
 </script>
 </main>
