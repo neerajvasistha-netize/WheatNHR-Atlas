@@ -200,7 +200,11 @@ tbody tr:hover{background:var(--accent-soft)}
 .ttabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}.ttab{border:1px solid var(--line,#d9ded9);background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}.ttab.on{background:var(--brand,#1f5c3f);color:#fff;border-color:var(--brand,#1f5c3f)}.tform{gap:10px;flex-wrap:wrap;align-items:flex-end;margin:6px 0 10px}.tscroll{max-height:520px;overflow:auto;border:1px solid var(--line,#e3e6e3);border-radius:8px}.tbl{border-collapse:collapse;width:100%;font-size:12.5px}.tbl th,.tbl td{border-bottom:1px solid var(--line,#eee);padding:5px 7px;text-align:left;vertical-align:top}.tbl th{position:sticky;top:0;background:#f4f6f4}.seqbox{background:rgba(0,0,0,.035);padding:8px;border-radius:6px;word-break:break-all;font-size:12px;margin:4px 0 8px}
 .hero-anim img.dnaimg{flex:1;min-width:0;max-width:330px;height:auto;max-height:150px;object-fit:contain;align-self:center;filter:drop-shadow(0 6px 12px rgba(0,0,0,.3))}
 @media (max-width:640px){.hero-in{padding:18px}.rgu-logo{width:52px;height:52px}.navbar{padding:8px 12px}}
-.qs li{padding:0}.qsb{all:unset;box-sizing:border-box;display:flex;gap:10px;align-items:center;width:100%;padding:10px 14px;cursor:pointer;border-radius:12px}.qsb:hover{background:var(--accent-soft)}.qsb:focus-visible{outline:2px solid var(--accent)}
+.qs li{padding:0}.qsb{all:unset;box-sizing:border-box;display:flex;gap:10px;align-items:center;width:100%;padding:10px 14px;cursor:pointer;border-radius:12px}.qsb:hover{background:var(--accent-soft)}.gbar{margin:0 0 12px}.gbar-in{display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+.gbar-t{font:700 13px var(--display);margin-right:6px;color:var(--accent)}
+.gbtn{border:1px solid var(--line);background:transparent;color:inherit;border-radius:999px;padding:5px 12px;font:600 12.5px var(--body,system-ui);cursor:pointer}
+.gbtn:hover{background:var(--accent-soft)}.gbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.qsb:focus-visible{outline:2px solid var(--accent)}
 .gvrow{display:flex;gap:14px;align-items:stretch;margin-bottom:14px}
 .gvrow .gvmain{flex:1 1 auto;min-width:0;margin-bottom:0}
 .qs.qsv{flex:0 0 230px;display:flex;flex-direction:column;gap:10px;margin:0}
@@ -308,10 +312,8 @@ td.num{font-size:13px}
   <div class="navbar">
   <nav class="tabs" aria-label="Sections">
     <a href="#browse" data-view="browse">Home</a>
-    <a href="#region" data-view="region">Region search</a>
-    <a href="#finemap" data-view="finemap">Candidate gene mapping</a>
-    <a href="#sequence" data-view="sequence">Region sequence viewer</a>
-    <a href="#tools" data-view="tools">Analysis tools</a>
+    <a href="#genetic" data-view="genetic">Genetic tools</a>
+    <a href="#genomic" data-view="genomic">Genomic tools</a>
     <a href="#papers" data-view="papers">Papers to curate</a>
     <a href="#downloads" data-view="downloads">Downloads</a>
     <a href="#about" data-view="about">About &amp; changes</a>
@@ -390,6 +392,7 @@ td.num{font-size:13px}
 </section>
 
 <section class="view" id="v-region">
+  <div class="gbar" data-gbar></div>
   <div class="panel">
     <h2>Find everything in a region <span class="muted small">· positions on <span id="rFrame">RefSeq v2.1</span> (change with “Show positions on” on Home)</span></h2>
     <div class="filters" style="margin-top:0">
@@ -411,6 +414,7 @@ td.num{font-size:13px}
 </section>
 
 <section class="view" id="v-finemap">
+  <div class="gbar" data-gbar></div>
   <div class="panel">
     <h2>Candidate gene mapping <span class="muted small">· on RefSeq v2.1, computed live from the current records</span></h2>
     <div class="filters" style="margin-top:0">
@@ -425,6 +429,7 @@ td.num{font-size:13px}
   </div>
 </section>
 <section class="view" id="v-sequence">
+  <div class="gbar" data-gbar></div>
   <div class="panel">
     <h2>Region sequence viewer <span class="muted small">· Chinese Spring reference</span></h2>
     <div class="filters" style="margin-top:0">
@@ -438,9 +443,10 @@ td.num{font-size:13px}
   </div>
 </section>
 <section class="view" id="v-tools">
+  <div class="gbar" data-gbar></div>
   <div class="panel">
-    <h2>Analysis tools <span class="muted small">· computed inside the atlas on IWGSC RefSeq v2.1</span></h2>
-    <div class="ttabs">
+    <h2><span id="toolsTitle">Genetic tools</span> <span class="muted small">· computed inside the atlas on IWGSC RefSeq v2.1</span></h2>
+    <div class="ttabs" style="display:none">
       <button class="ttab on" type="button" data-t="pmq">Meta-QTL</button>
       <button class="ttab" type="button" data-t="pmg">Meta-GWAS</button>
       <button class="ttab" type="button" data-t="genes">Genes</button>
@@ -863,10 +869,10 @@ function csv(){const cols=["id","name","cls","disease","chr","start","end","peak
   return [cols.concat(["citation","url"],ac).map(q).join(",")].concat(sorted(filtered()).map(r=>cols.map(c=>q(r[c])).concat([q(st.sources[r.source]?.citation),q(st.sources[r.source]?.url)],
     A.flatMap(a=>{const c=co(r,a)||{};return [q(c.chr),q(c.start),q(c.end),q(c.peak),q(a===BASE?(/^RefSeq v2/.test(r.ref||"")?"converted":"as reported"):(c.flag||""))];})).join(","))).join("\n");}
 /* ---------- events ---------- */
-function route(){const v=(location.hash||"#browse").slice(1);const ok=["browse","region","finemap","sequence","tools","papers","downloads","about"].includes(v)?v:"browse";
+function route(){const v0=(location.hash||"#browse").slice(1);let v=v0;if(v0==="genetic"||v0==="genomic"){TG.grp=v0;v="tools";}const ok=["browse","region","finemap","sequence","tools","papers","downloads","about"].includes(v)?v:"browse";
   document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on",s.id==="v-"+ok));
-  document.querySelectorAll("nav.tabs a").forEach(a=>{if(a.dataset.view===ok)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
-  if(ok==="region")renderRegion();if(ok==="tools")toolsHook();if(ok==="finemap")fineMap();if(ok==="papers")renderPapers();if(ok==="about")renderChanges();if(ok==="downloads")renderDownloads();}
+  const navKey=ok==="region"||ok==="finemap"?"genetic":ok==="sequence"?"genomic":ok==="tools"?(TG.grp||"genetic"):ok;document.querySelectorAll("nav.tabs a").forEach(a=>{if(a.dataset.view===navKey||a.dataset.view===ok)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  if(ok==="region")renderRegion();if(ok==="tools"){toolsHook();tgEnsurePane();}tgRender(ok);if(ok==="finemap")fineMap();if(ok==="papers")renderPapers();if(ok==="about")renderChanges();if(ok==="downloads")renderDownloads();}
 /* ---- Downloads ---- */
 const toTSV=rows=>rows.map(r=>r.map(v=>String(v??"").replace(/[\t\r\n]+/g," ")).join("\t")).join("\n");
 function dlAll(){return Object.values(st.reports).filter(r=>r&&!r.deleted);}
@@ -973,7 +979,20 @@ function markers(){if(MK)return MK;MK=new Map();try{const D=JSON.parse(document.
 function tSel(id){const s=$("#"+id);if(s&&!s.options.length)CHRS.forEach(c=>s.insertAdjacentHTML("beforeend",`<option${c==="5B"?" selected":""}>${c}</option>`));}
 /* one button can show several panes; nothing is removed, related tools sit together */
 const TGROUP={genes:["genes","gsearch","homolog"],enrich:["enrich","gokegg"],sgene:["sgene","wild"]};
-function tTab(k){const g=Object.keys(TGROUP).find(x=>TGROUP[x].includes(k))||k;const show=TGROUP[g]||[g];document.querySelectorAll(".ttab").forEach(b=>b.classList.toggle("on",b.dataset.t===g));document.querySelectorAll(".tpane").forEach(p=>p.style.display=show.includes(p.id.slice(3))?"":"none");}
+/* ---- Tool groups: Genetic tools and Genomic tools ---- */
+const TG={grp:"genetic",pane:null,
+  G:{genetic:{title:"Genetic tools",items:[["Meta-QTL","pane","pmq"],["Meta-GWAS","pane","pmg"],["Region search","view","region"],["Candidate gene mapping","view","finemap"],["Locus lists","pane","sgene"],["Marker lookup","pane","markers"],["Annotate your GWAS/QTL hits","pane","anno"]]},
+     genomic:{title:"Genomic tools",items:[["Sequence viewer","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard (PCR) primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"]]}}};
+function tgGroupOf(pane){for(const g in TG.G)if(TG.G[g].items.some(it=>it[1]==="pane"&&it[2]===pane))return g;return "genomic";}
+function tgEnsurePane(){const items=TG.G[TG.grp].items.filter(it=>it[1]==="pane").map(it=>it[2]);if(!TG.pane||!items.includes(TG.pane))tTab(items[0]);else tTab(TG.pane);}
+function tgRender(view){const grp=view==="region"||view==="finemap"?"genetic":view==="sequence"?"genomic":view==="tools"?TG.grp:null;if(!grp)return;
+  const tt=document.getElementById("toolsTitle");if(tt)tt.textContent=TG.G[grp].title;
+  document.querySelectorAll("[data-gbar]").forEach(bar=>{if(!bar.closest(".view.on"))return;
+    bar.innerHTML=`<div class="gbar-in"><span class="gbar-t">${TG.G[grp].title}</span>${TG.G[grp].items.map(([l,k,id])=>{const on=k==="view"?view===id:(view==="tools"&&TG.pane===id);return `<button type="button" class="gbtn${on?" on":""}" data-gk="${k}" data-gid="${id}" data-gg="${grp}">${l}</button>`;}).join("")}</div>`;
+    bar.querySelectorAll(".gbtn").forEach(b=>b.onclick=()=>{const k=b.dataset.gk,id=b.dataset.gid,g=b.dataset.gg;
+      if(k==="view"){location.hash="#"+id;return;}
+      TG.grp=g;TG.pane=id;if(location.hash!=="#"+g)location.hash="#"+g;else{route();}});});}
+function tTab(k){const g=Object.keys(TGROUP).find(x=>TGROUP[x].includes(k))||k;TG.pane=g;const gg=tgGroupOf(g);if(gg)TG.grp=gg;setTimeout(()=>tgRender("tools"),0);const show=TGROUP[g]||[g];document.querySelectorAll(".ttab").forEach(b=>b.classList.toggle("on",b.dataset.t===g));document.querySelectorAll(".tpane").forEach(p=>p.style.display=show.includes(p.id.slice(3))?"":"none");}
 function runGenes(){const G=genesAll(),c=$("#tgChr").value,f=num($("#tgFrom").value),t=num($("#tgTo").value),cls=$("#tgCls").value,kw=($("#tgKw").value||"").trim().toLowerCase(),o=$("#tgOut");
   if(f==null||t==null||t<=f){o.innerHTML=`<p class="msg err">Enter a start and end in Mb (RefSeq v2.1).</p>`;return;}
   const CL=G.cl||[];const all=(G.g[c]||[]).filter(g=>g[0]>=f&&g[0]<=t);
