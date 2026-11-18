@@ -1120,7 +1120,9 @@ function gvInit(){
   gvLinkify(document.body);
   let pend=false;new MutationObserver(()=>{if(pend)return;pend=true;requestAnimationFrame(()=>{pend=false;gvLinkify(document.body);});}).observe(document.body,{childList:true,subtree:true});
   document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a.glink");if(!a)return;e.preventDefault();e.stopPropagation();gvOpen(a.dataset.gene);},true);
+  try{const q=new URLSearchParams(location.search).get("gene");if(q&&/^TraesCS/.test(q))setTimeout(()=>gvOpen(q),300);}catch(e){}
 }
+const GV_SITE="https://neerajvasistha-netize.github.io/WheatNHR-Atlas/";
 async function gvModel(id){
   if(GV.cache[id])return GV.cache[id];
   const r=await fetch("https://data.gramene.org/v67/genes?idList="+encodeURIComponent(id));if(!r.ok)throw new Error("gene service HTTP "+r.status);
@@ -1191,7 +1193,8 @@ async function gvOpen(id){
       setTimeout(()=>{if(typeof tTab==="function")tTab("seqkit");$("#tqSeq").value=`>${id} genomic${f?` ±${f} bp`:""}\n`+g.sq;runGenePred();$("#tqSeq").scrollIntoView({behavior:"smooth",block:"start"});},60);};
     $("#gvClose").onclick=()=>$("#modal").classList.remove("on");
     await show();
-  }catch(err){$("#gvBox").innerHTML=`<h2 style="font:700 18px var(--display);margin:0 0 6px">${esc(id)}</h2><p class="msg err">Could not load this gene: ${esc(String(err.message||err))}. The gene and sequence services need an internet connection.</p><div class="row"><button class="btn" type="button" onclick="document.getElementById('modal').classList.remove('on')">Close</button></div>`;}
+  }catch(err){const inClaude=!!(window.claude&&window.claude.use);
+    $("#gvBox").innerHTML=`<h2 style="font:700 18px var(--display);margin:0 0 6px">${esc(id)}</h2>${inClaude?`<p>Gene sequences come from the IWGSC gene model and chromosome records online, which this preview inside Claude cannot reach.</p><p><a class="btn primary" href="${GV_SITE}?gene=${encodeURIComponent(id)}" target="_blank" rel="noopener">Open ${esc(id)} on the WheatRLA website</a></p>`:`<p class="msg err">Could not load this gene: ${esc(String(err.message||err))}. The gene and sequence services need an internet connection.</p>`}<div class="row"><button class="btn" type="button" onclick="document.getElementById('modal').classList.remove('on')">Close</button></div>`;}
 }
 function runSeqKit(){const s=($("#tqSeq").value||"").replace(/^>.*$/mg,"").toUpperCase().replace(/[^A-Z]/g,""),o=$("#tqOut");if(!s){o.innerHTML="";return;}
   const CODE="FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",B="TCAG";const tr=x=>{let p="";for(let i=0;i+2<x.length;i+=3){const a=B.indexOf(x[i]),b=B.indexOf(x[i+1]),c=B.indexOf(x[i+2]);p+=(a<0||b<0||c<0)?"X":CODE[a*16+b*4+c];}return p;};
