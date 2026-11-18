@@ -985,7 +985,7 @@ const TGROUP={genes:["genes","gsearch","homolog"],enrich:["enrich","gokegg"],sge
 /* ---- Tool groups: Genetic tools and Genomic tools ---- */
 const TG={grp:"genetic",pane:null,
   G:{genetic:{title:"Genetic tools",items:[["Meta-QTL","pane","pmq"],["Meta-GWAS","pane","pmg"],["Region search","view","region"],["Candidate gene mapping","view","finemap"],["Locus lists","pane","sgene"],["Marker lookup","pane","markers"],["Annotate your GWAS/QTL hits","pane","anno"]]},
-     genomic:{title:"Genomic tools",items:[["Sequence viewer","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard (PCR) primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"]]}}};
+     genomic:{title:"Genomic tools",items:[["Sequence viewer","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"]]}}};
 function tgGroupOf(pane){for(const g in TG.G)if(TG.G[g].items.some(it=>it[1]==="pane"&&it[2]===pane))return g;return "genomic";}
 function tgEnsurePane(){const items=TG.G[TG.grp].items.filter(it=>it[1]==="pane").map(it=>it[2]);if(!TG.pane||!items.includes(TG.pane))tTab(items[0]);else tTab(TG.pane);}
 function tgRender(view){const grp=view==="region"||view==="finemap"?"genetic":view==="sequence"?"genomic":view==="tools"?TG.grp:null;if(!grp)return;
