@@ -1097,6 +1097,102 @@ function runGenePred(){const raw=($("#tqSeq").value||""),o=$("#tqOut");
       <h4>Coding sequence (CDS)</h4><div class="seqbox mono">${esc(g.cds)}</div>
       <h4>GFF3</h4><div class="seqbox mono" style="white-space:pre">${esc(gff)}</div>
       <p class="small muted">Ab initio prediction inside the atlas: plant splice-site weight matrices (GT…AG), start and stop codons, an open reading frame kept across exons, and the GC-rich exon / AT-rich intron composition typical of wheat genes. Coordinates are positions in the pasted sequence. It predicts one best gene model per sequence and can miss weak splice sites or alternative transcripts; check the model against the annotated IWGSC gene models and RNA-seq evidence before using it.</p>`;},20);}
+/* ---- Gene sequence viewer: click any gene ID (TraesCS…02G…) ----
+   Gene model (IWGSC RefSeq v1.1 annotation on RefSeq v1.0) from the Gramene gene service,
+   genomic sequence from the INSDC chromosome records (NCBI), assembled here into mRNA, CDS and protein. */
+const GV={cache:{},flank:0};
+const GV_RX=/TraesCS[1-7U][ABDU]?02G\d{6}(?:LC)?/g;
+function gvLinkify(root){
+  const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{
+    const p=n.parentElement;if(!p||!n.nodeValue||n.nodeValue.indexOf("TraesCS")<0)return NodeFilter.FILTER_REJECT;
+    if(p.closest("a,button,textarea,input,select,script,style,.seqbox,#gvBox"))return NodeFilter.FILTER_REJECT;
+    GV_RX.lastIndex=0;return GV_RX.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+  const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
+  nodes.forEach(n=>{const t=n.nodeValue,frag=document.createDocumentFragment();let last=0;GV_RX.lastIndex=0;let m;
+    while((m=GV_RX.exec(t))){if(m.index>last)frag.appendChild(document.createTextNode(t.slice(last,m.index)));
+      const a=document.createElement("a");a.href="#";a.className="glink";a.dataset.gene=m[0];a.textContent=m[0];a.title="Show sequence of "+m[0];frag.appendChild(a);last=m.index+m[0].length;}
+    if(last<t.length)frag.appendChild(document.createTextNode(t.slice(last)));n.parentNode.replaceChild(frag,n);});
+}
+function gvInit(){
+  const css=document.createElement("style");css.textContent=`a.glink{color:inherit;text-decoration:underline dotted;text-underline-offset:2px;cursor:pointer}a.glink:hover{color:var(--accent,#2f6f4f)}
+  #gvBox .gvtabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 6px}#gvBox .gvtabs button.on{background:var(--accent,#2f6f4f);color:#fff;border-color:transparent}
+  #gvBox .seqbox{max-height:260px;overflow:auto;word-break:break-all}`;document.head.appendChild(css);
+  gvLinkify(document.body);
+  let pend=false;new MutationObserver(()=>{if(pend)return;pend=true;requestAnimationFrame(()=>{pend=false;gvLinkify(document.body);});}).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a.glink");if(!a)return;e.preventDefault();e.stopPropagation();gvOpen(a.dataset.gene);},true);
+}
+async function gvModel(id){
+  if(GV.cache[id])return GV.cache[id];
+  const r=await fetch("https://data.gramene.org/v67/genes?idList="+encodeURIComponent(id));if(!r.ok)throw new Error("gene service HTTP "+r.status);
+  const j=(await r.json())[0];if(!j||!j.location)throw new Error("gene model not found for "+id);
+  const gs=j.gene_structure||{},ex={};(gs.exons||[]).forEach(x=>ex[x.id]=x);
+  const trs=(gs.transcripts||[]).map(t=>({id:(t.translation&&t.translation.id)||t.id,exons:(t.exons||[]).map(k=>ex[k]).filter(Boolean),cds:t.cds||null,
+    domains:((t.translation&&t.translation.features&&t.translation.features.family&&t.translation.features.family.entries)||[]).map(d=>({name:d.name,desc:d.description,db:d.db,start:d.start,end:d.end}))}));
+  const canon=gs.canonical_transcript;let tr=trs.find(t=>t.id===canon)||trs[0];
+  const m={id,chr:j.location.region,start:j.location.start,end:j.location.end,strand:j.location.strand,biotype:j.biotype,desc:j.description,tr,trs};
+  GV.cache[id]=m;return m;
+}
+async function gvGenomic(m,flank){
+  const key=m.id+"|"+flank;if(GV.cache[key])return GV.cache[key];
+  const acc=NCBIACC[m.chr];if(!acc)throw new Error("no chromosome record for "+m.chr);
+  const s=Math.max(1,m.start-flank),e=m.end+flank;
+  const r=await fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=${acc}&rettype=fasta&strand=${m.strand<0?2:1}&seq_start=${s}&seq_stop=${e}`);
+  if(!r.ok)throw new Error("sequence service HTTP "+r.status);
+  const sq=(await r.text()).split("\n").filter(l=>l&&l[0]!==">").join("").trim().toUpperCase();if(!sq)throw new Error("empty sequence");
+  GV.cache[key]={sq,s,e};return GV.cache[key];
+}
+function gvTranslate(x){const CODE="FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",B="TCAG";let p="";
+  for(let i=0;i+2<x.length;i+=3){const a=B.indexOf(x[i]),b=B.indexOf(x[i+1]),c=B.indexOf(x[i+2]);p+=(a<0||b<0||c<0)?"X":CODE[a*16+b*4+c];}return p;}
+function gvWrap(s,w=60){return s.replace(new RegExp(`(.{${w}})`,"g"),"$1\n").trim();}
+async function gvOpen(id){
+  const box=$("#mBox");$("#modal").classList.add("on");
+  box.innerHTML=`<div id="gvBox"><h2 style="font:700 18px var(--display);margin:0 0 6px">${esc(id)}</h2><p class="small muted">Loading the gene model and sequence…</p></div>`;
+  try{
+    const m=await gvModel(id);const g0=await gvGenomic(m,0);
+    const gen=g0.sq,tr=m.tr;let mrna="",cds="",prot="",warn="";
+    if(tr&&tr.exons.length){mrna=tr.exons.map(x=>gen.slice(x.start-1,x.end)).join("");
+      if(tr.cds){cds=mrna.slice(tr.cds.start-1,tr.cds.end);prot=gvTranslate(cds).replace(/\*$/,"");
+        if(prot[0]!=="M"||prot.indexOf("*")>=0)warn="The CDS translated here does not start with M or contains a stop codon; the annotation and the sequence record may differ at this locus.";}}
+    GV.cur={m,mrna,cds,prot};
+    const L=gen.length,W=700,X=v=>10+(v-1)/(Math.max(L,2)-1)*(W-20);
+    const cdsG=[];if(tr&&tr.cds){let acc=0;tr.exons.forEach(x=>{const len=x.end-x.start+1,a=Math.max(tr.cds.start,acc+1),b=Math.min(tr.cds.end,acc+len);if(a<=b)cdsG.push([x.start+(a-acc-1),x.start+(b-acc-1)]);acc+=len;});}
+    const svg=tr?`<svg viewBox="0 0 ${W} 50" style="width:100%;max-width:${W}px;height:auto" role="img" aria-label="Exon-intron structure">
+      <line x1="10" y1="25" x2="${W-10}" y2="25" stroke="#999"/>
+      ${tr.exons.map(x=>`<rect x="${X(x.start)}" y="19" width="${Math.max(2,X(x.end)-X(x.start))}" height="12" fill="#9cc3ad"/>`).join("")}
+      ${cdsG.map(([a,b])=>`<rect x="${X(a)}" y="15" width="${Math.max(2,X(b)-X(a))}" height="20" fill="#2f6f4f"/>`).join("")}
+      <text x="10" y="47" font-size="10" fill="#777">5′</text><text x="${W-10}" y="47" font-size="10" fill="#777" text-anchor="end">3′ · ${L.toLocaleString()} bp</text></svg>
+      <p class="small muted">Dark: coding exons (CDS); light: UTRs; lines: introns. Drawn 5′→3′ in the direction of the gene.</p>`:"";
+    const ginfo=(typeof genesAll==="function")?(()=>{const G=genesAll();for(const c of Object.keys(G.g||{}))for(const r of G.g[c])if(gidOf(c,r[1])===id)return {c,r,d:G.d[r[3]]||"",v21:gid21(c,r)};return null;})():null;
+    $("#gvBox").innerHTML=`<h2 style="font:700 18px var(--display);margin:0 0 4px">${esc(id)}</h2>
+      <p class="small">${ginfo&&ginfo.v21?`v2.1 ID ${esc(ginfo.v21)} · `:""}chr${esc(m.chr)}:${m.start.toLocaleString()}–${m.end.toLocaleString()} (${m.strand<0?"−":"+"} strand, RefSeq v1.0)${ginfo?` · ${ginfo.r[0].toFixed(3)} Mb on RefSeq v2.1`:""}<br>${esc((ginfo&&ginfo.d)||m.desc||"")}</p>
+      <p class="small">${tr?`${tr.exons.length} exon${tr.exons.length>1?"s":""} · mRNA ${mrna.length.toLocaleString()} bp · CDS ${cds.length.toLocaleString()} bp · protein ${prot.length.toLocaleString()} aa · transcript ${esc(tr.id)}${m.trs.length>1?` (1 of ${m.trs.length})`:""}`:"No transcript structure is available for this gene."}</p>
+      ${svg}
+      <div class="gvtabs">${[["gen","Genomic"],["mrna","mRNA (cDNA)"],["cds","CDS"],["prot","Protein"]].map(([k,l],i)=>`<button class="btn${i===0?" on":""}" type="button" data-gv="${k}">${l}</button>`).join("")}
+        <label class="small" style="margin-left:auto">Flanks<select id="gvFlank"><option value="0">none</option><option value="500">± 500 bp</option><option value="1000">± 1 kb</option><option value="2000">± 2 kb</option><option value="5000">± 5 kb</option></select></label></div>
+      <div id="gvSeqInfo" class="small muted"></div><div class="seqbox mono" id="gvSeq"></div>
+      <div class="row" style="margin-top:8px;gap:8px;flex-wrap:wrap"><button class="btn" id="gvCopy" type="button">Copy</button><button class="btn" id="gvFa" type="button">Download FASTA</button><button class="btn" id="gvPred" type="button">Predict gene structure in toolkit</button><button class="btn" id="gvClose" type="button" style="margin-left:auto">Close</button></div>
+      ${warn?`<p class="msg err small">${esc(warn)}</p>`:""}
+      ${tr&&tr.domains.length?`<h4 style="margin:12px 0 4px">Protein domains</h4><table class="tbl"><thead><tr><th>Database</th><th>Entry</th><th>Description</th><th>aa</th></tr></thead><tbody>${tr.domains.map(d=>`<tr><td>${esc(d.db)}</td><td class="mono">${esc(d.name)}</td><td>${esc(d.desc||"")}</td><td class="num">${d.start}–${d.end}</td></tr>`).join("")}</tbody></table>`:""}
+      <p class="small muted" style="margin-top:10px">Gene model: IWGSC RefSeq v1.1 annotation; sequence: IWGSC RefSeq v1.0 chromosome record (${esc(NCBIACC[m.chr]||"")}), reverse-complemented for genes on the − strand.</p>`;
+    let cur="gen";
+    const show=async()=>{const f=+$("#gvFlank").value;let seq="",info="",hdr=id;
+      if(cur==="gen"){const g=f?await gvGenomic(m,f):g0;seq=g.sq;hdr=`${id} genomic chr${m.chr}:${g.s}-${g.e} ${m.strand<0?"(-)":"(+)"}${f?` incl. ${f} bp flanks`:""} RefSeq v1.0`;info=`${seq.length.toLocaleString()} bp${f?`, gene in upper case, flanks in lower case`:""}`;
+        if(f){const up=m.start-g.s,down=g.e-m.end,a=m.strand<0?down:up,b=m.strand<0?up:down;seq=seq.slice(0,a).toLowerCase()+seq.slice(a,seq.length-b)+seq.slice(seq.length-b).toLowerCase();}}
+      else if(cur==="mrna"){seq=mrna;hdr=`${tr?tr.id:id} mRNA`;info=`${seq.length.toLocaleString()} bp`;}
+      else if(cur==="cds"){seq=cds;hdr=`${tr?tr.id:id} CDS`;info=`${seq.length.toLocaleString()} bp`;}
+      else{seq=prot;hdr=`${tr?tr.id:id} protein`;info=`${seq.length.toLocaleString()} aa`;}
+      GV.shown={seq,hdr};$("#gvSeqInfo").textContent=info;$("#gvSeq").textContent=seq||"(not available)";
+      $("#gvFlank").disabled=cur!=="gen";};
+    document.querySelectorAll("#gvBox [data-gv]").forEach(b=>b.onclick=async()=>{cur=b.dataset.gv;document.querySelectorAll("#gvBox [data-gv]").forEach(x=>x.classList.toggle("on",x===b));await show();});
+    $("#gvFlank").onchange=async()=>{$("#gvSeqInfo").textContent="Loading…";try{await show();}catch(e){$("#gvSeqInfo").textContent=String(e.message||e);}};
+    $("#gvCopy").onclick=async()=>{try{await navigator.clipboard.writeText(GV.shown.seq);$("#gvCopy").textContent="Copied";setTimeout(()=>$("#gvCopy").textContent="Copy",1500);}catch(e){}};
+    $("#gvFa").onclick=()=>saveText(`${id}_${cur}.fasta`,`>${GV.shown.hdr}\n${gvWrap(GV.shown.seq.replace(/\s/g,""))}\n`);
+    $("#gvPred").onclick=async()=>{const f=+$("#gvFlank").value,g=f?await gvGenomic(m,f):g0;$("#modal").classList.remove("on");location.hash="#tools";
+      setTimeout(()=>{if(typeof tTab==="function")tTab("seqkit");$("#tqSeq").value=`>${id} genomic${f?` ±${f} bp`:""}\n`+g.sq;runGenePred();$("#tqSeq").scrollIntoView({behavior:"smooth",block:"start"});},60);};
+    $("#gvClose").onclick=()=>$("#modal").classList.remove("on");
+    await show();
+  }catch(err){$("#gvBox").innerHTML=`<h2 style="font:700 18px var(--display);margin:0 0 6px">${esc(id)}</h2><p class="msg err">Could not load this gene: ${esc(String(err.message||err))}. The gene and sequence services need an internet connection.</p><div class="row"><button class="btn" type="button" onclick="document.getElementById('modal').classList.remove('on')">Close</button></div>`;}
+}
 function runSeqKit(){const s=($("#tqSeq").value||"").replace(/^>.*$/mg,"").toUpperCase().replace(/[^A-Z]/g,""),o=$("#tqOut");if(!s){o.innerHTML="";return;}
   const CODE="FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",B="TCAG";const tr=x=>{let p="";for(let i=0;i+2<x.length;i+=3){const a=B.indexOf(x[i]),b=B.indexOf(x[i+1]),c=B.indexOf(x[i+2]);p+=(a<0||b<0||c<0)?"X":CODE[a*16+b*4+c];}return p;};
   const t=s.length<=60?tm(s):null;
@@ -1371,7 +1467,7 @@ function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<opt
   $("#dlCsv").onclick=async()=>{const ok=await saveText("WheatRLA_Atlas_selection.csv",csv());if(!ok)$("#countLine").textContent+=" Download is not available here; the CSV was copied to the clipboard.";};
   $("#modal").addEventListener("click",e=>{if(e.target.id==="modal")$("#modal").classList.remove("on");});
   document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#modal").classList.remove("on");$("#drawer").classList.remove("on");}});
-  window.addEventListener("hashchange",route);route();renderAll();connect();}
+  window.addEventListener("hashchange",route);route();renderAll();connect();try{gvInit();}catch(e){console.error(e);}}
 function alertMsg(t){$("#papNote").textContent=t;$("#papNote").style.color="var(--bad)";}
 function setStatus(kind,text){$("#dot").className="dot "+kind;$("#statusText").textContent=text;}
 /* ---------- db ---------- */
