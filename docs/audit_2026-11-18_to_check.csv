@@ -1,0 +1,13 @@
+id,name,disease,chr,ref,position_Mb,check,source
+V1838,-,Leaf rust,5A,RefSeq v2.1,714.0742,5A position 714.07 Mb (v2.1) at or past chromosome end,Tong et al. (2024)
+V2245,-,Stripe rust,5A,RefSeq v2.1,714.0742,5A position 714.07 Mb (v2.1) at or past chromosome end,Tong et al. (2024)
+V2596,QLr-2AL.3,Leaf rust,2A,RefSeq v2.1,804.8423,2A 804.84 Mb (v2.1) at or past chromosome end,Tong et al. (2024)
+S0022,AX-95207913,Fusarium head blight,4A,RefSeq v1.0,748.3456,4A 748.35 Mb (v1.0) past 744.6 Mb end,Akohoue et al. (2022)
+R0911,S7A_738859192,Fusarium head blight,7A,RefSeq v2.0,738.8592,7A 738.86 Mb (v1.0) past 736.7 Mb end,Zhang et al. (2022)
+V0994,BS00069723_51,Septoria tritici blotch,1B,RefSeq v1.0,692.2742,1B 692.27 Mb (v1.0) past 689.9 Mb end,Ouaja et al. (2025)
+V0869,RAC875_rep_c105937_467,Septoria tritici blotch,6D,RefSeq v2.1,486.414,"6D 486.41 Mb, check assembly",Malik et al. (2019)
+V1222,IWB16198,Tan spot,6D,RefSeq v2.1,494.1004,"6D 494.10 Mb, check assembly",Karmacharya et al. (2026)
+K0479,Pm46,Powdery mildew,4D,RefSeq v1.0,412.7165,source is a manuscript in preparation (supplement cited),McIntosh et al. (2012)
+K0515,Sr55,Stem rust,4D,RefSeq v1.0,412.7165,source is a manuscript in preparation (supplement cited),McIntosh et al. (2012)
+K0516,Sr57,Stem rust,7D,RefSeq v1.0,,source is a manuscript in preparation (supplement cited),McIntosh et al. (2012)
+K0099,Yr36,Stripe rust,6B,RefSeq v1.0,,Yr36: supplement reference {10138} (Chicaiza et al.) has no journal; supplement cited,McIntosh et al. (2005)

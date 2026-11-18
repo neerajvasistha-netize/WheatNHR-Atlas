@@ -357,3 +357,11 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Clone ID and tag added to all records. 69 of 73 tags lie exactly at the printed positions.
 - Corrected from the tag: M1654 (797.278 Mb, misprint), M119 (529.988 Mb), M238 (2B 682.939 Mb), M5103 (2D 73.592 Mb; Table 2 says 2A).
 - 17 MTAs on unassigned SNPs added (S205-018 to -034): six placed from the tag (M7254 6A, M8026 6D, M9397 4B, M4958 2A, M7868 7D, M992 1A), eleven unplaced (no single-locus match).
+
+## ad60 (2026-11-18): audit for the error types found in ad57-ad59
+- Checks run over all 6,826 records: gene symbol vs disease, disease vs paper title, positions beyond the chromosome end, start > end, peak outside interval, Catalogue source vs each supplement's own reference list.
+- 84 records on the wrong assembly corrected (83 Catalogue records that reused a v2.1 gene position under a v1.0 label; V0448).
+- 12 Catalogue records re-attributed to the right paper (the merged reference table had number collisions); 6 duplicates of existing records removed.
+- 12 records with positions beyond the chromosome end: 4 re-placed from markers (Lr15/QLr.B22-2D, V2216, QSr.ufs-4D), 8 set unplaced.
+- Gene vs disease and title checks found no further mislabels (Tsn1 under SNB and QSbv under soil-borne virus are correct).
+- Items needing a look by hand: docs/audit_2026-11-18_to_check.csv.
