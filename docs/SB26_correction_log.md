@@ -365,3 +365,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - 12 records with positions beyond the chromosome end: 4 re-placed from markers (Lr15/QLr.B22-2D, V2216, QSr.ufs-4D), 8 set unplaced.
 - Gene vs disease and title checks found no further mislabels (Tsn1 under SNB and QSbv under soil-borne virus are correct).
 - Items needing a look by hand: docs/audit_2026-11-18_to_check.csv.
+
+## 2026-11-18: header counts
+- "papers reviewed" was a fixed 909 from the review tracker and fell below "source studies with loci" (1,000) after the Catalogue import added about 400 cited papers. Now computed: studies with loci plus tracker papers reviewed without loci (No positions available 231, Not relevant 177).

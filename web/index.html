@@ -645,7 +645,7 @@ function sorted(list){const {k,dir}=st.sort;return list.slice().sort((a,b)=>{let
 /* ---------- render ---------- */
 function renderStats(){const all=Object.values(st.reports);const loci=computeLoci(all);const cl=clusters(loci);
   const anch=all.filter(r=>anchored(r,st.asm)).length;const studies=new Set(all.map(r=>r.source)).size;
-  $("#stats").innerHTML=[[all.length,"reports"],[anch,"with a physical position"],[loci.length,"merged loci"],[studies,"source studies with loci"],[(SEED.n_reviewed||Object.keys(st.papers).length),"papers reviewed"],[new Set(all.map(r=>r.disease)).size,"diseases"],[cl.length,"shared regions"]]
+  $("#stats").innerHTML=[[all.length,"reports"],[anch,"with a physical position"],[loci.length,"merged loci"],[studies,"source studies with loci"],[studies+Object.values(st.papers).filter(p=>/^(No positions available|Not relevant)$/.test(p.status||"")).length,"papers reviewed"],[new Set(all.map(r=>r.disease)).size,"diseases"],[cl.length,"shared regions"]]
    .map(([n,l])=>`<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");}
 function renderLegend(){const cnt={};Object.values(st.reports).forEach(r=>cnt[r.disease]=(cnt[r.disease]||0)+1);
   const GRP=[["Necrotrophs & hemibiotrophs",["Necrotroph","Hemibiotroph"]],["Biotrophs",["Biotroph"]],["Viruses, bacteria & nematodes",["Virus","Bacterium","Nematode"]]];
