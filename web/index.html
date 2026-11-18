@@ -309,31 +309,12 @@ td.num{font-size:13px}
     <a href="#downloads" data-view="downloads">Downloads</a>
     <a href="#about" data-view="about">About &amp; changes</a>
   </nav>
-  <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.3 snapshot</span></div>
+  <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.3 snapshot</span><button class="cnlink" id="cnOpen" type="button">Curation notice</button></div>
   </div>
 </header>
 <main>
-<section class="view" id="v-browse">
-  <ol class="qs" aria-label="How to use">
-    <li><button type="button" class="qsb" data-qs="1"><b>1</b><span>Click a chromosome in the genome view, or search a gene, QTL or marker</span></button></li>
-    <li><button type="button" class="qsb" data-qs="2"><b>2</b><span>Narrow by class, grade, curation status or Mb interval</span></button></li>
-    <li><button type="button" class="qsb" data-qs="3"><b>3</b><span>Click any row for full details: LOD, PVE (%), effect, original reference and positions on all assemblies</span></button></li>
-  </ol>
-  <p class="msg err" id="appErr" hidden></p>
-<style>
-.curnote{border:1px solid #c9a227;background:#fffdf4;border-left:5px solid #c9a227}
-.curnote h2{color:#8a6d1a;font-size:1.05rem}
-.curnote p,.curnote li{font-size:.9rem;line-height:1.5}
-.curnote ul{margin:.3rem 0 .6rem 1.1rem}
-.curnote code{background:#f2ead3;padding:0 3px;border-radius:3px;font-size:.85em}
-@media (prefers-color-scheme:dark){
- .curnote{background:#2a2518;border-color:#8a6d1a}
- .curnote h2{color:#e0c66a}
- .curnote code{background:#3a3322}
-}
-</style>
-  <div class="panel curnote" id="curnote">
-    <h2 style="margin-top:0">Under curation: please read before using a record</h2>
+<div class="cnpop" id="cnPop" role="dialog" aria-modal="true" aria-labelledby="cnTitle" hidden><div class="panel curnote" id="curnote">
+    <h2 id="cnTitle" style="margin-top:0">Under curation: please read before using a record</h2>
     <p>This atlas is a work in progress.
     Every record names its source study, and its <code>note</code> and <code>evidence</code> fields
     state where the position came from and any correction already applied. Read those before relying
@@ -347,7 +328,31 @@ td.num{font-size:13px}
     coordinate, records attributed to a paper that does not report them — are especially welcome.</p>
     <p class="small muted">Until the atlas is published, please cite the original study for any
     locus; the source citation and DOI are given with every record.</p>
-  </div>
+  <div style="display:flex;justify-content:flex-end;margin-top:10px"><button class="btn primary" id="cnOk" type="button">I understand</button></div></div></div>
+<section class="view" id="v-browse">
+  <ol class="qs" aria-label="How to use">
+    <li><button type="button" class="qsb" data-qs="1"><b>1</b><span>Click a chromosome in the genome view, or search a gene, QTL or marker</span></button></li>
+    <li><button type="button" class="qsb" data-qs="2"><b>2</b><span>Narrow by class, grade, curation status or Mb interval</span></button></li>
+    <li><button type="button" class="qsb" data-qs="3"><b>3</b><span>Click any row for full details: LOD, PVE (%), effect, original reference and positions on all assemblies</span></button></li>
+  </ol>
+  <p class="msg err" id="appErr" hidden></p>
+<style>
+.curnote{border:1px solid #c9a227;background:#fffdf4;border-left:5px solid #c9a227}
+.curnote h2{color:#8a6d1a;font-size:1.05rem}
+.curnote p,.curnote li{font-size:.9rem;line-height:1.5}
+.curnote ul{margin:.3rem 0 .6rem 1.1rem}
+.curnote code{background:#f2ead3;padding:0 3px;border-radius:3px;font-size:.85em}
+.cnpop{position:fixed;inset:0;z-index:40;background:rgba(10,15,13,.5);display:flex;align-items:flex-start;justify-content:center;padding:6vh 14px;overflow:auto}
+.cnpop[hidden]{display:none}
+.cnpop .curnote{max-width:680px;width:100%;margin:0;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.cnlink{background:none;border:0;padding:0 0 0 10px;font:inherit;font-size:12px;color:inherit;text-decoration:underline;cursor:pointer;opacity:.8}
+@media (prefers-color-scheme:dark){
+ .curnote{background:#2a2518;border-color:#8a6d1a}
+ .curnote h2{color:#e0c66a}
+ .curnote code{background:#3a3322}
+}
+</style>
+  
   <div class="stats" id="stats"></div>
   <div class="panel">
     <h2>Genome view <span class="muted small" id="ideoNote">· click a chromosome to filter</span></h2>
@@ -1655,6 +1660,19 @@ const EXTJSON=[['gokegg','gokegg_lite.json'],['markerslite','markers_lite.json']
     setTimeout(()=>{b.disabled=false;b.textContent="Export for GitHub";},4000);
   };
   document.body.appendChild(b);
+})();
+</script>
+<script>
+/* Curation notice popup: shown on each visit until dismissed in this browser session; reopen from "Curation notice". */
+(function(){var pop=document.getElementById("cnPop");if(!pop)return;
+  function open(){pop.hidden=false;var b=document.getElementById("cnOk");if(b)b.focus();}
+  function close(){pop.hidden=true;try{sessionStorage.setItem("wrlaCurationSeen","1");}catch(e){}}
+  document.getElementById("cnOk").onclick=close;
+  pop.addEventListener("click",function(e){if(e.target===pop)close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!pop.hidden)close();});
+  var o=document.getElementById("cnOpen");if(o)o.onclick=open;
+  var seen=false;try{seen=sessionStorage.getItem("wrlaCurationSeen")==="1";}catch(e){}
+  if(!seen&&!/[?&]gene=/.test(location.search))open();
 })();
 </script>
 </body>
