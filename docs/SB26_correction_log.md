@@ -377,3 +377,8 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 - Enrichment: gene-family and GO/KEGG enrichment shown together.
 - Locus lists: susceptibility genes and wild/alien-origin loci shown together.
 - "Physical meta-QTL" renamed "Meta-QTL" to match "Meta-GWAS"; CSV file names follow.
+
+## ad61 (2026-11-18): Tomar et al. (2021) re-curated
+- Names corrected to the paper form Q.Sb.bisa-; all eight QTL now span their Table 2 SNPs with peak SNP, environments, P, MAF and allele effects; Table 3 genes in notes.
+- R093 (2B) and R094 (6D) had the abstract positions; Table 2 positions used. R0238-R0241 had the allele effect (Effect 10X) stored as PVE; moved to effect (the paper gives no PVE).
+- Live database documents for R091-R094 and R164 held older versions that override the page data; rewritten. Other records changed in ad57-ad61 have no database override.
