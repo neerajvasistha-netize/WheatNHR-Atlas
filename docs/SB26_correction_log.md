@@ -371,3 +371,9 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## 2026-11-18: Downloads tab
 - New Downloads section: records by disease, chromosome, class and grade (CSV, TSV, JSON); complete atlas (CSV, JSON); references; merged loci; shared regions; BED and GFF3 tracks on any assembly; marker sequences (FASTA); primers; papers reviewed; genome view figure (SVG). The table "Download CSV" now saves a file instead of copying to the clipboard.
+
+## 2026-11-18: Analysis tools regrouped (15 to 12 buttons, no tool removed)
+- Genes: genes in a region, gene search and homoeolog lookup (previously hidden inside Susceptibility genes) shown together.
+- Enrichment: gene-family and GO/KEGG enrichment shown together.
+- Locus lists: susceptibility genes and wild/alien-origin loci shown together.
+- "Physical meta-QTL" renamed "Meta-QTL" to match "Meta-GWAS"; CSV file names follow.
