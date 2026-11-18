@@ -493,8 +493,8 @@ td.num{font-size:13px}
     <div class="tpane" id="tp-conv" style="display:none"><p class="small muted">Convert positions between IWGSC RefSeq v1.0 and v2.1 (one per line; bp or Mb; up to 5,000).</p>
       <textarea id="tcIn" rows="6" class="mono" style="width:100%" placeholder="5B 123456789&#10;chr2A:45.6&#10;S3B_7734567"></textarea>
       <div class="row tform"><label>Direction<br><select id="tcDir"><option value="10to21">v1.0 → v2.1</option><option value="21to10">v2.1 → v1.0</option></select></label><button class="btn primary" id="tcGo" type="button">Convert</button></div><div id="tcOut"></div></div>
-    <div class="tpane" id="tp-seqkit" style="display:none"><p class="small muted">Length, GC content, Tm (up to 60 nt), reverse complement and six-frame translation.</p>
-      <textarea id="tqSeq" rows="4" class="mono" style="width:100%" placeholder="Paste a DNA sequence"></textarea><div class="row tform"><button class="btn primary" id="tqGo" type="button">Analyse</button></div><div id="tqOut"></div></div>
+    <div class="tpane" id="tp-seqkit" style="display:none"><p class="small muted">Length, GC content, Tm (up to 60 nt), reverse complement, six-frame translation and gene structure prediction (exons, introns, CDS and protein).</p>
+      <textarea id="tqSeq" rows="4" class="mono" style="width:100%" placeholder="Paste a DNA sequence"></textarea><div class="row tform"><button class="btn primary" id="tqGo" type="button">Analyse</button><button class="btn" id="tqGene" type="button">Gene structure prediction</button></div><div id="tqOut"></div></div>
   </div>
 </section>
 
@@ -1001,6 +1001,102 @@ function runKASP(){const o=$("#tkOut");const r=designKASP($("#tkSeq").value||"",
    <tr><td>Allele ${esc(x.A1)} (FAM)</td><td class="mono seqc"><span class="muted">${FAM}</span>${x.as.p1}</td><td class="num">${x.as.t1.toFixed(1)} °C</td></tr>
    <tr><td>Allele ${esc(x.A2)} (HEX)</td><td class="mono seqc"><span class="muted">${HEX}</span>${x.as.p2}</td><td class="num">${x.as.t2.toFixed(1)} °C</td></tr>
    <tr><td>Common reverse</td><td class="mono seqc">${x.cr.p}</td><td class="num">${x.cr.t.toFixed(1)} °C</td></tr></tbody></table><p class="small muted">Product ${x.cr.size} bp (without tails). Tm is for the gene-specific part; grey = standard FAM/HEX tails.</p></div>`).join("")+`<p class="small muted">Check that the common primer, or an extra base near the 3′ end, is specific to the target sub-genome before ordering.</p>`;}
+/* ---- Gene structure prediction (ab initio, splice-site + ORF model; runs in the page) ---- */
+const GP={
+  /* plant donor PWM, exon -3..-1 | G T | intron +3..+6 (A,C,G,T) */
+  DON:[[.35,.35,.19,.11],[.60,.12,.13,.15],[.10,.04,.78,.08],null,null,[.60,.03,.33,.04],[.70,.08,.10,.12],[.07,.05,.80,.08],[.15,.12,.15,.58]],
+  /* plant acceptor PWM, intron -14..-3 | A G | exon +1 (U-rich tract typical of plant introns) */
+  ACC:[...Array(11).fill([.20,.20,.12,.48]),[.10,.55,.02,.33],null,null,[.25,.15,.45,.15]],
+  MIN_INTRON:60,MAX_INTRON:5000,MIN_CDS:150,MIN_EXON:24
+};
+function gpIdx(c){return "ACGT".indexOf(c);}
+function gpPwm(s,from,M){let sc=0;for(let k=0;k<M.length;k++){if(!M[k])continue;const i=gpIdx(s[from+k]);if(i<0)return -99;sc+=Math.log2(M[k][i]/0.25);}return sc;}
+function gpStrand(s){
+  const n=s.length,isStop=new Uint8Array(n);
+  for(let i=0;i+2<n;i++){const c=s.substr(i,3);if(c==="TAA"||c==="TAG"||c==="TGA")isStop[i]=1;}
+  /* next stop codon start at or after i in the same frame */
+  const nxt=new Int32Array(n+3).fill(1e9);for(let i=n-1;i>=0;i--)nxt[i]=isStop[i]?i:(i+3<n?nxt[i+3]:1e9);
+  const stopFrom=i=>i<n?nxt[i]:1e9;
+  /* codon score: exons are GC-richer than introns in wheat, with a strong GC3 preference */
+  const gc=c=>(c==="G"||c==="C")?1:0;const csc=new Float64Array(n+3);for(let i=0;i+2<n;i++){const g3=gc(s[i])+gc(s[i+1])+gc(s[i+2]);csc[i]=g3*0.15-(3-g3)*0.1+(gc(s[i+2])?0.08:-0.04)-0.05;}
+  const cpre=new Float64Array(n+4);for(let i=0;i<n;i++)cpre[i+3]=(i>=0?cpre[i]:0)+csc[i];
+  const codSum=(cs,endEx)=>{if(endEx-cs<3)return 0;const last=cs+Math.floor((endEx-cs)/3-1)*3;return cpre[last+3]-cpre[cs]+csc[cs]-csc[cs];};
+  /* AT prefix for intron composition (plant introns are AU-rich) */
+  const at=new Int32Array(n+1);for(let i=0;i<n;i++)at[i+1]=at[i]+((s[i]==="A"||s[i]==="T")?1:0);
+  const intronSc=(d,a)=>{const L=a-d,A=at[a]-at[d];return -7+A*0.2-(L-A)*0.3;};
+  const starts=[],donors=[],accs=[];
+  for(let i=0;i+2<n;i++){
+    if(s[i]==="A"&&s[i+1]==="T"&&s[i+2]==="G"){let sc=0;if(i>=3&&(s[i-3]==="A"||s[i-3]==="G"))sc+=1;if(s[i+3]==="G")sc+=0.5;starts.push({p:i,sc});}
+    if(s[i]==="G"&&s[i+1]==="T"&&i>=3&&i+6<n){const sc=gpPwm(s,i-3,GP.DON);if(sc>-1)donors.push({p:i,sc});}
+    if(s[i]==="A"&&s[i+1]==="G"&&i>=11&&i+2<n){const sc=gpPwm(s,i-11,GP.ACC);if(sc>0)accs.push({p:i+2,sc});}
+  }
+  const bestD=new Map(),bestA=new Map();let best=null;
+  const key=(p,ph)=>p*3+ph;
+  const consider=g=>{if(g.cds>=GP.MIN_CDS&&(!best||g.score>best.score))best=g;};
+  /* single-exon genes and initial exons */
+  for(const st of starts){const t=stopFrom(st.p);
+    if(t<1e9)consider({score:st.sc+codSum(st.p,t)+2,exons:[[st.p,t+2]],cds:t+3-st.p});
+    for(const d of donors){if(d.p<st.p+GP.MIN_EXON)continue;if(t<1e9&&t+3<=d.p)break;
+      const ph=(d.p-st.p)%3,sc=st.sc+d.sc+codSum(st.p,d.p);const k=key(d.p,ph);const o=bestD.get(k);
+      if(!o||sc>o.sc)bestD.set(k,{sc,exons:[[st.p,d.p-1]],cds:d.p-st.p});}}
+  /* walk acceptors in order: join from donors, then extend to internal or terminal exons */
+  const dSorted=donors.slice().sort((x,y)=>x.p-y.p);
+  for(const a of accs.sort((x,y)=>x.p-y.p)){
+    for(let ph=0;ph<3;ph++){let b=null;
+      for(const d of dSorted){const L=a.p-d.p;if(L<GP.MIN_INTRON)break;if(L>GP.MAX_INTRON)continue;const o=bestD.get(key(d.p,ph));if(!o)continue;
+        const sc=o.sc+intronSc(d.p,a.p)+a.sc;if(!b||sc>b.sc)b={sc,exons:o.exons,cds:o.cds};}
+      if(!b)continue;
+      const cs=a.p+(3-ph)%3,t=stopFrom(cs);
+      if(t<1e9&&t+3-a.p>=GP.MIN_EXON)consider({score:b.sc+codSum(cs,t),exons:b.exons.concat([[a.p,t+2]]),cds:b.cds+t+3-a.p});
+      for(const d of dSorted){if(d.p<a.p+GP.MIN_EXON)continue;if(t<1e9&&t+3<=d.p)break;
+        const ph2=(ph+d.p-a.p)%3,sc=b.sc+d.sc+codSum(cs,d.p),k=key(d.p,ph2),o=bestD.get(k);
+        if(!o||sc>o.sc)bestD.set(k,{sc,exons:b.exons.concat([[a.p,d.p-1]]),cds:b.cds+d.p-a.p});}
+    }}
+  return best;
+}
+function gpPredict(seq){
+  const s=seq.toUpperCase().replace(/[^ACGTN]/g,""),n=s.length,rc=revc(s);
+  const f=gpStrand(s),r=gpStrand(rc);let g=null,strand="+";
+  if(f&&(!r||f.score>=r.score))g=f;else if(r){g=r;strand="−";}
+  if(!g)return null;
+  /* exons in input coordinates, 1-based, in transcript order */
+  const ex=g.exons.map(([a,b])=>strand==="+"?[a+1,b+1]:[n-b,n-a]);
+  const src=strand==="+"?s:rc;const cdsSeq=g.exons.map(([a,b])=>src.slice(a,b+1)).join("");
+  return {strand,ex,cds:cdsSeq,n,score:g.score};
+}
+function runGenePred(){const raw=($("#tqSeq").value||""),o=$("#tqOut");
+  const s=raw.replace(/^>.*$/mg,"").toUpperCase().replace(/[^A-Z]/g,"");
+  if(!s){o.innerHTML=`<p class="small muted">Paste a genomic DNA sequence first.</p>`;return;}
+  if(s.length<300){o.innerHTML=`<p class="msg err">Gene structure prediction needs at least 300 bp of genomic sequence.</p>`;return;}
+  if(s.length>50000){o.innerHTML=`<p class="msg err">Please paste up to 50 kb (one gene region at a time).</p>`;return;}
+  o.innerHTML=`<p class="small muted">Predicting gene structure…</p>`;
+  setTimeout(()=>{let g=null;try{g=gpPredict(s);}catch(e){o.innerHTML=`<p class="msg err">Prediction failed: ${esc(String(e.message||e))}</p>`;return;}
+    if(!g){o.innerHTML=`<p class="small">No gene model with a coding sequence of at least ${GP.MIN_CDS} bp was found on either strand.</p>`;return;}
+    const CODE="FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",B="TCAG";
+    let prot="";for(let i=0;i+2<g.cds.length;i+=3){const a=B.indexOf(g.cds[i]),b=B.indexOf(g.cds[i+1]),c=B.indexOf(g.cds[i+2]);prot+=(a<0||b<0||c<0)?"X":CODE[a*16+b*4+c];}
+    prot=prot.replace(/\*$/,"");
+    const ex=g.ex,n=g.n,lo=Math.min(...ex.flat()),hi=Math.max(...ex.flat());
+    const introns=[];for(let i=0;i+1<ex.length;i++){const a=ex[i],b=ex[i+1];const s0=g.strand==="+"?a[1]+1:b[1]+1,e0=g.strand==="+"?b[0]-1:a[0]-1;introns.push([s0,e0]);}
+    const W=760,X=v=>20+(v-1)/(n-1)*(W-40);
+    const svg=`<svg viewBox="0 0 ${W} 70" style="width:100%;max-width:${W}px;height:auto" role="img" aria-label="Predicted gene structure">
+      <line x1="20" y1="35" x2="${W-20}" y2="35" stroke="var(--line,#ccc)" stroke-width="1"/>
+      ${introns.map(([a,b])=>{const x1=X(Math.min(a,b)),x2=X(Math.max(a,b)),xm=(x1+x2)/2;return `<polyline points="${x1},35 ${xm},22 ${x2},35" fill="none" stroke="#777" stroke-width="1.2"/>`;}).join("")}
+      ${ex.map(([a,b],i)=>`<rect x="${X(Math.min(a,b))}" y="27" width="${Math.max(2,X(Math.max(a,b))-X(Math.min(a,b)))}" height="16" rx="2" fill="#2f6f4f"><title>Exon ${i+1}: ${a.toLocaleString()}–${b.toLocaleString()} (${Math.abs(b-a)+1} bp)</title></rect>`).join("")}
+      <text x="20" y="62" font-size="11" fill="#777">1</text><text x="${W-20}" y="62" font-size="11" fill="#777" text-anchor="end">${n.toLocaleString()} bp</text>
+      <text x="${W/2}" y="62" font-size="11" fill="#777" text-anchor="middle">${g.strand==="+"?"forward strand →":"← reverse strand"}</text></svg>`;
+    let ph=0;const rows=ex.map(([a,b],i)=>{const L=Math.abs(b-a)+1;const type=ex.length===1?"single":i===0?"initial":i===ex.length-1?"terminal":"internal";const r=`<tr><td>${i+1}</td><td>${type}</td><td class="num">${a.toLocaleString()}</td><td class="num">${b.toLocaleString()}</td><td class="num">${L}</td><td class="num">${ph}</td></tr>`;ph=(ph+L)%3;return r;}).join("");
+    const irows=introns.map(([a,b],i)=>`<tr><td>${i+1}</td><td class="num">${a.toLocaleString()}</td><td class="num">${b.toLocaleString()}</td><td class="num">${Math.abs(b-a)+1}</td></tr>`).join("");
+    const gff=["##gff-version 3",`seq\tWheatRLA-genepred\tgene\t${lo}\t${hi}\t.\t${g.strand==="+"?"+":"-"}\t.\tID=gene1`,`seq\tWheatRLA-genepred\tmRNA\t${lo}\t${hi}\t.\t${g.strand==="+"?"+":"-"}\t.\tID=mRNA1;Parent=gene1`]
+      .concat((()=>{let p=0;return ex.map(([a,b],i)=>{const l=`seq\tWheatRLA-genepred\tCDS\t${Math.min(a,b)}\t${Math.max(a,b)}\t.\t${g.strand==="+"?"+":"-"}\t${(3-p)%3}\tID=cds1;Parent=mRNA1`;p=(p+Math.abs(b-a)+1)%3;return l;});})()).join("\n");
+    o.innerHTML=`<h4 style="margin-top:6px">Predicted gene structure</h4>
+      <p class="small">${g.strand==="+"?"Forward":"Reverse"} strand · gene ${lo.toLocaleString()}–${hi.toLocaleString()} · ${ex.length} exon${ex.length>1?"s":""}, ${introns.length} intron${introns.length===1?"":"s"} · CDS ${g.cds.length.toLocaleString()} bp · protein ${prot.length.toLocaleString()} aa</p>
+      ${svg}
+      <table class="tbl" style="margin-top:8px"><thead><tr><th>Exon</th><th>Type</th><th>Start</th><th>End</th><th>Length (bp)</th><th>Phase</th></tr></thead><tbody>${rows}</tbody></table>
+      ${introns.length?`<table class="tbl" style="margin-top:8px"><thead><tr><th>Intron</th><th>Start</th><th>End</th><th>Length (bp)</th></tr></thead><tbody>${irows}</tbody></table>`:""}
+      <h4>Predicted protein</h4><div class="seqbox mono">${esc(prot)}</div>
+      <h4>Coding sequence (CDS)</h4><div class="seqbox mono">${esc(g.cds)}</div>
+      <h4>GFF3</h4><div class="seqbox mono" style="white-space:pre">${esc(gff)}</div>
+      <p class="small muted">Ab initio prediction inside the atlas: plant splice-site weight matrices (GT…AG), start and stop codons, an open reading frame kept across exons, and the GC-rich exon / AT-rich intron composition typical of wheat genes. Coordinates are positions in the pasted sequence. It predicts one best gene model per sequence and can miss weak splice sites or alternative transcripts; check the model against the annotated IWGSC gene models and RNA-seq evidence before using it.</p>`;},20);}
 function runSeqKit(){const s=($("#tqSeq").value||"").replace(/^>.*$/mg,"").toUpperCase().replace(/[^A-Z]/g,""),o=$("#tqOut");if(!s){o.innerHTML="";return;}
   const CODE="FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",B="TCAG";const tr=x=>{let p="";for(let i=0;i+2<x.length;i+=3){const a=B.indexOf(x[i]),b=B.indexOf(x[i+1]),c=B.indexOf(x[i+2]);p+=(a<0||b<0||c<0)?"X":CODE[a*16+b*4+c];}return p;};
   const t=s.length<=60?tm(s):null;
@@ -1011,7 +1107,7 @@ async function loadRegionSeq(c,f,t,ta,msg){if(t-f>0.02)t=f+0.02;msg.textContent=
   try{const R=await getSeq(c,f,t);ta.value=`>${R.id}\n`+R.sq;msg.textContent=`Loaded ${R.sq.length.toLocaleString()} bp, ${R.coord} (up to 20 kb).`;}
   catch(err){if(err.offline){const a=v21to10(c,f),b=v21to10(c,t);if(a!=null&&b!=null){const s0=Math.max(1,Math.round(Math.min(a,b)*1e6)),e0=Math.round(Math.max(a,b)*1e6);msg.innerHTML=`Cannot load inside this preview. <a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=${NCBIACC[c]}&rettype=fasta&seq_start=${s0}&seq_stop=${e0}" target="_blank" rel="noopener">Open the FASTA (NCBI)</a>, copy it and paste it below.`;return;}}msg.innerHTML=esc(String(err.message||err));}}
 function toolsHook(){["tgChr","teChr","tpChr"].forEach(tSel);document.querySelectorAll(".ttab").forEach(b=>b.onclick=()=>tTab(b.dataset.t));
-  const on=(id,f)=>{const e=$("#"+id);if(e)e.onclick=f;};on("tgGo",runGenes);on("tsGo",runGeneSearch);on("teGo",runEnrich);on("tmGo",runMarkers);on("tpGo",runPCR);on("tkGo",runKASP);on("tqGo",runSeqKit);hook2();hook3();hookPMQ();hookPMG();hookSG();
+  const on=(id,f)=>{const e=$("#"+id);if(e)e.onclick=f;};on("tgGo",runGenes);on("tsGo",runGeneSearch);on("teGo",runEnrich);on("tmGo",runMarkers);on("tpGo",runPCR);on("tkGo",runKASP);on("tqGo",runSeqKit);on("tqGene",runGenePred);hook2();hook3();hookPMQ();hookPMG();hookSG();
   on("tpLoad",()=>loadRegionSeq($("#tpChr").value,num($("#tpFrom").value)??0,num($("#tpTo").value)??0,$("#tpSeq"),$("#tpMsg")));
   const g=$("#tgCls");if(g&&g.options.length<3)(genesAll().cl||[]).forEach(c=>c!=="other"&&g.insertAdjacentHTML("beforeend",`<option>${esc(c)}</option>`));
   window.__toolsGo=(k,c,f,t,extra)=>{if(location.hash!=="#tools")location.hash="#tools";else route();setTimeout(()=>{tTab(k);
