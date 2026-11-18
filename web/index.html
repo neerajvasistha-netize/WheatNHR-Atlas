@@ -403,7 +403,7 @@ td.num{font-size:13px}
       <label for="rFrom">From (Mb)<input class="mb" type="number" id="rFrom" value="630" step="0.1"></label>
       <label for="rTo">To (Mb)<input class="mb" type="number" id="rTo" value="680" step="0.1"></label>
       <label for="rPad">Extend by (Mb)<input class="mb" type="number" id="rPad" value="2.5" step="0.5" min="0"></label>
-      <button class="btn primary" id="rGo" type="button">Search region</button><button class="btn" id="rFM" type="button" title="Open this region in the Candidate gene mapping tab">Candidate genes of this region →</button><button class="btn" id="rSQ" type="button" title="Open this region in the Region sequence viewer">Sequence of this region →</button><button class="btn" id="rWO" type="button" title="List the genes of this region in Analysis tools">Genes of this region →</button>
+      <button class="btn primary" id="rGo" type="button">Search region</button><button class="btn" id="rFM" type="button" title="Open this region in the Candidate gene mapping tab">Candidate genes of this region →</button><button class="btn" id="rSQ" type="button" title="Open this region in the Sequence viewer">Sequence of this region →</button><button class="btn" id="rWO" type="button" title="List the genes of this region in Analysis tools">Genes of this region →</button>
     </div>
     <p class="small muted">A report is listed when its interval (or its peak ± the extension) overlaps the region, using positions on the assembly selected on Home (RefSeq v2.1 by default). Reports published on RefSeq v1.0 are shown at their converted v2.1 position; the published position is kept in the record.</p>
     <div class="tbl-wrap"><table id="rTbl"><thead><tr><th>Locus / gene</th><th>Class</th><th>Disease</th><th class="r">Interval (Mb, v2.1)</th><th>Grade</th><th>Reference</th></tr></thead><tbody></tbody></table></div>
@@ -434,7 +434,7 @@ td.num{font-size:13px}
 <section class="view" id="v-sequence">
   <div class="gbar" data-gbar></div>
   <div class="panel">
-    <h2>Region sequence viewer <span class="muted small">· Chinese Spring reference</span></h2>
+    <h2>Sequence viewer <span class="muted small">· Chinese Spring reference</span></h2>
     <div class="filters" style="margin-top:0">
       <label for="sqChr">Chromosome<select id="sqChr"></select></label>
       <label for="sqFrom">From (Mb, v2.1)<input class="mb" type="number" id="sqFrom" value="406.73" step="0.001"></label>
@@ -1577,7 +1577,7 @@ function fineMapRun(box){fmFill();
     <div><b>Sequence trimmed</b><br>${trimmed.toFixed(0)}% of the ${span0.toFixed(1)} Mb searched</div>
     <div><b>Supporting reports</b><br>${inCore.length} from ${studies} source(s)</div>
     <div><b>Max overlapping loci</b><br>${mxCov} at ${(L0+covIdx*bw).toFixed(1)} Mb</div></div>
-   <p class="small"><button class="btn" type="button" id="fmSeq">Show nucleotide sequence of the core in the Region sequence viewer →</button></p><div id="fmSeqOut"></div>
+   <p class="small"><button class="btn" type="button" id="fmSeq">Show nucleotide sequence of the core in the Sequence viewer →</button></p><div id="fmSeqOut"></div>
    <p><b>Diseases at the core:</b> ${dset.map(d=>`<span class="dchip"><span class="sw" style="background:${DCOL[d]}"></span>${esc(d)}</span>`).join(" ")}${dset.length>1?` <span class="small">→ candidate shared (multi-disease) locus</span>`:""}</p>
    <h3 style="margin:10px 0 4px;font-size:14px">Candidate genes in the core region: ${gl.length} high-confidence gene(s), ${nDef} defence-related</h3>
    ${gl.length?`<div style="max-height:320px;overflow:auto"><table class="tbl"><thead><tr><th>Gene (IWGSC v1.1 ID)</th><th>Class</th><th class="r">Mb (v2.1)</th><th class="r">To nearest precise locus</th><th>Description</th></tr></thead><tbody>${gl.slice(0,150).map(o=>`<tr${o.def?' style="background:var(--hl,#fff7e0)"':""}><td class="mono">${esc(o.id)}${o.id21?`<div class="small muted">${esc(o.id21)}</div>`:""}</td><td>${o.def?"<b>"+esc(o.cl)+"</b>":"–"}</td><td class="num">${o.p.toFixed(2)}</td><td class="num">${o.dist!=null?o.dist.toFixed(2)+" Mb":"–"}</td><td class="small">${esc(o.d)}</td></tr>`).join("")}</tbody></table></div>${gl.length>150?`<p class="small muted">First 150 of ${gl.length} genes shown (defence-related first).</p>`:""}`:`<p class="small">No annotated high-confidence genes in the core.</p>`}
