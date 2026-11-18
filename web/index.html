@@ -228,6 +228,7 @@ header.top.hero .inst{margin-left:auto!important;text-align:right;font-size:12.5
 header.top.hero .inst b{color:#fff;font-weight:700}
 header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margin:0!important}
 @media (max-width:700px){header.top.hero .inst{display:none}header.top.hero .brand h1{font-size:28px!important}}
+#homeFilt{justify-content:space-between}#homeFilt>#addBtn{order:99}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -371,7 +372,7 @@ td.num{font-size:13px}
   </div>
   
   </div>
-  <div class="filters">
+  <div class="filters" id="homeFilt">
     <select id="fAsm" hidden aria-hidden="true"><option>RefSeq v2.1</option></select>
     <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
     <label for="fChr">Chromosome<select id="fChr"><option value="">All</option></select></label>
@@ -380,7 +381,6 @@ td.num{font-size:13px}
     <label for="fCur">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
     <label for="fTo">To (Mb)<input class="mb" type="number" id="fTo" step="0.1" min="0"></label>
-    <span style="flex:1"></span>
     <button class="btn primary" id="showRec" type="button" aria-expanded="false" aria-controls="recWrap">Show records</button>
     <button class="btn" id="reset" type="button">Clear filters</button>
     <button class="btn" id="dlCsv" type="button">Download CSV</button>
