@@ -368,3 +368,6 @@ Script: scripts/curation/gw60.py. 19 unique papers checked against the atlas (Gu
 
 ## 2026-11-18: header counts
 - "papers reviewed" was a fixed 909 from the review tracker and fell below "source studies with loci" (1,000) after the Catalogue import added about 400 cited papers. Now computed: studies with loci plus tracker papers reviewed without loci (No positions available 231, Not relevant 177).
+
+## 2026-11-18: Downloads tab
+- New Downloads section: records by disease, chromosome, class and grade (CSV, TSV, JSON); complete atlas (CSV, JSON); references; merged loci; shared regions; BED and GFF3 tracks on any assembly; marker sequences (FASTA); primers; papers reviewed; genome view figure (SVG). The table "Download CSV" now saves a file instead of copying to the clipboard.

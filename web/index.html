@@ -306,6 +306,7 @@ td.num{font-size:13px}
     <a href="#sequence" data-view="sequence">Region sequence viewer</a>
     <a href="#tools" data-view="tools">Analysis tools</a>
     <a href="#papers" data-view="papers">Papers to curate</a>
+    <a href="#downloads" data-view="downloads">Downloads</a>
     <a href="#about" data-view="about">About &amp; changes</a>
   </nav>
   <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.3 snapshot</span></div>
@@ -483,6 +484,23 @@ td.num{font-size:13px}
       <label for="pType">Type<select id="pType"><option value="">All</option><option>GWAS</option><option>QTL</option><option>Gene</option><option>Meta</option><option>Review</option></select></label>
     </div>
     <div class="tbl-wrap"><table id="pTbl"><thead><tr><th>Disease</th><th>Type</th><th>Paper</th><th>Status</th><th>Assigned to</th><th>Where are the positions?</th><th>Notes</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
+
+<section class="view" id="v-downloads">
+  <div class="panel prose">
+    <h2>Downloads</h2>
+    <p>Everything in the atlas can be downloaded. Choose what to include, then save. CSV and TSV files open in Excel, LibreOffice and R; BED and GFF3 load in genome browsers (IGV, JBrowse); FASTA holds marker sequences.</p>
+    <div class="filters" id="dlFilt">
+      <label>Disease<select id="dlDis"><option value="">All</option></select></label>
+      <label>Chromosome<select id="dlChr"><option value="">All</option></select></label>
+      <label>Class<select id="dlCls"><option value="">All</option></select></label>
+      <label>Grade<select id="dlGr"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
+      <label>Assembly (positions, tracks)<select id="dlAsm"></select></label>
+    </div>
+    <p class="small muted" id="dlCount"></p>
+    <div class="tscroll"><table class="tbl" id="dlTbl"><thead><tr><th>What</th><th>Contents</th><th>Save as</th></tr></thead><tbody></tbody></table></div>
+    <p class="small muted">Files reflect the atlas as you see it now, including any edits. Please cite the atlas and the original papers when you use the data.</p>
   </div>
 </section>
 
@@ -795,10 +813,54 @@ function csv(){const cols=["id","name","cls","disease","chr","start","end","peak
   return [cols.concat(["citation","url"],ac).map(q).join(",")].concat(sorted(filtered()).map(r=>cols.map(c=>q(r[c])).concat([q(st.sources[r.source]?.citation),q(st.sources[r.source]?.url)],
     A.flatMap(a=>{const c=co(r,a)||{};return [q(c.chr),q(c.start),q(c.end),q(c.peak),q(a===BASE?(/^RefSeq v2/.test(r.ref||"")?"converted":"as reported"):(c.flag||""))];})).join(","))).join("\n");}
 /* ---------- events ---------- */
-function route(){const v=(location.hash||"#browse").slice(1);const ok=["browse","region","finemap","sequence","tools","papers","about"].includes(v)?v:"browse";
+function route(){const v=(location.hash||"#browse").slice(1);const ok=["browse","region","finemap","sequence","tools","papers","downloads","about"].includes(v)?v:"browse";
   document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on",s.id==="v-"+ok));
   document.querySelectorAll("nav.tabs a").forEach(a=>{if(a.dataset.view===ok)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
-  if(ok==="region")renderRegion();if(ok==="tools")toolsHook();if(ok==="finemap")fineMap();if(ok==="papers")renderPapers();if(ok==="about")renderChanges();}
+  if(ok==="region")renderRegion();if(ok==="tools")toolsHook();if(ok==="finemap")fineMap();if(ok==="papers")renderPapers();if(ok==="about")renderChanges();if(ok==="downloads")renderDownloads();}
+/* ---- Downloads ---- */
+const toTSV=rows=>rows.map(r=>r.map(v=>String(v??"").replace(/[\t\r\n]+/g," ")).join("\t")).join("\n");
+function dlAll(){return Object.values(st.reports).filter(r=>r&&!r.deleted);}
+function dlSel(noDis){const d=noDis?"":$("#dlDis").value,c=$("#dlChr").value,k=$("#dlCls").value,g=$("#dlGr").value;
+  return dlAll().filter(r=>(!d||r.disease===d)&&(!c||r.chr===c)&&(!k||r.cls===k)&&(!g||r.grade===g)).sort((a,b)=>CHRS.indexOf(a.chr)-CHRS.indexOf(b.chr)||(pos(a,BASE)??1e9)-(pos(b,BASE)??1e9));}
+function dlTag(){const p=[$("#dlDis").value,$("#dlChr").value,$("#dlCls").value,$("#dlGr").value?"grade"+$("#dlGr").value:""].filter(Boolean).map(s=>s.replace(/[^A-Za-z0-9]+/g,"-"));return p.length?"_"+p.join("_"):"_all";}
+function dlRecRows(list){const cols=["id","name","cls","disease","chr","start","end","peak","ref","marker","pve","stat","effect","grade","curation","evidence","note","source"];const A=asms();
+  return [cols.concat(["reference","citation","url"],A.flatMap(a=>[a+" chr",a+" start",a+" end",a+" peak"]))].concat(list.map(r=>cols.map(c=>r[c]??"").concat([srcShort(r.source),st.sources[r.source]?.citation||"",st.sources[r.source]?.url||""],A.flatMap(a=>{const c=co(r,a)||{};return [c.chr??"",c.start??"",c.end??"",c.peak??""];}))));}
+function dlSrcRows(list){const by={};list.forEach(r=>{(by[r.source]??=[]).push(r);});
+  return [["key","reference","citation","url","records","diseases"]].concat(Object.keys(by).sort((a,b)=>srcShort(a).localeCompare(srcShort(b))).map(k=>[k,srcShort(k),st.sources[k]?.citation||"",st.sources[k]?.url||"",by[k].length,[...new Set(by[k].map(r=>r.disease))].join("; ")]));}
+function dlIv(r,a){const c=co(r,a);if(!c||!CHR[c.chr])return null;const s=num(c.start),e=num(c.end),p=num(c.peak);const lo=s!=null?s:p,hi=e!=null?e:(s!=null?s:p);if(lo==null)return null;return {c:c.chr,lo:Math.min(lo,hi),hi:Math.max(lo,hi)};}
+function dlBed(list,a){const out=[`track name="WheatRLA" description="WheatRLA resistance loci (${a})"`];
+  list.forEach(r=>{const x=dlIv(r,a);if(!x)return;const s=Math.max(0,Math.round(x.lo*1e6)-1),e=Math.max(s+1,Math.round(x.hi*1e6));out.push(["chr"+x.c,s,e,(r.name||r.id).replace(/\s+/g,"_")+"|"+r.id,0,"."].join("\t"));});return out.join("\n");}
+function dlGff(list,a){const enc=v=>String(v??"").replace(/[;=&,\t\n%]/g,c=>"%"+c.charCodeAt(0).toString(16).toUpperCase().padStart(2,"0"));const out=["##gff-version 3","# WheatRLA resistance loci, positions on "+a];
+  list.forEach(r=>{const x=dlIv(r,a);if(!x)return;out.push(["chr"+x.c,"WheatRLA",{CG:"gene",DG:"gene",SG:"gene"}[r.cls]||"region",Math.max(1,Math.round(x.lo*1e6)),Math.max(1,Math.round(x.hi*1e6)),".",".",".",
+    `ID=${enc(r.id)};Name=${enc(r.name)};class=${enc(r.cls)};disease=${enc(r.disease)};grade=${enc(r.grade)};marker=${enc(r.marker)};reference=${enc(srcShort(r.source))}`].join("\t"));});return out.join("\n");}
+function dlFasta(list){const out=[];list.forEach(r=>(r.snpseq||[]).forEach(s=>{if(s&&s.s)out.push(`>${r.id}|${(s.m||"").replace(/\s+/g,"_")}|${(r.name||"").replace(/\s+/g,"_")}\n${String(s.s).replace(/(.{80})/g,"$1\n").trim()}`);}));return out.join("\n");}
+function dlPrimers(list){const rows=[["record_id","locus","disease","marker","forward","reverse","type","primer_source"]];list.forEach(r=>(r.primers||[]).forEach(p=>rows.push([r.id,r.name,r.disease,p.m,p.F,p.R,p.type||"",p.src||""])));return rows;}
+function dlLoci(list,a){const L=computeLoci(list,a);return [["disease","chr","from_Mb","to_Mb","reports","studies","record_ids","names"]].concat(L.map(l=>[l.disease,l.chr,l.lo.toFixed(3),l.hi.toFixed(3),l.reps.length,l.studies,l.reps.map(r=>r.id).join("; "),l.reps.map(r=>r.name).join("; ")]));}
+function dlShared(list,a){const C=clusters(computeLoci(list,a));return [["chr","from_Mb","to_Mb","diseases","loci","record_ids"]].concat(C.map(c=>[c.chr,c.lo.toFixed(3),c.hi.toFixed(3),[...new Set(c.loci.map(l=>l.disease))].join("; "),c.loci.length,c.loci.flatMap(l=>l.reps.map(r=>r.id)).join("; ")]));}
+function dlPapers(){return [["id","disease","type","authors","title","journal","link","status","notes"]].concat(Object.values(st.papers).map(p=>[p.id,p.disease,p.type,p.authors,p.title,p.journal,p.link,p.status,p.notes]));}
+function dlSvg(){const s=$("#ideo");if(!s)return "";const c=s.cloneNode(true);c.setAttribute("xmlns","http://www.w3.org/2000/svg");return '<?xml version="1.0" encoding="UTF-8"?>\n'+c.outerHTML;}
+function renderDownloads(){
+  if(!$("#dlDis").options.length||$("#dlDis").options.length<2){const all=dlAll();
+    [...new Set(all.map(r=>r.disease))].sort().forEach(d=>$("#dlDis").add(new Option(d,d)));
+    CHRS.forEach(c=>$("#dlChr").add(new Option(c,c)));
+    [...new Set(all.map(r=>r.cls))].filter(Boolean).sort().forEach(k=>$("#dlCls").add(new Option(k,k)));
+    asms().forEach(a=>$("#dlAsm").add(new Option(a,a)));$("#dlAsm").value=MAIN;
+    ["dlDis","dlChr","dlCls","dlGr","dlAsm"].forEach(i=>$("#"+i).onchange=renderDownloads);}
+  const sel=dlSel(),a=$("#dlAsm").value||MAIN,t=dlTag(),as=a.replace(/[^A-Za-z0-9.]+/g,"");
+  $("#dlCount").textContent=`${sel.length} of ${dlAll().length} records match the choices above.`;
+  const items=[
+    ["Records (your choices)",`${sel.length} records: every field, reference, citation and positions on all assemblies`,[["CSV",()=>toCSV(dlRecRows(sel)),`WheatRLA_records${t}.csv`],["TSV",()=>toTSV(dlRecRows(sel)),`WheatRLA_records${t}.tsv`],["JSON",()=>JSON.stringify(sel,null,1),`WheatRLA_records${t}.json`]]],
+    ["Complete atlas","All records with every field, plus the full reference list",[["CSV",()=>toCSV(dlRecRows(dlAll())),"WheatRLA_complete.csv"],["JSON",()=>JSON.stringify({records:dlAll(),sources:st.sources},null,1),"WheatRLA_complete.json"]]],
+    ["References","Papers behind the selected records, with citation, link and record count",[["CSV",()=>toCSV(dlSrcRows(sel)),`WheatRLA_references${t}.csv`]]],
+    ["Merged loci",`Overlapping reports of the same disease merged into loci (${a})`,[["CSV",()=>toCSV(dlLoci(sel,a)),`WheatRLA_merged_loci${t}_${as}.csv`]]],
+    ["Shared regions",`Regions where loci of more than one disease overlap (${a}; uses all diseases, other choices apply)`,[["CSV",()=>toCSV(dlShared(dlSel(true),a)),`WheatRLA_shared_regions${t}_${as}.csv`]]],
+    ["Genome browser tracks",`Selected records with a position on ${a}`,[["BED",()=>dlBed(sel,a),`WheatRLA${t}_${as}.bed`],["GFF3",()=>dlGff(sel,a),`WheatRLA${t}_${as}.gff3`]]],
+    ["Marker sequences",`SNP and tag sequences stored with the selected records (${sel.filter(r=>(r.snpseq||[]).length).length} records)`,[["FASTA",()=>dlFasta(sel),`WheatRLA_marker_sequences${t}.fasta`]]],
+    ["Primers",`Primer pairs stored with the selected records (${sel.filter(r=>(r.primers||[]).length).length} records)`,[["CSV",()=>toCSV(dlPrimers(sel)),`WheatRLA_primers${t}.csv`]]],
+    ["Papers reviewed","The literature tracker: every paper checked and its status",[["CSV",()=>toCSV(dlPapers()),"WheatRLA_papers_reviewed.csv"]]],
+    ["Genome view figure","The chromosome map as currently drawn on the Browse page",[["SVG",()=>dlSvg(),"WheatRLA_genome_view.svg"]]]];
+  const tb=$("#dlTbl tbody");tb.innerHTML=items.map((it,i)=>`<tr><td><b>${esc(it[0])}</b></td><td class="small">${esc(it[1])}</td><td>${it[2].map((b,j)=>`<button class="btn" type="button" data-dl="${i}-${j}">${b[0]}</button>`).join(" ")}</td></tr>`).join("");
+  tb.querySelectorAll("button[data-dl]").forEach(b=>b.onclick=async()=>{const [i,j]=b.dataset.dl.split("-").map(Number);const f=items[i][2][j];b.disabled=true;const ok=await saveText(f[2],f[1]());b.disabled=false;b.textContent=ok?f[0]+" ✓":f[0];});}
 /* ---- Analysis tools (all computed inside the atlas) ---- */
 async function saveText(name,data){try{const dl=await window.claude?.use?.("downloads");if(dl){await dl.save({filename:name,data});return true;}}catch(e){}
   try{const u=URL.createObjectURL(new Blob([data],{type:"text/plain"}));const l=document.createElement("a");l.href=u;l.download=name;document.body.appendChild(l);l.click();l.remove();setTimeout(()=>URL.revokeObjectURL(u),3000);return true;}catch(e){}
@@ -1172,8 +1234,7 @@ function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<opt
     try{await st.db.doc("papers/"+id).update({[f]:v,updated_by:st.uid,updated_at:new Date().toISOString()});st.papers[id][f]=v;if(f==="status")logChange("set status of",`${st.papers[id].authors.split(",")[0]} → ${v}`,id);}
     catch(err){alertMsg("Could not save this change. You may need Contributor access.");el.value=st.papers[id][f]||"";}el.disabled=false;if(f==="status")renderPapers();});
   $("#addBtn").onclick=()=>openForm(null);
-  $("#dlCsv").onclick=async()=>{const data=csv();try{const dl=await window.claude?.use?.("downloads");if(dl){await dl.save({filename:"WheatRLA_Atlas_selection.csv",data});return;}}catch(e){}
-    try{await navigator.clipboard.writeText(data);$("#countLine").textContent+=" CSV copied to the clipboard.";}catch(e){$("#countLine").textContent+=" Download is not available here.";}};
+  $("#dlCsv").onclick=async()=>{const ok=await saveText("WheatRLA_Atlas_selection.csv",csv());if(!ok)$("#countLine").textContent+=" Download is not available here; the CSV was copied to the clipboard.";};
   $("#modal").addEventListener("click",e=>{if(e.target.id==="modal")$("#modal").classList.remove("on");});
   document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#modal").classList.remove("on");$("#drawer").classList.remove("on");}});
   window.addEventListener("hashchange",route);route();renderAll();connect();}
