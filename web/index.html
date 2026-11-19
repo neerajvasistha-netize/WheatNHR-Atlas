@@ -230,6 +230,7 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 @media (max-width:700px){header.top.hero .inst{display:none}header.top.hero .brand h1{font-size:28px!important}}
 #homeFilt{justify-content:space-between}#homeFilt>#addBtn{order:99}
 @media (min-width:1000px){#homeFilt{flex-wrap:nowrap;gap:12px}#homeFilt>label{flex:1 1 0;min-width:0}#homeFilt>label:first-of-type{flex-grow:2.2}#homeFilt>label>input,#homeFilt>label>select{width:100%!important;min-width:0}#homeFilt>.btn{flex:0 0 auto;white-space:nowrap}}
+.drawer{top:var(--hdrH,0px)!important;height:calc(100% - var(--hdrH,0px))!important}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -1705,6 +1706,11 @@ const EXTJSON=[['gokegg','gokegg_lite.json'],['markerslite','markers_lite.json']
   var seen=false;try{seen=sessionStorage.getItem("wrlaCurationSeen")==="1";}catch(e){}
   if(!seen&&!/[?&]gene=/.test(location.search))open();
 })();
+</script>
+<script>
+/* keep side panels below the fixed header */
+(function(){var h=document.querySelector("header.top");if(!h)return;function set(){document.documentElement.style.setProperty("--hdrH",h.getBoundingClientRect().height+"px");}
+set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEventListener("resize",set);})();
 </script>
 </body>
 </html>
