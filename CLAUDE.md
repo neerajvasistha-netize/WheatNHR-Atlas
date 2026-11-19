@@ -24,3 +24,8 @@ Never edit the artifact without committing the same files here.
 
 Keep large data out of index.html where possible: put records in separate JSON files that the page
 loads, so updates stay small and can be synced.
+
+## Curation files
+All atlas-making material (paper lists, screening decisions, download trackers, curation notes) is kept in this
+repository under `curation/` (one subfolder per module, e.g. `curation/biotroph_papers/`). Update the files there
+whenever a list or tracker changes; never commit PDFs of papers.
