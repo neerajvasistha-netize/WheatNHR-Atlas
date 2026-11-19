@@ -14,3 +14,15 @@ Gene network: genes are linked by
 - sequence similarity: CDS identity >= 90% (web/sim/similar_<chr>.json).
 Layout: Fruchterman-Reingold per connected component, components shelf-packed by size. Edge list exports as CSV
 for Cytoscape.
+
+## Network analysis (added Nov 2026)
+- Topology per node and for the network, as defined in NetworkAnalyzer (Assenov et al. 2008, Bioinformatics 24:282):
+  degree, betweenness (Brandes algorithm, normalised within the component), closeness, clustering coefficient,
+  eccentricity, average shortest path; network density, diameter, radius, characteristic path length,
+  centralization, heterogeneity, components; degree distribution with a power-law fit.
+- Hub ranking as in cytoHubba (Chin et al. 2014, BMC Syst Biol 8:S11): MCC (from all maximal cliques, Bron-Kerbosch),
+  degree, MNC, DMNC (epsilon 1.7), betweenness, closeness; top 10 drawn as a ranked circle figure.
+- Modules: MCODE (Bader & Hogue 2003, BMC Bioinformatics 4:2) with degree cutoff 2, node score cutoff 0.2,
+  haircut and k-core 2; each module labelled with its most enriched GO term or KEGG pathway (hypergeometric p < 0.01
+  against all annotated genes).
+- Node and edge tables export as CSV (edge table imports into Cytoscape as a network, node table as attributes).
