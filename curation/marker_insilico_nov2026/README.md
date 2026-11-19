@@ -26,3 +26,11 @@ that is not in the genome, so the 11 pairs that failed were re-run on their targ
 its 3' 15 bases, product 50-1500 bp. Six more records placed (`web/seed_ad69.json`, S163-005 in the live database):
 Yrxy2 (barc5, 2A), QLr.osu-7BL and YrC591 (barc182, 7B), QTLBvr5AS (barc10, 5A), FHB association 2B (barc101), QYr.caas-2BS (barc13).
 QPm.caas-7AL was rejected (barc174 product on 7AS). barc121, barc147, barc173, barc45, barc98 and the 3S/6B targets give no product.
+
+## GWM primers and the SSR sequence workbook (ad70, same day)
+GWM primer sequences (224 pairs, WMS052-WMS588) were taken from US patent 6720137 (IPK Gatersleben; the Röder et al. 1998 set,
+`gwm_primers.json`) and run as in-silico PCR on the target chromosomes of the 29 unplaced GWM markers (`relax2.py`). Products of the
+expected size (e.g. GWM255 148 bp, GWM257 193 bp, GWM263 136 bp) placed QSb.bhu-7B (3 records), QStb-7B (History/Rubens), the
+4BS FHB QTL of Lu et al. 2012, YrS2199 and the 5A QTL of Szabo-Hever et al. 2014 (`web/seed_ad70.json`, live records updated).
+PmY39 was not placed (alien 2U segment). `SSR_marker_sequences.xlsx` lists every unplaced SSR marker in the atlas with its primers
+where public (BARC, GWM) and the in-silico PCR product, plus the full GWM and BARC primer lists.
