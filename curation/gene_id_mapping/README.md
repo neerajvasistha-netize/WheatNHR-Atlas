@@ -1,6 +1,6 @@
 # Gene ID conversion tables for GO/KEGG enrichment
 
-Files: `web/idmap/*.json.gz` (gzip JSON, `{input ID: "chr:gene number" or "a|b" when several}`), loaded by the
+Files: `web/idmap/*.gz.txt` (gzip JSON stored as base64 text, because the Claude artifact does not serve .gz files; `{input ID: "chr:gene number" or "a|b" when several}`), loaded by the
 enrichment tool only when a list contains that ID type. Keys map to IWGSC RefSeq v1.1 high-confidence genes
 (TraesCS<chr>02G<number>), which carry the atlas GO and KEGG annotation.
 

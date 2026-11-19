@@ -38,3 +38,4 @@ for f in sorted(glob.glob('../pan/anchors_full/*.tsv')):
         m=re.match(r'(Traes[A-Z]+)',g); pre=m.group(1)
         M[re.sub(r'\.\d+$','',g).upper()].add(k)
     if M: dump('pan_'+pre,M)
+# After building: for f in *.json.gz; do base64 -w0 $f > ${f%.json.gz}.gz.txt; done   (the page reads the .gz.txt files)

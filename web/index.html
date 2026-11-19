@@ -1551,7 +1551,7 @@ function goSet(k){const a=gokegg().A.get(k);if(!a)return null;const s=new Set();
 function bh(ps){const n=ps.length,o=ps.map((p,i)=>[p,i]).sort((a,b)=>a[0]-b[0]),q=new Array(n);let m=1;for(let j=n-1;j>=0;j--){m=Math.min(m,o[j][0]*n/(j+1));q[o[j][1]]=m;}return q;}
 function parseGeneList(txt){const out=new Set();for(const m of String(txt).matchAll(/TraesCS([1-7][ABD]|U)0[12]G0*(\d+)/gi))out.add(m[1].toUpperCase()+":"+(+m[2]));for(const m of String(txt).matchAll(/TraesCS[1-7][ABD]03G\d+/gi)){const k=v21map().get(m[0].toUpperCase());if(k)out.add(k);}return [...out];}
 const IDM={};const IDPAN={ARI:"ArinaLrFor",JAG:"Jagger",JUL:"Julius",KAR:"Kariega",LAC:"Lancer",LDM:"Landmark",MAC:"Mace",SYM:"Mattis",NOR:"Norin 61",PARA:"Paragon",RN:"Renan",STA:"Stanley"};
-function idmLoad(n){if(!IDM[n])IDM[n]=(async()=>{const r=await fetch("idmap/"+n+".json.gz");if(!r.ok)throw new Error("ID table "+n+" not available");const b=await r.arrayBuffer(),u=new Uint8Array(b);let t;
+function idmLoad(n){if(!IDM[n])IDM[n]=(async()=>{const r=await fetch("idmap/"+n+".gz.txt");if(!r.ok)throw new Error("ID table "+n+" not available");const b64=(await r.text()).trim();const bin=atob(b64),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);const b=u.buffer;let t;
   if(u[0]===0x1f&&u[1]===0x8b){if(typeof DecompressionStream==="undefined")throw new Error("This browser cannot read the ID tables; please update it");t=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream("gzip"))).text();}else t=new TextDecoder().decode(b);return JSON.parse(t);})().catch(e=>{delete IDM[n];throw e;});return IDM[n];}
 const UNIPROT_RE=/^(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$/;
 function idClass(t){let m;
