@@ -1578,9 +1578,9 @@ function pmqInputs(o){const out=[];for(const r of Object.values(st.reports)){if(
     const x=co(r,MAIN);if(!x||!x.chr)continue;const s=x.start!=null&&x.start!==""?+x.start:null,e=x.end!=null&&x.end!==""?+x.end:null,pk=x.peak!=null&&x.peak!==""?+x.peak:null;
     let mid,sd,len;if(s!=null&&e!=null){const lo=Math.min(s,e),hi=Math.max(s,e);len=hi-lo;if(len>o.maxLen)continue;mid=pk!=null&&pk>=lo&&pk<=hi?pk:(lo+hi)/2;sd=Math.max(len,0.2)/3.92;}
     else if(pk!=null||s!=null){mid=pk!=null?pk:s;const w=(r.cls==="MTA"||r.cls==="QTN")?o.wSNP:o.wQTL;sd=w/1.96;len=2*w;}else continue;
-    const st_=String(r.stat||"");const lod=+((st_.match(/LOD\s*([\d.]+)/i)||[])[1]||0);const pve=+(String(r.pve||"").match(/[\d.]+/)||[0])[0];
+    const st_=String(r.stat||"");const lod=+((st_.match(/LOD\s*(\d+(?:\.\d+)?)/i)||[])[1]||0);const pve=+(String(r.pve||"").match(/\d+(?:\.\d+)?/)||[0])[0];
     const w=(GWT[r.grade]||1)*(1+Math.min(pve,50)/50)*(lod?1+Math.min(lod,20)/20:1);
-    out.push({r,c:x.chr,x:mid,sd,len,w});}return out;}
+    if(!isFinite(mid)||!isFinite(sd)||sd<=0)continue;out.push({r,c:x.chr,x:mid,sd,len,w:isFinite(w)&&w>0?w:(GWT[r.grade]||1)});}return out;}
 function emFit(P,K,iters){const n=P.length;const xs=P.map(p=>p.x).sort((a,b)=>a-b);let mu=Array.from({length:K},(_,k)=>xs[Math.min(n-1,Math.floor((k+0.5)*n/K))]),pi=new Array(K).fill(1/K);const R=Array.from({length:n},()=>new Float64Array(K));let ll=0;
   for(let it=0;it<iters;it++){ll=0;for(let i=0;i<n;i++){const p=P[i];let s=0;for(let k=0;k<K;k++){const z=(p.x-mu[k])/p.sd;const v=pi[k]*Math.exp(-0.5*z*z)/(p.sd*2.5066283);R[i][k]=v;s+=v;}
       if(s<1e-300){let b=0;for(let k=1;k<K;k++)if(Math.abs(p.x-mu[k])<Math.abs(p.x-mu[b]))b=k;R[i].fill(0);R[i][b]=1;s=1;ll+=-700;}else{for(let k=0;k<K;k++)R[i][k]/=s;ll+=Math.log(s);}}
@@ -1599,7 +1599,7 @@ function runPMQ(){const o={cls:new Set([...document.querySelectorAll(".pmqCls:ch
   const step=()=>{if(ci_>=chrs.length){finish();return;}const c=chrs[ci_++];const P=IN.filter(p=>p.c===c);const cl=pmqChr(P,o);let j=0;
       for(const m of cl){const mem=m.members.map(i=>P[i]);const studies=new Set(mem.map(p=>p.r.source)),dis=[...new Set(mem.map(p=>p.r.disease))];if(mem.length<o.minN||studies.size<o.minS)continue;j++;
         const lo=Math.max(0,m.mu-m.ci),hi=m.mu+m.ci;const G=genesAll();const gs=(G.g[c]||[]).filter(g=>g[0]>=lo&&g[0]<=hi);
-        res.push({id:`pMQTL-${c}.${j}`,c,mu:m.mu,lo,hi,mem,studies:studies.size,dis,cls:[...new Set(mem.map(p=>p.r.cls))],pve:mem.map(p=>+(String(p.r.pve||"").match(/[\d.]+/)||[0])[0]).filter(Boolean),genes:gs.length,def:gs.filter(g=>g[2]>0).length,inlen:mem.reduce((a,p)=>a+Math.min(p.len,o.maxLen),0)/mem.length});}
+        res.push({id:`pMQTL-${c}.${j}`,c,mu:m.mu,lo,hi,mem,studies:studies.size,dis,cls:[...new Set(mem.map(p=>p.r.cls))],pve:mem.map(p=>+(String(p.r.pve||"").match(/\d+(?:\.\d+)?/)||[0])[0]).filter(Boolean),genes:gs.length,def:gs.filter(g=>g[2]>0).length,inlen:mem.reduce((a,p)=>a+Math.min(p.len,o.maxLen),0)/mem.length});}
       out.innerHTML=`<p class="small muted">Fitting mixture models… ${ci_}/${chrs.length} chromosomes</p>`;setTimeout(step,0);};
   const finish=()=>{PMQ={res,o,IN};
     const nm=res.filter(r=>r.dis.length>1).length;
