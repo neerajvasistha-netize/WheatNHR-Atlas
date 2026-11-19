@@ -313,7 +313,7 @@ td.num{font-size:13px}
   <div class="hero-in">
     <div class="brand">
       <h1>Wheat<span>TraitMap</span></h1>
-      <span class="eyebrow">An Atlas of Wheat Traits to Loci · release v1.3</span>
+      <span class="eyebrow">An Atlas of Wheat Traits to Loci · release v1.0</span>
     </div>
     <div class="inst"><div class="inst-txt"><b>Plant Genomics Lab</b><br><span>Dept. of Genetics and Plant Breeding, Rajiv Gandhi University, Itanagar</span></div></div>
   </div>
@@ -326,7 +326,7 @@ td.num{font-size:13px}
     <a href="#downloads" data-view="downloads">Downloads</a>
     <a href="#about" data-view="about">About &amp; changes</a>
   </nav>
-  <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.3 snapshot</span><button class="cnlink" id="cnOpen" type="button">Curation notice</button></div>
+  <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.0 snapshot</span><button class="cnlink" id="cnOpen" type="button">Curation notice</button></div>
   </div>
 </header>
 <main>
@@ -574,7 +574,7 @@ td.num{font-size:13px}
     <a href="mailto:neeraj.vasistha@rgu.ac.in">neeraj.vasistha@rgu.ac.in</a>. Corrections accepted
     into the atlas are recorded in the record's note, so the provenance of every change is visible.</p>
     <h2>How to cite</h2>
-    <p>Vasistha NK et al. WheatTraitMap: An Atlas of Wheat Traits to Loci (manuscript in preparation). Database release v1.3, November 2026.</p>
+    <p>Vasistha NK et al. WheatTraitMap: An Atlas of Wheat Traits to Loci (manuscript in preparation). Database release v1.0, November 2026.</p>
   </div>
   <div class="panel">
     <h2>Recent changes</h2>
@@ -596,13 +596,13 @@ td.num{font-size:13px}
     </div>
     <div>
       <h4>How to cite</h4>
-      <p class="small cite" id="citeTxt">Vasistha NK et al. WheatTraitMap: An Atlas of Wheat Traits to Loci (manuscript in preparation). Database release v1.3, November 2026.</p>
+      <p class="small cite" id="citeTxt">Vasistha NK et al. WheatTraitMap: An Atlas of Wheat Traits to Loci (manuscript in preparation). Database release v1.0, November 2026.</p>
       <button class="btn" type="button" id="citeCopy">Copy citation</button> <span class="small muted" id="citeMsg" aria-live="polite"></span>
     </div>
     <div>
       <h4>Data use</h4>
       <p class="small">WheatTraitMap is free to use for academic and non-commercial research, provided both the atlas and the original studies are cited. Positions are compiled from published studies and converted between genome assemblies, so please check them against the original publication before using them in breeding or gene-cloning decisions. For commercial use of any locus, please contact the authors of the original study.</p>
-      <p class="small muted">Release v1.3 · November 2026 · Reference assembly IWGSC RefSeq v2.1</p>
+      <p class="small muted">Release v1.0 · November 2026 · Reference assembly IWGSC RefSeq v2.1</p>
     </div>
   </div>
   <p class="foot-base small">Copyright © 2026 Plant Genomics Lab, Department of Genetics and Plant Breeding, Rajiv Gandhi University, Itanagar, Arunachal Pradesh, India. All rights reserved.</p>
@@ -791,7 +791,7 @@ function renderRegion(){const A=st.asm,CL=ALEN[A]||CHR,c=$("#rChr").value,f=num(
   const pv=p=>{if(p>=0.001)return p.toFixed(3);const [m,e]=p.toExponential(0).split("e");return `${m}×10<sup>${+e}</sup>`;};
   const cell=(n,f,p,sig)=>n==null?"–":`${sig?"<b>":""}${n}${f!==""&&f!=null?` (${f}×)`:""}${sig?"</b>":""}<div class="small muted">p ${pv(p)}${sig?" ✱":""}</div>`;
   const rows=cl.map(x=>({x,g:gcOf(x)})).filter(o=>!only||(o.g&&(o.g.ns||o.g.ws)));
-  if($("#gcNote"))$("#gcNote").textContent=onMain?`Gene content from the atlas v1.3 analysis on ${MAIN} (✱ significant against the same-zone rate after correction for 432 tests). ${rows.filter(o=>o.g&&(o.g.ns||o.g.ws)).length} enriched region(s) shown.`:`Gene content is available on ${MAIN} only; switch “Show positions on” to ${MAIN}.`;
+  if($("#gcNote"))$("#gcNote").textContent=onMain?`Gene content from the atlas v1.0 analysis on ${MAIN} (✱ significant against the same-zone rate after correction for 432 tests). ${rows.filter(o=>o.g&&(o.g.ns||o.g.ws)).length} enriched region(s) shown.`:`Gene content is available on ${MAIN} only; switch “Show positions on” to ${MAIN}.`;
   $("#cTbl tbody").innerHTML=rows.map(({x,g})=>{const names=x.loci.flatMap(l=>l.reps.map(r=>r.name));return `<tr data-c="${x.chr}" data-f="${x.lo.toFixed(1)}" data-t="${x.hi.toFixed(1)}"><td>${x.chr}</td><td class="num">${x.lo.toFixed(1)}–${x.hi.toFixed(1)}</td>
    <td>${[...new Set(x.loci.map(l=>l.disease))].map(d=>`<span class="dchip"><span class="sw" style="background:${DCOL[d]}"></span>${esc(d)}</span>`).join(" ")}</td>
    <td class="num">${g?g.g:"–"}</td><td class="num">${g?cell(g.n,g.nf,g.np,g.ns):"–"}</td><td class="num">${g?cell(g.w,g.wf,g.wp,g.ws):"–"}</td><td class="num">${g&&g.pr!==""?g.pr+"%":"–"}</td>
@@ -1524,7 +1524,7 @@ async function connect(){if(!window.claude||!window.claude.use){return;}
     try{st.canEdit=(await user.canEdit())===true;}catch(e){st.canEdit=false;}
   }
   $("#addBtn").hidden=!st.canWrite;
-  let got=0;const timer=setTimeout(()=>{if(!st.live)setStatus("snap","Live database not reachable yet; showing release v1.2");},10000);
+  let got=0;const timer=setTimeout(()=>{if(!st.live)setStatus("snap","Live database not reachable yet; showing release v1.0");},10000);
   const sub=(coll,apply)=>db.collection(coll).onSnapshot(snap=>{
       if(!snap.empty){apply(snap);}if(!snap.metadata.fromCache){got++;if(got>=1){clearTimeout(timer);st.live=true;setStatus("live",`Live database${st.canWrite?" · you can edit":" · read only"}`);}}renderAll();},
     err=>{clearTimeout(timer);setStatus("snap","Live updates stopped; showing the last data loaded");});
