@@ -1,6 +1,0 @@
-// Cloudflare mirror of the atlas: serves the web/ folder as static files (Worker "wheattraitmap").
-{
-  "name": "wheattraitmap",
-  "compatibility_date": "2026-11-18",
-  "assets": { "directory": "./web" }
-}
