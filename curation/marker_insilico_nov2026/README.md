@@ -36,3 +36,5 @@ PmY39 was not placed (alien 2U segment). `SSR_marker_sequences.xlsx` lists every
 where public (BARC, GWM) and the in-silico PCR product, plus the full GWM and BARC primer lists.
 
 WMC primer table (Gupta et al. 2002; wmc24-wmc331, supplied by the owner as an image, transcribed to `wmc_table.tsv`): only wmc105, wmc169 and wmc215 are used by unplaced atlas loci. wmc169 amplifies 3A 721.2 Mb but its locus is on an alien 3S chromosome; wmc105 (6B) and wmc215 (3A) give no product. No records changed.
+
+WMC genome-wide in-silico PCR (`epcr.py`, `wmc_epcr.json`): 42 of the 58 Gupta et al. 2002 primer pairs amplify in Chinese Spring RefSeq v1.0; 38 agree with the Zhao et al. 2019 positions (validation), 3 differ and 1 is new (WMC97, chrUn). New unique products were added to `data/markerpos_all.json.gz`. Sheet 'WMC physical map' in `SSR_marker_sequences.xlsx`.
