@@ -918,9 +918,9 @@ function renderDownloads(){
     ["Marker sequences",`SNP and tag sequences stored with the selected records (${sel.filter(r=>(r.snpseq||[]).length).length} records)`,[["FASTA",()=>dlFasta(sel),`WheatTraitMap_marker_sequences${t}.fasta`]]],
     ["Primers",`Primer pairs stored with the selected records (${sel.filter(r=>(r.primers||[]).length).length} records)`,[["CSV",()=>toCSV(dlPrimers(sel)),`WheatTraitMap_primers${t}.csv`]]],
     ["Papers reviewed","The literature tracker: every paper checked and its status",[["CSV",()=>toCSV(dlPapers()),"WheatTraitMap_papers_reviewed.csv"]]],
-    ["Genome view figure","The chromosome map as currently drawn on the Home page",[["SVG",()=>dlSvg(),"WheatTraitMap_genome_view.svg"]]]];
+    ["Genome view figure","The chromosome map as currently drawn on the Home page",[["SVG",()=>dlSvg(),"WheatTraitMap_genome_view.svg"],["PDF",()=>window.WTM_figurePdf($("#ideo")),"WheatTraitMap_genome_view.pdf"]]]];
   const tb=$("#dlTbl tbody");tb.innerHTML=items.map((it,i)=>`<tr><td><b>${esc(it[0])}</b></td><td class="small">${esc(it[1])}</td><td>${it[2].map((b,j)=>`<button class="btn" type="button" data-dl="${i}-${j}">${b[0]}</button>`).join(" ")}</td></tr>`).join("");
-  tb.querySelectorAll("button[data-dl]").forEach(b=>b.onclick=async()=>{const [i,j]=b.dataset.dl.split("-").map(Number);const f=items[i][2][j];b.disabled=true;const ok=await saveText(f[2],f[1]());b.disabled=false;b.textContent=ok?f[0]+" ✓":f[0];});}
+  tb.querySelectorAll("button[data-dl]").forEach(b=>b.onclick=async()=>{const [i,j]=b.dataset.dl.split("-").map(Number);const f=items[i][2][j];b.disabled=true;let ok=false;try{ok=await saveText(f[2],await f[1]());}catch(e){ok=false;}b.disabled=false;b.textContent=ok?f[0]+" ✓":f[0];});}
 /* ---- Analysis tools (all computed inside the atlas) ---- */
 async function saveText(name,data){try{const dl=await window.claude?.use?.("downloads");if(dl){await dl.save({filename:name,data});return true;}}catch(e){}
   try{const u=URL.createObjectURL(new Blob([data],{type:"text/plain"}));const l=document.createElement("a");l.href=u;l.download=name;document.body.appendChild(l);l.click();l.remove();setTimeout(()=>URL.revokeObjectURL(u),3000);return true;}catch(e){}
@@ -1712,5 +1712,189 @@ const EXTJSON=[['gokegg','gokegg_lite.json'],['markerslite','markers_lite.json']
 (function(){var h=document.querySelector("header.top");if(!h)return;function set(){document.documentElement.style.setProperty("--hdrH",h.getBoundingClientRect().height+"px");}
 set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEventListener("resize",set);})();
 </script>
+<style id="figpdf-css">
+.figbar{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin:8px 0 0}
+.figbar .btn{min-height:32px;padding:5px 12px;font-size:13px}
+.figbar .figmsg{font-size:12.5px;color:var(--muted)}
+</style>
+<script id="figpdf-js">
+/* Figure export: every chart in the atlas can be saved as a vector PDF with title, settings and citation. */
+(function(){
+  const $=q=>document.querySelector(q);
+  const ATLAS="WheatTraitMap: An Atlas of Wheat Traits to Loci",REL="Release v1.0",ASM="IWGSC RefSeq v2.1";
+  const SITE="https://neerajvasistha-netize.github.io/WheatNHR-Atlas/";
+  const LAB="Plant Genomics Lab, Department of Genetics and Plant Breeding, Rajiv Gandhi University, Itanagar, Arunachal Pradesh, India";
+  const JSPDF="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
+  const SVG2PDF="https://cdn.jsdelivr.net/npm/svg2pdf.js@2.2.3/dist/svg2pdf.umd.min.js";
+  const MAP={"−":"-","–":"-","—":"-","‑":"-","‐":"-","✱":"*","★":"*","≥":">=","≤":"<=","→":"->","←":"<-","↔":"<->","…":"...","‘":"'","’":"'","“":"\"","”":"\""," ":" "," ":" ","↕":"","↑":"","↓":"","✓":"","•":"·","α":"alpha","β":"beta","Δ":"delta","χ":"chi"};
+  const win=t=>String(t==null?"":t).replace(/[^\x00-\xFF]/g,c=>MAP[c]!=null?MAP[c]:"?");
+  const clean=t=>String(t||"").replace(/\s+/g," ").trim();
+  let libP=null;
+  const load=u=>new Promise((res,rej)=>{const s=document.createElement("script");s.src=u;s.onload=res;s.onerror=()=>rej(new Error("load "+u));document.head.appendChild(s);});
+  function libs(){if(!libP)libP=(async()=>{if(!window.jspdf)await load(JSPDF);try{if(!window.svg2pdf)await load(SVG2PDF);}catch(e){}})().catch(e=>{libP=null;throw e;});return libP;}
+
+  /* ---- what the figure shows ---- */
+  function labelOf(ctl){
+    let l=ctl.closest("label");if(!l&&ctl.id)l=document.querySelector(`label[for="${ctl.id}"]`);
+    if(!l)return ctl.getAttribute("aria-label")||ctl.name||"";
+    const c=l.cloneNode(true);c.querySelectorAll("input,select,textarea,button,option").forEach(x=>x.remove());return clean(c.textContent).replace(/:$/,"");
+  }
+  function settings(scope){
+    const out=[],checks={};
+    if(!scope)return out;
+    scope.querySelectorAll("input,select").forEach(c=>{
+      if(c.hidden||c.closest("[hidden]")||c.type==="hidden"||c.type==="button"||c.type==="file")return;
+      if(c.closest(".figbar,.drawer,.modal"))return;
+      if(c.type==="checkbox"||c.type==="radio"){
+        const grp=c.className&&!c.id?c.className:null;
+        if(grp){(checks[grp]=checks[grp]||[]);if(c.checked)checks[grp].push(labelOf(c)||c.value);return;}
+        out.push([labelOf(c),c.checked?"yes":"no"]);return;
+      }
+      let v=c.tagName==="SELECT"?(c.selectedOptions[0]?c.selectedOptions[0].textContent:c.value):c.value;
+      v=clean(v);if(!v)return;const k=labelOf(c);if(!k)return;out.push([k,v]);
+    });
+    Object.keys(checks).forEach(g=>{const lab=clean((scope.querySelector("."+g.split(" ")[0])||{}).closest?.("div")?.querySelector("b")?.textContent||"Selected").replace(/:$/,"");out.push([lab,checks[g].length?checks[g].join(", "):"all"]);});
+    return out;
+  }
+  function heading(el){
+    for(let n=el;n&&n!==document.body;n=n.parentElement){
+      const h=[...n.children].find(c=>/^H[2-4]$/.test(c.tagName));
+      if(h){const c=h.cloneNode(true);c.querySelectorAll("button,.small").forEach(x=>x.remove());const t=clean(c.textContent);if(t)return t;}
+    }
+    return "";
+  }
+  function context(svg){
+    const sec=svg.closest("section.view")||document.body,pane=svg.closest(".tpane")||svg.closest(".panel")||sec;
+    const isIdeo=svg.id==="ideo";
+    let title=isIdeo?"Genome view: resistance and trait loci on the 21 wheat chromosomes":heading(svg);
+    if(pane.classList&&pane.classList.contains("tpane")&&!isIdeo){const tool=clean(($("#toolsTitle")||{}).textContent)||"Tools";const tb=document.querySelector(`.ttab[data-t="${pane.id.replace(/^tp-/,"")}"]`);const hs=pane.querySelector(":scope > h3");const sub=clean(tb?tb.textContent:(hs?hs.textContent:""));const det=svg.closest("#pmqDetail")?heading(svg):"";title=[tool,sub].filter(Boolean).join(": ")+(det&&det!==tool&&det!==sub?" · "+det:"");}
+    if(!isIdeo&&!(pane.classList&&pane.classList.contains("tpane"))){const mp=sec.querySelector(".panel");const mh=mp?heading(mp.firstElementChild||mp):"";if(mh&&title&&title.indexOf(mh)<0)title=mh+": "+title;}
+    if(!title)title=clean(svg.getAttribute("aria-label"))||"Figure";
+    let set=settings(pane);
+    if(!set.length||isIdeo)set=set.concat(settings(sec.querySelector(".filters")));
+    const seen=new Set();set=set.filter(([k,v])=>{const key=k+"|"+v;if(seen.has(key))return false;seen.add(key);return true;});
+    const notes=[];
+    const desc=clean(svg.getAttribute("aria-label"));if(desc&&desc!==title)notes.push(desc+".");
+    if(isIdeo){
+      const leg=[...document.querySelectorAll("#legend button")];
+      const on=leg.filter(b=>b.getAttribute("aria-pressed")!=="false"&&!/^all\s*\/\s*none$/i.test(clean(b.textContent))).map(b=>clean(b.textContent)).filter(Boolean);
+      const off=leg.filter(b=>b.getAttribute("aria-pressed")==="false"&&!/^all\s*\/\s*none$/i.test(clean(b.textContent))).map(b=>clean(b.textContent)).filter(Boolean);
+      if(leg.length)notes.push(off.length?`Shown: ${on.join(", ")}. Hidden: ${off.join(", ")}.`:`Legend: ${on.join(", ")}.`);
+      const sel=svg.querySelector(".chr.sel");if(sel)notes.push("Selected chromosome highlighted.");
+      const cl=clean(($("#countLine")||{}).textContent);if(cl)notes.push(cl);
+      notes.push("Grade D loci (arm or bin only) are not drawn. Positions in Mb on the assembly selected on Home.");
+    }
+    const par=svg.parentElement;
+    if(par)[...par.children].forEach(c=>{if(c!==svg&&c.tagName==="P"){const t=clean([...c.childNodes].filter(n=>!(n.nodeType===1&&n.tagName==="BUTTON")).map(n=>n.textContent).join(" "));if(t)notes.push(t);}});
+    const intro=pane.querySelector(":scope > p.small.muted");if(intro&&!isIdeo){const t=clean(intro.textContent);if(t)notes.push(t);}
+    return {title,set,notes,isIdeo};
+  }
+
+  /* ---- vector copy of the figure in print colours ---- */
+  const PROPS=["fill","fill-opacity","stroke","stroke-width","stroke-opacity","stroke-dasharray","stroke-linecap","stroke-linejoin","opacity","font-size","font-weight","font-style","text-anchor","dominant-baseline","visibility","display"];
+  function printable(svg){
+    const root=document.documentElement,prev=root.getAttribute("data-theme");root.setAttribute("data-theme","light");
+    try{
+      const cl=svg.cloneNode(true),a=[svg,...svg.querySelectorAll("*")],b=[cl,...cl.querySelectorAll("*")];
+      a.forEach((o,i)=>{const n=b[i];if(!n||n.nodeType!==1)return;const cs=getComputedStyle(o);
+        PROPS.forEach(p=>{const v=cs.getPropertyValue(p);if(v&&v!=="normal"&&v!=="auto")n.setAttribute(p,v);});
+        if(/^(text|tspan)$/i.test(n.tagName)){n.setAttribute("font-family","helvetica");const fw=parseInt(cs.getPropertyValue("font-weight"),10)||400;n.setAttribute("font-weight",fw>=600?"bold":"normal");n.setAttribute("font-style",cs.getPropertyValue("font-style")==="italic"?"italic":"normal");}
+        n.removeAttribute("class");n.removeAttribute("style");});
+      cl.querySelectorAll("title,desc").forEach(t=>t.remove());
+      cl.querySelectorAll("text,tspan").forEach(t=>t.childNodes.forEach(c=>{if(c.nodeType===3)c.nodeValue=win(c.nodeValue);}));
+      let vb=svg.viewBox&&svg.viewBox.baseVal;let w=vb&&vb.width,h=vb&&vb.height;
+      if(!w||!h){const r=svg.getBoundingClientRect();w=r.width||800;h=r.height||400;cl.setAttribute("viewBox",`0 0 ${w} ${h}`);}
+      cl.setAttribute("xmlns","http://www.w3.org/2000/svg");cl.setAttribute("width",w);cl.setAttribute("height",h);cl.removeAttribute("role");
+      return {cl,w,h};
+    }finally{prev==null?root.removeAttribute("data-theme"):root.setAttribute("data-theme",prev);}
+  }
+  async function raster(cl,w,h){
+    const img=new Image();img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(new XMLSerializer().serializeToString(cl));
+    await img.decode();const k=Math.max(2,Math.min(4,3000/w)),c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);
+    const g=c.getContext("2d");g.fillStyle="#fff";g.fillRect(0,0,c.width,c.height);g.drawImage(img,0,0,c.width,c.height);return c.toDataURL("image/png");
+  }
+
+  /* ---- build the PDF ---- */
+  async function figPdf(svg){
+    await libs();
+    const {jsPDF}=window.jspdf,info=context(svg),{cl,w,h}=printable(svg);
+    const doc=new jsPDF({orientation:"landscape",unit:"mm",format:"a4",compress:true});
+    const PW=297,PH=210,M=14,TW=PW-2*M,today=new Date(),ds=today.toISOString().slice(0,10);
+    const cite=clean(($("#citeTxt")||{}).textContent)||`Vasistha NK et al. ${ATLAS}. Database ${REL.toLowerCase()}.`;
+    doc.setProperties({title:win(info.title),subject:win(ATLAS+" figure"),author:"Plant Genomics Lab, Rajiv Gandhi University",keywords:"wheat, loci, QTL, GWAS, RefSeq v2.1",creator:"WheatTraitMap"});
+    const footer=()=>{doc.setDrawColor(200);doc.line(M,PH-15,PW-M,PH-15);doc.setFont("helvetica","normal");doc.setFontSize(7);doc.setTextColor(110);
+      doc.text(win(doc.splitTextToSize("Cite: "+cite,TW)[0]),M,PH-11);
+      doc.text(win(`${LAB}  ·  ${SITE}`),M,PH-7.5);
+      doc.text(win(`Exported ${ds}  ·  page ${doc.internal.getNumberOfPages()}`),PW-M,PH-7.5,{align:"right"});};
+    // header band
+    doc.setFillColor(31,90,58);doc.rect(0,0,PW,9,"F");doc.setFont("helvetica","bold");doc.setFontSize(9);doc.setTextColor(255);
+    doc.text(win(ATLAS),M,6);doc.setFont("helvetica","normal");doc.text(win(`${REL}  ·  Reference assembly ${ASM}`),PW-M,6,{align:"right"});
+    let y=17;doc.setTextColor(19,32,26);doc.setFont("helvetica","bold");doc.setFontSize(13);
+    const tl=doc.splitTextToSize(win(info.title),TW);doc.text(tl,M,y);y+=tl.length*5.6+2;
+    // caption text first so the figure gets the space that is left
+    doc.setFontSize(8.5);const LH=3.7;
+    const capLines=[];
+    if(info.set.length){capLines.push(["b","Settings: "]);capLines.push(["n",info.set.map(([k,v])=>`${k}: ${v}`).join("; ")+"."]);}
+    if(info.notes.length){capLines.push(["b","Notes: "]);capLines.push(["n",info.notes.join(" ")]);}
+    const capText=capLines.map(x=>x[1]).join("");
+    const capH=Math.min(60,doc.splitTextToSize(win(capText),TW).length*LH+6);
+    const availH=PH-17-y-capH-4;
+    let fw=TW,fh=fw*h/w;if(fh>availH){fh=Math.max(40,availH);fw=fh*w/h;}
+    const fx=M+(TW-fw)/2;
+    doc.setDrawColor(223,229,225);doc.setLineWidth(0.2);doc.rect(fx-1.5,y-1.5,fw+3,fh+3);
+    let vector=false;
+    try{
+      const host=document.createElement("div");host.style.cssText="position:fixed;left:-99999px;top:0;width:"+w+"px;height:"+h+"px;";host.appendChild(cl);document.body.appendChild(host);
+      try{
+        if(window.svg2pdf&&window.svg2pdf.svg2pdf)await window.svg2pdf.svg2pdf(cl,doc,{x:fx,y,width:fw,height:fh});
+        else if(doc.svg)await doc.svg(cl,{x:fx,y,width:fw,height:fh});
+        else throw new Error("no svg2pdf");
+        vector=true;
+      }finally{host.remove();}
+    }catch(e){doc.addImage(await raster(cl,w,h),"PNG",fx,y,fw,fh);}
+    y+=fh+7;
+    // caption, flowing on to more pages when long
+    doc.setTextColor(19,32,26);doc.setFontSize(8.5);
+    const writeRun=(style,text)=>{doc.setFont("helvetica",style==="b"?"bold":"normal");
+      doc.splitTextToSize(win(text),TW).forEach(line=>{if(y>PH-19){footer();doc.addPage();y=16;}doc.text(line,M,y);y+=LH;});};
+    doc.setFont("helvetica","bold");doc.text("Figure. ",M,y);y+=LH;
+    capLines.forEach(([s,t])=>writeRun(s,t));
+    writeRun("n",(vector?"Vector figure":"Figure")+` exported from ${ATLAS} (${REL}). Positions are compiled from published studies; verify against the original publication before use.`);
+    footer();
+    return {blob:doc.output("blob"),title:info.title,date:ds};
+  }
+  const slug=t=>win(t).replace(/[^A-Za-z0-9]+/g,"_").replace(/^_|_$/g,"").slice(0,60)||"figure";
+  async function savePdf(name,blob){
+    try{const dl=await window.claude?.use?.("downloads");if(dl){await dl.save({filename:name,data:blob});return "saved";}}catch(e){if(e&&e.code==="declined")return "declined";}
+    try{const u=URL.createObjectURL(new Blob([blob],{type:"application/pdf"}));const l=document.createElement("a");l.href=u;l.download=name;document.body.appendChild(l);l.click();l.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);return "saved";}catch(e){}
+    return "failed";
+  }
+  window.WTM_figurePdf=async svg=>{const r=await figPdf(svg);return r.blob;};
+
+  /* ---- a "Save figure (PDF)" button under every chart ---- */
+  function eligible(s){
+    if(s.dataset.figpdf||s.closest(".hero-anim,header,button,.legend,.figbar,.drawer,.modal"))return false;
+    if(s.id==="ideo")return true;const vb=s.viewBox&&s.viewBox.baseVal;return !!(vb&&vb.width>=300);
+  }
+  function addButtons(){
+    document.querySelectorAll("main svg").forEach(s=>{
+      if(!eligible(s))return;s.dataset.figpdf="1";
+      const bar=document.createElement("div");bar.className="figbar";
+      bar.innerHTML='<span class="figmsg" aria-live="polite"></span><button class="btn" type="button">Save figure (PDF)</button>';
+      const anchor=s.parentElement&&s.parentElement.classList.contains("ideo-wrap")?s.parentElement:s;anchor.after(bar);
+      const btn=bar.querySelector("button"),msg=bar.querySelector(".figmsg");
+      btn.onclick=async()=>{btn.disabled=true;msg.textContent="Preparing PDF…";
+        try{const r=await figPdf(s);const st=await savePdf(`WheatTraitMap_${slug(r.title)}_${r.date}.pdf`,r.blob);
+          msg.textContent=st==="saved"?"PDF saved":st==="declined"?"Save cancelled":"Could not save here";}
+        catch(e){msg.textContent="Could not create the PDF (check your connection and try again)";}
+        btn.disabled=false;setTimeout(()=>{msg.textContent="";},6000);};
+    });
+  }
+  let queued=false;const q=()=>{if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;addButtons();});};
+  const start=()=>{addButtons();const m=document.querySelector("main");if(m)new MutationObserver(q).observe(m,{childList:true,subtree:true});};
+  document.readyState==="loading"?document.addEventListener("DOMContentLoaded",start):start();
+})();
+</script>
+
 </body>
 </html>
