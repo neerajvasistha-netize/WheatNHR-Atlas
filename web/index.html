@@ -308,7 +308,12 @@ td.num{font-size:13px}
 @media (max-width:600px){.hero-in{padding:20px 16px 22px}.hero .brand p{font-size:15px}.panel{padding:14px}.filters{padding:12px}.filters label{flex:1 1 140px}.filters input[type=search]{width:100%}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .gvtog{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin:4px 0 8px;padding:8px 10px;background:var(--field,#f4f7f5);border-radius:8px}.gvtog label{display:inline-flex;align-items:center;gap:4px;cursor:pointer}.gvtog .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
 .trsel{position:relative;display:inline-block;margin-left:10px;vertical-align:middle}
-.trbtn{min-height:32px!important;padding:4px 12px!important;font:600 13.5px var(--body)!important}
+.trbtn{display:inline-flex!important;align-items:center;gap:8px;min-height:34px!important;padding:4px 8px 4px 12px!important;font:600 13.5px var(--body)!important;background:var(--brand)!important;border-color:var(--brand)!important;color:#fff!important;border-radius:999px!important;box-shadow:0 2px 8px rgba(31,90,58,.25)!important;transition:transform .12s,box-shadow .12s}
+.trbtn:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(31,90,58,.32)!important}
+.trbtn .trbadge{background:#ffd23f;color:#3a2e00;border-radius:999px;padding:2px 9px;font:700 12px var(--body)}
+.trbtn.partial .trbadge{background:#fff;color:var(--brand)}
+.trbtn .trchev{font-size:11px;opacity:.85;margin-left:-2px}
+.trbtn[aria-expanded="true"] .trchev{transform:rotate(180deg)}
 .trmenu{position:absolute;left:0;top:calc(100% + 6px);z-index:30;width:min(440px,86vw);max-height:70vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.16);padding:10px 12px;font:400 13.5px/1.4 var(--body);letter-spacing:0}
 .trmenu[hidden]{display:none}
 .trhead{display:flex;justify-content:space-between;align-items:center;padding:2px 2px 8px;border-bottom:1px solid var(--line);margin-bottom:6px}
@@ -385,7 +390,7 @@ td.num{font-size:13px}
   
   <div class="stats" id="stats"></div>
   <div class="gvrow"><div class="panel gvmain">
-    <h2>Genome view <span class="muted small" id="ideoNote">· Click a chromosome to filter or <button type="button" id="ideoAll" class="cnlink" style="padding:0;font-size:inherit">select all</button></span><span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><span id="trLab">Traits: all diseases</span> <span aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span></h2>
+    <h2>Genome view <span class="muted small" id="ideoNote">· Click a chromosome to filter or <button type="button" id="ideoAll" class="cnlink" style="padding:0;font-size:inherit">select all</button></span><span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span></h2>
     <div class="ideo-wrap"><svg class="ideo" id="ideo" viewBox="0 0 1000 345" role="img" aria-label="Positions of anchored reports on the 21 wheat chromosomes"></svg></div>
     <div class="legend" id="legend"></div>
   </div>
@@ -754,7 +759,7 @@ function renderTraitMenu(){const m=$("#trMenu");if(!m)return;const cnt={};Object
       h+=box(names,cat,esc(cat),names.reduce((a,n)=>a+(cnt[n]||0),0),1,oc,true);
       if(oc)names.slice().sort().forEach(n=>{h+=box([n],n,`<span class="sw" style="background:${DCOL[n]}"></span>${esc(n)}`,cnt[n]||0,2,false,false);});});});
   m.innerHTML=h;m.querySelectorAll("input[data-ind]").forEach(i=>i.indeterminate=true);
-  const n=st.dOn.size,N=DIS.length;$("#trLab").textContent=n===N?`Traits: all ${N} diseases`:n===0?"Traits: none selected":`Traits: ${n} of ${N} diseases`;}
+  const n=st.dOn.size,N=DIS.length;$("#trLab").textContent=n===N?`All ${N} diseases`:n===0?"None selected":`${n} of ${N} diseases`;$("#trBtn").classList.toggle("partial",n!==N);}
 function renderLegend(){const cnt={};Object.values(st.reports).forEach(r=>cnt[r.disease]=(cnt[r.disease]||0)+1);
   $("#legend").innerHTML=TRAIT_TREE.flatMap(([top,cats])=>cats).map(([cat,ls])=>{const names=trNames(ls);if(!names.length)return "";
     return `<div class="leggrp"><span class="legcat">${esc(cat.replace(/^Diseases caused by /,"").replace(/^./,c=>c.toUpperCase()))}</span><div class="legitems">${names.map(n=>`<button type="button" data-d="${esc(n)}" aria-pressed="${st.dOn.has(n)}"><span class="sw" style="background:${DCOL[n]}"></span>${esc(n)} <span class="muted">${cnt[n]||0}</span></button>`).join("")}</div></div>`;}).join("");
