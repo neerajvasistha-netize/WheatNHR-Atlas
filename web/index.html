@@ -329,6 +329,26 @@ td.num{font-size:13px}
 .leggrp{display:grid;grid-template-columns:150px minmax(0,1fr);align-items:start;gap:4px 10px;padding:3px 0}.legitems{display:flex;flex-wrap:wrap;gap:4px 10px}.legcat{padding-top:3px}
 .legcat{font:600 12px var(--body);color:var(--muted);min-width:150px}
 @media (max-width:600px){.trsel{display:block;margin:8px 0 0}.leggrp{grid-template-columns:1fr}}
+.ctb-btn{display:inline-flex;align-items:center;gap:6px;margin-left:auto;border:0;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:7px 14px;font:600 13.5px var(--body);cursor:pointer;box-shadow:0 2px 8px rgba(181,69,27,.25)}.ctb-btn:hover{filter:brightness(1.07)}
+.ctb-rev{margin-left:8px;border:1px solid var(--brand);background:var(--surface);color:var(--brand);border-radius:999px;padding:6px 12px;font:600 13px var(--body);cursor:pointer}
+.navbar .status{margin-left:12px;white-space:nowrap}.navbar{flex-wrap:nowrap}@media (max-width:1100px){.navbar{flex-wrap:wrap}}
+.ctb-ov{position:fixed;inset:0;z-index:60;background:rgba(10,15,13,.5);display:flex;align-items:flex-start;justify-content:center;padding:4vh 12px;overflow:auto}.ctb-ov[hidden]{display:none}
+.ctb-box{background:var(--surface);color:var(--ink);border-radius:14px;width:min(920px,100%);padding:18px 20px;box-shadow:0 16px 48px rgba(0,0,0,.28)}
+.ctb-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.ctb-head h2{font:700 21px var(--display);margin:0}
+.ctb-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.ctb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px}.ctb-grid .w2{grid-column:1/-1}
+.ctb-grid label,.ctb-who label{display:block;font-size:13px;font-weight:600;color:var(--muted)}.ctb-grid label>input,.ctb-grid label>select,.ctb-grid label>textarea{display:block;width:100%;margin-top:4px;box-sizing:border-box}.ctb-grid .hint{display:block;margin-top:3px}
+.ctb-grid input,.ctb-grid select,.ctb-grid textarea{font:400 14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--chrom-edge);border-radius:8px;padding:7px 9px}
+.ctb-grid .hint{font-weight:400;font-size:12px;color:var(--muted)}.req{color:var(--accent)}
+.ctb-who{border:1px solid var(--line);border-radius:10px;margin:14px 0 0;padding:10px 12px}.ctb-who legend{font:700 14px var(--display);padding:0 4px;color:var(--ink)}
+label.chk{display:flex!important;flex-direction:row!important;align-items:flex-start;gap:8px!important;font-weight:400!important;color:var(--ink)!important;margin-top:8px}
+.chips2{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px}.chips2 label.chk{margin-top:0}
+.ctb-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.ctb-foot .msg{margin:0;flex:1}
+.ctb-cur{background:var(--field);border-radius:8px;padding:8px 10px;font-size:13px}
+.ctb-done{padding:10px 4px}.ctb-done h3{font:700 18px var(--display);margin:0 0 8px}.ctb-done ol li{margin:8px 0}
+.ctb-fix{margin:6px 0 4px}
+.rv-card{margin:10px 0}
+@media (max-width:640px){.ctb-grid{grid-template-columns:1fr}.ctb-btn{margin-left:0}}
 </style>
 </head>
 <body>
@@ -1876,6 +1896,192 @@ const EXTJSON=[['gokegg','gokegg_lite.json'],['markerslite','markers_lite.json']
 /* keep side panels below the fixed header */
 (function(){var h=document.querySelector("header.top");if(!h)return;function set(){document.documentElement.style.setProperty("--hdrH",h.getBoundingClientRect().height+"px");}
 set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEventListener("resize",set);})();
+</script>
+<script id="contribute-js">
+/* ---- Community contributions: submit new records or corrections with proof; curator approves before anything goes live ---- */
+(function(){
+const CURATOR="neeraj.vasistha@rgu.ac.in";
+const FREE=/@(gmail|googlemail|yahoo|ymail|rocketmail|hotmail|outlook|live|msn|icloud|me|mac|aol|proton(mail)?|pm|gmx|zoho|yandex|mail|inbox|qq|163|126|yeah|sina|sohu|foxmail|aliyun|rediffmail|rediff|naver|daum|hanmail|tutanota|fastmail|hushmail|lycos|web|t-online|libero|orange|free|laposte|seznam|wp|o2|interia|onet|bigpond|optusnet|shaw|rogers|sbcglobal|comcast|verizon|att|cox|earthlink|juno|btinternet|sky|virginmedia|talktalk)\.[a-z.]+$/i;
+const EMAIL=/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i, DOI=/^10\.\d{4,9}\/\S+$/i, ORCID=/^(https:\/\/orcid\.org\/)?\d{4}-\d{4}-\d{4}-\d{3}[\dX]$/;
+const ASMS=["RefSeq v1.0","RefSeq v1.1","RefSeq v2.1","Other assembly (state in notes)","Genetic map only (cM)"];
+const CLS=[["CG","Cloned gene"],["SG","Susceptibility / effector-sensitivity gene"],["DG","Designated (catalogued) gene"],["QTL","QTL"],["MTA","GWAS marker-trait association"],["QTN","QTN"],["BSA","Bulked-segregant (BSA/BSR-seq/QTL-seq) region"]];
+/* the atlas record format: [key, label, required, help] */
+const F=[["name","Locus or gene name",1,"As written in the paper, e.g. QYr.sdau-1BL, Yr34, Tsn1"],["cls","Class",1,"Type of report"],["disease","Disease or trait",1,"Choose from the list, or Other"],["trait_other","Other disease / trait",0,"Only if Other was chosen"],
+  ["chr","Chromosome",1,"1A to 7D"],["ref","Reference assembly of the positions",1,"Assembly used by the paper"],["start","Start (Mb)",0,"Interval start, Mb"],["end","End (Mb)",0,"Interval end, Mb"],["peak","Peak / SNP position (Mb)",0,"Peak marker or SNP, Mb"],
+  ["cm","Genetic position (cM) and map",0,"e.g. 45.2 cM, Ning7840 × Clark map"],["marker","Peak or flanking marker(s)",1,"e.g. AX-94529231; Xgwm410 – Xbarc165"],["marker_seq","Marker sequences or primers",0,"Needed to place cM-only loci in silico"],
+  ["pve","PVE (%)",0,"Phenotypic variance explained"],["stat","LOD or −log10(p)",0,"Test statistic"],["effect","Additive effect / allele",0,"Optional"],["population","Population or panel (type, size)",0,"e.g. 186 RILs; 286 diverse lines"],["env","Environments / years",0,"Optional"],
+  ["citation","Full citation",1,"Authors (year) title. Journal volume: pages"],["doi","DOI",1,"10.xxxx/… (the proof). Unpublished data are not accepted"],["location","Where in the paper",1,"e.g. Table 3; Fig. 2; Supplementary Table S5"],["note","Notes for the curator",0,"Anything that helps checking"]];
+const TEMPLATE_COLS=F.map(f=>f[0]);
+const EXAMPLE={name:"QYr.example-2B",cls:"QTL",disease:"Stripe rust",trait_other:"",chr:"2B",ref:"RefSeq v1.0",start:"150.20",end:"156.80",peak:"153.40",cm:"",marker:"AX-94509212; AX-95004521",marker_seq:"",pve:"12.4",stat:"LOD 6.8",effect:"",population:"180 RILs (A × B)",env:"3 environments, 2021-2023",citation:"Author A, Author B (2024) Title of the paper. Journal 10: 100-110",doi:"10.1000/example.2024.001",location:"Table 2",note:""};
+const $$=s=>document.querySelector(s), E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const disList=()=>DIS.map(d=>d[0]).sort().concat(["Other (state below)"]);
+const sel=(id,opts,val)=>`<select id="${id}">${opts.map(o=>{const [v,l]=Array.isArray(o)?o:[o,o];return `<option value="${E(v)}"${v===val?" selected":""}>${E(l)}</option>`;}).join("")}</select>`;
+function fieldInput(k,v){v=v??"";
+  if(k==="cls")return sel("cf_cls",[["","Choose…"]].concat(CLS.map(c=>[c[0],c[0]+" · "+c[1]])),v);
+  if(k==="disease")return sel("cf_disease",[["","Choose…"]].concat(disList()),v);
+  if(k==="chr")return sel("cf_chr",[["","Choose…"]].concat(CHRS),v);
+  if(k==="ref")return sel("cf_ref",[["","Choose…"]].concat(ASMS),v);
+  if(k==="citation"||k==="note"||k==="marker_seq")return `<textarea id="cf_${k}" rows="2">${E(v)}</textarea>`;
+  return `<input id="cf_${k}" type="${["start","end","peak"].includes(k)?"number":"text"}" step="any" value="${E(v)}">`;}
+function recForm(prefill){return `<div class="ctb-grid">${F.map(([k,l,req,h])=>`<label class="${["citation","note","marker_seq","marker"].includes(k)?"w2":""}">${E(l)}${req?' <b class="req">*</b>':""}${fieldInput(k,prefill&&prefill[k])}<span class="hint">${E(h)}</span></label>`).join("")}</div>`;}
+function who(){return `<fieldset class="ctb-who"><legend>About you</legend><div class="ctb-grid">
+  <label>Full name <b class="req">*</b><input id="cw_name" type="text" autocomplete="name"></label>
+  <label>Institutional email <b class="req">*</b><input id="cw_email" type="email" autocomplete="email" placeholder="name@university.edu"><span class="hint">Personal webmail (Gmail, Yahoo, Outlook…) is not accepted</span></label>
+  <label>Institution / organisation <b class="req">*</b><input id="cw_aff" type="text" autocomplete="organization"></label>
+  <label>Country <b class="req">*</b><input id="cw_country" type="text" autocomplete="country-name"></label>
+  <label>ORCID <input id="cw_orcid" type="text" placeholder="0000-0000-0000-0000"></label>
+  <label>Position <input id="cw_pos" type="text" placeholder="e.g. Assistant Professor, PhD scholar"></label></div>
+  <label class="chk"><input type="checkbox" id="cw_ok1"> The information comes from a published, peer-reviewed or otherwise verifiable source, which I cite with a DOI. <b class="req">*</b></label>
+  <label class="chk"><input type="checkbox" id="cw_ok2"> I agree that approved contributions are released openly with the atlas (CC BY 4.0) and credited to me. <b class="req">*</b></label></fieldset>`;}
+const TABS=[["new","Add a new record"],["fix","Correct a record"],["bulk","Bulk upload (template)"],["join","Join the consortium"]];
+function modal(){let m=$$("#ctbModal");if(m)return m;m=document.createElement("div");m.id="ctbModal";m.className="ctb-ov";m.hidden=true;m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");m.setAttribute("aria-labelledby","ctbTitle");
+  m.innerHTML=`<div class="ctb-box"><div class="ctb-head"><div><h2 id="ctbTitle">Contribute to WheatTraitMap</h2><p class="small muted">Every submission is checked by the curator against its source before it appears in the atlas.</p></div><button type="button" class="btn" id="ctbClose" aria-label="Close">Close</button></div>
+  <div class="ctb-tabs" role="tablist">${TABS.map(([k,l],i)=>`<button type="button" role="tab" class="extab${i===0?" on":""}" data-ct="${k}">${l}</button>`).join("")}</div><div id="ctbBody"></div></div>`;
+  document.body.appendChild(m);m.addEventListener("click",e=>{if(e.target===m)close();});$$("#ctbClose").onclick=close;
+  m.querySelector(".ctb-tabs").onclick=e=>{const b=e.target.closest("[data-ct]");if(b)show(b.dataset.ct);};
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!m.hidden)close();});return m;}
+function close(){const m=$$("#ctbModal");if(m)m.hidden=true;}
+let CUR={tab:"new",rec:null,bulk:[]};
+function open(tab,rec){const m=modal();m.hidden=false;m.querySelector(".ctb-tabs").hidden=false;$$("#ctbTitle").textContent="Contribute to WheatTraitMap";CUR.rec=rec||null;show(tab||"new");setTimeout(()=>{const f=m.querySelector("input,select,textarea");f&&f.focus();},30);}
+function show(tab){CUR.tab=tab;document.querySelectorAll("#ctbModal [data-ct]").forEach(b=>b.classList.toggle("on",b.dataset.ct===tab));const B=$$("#ctbBody");
+  if(tab==="new")B.innerHTML=`<p class="small">Add a locus, gene, QTL, MTA or QTN that is not yet in the atlas. Fields marked <b class="req">*</b> are required; give either a start and end, or a peak position (or a cM position with markers). <a href="#" data-guide>See the data format</a>.</p>${recForm(CUR.prefill)}${who()}${submitBar()}`;
+  if(tab==="fix"){const r=CUR.rec;B.innerHTML=`<p class="small">Report a wrong value in an existing record. Give the correct value and the table or figure of the source paper that shows it.</p>
+    <div class="ctb-grid"><label>Record ID <b class="req">*</b><input id="cx_id" type="text" value="${E(r?r.id:"")}" placeholder="e.g. V3213"><span class="hint">Shown in each record's details</span></label>
+    <label>What is wrong <b class="req">*</b>${sel("cx_field",[["","Choose…"],["chr","Chromosome"],["position","Position (start / end / peak)"],["name","Locus name"],["disease","Disease or trait"],["cls","Class"],["marker","Marker"],["source","Reference (wrong paper)"],["pve","PVE / LOD / effect"],["duplicate","Duplicate record"],["notreported","Not reported by the cited paper"],["other","Other"]],"")}</label>
+    <div class="w2" id="cx_cur">${r?curBlock(r):'<span class="hint">Enter a record ID to see its current values.</span>'}</div>
+    <label class="w2">Correct value(s) <b class="req">*</b><textarea id="cx_new" rows="2" placeholder="e.g. chromosome 5B; start 402.10 Mb, end 404.60 Mb (RefSeq v1.0)"></textarea></label>
+    <label class="w2">Explanation <b class="req">*</b><textarea id="cx_why" rows="2"></textarea></label>
+    <label class="w2">Citation of the evidence <b class="req">*</b><textarea id="cf_citation" rows="2">${E(r&&st.sources[r.source]?st.sources[r.source].citation:"")}</textarea></label>
+    <label>DOI <b class="req">*</b><input id="cf_doi" type="text" value="${E(r&&st.sources[r.source]&&(st.sources[r.source].url||"").replace(/^https?:\/\/(dx\.)?doi\.org\//,""))}"></label>
+    <label>Where in the paper <b class="req">*</b><input id="cf_location" type="text" placeholder="e.g. Table 3"></label></div>${who()}${submitBar()}`;
+    const ip=$$("#cx_id");ip.oninput=()=>{const x=st.reports[ip.value.trim()];$$("#cx_cur").innerHTML=x?curBlock(x):'<span class="hint">No record with this ID.</span>';};}
+  if(tab==="bulk")B.innerHTML=`<p class="small">For many records at once: download the template, fill one row per record (keep the column names), save as CSV and upload it here. Each row needs the same required fields as a single record, including its DOI and the table or figure.</p>
+    <div class="row" style="gap:8px;margin:8px 0"><button type="button" class="btn" id="cbTpl">Download template (CSV)</button><button type="button" class="btn" id="cbGuide">Download field guide</button><label class="btn" style="cursor:pointer">Upload filled CSV<input type="file" id="cbFile" accept=".csv,text/csv" hidden></label></div>
+    <div id="cbOut"></div>${who()}${submitBar()}`;
+  if(tab==="join")B.innerHTML=`<p class="small">The WheatTraitMap consortium brings together researchers who curate, check and extend the atlas worldwide. Members are credited on the atlas and in its publications, may be invited to curate a disease or trait module, and are consulted on new releases.</p>
+    <div class="ctb-grid"><label class="w2">Areas of expertise<span class="chips2">${["QTL mapping","GWAS","Gene cloning","Plant pathology","Bioinformatics","Pangenomics","Breeding","Abiotic stress","Quality traits"].map(x=>`<label class="chk"><input type="checkbox" class="cj_exp" value="${x}">${x}</label>`).join("")}</span></label>
+    <label class="w2">Diseases or traits you work on<input id="cj_traits" type="text" placeholder="e.g. spot blotch, stripe rust, heat tolerance"></label>
+    <label>Can you curate records for the atlas?${sel("cj_cur",["Yes, regularly","Occasionally","No, but I want updates"],"Occasionally")}</label>
+    <label class="w2">Message<textarea id="cj_msg" rows="2"></textarea></label></div>${who()}${submitBar("Send membership request")}`;
+  B.querySelectorAll("[data-guide]").forEach(a=>a.onclick=e=>{e.preventDefault();guide();});
+  if(tab==="bulk")bulkHooks();$$("#ctbSubmit").onclick=submit;}
+function curBlock(r){const c=co(r,MAIN)||{};return `<div class="ctb-cur"><b>${E(r.name)}</b> · ${E(r.cls)} · ${E(r.disease)} · ${E(c.chr||r.chr)} ${c.start!=null&&c.start!==""?E((+c.start).toFixed(2))+"–"+E((+c.end).toFixed(2)):(c.peak!=null?E((+c.peak).toFixed(2)):"")} Mb (${E(MAIN)}) · marker ${E(r.marker||"–")} · ${E(srcShort(r.source))} · grade ${E(r.grade)}</div>`;}
+const submitBar=l=>`<div class="ctb-foot"><p class="msg" id="ctbMsg" role="status"></p><button type="button" class="btn primary" id="ctbSubmit">${l||"Submit for review"}</button></div>`;
+/* ---- validation ---- */
+const g=id=>{const e=$$("#"+id);return e?String(e.value||"").trim():"";};
+function getWho(errs){const w={name:g("cw_name"),email:g("cw_email").toLowerCase(),affiliation:g("cw_aff"),country:g("cw_country"),orcid:g("cw_orcid"),position:g("cw_pos")};
+  if(!w.name)errs.push("your name");if(!EMAIL.test(w.email))errs.push("a valid email");else if(FREE.test(w.email))errs.push("an institutional email (personal webmail is not accepted)");
+  if(!w.affiliation)errs.push("your institution");if(!w.country)errs.push("your country");if(w.orcid&&!ORCID.test(w.orcid))errs.push("a valid ORCID or leave it empty");
+  if(!$$("#cw_ok1").checked||!$$("#cw_ok2").checked)errs.push("both confirmations");return w;}
+function checkRec(r,errs,pre){pre=pre||"";const need=F.filter(f=>f[2]).map(f=>f[0]);need.forEach(k=>{if(!String(r[k]??"").trim())errs.push(pre+F.find(f=>f[0]===k)[1].toLowerCase());});
+  if(r.disease&&/^Other/.test(r.disease)&&!r.trait_other)errs.push(pre+"the other disease or trait");
+  if(r.chr&&!CHRS.includes(r.chr))errs.push(pre+"a chromosome from 1A to 7D");
+  const s=num(r.start),e=num(r.end),p=num(r.peak);const cmOnly=/cM/.test(r.ref||"");
+  if(!cmOnly&&p==null&&(s==null||e==null))errs.push(pre+"a start and end, or a peak position (Mb)");
+  if(cmOnly&&!r.cm)errs.push(pre+"the genetic position (cM)");
+  if(s!=null&&e!=null&&e<s)errs.push(pre+"an end that is not before the start");
+  if(r.doi&&!DOI.test(r.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i,"")))errs.push(pre+"a DOI of the form 10.xxxx/…");}
+function readRec(){const r={};F.forEach(([k])=>r[k]=g("cf_"+k));r.doi=r.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i,"");return r;}
+/* ---- bulk ---- */
+function parseCSV(t){const rows=[];let row=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}else if(c==='"')q=true;else if(c===","||c==="\t"){row.push(f);f="";}else if(c==="\n"||c==="\r"){if(c==="\r"&&t[i+1]==="\n")i++;row.push(f);rows.push(row);row=[];f="";}else f+=c;}if(f!==""||row.length){row.push(f);rows.push(row);}return rows.filter(r=>r.some(x=>x.trim()!==""));}
+function bulkHooks(){$$("#cbTpl").onclick=()=>saveText("WheatTraitMap_submission_template.csv",toCSV([TEMPLATE_COLS,TEMPLATE_COLS.map(k=>EXAMPLE[k]||"")]));
+  $$("#cbGuide").onclick=()=>saveText("WheatTraitMap_field_guide.csv",toCSV([["column","field","required","how to fill"]].concat(F.map(f=>[f[0],f[1],f[2]?"yes":"no",f[3]])).concat([["cls","allowed values","",CLS.map(c=>c[0]+" = "+c[1]).join("; ")],["disease","allowed values","",disList().join("; ")],["ref","allowed values","",ASMS.join("; ")]])));
+  $$("#cbFile").onchange=async e=>{const f=e.target.files[0];if(!f)return;const rows=parseCSV(await f.text());const h=rows.shift().map(x=>x.trim().toLowerCase());
+    const miss=["name","chr","doi"].filter(k=>!h.includes(k));if(miss.length){$$("#cbOut").innerHTML=`<p class="msg err">The file is missing the column(s): ${E(miss.join(", "))}. Use the template.</p>`;return;}
+    CUR.bulk=rows.map(r=>{const o={};h.forEach((k,i)=>o[k]=(r[i]||"").trim());o.doi=(o.doi||"").replace(/^https?:\/\/(dx\.)?doi\.org\//i,"");const er=[];checkRec(o,er);o._err=er;return o;}).filter(o=>o.name!==EXAMPLE.name);
+    const bad=CUR.bulk.filter(o=>o._err.length).length;
+    $$("#cbOut").innerHTML=`<p class="small">${CUR.bulk.length} record(s) read; ${bad?`<b class="req">${bad} need fixing</b> (see the last column), then upload again.`:"all complete."}</p><div class="tscroll" style="max-height:260px"><table class="tbl"><thead><tr><th>#</th><th>Name</th><th>Class</th><th>Disease</th><th>Chr</th><th>Position</th><th>DOI</th><th>Check</th></tr></thead><tbody>${CUR.bulk.map((o,i)=>`<tr><td>${i+1}</td><td>${E(o.name)}</td><td>${E(o.cls)}</td><td>${E(o.disease)}</td><td>${E(o.chr)}</td><td class="num">${E(o.start||o.peak||o.cm)}${o.end?"–"+E(o.end):""}</td><td>${E(o.doi)}</td><td class="${o._err.length?"req":""}">${o._err.length?E("needs "+o._err.join(", ")):"ok"}</td></tr>`).join("")}</tbody></table></div>`;};}
+function guide(){close();location.hash="#about";setTimeout(()=>{const a=document.getElementById("ctbFormat");if(a)a.scrollIntoView({behavior:"smooth"});},250);}
+/* ---- submit ---- */
+async function submit(){const msg=$$("#ctbMsg");msg.className="msg";const errs=[];const w=getWho(errs);let sub={type:CUR.tab,contributor:w,submitted:new Date().toISOString(),status:"pending",atlas_release:"v1.0"};
+  if(CUR.tab==="new"){const r=readRec();checkRec(r,errs);sub.records=[r];}
+  if(CUR.tab==="fix"){const id=g("cx_id");if(!st.reports[id])errs.push("an existing record ID");if(!g("cx_field"))errs.push("what is wrong");if(!g("cx_new"))errs.push("the correct value");if(!g("cx_why"))errs.push("an explanation");
+    const ev={citation:g("cf_citation"),doi:g("cf_doi").replace(/^https?:\/\/(dx\.)?doi\.org\//i,""),location:g("cf_location")};if(!ev.citation)errs.push("the citation");if(!DOI.test(ev.doi))errs.push("a DOI");if(!ev.location)errs.push("where in the paper");
+    const r=st.reports[id];sub.correction={record_id:id,record_name:r?r.name:"",field:g("cx_field"),current:r?{chr:r.chr,start:r.start,end:r.end,peak:r.peak,ref:r.ref,marker:r.marker,name:r.name,disease:r.disease,cls:r.cls,source:r.source}:null,proposed:g("cx_new"),reason:g("cx_why")};sub.evidence=ev;}
+  if(CUR.tab==="bulk"){if(!CUR.bulk.length)errs.push("an uploaded CSV with at least one record");else if(CUR.bulk.some(o=>o._err.length))errs.push("all rows complete (fix the rows marked in the table)");sub.records=CUR.bulk.map(o=>{const c={...o};delete c._err;return c;});}
+  if(CUR.tab==="join"){sub.membership={expertise:[...document.querySelectorAll(".cj_exp:checked")].map(x=>x.value),traits:g("cj_traits"),curate:g("cj_cur"),message:g("cj_msg")};}
+  if(errs.length){msg.className="msg err";msg.textContent="Please give "+[...new Set(errs)].join("; ")+".";return;}
+  sub.id="SUB-"+sub.submitted.slice(0,10).replace(/-/g,"")+"-"+Math.random().toString(36).slice(2,7).toUpperCase();
+  /* 1. inside the Claude atlas, signed-in contributors write straight to the review queue */
+  if(st.db&&st.uid){try{const ref=st.db.doc("submissions/"+st.uid);const cur=await ref.get();const items=(cur.exists&&Array.isArray(cur.data().items))?cur.data().items.slice():[];items.push(sub);await ref.set({items,updated:sub.submitted});
+      $$("#ctbBody").innerHTML=done(sub,true);return;}catch(e){/* not permitted here: fall back to email */}}
+  /* 2. on the public website: send by email from the institutional address, with the proof attached */
+  $$("#ctbBody").innerHTML=done(sub,false);const body=mailBody(sub);
+  $$("#ctbMail").href=`mailto:${CURATOR}?subject=${encodeURIComponent("WheatTraitMap submission "+sub.id)}&body=${encodeURIComponent(body.length>1800?body.slice(0,1800)+"\n\n[Full submission in the attached JSON file]":body)}`;
+  $$("#ctbJson").onclick=()=>saveText(sub.id+".json",JSON.stringify(sub,null,1));
+  $$("#ctbCopy").onclick=async()=>{try{await navigator.clipboard.writeText(body+"\n\n"+JSON.stringify(sub));$$("#ctbCopy").textContent="Copied";}catch(e){}};}
+function mailBody(s){const w=s.contributor;let t=`WheatTraitMap submission ${s.id} (${({new:"new record",fix:"correction",bulk:"bulk upload",join:"consortium membership"})[s.type]})\n\nFrom: ${w.name}, ${w.position||""} ${w.affiliation}, ${w.country}\nEmail: ${w.email}${w.orcid?"\nORCID: "+w.orcid:""}\n\n`;
+  (s.records||[]).forEach((r,i)=>{t+=`Record ${i+1}: ${r.name} | ${r.cls} | ${r.disease}${r.trait_other?" ("+r.trait_other+")":""} | ${r.chr} | ${r.start||""}-${r.end||""} peak ${r.peak||""} Mb (${r.ref}) ${r.cm?"| "+r.cm:""}\n  marker: ${r.marker}\n  source: ${r.citation} doi:${r.doi} (${r.location})\n`;});
+  if(s.correction){t+=`Correction of ${s.correction.record_id} (${s.correction.record_name}): ${s.correction.field}\n  correct value: ${s.correction.proposed}\n  reason: ${s.correction.reason}\n  evidence: ${s.evidence.citation} doi:${s.evidence.doi} (${s.evidence.location})\n`;}
+  if(s.membership){t+=`Expertise: ${s.membership.expertise.join(", ")}\nTraits: ${s.membership.traits}\nCuration: ${s.membership.curate}\n${s.membership.message}\n`;}
+  return t+`\nPlease attach the paper or supplementary file that shows these values.`;}
+function done(s,stored){return stored?`<div class="ctb-done"><h3>Thank you, your submission is in the review queue</h3><p>Reference <b class="mono">${E(s.id)}</b>. The curator checks it against the source and you will be contacted at <b>${E(s.contributor.email)}</b>. Nothing changes in the atlas until it is approved.</p><button type="button" class="btn" onclick="document.getElementById('ctbModal').hidden=true">Close</button></div>`
+  :`<div class="ctb-done"><h3>Last step: send your submission by email</h3><p>Reference <b class="mono">${E(s.id)}</b>. Send it <b>from ${E(s.contributor.email)}</b> (this confirms your institutional address) to <b class="mono">${CURATOR}</b>, and <b>attach the proof</b>: the paper or the supplementary file with the values${s.type==="bulk"?", and your filled CSV":""}.</p>
+   <ol class="small"><li><a class="btn primary" id="ctbMail" href="#">Open email with the submission</a> (if no email app opens, copy the text below).</li><li><button type="button" class="btn" id="ctbJson">Download submission file (.json)</button> and attach it to the email.</li><li><button type="button" class="btn" id="ctbCopy">Copy submission text</button></li></ol>
+   <p class="small muted">The curator checks every submission against its source. Approved records appear in the next atlas update with your name as contributor.</p></div>`;}
+/* ---- curator review (owner and editors of the Claude atlas) ---- */
+async function loadQueue(){const out=[];if(!st.db)return out;try{const q=await st.db.collection("submissions").get();q.docs.forEach(d=>{const x=d.data()||{};(x.items||[]).forEach((it,i)=>out.push({...it,_doc:d.id,_i:i}));});}catch(e){}return out;}
+async function setStatus(it,status,note){const ref=st.db.doc("submissions/"+it._doc);const cur=await ref.get();const items=(cur.exists&&cur.data().items||[]).slice();const i=items.findIndex(x=>x.id===it.id);const upd={...it,status,reviewed:new Date().toISOString(),review_note:note||""};delete upd._doc;delete upd._i;if(i>=0)items[i]=upd;else items.push(upd);await ref.set({items,updated:upd.reviewed});}
+function sourceFor(r){const doi=(r.doi||"").toLowerCase();const hit=Object.entries(st.sources).find(([k,s])=>doi&&(s.url||"").toLowerCase().includes(doi));return hit?hit[0]:null;}
+async function approve(it,grades){const now=new Date().toISOString();const credit=`${it.contributor.name} (${it.contributor.affiliation})`;
+  if(it.type==="join"){await st.db.doc("members/"+it.id).set({name:it.contributor.name,institution:it.contributor.affiliation,country:it.contributor.country,position:it.contributor.position||"",orcid:it.contributor.orcid||"",expertise:(it.membership.expertise||[]).join(", "),traits:it.membership.traits||"",joined:now.slice(0,10)});logChange("approved consortium member",credit,it.id);return;}
+  if(it.type==="fix"){const r=st.reports[it.correction.record_id];if(!r)throw new Error("record not found");const nr={...stripMeta(r)};nr.note=(nr.note?nr.note+" ":"")+`Correction submitted by ${credit} on ${it.submitted.slice(0,10)} (${it.id}): ${it.correction.field}: ${it.correction.proposed}. Evidence: ${it.evidence.citation}, doi:${it.evidence.doi}, ${it.evidence.location}. Approved ${now.slice(0,10)}; edit the fields below to apply the corrected values.`;
+    nr.updated_at=now;nr.updated_by=st.uid;await st.db.doc("reports/"+r.id).set(nr);st.reports[r.id]=nr;logChange("noted correction",`${r.name} (${it.id})`,r.id);return r.id;}
+  const ids=[];for(const [i,r] of (it.records||[]).entries()){let src=sourceFor(r);if(!src){src="S"+Date.now().toString(36)+i;await st.db.doc("sources/"+src).set({citation:r.citation,url:"https://doi.org/"+r.doi,created_by:st.uid,created_at:now});st.sources[src]={citation:r.citation,url:"https://doi.org/"+r.doi};}
+    const id="CM"+Date.now().toString(36).toUpperCase()+i;const dis=/^Other/.test(r.disease)?(r.trait_other||"Other"):r.disease;const rf=/cM/.test(r.ref)?"RefSeq v1.0":(/^Other/.test(r.ref)?"RefSeq v1.0":r.ref);
+    const rec={id,name:r.name,cls:r.cls,disease:dis,chr:r.chr,start:num(r.start),end:num(r.end),peak:num(r.peak),ref:rf,marker:r.marker,pve:r.pve||"",stat:r.stat||"",effect:r.effect||"",source:src,grade:grades[i]||"B",curation:"community",
+      evidence:r.location,note:`Community contribution by ${credit}, submitted ${it.submitted.slice(0,10)} (${it.id}); approved by the curator ${now.slice(0,10)}.${r.population?" Population: "+r.population+".":""}${r.cm?" Genetic position: "+r.cm+".":""}${r.env?" Environments: "+r.env+".":""}${r.note?" "+r.note:""}`,
+      contributor:credit,asm:{_note:"position from contributor; conversion pending"},created_at:now,created_by:st.uid};
+    await st.db.doc("reports/"+id).set(rec);st.reports[id]=rec;ids.push(id);logChange("added (community)",`${rec.name} (${rec.disease}, ${rec.chr}) from ${credit}`,id);}
+  return ids.join(", ");}
+async function review(){const m=modal();m.hidden=false;document.querySelectorAll("#ctbModal [data-ct]").forEach(b=>b.classList.remove("on"));$$("#ctbTitle").textContent="Review submissions";m.querySelector(".ctb-tabs").hidden=true;const B=$$("#ctbBody");B.innerHTML=`<p class="small muted">Loading the queue…</p>`;
+  const q=await loadQueue();const pend=q.filter(x=>x.status==="pending"),old=q.filter(x=>x.status!=="pending");
+  B.innerHTML=`<p class="small">Submissions sent through the Claude atlas arrive here. Submissions emailed from the public website can be loaded with their .json file. Approving writes the record to the live atlas; check the values against the attached proof first.</p>
+  <div class="row" style="gap:8px;margin:6px 0 12px"><label class="btn" style="cursor:pointer">Load emailed submission (.json)<input type="file" id="rvFile" accept=".json,application/json" hidden></label></div>
+  <h3 style="font-size:15px">Pending (${pend.length})</h3><div id="rvList">${pend.map((it,k)=>card(it,k)).join("")||'<p class="small muted">No pending submissions.</p>'}</div>
+  ${old.length?`<details style="margin-top:12px"><summary class="small">Reviewed (${old.length})</summary>${old.map(it=>`<p class="small">${E(it.id)} · ${E(it.type)} · ${E(it.contributor&&it.contributor.name)} · <b>${E(it.status)}</b> ${E(it.review_note||"")}</p>`).join("")}</details>`:""}`;
+  const bind=(list)=>B.querySelectorAll("[data-rv]").forEach(b=>b.onclick=async()=>{const it=list[b.dataset.k];const act=b.dataset.rv;const out=b.closest(".rv-card").querySelector(".rv-msg");b.disabled=true;
+    try{if(act==="ok"){const grades=[...b.closest(".rv-card").querySelectorAll(".rv-grade")].map(s=>s.value);const res=await approve(it,grades);if(it._doc)await setStatus(it,"approved",res?"records "+res:"");else await st.db.doc("submissions/_emailed").get().then(async c=>{const items=(c.exists&&c.data().items||[]).slice();items.push({...it,status:"approved",reviewed:new Date().toISOString(),review_note:res||""});await st.db.doc("submissions/_emailed").set({items});});out.className="rv-msg msg ok";out.textContent="Approved"+(res?" · "+res:"")+". Use Export for GitHub to update the public website.";renderAll&&renderAll();}
+      else{const why=b.closest(".rv-card").querySelector(".rv-why").value.trim();if(it._doc)await setStatus(it,"rejected",why);out.className="rv-msg msg";out.textContent="Rejected. Tell the contributor at "+it.contributor.email+(why?": "+why:"");}}
+    catch(e){out.className="rv-msg msg err";out.textContent="Could not save: "+(e.message||e)+". Only the owner or editors can approve.";b.disabled=false;}});
+  bind(pend);
+  $$("#rvFile").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const it=JSON.parse(await f.text());if(!it.id||!it.contributor)throw new Error("not a WheatTraitMap submission file");$$("#rvList").insertAdjacentHTML("afterbegin",card(it,"e"));const list={e:it};B.querySelectorAll('[data-k="e"]').forEach(b=>b.onclick=null);bind(Object.assign([],pend,{e:it}));}catch(err){alertBox(err.message);}};}
+function alertBox(t){$$("#rvList").insertAdjacentHTML("afterbegin",`<p class="msg err">${E(t)}</p>`);}
+function card(it,k){const w=it.contributor||{};const inst=EMAIL.test(w.email||"")&&!FREE.test(w.email||"");
+  const recs=(it.records||[]).map((r,i)=>`<tr><td>${E(r.name)}</td><td>${E(r.cls)}</td><td>${E(r.disease)}${r.trait_other?" ("+E(r.trait_other)+")":""}</td><td>${E(r.chr)}</td><td class="num">${E(r.start)}${r.end?"–"+E(r.end):""}${r.peak?" ("+E(r.peak)+")":""} ${E(r.ref)}${r.cm?" · "+E(r.cm):""}</td><td>${E(r.marker)}</td><td><a href="https://doi.org/${E(r.doi)}" target="_blank" rel="noopener">${E(r.doi)}</a> · ${E(r.location)}</td><td><select class="rv-grade" aria-label="Grade for ${E(r.name)}">${["A","B","C","D"].map(x=>`<option${x==="B"?" selected":""}>${x}</option>`).join("")}</select></td></tr>`).join("");
+  return `<div class="rv-card panel"><div class="row" style="justify-content:space-between"><b>${E(it.id)}</b><span class="small muted">${E(({new:"New record",fix:"Correction",bulk:"Bulk upload",join:"Consortium membership"})[it.type]||it.type)} · ${E((it.submitted||"").slice(0,10))}</span></div>
+   <p class="small">${E(w.name)} · ${E(w.position||"")} ${E(w.affiliation)}, ${E(w.country)} · <span class="mono">${E(w.email)}</span> <span class="pill ${inst?"g-A":"g-B"}">${inst?"institutional domain":"check email"}</span>${w.orcid?` · <a href="https://orcid.org/${E(w.orcid.replace(/^https:\/\/orcid\.org\//,""))}" target="_blank" rel="noopener">ORCID</a>`:""}</p>
+   ${recs?`<div class="tscroll" style="max-height:240px"><table class="tbl"><thead><tr><th>Name</th><th>Class</th><th>Disease</th><th>Chr</th><th>Position</th><th>Marker</th><th>Proof</th><th>Grade</th></tr></thead><tbody>${recs}</tbody></table></div>`:""}
+   ${it.correction?`<p class="small"><b>Correction of ${E(it.correction.record_id)}</b> (${E(it.correction.record_name)}) · ${E(it.correction.field)}<br>Correct value: ${E(it.correction.proposed)}<br>Reason: ${E(it.correction.reason)}<br>Proof: ${E(it.evidence.citation)} · <a href="https://doi.org/${E(it.evidence.doi)}" target="_blank" rel="noopener">${E(it.evidence.doi)}</a> · ${E(it.evidence.location)}</p>`:""}
+   ${it.membership?`<p class="small">Expertise: ${E(it.membership.expertise.join(", "))} · Traits: ${E(it.membership.traits)} · Curation: ${E(it.membership.curate)}<br>${E(it.membership.message)}</p>`:""}
+   <div class="row" style="gap:8px;align-items:center;margin-top:6px"><button type="button" class="btn primary" data-rv="ok" data-k="${k}">Approve</button><input class="rv-why" type="text" placeholder="Reason, if rejecting" style="flex:1;min-width:160px"><button type="button" class="btn danger" data-rv="no" data-k="${k}">Reject</button></div><p class="rv-msg msg"></p></div>`;}
+/* ---- consortium members (About) ---- */
+async function members(){const el=$$("#ctbMembers");if(!el)return;let list=[];try{const r=await fetch("members.json");if(r.ok)list=(await r.json()).members||[];}catch(e){}
+  if(st.db){try{const q=await st.db.collection("members").get();q.docs.forEach(d=>{const x=d.data();if(!list.some(m=>m.name===x.name))list.push(x);});}catch(e){}}
+  el.innerHTML=list.length?`<table class="tbl"><thead><tr><th>Name</th><th>Institution</th><th>Country</th><th>Role / expertise</th></tr></thead><tbody>${list.map(m=>`<tr><td>${m.orcid?`<a href="https://orcid.org/${E(String(m.orcid).replace(/^https:\/\/orcid\.org\//,""))}" target="_blank" rel="noopener">${E(m.name)}</a>`:E(m.name)}</td><td>${E(m.institution)}</td><td>${E(m.country)}</td><td class="small">${E(m.role||m.expertise||"")}</td></tr>`).join("")}</tbody></table>`:`<p class="small muted">Members will be listed here once approved.</p>`;}
+/* ---- buttons in the places people look ---- */
+function place(){
+  const nav=$$(".navbar .status");if(nav&&!$$("#ctbNav")){nav.insertAdjacentHTML("beforebegin",`<button type="button" class="ctb-btn" id="ctbNav"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M7 2h2v5h5v2H9v5H7V9H2V7h5z" fill="currentColor"/></svg>Contribute</button><button type="button" class="ctb-rev" id="ctbRev" hidden>Review submissions <span id="ctbCount"></span></button>`);
+    $$("#ctbNav").onclick=()=>open("new");$$("#ctbRev").onclick=review;}
+  const dl=$$("#dlCsv");if(dl&&!$$("#ctbHome")){dl.insertAdjacentHTML("afterend",`<button type="button" class="btn" id="ctbHome" title="Submit loci or a correction with proof">Submit new loci</button>`);$$("#ctbHome").onclick=()=>open("new");}
+  const fl=$$(".foot-links");if(fl&&!$$("#ctbFoot")){fl.insertAdjacentHTML("beforeend",`<a href="#" id="ctbFoot">Contribute data</a><a href="#" id="ctbFoot2">Join the consortium</a>`);$$("#ctbFoot").onclick=e=>{e.preventDefault();open("new");};$$("#ctbFoot2").onclick=e=>{e.preventDefault();open("join");};}
+  const ab=$$("#v-about .grid2");if(ab&&!$$("#ctbAbout")){ab.insertAdjacentHTML("afterend",`<div class="panel prose" id="ctbAbout" style="margin-top:14px;max-width:none"><h2>Contribute and the WheatTraitMap consortium</h2>
+    <p>WheatTraitMap is open to corrections and new results from researchers everywhere. Anyone with an institutional email address can submit a new locus, gene, QTL, MTA or QTN, report an error in a record, or upload many records with the template. Every submission must cite its source with a DOI and the table or figure that shows the values. The curator checks each one against its source, and nothing enters the atlas without approval. Approved records are credited to the contributor.</p>
+    <div class="row" style="gap:8px;margin:10px 0"><button type="button" class="btn primary" data-open="new">Add a new record</button><button type="button" class="btn" data-open="fix">Correct a record</button><button type="button" class="btn" data-open="bulk">Bulk upload</button><button type="button" class="btn" data-open="join">Join the consortium</button></div>
+    <h2 id="ctbFormat">Data format</h2><p class="small">One row per report. Required fields are marked *. Positions are in Mb on the assembly the paper used; loci reported only in cM need their markers (and sequences or primers, if not standard) so they can be placed in silico.</p>
+    <div class="tscroll" style="max-height:none"><table class="tbl"><thead><tr><th>Column</th><th>Field</th><th>Required</th><th>How to fill</th></tr></thead><tbody>${F.map(f=>`<tr><td class="mono">${f[0]}</td><td>${E(f[1])}</td><td>${f[2]?"*":""}</td><td class="small">${E(f[3])}</td></tr>`).join("")}<tr><td class="mono">cls</td><td colspan="3" class="small">${E(CLS.map(c=>c[0]+" = "+c[1]).join("; "))}</td></tr></tbody></table></div>
+    <h2>How submissions are reviewed</h2><ol class="small"><li>The contributor submits with an institutional email and a DOI, plus the table or figure (and attaches the paper or supplement when emailing).</li><li>The curator checks every value against the source, converts the positions to RefSeq v2.1 and the pangenome assemblies, and assigns the anchoring grade.</li><li>Approved records appear in the next update with the contributor's name; rejected submissions receive a reason.</li></ol>
+    <h2>Consortium members</h2><div id="ctbMembers"></div></div>`);
+    $$("#ctbAbout").querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>open(b.dataset.open));members();}
+  const d=$$("#drawer");if(d&&d.classList.contains("on")&&st.sel&&!d.querySelector(".ctb-fix")){const h=d.querySelector("h3");const r=st.reports[st.sel];if(h&&r){const b=document.createElement("button");b.type="button";b.className="btn ctb-fix";b.textContent="Suggest a correction";b.title="Report an error in this record, with proof";b.onclick=()=>open("fix",r);(d.querySelector("dl.kv")||h).insertAdjacentElement("beforebegin",b);}}
+}
+async function owner(){for(let i=0;i<40&&!st.user;i++)await new Promise(r=>setTimeout(r,500));let ok=false;try{ok=!!(st.user&&(await st.user.isOwner()||st.canEdit));}catch(e){}
+  if(!ok||!st.db)return;const b=$$("#ctbRev");if(!b)return;b.hidden=false;const q=await loadQueue();const n=q.filter(x=>x.status==="pending").length;$$("#ctbCount").textContent=n?`(${n})`:"";}
+window.WTM_contribute=open;window.WTM_review=review;
+let qd=false;const go=()=>{place();new MutationObserver(()=>{if(qd)return;qd=true;requestAnimationFrame(()=>{qd=false;place();});}).observe(document.body,{childList:true,subtree:true});owner();};
+document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go();
+})();
+
 </script>
 <script id="expr-js">
 /* ---- In-silico expression of DEGs (Genomic tools) ---- */
