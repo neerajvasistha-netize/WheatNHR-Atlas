@@ -19,3 +19,10 @@ Result: 75 records placed (`records.tsv`); 51 in `web/seed_ad68.json`, 24 live-d
 and in `web/seed_live.json`. Not placed: wPt DArT markers with no public sequence (about 100), SSRs without an accessible primer
 sequence (GWM 8xx/9xx, many WMC, CFA, CFD), AFLP and KSU/FCP RFLP probes without sequence, and SNPs whose physical position
 lies on a homoeologous chromosome.
+
+## BARC re-run with relaxed primer matching (ad69, same day)
+The BARC primer list uploaded by the owner is identical to the USDA-ARS list already used. Many BARC primers carry a 5' GCG tail
+that is not in the genome, so the 11 pairs that failed were re-run on their target chromosomes (`relax.py`): each primer located by
+its 3' 15 bases, product 50-1500 bp. Six more records placed (`web/seed_ad69.json`, S163-005 in the live database):
+Yrxy2 (barc5, 2A), QLr.osu-7BL and YrC591 (barc182, 7B), QTLBvr5AS (barc10, 5A), FHB association 2B (barc101), QYr.caas-2BS (barc13).
+QPm.caas-7AL was rejected (barc174 product on 7AS). barc121, barc147, barc173, barc45, barc98 and the 3S/6B targets give no product.
