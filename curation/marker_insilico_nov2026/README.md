@@ -34,3 +34,5 @@ expected size (e.g. GWM255 148 bp, GWM257 193 bp, GWM263 136 bp) placed QSb.bhu-
 4BS FHB QTL of Lu et al. 2012, YrS2199 and the 5A QTL of Szabo-Hever et al. 2014 (`web/seed_ad70.json`, live records updated).
 PmY39 was not placed (alien 2U segment). `SSR_marker_sequences.xlsx` lists every unplaced SSR marker in the atlas with its primers
 where public (BARC, GWM) and the in-silico PCR product, plus the full GWM and BARC primer lists.
+
+WMC primer table (Gupta et al. 2002; wmc24-wmc331, supplied by the owner as an image, transcribed to `wmc_table.tsv`): only wmc105, wmc169 and wmc215 are used by unplaced atlas loci. wmc169 amplifies 3A 721.2 Mb but its locus is on an alien 3S chromosome; wmc105 (6B) and wmc215 (3A) give no product. No records changed.
