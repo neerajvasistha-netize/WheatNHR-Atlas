@@ -5,7 +5,8 @@ Input: any gene list (all ID types of the enrichment tool), optional log2 fold c
 Functional response map: genes are assigned to functional categories by keyword rules on the IWGSC gene
 descriptions (the rules are the NMCAT list in web/index.html), grouped by the cell compartment where each
 category mainly acts (apoplast and cell wall, plasma membrane, cytoplasm, nucleus, chloroplast). One cell per
-gene, coloured by log2 fold change. The layout is the atlas's own design.
+gene, coloured by log2 fold change, drawn on a schematic plant cell (apoplast, cell wall, membrane, cytoplasm,
+nucleus, chloroplast) with arrows for the main flow of the defence response. The layout is the atlas's own design.
 
 Gene network: genes are linked by
 - shared function: 2 or more specific GO terms (each annotated to at most 300 genes) or a KEGG pathway;

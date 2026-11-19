@@ -1734,34 +1734,52 @@ async function runNet(){const o=$("#nmOut");const txt=$("#nmIn").value;if(!txt.t
   o.querySelectorAll("[data-nm]").forEach(b=>b.onclick=()=>{o.querySelectorAll("[data-nm]").forEach(x=>x.classList.toggle("on",x===b));o.querySelectorAll("[data-nmp]").forEach(p=>p.hidden=p.dataset.nmp!==b.dataset.nm);});
   nmMap(o.querySelector('[data-nmp="map"]'));
   try{await nmNet(o.querySelector('[data-nmp="net"]'));}catch(e){o.querySelector('[data-nmp="net"]').innerHTML=`<p class="msg err">${esc(e.message)}</p>`;}}
-/* ---- functional response map: own layout, genes as coloured cells in compartment boxes ---- */
-function nmMap(el){const G=NM.genes,m=NM.hasFC?Math.max(1,Math.min(6,Math.ceil(Math.max(...G.filter(g=>g.fc!=null).map(g=>Math.abs(g.fc)))))):1;
-  const boxes=[];for(const c of NMCAT){if(c.sub){const subs=c.sub.map(([s])=>({s,gs:G.filter(g=>g.cat.includes(c.k+"|"+s))})).filter(x=>x.gs.length);if(subs.length)boxes.push({c,subs});}
-    else{const gs=G.filter(g=>g.cat.includes(c.k));if(gs.length)boxes.push({c,gs});}}
-  const unas=G.filter(g=>!g.cat.length).length;if(!boxes.length){el.innerHTML=`<p class="small muted">None of the genes fall into the functional categories of the map (${unas} unassigned).</p>`;return;}
-  const W=980,cs=9,gap=1.5,pad=8,out=[];let y=34;const ord=g=>g.fc==null?1e9:-g.fc;
-  const cells=(gs,x0,y0,cols)=>gs.slice().sort((a,b)=>ord(a)-ord(b)).map((g,i)=>{const cx=x0+(i%cols)*(cs+gap),cy=y0+Math.floor(i/cols)*(cs+gap);
-     return `<rect x="${cx}" y="${cy}" width="${cs}" height="${cs}" fill="${fcCol(g.fc,m)}" stroke="#777" stroke-width=".4" data-tip="${esc(`${v11id(g.k)}${g.d?"\n"+g.d:""}${g.fc!=null?"\nlog2FC "+g.fc.toFixed(2):""}`)}"/>`;}).join("");
-  for(const band of ["apo","pm","cyt","nuc","chl"]){const bs=boxes.filter(b=>b.c.band===band);if(!bs.length)continue;const by0=y;y+=22;let x=pad+8,rowH=0;const parts=[];
-    for(const b of bs){let w,h,inner="";
-      if(b.subs){const sw=Math.max(...b.subs.map(s=>Math.min(12,Math.max(4,Math.ceil(Math.sqrt(s.gs.length*1.6))))));const colw=sw*(cs+gap)+12;const ncol=Math.max(1,Math.min(b.subs.length,Math.floor((W-2*pad-24)/(colw+6))));
-        const rows=[];for(let i=0;i<b.subs.length;i+=ncol)rows.push(b.subs.slice(i,i+ncol));let yy=22;
-        for(const r of rows){const hh=Math.max(...r.map(s=>Math.ceil(s.gs.length/sw)))*(cs+gap)+18;r.forEach((s,j)=>{const sx=10+j*(colw+6);inner+=`<text x="${sx}" y="${yy+9}" font-size="9.5" font-weight="700">${esc(s.s)} <tspan font-weight="400" fill="#666">${s.gs.length}</tspan></text>${cells(s.gs,sx,yy+13,sw)}`;});yy+=hh+4;}
-        w=Math.min(W-2*pad-16,Math.max(ncol*(colw+6)+14,(b.c.nm.length+5)*5.9+24));h=yy+4;}
-      else{const cols=Math.min(22,Math.max(8,Math.ceil(Math.sqrt(b.gs.length*2.2))));w=Math.max(cols*(cs+gap)+20,(b.c.nm.length+String(b.gs.length).length+1)*5.9+24);h=22+Math.ceil(b.gs.length/cols)*(cs+gap)+10;inner=cells(b.gs,10,24,cols);}
-      if(x+w>W-pad-8&&x>pad+8){x=pad+8;y+=rowH+8;rowH=0;}
-      const title=b.c.nm,cnt=b.subs?b.subs.reduce((a,s)=>a+s.gs.length,0):b.gs.length;
-      parts.push(`<g transform="translate(${x},${y})"><rect width="${w}" height="${h}" rx="6" fill="#fff" stroke="#bbb"/><text x="10" y="15" font-size="10.5" font-weight="700">${esc(encTrunc(title,Math.floor((w-24-String(cnt).length*6)/5.9)))} <tspan font-weight="400" fill="#666">${cnt}</tspan></text>${inner}</g>`);
-      x+=w+8;rowH=Math.max(rowH,h);}
-    y+=rowH+10;out.push(`<rect x="${pad}" y="${by0}" width="${W-2*pad}" height="${y-by0}" rx="10" fill="${NMBAND[band][1]}" stroke="#d6d6d6"/><text x="${pad+10}" y="${by0+15}" font-size="10.5" font-weight="700" fill="#555" letter-spacing=".4">${NMBAND[band][0].toUpperCase()}</text>`+parts.join(""));y+=8;}
+/* ---- functional response map: a schematic plant cell with one tile per gene (own design) ---- */
+const NMCOL={pr:"#2f7d4f",wall:"#8a6d3b",rec:"#3a6fb0",tra:"#3b8ea5",nlr:"#b5121b",sig:"#d97706",ros:"#c2410c",deg:"#7c3aed",hsp:"#a16207",sec:"#be185d",hor:"#0f766e",tf:"#6d28d9",ps:"#15803d"};
+const NMSLOT={pr:[170,44,350,104],wall:[540,44,340,104],rec:[192,186,370,104],tra:[582,186,456,104],nlr:[192,312,214,112],sig:[420,312,300,112],ros:[734,312,304,112],
+  hor:[192,442,408,124],deg:[614,442,206,124],hsp:[834,442,204,124],tf:[214,606,330,140],sec:[580,596,214,136],ps:[848,622,170,104]};
+function nmTiles(gs,x,y,w,h,m,rk){const n=gs.length;if(!n)return {svg:"",more:0};const g=1.8;let s=20;
+  for(;s>=4;s-=0.5){const c=Math.floor((w+g)/(s+g)),r=Math.floor((h+g)/(s+g));if(c*r>=n)break;}if(s<4)s=4;
+  const c=Math.max(1,Math.floor((w+g)/(s+g))),r=Math.max(1,Math.floor((h+g)/(s+g))),cap=c*r,show=gs.slice().sort((a,b)=>(b.fc??-1e9)-(a.fc??-1e9)).slice(0,cap);
+  const svg=show.map((q,i)=>`<rect x="${(x+(i%c)*(s+g)).toFixed(1)}" y="${(y+Math.floor(i/c)*(s+g)).toFixed(1)}" width="${s}" height="${s}" rx="${s>7?1.5:0.8}" fill="${fcCol(q.fc,m)}" stroke="rgba(0,0,0,.25)" stroke-width=".4" data-tip="${esc(`${v11id(q.k)}${q.d?"\n"+q.d:""}${q.fc!=null?"\nlog2FC "+q.fc.toFixed(2):""}`)}"/>`).join("");
+  return {svg,more:n-show.length};}
+function nmCard(k,title,gs,subs,m){const [x,y,w,h]=NMSLOT[k],col=NMCOL[k];const all=subs?subs.flatMap(s=>s.gs):gs;const n=new Set(all.map(g=>g.k)).size,up=all.filter(g=>g.fc!=null&&g.fc>0).length,dn=all.filter(g=>g.fc!=null&&g.fc<0).length;
+  const o=[`<g opacity="${n?1:.55}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" fill="#fff" stroke="${col}" stroke-opacity=".45" filter="url(#nmCardSh)"/><path d="M${x} ${y+9}a9 9 0 0 1 9 -9h${w-18}a9 9 0 0 1 9 9v13h-${w}z" fill="${col}"/>`,
+    `<text x="${x+9}" y="${y+15}" font-size="10.5" font-weight="700" fill="#fff">${esc(encTrunc(title,Math.floor((w-70)/5.9)))}</text><text x="${x+w-8}" y="${y+15}" font-size="9.5" fill="#fff" text-anchor="end">${NM.hasFC&&n?`▲${up} ▼${dn}`:n}</text>`];
+  if(!n)o.push(`<text x="${x+w/2}" y="${y+h/2+12}" font-size="9.5" fill="#888" text-anchor="middle">no genes</text>`);
+  else if(!subs){const t=nmTiles(gs,x+8,y+30,w-16,h-38,m);o.push(t.svg);if(t.more)o.push(`<text x="${x+w-8}" y="${y+h-5}" font-size="8.5" fill="#555" text-anchor="end">+${t.more} more</text>`);}
+  else{const cols=k==="hor"?4:3,rows=Math.ceil(subs.length/cols),cw=(w-12)/cols,ch=(h-30)/rows;subs.forEach((s,i)=>{const sx=x+6+(i%cols)*cw,sy=y+26+Math.floor(i/cols)*ch;
+      o.push(`<text x="${sx+3}" y="${sy+10}" font-size="9" font-weight="700" fill="${s.gs.length?col:"#999"}">${esc(s.s)}<tspan font-weight="400" fill="#777"> ${s.gs.length}</tspan></text>`);const t=nmTiles(s.gs,sx+3,sy+14,cw-8,ch-17,m);o.push(t.svg);if(t.more)o.push(`<text x="${sx+cw-6}" y="${sy+10}" font-size="8" fill="#555" text-anchor="end">+${t.more}</text>`);});}
+  o.push(`</g>`);return o.join("");}
+function nmMap(el){const G=NM.genes,m=NM.hasFC?Math.max(1,Math.min(6,Math.ceil(Math.max(...G.filter(g=>g.fc!=null).map(g=>Math.abs(g.fc)))))):1;const W=1080,H=850;
+  const o=[`<defs><filter id="nmCardSh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-opacity=".14"/></filter><marker id="nmArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8b95a1"/></marker>
+     <radialGradient id="nmNuc" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#f3ecfc"/><stop offset="1" stop-color="#e2d5f6"/></radialGradient><radialGradient id="nmChl" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#e9f7ee"/><stop offset="1" stop-color="#cdebd8"/></radialGradient>
+     <linearGradient id="nmCyt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf7"/><stop offset="1" stop-color="#fbf4e4"/></linearGradient></defs>`];
+  /* apoplast, cell wall, membrane, cytoplasm */
+  o.push(`<rect x="0" y="26" width="${W}" height="${H-26}" rx="14" fill="#f4f8f3"/>`);
+  o.push(`<text x="22" y="44" font-size="10" font-weight="700" fill="#6b7f6b" letter-spacing=".6">APOPLAST</text>`);
+  o.push(`<rect x="156" y="164" width="${W-176}" height="${H-184}" rx="46" fill="#e7dcc0" stroke="#cdbb8f" stroke-width="2"/><rect x="170" y="176" width="${W-204}" height="${H-210}" rx="38" fill="url(#nmCyt)" stroke="#6f9fd6" stroke-width="2.4" stroke-dasharray="7 3"/>`);
+  o.push(`<text x="${W-30}" y="160" font-size="9.5" fill="#8a7a50" text-anchor="end" font-weight="700" letter-spacing=".5">CELL WALL</text><text x="${W-40}" y="306" font-size="9" fill="#5b86b8" text-anchor="end" font-weight="700" letter-spacing=".5" transform="rotate(0)">PLASMA MEMBRANE</text><text x="200" y="${H-44}" font-size="10" font-weight="700" fill="#a08b5a" letter-spacing=".6">CYTOPLASM</text>`);
+  o.push(`<ellipse cx="379" cy="676" rx="200" ry="104" fill="url(#nmNuc)" stroke="#a98bd8" stroke-width="2"/><text x="379" y="590" font-size="9.5" font-weight="700" fill="#7c5bb5" text-anchor="middle" letter-spacing=".6">NUCLEUS</text>`);
+  o.push(`<ellipse cx="933" cy="674" rx="118" ry="92" fill="url(#nmChl)" stroke="#5fae7b" stroke-width="2"/><path d="M850 690q20 -14 40 0t40 0t40 0" fill="none" stroke="#9fd2ae" stroke-width="3"/><path d="M856 712q20 -14 40 0t40 0t40 0" fill="none" stroke="#9fd2ae" stroke-width="3"/><text x="933" y="600" font-size="9.5" font-weight="700" fill="#3f8a5a" text-anchor="middle" letter-spacing=".6">CHLOROPLAST</text>`);
+  /* pathogen */
+  o.push(`<g transform="translate(36,60)" data-tip="Pathogen attack: the response the gene list describes"><path d="M60 46c18 -6 30 4 46 -2M56 54c10 14 26 16 34 30M50 40c-6 -16 6 -26 2 -38" fill="none" stroke="#8d6e4c" stroke-width="3" stroke-linecap="round"/><ellipse cx="48" cy="48" rx="22" ry="16" fill="#b08968" stroke="#7a5c3e" stroke-width="2"/><circle cx="42" cy="45" r="3" fill="#7a5c3e"/><circle cx="54" cy="51" r="2.4" fill="#7a5c3e"/><text x="48" y="92" font-size="10" font-weight="700" fill="#7a5c3e" text-anchor="middle">Pathogen</text></g>`);
+  /* flow arrows (behind cards) */
+  const ar=(d)=>o.push(`<path d="${d}" fill="none" stroke="#8b95a1" stroke-width="2" stroke-dasharray="1 0" marker-end="url(#nmArr)" opacity=".8"/>`);
+  ar("M142 120C160 150 200 160 250 184");ar("M380 290C390 300 400 305 420 315");ar("M300 424C300 432 300 436 300 440");ar("M570 424C560 500 520 560 470 600");ar("M560 680C568 676 572 672 578 668");ar("M150 640C110 560 110 240 168 150");
+  /* cards */
+  const cat=(k)=>G.filter(g=>g.cat.includes(k));const subs=(k)=>{const C=NMCAT.find(c=>c.k===k);return C.sub.map(([s])=>({s,gs:G.filter(g=>g.cat.includes(k+"|"+s))}));};
+  for(const C of NMCAT){if(!NMSLOT[C.k])continue;o.push(nmCard(C.k,C.nm,C.sub?null:cat(C.k),C.sub?subs(C.k):null,m));}
   /* legend */
-  const ly=y+6;const lg=[];if(NM.hasFC){const gid="nmg"+Math.random().toString(36).slice(2,7);lg.push(`<defs><linearGradient id="${gid}"><stop offset="0" stop-color="${fcCol(-m,m)}"/><stop offset=".5" stop-color="${fcCol(0,m)}"/><stop offset="1" stop-color="${fcCol(m,m)}"/></linearGradient></defs><text x="${pad}" y="${ly+10}" font-size="10" font-weight="700">log2 fold change</text><rect x="${pad+100}" y="${ly}" width="160" height="12" fill="url(#${gid})" stroke="#999" stroke-width=".5"/><text x="${pad+100}" y="${ly+25}" font-size="9.5">−${m}</text><text x="${pad+180}" y="${ly+25}" font-size="9.5" text-anchor="middle">0</text><text x="${pad+260}" y="${ly+25}" font-size="9.5" text-anchor="end">+${m}</text>`);
-    if(G.some(g=>g.fc==null))lg.push(`<rect x="${pad+290}" y="${ly}" width="12" height="12" fill="#c9c9c9" stroke="#777" stroke-width=".4"/><text x="${pad+307}" y="${ly+10}" font-size="9.5">no value</text>`);}
-  else lg.push(`<rect x="${pad}" y="${ly}" width="12" height="12" fill="#c9c9c9" stroke="#777" stroke-width=".4"/><text x="${pad+17}" y="${ly+10}" font-size="9.5">one gene (add a log2 fold-change column to colour the cells)</text>`);
-  lg.push(`<text x="${W-pad}" y="${ly+10}" font-size="9.5" text-anchor="end" fill="#555">One cell = one gene · ${unas.toLocaleString()} genes outside these categories</text>`);
+  const ly=H+14,lg=[];const unas=G.filter(g=>!g.cat.length).length;
+  if(NM.hasFC){const gid="nmg"+Math.random().toString(36).slice(2,7);lg.push(`<defs><linearGradient id="${gid}"><stop offset="0" stop-color="${fcCol(-m,m)}"/><stop offset=".5" stop-color="${fcCol(0,m)}"/><stop offset="1" stop-color="${fcCol(m,m)}"/></linearGradient></defs><text x="16" y="${ly+11}" font-size="10" font-weight="700">log2 fold change</text><rect x="118" y="${ly+1}" width="180" height="12" rx="2" fill="url(#${gid})" stroke="#999" stroke-width=".5"/><text x="118" y="${ly+26}" font-size="9.5">−${m} (down)</text><text x="208" y="${ly+26}" font-size="9.5" text-anchor="middle">0</text><text x="298" y="${ly+26}" font-size="9.5" text-anchor="end">+${m} (up)</text>`);
+    if(G.some(g=>g.fc==null))lg.push(`<rect x="320" y="${ly+1}" width="12" height="12" rx="1.5" fill="#c9c9c9" stroke="rgba(0,0,0,.25)" stroke-width=".4"/><text x="337" y="${ly+11}" font-size="9.5">no value</text>`);
+    lg.push(`<text x="410" y="${ly+11}" font-size="9.5">▲ up-regulated · ▼ down-regulated genes per box</text>`);}
+  else lg.push(`<rect x="16" y="${ly+1}" width="12" height="12" rx="1.5" fill="#c9c9c9" stroke="rgba(0,0,0,.25)" stroke-width=".4"/><text x="33" y="${ly+11}" font-size="9.5">one gene; add a log2 fold-change column to colour the tiles</text>`);
+  lg.push(`<text x="16" y="${ly+44}" font-size="9.5" fill="#555">One tile = one gene · arrows: main flow of the defence response · ${unas.toLocaleString()} genes outside these categories</text>`);
   const title="Functional response map of the gene list";
-  el.innerHTML=`<svg viewBox="0 0 ${W} ${ly+34}" style="width:100%;max-width:${W}px" role="img" aria-label="${title}" data-title="${title}"><text x="${pad}" y="20" font-size="12" font-weight="700">${title}</text>${out.join("")}${lg.join("")}</svg>
-   <p class="small muted">Genes are sorted into functional categories from their IWGSC annotation and placed in the cell compartment where each category mainly acts; within a box, cells run from most up-regulated to most down-regulated. A gene with several matching descriptions can appear in more than one box. Hover a cell for the gene. <button class="btn" type="button" id="nmMapCsv">Save gene categories (CSV)</button></p>`;
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${ly+54}" style="width:100%;max-width:${W}px" role="img" aria-label="${title}" data-title="${title}"><text x="16" y="18" font-size="12.5" font-weight="700">${title}</text>${o.join("")}${lg.join("")}</svg>
+   <p class="small muted">Genes are sorted into functional categories from their IWGSC annotation and drawn in the part of the cell where each category mainly acts; in every box the tiles run from most up-regulated to most down-regulated. A gene matching several categories can appear in more than one box. Hover a tile for the gene. <button class="btn" type="button" id="nmMapCsv">Save gene categories (CSV)</button></p>`;
   $("#nmMapCsv").onclick=()=>saveText("WheatTraitMap_functional_categories.csv",toCSV([["gene_v1.1","gene_v2.1","log2FC","categories","description"]].concat(G.map(g=>[v11id(g.k),v21of(g.k),g.fc==null?"":g.fc,g.cat.map(c=>{const [a,b]=c.split("|");const C=NMCAT.find(x=>x.k===a);return C.nm+(b?": "+b:"");}).join("; "),g.d]))));}
 /* ---- gene network ---- */
 let NMGO=null;function nmTermSize(){if(NMGO)return NMGO;const G=gokegg();const gc=new Map(),kc=new Map();for(const [k,a] of G.A){for(const i of a[0])gc.set(i,(gc.get(i)||0)+1);for(const i of a[1])kc.set(i,(kc.get(i)||0)+1);}NMGO={gc,kc};return NMGO;}
