@@ -1726,7 +1726,7 @@ set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEven
   const LAB="Plant Genomics Lab, Department of Genetics and Plant Breeding, Rajiv Gandhi University, Itanagar, Arunachal Pradesh, India";
   const JSPDF="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
   const SVG2PDF="https://cdn.jsdelivr.net/npm/svg2pdf.js@2.2.3/dist/svg2pdf.umd.min.js";
-  const MAP={"−":"-","–":"-","—":"-","‑":"-","‐":"-","✱":"*","★":"*","≥":">=","≤":"<=","→":"->","←":"<-","↔":"<->","…":"...","‘":"'","’":"'","“":"\"","”":"\""," ":" "," ":" ","↕":"","↑":"","↓":"","✓":"","•":"·","α":"alpha","β":"beta","Δ":"delta","χ":"chi"};
+  const MAP={"′":"'","″":"\"","−":"-","–":"-","—":"-","‑":"-","‐":"-","✱":"*","★":"*","≥":">=","≤":"<=","→":"->","←":"<-","↔":"<->","…":"...","‘":"'","’":"'","“":"\"","”":"\""," ":" "," ":" ","↕":"","↑":"","↓":"","✓":"","•":"·","α":"alpha","β":"beta","Δ":"delta","χ":"chi"};
   const win=t=>String(t==null?"":t).replace(/[^\x00-\xFF]/g,c=>MAP[c]!=null?MAP[c]:"?");
   const clean=t=>String(t||"").replace(/\s+/g," ").trim();
   let libP=null;
@@ -1764,14 +1764,15 @@ set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEven
     return "";
   }
   function context(svg){
-    const sec=svg.closest("section.view")||document.body,pane=svg.closest(".tpane")||svg.closest(".panel")||sec;
+    const pop=svg.closest("#modal,.drawer");const sec=svg.closest("section.view")||pop||document.body,pane=svg.closest(".tpane")||svg.closest(".panel")||(pop?(svg.closest("#gvBox")||svg.parentElement):sec);
     const isIdeo=svg.id==="ideo";
     let title=isIdeo?"Genome view: resistance and trait loci on the 21 wheat chromosomes":heading(svg);
     if(pane.classList&&pane.classList.contains("tpane")&&!isIdeo){const tool=clean(($("#toolsTitle")||{}).textContent)||"Tools";const tb=document.querySelector(`.ttab[data-t="${pane.id.replace(/^tp-/,"")}"]`);const hs=pane.querySelector(":scope > h3");const sub=clean(tb?tb.textContent:(hs?hs.textContent:""));const det=svg.closest("#pmqDetail")?heading(svg):"";title=[tool,sub].filter(Boolean).join(": ")+(det&&det!==tool&&det!==sub?" · "+det:"");}
-    if(!isIdeo&&!(pane.classList&&pane.classList.contains("tpane"))){const mp=sec.querySelector(".panel");const mh=mp?heading(mp.firstElementChild||mp):"";if(mh&&title&&title.indexOf(mh)<0)title=mh+": "+title;}
+    if(pop){const g=heading(svg);title=(svg.closest("#gvBox")?"Gene structure: ":"")+(g||clean(svg.getAttribute("aria-label")));}
+    else if(!isIdeo&&!(pane.classList&&pane.classList.contains("tpane"))){const mp=sec.querySelector(".panel");const mh=mp?heading(mp.firstElementChild||mp):"";if(mh&&title&&title.indexOf(mh)<0)title=mh+": "+title;}
     if(!title)title=clean(svg.getAttribute("aria-label"))||"Figure";
     let set=settings(pane);
-    if(!set.length||isIdeo)set=set.concat(settings(sec.querySelector(".filters")));
+    if((!set.length&&!pop)||isIdeo)set=set.concat(settings(sec.querySelector(".filters")));
     const seen=new Set();set=set.filter(([k,v])=>{const key=k+"|"+v;if(seen.has(key))return false;seen.add(key);return true;});
     const notes=[];
     const desc=clean(svg.getAttribute("aria-label"));if(desc&&desc!==title)notes.push(desc+".");
@@ -1786,8 +1787,10 @@ set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEven
     }
     const par=svg.parentElement;
     if(par)[...par.children].forEach(c=>{if(c!==svg&&c.tagName==="P"){const t=clean([...c.childNodes].filter(n=>!(n.nodeType===1&&n.tagName==="BUTTON")).map(n=>n.textContent).join(" "));if(t)notes.push(t);}});
+    if(pop){const bx=svg.closest("#gvBox")||pane;const ps=[...bx.querySelectorAll(":scope > p, :scope > div > p")].map(c=>clean(c.innerText||c.textContent)).filter(t=>t&&!/^Loading/.test(t));notes.length=0;ps.forEach(t=>notes.push(t));}
     const intro=pane.querySelector(":scope > p.small.muted");if(intro&&!isIdeo){const t=clean(intro.textContent);if(t)notes.push(t);}
-    return {title,set,notes,isIdeo};
+    const uniq=[];notes.forEach(t=>{if(!uniq.some(u=>u===t||u.includes(t)))uniq.push(t);});
+    return {title,set,notes:uniq.filter(t=>!uniq.some(u=>u!==t&&u.includes(t))),isIdeo};
   }
 
   /* ---- vector copy of the figure in print colours ---- */
@@ -1873,11 +1876,11 @@ set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEven
 
   /* ---- a "Save figure (PDF)" button under every chart ---- */
   function eligible(s){
-    if(s.dataset.figpdf||s.closest(".hero-anim,header,button,.legend,.figbar,.drawer,.modal"))return false;
+    if(s.dataset.figpdf||s.closest(".hero-anim,header,button,.legend,.figbar"))return false;
     if(s.id==="ideo")return true;const vb=s.viewBox&&s.viewBox.baseVal;return !!(vb&&vb.width>=300);
   }
   function addButtons(){
-    document.querySelectorAll("main svg").forEach(s=>{
+    document.querySelectorAll("main svg, #modal svg, .drawer svg").forEach(s=>{
       if(!eligible(s))return;s.dataset.figpdf="1";
       const bar=document.createElement("div");bar.className="figbar";
       bar.innerHTML='<span class="figmsg" aria-live="polite"></span><button class="btn" type="button">Save figure (PDF)</button>';
@@ -1891,7 +1894,7 @@ set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEven
     });
   }
   let queued=false;const q=()=>{if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;addButtons();});};
-  const start=()=>{addButtons();const m=document.querySelector("main");if(m)new MutationObserver(q).observe(m,{childList:true,subtree:true});};
+  const start=()=>{addButtons();new MutationObserver(q).observe(document.body,{childList:true,subtree:true});};
   document.readyState==="loading"?document.addEventListener("DOMContentLoaded",start):start();
 })();
 </script>
