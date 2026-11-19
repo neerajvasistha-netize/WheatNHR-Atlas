@@ -584,7 +584,12 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
       <div class="row tform"><label>Genes from<br><select id="tkgSrc"><option value="region">A region</option><option value="list">My gene list</option></select></label>
       <span id="tkgRegion" class="row" style="gap:10px;align-items:flex-end"><label>Chromosome<br><select id="tkgChr"></select></label><label>From (Mb)<br><input id="tkgFrom" type="number" step="0.001" value="0"></label><label>To (Mb)<br><input id="tkgTo" type="number" step="0.001" value="20"></label><label class="small"><input type="checkbox" id="tkgDef"> defence-related only</label></span>
       <button class="btn primary" id="tkgGo" type="button">Run enrichment</button></div>
-      <div id="tkgList" style="display:none"><textarea id="tkgIn" rows="5" class="mono" style="width:100%" placeholder="TraesCS5B02G059000 or TraesCS5B03G…, one or more per line"></textarea></div><div id="tkgOut"></div></div>
+      <div id="tkgList" style="display:none"><p class="small" style="margin:6px 0">Paste or upload any number of gene IDs (thousands are fine), one or more per line; extra columns such as fold change or p values are ignored. Accepted: IWGSC RefSeq v1.0/v1.1 (TraesCS…01G/02G…), v2.1 (TraesCS…03G…), transcript IDs (.1, .2), NCBI Gene IDs and LOC symbols, RefSeq mRNA/protein (XM_, XP_, NM_, NP_), UniProt accessions, and gene IDs of the pangenome cultivars (Arina<i>LrFor</i>, Jagger, Julius, Kariega, Lancer, Landmark, Mace, Mattis, Norin 61, Paragon, Renan, Stanley).</p>
+      <textarea id="tkgIn" rows="8" class="mono" style="width:100%" placeholder="TraesCS5B02G059000&#10;TraesCS5B03G0185300&#10;TraesJAG1B03G00287160&#10;LOC123070305&#10;XP_044349377&#10;A0A3B6FRF6"></textarea>
+      <div class="row" style="gap:10px;align-items:center;margin:4px 0 8px"><label class="btn" style="cursor:pointer">Upload gene list (.txt, .csv, .tsv)<input type="file" id="tkgFile" accept=".txt,.csv,.tsv,.tab,.list,text/plain" style="display:none"></label><span class="small muted" id="tkgCount"></span></div>
+      <details><summary class="small"><b>Custom background (optional)</b>: by default all annotated high-confidence genes are the background; give your own (e.g. all genes expressed in your experiment) for a fairer test.</summary>
+      <textarea id="tkgBg" rows="4" class="mono" style="width:100%;margin-top:6px" placeholder="Background gene IDs, any of the types above"></textarea>
+      <label class="btn" style="cursor:pointer">Upload background<input type="file" id="tkgBgFile" accept=".txt,.csv,.tsv,.tab,.list,text/plain" style="display:none"></label></details></div><div id="tkgOut"></div></div>
     <div class="tpane" id="tp-sgene" style="display:none"><h3 style="font-size:15px;margin:14px 0 4px">Susceptibility and effector-sensitivity genes</h3><p class="small muted">Susceptibility and effector-sensitivity genes (Tsn1, the Snn and Tsc series, Sb genes): the loci whose loss gives resistance, with their sub-genome copies and the published evidence behind each one.</p>
       <div class="row tform"><button class="btn primary" id="sgGo" type="button">List susceptibility genes</button></div><div id="sgOut"></div></div>
     <div class="tpane" id="tp-homolog" style="display:none"><h3 style="font-size:15px;margin:14px 0 4px">Homoeolog lookup</h3><p class="small muted">Any gene ID: find its copies in the other two sub-genomes.</p>
@@ -1545,32 +1550,68 @@ function ancOf(i){const G=gokegg();if(G.anc[i])return G.anc[i];const s=new Set([
 function goSet(k){const a=gokegg().A.get(k);if(!a)return null;const s=new Set();for(const i of a[0])for(const x of ancOf(i))s.add(x);return s;}
 function bh(ps){const n=ps.length,o=ps.map((p,i)=>[p,i]).sort((a,b)=>a[0]-b[0]),q=new Array(n);let m=1;for(let j=n-1;j>=0;j--){m=Math.min(m,o[j][0]*n/(j+1));q[o[j][1]]=m;}return q;}
 function parseGeneList(txt){const out=new Set();for(const m of String(txt).matchAll(/TraesCS([1-7][ABD]|U)0[12]G0*(\d+)/gi))out.add(m[1].toUpperCase()+":"+(+m[2]));for(const m of String(txt).matchAll(/TraesCS[1-7][ABD]03G\d+/gi)){const k=v21map().get(m[0].toUpperCase());if(k)out.add(k);}return [...out];}
-function runGO(){const G=gokegg(),o=$("#tkgOut");if(!G.T.length){o.innerHTML=`<p class="msg err">Annotation data not available.</p>`;return;}
-  let list=parseGeneList($("#tkgIn").value);const src=$("#tkgSrc").value;
+const IDM={};const IDPAN={ARI:"ArinaLrFor",JAG:"Jagger",JUL:"Julius",KAR:"Kariega",LAC:"Lancer",LDM:"Landmark",MAC:"Mace",SYM:"Mattis",NOR:"Norin 61",PARA:"Paragon",RN:"Renan",STA:"Stanley"};
+function idmLoad(n){if(!IDM[n])IDM[n]=(async()=>{const r=await fetch("idmap/"+n+".json.gz");if(!r.ok)throw new Error("ID table "+n+" not available");const b=await r.arrayBuffer(),u=new Uint8Array(b);let t;
+  if(u[0]===0x1f&&u[1]===0x8b){if(typeof DecompressionStream==="undefined")throw new Error("This browser cannot read the ID tables; please update it");t=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream("gzip"))).text();}else t=new TextDecoder().decode(b);return JSON.parse(t);})().catch(e=>{delete IDM[n];throw e;});return IDM[n];}
+const UNIPROT_RE=/^(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$/;
+function idClass(t){let m;
+  if(m=t.match(/^TraesCS([1-7][ABD]|U)0([12])G0*(\d+)(LC)?/i))return m[4]?{ty:"IWGSC v1.x low-confidence gene",id:t,none:1}:{ty:m[2]==="1"?"IWGSC v1.0":"IWGSC v1.1",id:t,key:m[1].toUpperCase()+":"+(+m[3])};
+  if(m=t.match(/^TraesCS(?:[1-7][ABD]|U)03G\d+(LC)?/i))return m[1]?{ty:"IWGSC v2.1 low-confidence gene",id:t,none:1}:{ty:"IWGSC v2.1",id:m[0].toUpperCase(),v21:1};
+  if(m=t.match(/^Traes(ARI|JAG|JUL|KAR|LAC|LDM|MAC|SYM|NOR|PARA|RN|STA)/i)){const p=m[1].toUpperCase();return {ty:"Pangenome: "+IDPAN[p],id:t.replace(/\.\d+$/,"").toUpperCase(),tab:"pan_Traes"+p};}
+  if(/^TRIAE_CS42_|^Traes[A-Z]+/i.test(t))return {ty:"Other wheat gene IDs (e.g. TGACv1; not supported)",id:t,none:1};
+  if(m=t.match(/^LOC(\d{5,})$/i))return {ty:"NCBI Gene (LOC symbol)",id:m[1],tab:"entrez"};
+  if(m=t.match(/^([NX][MP])_(\d+)(?:\.\d+)?$/i))return {ty:"RefSeq "+(m[1][1].toUpperCase()==="P"?"protein":"mRNA"),id:(m[1]+"_"+m[2]).toUpperCase(),tab:"refseq"};
+  const u=t.replace(/[-.]\d+$/,"").toUpperCase();if(t.length>=6&&t.length<=13&&UNIPROT_RE.test(u)&&/[A-Z]/i.test(u))return {ty:"UniProt",id:u,tab:"uniprot"};
+  return null;}
+async function parseGeneIDs(txt){const rows=[],seen=new Set();
+  for(const line of String(txt).split(/\r?\n/)){const toks=line.split(/[\s,;|"'\t]+/).filter(Boolean);let hit=false;
+    for(const t of toks){const c=idClass(t);if(c){hit=true;const k=c.ty+"|"+c.id;if(!seen.has(k)){seen.add(k);rows.push(Object.assign({inp:t},c));}}}
+    if(!hit){const n=toks.find(t=>/^\d{5,10}$/.test(t));if(n){const k="NCBI Gene ID|"+n;if(!seen.has(k)){seen.add(k);rows.push({inp:n,ty:"NCBI Gene ID",id:n,tab:"entrez"});}}}}
+  const tabs=[...new Set(rows.filter(r=>r.tab).map(r=>r.tab))];const T={};await Promise.all(tabs.map(async n=>{T[n]=await idmLoad(n);}));
+  const V=rows.some(r=>r.v21)?v21map():null;
+  for(const r of rows){r.keys=r.key?[r.key]:r.v21?(V.get(r.id)?[V.get(r.id)]:[]):r.tab?((T[r.tab][r.id]||"").split("|").filter(Boolean)):[];}
+  const keys=[...new Set(rows.flatMap(r=>r.keys))];return {rows,keys};}
+const v11id=k=>{const [c,n]=k.split(":");return `TraesCS${c}02G${String(n).padStart(6,"0")}`;};
+let G21K=null;function v21of(k){if(!G21K){G21K=new Map();const G=genesAll();for(const c of CHRS)for(const g of (G.g[c]||[]))G21K.set(c+":"+g[1],gid21(c,g));}return G21K.get(k)||"";}
+function readFileInto(inp,ta,after){inp.onchange=()=>{const f=inp.files&&inp.files[0];if(!f)return;const fr=new FileReader();fr.onload=()=>{ta.value=String(fr.result);inp.value="";after&&after();};fr.readAsText(f);};}
+async function runGO(){const G=gokegg(),o=$("#tkgOut");if(!G.T.length){o.innerHTML=`<p class="msg err">Annotation data not available.</p>`;return;}
+  let list=[];const src=$("#tkgSrc").value;let conv=null,bgKeys=null,bgConv=null;
+  if(src==="list"){o.innerHTML=`<p class="small muted">Reading and converting gene IDs…</p>`;
+    try{conv=await parseGeneIDs($("#tkgIn").value);list=conv.keys;if($("#tkgBg").value.trim()){bgConv=await parseGeneIDs($("#tkgBg").value);bgKeys=new Set(bgConv.keys);}}
+    catch(e){o.innerHTML=`<p class="msg err">${esc(e.message)}</p>`;return;}
+    if(!conv.rows.length){o.innerHTML=`<p class="msg err">No gene IDs recognised. Accepted types are listed above the box.</p>`;return;}}
   if(src==="region"){const c=$("#tkgChr").value,f=num($("#tkgFrom").value),t=num($("#tkgTo").value);if(f==null||t==null||t<=f){o.innerHTML=`<p class="msg err">Enter a region.</p>`;return;}
     const GA=genesAll();list=(GA.g[c]||[]).filter(g=>g[0]>=f&&g[0]<=t&&(!$("#tkgDef").checked||g[2]>0)).map(g=>c+":"+g[1]);}
-  if(list.length<3){o.innerHTML=`<p class="msg err">Give at least 3 genes (TraesCS…02G… IDs) or a region.</p>`;return;}
-  o.innerHTML=`<p class="small muted">Testing…</p>`;
-  setTimeout(()=>{const GA=genesAll();const uni=[];for(const c of CHRS)for(const g of (GA.g[c]||[]))uni.push(c+":"+g[1]);
+  const convHTML=conv?convSummary(conv,bgConv):"";
+  if(bgKeys)list=list.filter(k=>bgKeys.has(k));
+  if(list.length<3){o.innerHTML=convHTML+`<p class="msg err">At least 3 genes that map to annotated Chinese Spring genes${bgKeys?" and are in the background":""} are needed.</p>`;wireConv(conv);return;}
+  o.innerHTML=convHTML+`<p class="small muted">Testing ${list.length.toLocaleString()} genes…</p>`;
+  setTimeout(()=>{const GA=genesAll();let uni=[];for(const c of CHRS)for(const g of (GA.g[c]||[]))uni.push(c+":"+g[1]);if(bgKeys)uni=uni.filter(k=>bgKeys.has(k));
     const res=[];const ns={BP:"Biological process",MF:"Molecular function",CC:"Cellular component"};
     // GO
     const uniGO=uni.filter(k=>G.A.has(k)&&G.A.get(k)[0].length),listGO=list.filter(k=>G.A.has(k)&&G.A.get(k)[0].length);const setL=new Set(listGO);
-    const Kc=new Map(),kc=new Map();for(const k of uniGO){const s=goSet(k);for(const x of s){Kc.set(x,(Kc.get(x)||0)+1);if(setL.has(k))kc.set(x,(kc.get(x)||0)+1);}}
-    const N=uniGO.length,n=listGO.length;const go=[];for(const [x,k] of kc){if(k<2)continue;const K=Kc.get(x);if(K>0.25*N)continue;go.push({id:G.T[x][0],nm:G.T[x][1],ns:G.T[x][2],k,K,fold:(k/n)/(K/N),p:hyperP(k,K,n,N)});}
+    const Kc=new Map(),kc=new Map(),kg_=new Map();for(const k of uniGO){const s=goSet(k);for(const x of s){Kc.set(x,(Kc.get(x)||0)+1);if(setL.has(k)){kc.set(x,(kc.get(x)||0)+1);(kg_.get(x)||kg_.set(x,[]).get(x)).push(k);}}}
+    const N=uniGO.length,n=listGO.length;const go=[];for(const [x,k] of kc){if(k<2)continue;const K=Kc.get(x);if(K>0.25*N)continue;go.push({id:G.T[x][0],nm:G.T[x][1],ns:G.T[x][2],k,K,fold:(k/n)/(K/N),p:hyperP(k,K,n,N),g:kg_.get(x)||[]});}
     const q=bh(go.map(r=>r.p));go.forEach((r,i)=>r.q=q[i]);go.sort((a,b)=>a.p-b.p);
     // KEGG
     const uniK=uni.filter(k=>G.A.has(k)&&G.A.get(k)[1].length),listK=list.filter(k=>G.A.has(k)&&G.A.get(k)[1].length);const setK=new Set(listK);
-    const KK=new Map(),kk=new Map();for(const k of uniK)for(const x of G.A.get(k)[1]){KK.set(x,(KK.get(x)||0)+1);if(setK.has(k))kk.set(x,(kk.get(x)||0)+1);}
-    const NK=uniK.length,nK=listK.length;const kg=[];for(const [x,k] of kk){const K=KK.get(x);kg.push({id:G.K[x][0],nm:G.K[x][1],k,K,fold:nK?(k/nK)/(K/NK):0,p:hyperP(k,K,nK,NK)});}
+    const KK=new Map(),kk=new Map(),kkg=new Map();for(const k of uniK)for(const x of G.A.get(k)[1]){KK.set(x,(KK.get(x)||0)+1);if(setK.has(k)){kk.set(x,(kk.get(x)||0)+1);(kkg.get(x)||kkg.set(x,[]).get(x)).push(k);}}
+    const NK=uniK.length,nK=listK.length;const kg=[];for(const [x,k] of kk){const K=KK.get(x);kg.push({id:G.K[x][0],nm:G.K[x][1],k,K,fold:nK?(k/nK)/(K/NK):0,p:hyperP(k,K,nK,NK),g:kkg.get(x)||[]});}
     const qk=bh(kg.map(r=>r.p));kg.forEach((r,i)=>r.q=qk[i]);kg.sort((a,b)=>a.p-b.p);
     const tbl=(rows,lab)=>rows.length?`<table class="tbl"><thead><tr><th>${lab}</th><th>Term</th><th>Genes</th><th>Background</th><th>Fold</th><th>p</th><th>FDR</th></tr></thead><tbody>${rows.slice(0,40).map(r=>`<tr${r.q<0.05?' style="background:rgba(217,165,33,.13)"':""}><td class="mono small">${esc(r.id)}${r.ns?` <span class="muted">${r.ns}</span>`:""}</td><td>${esc(r.nm)}</td><td class="num">${r.k}</td><td class="num">${r.K}</td><td class="num">${r.fold.toFixed(2)}</td><td class="num">${r.p<1e-4?r.p.toExponential(1):r.p.toFixed(4)}</td><td class="num">${r.q<1e-4?r.q.toExponential(1):r.q.toFixed(4)}</td></tr>`).join("")}</tbody></table>`:`<p class="small muted">No terms with 2 or more genes.</p>`;
-    o.innerHTML=`<p class="small">${list.length} genes in the list: ${n} with GO terms (background ${N.toLocaleString()} genes), ${nK} with KEGG pathways (background ${NK.toLocaleString()}). One-sided hypergeometric test, Benjamini–Hochberg FDR; highlighted FDR &lt; 0.05. <button class="btn" id="tkgCsv" type="button">Save results (CSV)</button></p>
+    o.innerHTML=convHTML+`<p class="small">${list.length.toLocaleString()} genes in the list: ${n} with GO terms (background ${N.toLocaleString()} genes${bgKeys?", your custom background":""}), ${nK} with KEGG pathways (background ${NK.toLocaleString()}). One-sided hypergeometric test, Benjamini–Hochberg FDR; highlighted FDR &lt; 0.05. <button class="btn" id="tkgCsv" type="button">Save results (CSV)</button></p>
     <h4>GO terms</h4>${["BP","MF","CC"].map(s=>`<details${s==="BP"?" open":""}><summary><b>${ns[s]}</b> (${go.filter(r=>r.ns===s&&r.q<0.05).length} significant)</summary>${tbl(go.filter(r=>r.ns===s),"GO ID")}</details>`).join("")}
     <h4>KEGG pathways</h4>${tbl(kg,"Pathway")}
     <p class="small muted">Genes: IWGSC high-confidence genes with positions on RefSeq v2.1; IWGSC v2.1 is a projection of the v1.1 gene models, so each gene carries both IDs (v1.1 TraesCS…02G… and v2.1 TraesCS…03G…) and GO/KEGG, which exist only under v1.1 IDs, apply unchanged. GO terms from InterPro domains (InterPro2GO), propagated to parent terms; very broad terms (over 25% of genes) are not tested. KEGG from the bread wheat (taes) pathway maps, linked through NCBI gene IDs.</p>`;
-    $("#tkgCsv").onclick=()=>saveText("WheatTraitMap_GO_KEGG_enrichment.csv",toCSV([["type","id","namespace","term","genes_in_list","genes_in_background","fold","p","FDR"]].concat(go.map(r=>["GO",r.id,r.ns,r.nm,r.k,r.K,r.fold.toFixed(3),r.p,r.q]),kg.map(r=>["KEGG",r.id,"",r.nm,r.k,r.K,r.fold.toFixed(3),r.p,r.q]))));},30);}
+    $("#tkgCsv").onclick=()=>saveText("WheatTraitMap_GO_KEGG_enrichment.csv",toCSV([["type","id","namespace","term","genes_in_list","genes_in_background","fold","p","FDR","genes_v1.1"]].concat(go.map(r=>["GO",r.id,r.ns,r.nm,r.k,r.K,r.fold.toFixed(3),r.p,r.q,r.g.map(v11id).join("; ")]),kg.map(r=>["KEGG",r.id,"",r.nm,r.k,r.K,r.fold.toFixed(3),r.p,r.q,r.g.map(v11id).join("; ")]))));wireConv(conv);},30);}
+function convSummary(conv,bg){const T=new Map();for(const r of conv.rows){const t=T.get(r.ty)||{n:0,m:0};t.n++;if(r.keys.length)t.m++;T.set(r.ty,t);}
+  const nm=conv.rows.filter(r=>!r.keys.length).length;
+  return `<details class="panel" style="margin:8px 0" open><summary><b>Gene ID conversion</b>: ${conv.rows.length.toLocaleString()} IDs read, ${(conv.rows.length-nm).toLocaleString()} matched to ${conv.keys.length.toLocaleString()} Chinese Spring genes${nm?`, ${nm.toLocaleString()} not matched`:""}${bg?`; background: ${bg.keys.length.toLocaleString()} genes`:""}</summary>
+  <table class="tbl" style="max-width:640px"><thead><tr><th>ID type</th><th>IDs</th><th>Matched</th><th>Not matched</th></tr></thead><tbody>${[...T].map(([t,v])=>`<tr><td>${esc(t)}</td><td class="num">${v.n.toLocaleString()}</td><td class="num">${v.m.toLocaleString()}</td><td class="num">${(v.n-v.m).toLocaleString()}</td></tr>`).join("")}</tbody></table>
+  <p class="small muted">All IDs are converted to IWGSC RefSeq v1.1 genes, which carry the GO and KEGG annotation. Pangenome cultivar genes are matched to their Chinese Spring counterpart (coding sequence ≥95% identical over ≥60% of its length); NCBI, RefSeq and UniProt IDs through the Ensembl Plants cross-references. Low-confidence genes have no annotation and are not tested. <button class="btn" type="button" id="tkgConvCsv">Save ID conversion (CSV)</button></p></details>`;}
+function wireConv(conv){const b=document.getElementById("tkgConvCsv");if(!b||!conv)return;b.onclick=()=>saveText("WheatTraitMap_gene_ID_conversion.csv",toCSV([["input_id","id_type","matched","CS_v1.1_gene","CS_v2.1_gene"]].concat(conv.rows.map(r=>[r.inp,r.ty,r.keys.length?"yes":"no",r.keys.map(v11id).join("; "),r.keys.map(v21of).filter(Boolean).join("; ")]))));}
 function geneTerms(c,n){const G=gokegg(),a=G.A.get(c+":"+n);if(!a)return "";return a[0].map(i=>G.T[i][0]+" "+G.T[i][1]).concat(a[1].map(i=>G.K[i][0]+" "+G.K[i][1])).join("; ");}
-function hook3(){tSel("tkgChr");const b=$("#tkgGo");if(b)b.onclick=runGO;const s=$("#tkgSrc");if(s)s.onchange=()=>{$("#tkgRegion").style.display=s.value==="region"?"":"none";$("#tkgList").style.display=s.value==="list"?"":"none";};}
+function hook3(){tSel("tkgChr");const b=$("#tkgGo");if(b)b.onclick=runGO;const cnt=()=>{const n=$("#tkgIn").value.split(/\r?\n/).filter(l=>l.trim()).length;$("#tkgCount").textContent=n?n.toLocaleString()+" lines":"";};if($("#tkgFile")){readFileInto($("#tkgFile"),$("#tkgIn"),cnt);readFileInto($("#tkgBgFile"),$("#tkgBg"));$("#tkgIn").addEventListener("input",cnt);}const s=$("#tkgSrc");if(s)s.onchange=()=>{$("#tkgRegion").style.display=s.value==="region"?"":"none";$("#tkgList").style.display=s.value==="list"?"":"none";};}
 
 /* ---- Physical meta-QTL (weighted Gaussian mixture on RefSeq v2.1; after Veyrieras et al. 2007, BioMercator) ---- */
 let PMQ=null;
