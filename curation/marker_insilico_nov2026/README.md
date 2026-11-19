@@ -38,3 +38,10 @@ where public (BARC, GWM) and the in-silico PCR product, plus the full GWM and BA
 WMC primer table (Gupta et al. 2002; wmc24-wmc331, supplied by the owner as an image, transcribed to `wmc_table.tsv`): only wmc105, wmc169 and wmc215 are used by unplaced atlas loci. wmc169 amplifies 3A 721.2 Mb but its locus is on an alien 3S chromosome; wmc105 (6B) and wmc215 (3A) give no product. No records changed.
 
 WMC genome-wide in-silico PCR (`epcr.py`, `wmc_epcr.json`): 42 of the 58 Gupta et al. 2002 primer pairs amplify in Chinese Spring RefSeq v1.0; 38 agree with the Zhao et al. 2019 positions (validation), 3 differ and 1 is new (WMC97, chrUn). New unique products were added to `data/markerpos_all.json.gz`. Sheet 'WMC physical map' in `SSR_marker_sequences.xlsx`.
+
+## Röder et al. 1998 Table 3 and Abeysekara et al. 2009 (ad71, same day; papers supplied by the owner)
+GWM primers were re-read from the Röder et al. 1998 table (`gwm_roder1998.json`, 223 markers; it corrects several pairs mis-read from
+the patent text, e.g. GWM260, GWM264) and merged with the patent set (`gwm_merged.json`). Re-running the unplaced GWM markers placed
+QLr.pser-1BL (GWM264, 1BL copy 328.94 Mb) and QLr.fcu-3AL (GWM666, 3AL copy 723.89 Mb). From Abeysekara et al. 2009 Table 1, the EST
+marker XBG262975 amplifies 1A 2.64 Mb; with Xcfd58.1 next to Xcfa2153 (7.23 Mb), Snn4 and its QTL records were placed at 2.64-7.23 Mb
+(V0095 had been placed at Xcfa2263, a 2A flanking marker). QSnb.fcu-3A placed by BARC57 (3A 10.31 Mb).
