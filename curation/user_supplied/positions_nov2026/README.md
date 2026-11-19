@@ -16,3 +16,10 @@ cultivars with the genome-wide gene anchors (`scripts/pangenome/convert.py`).
 | Running et al. 2022 Front Plant Sci 13:793925 (tan spot, Tsc1) | Running2022 | QTs.zhl-1A placed at the Tsc1 interval (the paper equates them). |
 | Ren et al. 2019 TAG 132:241 (FHB, 7DL) | Z_1349 | QFhb.cau-1AS not placed: linked marker IWB63682 has no known physical position. |
 | Shi et al. 2023 Agronomy 13:1712 (FHB GWAS) | Agron2023FHB / A_FHB_038 | 7 missing gFHB loci of Table 1 added (v1.1); cited Qfhb.nmbu.1A.1 placed at 3.1-13.3 Mb. |
+
+## Yang et al. 2022 (STB): in-silico marker mapping (added later the same day)
+Supplementary Table 3 of the paper (PMC open-access DataSheet_4.xlsx) gives the IWGSC physical region and the sequence of the
+representative DArTseq marker of every QTL. The 14 marker tags were aligned end to end (up to 3 mismatches, no gaps) to every
+chromosome of RefSeq v1.0 and v2.1 (`yang2022_tag_placements.json`). All 13 QTL now carry the paper's region; 7 also carry the
+tag position as peak (1A.1, 1B.2, 3B.1, 5A.1, 6A.2, 7A.1, 7A.2; 7 QTL). Tags of 2B.1, 3A.1, 3A.2, 4A.1 and 6A.1 have no match on the
+QTL chromosome in Chinese Spring (presence/absence markers or homoeologous best hits), and the 1B.1 tag maps outside its region.
