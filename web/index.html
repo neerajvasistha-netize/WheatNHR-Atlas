@@ -306,6 +306,7 @@ td.num{font-size:13px}
 .foot h4{font:700 15px var(--display)}
 .prose h2{font:700 20px/1.25 var(--display)}
 @media (max-width:600px){.hero-in{padding:20px 16px 22px}.hero .brand p{font-size:15px}.panel{padding:14px}.filters{padding:12px}.filters label{flex:1 1 140px}.filters input[type=search]{width:100%}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gvtog{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin:4px 0 8px;padding:8px 10px;background:var(--field,#f4f7f5);border-radius:8px}.gvtog label{display:inline-flex;align-items:center;gap:4px;cursor:pointer}.gvtog .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
 </style>
 </head>
 <body>
@@ -1184,8 +1185,8 @@ function gvTranslate(x){const CODE="FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKK
   for(let i=0;i+2<x.length;i+=3){const a=B.indexOf(x[i]),b=B.indexOf(x[i+1]),c=B.indexOf(x[i+2]);p+=(a<0||b<0||c<0)?"X":CODE[a*16+b*4+c];}return p;}
 function gvWrap(s,w=60){return s.replace(new RegExp(`(.{${w}})`,"g"),"$1\n").trim();}
 /* Detailed gene-structure diagram: every component in its own colour, legend inside the figure (so it exports to PDF). */
-const GVC={up:"#cfd8e3",tata:"#6d28d9",caat:"#c4b5fd",tss:"#111827",u5:"#93c5fd",atg:"#16a34a",cds:"#1f5a3a",intron:"#9ca3af",donor:"#f59e0b",acc:"#ec4899",stop:"#dc2626",u3:"#fdba74",pas:"#0e7490",tail:"#facc15",down:"#e5e7eb"};
-function gvDiagram(gen,tr,cds,mrna,fl){
+const GVC={up:"#cfd8e3",tata:"#6d28d9",caat:"#c4b5fd",tss:"#111827",u5:"#93c5fd",atg:"#16a34a",cds:"#1f5a3a",intron:"#4b5563",donor:"#f59e0b",acc:"#ec4899",stop:"#dc2626",u3:"#fdba74",pas:"#0e7490",tail:"#facc15",down:"#e5e7eb"};
+function gvDiagram(gen,tr,cds,mrna,fl,hide){hide=hide||new Set();const on=k=>!hide.has(k);
   const ex=tr.exons.map(x=>({s:x.start,e:x.end})).sort((a,b)=>a.s-b.s),L=gen.length;
   const up=fl&&fl.up?fl.up:"",down=fl&&fl.down?fl.down:"",A=up.length,B=down.length;
   const tss=ex[0].s,tes=ex[ex.length-1].e;
@@ -1210,51 +1211,52 @@ function gvDiagram(gen,tr,cds,mrna,fl){
   // geometry
   const W=760,PL=16,PR=60,tY=96,lo=1-A,hi=L+B,X=v=>PL+(v-lo)/Math.max(1,hi-lo)*(W-PL-PR);
   const g=[];
-  if(A)g.push(`<rect x="${X(lo)}" y="${tY-4}" width="${X(tss)-X(lo)}" height="8" fill="${GVC.up}"/>`);
-  if(B)g.push(`<rect x="${X(tes)}" y="${tY-4}" width="${X(hi)-X(tes)}" height="8" fill="${GVC.down}"/>`);
-  g.push(`<line x1="${X(tss)}" x2="${X(tes)}" y1="${tY}" y2="${tY}" stroke="${GVC.intron}" stroke-width="1.5"/>`);
-  pieces.forEach(p=>{const h=p.t==="cds"?24:14;g.push(`<rect x="${X(p.s).toFixed(2)}" y="${tY-h/2}" width="${Math.max(1.5,X(p.e+1)-X(p.s)).toFixed(2)}" height="${h}" fill="${GVC[p.t]}"/>`);});
+  if(A&&on("up"))g.push(`<rect x="${X(lo)}" y="${tY-4}" width="${X(tss)-X(lo)}" height="8" fill="${GVC.up}"/>`);
+  if(B&&on("down"))g.push(`<rect x="${X(tes)}" y="${tY-4}" width="${X(hi)-X(tes)}" height="8" fill="${GVC.down}"/>`);
+  if(on("intron"))introns.forEach(n=>{const a=X(n.s),b=X(n.e+1),mid=(a+b)/2,hh=Math.min(10,Math.max(3,(b-a)/3));g.push(`<polyline points="${a.toFixed(1)},${tY} ${mid.toFixed(1)},${tY-hh} ${b.toFixed(1)},${tY}" fill="none" stroke="${GVC.intron}" stroke-width="1.6" stroke-linejoin="round"/>`);});
+  pieces.forEach(p=>{if(!on(p.t))return;const h=p.t==="cds"?24:14;g.push(`<rect x="${X(p.s).toFixed(2)}" y="${tY-h/2}" width="${Math.max(1.5,X(p.e+1)-X(p.s)).toFixed(2)}" height="${h}" fill="${GVC[p.t]}"/>`);});
   // exon numbers
-  ex.forEach((x,i)=>{const w=X(x.e+1)-X(x.s);if(w>=5)g.push(`<text x="${((X(x.s)+X(x.e+1))/2).toFixed(1)}" y="${tY+24}" font-size="${w>=11?8:6.5}" font-weight="700" text-anchor="middle" fill="#374151">${i+1}</text>`);});
+  if(on("num"))ex.forEach((x,i)=>{const w=X(x.e+1)-X(x.s);if(w>=5)g.push(`<text x="${((X(x.s)+X(x.e+1))/2).toFixed(1)}" y="${tY+24}" font-size="${w>=11?8:6.5}" font-weight="700" text-anchor="middle" fill="#374151">${i+1}</text>`);});
   // splice-site ticks
-  introns.forEach(n=>{g.push(`<rect x="${(X(n.s)).toFixed(2)}" y="${tY-7}" width="2.2" height="14" fill="${GVC.donor}"/>`,`<rect x="${(X(n.e+1)-2.2).toFixed(2)}" y="${tY-7}" width="2.2" height="14" fill="${GVC.acc}"/>`);});
+  introns.forEach(n=>{if(on("donor"))g.push(`<rect x="${(X(n.s)).toFixed(2)}" y="${tY-7}" width="2.2" height="14" fill="${GVC.donor}"/>`);if(on("acc"))g.push(`<rect x="${(X(n.e+1)-2.2).toFixed(2)}" y="${tY-7}" width="2.2" height="14" fill="${GVC.acc}"/>`);});
   // codon marks
-  if(hasCds){g.push(`<rect x="${X(cs).toFixed(2)}" y="${tY-14}" width="${Math.max(3,X(cs+3)-X(cs)).toFixed(2)}" height="28" fill="${GVC.atg}"/>`);
-    g.push(`<rect x="${(X(ce+1)-Math.max(3,X(ce+1)-X(ce-2))).toFixed(2)}" y="${tY-14}" width="${Math.max(3,X(ce+1)-X(ce-2)).toFixed(2)}" height="28" fill="${GVC.stop}"/>`);}
-  if(pas)g.push(`<rect x="${X(pas.g).toFixed(2)}" y="${tY-9}" width="${Math.max(3,X(pas.g+6)-X(pas.g)).toFixed(2)}" height="18" fill="${GVC.pas}"/>`);
-  if(tata)g.push(`<rect x="${X(tss+tata.rel).toFixed(2)}" y="${tY-7}" width="${Math.max(3,X(tss+tata.rel+7)-X(tss+tata.rel)).toFixed(2)}" height="14" fill="${GVC.tata}"/>`);
-  if(caat)g.push(`<rect x="${X(tss+caat.rel).toFixed(2)}" y="${tY-7}" width="${Math.max(3,X(tss+caat.rel+5)-X(tss+caat.rel)).toFixed(2)}" height="14" fill="${GVC.caat}"/>`);
+  if(hasCds){if(on("atg"))g.push(`<rect x="${X(cs).toFixed(2)}" y="${tY-14}" width="${Math.max(3,X(cs+3)-X(cs)).toFixed(2)}" height="28" fill="${GVC.atg}"/>`);
+    if(on("stop"))g.push(`<rect x="${(X(ce+1)-Math.max(3,X(ce+1)-X(ce-2))).toFixed(2)}" y="${tY-14}" width="${Math.max(3,X(ce+1)-X(ce-2)).toFixed(2)}" height="28" fill="${GVC.stop}"/>`);}
+  if(pas&&on("pas"))g.push(`<rect x="${X(pas.g).toFixed(2)}" y="${tY-9}" width="${Math.max(3,X(pas.g+6)-X(pas.g)).toFixed(2)}" height="18" fill="${GVC.pas}"/>`);
+  if(tata&&on("tata"))g.push(`<rect x="${X(tss+tata.rel).toFixed(2)}" y="${tY-7}" width="${Math.max(3,X(tss+tata.rel+7)-X(tss+tata.rel)).toFixed(2)}" height="14" fill="${GVC.tata}"/>`);
+  if(caat&&on("caat"))g.push(`<rect x="${X(tss+caat.rel).toFixed(2)}" y="${tY-7}" width="${Math.max(3,X(tss+caat.rel+5)-X(tss+caat.rel)).toFixed(2)}" height="14" fill="${GVC.caat}"/>`);
   // poly(A) tail: symbolic, after the transcript end
-  const tx=X(tes+1);g.push(`<path d="M${tx} ${tY+6} q 6 14 16 14 h 34" fill="none" stroke="${GVC.tail}" stroke-width="5" stroke-linecap="round"/>`,`<text x="${tx+20}" y="${tY+31}" font-size="8.5" fill="#6b5a00">AAAA…</text>`);
+  const tx=X(tes+1);if(on("tail"))g.push(`<path d="M${tx} ${tY+6} q 6 14 16 14 h 34" fill="none" stroke="${GVC.tail}" stroke-width="5" stroke-linecap="round"/>`,`<text x="${tx+20}" y="${tY+31}" font-size="8.5" fill="#6b5a00">AAAA…</text>`);
   // TSS bent arrow
-  const sx=X(tss);g.push(`<path d="M${sx} ${tY-13} v -14 h 14" fill="none" stroke="${GVC.tss}" stroke-width="1.6"/><path d="M${sx+14} ${tY-31} l 6 4 l -6 4 z" fill="${GVC.tss}"/>`);
+  const sx=X(tss);if(on("tss"))g.push(`<path d="M${sx} ${tY-13} v -14 h 14" fill="none" stroke="${GVC.tss}" stroke-width="1.6"/><path d="M${sx+14} ${tY-31} l 6 4 l -6 4 z" fill="${GVC.tss}"/>`);
   // labels above, placed in rows so none overlap
   const labs=[];const add=(x,t,c)=>labs.push({x,t,c});
-  add(sx,"TSS",GVC.tss);
-  if(hasCds){add(X(cs),`Start ${startCodon}`,GVC.atg);add(X(ce),isStop?`Stop ${stopCodon}`:"End of CDS",GVC.stop);}
-  if(pas)add(X(pas.g),`Poly(A) signal ${pas.mo}`,GVC.pas);
-  if(tata)add(X(tss+tata.rel),"TATA box",GVC.tata);
-  if(caat)add(X(tss+caat.rel),"CAAT box",GVC.caat);
-  labs.sort((a,b)=>a.x-b.x);const rows=[[],[],[],[]],RY=[18,32,46,60];
+  if(on("tss"))add(sx,"TSS",GVC.tss);
+  if(hasCds){if(on("atg"))add(X(cs),`Start ${startCodon}`,GVC.atg);if(on("stop"))add(X(ce),isStop?`Stop ${stopCodon}`:"End of CDS",GVC.stop);}
+  if(pas&&on("pas"))add(X(pas.g),`Poly(A) signal ${pas.mo}`,GVC.pas);
+  if(tata&&on("tata"))add(X(tss+tata.rel),"TATA box",GVC.tata);
+  if(caat&&on("caat"))add(X(tss+caat.rel),"CAAT box",GVC.caat);
+  if(!on("labels"))labs.length=0;labs.sort((a,b)=>a.x-b.x);const rows=[[],[],[],[]],RY=[18,32,46,60];
   labs.forEach(l=>{const w=l.t.length*5.3+6;let lx=Math.min(W-PR+40-w,Math.max(2,l.x-w/2));
     let r=rows.findIndex(row=>row.every(([a,b])=>lx+w<a-4||lx>b+4));if(r<0)r=rows.length-1;rows[r].push([lx,lx+w]);
     g.push(`<line x1="${l.x.toFixed(1)}" x2="${l.x.toFixed(1)}" y1="${RY[r]+3}" y2="${tY-15}" stroke="${l.c}" stroke-width="0.8" stroke-dasharray="2 2"/>`,
       `<text x="${(lx+w/2).toFixed(1)}" y="${RY[r]}" font-size="9.5" font-weight="700" text-anchor="middle" fill="${l.c}">${l.t}</text>`);});
   // scale bar (kb from the TSS) and orientation
-  const span=hi-lo,step=[100,200,500,1000,2000,5000,10000,20000].find(s=>span/s<=8)||50000,sy=tY+44;
-  g.push(`<line x1="${X(lo)}" x2="${X(hi)}" y1="${sy}" y2="${sy}" stroke="#9ca3af"/>`);
+  const span=hi-lo,showScale=on("scale"),step=[100,200,500,1000,2000,5000,10000,20000].find(s=>span/s<=8)||50000,sy=tY+44;
+  if(showScale){g.push(`<line x1="${X(lo)}" x2="${X(hi)}" y1="${sy}" y2="${sy}" stroke="#9ca3af"/>`);
   for(let v=Math.ceil((lo-tss)/step)*step;v<=hi-tss;v+=step){const x=X(tss+v);g.push(`<line x1="${x}" x2="${x}" y1="${sy}" y2="${sy+4}" stroke="#9ca3af"/><text x="${x}" y="${sy+14}" font-size="8.5" text-anchor="middle" fill="#6b7280">${v===0?"TSS":(v/1000).toLocaleString(undefined,{maximumFractionDigits:2})+" kb"}</text>`);}
-  g.push(`<text x="${PL}" y="${sy-6}" font-size="9" fill="#6b7280">5′</text><text x="${X(hi)}" y="${sy-6}" font-size="9" fill="#6b7280" text-anchor="end">3′</text>`);
+  g.push(`<text x="${PL}" y="${sy-6}" font-size="9" fill="#6b7280">5′</text><text x="${X(hi)}" y="${sy-6}" font-size="9" fill="#6b7280" text-anchor="end">3′</text>`);}
   // legend
   const items=[];if(A)items.push(["up","Upstream / promoter (1 kb)"]);if(caat)items.push(["caat","CAAT box (predicted)"]);if(tata)items.push(["tata","TATA box (predicted)"]);
   items.push(["tss","Transcription start site"]);if(hasCds)items.push(["u5","5′ UTR"],["atg","Start codon"],["cds","Coding exon (CDS)"]);else items.push(["u5","Exon"]);
   if(introns.length)items.push(["intron","Intron"],["donor","Splice donor (GT)"],["acc","Splice acceptor (AG)"]);
   if(hasCds)items.push(["stop","Stop codon"],["u3","3′ UTR"]);if(pas)items.push(["pas","Poly(A) signal (predicted)"]);
   items.push(["tail","Poly(A) tail (post-transcriptional)"]);if(B)items.push(["down","Downstream (1 kb)"]);
-  let lx=PL,ly=sy+34;items.forEach(([k,t])=>{const w=t.length*5.2+24;if(lx+w>W-4){lx=PL;ly+=16;}
-    g.push(k==="intron"?`<line x1="${lx}" x2="${lx+12}" y1="${ly-4}" y2="${ly-4}" stroke="${GVC.intron}" stroke-width="2"/>`:k==="tss"?`<path d="M${lx+1} ${ly} v -8 h 9" fill="none" stroke="${GVC.tss}" stroke-width="1.5"/>`:`<rect x="${lx}" y="${ly-9}" width="12" height="10" rx="1.5" fill="${GVC[k]}"/>`,
+  let lx=PL,ly=(showScale?sy+34:sy+6);if(on("legend"))items.filter(([k])=>on(k)).forEach(([k,t])=>{const w=t.length*5.2+24;if(lx+w>W-4){lx=PL;ly+=16;}
+    g.push(k==="intron"?`<polyline points="${lx},${ly-2} ${lx+6},${ly-8} ${lx+12},${ly-2}" fill="none" stroke="${GVC.intron}" stroke-width="1.6"/>`:k==="tss"?`<path d="M${lx+1} ${ly} v -8 h 9" fill="none" stroke="${GVC.tss}" stroke-width="1.5"/>`:`<rect x="${lx}" y="${ly-9}" width="12" height="10" rx="1.5" fill="${GVC[k]}"/>`,
       `<text x="${lx+16}" y="${ly}" font-size="9.5" fill="currentColor">${t}</text>`);lx+=w;});
-  const H=ly+10;
+  GV.present={up:A>0,down:B>0,caat:!!caat,tata:!!tata,pas:!!pas,atg:hasCds,stop:hasCds,u3:hasCds,cds:hasCds,intron:introns.length>0,donor:introns.length>0,acc:introns.length>0};
+  const H=on("legend")?ly+10:(showScale?sy+20:sy);
   const svg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px;height:auto;color:var(--ink)" role="img" aria-label="Gene structure with all components">${g.join("")}</svg>`;
   // text summary
   const nonCanon=introns.filter(n=>!n.canon).length,len=(a,b)=>(b-a+1).toLocaleString();
@@ -1272,6 +1274,15 @@ function gvDiagram(gen,tr,cds,mrna,fl){
     <p class="small muted">Exons, UTRs, codons and introns follow the IWGSC RefSeq v1.1 gene model; positions are relative to the transcription start site (+1). TATA box, CAAT box and poly(A) signal are motif predictions. The poly(A) tail is added after transcription and is not encoded in the genome, so it is drawn symbolically.${A?"":" Upstream and downstream regions could not be loaded."}</p>`;
   return html;
 }
+
+const GV_PARTS=[["up","Upstream"],["caat","CAAT box"],["tata","TATA box"],["tss","TSS"],["u5","5′ UTR"],["atg","Start codon"],["cds","CDS exons"],["num","Exon numbers"],["intron","Introns"],["donor","Splice donor"],["acc","Splice acceptor"],["stop","Stop codon"],["u3","3′ UTR"],["pas","Poly(A) signal"],["tail","Poly(A) tail"],["down","Downstream"],["labels","Labels"],["scale","Scale"],["legend","Legend"]];
+function gvDiagramUI(args){GV.diag={args,hide:GV.diag&&GV.diag.hide?GV.diag.hide:new Set()};
+  const sw=k=>GVC[k]?`<span class="sw" style="background:${GVC[k]}"></span>`:"";
+  const fig=gvDiagram(...args,GV.diag.hide),pr=GV.present||{};
+  return `<div id="gvDiag"><div class="gvtog small" role="group" aria-label="Show or hide gene components"><b>Show:</b> ${GV_PARTS.map(([k,l])=>pr[k]===false?`<label class="muted" title="Not present in this gene"><input type="checkbox" disabled>${sw(k)}${l} (not found)</label>`:`<label><input type="checkbox" data-gvp="${k}"${GV.diag.hide.has(k)?"":" checked"}>${sw(k)}${l}</label>`).join("")}<button type="button" class="cnlink" data-gvall="1">All</button><button type="button" class="cnlink" data-gvall="0">None</button></div><div id="gvSvgWrap">${fig}</div></div>`;}
+function gvRedraw(){const w=document.getElementById("gvSvgWrap");if(!w||!GV.diag)return;const html=gvDiagram(...GV.diag.args,GV.diag.hide);w.innerHTML=html;}
+document.addEventListener("change",e=>{const c=e.target;if(!c.matches||!c.matches("#gvDiag [data-gvp]"))return;c.checked?GV.diag.hide.delete(c.dataset.gvp):GV.diag.hide.add(c.dataset.gvp);gvRedraw();});
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("#gvDiag [data-gvall]");if(!b)return;const all=b.dataset.gvall==="1";GV.diag.hide=all?new Set():new Set(GV_PARTS.map(p=>p[0]));document.querySelectorAll("#gvDiag [data-gvp]").forEach(x=>x.checked=all);gvRedraw();});
 async function gvOpen(id){
   const box=$("#mBox");$("#modal").classList.add("on");
   box.innerHTML=`<div id="gvBox"><h2 style="font:700 18px var(--display);margin:0 0 6px">${esc(id)}</h2><p class="small muted">Loading the gene model and sequence…</p></div>`;
@@ -1283,7 +1294,7 @@ async function gvOpen(id){
         if(prot[0]!=="M"||prot.indexOf("*")>=0)warn="The CDS translated here does not start with M or contains a stop codon; the annotation and the sequence record may differ at this locus.";}}
     GV.cur={m,mrna,cds,prot};
     let fl=null;try{const g1=await gvGenomic(m,1000),u=m.start-g1.s,dn=g1.e-m.end,a=m.strand<0?dn:u,b=m.strand<0?u:dn;fl={up:g1.sq.slice(0,a),down:b?g1.sq.slice(g1.sq.length-b):""};}catch(e){fl=null;}
-    const svg=tr&&tr.exons.length?gvDiagram(gen,tr,cds,mrna,fl):"";
+    if(GV.diag)GV.diag.hide=new Set();const svg=tr&&tr.exons.length?gvDiagramUI([gen,tr,cds,mrna,fl]):"";
     const ginfo=(typeof genesAll==="function")?(()=>{const G=genesAll();for(const c of Object.keys(G.g||{}))for(const r of G.g[c])if(gidOf(c,r[1])===id)return {c,r,d:G.d[r[3]]||"",v21:gid21(c,r)};return null;})():null;
     $("#gvBox").innerHTML=`<h2 style="font:700 18px var(--display);margin:0 0 4px">${esc(id)}</h2>
       <p class="small">${ginfo&&ginfo.v21?`v2.1 ID ${esc(ginfo.v21)} · `:""}chr${esc(m.chr)}:${m.start.toLocaleString()}–${m.end.toLocaleString()} (${m.strand<0?"−":"+"} strand, RefSeq v1.0)${ginfo?` · ${ginfo.r[0].toFixed(3)} Mb on RefSeq v2.1`:""}<br>${esc((ginfo&&ginfo.d)||m.desc||"")}</p>
@@ -1870,7 +1881,7 @@ set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEven
     }
     const par=svg.parentElement;
     if(par)[...par.children].forEach(c=>{if(c!==svg&&c.tagName==="P"){const t=clean([...c.childNodes].filter(n=>!(n.nodeType===1&&n.tagName==="BUTTON")).map(n=>n.textContent).join(" "));if(t)notes.push(t);}});
-    if(pop){const bx=svg.closest("#gvBox")||pane;const ps=[...bx.querySelectorAll(":scope > p, :scope > div > p")].map(c=>clean(c.innerText||c.textContent)).filter(t=>t&&!/^Loading/.test(t));notes.length=0;ps.forEach(t=>notes.push(t));}
+    if(pop){const bx=svg.closest("#gvBox")||pane;const ps=[...bx.querySelectorAll("p")].filter(c=>!c.closest(".figbar")).map(c=>clean(c.innerText||c.textContent)).filter(t=>t&&!/^Loading/.test(t));notes.length=0;ps.forEach(t=>notes.push(t));}
     const intro=pane.querySelector(":scope > p.small.muted");if(intro&&!isIdeo){const t=clean(intro.textContent);if(t)notes.push(t);}
     const uniq=[];notes.forEach(t=>{if(!uniq.some(u=>u===t||u.includes(t)))uniq.push(t);});
     return {title,set,notes:uniq.filter(t=>!uniq.some(u=>u!==t&&u.includes(t))),isIdeo};
