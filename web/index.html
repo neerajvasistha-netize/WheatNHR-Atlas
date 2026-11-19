@@ -306,6 +306,7 @@ td.num{font-size:13px}
 .foot h4{font:700 15px var(--display)}
 .prose h2{font:700 20px/1.25 var(--display)}
 @media (max-width:600px){.hero-in{padding:20px 16px 22px}.hero .brand p{font-size:15px}.panel{padding:14px}.filters{padding:12px}.filters label{flex:1 1 140px}.filters input[type=search]{width:100%}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.extabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}.extab{border:1px solid var(--chrom-edge);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}.extab.on{background:var(--brand);border-color:var(--brand);color:#fff}
 .gvtog{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin:4px 0 8px;padding:8px 10px;background:var(--field,#f4f7f5);border-radius:8px}.gvtog label{display:inline-flex;align-items:center;gap:4px;cursor:pointer}.gvtog .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
 .trsel{position:relative;display:inline-block;margin-left:10px;vertical-align:middle}
 .trbtn{display:inline-flex!important;align-items:center;gap:8px;min-height:34px!important;padding:4px 8px 4px 12px!important;font:600 13.5px var(--body)!important;background:var(--brand)!important;border-color:var(--brand)!important;color:#fff!important;border-radius:999px!important;box-shadow:0 2px 8px rgba(31,90,58,.25)!important;transition:transform .12s,box-shadow .12s}
@@ -511,6 +512,35 @@ td.num{font-size:13px}
       <div class="row tform"><label style="flex:1">Gene ID or text<br><input id="tsQ" type="text" placeholder="TraesCS5B02G059000 or 'disease resistance protein RPM1'" style="width:100%"></label><button class="btn primary" id="tsGo" type="button">Search</button></div><div id="tsOut"></div></div>
     <div class="tpane" id="tp-enrich" style="display:none"><h3 style="font-size:15px;margin:14px 0 4px">Gene-family enrichment</h3><p class="small muted">Are resistance-gene families over-represented in a region compared with the whole genome?</p>
       <div class="row tform"><label>Chromosome<br><select id="teChr"></select></label><label>From (Mb)<br><input id="teFrom" type="number" step="0.001" value="0"></label><label>To (Mb)<br><input id="teTo" type="number" step="0.001" value="20"></label><button class="btn primary" id="teGo" type="button">Test enrichment</button></div><div id="teOut"></div></div>
+    <div class="tpane" id="tp-expr" style="display:none"><h3 style="font-size:15px;margin:14px 0 4px">In-silico expression of DEGs</h3>
+      <p class="small muted">Differentially expressed wheat genes (DEGs) after infection, compiled from published RNA-seq studies of biotic stress. Each value is the log2 fold change reported by the study for a contrast (usually infected vs mock, or resistant vs susceptible), with the study's own significance cut-off. Gene IDs are IWGSC RefSeq v1.1; positions are on RefSeq v2.1.</p>
+      <p class="small" id="exSum">Loading the expression data…</p>
+      <div class="extabs" role="tablist" aria-label="Expression analyses" id="exModes">
+        <button class="extab on" type="button" data-ex="look">Gene lookup</button>
+        <button class="extab" type="button" data-ex="reg">Region scan</button>
+        <button class="extab" type="button" data-ex="cand">Candidate ranking</button>
+        <button class="extab" type="button" data-ex="multi">Multi-disease responders</button>
+        <button class="extab" type="button" data-ex="stud">Studies</button>
+      </div>
+      <div class="expane" data-exp="look">
+        <div class="row tform"><label style="flex:1;min-width:260px">Gene IDs (v1.1 or v2.1; one per line, or separated by spaces or commas)<br><textarea id="exGenes" rows="3" style="width:100%" placeholder="TraesCS5B02G059000&#10;TraesCS3B02G086000"></textarea></label>
+        <label>Disease<br><select id="exLookDis"><option value="">All diseases</option></select></label>
+        <button class="btn primary" id="exLookGo" type="button">Show expression</button></div>
+        <div id="exLookOut"></div></div>
+      <div class="expane" data-exp="reg" hidden>
+        <div class="row tform"><label>Chromosome<br><select id="exChr"></select></label><label>From (Mb, v2.1)<br><input id="exFrom" type="number" step="0.001" value="20"></label><label>To (Mb, v2.1)<br><input id="exTo" type="number" step="0.001" value="30"></label>
+        <label>Disease<br><select id="exRegDis"><option value="">All diseases</option></select></label><label class="small"><input type="checkbox" id="exDef"> defence-related genes only</label><button class="btn primary" id="exRegGo" type="button">Scan region</button></div>
+        <div id="exRegOut"></div></div>
+      <div class="expane" data-exp="cand" hidden>
+        <p class="small muted">Ranks genes that carry three kinds of evidence: (1) differentially expressed after infection, (2) inside or within the window of an atlas resistance locus, best of all a locus for the same disease, and (3) a defence-related gene family (NLR, WAK, receptor kinases, PR proteins, ABC transporters).</p>
+        <div class="row tform"><label>Disease<br><select id="exCandDis"></select></label><label>Chromosome<br><select id="exCandChr"><option value="">All 21</option></select></label><label>Locus window ± (Mb)<br><input id="exWin" type="number" step="0.5" value="1" style="width:80px"></label><label>Show top<br><input id="exTop" type="number" value="100" style="width:80px"></label><button class="btn primary" id="exCandGo" type="button">Rank candidates</button></div>
+        <div id="exCandOut"></div></div>
+      <div class="expane" data-exp="multi" hidden>
+        <div class="row tform"><label>Differentially expressed in at least<br><select id="exMinD"><option>2</option><option selected>3</option><option>4</option><option>5</option></select> diseases</label>
+        <label>Direction<br><select id="exDir"><option value="any">Any</option><option value="up">Up-regulated in every disease</option><option value="down">Down-regulated in every disease</option></select></label><label class="small"><input type="checkbox" id="exMultiDef"> defence-related genes only</label><button class="btn primary" id="exMultiGo" type="button">Find genes</button></div>
+        <div id="exMultiOut"></div></div>
+      <div class="expane" data-exp="stud" hidden><div id="exStudOut"></div></div>
+    </div>
     <div class="tpane" id="tp-gokegg" style="display:none"><h3 style="font-size:15px;margin:14px 0 4px">GO and KEGG enrichment</h3><p class="small muted">Gene Ontology and KEGG pathway enrichment for the genes of a region (e.g. a QTL interval or shared region) or for your own gene list.</p>
       <div class="row tform"><label>Genes from<br><select id="tkgSrc"><option value="region">A region</option><option value="list">My gene list</option></select></label>
       <span id="tkgRegion" class="row" style="gap:10px;align-items:flex-end"><label>Chromosome<br><select id="tkgChr"></select></label><label>From (Mb)<br><input id="tkgFrom" type="number" step="0.001" value="0"></label><label>To (Mb)<br><input id="tkgTo" type="number" step="0.001" value="20"></label><label class="small"><input type="checkbox" id="tkgDef"> defence-related only</label></span>
@@ -1021,7 +1051,7 @@ const TGROUP={genes:["genes","gsearch","homolog"],enrich:["enrich","gokegg"],sge
 /* ---- Tool groups: Genetic tools and Genomic tools ---- */
 const TG={grp:"genetic",pane:null,
   G:{genetic:{title:"Genetic tools",items:[["Meta-QTL","pane","pmq"],["Meta-GWAS","pane","pmg"],["Region search","view","region"],["Candidate gene mapping","view","finemap"],["Locus lists","pane","sgene"],["Marker lookup","pane","markers"],["Annotate your GWAS/QTL hits","pane","anno"]]},
-     genomic:{title:"Genomic tools",items:[["Sequence viewer","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"]]}}};
+     genomic:{title:"Genomic tools",items:[["Sequence viewer","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"],["In-silico expression (DEGs)","pane","expr"]]}}};
 function tgGroupOf(pane){for(const g in TG.G)if(TG.G[g].items.some(it=>it[1]==="pane"&&it[2]===pane))return g;return "genomic";}
 function tgEnsurePane(){const items=TG.G[TG.grp].items.filter(it=>it[1]==="pane").map(it=>it[2]);if(!TG.pane||!items.includes(TG.pane))tTab(items[0]);else tTab(TG.pane);}
 function tgRender(view){const grp=view==="region"||view==="finemap"?"genetic":view==="sequence"?"genomic":view==="tools"?TG.grp:null;if(!grp)return;
@@ -1177,7 +1207,7 @@ const GV_RX=/TraesCS[1-7U][ABDU]?02G\d{6}(?:LC)?/g;
 function gvLinkify(root){
   const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{
     const p=n.parentElement;if(!p||!n.nodeValue||n.nodeValue.indexOf("TraesCS")<0)return NodeFilter.FILTER_REJECT;
-    if(p.closest("a,button,textarea,input,select,script,style,.seqbox,#gvBox"))return NodeFilter.FILTER_REJECT;
+    if(p.closest("a,button,textarea,input,select,script,style,svg,.seqbox,#gvBox"))return NodeFilter.FILTER_REJECT;
     GV_RX.lastIndex=0;return GV_RX.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
   const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
   nodes.forEach(n=>{const t=n.nodeValue,frag=document.createDocumentFragment();let last=0;GV_RX.lastIndex=0;let m;
@@ -1846,6 +1876,112 @@ const EXTJSON=[['gokegg','gokegg_lite.json'],['markerslite','markers_lite.json']
 /* keep side panels below the fixed header */
 (function(){var h=document.querySelector("header.top");if(!h)return;function set(){document.documentElement.style.setProperty("--hdrH",h.getBoundingClientRect().height+"px");}
 set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEventListener("resize",set);})();
+</script>
+<script id="expr-js">
+/* ---- In-silico expression of DEGs (Genomic tools) ---- */
+const EX={data:null,loading:null,rows:null,mode:"look"};
+function exKey(id){id=String(id||"").trim().toUpperCase();let m=id.match(/^TRAESCS([1-7][ABD]|U)02G(\d{6})/);if(m)return m[1]+":"+(+m[2]);
+  m=id.match(/^TRAESCS([1-7][ABD]|U)03G(\d{7})/);if(m){const v=v21map().get(id.slice(0,20));if(v)return v;}return null;}
+function exRows(){if(EX.rows)return EX.rows;const G=genesAll(),M=new Map();for(const c of CHRS)for(const r of (G.g[c]||[]))M.set(c+":"+r[1],[c,r]);EX.rows=M;return M;}
+function exGene(k){const x=exRows().get(k);if(!x){const [c,n]=k.split(":");return {k,c,id:gidOf(c,n),pos:null,cls:"",desc:"",def:false};}
+  const [c,r]=x,G=genesAll(),cl=G.cl[r[2]]||"";return {k,c,id:gidOf(c,r[1]),v21:gid21(c,r),pos:r[0],cls:cl,desc:G.d[r[3]]||"",def:!!cl&&cl!=="other"&&cl!=="other kinase"};}
+async function exLoad(){if(EX.data)return EX.data;if(!EX.loading)EX.loading=(async()=>{const r=await fetch("expr_degs.json");if(!r.ok)throw new Error("expression data HTTP "+r.status);
+    const d=await r.json();d.cDis=d.C.map(c=>d.S[c[0]].disease);EX.data=d;return d;})().catch(e=>{EX.loading=null;throw e;});return EX.loading;}
+const exDisList=d=>[...new Set(d.S.map(s=>s.disease))].sort();
+function exHits(d,k,dis){const a=d.G[k];if(!a)return [];const out=[];for(let i=0;i<a.length;i+=2){const ci=a[i];if(dis&&d.cDis[ci]!==dis)continue;out.push({ci,fc:a[i+1]/10,dir:d.C[ci][3]===1});}return out;}
+function exSummary(h,d){const st=new Set(h.map(x=>d.C[x.ci][0])),dis=new Set(h.map(x=>d.cDis[x.ci]));const up=h.filter(x=>x.fc>0).length,dn=h.filter(x=>x.fc<0).length;
+  const q=h.filter(x=>!x.dir);const mx=q.length?q.reduce((a,x)=>Math.abs(x.fc)>Math.abs(a)?x.fc:a,0):null;return {nS:st.size,nD:dis.size,dis:[...dis].sort(),up,dn,mx};}
+function exCite(d,si){const s=d.S[si];return s.doi?`<a href="https://doi.org/${esc(s.doi)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.cite)}</a>`:esc(s.cite);}
+function exGeneCell(g){return `<a href="#" data-gv="${esc(g.id)}" class="mono">${esc(g.id)}</a>`;}
+function exFcCol(v){if(v==null)return "#f3f4f6";const t=Math.max(-1,Math.min(1,v/5));const mix=(a,b,f)=>Math.round(a+(b-a)*f);
+  return t>=0?`rgb(${mix(255,178,t)},${mix(255,24,t)},${mix(255,43,t)})`:`rgb(${mix(255,33,-t)},${mix(255,102,-t)},${mix(255,172,-t)})`;}
+/* heatmap: genes x contrasts, log2 fold change */
+function exHeat(d,genes,dis){const cols=new Map();genes.forEach(g=>exHits(d,g.k,dis).forEach(h=>cols.set(h.ci,1)));
+  let C=[...cols.keys()].sort((a,b)=>d.cDis[a].localeCompare(d.cDis[b])||d.C[a][0]-d.C[b][0]||a-b);const more=C.length>90?C.length-90:0;C=C.slice(0,90);
+  if(!C.length)return `<p class="small muted">None of these genes is reported as differentially expressed in the compiled studies${dis?" for "+esc(dis):""}.</p>`;
+  const cw=C.length<=24?22:13,rh=16,LW=150,TH=210,W=Math.max(LW+C.length*cw+70,LW+520),H=TH+genes.length*rh+60;const sh=s=>s.length>40?s.slice(0,39)+"…":s;
+  let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${Math.max(560,W)}px;height:auto" role="img" aria-label="Expression heatmap: log2 fold change of the selected genes in each study contrast">`;
+  let prev=null;C.forEach((ci,j)=>{const x=LW+j*cw;const di=d.cDis[ci];if(di!==prev){s+=`<rect x="${x}" y="${TH-8}" width="${C.filter(c=>d.cDis[c]===di).length*cw}" height="5" fill="${DCOL[di]||"#888"}"/>`;prev=di;}
+    const lab=`${d.S[d.C[ci][0]].cite} · ${sh(d.C[ci][1])}`;s+=`<text transform="translate(${x+cw/2+3},${TH-12}) rotate(-90)" font-size="${cw>=20?8:7}" fill="#374151">${esc(lab)}</text>`;});
+  genes.forEach((g,i)=>{const y=TH+i*rh;s+=`<text x="${LW-6}" y="${y+rh-4}" font-size="9" text-anchor="end" fill="#111827">${esc(g.id)}</text>`;
+    const hm=new Map(exHits(d,g.k,dis).map(h=>[h.ci,h]));C.forEach((ci,j)=>{const h=hm.get(ci);const x=LW+j*cw;
+      s+=`<rect x="${x}" y="${y}" width="${cw-1}" height="${rh-1}" fill="${h?exFcCol(h.dir?Math.sign(h.fc)*2.5:h.fc):"#f3f4f6"}"><title>${esc(g.id)} · ${esc(d.cDis[ci])} · ${esc(d.S[d.C[ci][0]].cite)} · ${esc(d.C[ci][1])}${h?(h.dir?` · ${h.fc>0?"up":"down"} (no fold change given)`:` · log2FC ${h.fc.toFixed(2)}`):" · not a DEG"}</title></rect>`;
+      if(h&&h.dir)s+=`<circle cx="${x+cw/2-.5}" cy="${y+rh/2-.5}" r="1.6" fill="#111827"/>`;});});
+  const ly=TH+genes.length*rh+18;s+=`<text x="${LW}" y="${ly+9}" font-size="9" fill="#374151">log2 fold change</text>`;
+  for(let k=0;k<=20;k++){const v=-5+k*.5;s+=`<rect x="${LW+90+k*9}" y="${ly}" width="9" height="10" fill="${exFcCol(v)}"/>`;}
+  s+=`<text x="${LW+90}" y="${ly+21}" font-size="8" fill="#374151">≤ −5</text><text x="${LW+90+94}" y="${ly+21}" font-size="8" text-anchor="middle" fill="#374151">0</text><text x="${LW+90+189}" y="${ly+21}" font-size="8" text-anchor="end" fill="#374151">≥ +5</text>`;
+  s+=`<rect x="${LW+300}" y="${ly}" width="10" height="10" fill="#f3f4f6"/><text x="${LW+314}" y="${ly+9}" font-size="9" fill="#374151">not a DEG in that study</text><circle cx="${LW+440}" cy="${ly+5}" r="2" fill="#111827"/><text x="${LW+446}" y="${ly+9}" font-size="9" fill="#374151">direction only</text>`;
+  {const ds=[...new Set(C.map(ci=>d.cDis[ci]))];let x=LW,y=ly+40;s+=`<text x="${LW-6}" y="${y}" font-size="9" text-anchor="end" fill="#374151">Disease</text>`;ds.forEach(di=>{const w=di.length*5.3+22;if(x+w>W-6){x=LW;y+=14;}s+=`<rect x="${x}" y="${y-8}" width="10" height="9" fill="${DCOL[di]||"#888"}"/><text x="${x+14}" y="${y}" font-size="9" fill="#374151">${esc(di)}</text>`;x+=w;});
+   s=s.replace(/viewBox="0 0 (\d+) (\d+)"/,(m,a)=>`viewBox="0 0 ${a} ${y+12}"`);}
+  s+=`</svg>`;
+  return s+(more?`<p class="small muted">${more} further contrasts are not drawn; narrow by disease to see them all.</p>`:"");}
+function exTable(rows,head,cols,csvName){const id="ex"+Math.random().toString(36).slice(2,8);
+  return {html:`<div class="row" style="justify-content:space-between;align-items:center;margin:8px 0"><span class="small muted">${rows.length.toLocaleString()} gene${rows.length===1?"":"s"}</span><button class="btn" type="button" id="${id}">Save table (CSV)</button></div><div class="tscroll"><table class="tbl"><thead><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.slice(0,1000).map(cols).join("")}</tbody></table></div>${rows.length>1000?`<p class="small muted">First 1,000 shown; the CSV has all ${rows.length.toLocaleString()}.</p>`:""}`,
+    bind:csvRows=>{const b=document.getElementById(id);if(b)b.onclick=()=>saveText(csvName,toCSV(csvRows));}};}
+const exDisChips=ds=>ds.map(x=>`<span class="dchip small" title="${esc(x)}"><span class="sw" style="background:${DCOL[x]||"#888"}"></span>${esc(x)}</span>`).join(" ");
+function exGeneRow(d,g,sm){return `<tr><td>${exGeneCell(g)}</td><td class="num">${g.pos!=null?g.pos.toFixed(3):""}</td><td>${esc(g.cls&&g.cls!=="other"?g.cls:"")}</td><td class="small">${esc(g.desc)}</td><td class="num">${sm.nS}</td><td class="num">${sm.up}</td><td class="num">${sm.dn}</td><td class="num">${sm.mx!=null?sm.mx.toFixed(2):""}</td><td>${exDisChips(sm.dis)}</td></tr>`;}
+const EX_HEAD=["Gene (v1.1)","v2.1 Mb","Family","Description","Studies","Up","Down","Max log2FC","Diseases"];
+const exCsvRow=(g,sm,extra=[])=>[g.id,g.v21||"",g.c,g.pos!=null?g.pos.toFixed(4):"",g.cls,g.desc,sm.nS,sm.up,sm.dn,sm.mx!=null?sm.mx.toFixed(3):"",sm.dis.join("; ")].concat(extra);
+const EX_CSVH=["gene_v1.1","gene_v2.1","chr","pos_v2.1_Mb","family","description","n_studies","n_up","n_down","max_log2FC","diseases"];
+function exBindGenes(el){el.querySelectorAll("a[data-gv]").forEach(a=>a.onclick=e=>{e.preventDefault();if(typeof gvOpen==="function")gvOpen(a.dataset.gv);});}
+/* ---- analyses ---- */
+async function exLook(){const o=$("#exLookOut"),d=await exLoad();const ids=($("#exGenes").value||"").split(/[\s,;]+/).filter(Boolean),dis=$("#exLookDis").value;
+  if(!ids.length){o.innerHTML=`<p class="msg err">Enter one or more gene IDs.</p>`;return;}
+  const bad=[],genes=[];ids.slice(0,60).forEach(x=>{const k=exKey(x);if(!k)bad.push(x);else if(!genes.some(g=>g.k===k))genes.push(exGene(k));});
+  const rows=genes.map(g=>[g,exSummary(exHits(d,g.k,dis),d)]);const t=exTable(rows,EX_HEAD,([g,sm])=>exGeneRow(d,g,sm),"WheatTraitMap_expression_lookup.csv");
+  o.innerHTML=`${bad.length?`<p class="msg err small">Not recognised: ${esc(bad.join(", "))}</p>`:""}${ids.length>60?`<p class="small muted">The first 60 genes are shown.</p>`:""}<div class="panel" style="margin-top:8px"><h3 style="margin:0 0 6px;font-size:15px">Expression heatmap${dis?" · "+esc(dis):""}</h3>${exHeat(d,genes,dis)}</div>${t.html}`;
+  t.bind([EX_CSVH].concat(rows.map(([g,sm])=>exCsvRow(g,sm))));exBindGenes(o);}
+async function exReg(){const o=$("#exRegOut"),d=await exLoad();const c=$("#exChr").value,f=num($("#exFrom").value),t=num($("#exTo").value),dis=$("#exRegDis").value,def=$("#exDef").checked;
+  if(f==null||t==null||t<=f){o.innerHTML=`<p class="msg err">Enter a start and end in Mb (RefSeq v2.1).</p>`;return;}
+  const G=genesAll(),rows=[];for(const r of (G.g[c]||[])){if(r[0]<f||r[0]>t)continue;const k=c+":"+r[1];const h=exHits(d,k,dis);if(!h.length)continue;const g=exGene(k);if(def&&!g.def)continue;rows.push([g,exSummary(h,d)]);}
+  rows.sort((a,b)=>b[1].nS-a[1].nS||Math.abs(b[1].mx||0)-Math.abs(a[1].mx||0));
+  const nLoci=lociNear(c,(f+t)/2,(t-f)/2).filter(r=>!dis||r.disease===dis).length;
+  const t2=exTable(rows,EX_HEAD,([g,sm])=>exGeneRow(d,g,sm),`WheatTraitMap_DEGs_${c}_${f}-${t}Mb.csv`);
+  o.innerHTML=`<p class="small">${rows.length.toLocaleString()} DEG${rows.length===1?"":"s"} on ${esc(c)} ${f}–${t} Mb${dis?" for "+esc(dis):""}${def?" (defence-related only)":""}; ${nLoci} atlas locus report${nLoci===1?"":"s"} overlap this interval.</p>${rows.length?`<div class="panel" style="margin-top:8px"><h3 style="margin:0 0 6px;font-size:15px">Top ${Math.min(40,rows.length)} DEGs of ${esc(c)} ${f}–${t} Mb${dis?" · "+esc(dis):""}</h3>${exHeat(d,rows.slice(0,40).map(x=>x[0]),dis)}</div>`:""}${t2.html}`;
+  t2.bind([EX_CSVH].concat(rows.map(([g,sm])=>exCsvRow(g,sm))));exBindGenes(o);}
+function exLociIdx(){const n=Object.keys(st.reports).length;if(EX.li&&EX.li.n===n)return EX.li.m;const m={};
+  for(const r of Object.values(st.reports)){const x=co(r,MAIN);if(!x||!x.chr)continue;let lo=x.start!=null&&x.start!==""?+x.start:(x.peak!=null&&x.peak!==""?+x.peak:null),hi=x.end!=null&&x.end!==""?+x.end:lo;if(lo==null||isNaN(lo))continue;if(hi<lo)[lo,hi]=[hi,lo];(m[x.chr]=m[x.chr]||[]).push([lo,hi,r]);}
+  EX.li={n,m};return m;}
+const exNear=(c,p,w)=>(exLociIdx()[c]||[]).filter(([lo,hi])=>p>=lo-w&&p<=hi+w).map(x=>x[2]);
+async function exCand(){const o=$("#exCandOut"),d=await exLoad();const dis=$("#exCandDis").value,cc=$("#exCandChr").value,w=num($("#exWin").value)??1,top=num($("#exTop").value)??100;
+  o.innerHTML=`<p class="small muted">Ranking…</p>`;await new Promise(r=>setTimeout(r,10));
+  const rows=[];for(const k of Object.keys(d.G)){const h=exHits(d,k,dis);if(!h.length)continue;const g=exGene(k);if(g.pos==null||(cc&&g.c!==cc))continue;
+    const near=exNear(g.c,g.pos,w);const same=near.filter(r=>r.disease===dis);const sm=exSummary(h,d);
+    const score=(same.length?3:near.length?1:0)+(g.def?2:0)+Math.min(3,sm.nS)+Math.min(2,Math.abs(sm.mx||1)/3);
+    if(!near.length&&!g.def)continue;rows.push([g,sm,same,near,+score.toFixed(2)]);}
+  rows.sort((a,b)=>b[4]-a[4]);const R=rows.slice(0,top);
+  const head=["Score","Gene (v1.1)","v2.1 Mb","Family","Description",`Studies (${esc(dis)})`,"Max log2FC",`${esc(dis)} loci ±${w} Mb`,"Other loci"];
+  const t=exTable(R,head,([g,sm,same,near,sc])=>`<tr><td class="num"><b>${sc}</b></td><td>${exGeneCell(g)}</td><td class="num">${g.pos.toFixed(3)}</td><td>${esc(g.cls&&g.cls!=="other"?g.cls:"")}</td><td class="small">${esc(g.desc)}</td><td class="num">${sm.nS}</td><td class="num">${sm.mx!=null?sm.mx.toFixed(2):""}</td><td class="small">${same.slice(0,4).map(r=>`<a href="#" data-rid="${esc(r.id)}">${esc(r.name)}</a>`).join(", ")}${same.length>4?` +${same.length-4}`:""}</td><td class="num">${near.length-same.length}</td></tr>`,`WheatTraitMap_candidates_${dis.replace(/\W+/g,"_")}.csv`);
+  o.innerHTML=`<p class="small">${rows.length.toLocaleString()} genes are differentially expressed in ${esc(dis)} studies and lie in an atlas locus or belong to a defence-related family; the top ${R.length} are listed. Score = same-disease locus 3 (other locus 1) + defence family 2 + studies (up to 3) + fold-change size (up to 2).</p>${t.html}`;
+  t.bind([["score"].concat(EX_CSVH,["same_disease_loci","other_loci"])].concat(rows.map(([g,sm,same,near,sc])=>[sc].concat(exCsvRow(g,sm,[same.map(r=>r.name).join("; "),near.length-same.length])))));
+  exBindGenes(o);o.querySelectorAll("a[data-rid]").forEach(a=>a.onclick=e=>{e.preventDefault();renderDrawer(a.dataset.rid);});}
+async function exMulti(){const o=$("#exMultiOut"),d=await exLoad();const min=+$("#exMinD").value,dir=$("#exDir").value,def=$("#exMultiDef").checked;const rows=[];
+  for(const k of Object.keys(d.G)){const h=exHits(d,k,"");const per={};h.forEach(x=>{(per[d.cDis[x.ci]]=per[d.cDis[x.ci]]||[]).push(x.fc);});
+    const ds=Object.keys(per).filter(di=>dir==="any"||(dir==="up"?per[di].every(v=>v>0):per[di].every(v=>v<0)));if(ds.length<min)continue;
+    const g=exGene(k);if(def&&!g.def)continue;const sm=exSummary(h.filter(x=>ds.includes(d.cDis[x.ci])),d);rows.push([g,sm]);}
+  rows.sort((a,b)=>b[1].nD-a[1].nD||b[1].nS-a[1].nS);
+  const t=exTable(rows,EX_HEAD,([g,sm])=>exGeneRow(d,g,sm),`WheatTraitMap_multi_disease_DEGs.csv`);
+  o.innerHTML=`<p class="small">${rows.length.toLocaleString()} genes are differentially expressed in at least ${min} diseases${dir!=="any"?` (${dir}-regulated in each)`:""}${def?", defence-related only":""}.</p>${rows.length?`<div class="panel" style="margin-top:8px"><h3 style="margin:0 0 6px;font-size:15px">Top ${Math.min(40,rows.length)} multi-disease responders</h3>${exHeat(d,rows.slice(0,40).map(x=>x[0]),"")}</div>`:""}${t.html}`;
+  t.bind([EX_CSVH].concat(rows.map(([g,sm])=>exCsvRow(g,sm))));exBindGenes(o);}
+async function exStud(){const o=$("#exStudOut"),d=await exLoad();const per=d.S.map(()=>({c:0,g:new Set()}));d.C.forEach((c,i)=>{per[c[0]].c++;});
+  for(const k in d.G){const a=d.G[k];for(let i=0;i<a.length;i+=2)per[d.C[a[i]][0]].g.add(k);}
+  const order=d.S.map((s,i)=>i).sort((a,b)=>d.S[a].disease.localeCompare(d.S[b].disease)||d.S[b].year-d.S[a].year);
+  const id="exStudCsv";o.innerHTML=`<div class="row" style="justify-content:space-between;align-items:center;margin:8px 0"><span class="small muted">${d.S.length} studies · ${d.C.length} contrasts</span><button class="btn" type="button" id="${id}">Save list (CSV)</button></div><div class="tscroll"><table class="tbl"><thead><tr><th>Disease</th><th>Study</th><th>Title</th><th>Journal</th><th class="r">Contrasts</th><th class="r">DEGs</th></tr></thead><tbody>${order.map(i=>{const s=d.S[i];return `<tr><td>${exDisChips([s.disease])}</td><td>${exCite(d,i)}</td><td class="small">${esc(s.title)}</td><td class="small">${esc(s.journal)}</td><td class="num">${per[i].c}</td><td class="num">${per[i].g.size.toLocaleString()}</td></tr>`;}).join("")}</tbody></table></div>`;
+  $("#"+id).onclick=()=>saveText("WheatTraitMap_expression_studies.csv",toCSV([["disease","citation","title","journal","year","doi","pmcid","contrasts","DEGs"]].concat(order.map(i=>{const s=d.S[i];return [s.disease,s.cite,s.title,s.journal,s.year,s.doi,s.pmcid,per[i].c,per[i].g.size];}))));}
+async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
+  try{const d=await exLoad();s.dataset.ok="1";const dl=exDisList(d);
+    s.innerHTML=`<b>${d.S.length}</b> studies · <b>${d.C.length}</b> contrasts · <b>${Object.keys(d.G).length.toLocaleString()}</b> genes reported as DEGs · <b>${dl.length}</b> diseases (${esc(dl.join(", "))}). Compiled ${esc(d.built||"")}.`;
+    ["exLookDis","exRegDis"].forEach(i=>dl.forEach(x=>$("#"+i).add(new Option(x,x))));dl.forEach(x=>$("#exCandDis").add(new Option(x,x)));
+    if(dl.includes("Fusarium head blight"))$("#exCandDis").value="Fusarium head blight";
+    CHRS.forEach(c=>{$("#exChr").add(new Option(c,c));$("#exCandChr").add(new Option(c,c));});$("#exChr").value="5B";
+  }catch(e){s.innerHTML=`<span class="msg err">The expression data could not be loaded (${esc(String(e.message||e))}).</span>`;}}
+(function(){const m=$("#exModes");if(!m)return;
+  m.onclick=e=>{const b=e.target.closest("[data-ex]");if(!b)return;EX.mode=b.dataset.ex;m.querySelectorAll("[data-ex]").forEach(x=>x.classList.toggle("on",x===b));
+    document.querySelectorAll("#tp-expr .expane").forEach(p=>p.hidden=p.dataset.exp!==EX.mode);if(EX.mode==="stud")exStud();};
+  const run=(id,f)=>{const b=$("#"+id);if(b)b.onclick=async()=>{b.disabled=true;try{await f();}catch(e){console.error(e);}b.disabled=false;};};
+  run("exLookGo",exLook);run("exRegGo",exReg);run("exCandGo",exCand);run("exMultiGo",exMulti);
+  const _tTab=tTab;tTab=function(k){_tTab(k);if(k==="expr")exInit();};})();
+
 </script>
 <style id="figpdf-css">
 .figbar{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin:8px 0 0}
