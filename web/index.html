@@ -2590,7 +2590,6 @@ function place(){
     <h2>How submissions are reviewed</h2><ol class="small"><li>The contributor submits with an institutional email and a DOI, plus the table or figure (and attaches the paper or supplement when emailing).</li><li>The curator checks every value against the source, converts the positions to RefSeq v2.1 and the pangenome assemblies, and assigns the anchoring grade.</li><li>Approved records appear in the next update with the contributor's name; rejected submissions receive a reason.</li></ol>
     <h2>Consortium members</h2><div id="ctbMembers"></div></div>`);
     $$("#ctbAbout").querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>open(b.dataset.open));members();}
-  const d=$$("#drawer");if(d&&d.classList.contains("on")&&st.sel&&!d.querySelector(".ctb-fix")){const h=d.querySelector("h3");const r=st.reports[st.sel];if(h&&r){const b=document.createElement("button");b.type="button";b.className="btn ctb-fix";b.textContent="Suggest a correction";b.title="Report an error in this record, with proof";b.onclick=()=>open("fix",r);(d.querySelector("dl.kv")||h).insertAdjacentElement("beforebegin",b);}}
 }
 async function owner(){for(let i=0;i<40&&!st.user;i++)await new Promise(r=>setTimeout(r,500));let ok=false;try{ok=!!(st.user&&(await st.user.isOwner()||st.canEdit));}catch(e){}
   if(!ok||!st.db)return;const b=$$("#ctbRev");if(!b)return;b.hidden=false;const q=await loadQueue();const n=q.filter(x=>x.status==="pending").length;$$("#ctbCount").textContent=n?`(${n})`:"";}
