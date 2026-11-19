@@ -231,6 +231,16 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 #homeFilt{justify-content:space-between}#homeFilt>#addBtn{order:99}
 @media (min-width:1000px){#homeFilt{flex-wrap:nowrap;gap:12px}#homeFilt>label{flex:1 1 0;min-width:0}#homeFilt>label:first-of-type{flex-grow:2.2}#homeFilt>label>input,#homeFilt>label>select{width:100%!important;min-width:0}#homeFilt>.btn{flex:0 0 auto;white-space:nowrap}}
 .drawer{top:var(--hdrH,0px)!important;height:calc(100% - var(--hdrH,0px))!important}
+.mselw{display:flex;flex-direction:column;gap:4px;flex:1 1 160px;font-size:13px;font-weight:600;color:var(--muted);position:relative}
+.msel{position:relative}
+.mselb{width:100%;display:flex;justify-content:space-between;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--chrom-edge);border-radius:8px;padding:8px 10px;font:400 15px var(--body);color:var(--ink,inherit);cursor:pointer;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mselb.on{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset}
+.mselp{position:absolute;z-index:60;top:calc(100% + 4px);left:0;min-width:320px;max-width:92vw;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 28px rgba(0,0,0,.18);padding:6px;font-weight:400}
+.mselq{display:flex;gap:6px;padding:4px 4px 6px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.mselq button{font:600 12px var(--body);border:1px solid var(--line);background:transparent;color:var(--brand);border-radius:999px;padding:3px 10px;cursor:pointer}
+.mselo{display:grid!important;grid-template-columns:18px 48px 1fr auto;align-items:center;gap:6px;padding:6px;border-radius:6px;cursor:pointer;font-size:13px!important;color:var(--ink,inherit)!important;font-weight:400!important}
+.mselo:hover{background:var(--bg)}
+.mselo b{font-weight:700}.mselo em{font-style:normal;color:var(--muted);font-size:12px}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -421,7 +431,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
     <select id="fAsm" hidden aria-hidden="true"><option>RefSeq v2.1</option></select>
     <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
     <label for="fChr">Chromosome<select id="fChr"><option value="">All</option></select></label>
-    <label for="fCls">Class<select id="fCls"><option value="">All</option></select></label>
+    <div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
     <label for="fGrade">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
     <label for="fCur">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
@@ -780,9 +790,9 @@ function runWild(){const out=$("#wildOut");const rows=Object.values(st.reports).
   $("#wildTbl tbody").onclick=e=>{const tr=e.target.closest("tr[data-id]");if(tr)renderDrawer(tr.dataset.id);};
   $("#wildMap").onclick=()=>{st.wild=!st.wild;renderTable();runWild();};
   $("#wildCsv").onclick=()=>saveText("WheatTraitMap_wild_alien_origin.csv",toCSV([["id","locus","disease","wild_species","chr","position_v2.1_Mb","grade","source","citation"]].concat(rows.map(({r,sp})=>[r.id,r.name,r.disease,sp,r.chr,posOf(r),r.grade,srcShort(r.source),st.sources[r.source]?.citation||""]))));}
-function filtered(){const q=$("#q").value.trim().toLowerCase(),c=$("#fChr").value,k=$("#fCls").value,g=$("#fGrade").value,f=num($("#fFrom").value),t=num($("#fTo").value);
+function filtered(){const q=$("#q").value.trim().toLowerCase(),c=$("#fChr").value,KS=window.WTM_clsSel||new Set(),g=$("#fGrade").value,f=num($("#fFrom").value),t=num($("#fTo").value);
   const cu=$("#fCur")?$("#fCur").value:"";
-  return Object.values(st.reports).filter(r=>{if(!st.dOn.has(r.disease))return false;if(cu&&(r.curation||"atlas v1.2")!==cu)return false;if(c&&r.chr!==c)return false;if(k&&r.cls!==k)return false;if(g&&r.grade!==g)return false;if(st.wild&&!isWild(r))return false;
+  return Object.values(st.reports).filter(r=>{if(!st.dOn.has(r.disease))return false;if(cu&&(r.curation||"atlas v1.2")!==cu)return false;if(c&&r.chr!==c)return false;if(KS.size&&!KS.has(r.cls))return false;if(g&&r.grade!==g)return false;if(st.wild&&!isWild(r))return false;
     if(f!=null||t!=null){const v=iv(r,st.asm);if(!v)return false;if(f!=null&&v[1]<f)return false;if(t!=null&&v[0]>t)return false;}
     if(q){const hay=[r.name,r.marker,r.note,r.source,srcShort(r.source),st.sources[r.source]?.citation,r.chr,r.cls].join(" ").toLowerCase();if(!hay.includes(q))return false;}return true;});}
 function sorted(list){const {k,dir}=st.sort;return list.slice().sort((a,b)=>{let x=a[k],y=b[k];
@@ -1656,11 +1666,21 @@ function runHomo(){const o=$("#shOut"),q=($("#shQ").value||"").trim();
 function hookSG(){const b=$("#sgGo");if(b)b.onclick=runSG;const w=$("#wildGo");if(w)w.onclick=runWild;const h=$("#shGo");if(h)h.onclick=runHomo;}
 
 function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<option>${c}</option>`);$("#rChr").insertAdjacentHTML("beforeend",`<option${c==="1B"?" selected":""}>${c}</option>`);});
-  CLASSES.forEach(c=>$("#fCls").insertAdjacentHTML("beforeend",`<option>${c}</option>`));
+  {const CL={CG:"Cloned gene",SG:"Susceptibility / effector-sensitivity gene",DG:"Designated (catalogued) gene",QTL:"QTL",MTA:"GWAS marker-trait association",QTN:"QTN",BSA:"Bulked-segregant region (BSA/BSR-seq/QTL-seq)",MQTL:"Meta-QTL"};
+   const SEL=window.WTM_clsSel=new Set(),P=$("#fClsP"),B=$("#fClsBtn");
+   const cnt={};Object.values(st.reports).forEach(r=>{cnt[r.cls]=(cnt[r.cls]||0)+1;});
+   P.innerHTML=`<div class="mselq"><button type="button" data-all="1">Select all</button><button type="button" data-none="1">Clear</button></div>`+CLASSES.filter(c=>cnt[c]).map(c=>`<label class="mselo"><input type="checkbox" value="${c}"><b>${c}</b><span>${esc(CL[c]||c)}</span><em>${cnt[c]}</em></label>`).join("");
+   const sync=()=>{const n=SEL.size;$("#fClsTxt").textContent=n===0?"All classes":n<=3?[...SEL].join(" + "):n+" classes";P.querySelectorAll("input").forEach(i=>i.checked=SEL.has(i.value));B.classList.toggle("on",n>0);};
+   window.WTM_clsSync=sync;
+   B.onclick=e=>{e.stopPropagation();const o=P.hidden;P.hidden=!o;B.setAttribute("aria-expanded",String(o));};
+   P.addEventListener("click",e=>{e.stopPropagation();const t=e.target.closest("button");if(!t)return;if(t.dataset.all)P.querySelectorAll("input").forEach(i=>SEL.add(i.value));if(t.dataset.none)SEL.clear();sync();renderTable();});
+   P.addEventListener("change",e=>{const i=e.target;if(i.type!=="checkbox")return;i.checked?SEL.add(i.value):SEL.delete(i.value);sync();});
+   document.addEventListener("click",e=>{if(!P.hidden&&!e.target.closest("#fCls")){P.hidden=true;B.setAttribute("aria-expanded","false");}});
+   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!P.hidden){P.hidden=true;B.setAttribute("aria-expanded","false");B.focus();}});}
   [...new Set(Object.values(st.papers).map(p=>p.disease))].sort().forEach(d=>$("#pDis").insertAdjacentHTML("beforeend",`<option>${esc(d)}</option>`));
   ["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).addEventListener("input",renderTable));
   
-  $("#reset").onclick=()=>{["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.wild=false;if($("#wildMap"))runWild();st.dOn=new Set(DIS.map(d=>d[0]));renderLegend();renderTable();};
+  $("#reset").onclick=()=>{["#q","#fChr","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");if(window.WTM_clsSel){window.WTM_clsSel.clear();window.WTM_clsSync&&window.WTM_clsSync();}st.wild=false;if($("#wildMap"))runWild();st.dOn=new Set(DIS.map(d=>d[0]));renderLegend();renderTable();};
   $("#legend").onclick=e=>{const b=e.target.closest("button");if(!b)return;
      if(b.dataset.g){const ls=b.dataset.g==="Biotrophs"?["Biotroph"]:["Necrotroph","Hemibiotroph"];const names=DIS.filter(x=>ls.includes(x[2])).map(x=>x[0]);const on=names.every(n=>st.dOn.has(n));names.forEach(n=>on?st.dOn.delete(n):st.dOn.add(n));renderLegend();renderTable();return;}
      const d=b.dataset.d;
@@ -1827,7 +1847,7 @@ seqHook();
 function qsHook(){document.querySelectorAll(".qsb").forEach(btn=>btn.addEventListener("click",()=>{const k=btn.dataset.qs;
   const go=(el,focus)=>{if(!el)return;el.scrollIntoView({behavior:"smooth",block:"center"});const p=el.closest(".panel,.filters")||el;p.classList.remove("flash");void p.offsetWidth;p.classList.add("flash");if(focus)setTimeout(()=>focus.focus(),400);};
   if(k==="1"){go($("#ideo"),$("#q"));}
-  else if(k==="2"){go($("#fCls"),$("#fCls"));}
+  else if(k==="2"){go($("#fCls"),$("#fClsBtn"));}
   else if(k==="3"){const r=$("#tbl tbody tr[data-id]");go($("#tbl"));if(r)setTimeout(()=>r.click(),500);}}));}
 function showAppErr(e){const p=$("#appErr");if(p){p.hidden=false;p.textContent="Part of the page could not load: "+String(e&&e.message||e)+". Please reload the page.";}console.error(e);}
 window.addEventListener("error",ev=>showAppErr(ev.error||ev.message));
