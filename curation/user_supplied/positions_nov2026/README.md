@@ -23,3 +23,12 @@ representative DArTseq marker of every QTL. The 14 marker tags were aligned end 
 chromosome of RefSeq v1.0 and v2.1 (`yang2022_tag_placements.json`). All 13 QTL now carry the paper's region; 7 also carry the
 tag position as peak (1A.1, 1B.2, 3B.1, 5A.1, 6A.2, 7A.1, 7A.2; 7 QTL). Tags of 2B.1, 3A.1, 3A.2, 4A.1 and 6A.1 have no match on the
 QTL chromosome in Chinese Spring (presence/absence markers or homoeologous best hits), and the 1B.1 tag maps outside its region.
+
+## Second batch (19 Nov 2026), `web/seed_ad67.json` (`ad67_build.py`, `records_ad67.tsv`)
+| Paper | Atlas source | What was done |
+|---|---|---|
+| Dhariwal et al. 2020 IJMS 21:4497 (FHB, AAC Tenacious) | X5_1919 | All 22 FHB QTL of Table 3 at their closest-marker positions (RefSeq v2.0); 15 existing records corrected (cM values had been read as Mb, wrong reference), 7 added. QFhs.lrdc-2B, QFhb.lrdc-2B and QDon.lrdc-5A.2 (individual environments only) placed at the overlapping epistasis intervals via flanking 90K markers. |
+| Ciechanowska et al. 2022 Can J Plant Sci 102:1139 (rusts) | NK_Ciechanowska2022 (new) | QLr.dms-4A, QSr.dms-1A, QSr.dms-2B added (Table 3, RefSeq v2.0). |
+| Farzand et al. 2021 Can J Plant Pathol 43:S227 (stripe rust, AAC Innova) | NK_Farzand2021 (new) | 11 QTL added (Table 3, RefSeq v1.0); peak at the closest marker where its 90K position falls in the interval. |
+| Farzand et al. 2022 Crop Sci 62:1088 (stripe rust, AAC Cameron/P2711) | NK_Farzand2022 (new) | 7 QTL added (Table 3, RefSeq v1.0), including Yr17 (QYr.lrdc-2A.1). |
+The other papers in this upload were the same files as the first batch and were already done.
