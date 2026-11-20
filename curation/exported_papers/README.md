@@ -65,3 +65,10 @@ Web searches gave no position tables; GrainGenes blocks automated access. Sequen
 RefSeq v2.1 (Ensembl Plants 63) by exact primer and 32-mer matching. Six gave a single position (`epcr_res.json`):
 barc59 5B 670.70 Mb, barc261 5B 13.35 Mb, barc175 6D 411.88 Mb, barc202 6D 291.70 Mb, barc96 6D 418.28 Mb, barc121 7A 611.83 Mb.
 None of them, with the other markers of its locus, gave a consistent interval (`place2.py`), so no locus was added.
+
+## Sixth pass: MDPI supplements through the owner's browser (20 Nov 2026)
+The MDPI supplements (blocked for automated download) were downloaded in the owner's browser for 8 papers
+(Bariana et al. 2022 and Borgen and Christensen 2026 have none; PeerJ Xu et al. 2017 has only gel images).
+`supp3.py` joins markers named next to a locus in the paper text with the marker positions (bp) listed in the
+supplementary GWAS/marker tables; it added QLr.ipbb-1A.3 (13.23 Mb) and QLr.ipbb-1B.5 (54.08 Mb) from Zatybekov et al. 2021.
+Springer, APS, bioRxiv and Cambridge supplements still need the owner's institutional sign-in.
