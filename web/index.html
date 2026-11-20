@@ -252,6 +252,7 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 #homeFilt>.mselw{gap:4px;margin-top:-2px}
 .mselb{min-height:39px}
 .nmMode.on{background:var(--brand);color:#fff;border-color:var(--brand)}.nmMode input{accent-color:#fff}
+.maptrait{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.maptrait .dchip{font-weight:700}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -852,7 +853,8 @@ function mapTrait(list){const c=mapCounts(list),ks=Object.keys(c);if(!ks.length)
 function renderLegend(){renderMapLegend(filtered());renderTraitMenu();}
 function renderMapLegend(list){const c=mapCounts(list),cur=mapTrait(list);st.mapD=cur;
   const names=Object.keys(c).sort((a,b)=>c[b]-c[a]||a.localeCompare(b));
-  $("#legend").innerHTML=names.length?`<div class="legitems" role="radiogroup" aria-label="Trait shown on the chromosome map">${names.map(n=>`<button type="button" role="radio" data-d="${esc(n)}" aria-pressed="${n===cur}" aria-checked="${n===cur}"><span class="sw" style="background:${DCOL[n]||"#888"}"></span>${esc(n)}</button>`).join("")}</div>`:`<span class="muted small">No positioned loci for the current filters</span>`;}
+  $("#legend").innerHTML=names.length?`<div class="maptrait"><span class="dchip"><span class="sw" style="background:${DCOL[cur]||"#888"}"></span>${esc(cur)}</span><label class="small muted">Show another trait <select id="mapTraitSel" aria-label="Trait shown on the chromosome map">${names.map(n=>`<option value="${esc(n)}"${n===cur?" selected":""}>${esc(n)}</option>`).join("")}</select></label></div>`:`<span class="muted small">No positioned loci for the current filters</span>`;
+  const sel=document.getElementById("mapTraitSel");if(sel)sel.onchange=()=>{st.mapD=sel.value;renderIdeo(filtered());};}
 function renderIdeo(list){const A=st.asm,CL=ALEN[A]||CHR;const W=1000,LM=52,top=26,H=290,mx=Math.max(...Object.values(CL));const step=(W-LM)/21;const sel=$("#fChr").value;const sc=v=>top+v/mx*H;let s="";
   for(let m=0;m<=800;m+=200){s+=`<line class="axis" x1="0" x2="${W}" y1="${sc(m)}" y2="${sc(m)}" stroke-dasharray="2 4"/><text x="2" y="${sc(m)-3}" style="font-weight:400">${m} Mb</text>`;}
   CHRS.forEach((c,i)=>{const x=LM+i*step+step/2;s+=`<rect class="chrlab chrhit" data-chr="${c}" x="${x-step/2+2}" y="0" width="${step-4}" height="${top-4}" rx="5" fill="${sel===c?"var(--accent-soft)":"transparent"}" style="cursor:pointer"><title>Show only ${c}</title></rect><text class="chrlab${sel===c?" sel":""}" data-chr="${c}" x="${x}" y="16" text-anchor="middle" style="cursor:pointer;${sel===c?"font-weight:800;fill:var(--accent)":""}"><title>Show only ${c}</title>${c}</text><rect class="chr${sel===c?" sel":""}" data-chr="${c}" x="${x-7}" y="${top}" width="14" height="${(CL[c]||CHR[c])/mx*H}" rx="7"${sel&&sel!==c?' opacity=".35"':""}><title>${c}: ${CL[c]||CHR[c]} Mb (${esc(A)})</title></rect>`;});
