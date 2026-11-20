@@ -49,3 +49,10 @@ chromosome and arm. `addsupp.py` added the 106 loci placed this way to `web/seed
 (curation "auto (supplementary table)"; `supplementary_placements.tsv`).
 `supplementary_manual.bib` / `.tsv`: the 30 papers whose supplements could not be fetched automatically (MDPI and some
 other publishers block downloads; several older papers may have no supplement).
+
+## Fourth pass: SNP names that carry positions (20 Nov 2026)
+The owner supplied the supplement of Sharma et al. 2026 (Green Hammer x Lonerider). It holds genotype data and the linkage
+map but no QTL positions; the QTL table of the paper itself gives flanking GBS markers named by their physical position
+(e.g. S2B_45213215). `gbs.py` read such marker names from the QTL table rows (rejoining QTL names split over two lines)
+for all papers with unplaced loci, and `addgbs.py` added 17 loci (15 from Sharma et al. 2026, 1 from Sharma et al. 2026
+Baker's Ann, 1 from the QYraq.cau paper) to `web/seed_ad73.json` (`snpname_placements.tsv`).
