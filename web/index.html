@@ -253,6 +253,20 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 .mselb{min-height:39px}
 .nmMode.on{background:var(--brand);color:#fff;border-color:var(--brand)}.nmMode input{accent-color:#fff}
 .maptrait{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.maptrait .dchip{font-weight:700}
+.gbx .gbhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.gbtabs{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px}
+.gbtab{border:0;background:transparent;padding:6px 14px;border-radius:999px;font-weight:600;cursor:pointer;color:var(--muted)}
+.gbtab.on{background:var(--ink);color:var(--surface)}
+.gbctl{display:grid;grid-template-columns:1fr;gap:10px;margin:10px 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.gbsearch{display:flex;gap:8px}.gbsearch input{flex:1;min-width:0;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.gbnav{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}.gbnav label{display:flex;flex-direction:column;font-size:12px;color:var(--muted)}
+.gbnav select,.gbnav input{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);min-width:70px}
+.gbbtns{display:inline-flex;gap:4px;margin-left:auto}.gbbtns .btn{min-width:38px}
+.gbdl{display:flex;gap:8px;flex-wrap:wrap}
+.gbov{margin-top:6px;border:1px solid var(--line);border-radius:12px 12px 0 0;padding:4px 6px;background:var(--surface)}
+.gbtracks{border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:4px 6px;background:var(--surface);overflow:hidden;user-select:none}
+.gbinfo details{margin:8px 0}.gbinfo summary{cursor:pointer}
+.blprog{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:10px}.blprog div{height:100%;background:var(--accent)}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -469,7 +483,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
       <label for="rFrom">From (Mb)<input class="mb" type="number" id="rFrom" value="630" step="0.1"></label>
       <label for="rTo">To (Mb)<input class="mb" type="number" id="rTo" value="680" step="0.1"></label>
       <label for="rPad">Extend by (Mb)<input class="mb" type="number" id="rPad" value="2.5" step="0.5" min="0"></label>
-      <button class="btn primary" id="rGo" type="button">Search region</button><button class="btn" id="rFM" type="button" title="Open this region in the Candidate gene mapping tab">Candidate genes of this region →</button><button class="btn" id="rSQ" type="button" title="Open this region in the Sequence viewer">Sequence of this region →</button><button class="btn" id="rWO" type="button" title="List the genes of this region in Analysis tools">Genes of this region →</button>
+      <button class="btn primary" id="rGo" type="button">Search region</button><button class="btn" id="rFM" type="button" title="Open this region in the Candidate gene mapping tab">Candidate genes of this region →</button><button class="btn" id="rSQ" type="button" title="Open this region in the Genome browser">Open in genome browser →</button><button class="btn" id="rWO" type="button" title="List the genes of this region in Analysis tools">Genes of this region →</button>
     </div>
     <p class="small muted">A report is listed when its interval (or its peak ± the extension) overlaps the region, using positions on the assembly selected on Home (RefSeq v2.1 by default). Reports published on RefSeq v1.0 are shown at their converted v2.1 position; the published position is kept in the record.</p>
     <div class="tbl-wrap"><table id="rTbl"><thead><tr><th>Locus / gene</th><th>Class</th><th>Disease</th><th class="r">Interval (Mb, v2.1)</th><th>Grade</th><th>Reference</th></tr></thead><tbody></tbody></table></div>
@@ -499,16 +513,33 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
 </section>
 <section class="view" id="v-sequence">
   <div class="gbar" data-gbar></div>
-  <div class="panel">
-    <h2>Sequence viewer <span class="muted small">· Chinese Spring reference</span></h2>
-    <div class="filters" style="margin-top:0">
-      <label for="sqChr">Chromosome<select id="sqChr"></select></label>
-      <label for="sqFrom">From (Mb, v2.1)<input class="mb" type="number" id="sqFrom" value="406.73" step="0.001"></label>
-      <label for="sqTo">To (Mb, v2.1)<input class="mb" type="number" id="sqTo" value="406.78" step="0.001"></label>
-      <button class="btn primary" id="sqGo" type="button">Show sequence</button>
+  <div class="panel gbx">
+    <div class="gbhead"><h2>Genome browser <span class="muted small">· Chinese Spring, IWGSC RefSeq v2.1</span></h2>
+      <div class="gbtabs" role="tablist"><button type="button" class="gbtab on" data-gbt="view" role="tab">Browse a region</button><button type="button" class="gbtab" data-gbt="blast" role="tab">BLAST search</button></div></div>
+    <div data-gbp="view">
+      <div class="gbctl">
+        <div class="gbsearch"><input id="gbQ" type="search" placeholder="Locus, gene, marker, or a region such as 6A:26.5-26.8" aria-label="Find a locus, gene, marker or region"><button class="btn primary" id="gbFind" type="button">Find</button></div>
+        <div class="gbnav"><label for="sqChr">Chr<select id="sqChr"></select></label><label for="sqFrom">From (Mb)<input class="mb" type="number" id="sqFrom" value="29.07" step="0.001"></label><label for="sqTo">To (Mb)<input class="mb" type="number" id="sqTo" value="29.57" step="0.001"></label><button class="btn" id="sqGo" type="button">Go</button>
+          <span class="gbbtns" role="group" aria-label="Zoom and move"><button class="btn" id="gbL" type="button" title="Move left">◀</button><button class="btn" id="gbOut" type="button" title="Zoom out">−</button><button class="btn" id="gbIn" type="button" title="Zoom in">+</button><button class="btn" id="gbR" type="button" title="Move right">▶</button></span></div>
+        <div class="gbdl"><button class="btn" id="gbFa" type="button">Download FASTA of this region</button><button class="btn" id="gbSeq" type="button">Show sequence</button></div>
+      </div>
+      <div id="gbOv" class="gbov"></div>
+      <div id="gbTracks" class="gbtracks"></div>
+      <p class="small muted">Drag the tracks to move along the chromosome; double-click to zoom in; Ctrl (⌘) + scroll to zoom. Click a locus for its record and a gene for its structure, domains and similar genes. Candidate genes (coloured, ★) lie inside an atlas locus, or within 250 kb of a single-position locus, and carry a defence-related class or annotation. Below 300 bp the bases are drawn.</p>
+      <div id="sqOut"></div>
+      <div id="gbInfo" class="gbinfo"></div>
     </div>
-    <p class="small muted">Enter a region on RefSeq v2.1 and the Chinese Spring sequence of exactly that region is shown (up to 100 kb), with copy and save buttons. On the atlas server the sequence comes from the atlas's own copy of the IWGSC RefSeq v2.1 genome. Tip: 0.05 Mb = 50 kb.</p>
-    <div id="sqOut"></div>
+    <div data-gbp="blast" hidden>
+      <p class="small muted">Compare a DNA sequence (a gene, EST, marker or primer region) with the coding sequences of all 106,000 high-confidence wheat genes. Each hit is placed on the genome and can be opened in the browser.</p>
+      <textarea id="blQ" rows="7" class="mono" style="width:100%" placeholder=">my_sequence&#10;ATGGCGTTGCTGGAGCAGGTGAAG..."></textarea>
+      <div class="row tform" style="gap:12px;align-items:flex-end;flex-wrap:wrap">
+        <label>Search in<br><select id="blChr"><option value="">All chromosomes</option></select></label>
+        <label>Word size<br><select id="blWord"><option>11</option><option>12</option><option>15</option></select></label>
+        <label>E-value cut-off<br><select id="blEv"><option value="10">10</option><option value="1">1</option><option value="1e-5" selected>1e-5</option><option value="1e-10">1e-10</option><option value="1e-30">1e-30</option></select></label>
+        <label>Maximum hits<br><select id="blMax"><option>10</option><option selected>25</option><option>50</option><option>100</option></select></label>
+        <button class="btn primary" id="blGo" type="button">Run BLAST</button><button class="btn" id="blEx" type="button">Load an example</button></div>
+      <div id="blOut"></div>
+    </div>
   </div>
 </section>
 <section class="view" id="v-tools">
@@ -1116,7 +1147,7 @@ const TGROUP={genes:["genes","gsearch","homolog"],enrich:["enrich","gokegg"],sge
 /* ---- Tool groups: Genetic tools and Genomic tools ---- */
 const TG={grp:"genetic",pane:null,
   G:{genetic:{title:"Genetic tools",items:[["Meta-QTL","pane","pmq"],["Meta-GWAS","pane","pmg"],["Region search","view","region"],["Candidate gene mapping","view","finemap"],["Locus lists","pane","sgene"],["Marker lookup","pane","markers"],["Annotate your GWAS/QTL hits","pane","anno"]]},
-     genomic:{title:"Genomic tools",items:[["Sequence viewer","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"],["Network and response map","pane","netmap"],["In-silico expression (DEGs)","pane","expr"]]}}};
+     genomic:{title:"Genomic tools",items:[["Genome browser and BLAST","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"],["Network and response map","pane","netmap"],["In-silico expression (DEGs)","pane","expr"]]}}};
 function tgGroupOf(pane){for(const g in TG.G)if(TG.G[g].items.some(it=>it[1]==="pane"&&it[2]===pane))return g;return "genomic";}
 function tgEnsurePane(){const items=TG.G[TG.grp].items.filter(it=>it[1]==="pane").map(it=>it[2]);if(!TG.pane||!items.includes(TG.pane))tTab(items[0]);else tTab(TG.pane);}
 function tgRender(view){const grp=view==="region"||view==="finemap"?"genetic":view==="sequence"?"genomic":view==="tools"?TG.grp:null;if(!grp)return;
@@ -2352,10 +2383,191 @@ async function showSeq(c,s21,e21,el){
   }catch(err){el.innerHTML=head+(err.offline?"":`<p class="msg">${esc(String(err.message||err))}</p>`);}
 }
 
-function seqHook(){const b=$("#sqGo");if(b)b.onclick=()=>{const c=$("#sqChr").value,f=num($("#sqFrom").value),t=num($("#sqTo").value);if(f==null||t==null)return;showSeq(c,f,t,$("#sqOut"));};
-  const s=$("#sqChr");if(s&&!s.options.length)CHRS.forEach(c=>s.insertAdjacentHTML("beforeend",`<option${c==="5B"?" selected":""}>${c}</option>`));
-  const go=(c,f,t)=>{$("#sqChr").value=c;$("#sqFrom").value=(+f).toFixed(3);$("#sqTo").value=(+t).toFixed(3);if(location.hash!=="#sequence")location.hash="#sequence";else route();setTimeout(()=>showSeq(c,+f,+t,$("#sqOut")),50);};
-  const rs=$("#rSQ");if(rs)rs.onclick=()=>go($("#rChr").value,num($("#rFrom").value)??0,num($("#rTo").value)??0);window.__seqGo=go;}
+/* ==== Genome browser (Chinese Spring, IWGSC RefSeq v2.1) with in-atlas BLAST ==== */
+const GB={c:"6A",s:29070000,e:29570000,genes:{},cds:{},lanesMax:14};
+const GBW=1000,GBL=118;
+async function gbGenes(c){if(GB.genes[c])return GB.genes[c];const r=await fetch("gb/genes_"+c+".json");if(!r.ok)throw new Error("gene models for "+c+" not available");
+  const a=await r.json(),G=genesAll(),rows=(G.g&&G.g[c])||[];GB.genes[c]=a.map((x,i)=>({num:x[0],s:x[1],len:x[2]||1000,str:x[3],ex:x[4],cds:x[5],cl:(rows[i]||[])[2]||0,d:G.d[(rows[i]||[])[3]]||""}));return GB.genes[c];}
+function gbFmt(bp){const L=Math.abs(bp);return L>=1e6?(bp/1e6).toFixed(L>=1e7?2:3).replace(/\.?0+$/,"")+" Mb":L>=1e3?(bp/1e3).toFixed(L>=1e4?1:2).replace(/\.?0+$/,"")+" kb":Math.round(bp)+" bp";}
+function gbChrLen(c){const L=(typeof ALEN!=="undefined"&&ALEN["RefSeq v2.1"])||CHR;return Math.round((L[c]||CHR[c]||800)*1e6);}
+function gbClamp(){const L=gbChrLen(GB.c);let w=Math.max(200,GB.e-GB.s);w=Math.min(w,L);if(GB.s<1)GB.s=1;GB.e=GB.s+w;if(GB.e>L){GB.e=L;GB.s=Math.max(1,L-w);}}
+function gbLoci(){const A="RefSeq v2.1",out=[];Object.values(st.reports).forEach(r=>{if(!anchored(r,A))return;const c=co(r,A);if(!c||c.chr!==GB.c)return;
+  let s=num(c.start),e=num(c.end),p=num(c.peak);if(s==null||e==null){if(p==null)return;s=e=p;}s*=1e6;e*=1e6;if(e<s)[s,e]=[e,s];if(e<GB.s||s>GB.e)return;out.push({r,s,e});});
+  return out.sort((a,b)=>a.s-b.s||b.e-a.e);}
+function gbMarkers(){markers();const out=[];if(!MK)return out;const seen=new Set();for(const v of MK.values()){if(v.c!==GB.c||seen.has(v))continue;const p=v.p*1e6;if(p>=GB.s&&p<=GB.e){seen.add(v);out.push({n:v.n,p});}}return out.sort((a,b)=>a.p-b.p);}
+const GBCL={1:"#c0392b",2:"#8e44ad",3:"#2c6fbb",4:"#16a085",5:"#2f7d4f",6:"#d97706",7:"#b07d2b"};
+function gbCandidates(genes,loci){const iv=loci.map(l=>[l.s-(l.s===l.e?250000:0),l.e+(l.s===l.e?250000:0),l]);
+  return genes.map(g=>{const ge=g.s+g.len;const ov=iv.filter(([a,b])=>g.s<=b&&ge>=a).map(x=>x[2]);return {g,ov};}).filter(x=>x.ov.length&&(x.g.cl>0||/resistance|NBS|NB-ARC|LRR|kinase|WRKY|chitinase|glucanase|pathogenesis|peroxidase|thaumatin|cytochrome P450|glycosyltransferase|ABC transporter|lectin/i.test(x.g.d)));}
+async function gbShow(c,s,e,opt){if(c)GB.c=c;if(s!=null)GB.s=Math.round(s);if(e!=null)GB.e=Math.round(e);gbClamp();
+  $("#sqChr").value=GB.c;$("#sqFrom").value=(GB.s/1e6).toFixed(4);$("#sqTo").value=(GB.e/1e6).toFixed(4);
+  const box=$("#gbTracks");if(!box)return;box.innerHTML=`<p class="small muted">Loading gene models for ${GB.c}…</p>`;
+  let genes=[];try{genes=await gbGenes(GB.c);}catch(err){box.innerHTML=`<p class="msg err">${esc(err.message)}</p>`;}
+  GB.view={genes:genes.filter(g=>g.s+g.len>=GB.s&&g.s<=GB.e),loci:gbLoci(),mk:gbMarkers()};GB.view.cand=gbCandidates(GB.view.genes,GB.view.loci);
+  gbOverview();gbDraw();gbTables();if(!(opt&&opt.keepSeq))$("#sqOut").innerHTML="";
+  const span=GB.e-GB.s;if(span<=300)gbSeqTrack();}
+function gbOverview(){const el=$("#gbOv");if(!el)return;const L=gbChrLen(GB.c),W=GBW,H=46,x=v=>GBL+(v/L)*(W-GBL-10);const bins=new Array(120).fill(0);
+  Object.values(st.reports).forEach(r=>{const c=co(r,"RefSeq v2.1");if(!c||c.chr!==GB.c||!anchored(r,"RefSeq v2.1"))return;const p=pos(r,"RefSeq v2.1");if(p==null)return;bins[Math.min(119,Math.floor(p*1e6/L*120))]++;});
+  const mx=Math.max(1,...bins),bw=(W-GBL-10)/120;let s=`<text x="8" y="19" font-size="11" font-weight="700" fill="var(--ink)">chr${GB.c}</text><text x="8" y="33" font-size="9" fill="var(--muted)">${gbFmt(L)}</text>`;
+  s+=`<rect x="${GBL}" y="22" width="${W-GBL-10}" height="12" rx="6" fill="var(--chrom)" stroke="var(--chrom-edge)"/>`;
+  bins.forEach((n,i)=>{if(n)s+=`<rect x="${GBL+i*bw}" y="${21-n/mx*17}" width="${Math.max(1,bw-0.6)}" height="${n/mx*17}" fill="var(--accent)" opacity=".55"/>`;});
+  const a=x(GB.s),b=Math.max(x(GB.e),a+3);s+=`<rect x="${a}" y="16" width="${b-a}" height="24" fill="none" stroke="#c0392b" stroke-width="2" rx="2"/>`;
+  s+=`<rect class="gbovhit" x="${GBL}" y="0" width="${W-GBL-10}" height="${H}" fill="transparent" style="cursor:pointer"/>`;
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px" role="img" aria-label="Chromosome overview with atlas loci density" data-figpdf="1">${s}</svg>`;
+  el.querySelector(".gbovhit").onclick=ev=>{const sv=el.querySelector("svg"),bx=sv.getBoundingClientRect(),px=(ev.clientX-bx.left)/bx.width*W;const p=(px-GBL)/(W-GBL-10)*L,w=GB.e-GB.s;gbShow(GB.c,p-w/2,p+w/2);};}
+function gbDraw(){const el=$("#gbTracks");const {genes,loci,mk,cand}=GB.view;const W=GBW,X0=GBL,X1=W-10,span=GB.e-GB.s,sx=v=>X0+(v-GB.s)/span*(X1-X0),bpp=span/(X1-X0);
+  const candSet=new Set(cand.map(x=>x.g));const o=[];let y=6;
+  /* ruler */
+  const raw=span/8,p10=Math.pow(10,Math.floor(Math.log10(raw))),st_=[1,2,5,10].map(m=>m*p10).find(v=>v>=raw);o.push(`<line x1="${X0}" x2="${X1}" y1="${y+18}" y2="${y+18}" stroke="var(--muted)"/>`);
+  for(let t=Math.ceil(GB.s/st_)*st_;t<=GB.e;t+=st_){const x=sx(t);o.push(`<line x1="${x}" x2="${x}" y1="${y+13}" y2="${y+18}" stroke="var(--muted)"/><text x="${x}" y="${y+9}" font-size="9" text-anchor="middle" fill="var(--muted)">${gbFmt(t)}</text>`);}
+  o.push(`<text x="8" y="${y+15}" font-size="10" font-weight="700" fill="var(--muted)">${gbFmt(span)} view</text>`);y+=30;
+  const lane=(items,s,e)=>{const ends=[];items.forEach(it=>{const a=s(it),b=e(it);let k=ends.findIndex(v=>v<a-4);if(k<0){k=ends.length;ends.push(b);}else ends[k]=b;it.lane=k;});return ends.length;};
+  /* loci track */
+  const LH=13;const nl=Math.min(GB.lanesMax,lane(loci,l=>sx(l.s),l=>Math.max(sx(l.e),sx(l.s)+3)+(sx(l.e)-sx(l.s)>60?0:Math.min(140,l.r.name.length*5.2+6))));
+  const th=Math.max(1,nl)*LH+10;o.push(`<rect x="0" y="${y}" width="${W}" height="${th}" fill="var(--accent-soft)" opacity=".35"/><text x="8" y="${y+13}" font-size="10" font-weight="700" fill="var(--ink)">Atlas loci</text><text x="8" y="${y+25}" font-size="9" fill="var(--muted)">${loci.length} in view</text>`);
+  let hidden=0;loci.forEach(l=>{if(l.lane>=GB.lanesMax){hidden++;return;}const a=sx(Math.max(l.s,GB.s)),b=Math.max(sx(Math.min(l.e,GB.e)),a+3),yy=y+5+l.lane*LH,col=DCOL[l.r.disease]||"#888",c=co(l.r,"RefSeq v2.1");
+    const tip=`${l.r.name} · ${l.r.disease} · ${l.r.cls}\n${l.s===l.e?gbFmt(l.s):gbFmt(l.s)+" – "+gbFmt(l.e)} (RefSeq v2.1)\n${srcShort(l.r.source)}`;
+    o.push(`<g class="gbloc" data-id="${esc(l.r.id)}" data-tip="${esc(tip)}" style="cursor:pointer"><rect x="${a}" y="${yy}" width="${b-a}" height="9" rx="2" fill="${col}" fill-opacity="${l.s===l.e?1:.7}"/>${l.s===l.e?`<path d="M${a+1.5} ${yy-2}l-3 -4h6z" fill="${col}"/>`:""}`+
+      (b-a>l.r.name.length*5.2+8?`<text x="${a+4}" y="${yy+7.5}" font-size="8.5" fill="#fff" pointer-events="none">${esc(l.r.name)}</text>`:(b+4+l.r.name.length*5.2<X1?`<text x="${b+3}" y="${yy+7.5}" font-size="8.5" fill="var(--ink)" pointer-events="none">${esc(l.r.name)}</text>`:""))+`</g>`);});
+  if(hidden)o.push(`<text x="8" y="${y+37}" font-size="9" fill="#c0392b">+${hidden} not drawn</text>`);y+=th+6;
+  /* genes track */
+  const detail=bpp<120;const GH=detail?16:12;const ng=lane(genes,g=>sx(g.s),g=>Math.max(sx(g.s+g.len),sx(g.s)+2)+(candSet.has(g)&&span<3e6?60:0));const gl=Math.min(6,Math.max(1,ng));const gth=gl*GH+12;
+  o.push(`<text x="8" y="${y+13}" font-size="10" font-weight="700" fill="var(--ink)">Genes</text><text x="8" y="${y+25}" font-size="9" fill="var(--muted)">${genes.length} · ${cand.length} candidate</text>`);
+  genes.forEach(g=>{const k=Math.min(gl-1,g.lane);const yy=y+6+k*GH,a=sx(g.s),b=Math.max(sx(g.s+g.len),a+1.5),cand_=candSet.has(g),col=cand_?(GBCL[g.cl]||"#c0392b"):"#8a96a3",id=`TraesCS${GB.c}02G${String(g.num).padStart(6,"0")}`;
+    const tip=`${id}${cand_?"  ★ candidate gene":""}\n${g.d||"no description"}\n${gbFmt(g.s)} – ${gbFmt(g.s+g.len)} (${g.str>0?"+":"−"} strand, RefSeq v2.1)`;let shape="";
+    if(detail&&g.ex&&g.ex.length){shape+=`<line x1="${a}" x2="${b}" y1="${yy+5}" y2="${yy+5}" stroke="${col}" stroke-width="1"/>`;for(let i=0;i<g.ex.length;i+=2)shape+=`<rect x="${sx(g.s+g.ex[i])}" y="${yy+2}" width="${Math.max(1,sx(g.s+g.ex[i+1])-sx(g.s+g.ex[i]))}" height="6" fill="${col}" opacity=".55"/>`;
+      for(let i=0;i<(g.cds||[]).length;i+=2)shape+=`<rect x="${sx(g.s+g.cds[i])}" y="${yy}" width="${Math.max(1,sx(g.s+g.cds[i+1])-sx(g.s+g.cds[i]))}" height="10" fill="${col}"/>`;
+      shape+=g.str>0?`<path d="M${b} ${yy+5}l-5 -4v8z" fill="${col}"/>`:`<path d="M${a} ${yy+5}l5 -4v8z" fill="${col}"/>`;}
+    else shape=`<rect x="${a}" y="${yy+1}" width="${b-a}" height="8" fill="${col}"/>`+(b-a>6?(g.str>0?`<path d="M${b} ${yy+5}l-4 -3.5v7z" fill="#fff"/>`:`<path d="M${a} ${yy+5}l4 -3.5v7z" fill="#fff"/>`):"");
+    const lab=cand_&&span<3e6?`<text x="${b+3}" y="${yy+8}" font-size="8" fill="${col}" pointer-events="none">${GB.c}02G${String(g.num).padStart(6,"0")}</text>`:(detail&&b-a>70?`<text x="${(a+b)/2}" y="${yy+GH-0.5}" font-size="7.5" text-anchor="middle" fill="var(--muted)" pointer-events="none">${GB.c}02G${String(g.num).padStart(6,"0")}</text>`:"");
+    o.push(`<g class="gbgene" data-gene="${id}" data-tip="${esc(tip)}" style="cursor:pointer">${shape}${lab}</g>`);});
+  y+=gth+(detail?6:2);
+  /* markers track */
+  const mth=26;o.push(`<text x="8" y="${y+13}" font-size="10" font-weight="700" fill="var(--ink)">Markers</text><text x="8" y="${y+24}" font-size="9" fill="var(--muted)">${mk.length} in view</text>`);
+  let lastLab=-1e9;mk.slice(0,800).forEach(m=>{const x=sx(m.p);o.push(`<line x1="${x}" x2="${x}" y1="${y+3}" y2="${y+11}" stroke="#5b6b7a" stroke-width="1" data-tip="${esc(m.n+" · "+gbFmt(m.p))}"/>`);if(x-lastLab>m.n.length*4.6+6&&mk.length<=200){o.push(`<text x="${x}" y="${y+21}" font-size="7.5" text-anchor="middle" fill="var(--muted)">${esc(m.n)}</text>`);lastLab=x;}});
+  y+=mth;
+  if(span<=300)o.push(`<g id="gbSeqG" transform="translate(0,${y})"><text x="8" y="12" font-size="10" font-weight="700" fill="var(--ink)">Sequence</text><text x="${X0}" y="12" font-size="9" fill="var(--muted)">loading…</text></g>`),y+=24;
+  const H=y+4;
+  el.innerHTML=`<svg id="gbSvg" viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px;touch-action:pan-y;cursor:grab" role="img" aria-label="Genome browser view of chr${GB.c} ${gbFmt(GB.s)} to ${gbFmt(GB.e)}" data-title="Genome browser: chr${GB.c} ${(GB.s/1e6).toFixed(3)}–${(GB.e/1e6).toFixed(3)} Mb (RefSeq v2.1)"><rect x="${X0}" y="0" width="${X1-X0}" height="${H}" fill="transparent" class="gbbg"/>${o.join("")}</svg>`;
+  const sv=$("#gbSvg");let drag=null;
+  sv.addEventListener("pointerdown",ev=>{if(ev.target.closest(".gbloc,.gbgene"))return;drag={x:ev.clientX,s:GB.s,e:GB.e,w:sv.getBoundingClientRect().width};sv.setPointerCapture(ev.pointerId);sv.style.cursor="grabbing";});
+  sv.addEventListener("pointermove",ev=>{if(!drag)return;const dx=(ev.clientX-drag.x)/drag.w*GBW;sv.style.transform=`translateX(${(ev.clientX-drag.x)}px)`;});
+  sv.addEventListener("pointerup",ev=>{if(!drag)return;const dx=(ev.clientX-drag.x)/drag.w*GBW,sh=-dx/(X1-X0)*(drag.e-drag.s);sv.style.transform="";sv.style.cursor="grab";const d=drag;drag=null;if(Math.abs(dx)>3)gbShow(GB.c,d.s+sh,d.e+sh);});
+  sv.addEventListener("dblclick",ev=>{const b=sv.getBoundingClientRect(),px=(ev.clientX-b.left)/b.width*GBW;if(px<X0)return;const p=GB.s+(px-X0)/(X1-X0)*span;gbShow(GB.c,p-span/4,p+span/4);});
+  sv.addEventListener("wheel",ev=>{if(!(ev.ctrlKey||ev.metaKey))return;ev.preventDefault();const b=sv.getBoundingClientRect(),px=(ev.clientX-b.left)/b.width*GBW,p=GB.s+Math.max(0,px-X0)/(X1-X0)*span,f=ev.deltaY>0?1.5:1/1.5;gbShow(GB.c,p-(p-GB.s)*f,p+(GB.e-p)*f);},{passive:false});
+  sv.querySelectorAll(".gbloc").forEach(g=>g.onclick=()=>{if(typeof renderDrawer==="function")renderDrawer(g.dataset.id);});
+  sv.querySelectorAll(".gbgene").forEach(g=>g.onclick=()=>{if(typeof gvOpen==="function")gvOpen(g.dataset.gene);});}
+async function gbSeqTrack(){const g=document.getElementById("gbSeqG");if(!g)return;try{const R=await getSeq(GB.c,GB.s/1e6,GB.e/1e6);const sq=R.sq,X0=GBL,X1=GBW-10,n=sq.length,w=(X1-X0)/n;
+    const COL={A:"#2f7d4f",C:"#2c6fbb",G:"#d97706",T:"#c0392b",N:"#888"};let s=`<text x="8" y="12" font-size="10" font-weight="700" fill="var(--ink)">Sequence</text>`;
+    if(w>=6)for(let i=0;i<n;i++)s+=`<text x="${X0+(i+.5)*w}" y="14" font-size="${Math.min(11,w*1.3)}" text-anchor="middle" font-family="var(--mono)" fill="${COL[sq[i]]||"#888"}">${sq[i]}</text>`;
+    else for(let i=0;i<n;i++)s+=`<rect x="${X0+i*w}" y="4" width="${Math.max(.5,w)}" height="10" fill="${COL[sq[i]]||"#888"}"/>`;
+    s+=R.asm!=="IWGSC RefSeq v2.1"?`<text x="${X1}" y="23" font-size="8" text-anchor="end" fill="var(--muted)">from ${esc(R.asm)} (converted)</text>`:"";g.innerHTML=s;}
+  catch(err){g.innerHTML=`<text x="8" y="12" font-size="10" font-weight="700" fill="var(--ink)">Sequence</text><text x="${GBL}" y="12" font-size="9" fill="var(--muted)">sequence service not reachable here</text>`;}}
+function gbTables(){const el=$("#gbInfo");if(!el)return;const {genes,loci,mk,cand}=GB.view;const src=r=>srcShort(r.source);
+  const gid=g=>`TraesCS${GB.c}02G${String(g.num).padStart(6,"0")}`;const G21=g=>{try{return v21of(GB.c+":"+g.num)||"";}catch(e){return "";}};
+  el.innerHTML=`<details open><summary><b>Loci in this region</b> (${loci.length})</summary>${loci.length?`<div class="tscroll"><table class="tbl"><thead><tr><th>Locus</th><th>Trait</th><th>Class</th><th>Position (Mb, v2.1)</th><th>Study</th></tr></thead><tbody>${loci.slice(0,400).map(l=>`<tr class="gbrow" data-id="${esc(l.r.id)}" style="cursor:pointer"><td><b>${esc(l.r.name)}</b></td><td><span class="dchip"><span class="sw" style="background:${DCOL[l.r.disease]||"#888"}"></span>${esc(l.r.disease)}</span></td><td>${esc(l.r.cls)}</td><td class="num">${l.s===l.e?(l.s/1e6).toFixed(3):(l.s/1e6).toFixed(3)+"–"+(l.e/1e6).toFixed(3)}</td><td class="small">${esc(src(l.r))}</td></tr>`).join("")}</tbody></table></div>`:`<p class="small muted">No atlas locus in this region.</p>`}</details>
+   <details open><summary><b>Candidate genes</b> (${cand.length}): genes inside a locus (or within 250 kb of a single-position locus) with a defence-related class or annotation</summary>${cand.length?`<div class="tscroll"><table class="tbl"><thead><tr><th>Gene (v1.1)</th><th>Gene (v2.1)</th><th>Position (Mb, v2.1)</th><th>Class</th><th>Annotation</th><th>Overlapping loci</th></tr></thead><tbody>${cand.map(x=>`<tr><td class="mono"><a href="#" class="glink" data-gene="${gid(x.g)}">${gid(x.g)}</a></td><td class="mono small">${esc(G21(x.g))}</td><td class="num">${(x.g.s/1e6).toFixed(3)}</td><td>${esc((genesAll().cl||[])[x.g.cl]||"other")}</td><td class="small">${esc(x.g.d)}</td><td class="small">${x.ov.slice(0,4).map(l=>esc(l.r.name)).join(", ")}${x.ov.length>4?` +${x.ov.length-4}`:""}</td></tr>`).join("")}</tbody></table></div>`:`<p class="small muted">No candidate gene: either no locus or no defence-related gene in this region.</p>`}</details>
+   <details><summary><b>All genes in view</b> (${genes.length})</summary><div class="tscroll"><table class="tbl"><thead><tr><th>Gene (v1.1)</th><th>Position (Mb, v2.1)</th><th>Strand</th><th>Length</th><th>Annotation</th></tr></thead><tbody>${genes.slice(0,600).map(g=>`<tr><td class="mono"><a href="#" class="glink" data-gene="${gid(g)}">${gid(g)}</a></td><td class="num">${(g.s/1e6).toFixed(4)}</td><td>${g.str>0?"+":"−"}</td><td class="num">${gbFmt(g.len)}</td><td class="small">${esc(g.d)}</td></tr>`).join("")}</tbody></table></div></details>
+   <details><summary><b>Markers in view</b> (${mk.length})</summary><p class="small mono" style="line-height:1.7">${mk.slice(0,1500).map(m=>`${esc(m.n)} <span class="muted">${(m.p/1e6).toFixed(4)}</span>`).join(" · ")}</p></details>
+   <p class="small"><button class="btn" type="button" id="gbCsv">Save loci and candidate genes (CSV)</button> <button class="btn" type="button" id="gbCdsFa">Save coding sequences of genes in view (FASTA)</button></p>`;
+  el.querySelectorAll(".gbrow").forEach(t=>t.onclick=()=>{if(typeof renderDrawer==="function")renderDrawer(t.dataset.id);});
+  el.querySelectorAll(".glink").forEach(a=>a.onclick=ev=>{ev.preventDefault();if(typeof gvOpen==="function")gvOpen(a.dataset.gene);});
+  $("#gbCsv").onclick=()=>saveText(`WheatTraitMap_chr${GB.c}_${(GB.s/1e6).toFixed(3)}-${(GB.e/1e6).toFixed(3)}Mb.csv`,toCSV([["type","name","trait or class","position_Mb_v2.1","details"]].concat(loci.map(l=>["locus",l.r.name,l.r.disease,l.s===l.e?(l.s/1e6).toFixed(4):(l.s/1e6).toFixed(4)+"-"+(l.e/1e6).toFixed(4),src(l.r)]),cand.map(x=>["candidate gene",gid(x.g),(genesAll().cl||[])[x.g.cl]||"other",(x.g.s/1e6).toFixed(4),x.g.d+" | loci: "+x.ov.map(l=>l.r.name).join("; ")]))));
+  $("#gbCdsFa").onclick=async()=>{const b=$("#gbCdsFa");b.disabled=true;b.textContent="Preparing…";try{const D=await gbCds(GB.c);const nums=new Set(genes.map(g=>g.num));let fa="";D.n.forEach((n,i)=>{if(nums.has(n))fa+=`>TraesCS${GB.c}02G${String(n).padStart(6,"0")} CDS (IWGSC v1.1)\n`+gbCdsSeq(D,i).replace(/(.{60})/g,"$1\n").replace(/\n?$/,"\n");});
+      saveText(`WheatTraitMap_chr${GB.c}_${(GB.s/1e6).toFixed(3)}-${(GB.e/1e6).toFixed(3)}Mb_CDS.fa`,fa||">none\n");}catch(e){alert(e.message);}b.disabled=false;b.textContent="Save coding sequences of genes in view (FASTA)";};}
+async function gbFasta(){const b=$("#gbFa"),len=GB.e-GB.s+1;if(len>5e6){$("#sqOut").innerHTML=`<p class="msg err">The region is ${gbFmt(len)}; FASTA download is limited to 5 Mb. Zoom in or narrow the region.</p>`;return;}
+  b.disabled=true;const t=b.textContent;b.textContent="Fetching sequence…";
+  try{const R=await getSeq(GB.c,GB.s/1e6,GB.e/1e6);const fa=`>${R.id}\n`+R.sq.replace(/(.{60})/g,"$1\n").replace(/\n?$/,"\n");saveText(`WheatTraitMap_chr${GB.c}_${GB.s}-${GB.e}.fa`,fa);
+    $("#sqOut").innerHTML=`<p class="small">Saved ${R.sq.length.toLocaleString()} bp · ${esc(R.coord)}.</p>`;}
+  catch(err){$("#sqOut").innerHTML=`<p class="msg">${err.offline?SEQ_OFFLINE:esc(String(err.message||err))}</p>`;}
+  b.disabled=false;b.textContent=t;}
+function gbFind(q){q=(q||"").trim();if(!q)return;let m;
+  if(m=q.match(/^(?:chr)?([1-7][ABD])\s*[:\s]\s*([\d.,]+)\s*[-–]\s*([\d.,]+)\s*(mb|kb|bp)?$/i)){let a=+m[2].replace(/,/g,""),b=+m[3].replace(/,/g,"");const u=(m[4]||"").toLowerCase();const f=u==="kb"?1e3:u==="bp"?1:(Math.max(a,b)<2000?1e6:1);return gbShow(m[1].toUpperCase(),a*f,b*f);}
+  if(m=q.match(/TraesCS([1-7][ABD])0([123])G0*(\d+)/i)){const c=m[1].toUpperCase();let key=c+":"+(+m[3]);if(m[2]==="3"){const k=v21map().get(q.toUpperCase().replace(/\.\d+$/,""));if(k)key=k;}
+    return gbGenes(c).then(gs=>{const n=+key.split(":")[1];const g=gs.find(x=>x.num===n);if(!g)return gbMsg("Gene not found in the high-confidence set.");gbShow(c,g.s-20000,g.s+g.len+20000);});}
+  const ql=q.toLowerCase();const hit=Object.values(st.reports).find(r=>(r.name||"").toLowerCase()===ql)||Object.values(st.reports).find(r=>(r.name||"").toLowerCase().includes(ql)&&anchored(r,"RefSeq v2.1"));
+  if(hit&&anchored(hit,"RefSeq v2.1")){const c=co(hit,"RefSeq v2.1");let s=num(c.start),e=num(c.end),p=num(c.peak);if(s==null||e==null){s=e=p;}const pad=Math.max(0.25,(e-s)*0.15);return gbShow(c.chr,(s-pad)*1e6,(e+pad)*1e6);}
+  markers();const mv=MK&&MK.get(mnorm(q));if(mv)return gbShow(mv.c,mv.p*1e6-100000,mv.p*1e6+100000);
+  gbMsg(`Nothing found for “${esc(q)}”. Try a locus name, gene ID (TraesCS…), marker or a region such as 6A:26.5-26.8.`);}
+function gbMsg(t){$("#sqOut").innerHTML=`<p class="msg">${t}</p>`;}
+/* ---- CDS store (2 bits per base) ---- */
+async function gbCds(c){if(GB.cds[c])return GB.cds[c];const r=await fetch("gb/cds_"+c+".txt");if(!r.ok)throw new Error("coding sequences for "+c+" not available");const t=await r.text(),i=t.indexOf("\n");
+  const H=JSON.parse(t.slice(0,i)),b64=t.slice(i+1).trim(),bin=atob(b64),u=new Uint8Array(bin.length);for(let k=0;k<bin.length;k++)u[k]=bin.charCodeAt(k);H.b=u;H.tot=H.o.length?H.o[H.o.length-1]+H.l[H.l.length-1]:0;GB.cds[c]=H;return H;}
+function gbCdsSeq(D,i,from,to){const o=D.o[i],L=D.l[i];from=from||0;to=to==null?L:to;let s="";const A="ACGT";for(let p=o+from;p<o+to;p++)s+=A[(D.b[p>>2]>>((p&3)*2))&3];
+  (D.N||[]).forEach(([gi,p,n])=>{if(gi!==i)return;for(let k=Math.max(p,from);k<Math.min(p+n,to);k++)s=s.slice(0,k-from)+"N"+s.slice(k-from+1);});return s;}
+/* ---- BLAST (blastn-like: seeds, banded gapped extension, Karlin–Altschul statistics) ---- */
+const BL_EX=">example_query (700 bp, glycosyltransferase fragment)\nCCGAGCTGGCGCGCCGGCTCGTCGCCGACCACGGCCTCGCCGCCACGCTCCTCTTCGCCG\nCGGCCACGGACGCCCCCTCGGAGCAGTACGCCGCCCTGGCCGCGTCCGTGCCCGACGGCG\nTCGACCTCGTCGCGCTGCCCGCGCCACCGGAGGACGCCCTGCCGCCCTCAACCACCGTGC\nGCGGACGCGTCGTGCACGCCGCCCTCTCCGCTGTCCCGCACGTCCGGGGCATCGCCTGGT\nCGCTGACAGCGACCGCGCCGCTCGCCGCGCTCGTGGTGGACATGGCCAGCGTGCCGGCGC\nGCGACGTCGCGGCGGAGCTGGGCGTGCCGTGCTACATGTTCTTCACCTCGCCGTGGATGC\nTCCTGTCACTGTTCCTGCACCTCCCGGAGCTCGACGCGGGGCTCGTCGGGGAGTACCGGG\nGCGCGACGGGGCCGATCAGGCTGCCGGGCTGCGTGCCGATTCACGCGCGCGAGCTTCCCG\nGGGCCATGCTCGCCGACCGGAGCAGCGACACGTACTCCGGGTTCCTGTCCTTGGCCAAGG\nACGCCGCGAGAGTCGACGGGATTCTCGTGAACACGTTCCGTGAGGTGGAGCCAGCGGTGG\nGGCAAGGCGGCACGGACTGCGTGAAGGACATGCCGGTGCACGCGGTCGGGCCGTTGGTCT\nGGACAAGGCCGGTCGGCGTGAACCGGGAGCCGGAGCACGC";
+const rc=s=>s.split("").reverse().map(c=>({A:"T",C:"G",G:"C",T:"A"})[c]||"N").join("");
+function blAlign(q,s,diag,band){/* banded local alignment (affine gaps): reward 2, penalty -3, gap open 5, extend 2 */
+  const M=2,X=-3,GO=5,GE=2,m=q.length,n=s.length,B=band,NEG=-1e9,W=2*B+1,N=(m+1)*W;
+  const H=new Float64Array(N),E=new Float64Array(N).fill(NEG),F=new Float64Array(N).fill(NEG),T=new Uint8Array(N);
+  let best=0,bi=0,bj=0;
+  for(let i=1;i<=m;i++){for(let k=0;k<W;k++){const j=i+diag-B+k;if(j<1||j>n)continue;const idx=i*W+k;let fl=0;
+      let e=NEG;if(k>0){const l=idx-1,a=H[l]-GO-GE,b=E[l]-GE;if(a>=b){e=a;fl|=4;}else e=b;}
+      let f=NEG;if(k+1<W){const u=(i-1)*W+k+1,a=H[u]-GO-GE,b=F[u]-GE;if(a>=b){f=a;fl|=8;}else f=b;}
+      const d=H[(i-1)*W+k]+(q[i-1]===s[j-1]&&q[i-1]!=="N"?M:X);let h=0,t=0;if(d>h){h=d;t=1;}if(e>h){h=e;t=2;}if(f>h){h=f;t=3;}
+      H[idx]=h;E[idx]=e;F[idx]=f;T[idx]=t|fl;if(h>best){best=h;bi=i;bj=j;}}}
+  if(best<=0)return null;let i=bi,j=bj,aq="",as="",state=0;
+  while(i>0&&j>0){const k=j-(i+diag)+B;if(k<0||k>=W)break;const idx=i*W+k,t=T[idx];
+    if(state===0){if(H[idx]<=0)break;const tt=t&3;if(tt===1){aq=q[i-1]+aq;as=s[j-1]+as;i--;j--;continue;}if(tt===2){state=2;}else if(tt===3){state=3;}else break;}
+    if(state===2){aq="-"+aq;as=s[j-1]+as;const fromH=(t&4)!==0;j--;state=fromH?0:2;continue;}
+    if(state===3){aq=q[i-1]+aq;as="-"+as;const fromH=(t&8)!==0;i--;state=fromH?0:3;continue;}}
+  let id=0,mm=0,gp=0,go=0,pg=false;for(let k=0;k<aq.length;k++){if(aq[k]==="-"||as[k]==="-"){gp++;if(!pg)go++;pg=true;}else{pg=false;if(aq[k]===as[k])id++;else mm++;}}
+  return {score:best,qs:i+1,qe:bi,ss:j+1,se:bj,aq,as,id,mm,gp,go,len:aq.length};}
+async function blRun(){const out=$("#blOut"),raw=$("#blQ").value;const q=raw.split(/\r?\n/).filter(l=>!/^>/.test(l)).join("").toUpperCase().replace(/[^A-Z]/g,"");
+  if(!q){out.innerHTML=`<p class="msg err">Paste a nucleotide sequence (plain or FASTA).</p>`;return;}
+  if((q.match(/[^ACGTN]/g)||[]).length>q.length*0.1){out.innerHTML=`<p class="msg err">This looks like a protein sequence. The atlas BLAST compares nucleotide sequences (blastn) against wheat coding sequences; please paste DNA.</p>`;return;}
+  const Q=q.replace(/[^ACGTN]/g,"N");if(Q.length<20||Q.length>20000){out.innerHTML=`<p class="msg err">Query length must be 20 to 20,000 bases (this one has ${Q.length}).</p>`;return;}
+  const W=+$("#blWord").value||11,EV=+$("#blEv").value,MAXH=+$("#blMax").value||25,chs=$("#blChr").value?[$("#blChr").value]:CHRS;
+  const mask=(1<<(2*W))-1>>>0,enc={A:0,C:1,G:2,T:3};const strands=[["+",Q],["−",rc(Q)]];const seedQ=new Map();
+  strands.forEach(([sn,s],si)=>{let code=0,ok=0;for(let i=0;i<s.length;i++){const v=enc[s[i]];if(v==null){ok=0;code=0;continue;}code=((code<<2)|v)&mask;ok++;if(ok>=W){const key=code>>>0;let a=seedQ.get(key);if(!a){a=[];seedQ.set(key,a);}if(a.length<64)a.push(si*1e6+(i-W+1));}}});
+  const look=W<=12?new Uint8Array(1<<(2*W)):new Uint8Array(1<<24),lm=W<=12?mask:0xFFFFFF;for(const k of seedQ.keys())look[k&lm]=1;
+  const t0=performance.now();let total=0;const hits=[];const prog=(t)=>{out.innerHTML=`<div class="blprog"><div style="width:${t}%"></div></div><p class="small muted">Searching… ${Math.round(t)}%</p>`;};
+  for(let ci=0;ci<chs.length;ci++){const c=chs[ci];prog(ci/chs.length*100);await new Promise(r=>setTimeout(r,0));let D;try{D=await gbCds(c);}catch(e){continue;}
+    total+=D.tot;const b=D.b,N=D.tot;const cnt=new Map();let code=0,gi=0,nextO=D.o.length>1?D.o[1]:Infinity;
+    for(let p=0;p<N;p++){code=((code<<2)|((b[p>>2]>>((p&3)*2))&3))&mask;if(p>=nextO){gi++;nextO=gi+1<D.o.length?D.o[gi+1]:Infinity;}
+      if(p-D.o[gi]<W-1)continue;const key=code>>>0;if(!look[key&lm])continue;if(W>12&&!seedQ.has(key))continue;
+      const sp=p-W+1-D.o[gi];for(const qv of seedQ.get(key)){const si=qv>=1e6?1:0,qp=qv-si*1e6,k=gi*2+si;let r=cnt.get(k);if(!r){r={gi,si,n:0,dg:new Map()};cnt.set(k,r);}r.n++;const dgk=sp-qp;r.dg.set(dgk,(r.dg.get(dgk)||0)+1);}}
+    const top=[...cnt.values()].sort((a,b)=>b.n-a.n).slice(0,60);
+    for(const r of top){let bd=0,bc=0;for(const [d,n] of r.dg)if(n>bc){bc=n;bd=d;}const sub=gbCdsSeq(D,r.gi),qq=strands[r.si][1];const al=blAlign(qq,sub,bd,Math.min(96,Math.max(24,Math.round(qq.length*0.05))));if(!al)continue;
+      hits.push({c,gi:r.gi,num:D.n[r.gi],si:r.si,slen:D.l[r.gi],...al});}}
+  const lam=0.625,K=0.41,m=Q.length,n=Math.max(1,total);hits.forEach(h=>{h.bit=(lam*h.score-Math.log(K))/Math.LN2;h.ev=m*n*Math.pow(2,-h.bit);h.pid=100*h.id/h.len;
+    h.qcov=100*(h.qe-h.qs+1)/m;if(h.si===1){const a=m-h.qe+1,b=m-h.qs+1;h.qs=a;h.qe=b;}});
+  let res=hits.filter(h=>h.ev<=EV).sort((a,b)=>a.ev-b.ev||b.bit-a.bit).slice(0,MAXH);
+  const G=genesAll();const gm=new Map();for(const c of new Set(res.map(h=>h.c))){try{const gs=await gbGenes(c);gs.forEach(g=>gm.set(c+":"+g.num,g));}catch(e){}}
+  res.forEach(h=>{const g=gm.get(h.c+":"+h.num);h.g=g;h.id11=`TraesCS${h.c}02G${String(h.num).padStart(6,"0")}`;});
+  GB.blast={res,Q,ms:performance.now()-t0,total};blShow();}
+function blShow(){const {res,Q,ms,total}=GB.blast,out=$("#blOut");
+  if(!res.length){out.innerHTML=`<p class="msg">No significant hit (E-value cut-off ${esc($("#blEv").value)}) among ${total.toLocaleString()} bases of wheat coding sequences. Try a lower stringency, a shorter word size, or check the sequence.</p>`;return;}
+  const W=1000,L=170,R=W-20,sx=p=>L+(p-1)/(Q.length-1||1)*(R-L),RH=14;const col=p=>p>=98?"#b5121b":p>=90?"#e15759":p>=80?"#f28e2b":p>=70?"#edc948":"#9aa3ad";
+  let s=`<text x="10" y="16" font-size="11" font-weight="700" fill="var(--ink)">Query (${Q.length.toLocaleString()} bp)</text><rect x="${L}" y="8" width="${R-L}" height="10" rx="3" fill="var(--ink)" opacity=".8"/>`;
+  const t=[0,.25,.5,.75,1].map(f=>Math.max(1,Math.round(f*Q.length)));t.forEach(v=>s+=`<text x="${sx(v)}" y="30" font-size="9" text-anchor="middle" fill="var(--muted)">${v}</text>`);
+  res.forEach((h,i)=>{const y=40+i*RH;s+=`<text x="10" y="${y+9}" font-size="9" fill="var(--ink)">${h.id11.replace("TraesCS","")}</text><g class="blbar" data-i="${i}" style="cursor:pointer" data-tip="${esc(`${h.id11} (chr${h.c})\n${h.pid.toFixed(1)}% identity over ${h.len} bp · query ${h.qs}–${h.qe} · E ${h.ev.toExponential(1)}\n${h.g?h.g.d:""}`)}"><rect x="${sx(h.qs)}" y="${y+1}" width="${Math.max(2,sx(h.qe)-sx(h.qs))}" height="9" rx="2" fill="${col(h.pid)}"/></g>`;});
+  const ly=40+res.length*RH+12;[["≥98%","#b5121b"],["90–98%","#e15759"],["80–90%","#f28e2b"],["70–80%","#edc948"],["<70%","#9aa3ad"]].forEach(([l,c],k)=>{s+=`<rect x="${L+k*90}" y="${ly}" width="12" height="9" fill="${c}"/><text x="${L+k*90+16}" y="${ly+8}" font-size="9" fill="var(--ink)">${l} identity</text>`;});
+  out.innerHTML=`<p class="small">${res.length} hit${res.length>1?"s":""} against ${total.toLocaleString()} bases of wheat high-confidence coding sequences, in ${(ms/1000).toFixed(1)} s.</p>
+   <svg viewBox="0 0 ${W} ${ly+16}" style="width:100%;max-width:${W}px" role="img" aria-label="BLAST hits along the query" data-title="BLAST hits along the query">${s}</svg>
+   <div class="tscroll"><table class="tbl"><thead><tr><th>Gene (v1.1)</th><th>Chr</th><th>Position (Mb, v2.1)</th><th>Identity</th><th>Align. length</th><th>Query cover</th><th>Mismatch</th><th>Gaps</th><th>Query</th><th>Subject (CDS)</th><th>Strand</th><th>E-value</th><th>Bit score</th><th>Annotation</th><th></th></tr></thead><tbody>${res.map((h,i)=>`<tr><td class="mono"><a href="#" class="glink" data-gene="${h.id11}">${h.id11}</a></td><td>${h.c}</td><td class="num">${h.g?(h.g.s/1e6).toFixed(4):"–"}</td><td class="num">${h.pid.toFixed(1)}%</td><td class="num">${h.len}</td><td class="num">${h.qcov.toFixed(0)}%</td><td class="num">${h.mm}</td><td class="num">${h.gp}</td><td class="num">${h.qs}–${h.qe}</td><td class="num">${h.ss}–${h.se} / ${h.slen}</td><td>${h.si?"minus":"plus"}</td><td class="num">${h.ev<1e-180?"0.0":h.ev.toExponential(1)}</td><td class="num">${h.bit.toFixed(0)}</td><td class="small">${esc(h.g?h.g.d:"")}</td><td style="white-space:nowrap"><button class="btn blview" type="button" data-i="${i}" style="padding:3px 8px;font-size:12px">View</button> <button class="btn blaln" type="button" data-i="${i}" style="padding:3px 8px;font-size:12px">Alignment</button></td></tr><tr class="blalnrow" data-i="${i}" hidden><td colspan="15"><pre class="seqbox" style="white-space:pre;overflow:auto"></pre></td></tr>`).join("")}</tbody></table></div>
+   <p class="small"><button class="btn" type="button" id="blCsv">Save hits (CSV)</button></p>
+   <p class="small muted">Search: blastn-style seeds of ${esc($("#blWord").value)} bases, banded gapped extension (reward 2, penalty −3, gap open 5, extend 2), E-values from Karlin–Altschul statistics (λ 0.625, K 0.41) over the whole database. Database: coding sequences of the high-confidence genes of IWGSC RefSeq v1.1 (canonical transcripts), stored in the atlas; hits are placed on RefSeq v2.1 through the gene models.</p>`;
+  out.querySelectorAll(".glink").forEach(a=>a.onclick=ev=>{ev.preventDefault();if(typeof gvOpen==="function")gvOpen(a.dataset.gene);});
+  const view=i=>{const h=res[i];if(!h.g)return;gbTab("view");gbShow(h.c,h.g.s-15000,h.g.s+h.g.len+15000);window.scrollTo({top:$("#gbTracks").getBoundingClientRect().top+scrollY-80,behavior:"smooth"});};
+  out.querySelectorAll(".blview").forEach(b=>b.onclick=()=>view(+b.dataset.i));out.querySelectorAll(".blbar").forEach(b=>b.onclick=()=>view(+b.dataset.i));
+  out.querySelectorAll(".blaln").forEach(b=>b.onclick=()=>{const i=+b.dataset.i,h=res[i],row=out.querySelector(`.blalnrow[data-i="${i}"]`);row.hidden=!row.hidden;if(row.hidden)return;
+    let qp=h.si?h.qe:h.qs,sp=h.ss,t="";for(let k=0;k<h.aq.length;k+=60){const a=h.aq.slice(k,k+60),b2=h.as.slice(k,k+60),mid=[...a].map((c,j)=>c===b2[j]&&c!=="-"?"|":" ").join("");
+      const qa=a.replace(/-/g,"").length,sa=b2.replace(/-/g,"").length;const qEnd=h.si?qp-qa+1:qp+qa-1;t+=`Query  ${String(qp).padStart(6)}  ${a}  ${qEnd}\n               ${mid}\nSbjct  ${String(sp).padStart(6)}  ${b2}  ${sp+sa-1}\n\n`;qp=h.si?qEnd-1:qEnd+1;sp+=sa;}
+    row.querySelector("pre").textContent=`${h.id11}  CDS length ${h.slen}  Strand: plus/${h.si?"minus":"plus"}\nScore ${h.bit.toFixed(1)} bits (${h.score}), E-value ${h.ev.toExponential(2)}\nIdentities ${h.id}/${h.len} (${h.pid.toFixed(1)}%), Gaps ${h.gp}/${h.len}\n\n`+t;});
+  $("#blCsv").onclick=()=>saveText("WheatTraitMap_BLAST_hits.csv",toCSV([["gene_v1.1","chr","position_Mb_v2.1","identity_pct","alignment_length","query_cover_pct","mismatches","gaps","q_start","q_end","s_start","s_end","strand","evalue","bit_score","annotation"]].concat(res.map(h=>[h.id11,h.c,h.g?(h.g.s/1e6).toFixed(4):"",h.pid.toFixed(2),h.len,h.qcov.toFixed(1),h.mm,h.gp,h.qs,h.qe,h.ss,h.se,h.si?"minus":"plus",h.ev.toExponential(2),h.bit.toFixed(1),h.g?h.g.d:""]))));}
+function gbTab(t){document.querySelectorAll(".gbtab").forEach(b=>b.classList.toggle("on",b.dataset.gbt===t));document.querySelectorAll("[data-gbp]").forEach(p=>p.hidden=p.dataset.gbp!==t);}
+function seqHook(){const s=$("#sqChr");if(s&&!s.options.length)CHRS.forEach(c=>s.insertAdjacentHTML("beforeend",`<option>${c}</option>`));
+  const bc=$("#blChr");if(bc&&bc.options.length<2)CHRS.forEach(c=>bc.insertAdjacentHTML("beforeend",`<option>${c}</option>`));
+  const b=$("#sqGo");if(b)b.onclick=()=>{const c=$("#sqChr").value,f=num($("#sqFrom").value),t=num($("#sqTo").value);if(f==null||t==null)return;gbShow(c,f*1e6,t*1e6);};
+  const z=(f)=>{const m=(GB.s+GB.e)/2,w=(GB.e-GB.s)*f/2;gbShow(GB.c,m-w,m+w);},pn=(f)=>{const w=GB.e-GB.s;gbShow(GB.c,GB.s+w*f,GB.e+w*f);};
+  const on=(id,fn)=>{const e=$(id);if(e)e.onclick=fn;};on("#gbIn",()=>z(0.5));on("#gbOut",()=>z(2));on("#gbL",()=>pn(-0.4));on("#gbR",()=>pn(0.4));on("#gbFa",gbFasta);on("#gbSeq",()=>{if(GB.e-GB.s>SEQMAX){gbMsg(`Showing the sequence on the page is limited to ${SEQMAX/1000} kb; use “Download FASTA of this region” (up to 5 Mb) or zoom in.`);return;}showSeq(GB.c,GB.s/1e6,GB.e/1e6,$("#sqOut"));});
+  on("#gbFind",()=>gbFind($("#gbQ").value));const q=$("#gbQ");if(q)q.onkeydown=e=>{if(e.key==="Enter")gbFind(q.value);};
+  document.querySelectorAll(".gbtab").forEach(t=>t.onclick=()=>gbTab(t.dataset.gbt));on("#blGo",blRun);on("#blEx",()=>{$("#blQ").value=BL_EX;});
+  const go=(c,f,t)=>{if(location.hash!=="#sequence")location.hash="#sequence";else route();gbTab("view");setTimeout(()=>gbShow(c,+f*1e6,+t*1e6),60);};
+  const rs=$("#rSQ");if(rs)rs.onclick=()=>go($("#rChr").value,num($("#rFrom").value)??0,num($("#rTo").value)??0);window.__seqGo=go;
+  window.addEventListener("hashchange",()=>{if(location.hash==="#sequence"&&!GB.view)gbShow();});if(location.hash==="#sequence")setTimeout(()=>{if(!GB.view)gbShow();},300);}
+
 
 seqHook();
 
@@ -2838,6 +3050,9 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
       if(on.length){items.push({col:[90,90,90],label:"Line: locus at one position (peak or marker)",kind:"line"});items.push({col:[150,150,150],label:"Shaded bar: locus interval wider than 4 Mb",kind:"bar"});}
       if(svg.querySelector(".chr.sel"))items.push({col:[246,236,213],label:"Highlighted: selected chromosome",kind:"bar"});
       return items;}
+    if(svg.id==="gbSvg"&&typeof GB!=="undefined"&&GB.view){const tr=[...new Set(GB.view.loci.map(l=>l.r.disease))];tr.forEach(n=>items.push({col:rgbOf(DCOL[n]||"#888888"),label:"Locus: "+n,kind:"box"}));
+      const cls=[...new Set(GB.view.cand.map(x=>x.g.cl))];const CLN=(genesAll().cl||[]);cls.forEach(k=>items.push({col:rgbOf(GBCL[k]||"#c0392b"),label:"Candidate gene: "+(k?CLN[k]:"defence-related annotation"),kind:"box"}));
+      items.push({col:[138,150,163],label:"Other gene",kind:"box"});if(GB.view.mk.length)items.push({col:[91,107,122],label:"Marker",kind:"line"});return items;}
     /* HTML legends placed next to the figure (swatch + text) */
     const wrap=svg.closest(".ideo-wrap,.encfig,figure")||svg;const scan=[];
     let n=wrap.nextElementSibling;while(n&&!n.querySelector("svg,table")&&n.tagName!=="TABLE"&&n.tagName!=="SVG"){scan.push(n);n=n.nextElementSibling;}
