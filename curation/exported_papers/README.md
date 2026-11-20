@@ -56,3 +56,12 @@ map but no QTL positions; the QTL table of the paper itself gives flanking GBS m
 (e.g. S2B_45213215). `gbs.py` read such marker names from the QTL table rows (rejoining QTL names split over two lines)
 for all papers with unplaced loci, and `addgbs.py` added 17 loci (15 from Sharma et al. 2026, 1 from Sharma et al. 2026
 Baker's Ann, 1 from the QYraq.cau paper) to `web/seed_ad73.json` (`snpname_placements.tsv`).
+
+## Fifth pass: markers without a known position (20 Nov 2026)
+`unk.py` listed 133 markers named next to still-unplaced loci that have no published physical position in
+`data/markerpos_all.json.gz` (`unknown_markers.json`): about 70 DArT (wPt), 48 SSR, 12 SNP-array and a few KASP names.
+Web searches gave no position tables; GrainGenes blocks automated access. Sequences could be obtained for 16 SSRs
+(primer pairs from the atlas primer table, STS records from NCBI); `epcr.py` searched them on the locus chromosomes of
+RefSeq v2.1 (Ensembl Plants 63) by exact primer and 32-mer matching. Six gave a single position (`epcr_res.json`):
+barc59 5B 670.70 Mb, barc261 5B 13.35 Mb, barc175 6D 411.88 Mb, barc202 6D 291.70 Mb, barc96 6D 418.28 Mb, barc121 7A 611.83 Mb.
+None of them, with the other markers of its locus, gave a consistent interval (`place2.py`), so no locus was added.
