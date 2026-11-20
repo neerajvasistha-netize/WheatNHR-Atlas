@@ -13,3 +13,6 @@ Screening and download tracking for the biotrophic-disease module of the atlas.
 
 Download status is checked against the owner's Zotero library and Zotero exports (PDFs themselves are not stored here).
 Updated: 19 Nov 2026.
+
+## Update 20 Nov 2026
+The downloaded PDFs (Zotero "Exported" folder) were read automatically; see `curation/exported_papers/` for the per-paper tracker and the loci added (web/seed_ad73.json).
