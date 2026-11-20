@@ -2791,10 +2791,6 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
     const notes=[];
     const desc=clean(svg.getAttribute("aria-label"));if(desc&&desc!==title)notes.push(desc+".");
     if(isIdeo){
-      const leg=[...document.querySelectorAll("#legend button")];
-      const on=leg.filter(b=>b.getAttribute("aria-pressed")!=="false"&&!/^all\s*\/\s*none$/i.test(clean(b.textContent))).map(b=>clean(b.textContent)).filter(Boolean);
-      const off=leg.filter(b=>b.getAttribute("aria-pressed")==="false"&&!/^all\s*\/\s*none$/i.test(clean(b.textContent))).map(b=>clean(b.textContent)).filter(Boolean);
-      if(leg.length)notes.push(off.length?`Shown: ${on.join(", ")}. Hidden: ${off.join(", ")}.`:`Legend: ${on.join(", ")}.`);
       const sel=svg.querySelector(".chr.sel");if(sel)notes.push("Selected chromosome highlighted.");
       const cl=clean(($("#countLine")||{}).textContent);if(cl)notes.push(cl);
       notes.push("Grade D loci (arm or bin only) are not drawn. Positions in Mb on the assembly selected on Home.");
@@ -2831,6 +2827,37 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
     const g=c.getContext("2d");g.fillStyle="#fff";g.fillRect(0,0,c.width,c.height);g.drawImage(img,0,0,c.width,c.height);return c.toDataURL("image/png");
   }
 
+  /* ---- legend of what the figure shows, written into every PDF ---- */
+  const rgbOf=v=>{const m=String(v||"").match(/rgba?\(([^)]+)\)/);if(m){const p=m[1].split(",").map(x=>parseFloat(x));if(p.length>3&&p[3]===0)return null;return p.slice(0,3).map(Math.round);}
+    const h=String(v||"").match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);if(h){let x=h[1];if(x.length===3)x=x.split("").map(c=>c+c).join("");return [0,2,4].map(i=>parseInt(x.slice(i,i+2),16));}return null;};
+  function legendItems(svg){
+    const items=[];
+    if(svg.id==="ideo"){
+      const on=(typeof mapNames==="function"?mapNames():[]).filter(n=>st.dOn.has(n));
+      on.forEach(n=>items.push({col:rgbOf(DCOL[n]||"#888888"),label:n,kind:"box"}));
+      if(on.length){items.push({col:[90,90,90],label:"Line: locus at one position (peak or marker)",kind:"line"});items.push({col:[150,150,150],label:"Shaded bar: locus interval wider than 4 Mb",kind:"bar"});}
+      if(svg.querySelector(".chr.sel"))items.push({col:[246,236,213],label:"Highlighted: selected chromosome",kind:"bar"});
+      return items;}
+    /* HTML legends placed next to the figure (swatch + text) */
+    const wrap=svg.closest(".ideo-wrap,.encfig,figure")||svg;const scan=[];
+    let n=wrap.nextElementSibling;while(n&&!n.querySelector("svg,table")&&n.tagName!=="TABLE"&&n.tagName!=="SVG"){scan.push(n);n=n.nextElementSibling;}
+    const seen=new Set();
+    scan.forEach(el=>el.querySelectorAll(".sw,[class*='swatch'],[style*='background']").forEach(sw=>{if(sw.closest("button.btn,.figbar"))return;
+      const host=sw.closest("label,.dchip,li,span,div")||sw.parentElement;const label=clean(host?host.textContent:"");const col=rgbOf(getComputedStyle(sw).backgroundColor);
+      if(!label||!col||label.length>80||seen.has(label))return;seen.add(label);items.push({col,label,kind:"box"});}));
+    return items;}
+  function legendBlock(doc,items,x,y,TW,draw){
+    if(!items.length)return 0;doc.setFont("helvetica","bold");doc.setFontSize(8.5);if(draw){doc.setTextColor(19,32,26);doc.text("Legend",x,y+3);}
+    doc.setFont("helvetica","normal");doc.setFontSize(8);let cx=x,cy=y+7.5;const RH=4.6;
+    items.forEach(it=>{const lab=win(it.label),w=doc.getTextWidth(lab)+9;if(cx+w>x+TW&&cx>x){cx=x;cy+=RH;}
+      if(draw){doc.setFillColor(...it.col);doc.setDrawColor(...it.col);
+        if(it.kind==="line"){doc.setLineWidth(0.7);doc.line(cx,cy-1.2,cx+5,cy-1.2);}
+        else if(it.kind==="bar"){doc.rect(cx+1.2,cy-3,2.6,3.6,"F");}
+        else doc.rect(cx,cy-2.9,4.2,3,"F");
+        doc.setTextColor(40);doc.text(lab,cx+6,cy);}
+      cx+=w+3;});
+    return cy-y+3;}
+
   /* ---- build the PDF ---- */
   async function figPdf(svg){
     await libs();
@@ -2855,7 +2882,8 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
     if(info.notes.length){capLines.push(["b","Notes: "]);capLines.push(["n",info.notes.join(" ")]);}
     const capText=capLines.map(x=>x[1]).join("");
     const capH=Math.min(60,doc.splitTextToSize(win(capText),TW).length*LH+6);
-    const availH=PH-17-y-capH-4;
+    const legItems=legendItems(svg);const legH=legendBlock(doc,legItems,M,0,TW,false);
+    const availH=PH-17-y-capH-4-(legH?legH+4:0);
     let fw=TW,fh=fw*h/w;if(fh>availH){fh=Math.max(40,availH);fw=fh*w/h;}
     const fx=M+(TW-fw)/2;
     doc.setDrawColor(223,229,225);doc.setLineWidth(0.2);doc.rect(fx-1.5,y-1.5,fw+3,fh+3);
@@ -2869,7 +2897,8 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
         vector=true;
       }finally{host.remove();}
     }catch(e){doc.addImage(await raster(cl,w,h),"PNG",fx,y,fw,fh);}
-    y+=fh+7;
+    y+=fh+5;
+    if(legH){legendBlock(doc,legItems,M,y,TW,true);y+=legH+4;}
     // caption, flowing on to more pages when long
     doc.setTextColor(19,32,26);doc.setFontSize(8.5);
     const writeRun=(style,text)=>{doc.setFont("helvetica",style==="b"?"bold":"normal");
