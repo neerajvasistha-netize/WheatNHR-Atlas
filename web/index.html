@@ -551,7 +551,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
       <button class="ttab" type="button" data-t="pmg">Meta-GWAS</button>
       <button class="ttab" type="button" data-t="genes">Genes</button>
             <button class="ttab" type="button" data-t="enrich">Enrichment</button>
-            <button class="ttab" type="button" data-t="sgene">Locus lists</button>
+            <button class="ttab" type="button" data-t="sgene">Locus list</button>
             <button class="ttab" type="button" data-t="markers">Marker lookup</button>
       <button class="ttab" type="button" data-t="pcr">PCR primer design</button>
       <button class="ttab" type="button" data-t="kasp">KASP primer design</button>
@@ -1146,7 +1146,7 @@ function tSel(id){const s=$("#"+id);if(s&&!s.options.length)CHRS.forEach(c=>s.in
 const TGROUP={genes:["genes","gsearch","homolog"],enrich:["enrich","gokegg"],sgene:["sgene","wild"]};
 /* ---- Tool groups: Genetic tools and Genomic tools ---- */
 const TG={grp:"genetic",pane:null,
-  G:{genetic:{title:"Genetic tools",items:[["Meta-QTL","pane","pmq"],["Meta-GWAS","pane","pmg"],["Region search","view","region"],["Candidate gene mapping","view","finemap"],["Locus lists","pane","sgene"],["Marker lookup","pane","markers"],["Annotate your GWAS/QTL hits","pane","anno"]]},
+  G:{genetic:{title:"Genetic tools",items:[["Meta-QTL","pane","pmq"],["Meta-GWAS","pane","pmg"],["Region search","view","region"],["Candidate gene mapping","view","finemap"],["Locus list","pane","sgene"],["Marker lookup","pane","markers"],["Annotate your GWAS/QTL hits","pane","anno"]]},
      genomic:{title:"Genomic tools",items:[["Genome browser and BLAST","view","sequence"],["Sequence toolkit","pane","seqkit"],["Genes","pane","genes"],["Standard primer design","pane","pcr"],["KASP primer design","pane","kasp"],["CAPS enzyme finder","pane","caps"],["Coordinate converter","pane","conv"],["Enrichment","pane","enrich"],["Network and response map","pane","netmap"],["In-silico expression (DEGs)","pane","expr"]]}}};
 function tgGroupOf(pane){for(const g in TG.G)if(TG.G[g].items.some(it=>it[1]==="pane"&&it[2]===pane))return g;return "genomic";}
 function tgEnsurePane(){const items=TG.G[TG.grp].items.filter(it=>it[1]==="pane").map(it=>it[2]);if(!TG.pane||!items.includes(TG.pane))tTab(items[0]);else tTab(TG.pane);}
