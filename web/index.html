@@ -819,7 +819,7 @@ function runWild(){const out=$("#wildOut");const rows=Object.values(st.reports).
   $("#wildCsv").onclick=()=>saveText("WheatTraitMap_wild_alien_origin.csv",toCSV([["id","locus","disease","wild_species","chr","position_v2.1_Mb","grade","source","citation"]].concat(rows.map(({r,sp})=>[r.id,r.name,r.disease,sp,r.chr,posOf(r),r.grade,srcShort(r.source),st.sources[r.source]?.citation||""]))));}
 function filtered(){const q=$("#q").value.trim().toLowerCase(),c=$("#fChr").value,KS=window.WTM_clsSel||new Set(),g=$("#fGrade").value,f=num($("#fFrom").value),t=num($("#fTo").value);
   const cu=$("#fCur")?$("#fCur").value:"";
-  return Object.values(st.reports).filter(r=>{if(!st.dOn.has(r.disease))return false;if(cu&&(r.curation||"atlas v1.2")!==cu)return false;if(c&&r.chr!==c)return false;if(KS.size&&!KS.has(r.cls))return false;if(g&&r.grade!==g)return false;if(st.wild&&!isWild(r))return false;
+  return Object.values(st.reports).filter(r=>{if(cu&&(r.curation||"atlas v1.2")!==cu)return false;if(c&&r.chr!==c)return false;if(KS.size&&!KS.has(r.cls))return false;if(g&&r.grade!==g)return false;if(st.wild&&!isWild(r))return false;
     if(f!=null||t!=null){const v=iv(r,st.asm);if(!v)return false;if(f!=null&&v[1]<f)return false;if(t!=null&&v[0]>t)return false;}
     if(q){const hay=[r.name,r.marker,r.note,r.source,srcShort(r.source),st.sources[r.source]?.citation,r.chr,r.cls].join(" ").toLowerCase();if(!hay.includes(q))return false;}return true;});}
 function sorted(list){const {k,dir}=st.sort;return list.slice().sort((a,b)=>{let x=a[k],y=b[k];
@@ -835,7 +835,7 @@ function renderStats(){const all=Object.values(st.reports);const loci=computeLoc
    .map(([n,l])=>`<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");}
 const TRAIT_TREE=[["Biotic stress",[["Diseases caused by necrotrophic fungi",["Necrotroph"]],["Diseases caused by hemibiotrophic fungi",["Hemibiotroph"]],["Diseases caused by biotrophic fungi",["Biotroph"]],["Viral diseases",["Virus"]],["Bacterial diseases",["Bacterium"]],["Diseases caused by nematodes",["Nematode"]]]]];
 const TR_OPEN=new Set(TRAIT_TREE.flatMap(([top,cats])=>[top,...cats.map(c=>c[0])]));
-const trNames=ls=>DIS.filter(d=>ls.includes(d[2])).map(d=>d[0]);
+const trNames=ls=>DIS.filter(d=>ls.includes(d[2])&&mapNames().includes(d[0])).map(d=>d[0]);
 function renderTraitMenu(){const m=$("#trMenu");if(!m)return;const cnt={};Object.values(st.reports).forEach(r=>cnt[r.disease]=(cnt[r.disease]||0)+1);
   const state=names=>{const k=names.filter(n=>st.dOn.has(n)).length;return k===0?"none":k===names.length?"all":"some";};
   const box=(names,key,label,total,level,open,hasKids)=>{const s=state(names);return `<div class="trrow lv${level}">${hasKids?`<button type="button" class="trcar" data-tropen="${esc(key)}" aria-expanded="${open}" aria-label="${open?"Collapse":"Expand"} ${esc(label)}">${open?"\u25BE":"\u25B8"}</button>`:`<span class="trcar"></span>`}<label><input type="checkbox" data-trnames="${esc(names.join("|"))}"${s==="all"?" checked":""}${s==="some"?' data-ind="1"':""}> ${label} <span class="muted">${total.toLocaleString()}</span></label></div>`;};
@@ -846,20 +846,23 @@ function renderTraitMenu(){const m=$("#trMenu");if(!m)return;const cnt={};Object
       h+=box(names,cat,esc(cat),names.reduce((a,n)=>a+(cnt[n]||0),0),1,oc,true);
       if(oc)names.slice().sort().forEach(n=>{h+=box([n],n,`<span class="sw" style="background:${DCOL[n]}"></span>${esc(n)}`,cnt[n]||0,2,false,false);});});});
   m.innerHTML=h;m.querySelectorAll("input[data-ind]").forEach(i=>i.indeterminate=true);
-  const n=st.dOn.size,N=DIS.length;$("#trLab").textContent=n===N?`All ${N} diseases`:n===0?"None selected":`${n} of ${N} diseases`;$("#trBtn").classList.toggle("partial",n!==N);}
+  const on=mapNames().filter(x=>st.dOn.has(x)),n=on.length,N=mapNames().length;$("#trLab").textContent=n===N?"All traits":n===0?"None selected":n===1?on[0]:`${n} traits`;$("#trBtn").classList.toggle("partial",n!==N);}
 const MAPSKIP=/^(multiple|mixed|several)\b|\bcomplex$/i;
 function mapCounts(list){const A=st.asm,c={};(list||filtered()).forEach(r=>{if(anchored(r,A)&&!MAPSKIP.test(r.disease||""))c[r.disease]=(c[r.disease]||0)+1;});return c;}
-const MAPMIN=2,MAPALLCOL="#b5512a";
-function mapTrait(list){const c=mapCounts(list),ks=Object.keys(c).filter(k=>c[k]>=MAPMIN);if(st.mapD==="__all")return "__all";if(!ks.length)return null;if(st.mapD&&c[st.mapD]>=MAPMIN)return st.mapD;return ks.sort((a,b)=>c[b]-c[a]||a.localeCompare(b))[0];}
+const MAPMIN=2;
+let MAPN=null;function mapNames(){if(!MAPN){const A=st.asm,c={};Object.values(st.reports).forEach(r=>{if(anchored(r,A)&&!MAPSKIP.test(r.disease||""))c[r.disease]=(c[r.disease]||0)+1;});MAPN=DIS.map(d=>d[0]).filter(n=>(c[n]||0)>=MAPMIN).sort((a,b)=>c[b]-c[a]||a.localeCompare(b));}return MAPN;}
+function mapDefault(){const n=mapNames();st.dOn=new Set(n.length?[n[0]]:[]);}
 function renderLegend(){renderMapLegend(filtered());renderTraitMenu();}
-function renderMapLegend(list){const c=mapCounts(list),cur=mapTrait(list);st.mapD=cur;
-  const names=Object.keys(c).filter(k=>c[k]>=MAPMIN).sort((a,b)=>c[b]-c[a]||a.localeCompare(b));const all=cur==="__all";
-  $("#legend").innerHTML=names.length?`<div class="maptrait"><span class="dchip">${all?"":`<span class="sw" style="background:${DCOL[cur]||"#888"}"></span>`}${all?"All traits (colour = trait; hover a mark for its name)":esc(cur)}</span><label class="small muted">Show another trait <select id="mapTraitSel" aria-label="Trait shown on the chromosome map"><option value="__all"${all?" selected":""}>All traits</option>${names.map(n=>`<option value="${esc(n)}"${n===cur?" selected":""}>${esc(n)}</option>`).join("")}</select></label></div>`:`<span class="muted small">No positioned loci for the current filters</span>`;
-  const sel=document.getElementById("mapTraitSel");if(sel)sel.onchange=()=>{st.mapD=sel.value;renderIdeo(filtered());};}
+function renderMapLegend(list){if(!st.dOnInit){st.dOnInit=true;mapDefault();}const c=mapCounts(list);
+  const on=mapNames().filter(n=>st.dOn.has(n));const N=mapNames().length;
+  $("#legend").innerHTML=!on.length?`<span class="muted small">No trait selected: choose one or more in "Explore by trait" above the map</span>`:
+    on.length===N?`<span class="dchip">All traits (colour = trait; hover a mark for its name)</span>`:
+    on.length<=8?`<div class="maptrait">${on.map(n=>`<span class="dchip"><span class="sw" style="background:${DCOL[n]||"#888"}"></span>${esc(n)}</span>`).join("")}</div>`:
+    `<span class="dchip">${on.length} traits (colour = trait; hover a mark for its name)</span>`;}
 function renderIdeo(list){const A=st.asm,CL=ALEN[A]||CHR;const W=1000,LM=52,top=26,H=290,mx=Math.max(...Object.values(CL));const step=(W-LM)/21;const sel=$("#fChr").value;const sc=v=>top+v/mx*H;let s="";
   for(let m=0;m<=800;m+=200){s+=`<line class="axis" x1="0" x2="${W}" y1="${sc(m)}" y2="${sc(m)}" stroke-dasharray="2 4"/><text x="2" y="${sc(m)-3}" style="font-weight:400">${m} Mb</text>`;}
   CHRS.forEach((c,i)=>{const x=LM+i*step+step/2;s+=`<rect class="chrlab chrhit" data-chr="${c}" x="${x-step/2+2}" y="0" width="${step-4}" height="${top-4}" rx="5" fill="${sel===c?"var(--accent-soft)":"transparent"}" style="cursor:pointer"><title>Show only ${c}</title></rect><text class="chrlab${sel===c?" sel":""}" data-chr="${c}" x="${x}" y="16" text-anchor="middle" style="cursor:pointer;${sel===c?"font-weight:800;fill:var(--accent)":""}"><title>Show only ${c}</title>${c}</text><rect class="chr${sel===c?" sel":""}" data-chr="${c}" x="${x-7}" y="${top}" width="14" height="${(CL[c]||CHR[c])/mx*H}" rx="7"${sel&&sel!==c?' opacity=".35"':""}><title>${c}: ${CL[c]||CHR[c]} Mb (${esc(A)})</title></rect>`;});
-  const mt=mapTrait(list);st.mapD=mt;renderMapLegend(list);list.filter(r=>anchored(r,A)&&(mt==="__all"||r.disease===mt)).forEach(r=>{const c0=co(r,A),i=CHRS.indexOf(c0.chr),x=LM+i*step+step/2,s0=num(c0.start),e0=num(c0.end),col=DCOL[r.disease]||"#888",tt=mt==="__all"?`<title>${esc(r.name)} · ${esc(r.disease)}</title>`:"";
+  renderMapLegend(list);const multi=st.dOn.size>1;list.filter(r=>anchored(r,A)&&st.dOn.has(r.disease)).forEach(r=>{const c0=co(r,A),i=CHRS.indexOf(c0.chr),x=LM+i*step+step/2,s0=num(c0.start),e0=num(c0.end),col=DCOL[r.disease]||"#888",tt=multi?`<title>${esc(r.name)} · ${esc(r.disease)}</title>`:"";
     if(s0!=null&&e0!=null&&e0-s0>4){s+=`<rect class="mk" data-id="${r.id}" x="${x-6}" y="${sc(s0)}" width="12" height="${Math.max(2,sc(e0)-sc(s0))}" fill="${col}" fill-opacity=".45" style="cursor:pointer">${tt}</rect>`;}
     else{const p=pos(r,A);s+=`<line class="mk" data-id="${r.id}" x1="${x-11}" x2="${x+11}" y1="${sc(p)}" y2="${sc(p)}" stroke="${col}" stroke-width="2.5" style="cursor:pointer">${tt}</line>`;}});
   $("#ideo").innerHTML=s;}
@@ -2194,7 +2197,7 @@ function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<opt
   [...new Set(Object.values(st.papers).map(p=>p.disease))].sort().forEach(d=>$("#pDis").insertAdjacentHTML("beforeend",`<option>${esc(d)}</option>`));
     ["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).addEventListener("input",renderTable));
   
-  $("#reset").onclick=()=>{["#q","#fChr","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.mapD=null;if(window.WTM_clsSel){window.WTM_clsSel.clear();window.WTM_clsSync&&window.WTM_clsSync();}st.wild=false;if($("#wildMap"))runWild();st.dOn=new Set(DIS.map(d=>d[0]));renderLegend();renderTable();};
+  $("#reset").onclick=()=>{["#q","#fChr","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.mapD=null;if(window.WTM_clsSel){window.WTM_clsSel.clear();window.WTM_clsSync&&window.WTM_clsSync();}st.wild=false;if($("#wildMap"))runWild();mapDefault();renderLegend();renderTable();};
   $("#legend").onclick=e=>{const b=e.target.closest("button");if(!b)return;
      if(b.dataset.g){const ls=b.dataset.g==="Biotrophs"?["Biotroph"]:["Necrotroph","Hemibiotroph"];const names=DIS.filter(x=>ls.includes(x[2])).map(x=>x[0]);const on=names.every(n=>st.dOn.has(n));names.forEach(n=>on?st.dOn.delete(n):st.dOn.add(n));renderLegend();renderTable();return;}
      const d=b.dataset.d;if(!d)return;st.mapD=d;renderIdeo(filtered());};
@@ -2207,11 +2210,11 @@ function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<opt
   $("#ideo").addEventListener("click",e=>{const mk=e.target.closest(".mk");if(mk){renderDrawer(mk.dataset.id);return;}const c=e.target.closest(".chr,.chrlab");if(c){$("#fChr").value=$("#fChr").value===c.dataset.chr?"":c.dataset.chr;renderTable();}});
   $("#ideo").addEventListener("mousemove",e=>{const mk=e.target.closest(".mk");if(!mk){tip.style.display="none";return;}const r=st.reports[mk.dataset.id];
     tip.innerHTML=`<b>${esc(r.name)}</b><br>${esc(r.disease)} · ${esc(co(r,st.asm)?.chr||r.chr)} · ${span(r,st.asm)} Mb (${esc(st.asm)})`;tip.style.display="block";tip.style.left=Math.min(e.clientX+12,innerWidth-330)+"px";tip.style.top=(e.clientY+12)+"px";});
-  $("#ideo").addEventListener("mouseleave",()=>tip.style.display="none");{const sb=$("#showRec"),rw=$("#recWrap");if(sb&&rw)sb.onclick=()=>{rw.hidden=!rw.hidden;sb.textContent=rw.hidden?"Show records":"Hide records";sb.setAttribute("aria-expanded",String(!rw.hidden));if(!rw.hidden)rw.scrollIntoView({behavior:"smooth",block:"start"});};}{const ia=$("#ideoAll");if(ia)ia.onclick=()=>{$("#fChr").value="";st.dOn=new Set(DIS.map(d=>d[0]));renderLegend();renderTable();};}
+  $("#ideo").addEventListener("mouseleave",()=>tip.style.display="none");{const sb=$("#showRec"),rw=$("#recWrap");if(sb&&rw)sb.onclick=()=>{rw.hidden=!rw.hidden;sb.textContent=rw.hidden?"Show records":"Hide records";sb.setAttribute("aria-expanded",String(!rw.hidden));if(!rw.hidden)rw.scrollIntoView({behavior:"smooth",block:"start"});};}{const ia=$("#ideoAll");if(ia)ia.onclick=()=>{$("#fChr").value="";renderLegend();renderTable();};}
   {const tb=$("#trBtn"),tm=$("#trMenu");if(tb&&tm){const close=()=>{tm.hidden=true;tb.setAttribute("aria-expanded","false");};
     tb.onclick=e=>{e.stopPropagation();tm.hidden=!tm.hidden;tb.setAttribute("aria-expanded",String(!tm.hidden));if(!tm.hidden)renderTraitMenu();};
     tm.addEventListener("click",e=>{e.stopPropagation();const c=e.target.closest("[data-tropen]");if(c){const k=c.dataset.tropen;TR_OPEN.has(k)?TR_OPEN.delete(k):TR_OPEN.add(k);renderTraitMenu();return;}
-      const a=e.target.closest("[data-trall]");if(a){st.dOn=a.dataset.trall==="1"?new Set(DIS.map(d=>d[0])):new Set();renderLegend();renderTable();}});
+      const a=e.target.closest("[data-trall]");if(a){st.dOn=a.dataset.trall==="1"?new Set(mapNames()):new Set();renderLegend();renderTable();}});
     tm.addEventListener("change",e=>{const i=e.target.closest("input[data-trnames]");if(!i)return;const names=i.dataset.trnames.split("|");names.forEach(n=>i.checked?st.dOn.add(n):st.dOn.delete(n));renderLegend();renderTable();});
     document.addEventListener("click",e=>{if(!tm.hidden&&!e.target.closest(".trsel"))close();});
     document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!tm.hidden){close();tb.focus();}});}}
