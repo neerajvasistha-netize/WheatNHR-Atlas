@@ -28,3 +28,13 @@ on 20 Nov 2026. PDFs are not kept here.
 Records are machine-read and should be checked against each paper ("verify against paper").
 Loci shown only in figures or supplementary files, alien-chromosome lines without wheat positions,
 and GWAS marker-trait associations without locus names were not added.
+
+## Second pass: markers read from figures (20 Nov 2026)
+For the 404 loci (in 100 papers) that were named but had no position in the text and are not in the atlas,
+the figure pages (pages with images or a figure caption, 385 pages) were rendered at 300 dpi and read with
+Tesseract OCR (`pages.py`, `ocr.py`). `fig2.py` kept, for each locus, the marker names in the figure that have a published
+physical position on the locus's chromosome (and arm, where the name or text gives the arm), choosing the markers drawn
+nearest the locus label (or all markers of a figure whose caption names the locus), at least two markers within 15 Mb.
+`addfig.py` added the 14 loci placed this way to `web/seed_ad73.json` (PX0200 onward, curation "auto (paper figure)");
+see `figure_placements.tsv`. The other loci stayed unplaced: most figures are Manhattan plots or maps without
+marker names on the locus chromosome, or their markers have no known physical position.
