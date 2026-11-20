@@ -1,0 +1,10 @@
+@comment{WheatTraitMap: papers whose supplementary files are needed (20 Nov 2026).
+How to use:
+1. In Zotero, File > Import this file into a new collection; select all items and run "Find Available PDF".
+2. For each item open the DOI link (url field), go to the "Supplementary material" section of the journal page
+   (also called "Electronic supplementary material", "Additional files" or "Supporting information") and download
+   the files named under "Required" in the note. Excel, Word and PDF files are all fine.
+   If the note says no file is named, download all supplementary files.
+3. Attach each downloaded file to its item (drag it onto the item in Zotero).
+4. Export the collection (File > Export Collection, format Zotero RDF, tick "Export Files") into Downloads and tell Claude.
+The note of each entry also lists the loci that still need positions.}
