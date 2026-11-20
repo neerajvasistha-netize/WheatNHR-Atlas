@@ -38,3 +38,14 @@ nearest the locus label (or all markers of a figure whose caption names the locu
 `addfig.py` added the 14 loci placed this way to `web/seed_ad73.json` (PX0200 onward, curation "auto (paper figure)");
 see `figure_placements.tsv`. The other loci stayed unplaced: most figures are Manhattan plots or maps without
 marker names on the locus chromosome, or their markers have no known physical position.
+
+## Third pass: supplementary tables (20 Nov 2026)
+`dl.py` downloaded the supplementary files of the 96 papers in `supplementary_needed.bib` from Europe PMC
+(open-access papers) or the publisher page (Springer ESM, Frontiers); files were found for 66 papers
+(`supplementary_download_log.json`; files not kept here). `rows.py` read every Excel, Word, PDF and text file into table rows and
+`supp2.py` looked for the row of each unplaced locus: a physical position written next to the locus chromosome
+(e.g. "3D: 606366088" or chromosome and bp columns), or, failing that, markers in the row with a published position on that
+chromosome and arm. `addsupp.py` added the 106 loci placed this way to `web/seed_ad73.json`
+(curation "auto (supplementary table)"; `supplementary_placements.tsv`).
+`supplementary_manual.bib` / `.tsv`: the 30 papers whose supplements could not be fetched automatically (MDPI and some
+other publishers block downloads; several older papers may have no supplement).

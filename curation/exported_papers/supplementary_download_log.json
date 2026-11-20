@@ -1,0 +1,949 @@
+{
+ "Ambrozkova2002determin": {
+  "files": [],
+  "how": [
+   "publisher page pps.agriculturejournals.cz"
+  ]
+ },
+ "Babiker2016genetic": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Bai2022broadspe": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Bajgain2016nested": {
+  "files": [
+   "pone.0155760.s008.txt",
+   "pone.0155760.s013.docx",
+   "pone.0155760.s001.pdf",
+   "pone.0155760.s002.pdf",
+   "pone.0155760.s010.txt",
+   "pone.0155760.s007.txt",
+   "pone.0155760.s011.txt",
+   "pone.0155760.s009.txt",
+   "pone.0155760.s012.txt",
+   "pone.0155760.s004.pdf",
+   "pone.0155760.s006.xlsx"
+  ],
+  "how": [
+   "europepmc PMC4870046"
+  ]
+ },
+ "Bariana2022discover": {
+  "files": [],
+  "how": [
+   "epmc supp fail HTTP Error 500: Internal Server Error",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Basnet2013characte": {
+  "files": [
+   "11032_2013_9957_MOESM1_ESM.pdf"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Bokore2017quantita": {
+  "files": [
+   "122_2017_2980_MOESM1_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Bokore2019mapping": {
+  "files": [],
+  "how": [
+   "epmc supp fail HTTP Error 500: Internal Server Error",
+   "publisher page link.springer.com"
+  ]
+ },
+ "Bokore2023genetic": {
+  "files": [
+   "Table_1.docx",
+   "Table_2.xlsx"
+  ],
+  "how": [
+   "europepmc PMC10067638"
+  ]
+ },
+ "Borgen2026reaction": {
+  "files": [],
+  "how": [
+   "epmc supp fail File is not a zip file",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Buerstmayr2014mapping": {
+  "files": [
+   "122_2014_2357_MOESM1_ESM.pdf",
+   "122_2014_2357_MOESM2_ESM.pdf",
+   "122_2014_2357_MOESM3_ESM.pdf",
+   "122_2014_2357_MOESM4_ESM.pdf",
+   "122_2014_2357_MOESM5_ESM.xlsx",
+   "122_2014_2357_MOESM6_ESM.pdf",
+   "122_2014_2357_MOESM7_ESM.pdf"
+  ],
+  "how": [
+   "epmc supp fail HTTP Error 500: Internal Server Error",
+   "dl fail HTTP Error 404: Not Found",
+   "publisher page link.springer.com"
+  ]
+ },
+ "Cao2024characte": {
+  "files": [],
+  "how": [
+   "publisher page linkinghub.elsevier.com"
+  ]
+ },
+ "Cenci1999identifi": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Chen2011genomewi": {
+  "files": [
+   "11032_2011_9590_MOESM1_ESM.docx",
+   "11032_2011_9590_MOESM2_ESM.pdf"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Chen2011mapping": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 429: Unknown Error"
+  ]
+ },
+ "Chen2017mapping": {
+  "files": [
+   "122_2017_3024_MOESM1_ESM.pdf"
+  ],
+  "how": [
+   "europepmc PMC5814525"
+  ]
+ },
+ "Chen2022fine": {
+  "files": [
+   "plants-11-03244-s001.zip"
+  ],
+  "how": [
+   "europepmc PMC9740260"
+  ]
+ },
+ "Chen2024identifi": {
+  "files": [
+   "10681_2024_3454_MOESM1_ESM.docx",
+   "10681_2024_3454_MOESM2_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Chen2025genomewi": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Chhetri2016genomic": {
+  "files": [
+   "10681_2016_1640_MOESM1_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Chhuneja2015fine": {
+  "files": [
+   "supplement2013.pdf",
+   "122_2015_2570_MOESM1_ESM.png",
+   "122_2015_2570_MOESM2_ESM.pdf",
+   "122_2015_2570_MOESM3_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Czembor2025genomewi": {
+  "files": [
+   "13353_2025_976_MOESM2_ESM.docx",
+   "13353_2025_976_MOESM1_ESM.docx",
+   "13353_2025_976_MOESM8_ESM.pptx",
+   "13353_2025_976_MOESM7_ESM.xlsx",
+   "13353_2025_976_MOESM5_ESM.xlsx",
+   "13353_2025_976_MOESM6_ESM.xlsx",
+   "13353_2025_976_MOESM3_ESM.xlsx",
+   "13353_2025_976_MOESM4_ESM.docx"
+  ],
+  "how": [
+   "europepmc PMC12616754"
+  ]
+ },
+ "Dang2022highreso": {
+  "files": [
+   "TPG2-15-e20212-s002.docx",
+   "TPG2-15-e20212-s001.xlsx"
+  ],
+  "how": [
+   "europepmc PMC12806896"
+  ]
+ },
+ "Desiderio2014identifi": {
+  "files": [
+   "11032_2014_186_MOESM10_ESM.docx",
+   "11032_2014_186_MOESM1_ESM.tif",
+   "11032_2014_186_MOESM2_ESM.tif",
+   "11032_2014_186_MOESM3_ESM.tif",
+   "11032_2014_186_MOESM4_ESM.docx",
+   "11032_2014_186_MOESM5_ESM.docx",
+   "11032_2014_186_MOESM6_ESM.xlsx",
+   "11032_2014_186_MOESM7_ESM.docx",
+   "11032_2014_186_MOESM8_ESM.docx",
+   "11032_2014_186_MOESM9_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Dong2017validati": {
+  "files": [
+   "122_2017_2946_MOESM1_ESM.pdf"
+  ],
+  "how": [
+   "europepmc PMC5606939"
+  ]
+ },
+ "Dong2026fine": {
+  "files": [
+   "122_2026_5406_MOESM1_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Du2025mapping": {
+  "files": [
+   "12870_2025_6918_MOESM1_ESM.docx",
+   "12870_2025_6918_MOESM3_ESM.xlsx",
+   "12870_2025_6918_MOESM2_ESM.docx"
+  ],
+  "how": [
+   "europepmc PMC12220352"
+  ]
+ },
+ "ElMessoadi2022genome": {
+  "files": [
+   "42161_2022_1132_MOESM1_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Feng2015identifi": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Gao2016genome": {
+  "files": [
+   "pone.0148671.s005.pptx",
+   "pone.0148671.s003.pptx",
+   "pone.0148671.s002.pptx",
+   "pone.0148671.s007.csv",
+   "pone.0148671.s004.pptx",
+   "pone.0148671.s009.xlsx",
+   "pone.0148671.s008.xlsx",
+   "pone.0148671.s006.csv",
+   "pone.0148671.s001.pptx"
+  ],
+  "how": [
+   "europepmc PMC4744023"
+  ]
+ },
+ "Haile2012qtl": {
+  "files": [
+   "11032_2012_9734_MOESM1_ESM.doc"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Han2024molecula": {
+  "files": [
+   "12870_2024_5884_MOESM1_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC11622551"
+  ]
+ },
+ "He2025an": {
+  "files": [
+   "41467_2025_64048_MOESM7_ESM.xlsx",
+   "41467_2025_64048_MOESM6_ESM.xlsx",
+   "41467_2025_64048_MOESM2_ESM.pdf",
+   "41467_2025_64048_MOESM12_ESM.xlsx",
+   "41467_2025_64048_MOESM14_ESM.xlsx",
+   "41467_2025_64048_MOESM5_ESM.xlsx",
+   "41467_2025_64048_MOESM11_ESM.xlsx",
+   "41467_2025_64048_MOESM1_ESM.pdf",
+   "41467_2025_64048_MOESM8_ESM.xlsx",
+   "41467_2025_64048_MOESM10_ESM.xlsx",
+   "41467_2025_64048_MOESM13_ESM.pdf",
+   "41467_2025_64048_MOESM4_ESM.xlsx",
+   "41467_2025_64048_MOESM3_ESM.pdf",
+   "41467_2025_64048_MOESM9_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC12514284"
+  ]
+ },
+ "Hou2015mapping": {
+  "files": [
+   "pone.0126794.s007.docx",
+   "pone.0126794.s001.xlsx",
+   "pone.0126794.s002.xlsx",
+   "pone.0126794.s004.xlsx",
+   "pone.0126794.s006.xlsx",
+   "pone.0126794.s003.xlsx",
+   "pone.0126794.s005.xlsx"
+  ],
+  "how": [
+   "europepmc PMC4430513"
+  ]
+ },
+ "Huang2023high": {
+  "files": [
+   "122_2023_4282_MOESM1_ESM.pptx",
+   "122_2023_4282_MOESM2_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Iqbal2007the": {
+  "files": [],
+  "how": [
+   "publisher page www.cambridge.org"
+  ]
+ },
+ "Jia2018mapping": {
+  "files": [
+   "122_2018_3058_MOESM1_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Jiang2025molecula": {
+  "files": [
+   "122_2025_5018_MOESM1_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Jighly2015genomewi": {
+  "files": [
+   "122_2015_2504_MOESM1_ESM.ppt",
+   "122_2015_2504_MOESM2_ESM.ppt",
+   "122_2015_2504_MOESM3_ESM.ppt",
+   "122_2015_2504_MOESM4_ESM.pptx",
+   "122_2015_2504_MOESM5_ESM.docx",
+   "122_2015_2504_MOESM6_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Jin2022characte": {
+  "files": [
+   "Table_2.xlsx",
+   "Table_1.xlsx"
+  ],
+  "how": [
+   "europepmc PMC9644285"
+  ]
+ },
+ "Jin2023identifi": {
+  "files": [
+   "122_2023_4347_MOESM1_ESM.xlsx",
+   "122_2023_4347_MOESM2_ESM.pdf"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kadkhodaei2012identifi": {
+  "files": [
+   "supplement2009.pdf"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kang2019genomewi": {
+  "files": [
+   "supplement2013.pdf",
+   "supplement2015.pdf",
+   "supplement2017.pdf",
+   "11033_2019_5225_MOESM1_ESM.docx",
+   "11033_2019_5225_MOESM2_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kang2024qtl": {
+  "files": [
+   "10681_2024_3436_MOESM1_ESM.xls"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kankwatsa2017characte": {
+  "files": [
+   "11032_2017_707_MOESM10_ESM.pdf",
+   "11032_2017_707_MOESM1_ESM.pdf",
+   "11032_2017_707_MOESM2_ESM.pdf",
+   "11032_2017_707_MOESM3_ESM.pdf",
+   "11032_2017_707_MOESM4_ESM.pdf",
+   "11032_2017_707_MOESM5_ESM.pdf",
+   "11032_2017_707_MOESM6_ESM.pdf",
+   "11032_2017_707_MOESM7_ESM.pdf",
+   "11032_2017_707_MOESM8_ESM.pdf",
+   "11032_2017_707_MOESM9_ESM.pdf"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kaur2023genomewi": {
+  "files": [
+   "plants-12-03864-s001.zip"
+  ],
+  "how": [
+   "europepmc PMC10675159"
+  ]
+ },
+ "Kolmer2018mapping": {
+  "files": [
+   "122_2018_3097_MOESM1_ESM.xlsx",
+   "122_2018_3097_MOESM2_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kolmer2018adult": {
+  "files": [
+   "10681_2018_2141_MOESM1_ESM.docx",
+   "10681_2018_2141_MOESM2_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kolmer2023mapping": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Kumar2020genomewi": {
+  "files": [
+   "Table_6.XLSX",
+   "Table_2.DOCX",
+   "Image_2.pdf",
+   "Table_1.DOCX",
+   "Table_3.XLSX",
+   "Data_Sheet_1.ZIP",
+   "Table_8.XLSX",
+   "Table_10.XLSX",
+   "Table_9.XLSX",
+   "Image_1.pdf",
+   "Table_7.DOCX",
+   "Table_12.XLSX",
+   "Table_5.XLSX",
+   "Table_4.XLSX",
+   "Table_11.XLSX",
+   "Table_13.XLSX"
+  ],
+  "how": [
+   "europepmc PMC7286347"
+  ]
+ },
+ "Lan2014qtl": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Lan2015identifi": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Leonova2019genomewi": {
+  "files": [],
+  "how": [
+   "epmc search fail The read operation timed out",
+   "publisher page link.springer.com"
+  ]
+ },
+ "Letta2013searchin": {
+  "files": [
+   "122_2013_2050_MOESM1_ESM.ppt",
+   "122_2013_2050_MOESM2_ESM.xls"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Li2018highdens": {
+  "files": [
+   "Table_2.xlsx",
+   "Table_1.xlsx"
+  ],
+  "how": [
+   "europepmc PMC6083057"
+  ]
+ },
+ "Li2019characte": {
+  "files": [],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Li2022longread": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 429: Too Many Requests"
+  ]
+ },
+ "Li2024wheat": {
+  "files": [
+   "41467_2024_46814_MOESM5_ESM.xls",
+   "41467_2024_46814_MOESM11_ESM.xls",
+   "41467_2024_46814_MOESM12_ESM.xls",
+   "41467_2024_46814_MOESM16_ESM.xls",
+   "41467_2024_46814_MOESM2_ESM.pdf",
+   "41467_2024_46814_MOESM13_ESM.xls",
+   "41467_2024_46814_MOESM15_ESM.xls",
+   "41467_2024_46814_MOESM18_ESM.xls",
+   "41467_2024_46814_MOESM8_ESM.xls",
+   "41467_2024_46814_MOESM14_ESM.xls",
+   "41467_2024_46814_MOESM7_ESM.xls",
+   "41467_2024_46814_MOESM20_ESM.xls",
+   "41467_2024_46814_MOESM17_ESM.xls",
+   "41467_2024_46814_MOESM9_ESM.xls",
+   "41467_2024_46814_MOESM10_ESM.xls",
+   "41467_2024_46814_MOESM19_ESM.pdf",
+   "41467_2024_46814_MOESM3_ESM.pdf",
+   "41467_2024_46814_MOESM4_ESM.xls",
+   "41467_2024_46814_MOESM1_ESM.pdf",
+   "41467_2024_46814_MOESM6_ESM.xls"
+  ],
+  "how": [
+   "europepmc PMC10951266"
+  ]
+ },
+ "Li2025mapping": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Lin2023a": {
+  "files": [
+   "122_2023_4397_MOESM8_ESM.docx"
+  ],
+  "how": [
+   "europepmc PMC10314843"
+  ]
+ },
+ "Liu2021enhanced": {
+  "files": [
+   "122_2021_3970_MOESM1_ESM.pptx",
+   "122_2021_3970_MOESM2_ESM.xlsx",
+   "122_2021_3970_MOESM3_ESM.xlsx",
+   "122_2021_3970_MOESM4_ESM.xlsx",
+   "122_2021_3970_MOESM5_ESM.xlsx",
+   "122_2021_3970_MOESM6_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Luo2021identifi": {
+  "files": [],
+  "how": [
+   "epmc search fail HTTP Error 503: Service Temporarily Unavailable",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Ma2025genomewi": {
+  "files": [],
+  "how": [
+   "epmc search fail HTTP Error 503: Service Temporarily Unavailable",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Muellner2020genetic": {
+  "files": [
+   "10681_2020_2614_MOESM1_ESM.pdf",
+   "10681_2020_2614_MOESM2_ESM.xlsx"
+  ],
+  "how": [
+   "epmc search fail HTTP Error 503: Service Temporarily Unavailable",
+   "publisher page link.springer.com"
+  ]
+ },
+ "Muleta2017characte": {
+  "files": [
+   "12870_2017_1082_MOESM1_ESM.xlsx",
+   "12870_2017_1082_MOESM3_ESM.xlsx",
+   "12870_2017_1082_MOESM2_ESM.xlsx",
+   "12870_2017_1082_MOESM4_ESM.docx",
+   "12870_2017_1082_MOESM6_ESM.docx",
+   "12870_2017_1082_MOESM5_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC5545024"
+  ]
+ },
+ "Ni2023sequenci": {
+  "files": [
+   "41467_2023_39993_MOESM3_ESM.pdf",
+   "41467_2023_39993_MOESM6_ESM.xlsx",
+   "41467_2023_39993_MOESM8_ESM.xlsx",
+   "41467_2023_39993_MOESM7_ESM.xlsx",
+   "41467_2023_39993_MOESM15_ESM.pdf",
+   "41467_2023_39993_MOESM1_ESM.pdf",
+   "41467_2023_39993_MOESM4_ESM.xlsx",
+   "41467_2023_39993_MOESM12_ESM.xlsx",
+   "41467_2023_39993_MOESM9_ESM.xlsx",
+   "41467_2023_39993_MOESM10_ESM.xlsx",
+   "41467_2023_39993_MOESM11_ESM.xlsx",
+   "41467_2023_39993_MOESM13_ESM.xlsx",
+   "41467_2023_39993_MOESM2_ESM.pdf",
+   "41467_2023_39993_MOESM16_ESM.xlsx",
+   "41467_2023_39993_MOESM5_ESM.xlsx",
+   "41467_2023_39993_MOESM14_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC10356923"
+  ]
+ },
+ "Nigro2022fine": {
+  "files": [],
+  "how": [
+   "epmc supp fail HTTP Error 500: Internal Server Error",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Prins2024mapping": {
+  "files": [
+   "10681_2024_3415_MOESM1_ESM.xlsx",
+   "10681_2024_3415_MOESM2_ESM.docx",
+   "10681_2024_3415_MOESM3_ESM.xlsx",
+   "10681_2024_3415_MOESM4_ESM.docx",
+   "10681_2024_3415_MOESM5_ESM.docx",
+   "10681_2024_3415_MOESM6_ESM.docx",
+   "10681_2024_3415_MOESM7_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Qiao2024identifi": {
+  "files": [
+   "299_2024_3148_MOESM10_ESM.jpg",
+   "299_2024_3148_MOESM1_ESM.xlsx",
+   "299_2024_3148_MOESM2_ESM.jpg",
+   "299_2024_3148_MOESM3_ESM.jpg",
+   "299_2024_3148_MOESM4_ESM.jpg",
+   "299_2024_3148_MOESM5_ESM.jpg",
+   "299_2024_3148_MOESM6_ESM.jpg",
+   "299_2024_3148_MOESM7_ESM.jpg",
+   "299_2024_3148_MOESM8_ESM.jpg",
+   "299_2024_3148_MOESM9_ESM.jpg"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Qiu2020fine": {
+  "files": [
+   "Table_1.xlsx"
+  ],
+  "how": [
+   "europepmc PMC7232556"
+  ]
+ },
+ "Saeed2022identifi": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Sharma2026mapping": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Sharma2026identifi": {
+  "files": [
+   "TPG2-19-e70198-s003.docx",
+   "TPG2-19-e70198-s002.vcf",
+   "TPG2-19-e70198-s001.xlsx"
+  ],
+  "how": [
+   "europepmc PMC12871557"
+  ]
+ },
+ "Singh2013identifi": {
+  "files": [],
+  "how": [
+   "europepmc PMC3723980",
+   "publisher page link.springer.com"
+  ]
+ },
+ "Steffan2022associat": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "SthapitKandel2017mapping": {
+  "files": [
+   "pone.0177898.s004.docx",
+   "pone.0177898.s003.xlsx",
+   "pone.0177898.s001.xlsx",
+   "pone.0177898.s002.xlsx"
+  ],
+  "how": [
+   "europepmc PMC5438115"
+  ]
+ },
+ "Sun2022pmsn": {
+  "files": [
+   "Data_Sheet_1.docx"
+  ],
+  "how": [
+   "europepmc PMC9240466"
+  ]
+ },
+ "Talebi2023physiolo": {
+  "files": [
+   "41598_2023_31559_MOESM2_ESM.docx",
+   "41598_2023_31559_MOESM5_ESM.docx",
+   "41598_2023_31559_MOESM3_ESM.docx",
+   "41598_2023_31559_MOESM7_ESM.xlsx",
+   "41598_2023_31559_MOESM4_ESM.pdf",
+   "41598_2023_31559_MOESM1_ESM.docx",
+   "41598_2023_31559_MOESM6_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC10020449"
+  ]
+ },
+ "Tang2026pmd": {
+  "files": [
+   "PBI-24-5317-s001.zip",
+   "PBI-24-5317-g001.webp"
+  ],
+  "how": [
+   "europepmc PMC13398706"
+  ]
+ },
+ "Tanwar2025genomewi": {
+  "files": [
+   "Table2.xlsx",
+   "Table5.xlsx",
+   "Table4.xlsx",
+   "Image1.jpeg",
+   "Table1.doc",
+   "Table3.xlsx"
+  ],
+  "how": [
+   "europepmc PMC12746750"
+  ]
+ },
+ "Tehseen2020genomewi": {
+  "files": [
+   "TPG2-14-e20066-s008.xlsx",
+   "TPG2-14-e20066-s009.docx",
+   "TPG2-14-e20066-s004.xlsx",
+   "TPG2-14-e20066-s006.docx",
+   "TPG2-14-e20066-s003.xlsx",
+   "TPG2-14-e20066-s002.xlsx",
+   "TPG2-14-e20066-s001.xlsx"
+  ],
+  "how": [
+   "europepmc PMC12807014"
+  ]
+ },
+ "Vikas2022multiloc": {
+  "files": [
+   "41437_2022_525_MOESM10_ESM.xlsx",
+   "41437_2022_525_MOESM11_ESM.docx",
+   "41437_2022_525_MOESM1_ESM.tif",
+   "41437_2022_525_MOESM2_ESM.tif",
+   "41437_2022_525_MOESM3_ESM.tif",
+   "41437_2022_525_MOESM4_ESM.tif",
+   "41437_2022_525_MOESM5_ESM.docx",
+   "41437_2022_525_MOESM6_ESM.xlsx",
+   "41437_2022_525_MOESM7_ESM.docx",
+   "41437_2022_525_MOESM8_ESM.xlsx",
+   "41437_2022_525_MOESM9_ESM.docx"
+  ],
+  "how": [
+   "epmc supp fail File is not a zip file",
+   "publisher page www.nature.com"
+  ]
+ },
+ "Wang2024finemapp": {
+  "files": [
+   "122_2024_4706_MOESM1_ESM.docx",
+   "122_2024_4706_MOESM2_ESM.xlsx",
+   "122_2024_4706_MOESM3_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Wang2024identifi": {
+  "files": [
+   "122_2024_4620_MOESM1_ESM.xlsx",
+   "Catalogue_20of_20Gene_20Symbols_20for_20Wheat_20-_20supplement2020.pdf"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Wang2024highdens": {
+  "files": [
+   "122_2024_4654_MOESM1_ESM.docx",
+   "122_2024_4654_MOESM2_ESM.pptx",
+   "122_2024_4654_MOESM3_ESM.xlsx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Xu2017evaluati": {
+  "files": [],
+  "how": [
+   "europepmc PMC6055087",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Xu2023molecula": {
+  "files": [
+   "122_2023_4481_MOESM1_ESM.xlsx",
+   "122_2023_4481_MOESM2_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Xu2025pmam": {
+  "files": [],
+  "how": [
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Yao2019characte": {
+  "files": [
+   "12863_2019_736_MOESM3_ESM.xlsx",
+   "12863_2019_736_MOESM4_ESM.docx",
+   "12863_2019_736_MOESM2_ESM.docx",
+   "12863_2019_736_MOESM1_ESM.xlsx",
+   "12863_2019_736_MOESM6_ESM.xlsx",
+   "12863_2019_736_MOESM5_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC6434810"
+  ]
+ },
+ "Yao2022identifi": {
+  "files": [
+   "ijms-23-01194-s001.zip"
+  ],
+  "how": [
+   "europepmc PMC8835823"
+  ]
+ },
+ "Zatybekov2021identifi": {
+  "files": [],
+  "how": [
+   "epmc supp fail HTTP Error 500: Internal Server Error",
+   "page fail HTTP Error 403: Forbidden"
+  ]
+ },
+ "Zeng2026a": {
+  "files": [
+   "122_2026_5274_MOESM5_ESM.xlsx",
+   "122_2026_5274_MOESM1_ESM.pdf",
+   "122_2026_5274_MOESM4_ESM.xlsx",
+   "122_2026_5274_MOESM8_ESM.xlsx",
+   "122_2026_5274_MOESM3_ESM.xlsx",
+   "122_2026_5274_MOESM9_ESM.xlsx",
+   "122_2026_5274_MOESM7_ESM.xlsx",
+   "122_2026_5274_MOESM2_ESM.xlsx",
+   "122_2026_5274_MOESM6_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC13230276"
+  ]
+ },
+ "Zhang2021introgre": {
+  "files": [
+   "pathogens-11-00025-s001.zip"
+  ],
+  "how": [
+   "europepmc PMC8778237"
+  ]
+ },
+ "Zhang2022identifi": {
+  "files": [],
+  "how": [
+   "epmc supp fail HTTP Error 500: Internal Server Error",
+   "publisher page www.frontiersin.org"
+  ]
+ },
+ "Zhao2023mapping": {
+  "files": [
+   "supplement2017.pdf",
+   "122_2023_4270_MOESM1_ESM.tif",
+   "122_2023_4270_MOESM2_ESM.tif",
+   "122_2023_4270_MOESM3_ESM.docx"
+  ],
+  "how": [
+   "publisher page link.springer.com"
+  ]
+ },
+ "Zhuo2026bulked": {
+  "files": [
+   "12870_2026_8903_MOESM2_ESM.pdf",
+   "12870_2026_8903_MOESM1_ESM.xlsx"
+  ],
+  "how": [
+   "europepmc PMC13235213"
+  ]
+ }
+}
