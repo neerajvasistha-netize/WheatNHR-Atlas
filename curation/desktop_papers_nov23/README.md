@@ -17,3 +17,10 @@ converted to RefSeq v2.1 and the 13 pangenome cultivars. 10 more loci were added
 for each locus was chosen by reading the table rows. Loci already in the atlas under the same name were skipped.
 Loci whose markers have no known physical position (for example Xgwm768, Xgwm191, gwm707, cfd71b, gwm790b, gpw1106,
 Xgwm304, Xbarc353b, Xbarc127, Xbarc174) remain unplaced.
+
+## Third pass: web search for the remaining loci (23 Nov 2026)
+Of the loci still unplaced, most are already in the atlas under the same name from their original papers.
+For the rest (QPm.vt-1B, QPm.vt-2A, QPm.inra-4A, QPm.inra-5B.2, QPms.inra-6B, QPm.caas-7A, Sr15, QPm.inra-7D.1,
+QYr.caas-7DS, QLr.sfr-7DS) web searches for marker positions or primer sequences found nothing usable (GrainGenes,
+PMC and publisher pages were not reachable). QLr.sfr-7DS was placed at the cloned Lr34 gene (PY0017), since the
+paper maps it at the Lr34 location and Lr34 was later cloned from the Arina x Forno population.
