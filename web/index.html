@@ -1747,7 +1747,67 @@ function encFigs(){const el=document.getElementById("tkgFigs");if(!el||!GOR)retu
   el.innerHTML=(f4?`<div class="encfig">${f4}<p class="small muted">Figure 1. GO classification: each second-level GO term (direct child of biological process, molecular function or cellular component) with the share of your genes annotated to it or to a term below it (bar; number and percent at the end) against the share in ${GOR.bg?"your background":"all annotated genes"} (black mark). Only terms with at least 1 gene from your list are shown${GOR.W2?` (${GOR.W2.rows.filter(r=>r.k<1).length} terms with no list gene left out)`:""}. Hover a row for details.</p></div>`:"")+(f1?`<div class="encfig">${f1}<p class="small muted">Figure 2. GO terms ranked by p value, top ${N} for each category. Dot position is the gene ratio, size the number of list genes with the term, colour the Benjamini–Hochberg FDR. Hover a dot for details.</p></div>`:"")
    +(f2?`<div class="encfig">${f2}<p class="small muted">Figure 3. The ${top.length} GO terms with the lowest p values across all three categories; bar colour gives the category, faded bars are not significant at FDR 0.05.</p></div>`:"")
    +(f3?`<div class="encfig">${f3}<p class="small muted">Figure 4. KEGG pathways with at least 2 list genes, ranked by p value. Dot position is the gene ratio, size the number of list genes in the pathway, colour the FDR.</p></div>`:`<p class="small muted">No KEGG pathway has 2 or more genes from the list, so no KEGG figure is drawn.</p>`);
+  el.insertAdjacentHTML("beforeend",`<div id="tkgTis"><p class="small muted">Loading the organ expression data…</p></div>`);encTissue();
   if(window.WTM_addFigButtons)window.WTM_addFigButtons();}
+/* ---- Where the enriched terms are expressed: organ map of a wheat plant ---- */
+let TIS=null,TISP=null;
+function tissueData(){if(TIS)return Promise.resolve(TIS);if(TISP)return TISP;
+  TISP=fetch("tissue_expr.json").then(r=>{if(!r.ok)throw new Error("tissue_expr.json "+r.status);return r.json();}).then(D=>{const m=new Map();
+    for(const c in D.g)for(const e of D.g[c].split(";")){const a=e.split(",");m.set(c+":"+a[0],a.slice(1).map(Number));}
+    TIS={m,organs:D.organs,src:D.src,unit:D.unit};return TIS;});return TISP;}
+const TISORG=["Spike","Grain","Leaf","Stem","Root"];
+function tisCol(t){const a=[[247,252,220],[161,217,155],[49,163,84],[0,90,50]];t=Math.max(0,Math.min(1,t));const s=t*(a.length-1),i=Math.min(a.length-2,Math.floor(s)),f=s-i;return `rgb(${a[i].map((v,j)=>Math.round(v+(a[i+1][j]-v)*f))})`;}
+function tisTerms(){if(!GOR)return [];const t=[];
+  const kg=GOR.kg.filter(r=>r.k>=2).slice(0,8).map(r=>Object.assign({},r,{typ:"KEGG"}));
+  const go=GOR.go.slice().sort((a,b)=>a.p-b.p).filter(r=>r.k>=2).slice(0,12).map(r=>Object.assign({},r,{typ:"GO "+r.ns}));
+  for(const r of kg.concat(go))if(!t.some(x=>x.id===r.id))t.push(r);
+  return t.sort((a,b)=>(a.q<0.05?0:1)-(b.q<0.05?0:1)||a.p-b.p).slice(0,15);}
+function tisProfile(r,T){const org=T.organs,s=new Array(org.length).fill(0),on=new Array(org.length).fill(0);let n=0;
+  for(const k of r.g){const v=T.m.get(k)||null;n++;org.forEach((o,i)=>{const x=v?v[i]:0;s[i]+=x;if(x>=1)on[i]++;});}
+  const out={};org.forEach((o,i)=>out[o]={mean:n?s[i]/n:0,on:on[i],n});return out;}
+async function encTissue(){const el=document.getElementById("tkgTis");if(!el)return;let T;
+  try{T=await tissueData();}catch(e){el.innerHTML=`<p class="small muted">Organ expression data could not be loaded (${esc(String(e.message||e))}).</p>`;return;}
+  const terms=tisTerms();if(!terms.length){el.innerHTML="";return;}
+  const prof=terms.map(r=>tisProfile(r,T));
+  const sel=(el.dataset.sel&&terms.some(r=>r.id===el.dataset.sel))?el.dataset.sel:terms[0].id;el.dataset.sel=sel;
+  const vmax=Math.max(1,...prof.flatMap(p=>TISORG.map(o=>p[o].mean)));
+  const opts=terms.map(r=>`<option value="${esc(r.id)}"${r.id===sel?" selected":""}>${esc(r.typ)}: ${esc(encTrunc(r.nm,70))} (${r.k} genes${r.q<0.05?", FDR "+r.q.toExponential(1):""})</option>`).join("");
+  const i0=terms.findIndex(r=>r.id===sel);
+  const rel=el.dataset.scale!=="abs";
+  el.innerHTML=`<div class="encfig"><div class="row" style="gap:10px;align-items:center;margin:4px 0;flex-wrap:wrap"><label class="small">Term shown on the plant <select id="tkgTisSel" style="max-width:560px">${opts}</select></label><label class="small">Colour <select id="tkgTisScale"><option value="abs"${rel?"":" selected"}>Absolute expression</option><option value="rel"${rel?" selected":""}>Relative within each term (where it is highest)</option></select></label></div>${tisSvg(terms,prof,i0,vmax,T,rel)}<p class="small muted">Figure 5. Where the enriched terms are expressed. Left: a wheat plant with each organ coloured by the mean expression, as ${esc(T.unit)}, of the list genes in the selected term (value next to each organ; in brackets, how many of these genes reach 1 or more log2(TPM+1) there). Colour: ${rel?"relative within each term, from its lowest to its highest organ (numbers stay in "+esc(T.unit)+")":"absolute mean expression on one scale for all terms"}. Right: the same for the ${terms.length} most enriched KEGG pathways and GO terms (2 or more list genes), one row per term; click a row to show it on the plant. Expression: ${esc(T.src)} Genes of the term without organ data count as 0.</p></div>`;
+  document.getElementById("tkgTisSel").onchange=e=>{el.dataset.sel=e.target.value;encTissue();};
+  document.getElementById("tkgTisScale").onchange=e=>{el.dataset.scale=e.target.value;encTissue();};
+  el.querySelectorAll("[data-tisrow]").forEach(g=>g.addEventListener("click",()=>{el.dataset.sel=g.getAttribute("data-tisrow");encTissue();}));
+  if(window.WTM_addFigButtons)window.WTM_addFigButtons();}
+function tisSvg(terms,prof,i0,vmax,T,rel){const P=prof[i0],r0=terms[i0];
+  const sc=p=>{if(!rel)return o=>p[o].mean/vmax;const v=TISORG.map(o=>p[o].mean),lo=Math.min(...v),hi=Math.max(...v);return o=>hi-lo<0.05?0.5:(p[o].mean-lo)/(hi-lo);};
+  const s0=sc(P),c=o=>tisCol(s0(o));
+  const W=860,PX=0,PW=330;const out=[];
+  /* plant (original drawing): soil, roots, culm with nodes, four leaves, spike with spikelets and awns, grain */
+  const sx=120;// culm x
+  out.push(`<rect x="10" y="372" width="230" height="4" rx="2" fill="#c8b48a"/>`);
+  const roots=["M120 376 C112 400 96 418 80 440","M120 376 C118 404 114 428 112 452","M121 376 C128 402 140 420 158 438","M120 378 C104 396 84 404 62 410","M121 378 C136 394 158 400 182 404","M120 380 C124 410 132 432 136 456"];
+  out.push(`<g data-org="Root">${roots.map(d=>`<path d="${d}" fill="none" stroke="${c("Root")}" stroke-width="3.2" stroke-linecap="round"/>`).join("")}${roots.map(d=>`<path d="${d}" fill="none" stroke="#6b5a3a" stroke-width=".5" opacity=".6"/>`).join("")}</g>`);
+  out.push(`<g data-org="Stem"><rect x="${sx-4}" y="120" width="8" height="256" rx="3" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".7"/>${[176,246,316].map(y=>`<rect x="${sx-5.5}" y="${y}" width="11" height="5" rx="2" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".7"/>`).join("")}</g>`);
+  const leaves=["M120 318 C80 300 48 300 22 318 C52 312 84 314 120 324Z","M120 248 C160 226 196 222 226 236 C196 236 160 240 120 254Z","M120 178 C84 154 54 146 28 152 C58 160 88 168 120 184Z","M121 128 C146 102 168 88 192 84 C170 98 148 114 122 134Z"];
+  out.push(`<g data-org="Leaf">${leaves.map(d=>`<path d="${d}" fill="${c("Leaf")}" stroke="#3f5f3a" stroke-width=".7"/>`).join("")}${["M120 321 C86 308 54 306 30 316","M120 251 C158 234 192 230 218 236","M120 181 C88 162 58 154 34 154","M121 131 C144 108 166 94 186 87"].map(d=>`<path d="${d}" fill="none" stroke="#3f5f3a" stroke-width=".4" opacity=".7"/>`).join("")}</g>`);
+  let sp="";for(let i=0;i<9;i++){const y=114-i*10.5,s=i%2?1:-1;sp+=`<ellipse cx="${sx+s*6}" cy="${y}" rx="6.2" ry="8.2" transform="rotate(${s*22} ${sx+s*6} ${y})" fill="${c("Spike")}" stroke="#4d5a2a" stroke-width=".7"/><line x1="${sx+s*9}" y1="${y-6}" x2="${sx+s*18}" y2="${y-34}" stroke="#8a8a5a" stroke-width=".6"/>`;}
+  out.push(`<g data-org="Spike"><line x1="${sx}" y1="120" x2="${sx}" y2="22" stroke="#4d5a2a" stroke-width="1.4"/>${sp}</g>`);
+  out.push(`<g data-org="Grain"><ellipse cx="205" cy="52" rx="15" ry="24" fill="${c("Grain")}" stroke="#7a5a2a" stroke-width=".9"/><path d="M205 31 C201 44 201 60 205 73" fill="none" stroke="#7a5a2a" stroke-width=".7"/><path d="M168 66 L190 56" stroke="#999" stroke-width=".6" stroke-dasharray="2 2"/></g>`);
+  /* organ labels with leader lines, fixed rows so they never overlap */
+  const anchor={Spike:[132,70],Grain:[220,52],Leaf:[200,236],Stem:[124,290],Root:[150,428]},ly={Spike:92,Grain:40,Leaf:208,Stem:286,Root:420};
+  const lx=246;for(const o of TISORG){const [ax,ay]=anchor[o],y=ly[o];out.push(`<path d="M${ax} ${ay} L${lx-6} ${y}" stroke="#888" stroke-width=".6" fill="none"/><text x="${lx}" y="${y+3.5}" font-size="10.5" font-weight="700" fill="#222">${o}</text><text x="${lx}" y="${y+16}" font-size="9.5" fill="#444">${P[o].mean.toFixed(2)} (${P[o].on}/${P[o].n})</text>`);}
+  out.push(`<text x="10" y="478" font-size="9.5" fill="#333">${esc(encTrunc(r0.typ+": "+r0.nm,58))}</text>`);
+  /* heatmap */
+  const hx=380,cw=58,rh=19,ht=44,lab=r=>encTrunc(r.nm,34);
+  out.push(`<text x="${hx}" y="14" font-size="11.5" font-weight="700">Enriched terms by organ</text>`);
+  TISORG.forEach((o,j)=>out.push(`<text x="${hx+150+j*cw+cw/2}" y="${ht-6}" font-size="10" text-anchor="middle" font-weight="700">${o}</text>`));
+  terms.forEach((r,i)=>{const y=ht+i*rh,p=prof[i],si=sc(p);out.push(`<g data-tisrow="${esc(r.id)}" style="cursor:pointer" data-tip="${esc(r.typ+" "+r.id+" "+r.nm+"\n"+r.k+" list genes · FDR "+r.q.toExponential(2)+"\n"+TISORG.map(o=>o+" "+p[o].mean.toFixed(2)).join(" · "))}">${i===i0?`<rect x="${hx-4}" y="${y}" width="${150+5*cw+8}" height="${rh}" fill="none" stroke="#1f5a3a" stroke-width="1.4"/>`:""}<text x="${hx+144}" y="${y+rh/2+3.5}" font-size="9.5" text-anchor="end" fill="${r.q<0.05?"#111":"#777"}">${esc(lab(r))}</text>${TISORG.map((o,j)=>{const v=p[o].mean,f=si(o);return `<rect x="${hx+150+j*cw+1}" y="${y+1}" width="${cw-2}" height="${rh-2}" fill="${tisCol(f)}"/><text x="${hx+150+j*cw+cw/2}" y="${y+rh/2+3.5}" font-size="9" text-anchor="middle" fill="${f>0.6?"#fff":"#222"}">${v.toFixed(1)}</text>`;}).join("")}</g>`);});
+  /* colour legend */
+  const ly0=ht+terms.length*rh+18,gid="tg"+Math.random().toString(36).slice(2,8);
+  out.push(`<defs><linearGradient id="${gid}" x1="0" x2="1"><stop offset="0" stop-color="${tisCol(0)}"/><stop offset=".33" stop-color="${tisCol(.33)}"/><stop offset=".67" stop-color="${tisCol(.67)}"/><stop offset="1" stop-color="${tisCol(1)}"/></linearGradient></defs><text x="${hx+150}" y="${ly0}" font-size="10" font-weight="700">${rel?"Expression relative to the term's own range":"Mean expression, "+esc(T.unit)}</text><rect x="${hx+150}" y="${ly0+6}" width="${5*cw}" height="10" fill="url(#${gid})" stroke="#999" stroke-width=".5"/><text x="${hx+150}" y="${ly0+28}" font-size="9.5">${rel?"lowest organ":"0"}</text><text x="${hx+150+5*cw}" y="${ly0+28}" font-size="9.5" text-anchor="end">${rel?"highest organ":vmax.toFixed(1)}</text><text x="${hx+150}" y="${ly0+44}" font-size="9" fill="#555">Grey labels: not significant at FDR 0.05</text>`);
+  const H=Math.max(490,ly0+54);
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px" role="img" aria-label="Where the enriched terms are expressed" data-title="Where the enriched terms are expressed in the wheat plant">${out.join("")}</svg>`;}
 /* ---- Gene network and functional response map (Genomic tools) ---- */
 const NM={};
 const NMCAT=[
