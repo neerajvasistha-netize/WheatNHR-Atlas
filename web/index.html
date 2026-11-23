@@ -617,7 +617,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
       <label class="small">Genes in network <select id="nmMax"><option>100</option><option selected>150</option><option>250</option><option>400</option></select></label><label class="small"><input type="checkbox" id="nmIso"> show genes with no link</label>
       <button class="btn primary" id="nmGo" type="button">Build map and network</button></div><div id="nmOut"></div></div>
     <div class="tpane" id="tp-expr" style="display:none"><h3 style="font-size:15px;margin:14px 0 4px">In-silico expression of DEGs</h3>
-      <p class="small muted">Differentially expressed wheat genes (DEGs) after infection, compiled from published RNA-seq studies of biotic stress. Each value is the log2 fold change reported by the study for a contrast (usually infected vs mock, or resistant vs susceptible), with the study's own significance cut-off. Gene IDs are IWGSC RefSeq v1.1; positions are on RefSeq v2.1.</p>
+      <p class="small muted">Differentially expressed wheat genes (DEGs) after infection, compiled from published RNA-seq studies of biotic stress. Each value is the log2 fold change reported by the study for a contrast (usually infected vs mock, or resistant vs susceptible), with the study's own significance cut-off. Gene IDs are shown as IWGSC RefSeq v2.1 (TraesCS…03G…) with the v1.1 ID used by the studies below it; positions are on RefSeq v2.1.</p>
       <p class="small" id="exSum">Loading the expression data…</p>
       <div class="extabs" role="tablist" aria-label="Expression analyses" id="exModes">
         <button class="extab on" type="button" data-ex="look">Gene lookup</button>
@@ -1787,7 +1787,8 @@ function tisProfile(r,T){const org=T.organs,s=new Array(org.length).fill(0),on=n
 /* generic organ-expression widget: rows = [{id,nm,g:[gene keys "chr:num"],opt?,tip?,dim?,foot?}] */
 function tisGeneRows(keys,max){const G=genesAll(),CL=G.cl||[],idx=new Map();
   for(const k of keys){if(idx.size>=max)break;if(idx.has(k))continue;const [c,n]=k.split(":");const r=(G.g[c]||[]).find(x=>x[1]===+n);const d=r?(G.d[r[3]]||""):"";const cl=r?(CL[r[2]]||""):"";
-    idx.set(k,{id:k,nm:v11id(k)+(d?" "+d:""),opt:v11id(k)+(d?" · "+encTrunc(d,60):""),g:[k],tip:v11id(k)+(cl&&cl!=="other"?" ("+cl+")":"")+(d?"\n"+d:""),foot:v11id(k)+(d?" "+d:"")});}
+    let v2="";try{v2=v21of(k)||"";}catch(e){}const id2=v2||v11id(k);
+    idx.set(k,{id:k,nm:id2+(d?" "+d:""),opt:id2+(v2?" ("+v11id(k)+")":"")+(d?" · "+encTrunc(d,60):""),g:[k],tip:id2+(v2?" · v1.1 "+v11id(k):"")+(cl&&cl!=="other"?" ("+cl+")":"")+(d?"\n"+d:""),foot:id2+(d?" "+d:"")});}
   return [...idx.values()];}
 async function tisWidget(el,rows,opts){if(!el)return;let T;
   if(rows){el._tis={rows,opts:opts||{}};el.dataset.sel="";}else if(el._tis){rows=el._tis.rows;}else return;opts=el._tis.opts;
@@ -2962,7 +2963,8 @@ function exHits(d,k,dis){const a=d.G[k];if(!a)return [];const out=[];for(let i=0
 function exSummary(h,d){const st=new Set(h.map(x=>d.C[x.ci][0])),dis=new Set(h.map(x=>d.cDis[x.ci]));const up=h.filter(x=>x.fc>0).length,dn=h.filter(x=>x.fc<0).length;
   const q=h.filter(x=>!x.dir);const mx=q.length?q.reduce((a,x)=>Math.abs(x.fc)>Math.abs(a)?x.fc:a,0):null;return {nS:st.size,nD:dis.size,dis:[...dis].sort(),up,dn,mx};}
 function exCite(d,si){const s=d.S[si];return s.doi?`<a href="https://doi.org/${esc(s.doi)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.cite)}</a>`:esc(s.cite);}
-function exGeneCell(g){return `<a href="#" data-gv="${esc(g.id)}" class="mono">${esc(g.id)}</a>`;}
+function exV21(g){if(g.v21)return g.v21;try{return v21of(g.k)||"";}catch(e){return "";}}
+function exGeneCell(g){const v=exV21(g);return `<a href="#" data-gv="${esc(g.id)}" class="mono">${esc(v||g.id)}</a>${v?`<div class="small muted mono">${esc(g.id)}</div>`:""}`;}
 function exFcCol(v){if(v==null)return "#f3f4f6";const t=Math.max(-1,Math.min(1,v/5));const mix=(a,b,f)=>Math.round(a+(b-a)*f);
   return t>=0?`rgb(${mix(255,178,t)},${mix(255,24,t)},${mix(255,43,t)})`:`rgb(${mix(255,33,-t)},${mix(255,102,-t)},${mix(255,172,-t)})`;}
 /* heatmap: genes x contrasts, log2 fold change */
@@ -2973,9 +2975,9 @@ function exHeat(d,genes,dis){const cols=new Map();genes.forEach(g=>exHits(d,g.k,
   let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${Math.max(560,W)}px;height:auto" role="img" aria-label="Expression heatmap: log2 fold change of the selected genes in each study contrast">`;
   let prev=null;C.forEach((ci,j)=>{const x=LW+j*cw;const di=d.cDis[ci];if(di!==prev){s+=`<rect x="${x}" y="${TH-8}" width="${C.filter(c=>d.cDis[c]===di).length*cw}" height="5" fill="${DCOL[di]||"#888"}"/>`;prev=di;}
     const lab=`${d.S[d.C[ci][0]].cite} · ${sh(d.C[ci][1])}`;s+=`<text transform="translate(${x+cw/2+3},${TH-12}) rotate(-90)" font-size="${cw>=20?8:7}" fill="#374151">${esc(lab)}</text>`;});
-  genes.forEach((g,i)=>{const y=TH+i*rh;s+=`<text x="${LW-6}" y="${y+rh-4}" font-size="9" text-anchor="end" fill="#111827">${esc(g.id)}</text>`;
+  genes.forEach((g,i)=>{const y=TH+i*rh;s+=`<text x="${LW-6}" y="${y+rh-4}" font-size="9" text-anchor="end" fill="#111827">${esc(exV21(g)||g.id)}</text>`;
     const hm=new Map(exHits(d,g.k,dis).map(h=>[h.ci,h]));C.forEach((ci,j)=>{const h=hm.get(ci);const x=LW+j*cw;
-      s+=`<rect x="${x}" y="${y}" width="${cw-1}" height="${rh-1}" fill="${h?exFcCol(h.dir?Math.sign(h.fc)*2.5:h.fc):"#f3f4f6"}"><title>${esc(g.id)} · ${esc(d.cDis[ci])} · ${esc(d.S[d.C[ci][0]].cite)} · ${esc(d.C[ci][1])}${h?(h.dir?` · ${h.fc>0?"up":"down"} (no fold change given)`:` · log2FC ${h.fc.toFixed(2)}`):" · not a DEG"}</title></rect>`;
+      s+=`<rect x="${x}" y="${y}" width="${cw-1}" height="${rh-1}" fill="${h?exFcCol(h.dir?Math.sign(h.fc)*2.5:h.fc):"#f3f4f6"}"><title>${esc(exV21(g)||g.id)} (${esc(g.id)}) · ${esc(d.cDis[ci])} · ${esc(d.S[d.C[ci][0]].cite)} · ${esc(d.C[ci][1])}${h?(h.dir?` · ${h.fc>0?"up":"down"} (no fold change given)`:` · log2FC ${h.fc.toFixed(2)}`):" · not a DEG"}</title></rect>`;
       if(h&&h.dir)s+=`<circle cx="${x+cw/2-.5}" cy="${y+rh/2-.5}" r="1.6" fill="#111827"/>`;});});
   const ly=TH+genes.length*rh+18;s+=`<text x="${LW}" y="${ly+9}" font-size="9" fill="#374151">log2 fold change</text>`;
   for(let k=0;k<=20;k++){const v=-5+k*.5;s+=`<rect x="${LW+90+k*9}" y="${ly}" width="9" height="10" fill="${exFcCol(v)}"/>`;}
@@ -2990,9 +2992,9 @@ function exTable(rows,head,cols,csvName){const id="ex"+Math.random().toString(36
     bind:csvRows=>{const b=document.getElementById(id);if(b)b.onclick=()=>saveText(csvName,toCSV(csvRows));}};}
 const exDisChips=ds=>ds.map(x=>`<span class="dchip small" title="${esc(x)}"><span class="sw" style="background:${DCOL[x]||"#888"}"></span>${esc(x)}</span>`).join(" ");
 function exGeneRow(d,g,sm){return `<tr><td>${exGeneCell(g)}</td><td class="num">${g.pos!=null?g.pos.toFixed(3):""}</td><td>${esc(g.cls&&g.cls!=="other"?g.cls:"")}</td><td class="small">${esc(g.desc)}</td><td class="num">${sm.nS}</td><td class="num">${sm.up}</td><td class="num">${sm.dn}</td><td class="num">${sm.mx!=null?sm.mx.toFixed(2):""}</td><td>${exDisChips(sm.dis)}</td></tr>`;}
-const EX_HEAD=["Gene (v1.1)","v2.1 Mb","Family","Description","Studies","Up","Down","Max log2FC","Diseases"];
-const exCsvRow=(g,sm,extra=[])=>[g.id,g.v21||"",g.c,g.pos!=null?g.pos.toFixed(4):"",g.cls,g.desc,sm.nS,sm.up,sm.dn,sm.mx!=null?sm.mx.toFixed(3):"",sm.dis.join("; ")].concat(extra);
-const EX_CSVH=["gene_v1.1","gene_v2.1","chr","pos_v2.1_Mb","family","description","n_studies","n_up","n_down","max_log2FC","diseases"];
+const EX_HEAD=["Gene (v2.1; v1.1 below)","v2.1 Mb","Family","Description","Studies","Up","Down","Max log2FC","Diseases"];
+const exCsvRow=(g,sm,extra=[])=>[exV21(g),g.id,g.c,g.pos!=null?g.pos.toFixed(4):"",g.cls,g.desc,sm.nS,sm.up,sm.dn,sm.mx!=null?sm.mx.toFixed(3):"",sm.dis.join("; ")].concat(extra);
+const EX_CSVH=["gene_v2.1","gene_v1.1","chr","pos_v2.1_Mb","family","description","n_studies","n_up","n_down","max_log2FC","diseases"];
 function exBindGenes(el){el.querySelectorAll("a[data-gv]").forEach(a=>a.onclick=e=>{e.preventDefault();if(typeof gvOpen==="function")gvOpen(a.dataset.gv);});}
 /* ---- analyses ---- */
 async function exLook(){const o=$("#exLookOut"),d=await exLoad();const ids=($("#exGenes").value||"").split(/[\s,;]+/).filter(Boolean),dis=$("#exLookDis").value;
@@ -3023,7 +3025,7 @@ async function exCand(){const o=$("#exCandOut"),d=await exLoad();const dis=$("#e
     const score=(same.length?3:near.length?1:0)+(g.def?2:0)+Math.min(3,sm.nS)+Math.min(2,Math.abs(sm.mx||1)/3);
     if(!near.length&&!g.def)continue;rows.push([g,sm,same,near,+score.toFixed(2)]);}
   rows.sort((a,b)=>b[4]-a[4]);const R=rows.slice(0,top);
-  const head=["Score","Gene (v1.1)","v2.1 Mb","Family","Description",`Studies (${esc(dis)})`,"Max log2FC",`${esc(dis)} loci ±${w} Mb`,"Other loci"];
+  const head=["Score","Gene (v2.1; v1.1 below)","v2.1 Mb","Family","Description",`Studies (${esc(dis)})`,"Max log2FC",`${esc(dis)} loci ±${w} Mb`,"Other loci"];
   const t=exTable(R,head,([g,sm,same,near,sc])=>`<tr><td class="num"><b>${sc}</b></td><td>${exGeneCell(g)}</td><td class="num">${g.pos.toFixed(3)}</td><td>${esc(g.cls&&g.cls!=="other"?g.cls:"")}</td><td class="small">${esc(g.desc)}</td><td class="num">${sm.nS}</td><td class="num">${sm.mx!=null?sm.mx.toFixed(2):""}</td><td class="small">${same.slice(0,4).map(r=>`<a href="#" data-rid="${esc(r.id)}">${esc(r.name)}</a>`).join(", ")}${same.length>4?` +${same.length-4}`:""}</td><td class="num">${near.length-same.length}</td></tr>`,`WheatTraitMap_candidates_${dis.replace(/\W+/g,"_")}.csv`);
   o.innerHTML=`<p class="small">${rows.length.toLocaleString()} genes are differentially expressed in ${esc(dis)} studies and lie in an atlas locus or belong to a defence-related family; the top ${R.length} are listed. Score = same-disease locus 3 (other locus 1) + defence family 2 + studies (up to 3) + fold-change size (up to 2).</p>${t.html}`;
   t.bind([["score"].concat(EX_CSVH,["same_disease_loci","other_loci"])].concat(rows.map(([g,sm,same,near,sc])=>[sc].concat(exCsvRow(g,sm,[same.map(r=>r.name).join("; "),near.length-same.length])))));
