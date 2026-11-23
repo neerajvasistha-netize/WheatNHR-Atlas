@@ -45,3 +45,14 @@ the patent text, e.g. GWM260, GWM264) and merged with the patent set (`gwm_merge
 QLr.pser-1BL (GWM264, 1BL copy 328.94 Mb) and QLr.fcu-3AL (GWM666, 3AL copy 723.89 Mb). From Abeysekara et al. 2009 Table 1, the EST
 marker XBG262975 amplifies 1A 2.64 Mb; with Xcfd58.1 next to Xcfa2153 (7.23 Mb), Snn4 and its QTL records were placed at 2.64-7.23 Mb
 (V0095 had been placed at Xcfa2263, a 2A flanking marker). QSnb.fcu-3A placed by BARC57 (3A 10.31 Mb).
+
+## 23 Nov 2026: placement with marker positions from attached supplements
+New position source: curation/fhb_metaqtl_cropj2021_esm/consensus_marker_positions_refseq_v1.tsv (32,074 markers,
+RefSeq v1.0, Crop Journal FHB meta-QTL Table S3), added to the existing marker table and e-PCR results.
+- place_new.py (window method, as place2.py) was tried first but the markers near a locus name were often those of other
+  studies' QTL cited in the discussion, so it was not used for the atlas.
+- place_strict.py: only an interval written right after the locus name ("QYr.x-1B Xa-Xb", within 80 characters,
+  no other locus name in between) counts as the locus' own interval. Loci already in the atlas under the same name
+  were skipped. Lr38 was set by hand to its proximal flanking marker Xbarc273 (the matched pair Xcfd5-Xcfd60 is 22 cM distal).
+- Result: 31 loci from the exported, Zotero and Desktop batches, seed_ad80.json (grade C), placements_nov23_seed_ad80.tsv.
+  Where only one flanking marker has a known position the locus is shown at that marker (stated in its note).

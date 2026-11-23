@@ -1,0 +1,472 @@
+[
+{
+"batch": "exp",
+"h": "2e85c2b7b7",
+"name": "QYr.sicau-1B",
+"chr": "1B",
+"interval": "IWA63-IWA2707",
+"start": null,
+"end": null,
+"peak": 28.7655,
+"ref": "RefSeq v1.0",
+"markers": [
+"IWA63"
+],
+"how": "IWA63: published position 28.77 Mb"
+},
+{
+"batch": "exp",
+"h": "fd09a8b1b6",
+"name": "QSr.spa-4B.2",
+"chr": "4B",
+"interval": "wPt-2993-wPt-1046",
+"start": null,
+"end": null,
+"peak": 7.7751,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-2993"
+],
+"how": "wPt-2993: published position 7.78 Mb"
+},
+{
+"batch": "exp",
+"h": "fd09a8b1b6",
+"name": "QSr.spa-5B.2",
+"chr": "5B",
+"interval": "wPt-9724-wPt-4736",
+"start": null,
+"end": null,
+"peak": 20.0405,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-9724"
+],
+"how": "wPt-9724: published position 20.04 Mb"
+},
+{
+"batch": "exp",
+"h": "c40e12a4be",
+"name": "QPm.caas-1BL.1",
+"chr": "1B",
+"interval": "IWB72835-IWB18787",
+"start": null,
+"end": null,
+"peak": 676.3005,
+"ref": "RefSeq v2.1",
+"markers": [
+"IWB72835"
+],
+"how": "IWB72835: published position 676.30 Mb"
+},
+{
+"batch": "exp",
+"h": "65188c4461",
+"name": "QYr.cim-2DS",
+"chr": "2D",
+"interval": "wPt-3812-wPt-3728",
+"start": null,
+"end": null,
+"peak": 15.7302,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-3812"
+],
+"how": "wPt-3812: published position 15.73 Mb"
+},
+{
+"batch": "exp",
+"h": "65188c4461",
+"name": "QYr.cim-3BS.2",
+"chr": "3B",
+"interval": "wPt-8446-Xbarc133",
+"start": 1.8577,
+"end": 7.6079,
+"peak": null,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-8446",
+"Xbarc133"
+],
+"how": "wPt-8446: consensus-map marker table (Crop J FHB meta-QTL Table S3) 1.86 Mb; Xbarc133: published position 7.61 Mb"
+},
+{
+"batch": "exp",
+"h": "0c1e1850b5",
+"name": "QYr.cim-1AS",
+"chr": "1A",
+"interval": "wPt-9752-Xgdm33",
+"start": null,
+"end": null,
+"peak": 7.1897,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-9752"
+],
+"how": "wPt-9752: published position 7.19 Mb"
+},
+{
+"batch": "exp",
+"h": "d519ccd07f",
+"name": "QSr.ipk-7A.1",
+"chr": "7A",
+"interval": "Xbarc121-Xgwm984",
+"start": null,
+"end": null,
+"peak": 611.83,
+"ref": "RefSeq v2.1",
+"markers": [
+"Xbarc121"
+],
+"how": "Xbarc121: e-PCR 611.83 Mb"
+},
+{
+"batch": "exp4",
+"h": "17b326e165",
+"name": "Lr38",
+"chr": "6D",
+"interval": "Xcfd5-Xcfd60",
+"start": null,
+"end": null,
+"peak": 466.7881,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xcfd60"
+],
+"how": "Xcfd60: consensus-map marker table (Crop J FHB meta-QTL Table S3) 466.79 Mb"
+},
+{
+"batch": "exp4",
+"h": "421407138c",
+"name": "QYr.caas-5BL.3",
+"chr": "5B",
+"interval": "XwPt-2707-Xbarc275",
+"start": null,
+"end": null,
+"peak": 585.398,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xbarc275"
+],
+"how": "Xbarc275: published position 585.40 Mb"
+},
+{
+"batch": "exp4",
+"h": "421407138c",
+"name": "QYr.caas-7BL.2",
+"chr": "7B",
+"interval": "Xgwm577-XwPt-4300",
+"start": null,
+"end": null,
+"peak": 711.2341,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xgwm577"
+],
+"how": "Xgwm577: published position 711.23 Mb"
+},
+{
+"batch": "exp4",
+"h": "421407138c",
+"name": "QYr.caas-5BL.2",
+"chr": "5B",
+"interval": "Xbarc142-Xgwm604",
+"start": null,
+"end": null,
+"peak": 605.5159,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xbarc142"
+],
+"how": "Xbarc142: published position 605.52 Mb"
+},
+{
+"batch": "exp4",
+"h": "6d5607f012",
+"name": "QYr.caas-7AS",
+"chr": "7A",
+"interval": "Xbarc127-Xbarc174",
+"start": null,
+"end": null,
+"peak": 116.0027,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xbarc174"
+],
+"how": "Xbarc174: consensus-map marker table (Crop J FHB meta-QTL Table S3) 116.00 Mb"
+},
+{
+"batch": "exp4",
+"h": "6d5607f012",
+"name": "QYr.caas-6BS.3",
+"chr": "6B",
+"interval": "Xwmc487-Xcfd13",
+"start": null,
+"end": null,
+"peak": 36.3538,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xwmc487"
+],
+"how": "Xwmc487: published position 36.35 Mb"
+},
+{
+"batch": "exp4",
+"h": "6d5607f012",
+"name": "QLr.caas-6BS.1",
+"chr": "6B",
+"interval": "Xwmc487-Xcfd13",
+"start": null,
+"end": null,
+"peak": 36.3538,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xwmc487"
+],
+"how": "Xwmc487: published position 36.35 Mb"
+},
+{
+"batch": "exp4",
+"h": "0e0b7c5b8c",
+"name": "QLr.hebau-7BS",
+"chr": "7B",
+"interval": "XwPt7653-Xgwm573",
+"start": null,
+"end": null,
+"peak": 97.9401,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xgwm573"
+],
+"how": "Xgwm573: published position 97.94 Mb"
+},
+{
+"batch": "exp4",
+"h": "0e0b7c5b8c",
+"name": "QLr.hebau-2DL",
+"chr": "2D",
+"interval": "XwPt2781-Xcfd233",
+"start": null,
+"end": null,
+"peak": 561.1578,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xcfd233"
+],
+"how": "Xcfd233: published position 561.16 Mb"
+},
+{
+"batch": "exp4",
+"h": "ec979ff282",
+"name": "QYr.spa-2B.1",
+"chr": "2B",
+"interval": "Xwmc25-Xwmc154",
+"start": null,
+"end": null,
+"peak": 36.4465,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xwmc154"
+],
+"how": "Xwmc154: published position 36.45 Mb"
+},
+{
+"batch": "exp4",
+"h": "ec979ff282",
+"name": "QLr.spa-2B",
+"chr": "2B",
+"interval": "wPt-5759-wPt-0289",
+"start": null,
+"end": null,
+"peak": 2.7082,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-5759"
+],
+"how": "wPt-5759: published position 2.71 Mb"
+},
+{
+"batch": "exp4",
+"h": "ec979ff282",
+"name": "QYr.spa-7B.2",
+"chr": "7B",
+"interval": "wPt-2356-wPt-0482",
+"start": null,
+"end": null,
+"peak": 687.4403,
+"ref": "RefSeq v1.0",
+"markers": [
+"wPt-0482"
+],
+"how": "wPt-0482: published position 687.44 Mb"
+},
+{
+"batch": "exp4",
+"h": "867501540e",
+"name": "QCbt.spa-4B",
+"chr": "4B",
+"interval": "XwPt744434-Xwmc617",
+"start": null,
+"end": null,
+"peak": 15.7697,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xwmc617"
+],
+"how": "Xwmc617: consensus-map marker table (Crop J FHB meta-QTL Table S3) 15.77 Mb"
+},
+{
+"batch": "exp4",
+"h": "ad7d5605c7",
+"name": "QYr.uga-3BS.1",
+"chr": "3B",
+"interval": "XwPt-2557-Xbarc133",
+"start": null,
+"end": null,
+"peak": 7.6079,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xbarc133"
+],
+"how": "Xbarc133: published position 7.61 Mb"
+},
+{
+"batch": "exp4",
+"h": "c85c7c0ecf",
+"name": "QYr.nwafu-6BL",
+"chr": "6B",
+"interval": "Xgwm136-Xbarc136",
+"start": null,
+"end": null,
+"peak": 544.5741,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xgwm136"
+],
+"how": "Xgwm136: published position 544.57 Mb"
+},
+{
+"batch": "exp4",
+"h": "0d7eec5c23",
+"name": "QYrcen.nwafu-7BL",
+"chr": "7B",
+"interval": "AX-94556751-AX-110366788",
+"start": null,
+"end": null,
+"peak": 709.591,
+"ref": "RefSeq v1.0",
+"markers": [
+"AX-94556751"
+],
+"how": "AX-94556751: published position 709.59 Mb"
+},
+{
+"batch": "exp4",
+"h": "569184ab18",
+"name": "QYr.cau-7AL",
+"chr": "7A",
+"interval": "IWB64508-IWB36931",
+"start": null,
+"end": null,
+"peak": 670.781,
+"ref": "RefSeq v1.0",
+"markers": [
+"IWB36931"
+],
+"how": "IWB36931: consensus-map marker table (Crop J FHB meta-QTL Table S3) 670.78 Mb"
+},
+{
+"batch": "exp4",
+"h": "7bd5923b0e",
+"name": "QYr.sicau-4A",
+"chr": "4A",
+"interval": "AX-109858991-AX-109982633",
+"start": null,
+"end": null,
+"peak": 707.4768,
+"ref": "RefSeq v1.0",
+"markers": [
+"AX-109982633"
+],
+"how": "AX-109982633: published position 707.48 Mb"
+},
+{
+"batch": "exp4",
+"h": "379be797af",
+"name": "QYrsnb.nwafu-2BL",
+"chr": "2B",
+"interval": "AX-109898885-AX-95658192",
+"start": 660.4596,
+"end": 697.5121,
+"peak": null,
+"ref": "RefSeq v1.0",
+"markers": [
+"AX-109898885",
+"AX-95658192"
+],
+"how": "AX-109898885: published position 660.46 Mb; AX-95658192: published position 697.51 Mb"
+},
+{
+"batch": "exp4",
+"h": "af69ffb8c8",
+"name": "QSr.fcu-2B",
+"chr": "2B",
+"interval": "IWB56465-IWB55767",
+"start": 450.1813,
+"end": 477.4017,
+"peak": null,
+"ref": "RefSeq v1.0",
+"markers": [
+"IWB56465",
+"IWB55767"
+],
+"how": "IWB56465: published position 450.18 Mb; IWB55767: consensus-map marker table (Crop J FHB meta-QTL Table S3) 477.40 Mb"
+},
+{
+"batch": "exp4",
+"h": "2d851a921f",
+"name": "QYr.hebau-5D.3",
+"chr": "5D",
+"interval": "AX-109299090-AX-109309300",
+"start": 560.22,
+"end": 560.2603,
+"peak": null,
+"ref": "RefSeq v1.0",
+"markers": [
+"AX-109299090",
+"AX-109309300"
+],
+"how": "AX-109299090: published position 560.26 Mb; AX-109309300: published position 560.22 Mb"
+},
+{
+"batch": "exp4",
+"h": "99f22a6422",
+"name": "QYr.caas-1AS",
+"chr": "1A",
+"interval": "Xgwm136-Xcfd15",
+"start": null,
+"end": null,
+"peak": 6.4248,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xgwm136"
+],
+"how": "Xgwm136: published position 6.42 Mb"
+},
+{
+"batch": "exp4",
+"h": "022eac55e2",
+"name": "QKb.iiwbr-4B",
+"chr": "4B",
+"interval": "Xgwm495-Xbarc10",
+"start": 482.8207,
+"end": 487.295,
+"peak": null,
+"ref": "RefSeq v1.0",
+"markers": [
+"Xgwm495",
+"Xbarc10"
+],
+"how": "Xgwm495: published position 482.82 Mb; Xbarc10: consensus-map marker table (Crop J FHB meta-QTL Table S3) 487.30 Mb"
+}
+]
