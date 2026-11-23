@@ -629,11 +629,11 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
       <div class="expane" data-exp="look">
         <div class="row tform"><label style="flex:1;min-width:260px">Gene IDs (v1.1 or v2.1; one per line, or separated by spaces or commas)<br><textarea id="exGenes" rows="3" style="width:100%" placeholder="TraesCS5B02G059000&#10;TraesCS3B02G086000"></textarea></label>
         <label>Disease<br><select id="exLookDis"><option value="">All diseases</option></select></label>
-        <button class="btn primary" id="exLookGo" type="button">Show expression</button></div>
+        <button class="btn primary" id="exLookGo" type="button">Show expression</button><button class="btn" id="exLookEx" type="button">Load an example</button></div>
         <div id="exLookOut"></div></div>
       <div class="expane" data-exp="reg" hidden>
         <div class="row tform"><label>Chromosome<br><select id="exChr"></select></label><label>From (Mb, v2.1)<br><input id="exFrom" type="number" step="0.001" value="20"></label><label>To (Mb, v2.1)<br><input id="exTo" type="number" step="0.001" value="30"></label>
-        <label>Disease<br><select id="exRegDis"><option value="">All diseases</option></select></label><label class="small"><input type="checkbox" id="exDef"> defence-related genes only</label><button class="btn primary" id="exRegGo" type="button">Scan region</button></div>
+        <label>Disease<br><select id="exRegDis"><option value="">All diseases</option></select></label><label class="small"><input type="checkbox" id="exDef"> defence-related genes only</label><button class="btn primary" id="exRegGo" type="button">Scan region</button><button class="btn" id="exRegEx" type="button">Load an example</button></div>
         <div id="exRegOut"></div></div>
       <div class="expane" data-exp="cand" hidden>
         <p class="small muted">Ranks genes that carry three kinds of evidence: (1) differentially expressed after infection, (2) inside or within the window of an atlas resistance locus, best of all a locus for the same disease, and (3) a defence-related gene family (NLR, WAK, receptor kinases, PR proteins, ABC transporters).</p>
@@ -1776,11 +1776,11 @@ function tissueData(){if(TIS)return Promise.resolve(TIS);if(TISP)return TISP;
     TIS={m,organs:D.organs,src:D.src,unit:D.unit};return TIS;});return TISP;}
 const TISORG=["Spike","Grain","Leaf","Stem","Root"];
 function tisCol(t){const a=[[247,252,220],[161,217,155],[49,163,84],[0,90,50]];t=Math.max(0,Math.min(1,t));const s=t*(a.length-1),i=Math.min(a.length-2,Math.floor(s)),f=s-i;return `rgb(${a[i].map((v,j)=>Math.round(v+(a[i+1][j]-v)*f))})`;}
-function tisTerms(){if(!GOR)return [];const t=[];
-  const kg=GOR.kg.filter(r=>r.k>=2).slice(0,8).map(r=>Object.assign({},r,{typ:"KEGG"}));
-  const go=GOR.go.slice().sort((a,b)=>a.p-b.p).filter(r=>r.k>=2).slice(0,12).map(r=>Object.assign({},r,{typ:"GO "+r.ns}));
-  for(const r of kg.concat(go))if(!t.some(x=>x.id===r.id))t.push(r);
-  return t.sort((a,b)=>(a.q<0.05?0:1)-(b.q<0.05?0:1)||a.p-b.p).slice(0,15);}
+function tisTerms(){if(!GOR)return [];const t=[],SH={BP:"BP",MF:"MF",CC:"CC"};
+  const pick=(rows,typ,sh)=>rows.filter(r=>r.k>=2).slice(0,6).map(r=>Object.assign({},r,{typ,sh}));
+  const go=GOR.go.filter(r=>!["GO:0008150","GO:0003674","GO:0005575"].includes(r.id)).sort((a,b)=>a.p-b.p);
+  const all=pick(GOR.kg,"KEGG","KEGG").concat(...["BP","MF","CC"].map(ns=>pick(go.filter(r=>r.ns===ns),"GO "+ns,SH[ns])));
+  for(const r of all)if(!t.some(x=>x.id===r.id))t.push(r);return t;}
 function tisProfile(r,T){const org=T.organs,s=new Array(org.length).fill(0),on=new Array(org.length).fill(0);let n=0;
   for(const k of r.g){const v=T.m.get(k)||null;n++;org.forEach((o,i)=>{const x=v?v[i]:0;s[i]+=x;if(x>=1)on[i]++;});}
   const out={};org.forEach((o,i)=>out[o]={mean:n?s[i]/n:0,on:on[i],n});return out;}
@@ -1804,8 +1804,8 @@ async function tisWidget(el,rows,opts){if(!el)return;let T;
   el.querySelectorAll("[data-tisrow]").forEach(g=>g.addEventListener("click",()=>{el.dataset.sel=g.getAttribute("data-tisrow");tisWidget(el);}));
   if(window.WTM_addFigButtons)window.WTM_addFigButtons();}
 function encTissue(){const el=document.getElementById("tkgTis");if(!el)return;const terms=tisTerms();if(!terms.length){el.innerHTML="";return;}
-  tisWidget(el,terms.map(r=>({id:r.id,nm:r.nm,g:r.g,dim:!(r.q<0.05),opt:`${r.typ}: ${encTrunc(r.nm,70)} (${r.k} genes${r.q<0.05?", FDR "+r.q.toExponential(1):""})`,tip:`${r.typ} ${r.id} ${r.nm}\n${r.k} list genes · FDR ${r.q.toExponential(2)}`,foot:r.typ+": "+r.nm})),
-    {fig:"Figure 5",selLabel:"Term shown on the plant",heading:"Enriched terms by organ",rowWord:"enriched KEGG pathway or GO term (the most enriched, 2 or more list genes)",sigNote:true,lead:"Where the enriched terms are expressed.",title:"Where the enriched terms are expressed in the wheat plant"});}
+  tisWidget(el,terms.map(r=>({id:r.id,nm:r.sh+" · "+r.nm,g:r.g,dim:!(r.q<0.05),opt:`${r.typ}: ${encTrunc(r.nm,70)} (${r.k} genes${r.q<0.05?", FDR "+r.q.toExponential(1):""})`,tip:`${r.typ} ${r.id} ${r.nm}\n${r.k} list genes · FDR ${r.q.toExponential(2)}`,foot:r.typ+": "+r.nm})),
+    {fig:"Figure 5",max:24,selLabel:"Term shown on the plant",heading:"Enriched terms by organ",rowWord:"enriched term: the 6 most enriched (lowest p, 2 or more list genes) of each of KEGG pathways and GO biological process (BP), molecular function (MF) and cellular component (CC)",sigNote:true,lead:"Where the enriched terms are expressed.",title:"Where the enriched terms are expressed in the wheat plant"});}
 function tisSvg(terms,prof,i0,vmax,T,rel,opts){opts=opts||{};const P=prof[i0],r0=terms[i0];
   const sc=p=>{if(!rel)return o=>p[o].mean/vmax;const v=TISORG.map(o=>p[o].mean),lo=Math.min(...v),hi=Math.max(...v);return o=>hi<0.05?0:hi-lo<0.05?0.5:(p[o].mean-lo)/(hi-lo);};
   const s0=sc(P),c=o=>tisCol(s0(o));
@@ -3054,6 +3054,9 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
     document.querySelectorAll("#tp-expr .expane").forEach(p=>p.hidden=p.dataset.exp!==EX.mode);if(EX.mode==="stud")exStud();};
   const run=(id,f)=>{const b=$("#"+id);if(b)b.onclick=async()=>{b.disabled=true;try{await f();}catch(e){console.error(e);}b.disabled=false;};};
   run("exLookGo",exLook);run("exRegGo",exReg);run("exCandGo",exCand);run("exMultiGo",exMulti);
+  /* examples: eight genes reported as DEGs for 12 or more diseases; a region of 2BL with many DEGs and atlas loci */
+  run("exLookEx",async()=>{$("#exGenes").value=["TraesCS2D02G226000","TraesCS2B02G414800","TraesCS2B02G079500","TraesCS2A02G067300","TraesCS5B02G322900","TraesCS2D02G065600","TraesCS2B02G459100","TraesCS5A02G212800"].join("\n");$("#exLookDis").value="";await exLook();});
+  run("exRegEx",async()=>{$("#exChr").value="2B";$("#exFrom").value="700";$("#exTo").value="720";$("#exRegDis").value="";$("#exDef").checked=false;await exReg();});
   const _tTab=tTab;tTab=function(k){_tTab(k);if(k==="expr")exInit();};})();
 
 </script>
