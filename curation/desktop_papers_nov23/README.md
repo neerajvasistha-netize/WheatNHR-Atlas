@@ -8,3 +8,12 @@ onward, grade C, "auto (paper text)") and tracker entries for the 70 papers (`tr
 Removed by hand: Lr34 placed on 2B (Lr34 is on 7DS and already in the atlas).
 Most of these papers are 1986-2008 gene mapping studies with RFLP/SSR markers and cM maps; 54 named loci had no
 position in the text and no linked marker with a published physical position.
+
+## Second pass: in-silico placement from table markers (23 Nov 2026)
+For loci named in the papers but not placed in the first pass, the marker interval or closest marker was read
+from each paper's QTL table and placed at the published physical position of the marker (RefSeq v1.0), then
+converted to RefSeq v2.1 and the 13 pangenome cultivars. 10 more loci were added (PY0007-PY0016, grade C), listed in
+`insilico_placements.tsv`. `place75_candidates.py` lists candidate markers near each locus name; the final marker
+for each locus was chosen by reading the table rows. Loci already in the atlas under the same name were skipped.
+Loci whose markers have no known physical position (for example Xgwm768, Xgwm191, gwm707, cfd71b, gwm790b, gpw1106,
+Xgwm304, Xbarc353b, Xbarc127, Xbarc174) remain unplaced.
