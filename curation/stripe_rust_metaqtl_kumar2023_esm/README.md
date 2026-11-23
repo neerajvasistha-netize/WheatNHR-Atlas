@@ -14,3 +14,11 @@ and hotspots are not added.
 4. Table S5 MTAs: published marker position if found, else the bp value of Table S5 (Aoun 2021 GBS tags and Miedaner
    2020 DArTseq markers use the Table S5 positions, taken as RefSeq v1.0). Arm letters in chromosome names were dropped.
 Result: seed_ad78.json, 216 records (82 QTL, 134 MTAs) from 32 papers, grade C. Listed in added_records.tsv.
+
+## Update with Jan et al. 2021 Table S1 (41598_2021_2049_MOESM1_ESM.xlsx, 353 stripe rust QTL with names)
+- 77 QTL in seed_ad78 that were labelled "QYr <study> <chr> (<interval>)" now carry their published names, matched by
+  paper DOI, chromosome and marker interval (generic names such as "QTL on 2AL" get the study added).
+- With the real names, 21 of them turned out to be already in the atlas from the same paper (other seeds) and one sat on
+  the wrong chromosome arm for its name; these 22 were removed (dropped_after_jan2021_names.json). seed_ad78 now holds 194 records.
+- No further QTL were added from Jan et al. 2021: its QTL are either already in the atlas, from papers not identified
+  reliably, or have no marker with a known physical position.
