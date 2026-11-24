@@ -12,3 +12,10 @@ expression and proteome tables (mmc6-mmc16) are not added.
 - Result: seed_ad79.json, 417 QTL from 75 papers (grade C), named "QFhb <first author> <chr> (<marker interval>)".
 - consensus_marker_positions_refseq_v1.tsv (from mmc4) is kept as a marker position source; it placed QPm.caas-7A
   (Xbarc174, 7A 116.00 Mb) from the Desktop/Papers batch (PY0018 in seed_ad75).
+
+## Cai et al. 2019 (Crop Journal 7:784-798, S2214514119300807) mmc1.docx
+Table S3 lists FHB QTL remapped in five landrace RIL populations (BSYH, HCD x Jagger; HYZ, HFZ, WSB x Wheaton) on new
+SSR and GBS-SNP maps. GBS markers (GBSxxxx) have no known physical positions; 12 of 31 QTL have a placed SSR flank.
+Seven of those overlap QTL already in the atlas from the original papers of the same populations and were skipped;
+WSB 5DL was skipped (Xcfd78 lies on 5DS). Added 4 (seed_ad83): BSYH 4D (Xcfd193), HYZ 2D (Xcfd51), HFZ 3DL (Xgwm114),
+HFZ 7AL (Xgwm276-Xgwm282). Table S1 (22 KASP primers) could place more QTL by e-PCR once the genome is downloaded again.
