@@ -1,0 +1,103 @@
+id	name	disease	chr	start	end	evidence
+YH6-001	Haploblock b006788 (Yr)	Stripe rust	7B	245.071	326.395	Supplementary Table S4: b006788, 7B, 245.071-326.395 Mb, 275 markers
+YH6-002	Haploblock b007213 (Yr)	Stripe rust	2D	588.122	594.192	Supplementary Table S4: b007213, 2D, 588.122-594.192 Mb, 205 markers
+YH6-003	Haploblock b003936 (Yr)	Stripe rust	1B	668.715	670.16	Supplementary Table S4: b003936, 1B, 668.715-670.16 Mb, 54 markers
+YH6-004	Haploblock b000670 (Yr)	Stripe rust	2A	97.623	108.367	Supplementary Table S4: b000670, 2A, 97.623-108.367 Mb, 90 markers
+YH6-005	Haploblock b004792 (Yr)	Stripe rust	2B	766.559	767.122	Supplementary Table S4: b004792, 2B, 766.559-767.122 Mb, 74 markers
+YH6-006	Haploblock b005435 (Yr)	Stripe rust	4B	535.05	557.995	Supplementary Table S4: b005435, 4B, 535.05-557.995 Mb, 117 markers
+YH6-007	Haploblock b005821 (Yr)	Stripe rust	5B	506.27	512.915	Supplementary Table S4: b005821, 5B, 506.27-512.915 Mb, 137 markers
+YH6-008	Haploblock b007334 (Yr)	Stripe rust	2D	614.203	616.579	Supplementary Table S4: b007334, 2D, 614.203-616.579 Mb, 61 markers
+YH6-009	Haploblock b003530 (Yr)	Stripe rust	1B	359.903	391.573	Supplementary Table S4: b003530, 1B, 359.903-391.573 Mb, 163 markers
+YH6-010	Haploblock b004753 (Yr)	Stripe rust	2B	757.368	760.95	Supplementary Table S4: b004753, 2B, 757.368-760.95 Mb, 51 markers
+YH6-011	Haploblock b004763 (Yr)	Stripe rust	2B	761.527	762.074	Supplementary Table S4: b004763, 2B, 761.527-762.074 Mb, 26 markers
+YH6-012	Haploblock b001326 (Yr)	Stripe rust	3A	662.913	664.41	Supplementary Table S4: b001326, 3A, 662.913-664.41 Mb, 64 markers
+YH6-013	Haploblock b006151 (Yr)	Stripe rust	5B	687.813	689.887	Supplementary Table S4: b006151, 5B, 687.813-689.887 Mb, 50 markers
+YH6-014	Haploblock b001471 (Yr)	Stripe rust	4A	489.107	536.247	Supplementary Table S4: b001471, 4A, 489.107-536.247 Mb, 34 markers
+YH6-015	Haploblock b000668 (Yr)	Stripe rust	2A	87.88	96.074	Supplementary Table S4: b000668, 2A, 87.88-96.074 Mb, 49 markers
+YH6-016	Haploblock b005418 (Yr)	Stripe rust	4B	89.294	115.101	Supplementary Table S4: b005418, 4B, 89.294-115.101 Mb, 100 markers
+YH6-017	Haploblock b004352 (Yr)	Stripe rust	2B	534.713	539.805	Supplementary Table S4: b004352, 2B, 534.713-539.805 Mb, 36 markers
+YH6-018	Haploblock b001081 (Yr)	Stripe rust	3A	495.01	502.165	Supplementary Table S4: b001081, 3A, 495.01-502.165 Mb, 66 markers
+YH6-019	Haploblock b007020 (Yr)	Stripe rust	7B	721.208	721.21	Supplementary Table S4: b007020, 7B, 721.208-721.21 Mb, 19 markers
+YH6-020	Haploblock b003830 (Yr)	Stripe rust	1B	604.154	605.464	Supplementary Table S4: b003830, 1B, 604.154-605.464 Mb, 28 markers
+YH6-021	Haploblock b006130 (Yr)	Stripe rust	5B	682.183	682.399	Supplementary Table S4: b006130, 5B, 682.183-682.399 Mb, 22 markers
+YH6-022	Haploblock b001054 (Yr)	Stripe rust	3A	430.787	442.877	Supplementary Table S4: b001054, 3A, 430.787-442.877 Mb, 31 markers
+YH6-023	Haploblock b005569 (Yr)	Stripe rust	5B	60.611	68.832	Supplementary Table S4: b005569, 5B, 60.611-68.832 Mb, 52 markers
+YH6-024	Haploblock b007507 (Yr)	Stripe rust	5D	545.064	546.251	Supplementary Table S4: b007507, 5D, 545.064-546.251 Mb, 42 markers
+YH6-025	Haploblock b000683 (Yr)	Stripe rust	2A	320.184	394.015	Supplementary Table S4: b000683, 2A, 320.184-394.015 Mb, 172 markers
+YH6-026	Haploblock b000136 (Yr)	Stripe rust	1A	53.626	57.372	Supplementary Table S4: b000136, 1A, 53.626-57.372 Mb, 24 markers
+YH6-027	Haploblock b000677 (Yr)	Stripe rust	2A	180.132	303.728	Supplementary Table S4: b000677, 2A, 180.132-303.728 Mb, 165 markers
+YH6-028	Haploblock b000147 (Yr)	Stripe rust	1A	251.191	300.105	Supplementary Table S4: b000147, 1A, 251.191-300.105 Mb, 157 markers
+YH6-029	Haploblock b004290 (Yr)	Stripe rust	2B	218.673	230.711	Supplementary Table S4: b004290, 2B, 218.673-230.711 Mb, 80 markers
+YH6-030	Haploblock b001292 (Yr)	Stripe rust	3A	602.24	605.855	Supplementary Table S4: b001292, 3A, 602.24-605.855 Mb, 35 markers
+YH6-031	Haploblock b006120 (Yr)	Stripe rust	5B	669.673	671.193	Supplementary Table S4: b006120, 5B, 669.673-671.193 Mb, 50 markers
+YH6-032	Haploblock b000130 (Yr)	Stripe rust	1A	45.737	48.891	Supplementary Table S4: b000130, 1A, 45.737-48.891 Mb, 23 markers
+YH6-033	Haploblock b006794 (Yr)	Stripe rust	7B	373.788	407.006	Supplementary Table S4: b006794, 7B, 373.788-407.006 Mb, 54 markers
+YH6-034	Haploblock b005640 (Yr)	Stripe rust	5B	203.513	250.084	Supplementary Table S4: b005640, 5B, 203.513-250.084 Mb, 84 markers
+YH6-035	Haploblock b001883 (Yr)	Stripe rust	5A	414.049	416.171	Supplementary Table S4: b001883, 5A, 414.049-416.171 Mb, 33 markers
+YH6-036	Haploblock b005457 (Yr)	Stripe rust	4B	617.767	620.854	Supplementary Table S4: b005457, 4B, 617.767-620.854 Mb, 62 markers
+YH6-037	Haploblock b002264 (Yr)	Stripe rust	5A	592.623	593.395	Supplementary Table S4: b002264, 5A, 592.623-593.395 Mb, 34 markers
+YH6-038	Haploblock b000148 (Yr)	Stripe rust	1A	300.801	308.814	Supplementary Table S4: b000148, 1A, 300.801-308.814 Mb, 72 markers
+YH6-039	Haploblock b003512 (Yr)	Stripe rust	1B	298.075	314.744	Supplementary Table S4: b003512, 1B, 298.075-314.744 Mb, 126 markers
+YH6-040	Haploblock b001313 (Yr)	Stripe rust	3A	648.859	653.243	Supplementary Table S4: b001313, 3A, 648.859-653.243 Mb, 56 markers
+YH6-041	Haploblock b000143 (Yr)	Stripe rust	1A	136.927	203.411	Supplementary Table S4: b000143, 1A, 136.927-203.411 Mb, 119 markers
+YH6-042	Haploblock b007602 (Yr)	Stripe rust	6D	453.921	455.253	Supplementary Table S4: b007602, 6D, 453.921-455.253 Mb, 28 markers
+YH6-043	Haploblock b004631 (Yr)	Stripe rust	2B	730.299	731.112	Supplementary Table S4: b004631, 2B, 730.299-731.112 Mb, 57 markers
+YH6-044	Haploblock b001464 (Yr)	Stripe rust	4A	236.145	312.72	Supplementary Table S4: b001464, 4A, 236.145-312.72 Mb, 119 markers
+YH6-045	Haploblock b006792 (Yr)	Stripe rust	7B	341.976	373.785	Supplementary Table S4: b006792, 7B, 341.976-373.785 Mb, 59 markers
+YH6-046	Haploblock b006439 (Yr)	Stripe rust	6B	525.98	532.239	Supplementary Table S4: b006439, 6B, 525.98-532.239 Mb, 59 markers
+YH6-047	Haploblock b000141 (Yr)	Stripe rust	1A	105.903	136.563	Supplementary Table S4: b000141, 1A, 105.903-136.563 Mb, 127 markers
+YH6-048	Haploblock b007412 (Yr)	Stripe rust	3D	28.574	42.396	Supplementary Table S4: b007412, 3D, 28.574-42.396 Mb, 205 markers
+YH6-049	Haploblock b005638 (Yr)	Stripe rust	5B	137.06	196.471	Supplementary Table S4: b005638, 5B, 137.06-196.471 Mb, 65 markers
+YH6-050	Haploblock b007128 (Yr)	Stripe rust	1D	33.984	41.752	Supplementary Table S4: b007128, 1D, 33.984-41.752 Mb, 90 markers
+YH6-051	Haploblock b002436 (Yr)	Stripe rust	6A	60.407	61.412	Supplementary Table S4: b002436, 6A, 60.407-61.412 Mb, 53 markers
+YH6-052	Haploblock b002416 (Yr)	Stripe rust	6A	27.084	31.355	Supplementary Table S4: b002416, 6A, 27.084-31.355 Mb, 93 markers
+YH6-053	Haploblock b000147 (Lr)	Leaf rust	1A	251.191	300.105	Supplementary Table S5: b000147, 1A, 251.191-300.105 Mb, 157 markers, rank 1
+YH6-054	Haploblock b001880 (Lr)	Leaf rust	5A	389.154	395.76	Supplementary Table S5: b001880, 5A, 389.154-395.76 Mb, 77 markers, rank 2
+YH6-055	Haploblock b002416 (Lr)	Leaf rust	6A	27.084	31.355	Supplementary Table S5: b002416, 6A, 27.084-31.355 Mb, 93 markers, rank 3
+YH6-056	Haploblock b003530 (Lr)	Leaf rust	1B	359.903	391.573	Supplementary Table S5: b003530, 1B, 359.903-391.573 Mb, 163 markers, rank 4
+YH6-057	Haploblock b006898 (Lr)	Leaf rust	7B	678.1	680.171	Supplementary Table S5: b006898, 7B, 678.1-680.171 Mb, 63 markers, rank 5
+YH6-058	Haploblock b001081 (Lr)	Leaf rust	3A	495.01	502.165	Supplementary Table S5: b001081, 3A, 495.01-502.165 Mb, 66 markers, rank 6
+YH6-059	Haploblock b001044 (Lr)	Leaf rust	3A	53.219	56.4	Supplementary Table S5: b001044, 3A, 53.219-56.4 Mb, 84 markers, rank 7
+YH6-060	Haploblock b006708 (Lr)	Leaf rust	7B	124.36	127.647	Supplementary Table S5: b006708, 7B, 124.36-127.647 Mb, 43 markers, rank 8
+YH6-061	Haploblock b007456 (Lr)	Leaf rust	3D	613.388	614.367	Supplementary Table S5: b007456, 3D, 613.388-614.367 Mb, 35 markers, rank 9
+YH6-062	Haploblock b004352 (Lr)	Leaf rust	2B	534.713	539.805	Supplementary Table S5: b004352, 2B, 534.713-539.805 Mb, 36 markers, rank 10
+YH6-063	Haploblock b000535 (Lr)	Leaf rust	2A	13.252	15.007	Supplementary Table S5: b000535, 2A, 13.252-15.007 Mb, 91 markers, rank 11
+YH6-064	Haploblock b007444 (Lr)	Leaf rust	3D	604.512	605.209	Supplementary Table S5: b007444, 3D, 604.512-605.209 Mb, 16 markers, rank 12
+YH6-065	Haploblock b004792 (Lr)	Leaf rust	2B	766.559	767.122	Supplementary Table S5: b004792, 2B, 766.559-767.122 Mb, 74 markers, rank 13
+YH6-066	Haploblock b000715 (Lr)	Leaf rust	2A	675.079	676.987	Supplementary Table S5: b000715, 2A, 675.079-676.987 Mb, 18 markers, rank 14
+YH6-067	Haploblock b001326 (Lr)	Leaf rust	3A	662.913	664.41	Supplementary Table S5: b001326, 3A, 662.913-664.41 Mb, 64 markers, rank 15
+YH6-068	Haploblock b000677 (Lr)	Leaf rust	2A	180.132	303.728	Supplementary Table S5: b000677, 2A, 180.132-303.728 Mb, 165 markers, rank 16
+YH6-069	Haploblock b002964 (Lr)	Leaf rust	7A	64.925	71.186	Supplementary Table S5: b002964, 7A, 64.925-71.186 Mb, 68 markers, rank 17
+YH6-070	Haploblock b007454 (Lr)	Leaf rust	3D	610.784	611.971	Supplementary Table S5: b007454, 3D, 610.784-611.971 Mb, 10 markers, rank 18
+YH6-071	Haploblock b000683 (Lr)	Leaf rust	2A	320.184	394.015	Supplementary Table S5: b000683, 2A, 320.184-394.015 Mb, 172 markers, rank 19
+YH6-072	Haploblock b006439 (Lr)	Leaf rust	6B	525.98	532.239	Supplementary Table S5: b006439, 6B, 525.98-532.239 Mb, 59 markers, rank 20
+YH6-073	Haploblock b006880 (Lr)	Leaf rust	7B	632.49	632.653	Supplementary Table S5: b006880, 7B, 632.49-632.653 Mb, 15 markers, rank 21
+YH6-074	Haploblock b006130 (Lr)	Leaf rust	5B	682.183	682.399	Supplementary Table S5: b006130, 5B, 682.183-682.399 Mb, 22 markers, rank 22
+YH6-075	Haploblock b005324 (Lr)	Leaf rust	4B	1.562	1.823	Supplementary Table S5: b005324, 4B, 1.562-1.823 Mb, 40 markers, rank 23
+YH6-076	Haploblock b001883 (Lr)	Leaf rust	5A	414.049	416.171	Supplementary Table S5: b001883, 5A, 414.049-416.171 Mb, 33 markers, rank 24
+YH6-077	Haploblock b003936 (Lr)	Leaf rust	1B	668.715	670.16	Supplementary Table S5: b003936, 1B, 668.715-670.16 Mb, 54 markers, rank 25
+YH6-078	Haploblock b007116 (Lr)	Leaf rust	1D	10.399	11.624	Supplementary Table S5: b007116, 1D, 10.399-11.624 Mb, 27 markers, rank 26
+YH6-079	Haploblock b007128 (Lr)	Leaf rust	1D	33.984	41.752	Supplementary Table S5: b007128, 1D, 33.984-41.752 Mb, 90 markers, rank 27
+YH6-080	Haploblock b005757 (Lr)	Leaf rust	5B	478.756	479.72	Supplementary Table S5: b005757, 5B, 478.756-479.72 Mb, 33 markers, rank 28
+YH6-081	Haploblock b001481 (Lr)	Leaf rust	4A	581.943	584.535	Supplementary Table S5: b001481, 4A, 581.943-584.535 Mb, 76 markers, rank 29
+YH6-082	Haploblock b007628 (Lr)	Leaf rust	7D	11.899	15.903	Supplementary Table S5: b007628, 7D, 11.899-15.903 Mb, 51 markers, rank 30
+YH6-083	Haploblock b000141 (Lr)	Leaf rust	1A	105.903	136.563	Supplementary Table S5: b000141, 1A, 105.903-136.563 Mb, 127 markers, rank 31
+YH6-084	Haploblock b006151 (Lr)	Leaf rust	5B	687.813	689.887	Supplementary Table S5: b006151, 5B, 687.813-689.887 Mb, 50 markers, rank 32
+YH6-085	Haploblock b007437 (Lr)	Leaf rust	3D	600.609	602.654	Supplementary Table S5: b007437, 3D, 600.609-602.654 Mb, 13 markers, rank 33
+YH6-086	Haploblock b007334 (Lr)	Leaf rust	2D	614.203	616.579	Supplementary Table S5: b007334, 2D, 614.203-616.579 Mb, 61 markers, rank 34
+YH6-087	Haploblock b005418 (Lr)	Leaf rust	4B	89.294	115.101	Supplementary Table S5: b005418, 4B, 89.294-115.101 Mb, 100 markers, rank 35
+YH6-088	Haploblock b007532 (Lr)	Leaf rust	5D	554.468	555.816	Supplementary Table S5: b007532, 5D, 554.468-555.816 Mb, 35 markers, rank 36
+YH6-089	Haploblock b002225 (Lr)	Leaf rust	5A	578.52	581.926	Supplementary Table S5: b002225, 5A, 578.52-581.926 Mb, 30 markers, rank 37
+YH6-090	Haploblock b005649 (Lr)	Leaf rust	5B	352.901	369.153	Supplementary Table S5: b005649, 5B, 352.901-369.153 Mb, 43 markers, rank 38
+YH6-091	Haploblock b005457 (Lr)	Leaf rust	4B	617.767	620.854	Supplementary Table S5: b005457, 4B, 617.767-620.854 Mb, 62 markers, rank 39
+YH6-092	Haploblock b000148 (Lr)	Leaf rust	1A	300.801	308.814	Supplementary Table S5: b000148, 1A, 300.801-308.814 Mb, 72 markers, rank 40
+YH6-093	Haploblock b003609 (Lr)	Leaf rust	1B	510.802	517.764	Supplementary Table S5: b003609, 1B, 510.802-517.764 Mb, 43 markers, rank 41
+YH6-094	Haploblock b007123 (Lr)	Leaf rust	1D	27.54	28.978	Supplementary Table S5: b007123, 1D, 27.54-28.978 Mb, 73 markers, rank 42
+YH6-095	Haploblock b001892 (Lr)	Leaf rust	5A	449.207	450.629	Supplementary Table S5: b001892, 5A, 449.207-450.629 Mb, 14 markers, rank 43
+YH6-096	Haploblock b003467 (Lr)	Leaf rust	1B	68.513	87.733	Supplementary Table S5: b003467, 1B, 68.513-87.733 Mb, 32 markers, rank 44
+YH6-097	Haploblock b005453 (Lr)	Leaf rust	4B	612.215	613.15	Supplementary Table S5: b005453, 4B, 612.215-613.15 Mb, 22 markers, rank 45
+YH6-098	Haploblock b005821 (Lr)	Leaf rust	5B	506.27	512.915	Supplementary Table S5: b005821, 5B, 506.27-512.915 Mb, 137 markers, rank 46
+YH6-099	Haploblock b007202 (Lr)	Leaf rust	2D	570.951	576.979	Supplementary Table S5: b007202, 2D, 570.951-576.979 Mb, 174 markers, rank 47
+YH6-100	Haploblock b003022 (Lr)	Leaf rust	7A	561.8	565.348	Supplementary Table S5: b003022, 7A, 561.8-565.348 Mb, 28 markers, rank 48
+YH6-101	Haploblock b006495 (Lr)	Leaf rust	6B	665.512	667.896	Supplementary Table S5: b006495, 6B, 665.512-667.896 Mb, 33 markers, rank 49
+YH6-102	Haploblock b003512 (Lr)	Leaf rust	1B	298.075	314.744	Supplementary Table S5: b003512, 1B, 298.075-314.744 Mb, 126 markers, rank 50
