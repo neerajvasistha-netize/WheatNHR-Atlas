@@ -1,0 +1,77 @@
+id	marker	chr	peak_Mb_v1.0	pve	evidence
+PM6-001	BS00064536_51	1A	16.389593		Supplementary Table S10 (90K SNP array): BS00064536_51, chromosome 1A, 16,389,593 bp, traits IND24S
+PM6-002	AVRIG14144	1A	21.328088		Supplementary Table S10 (40K SNP array): AVRIG14144, chromosome 1A, 21,328,088 bp, traits INC23G
+PM6-003	AVRIG14301	1A	119.712432		Supplementary Table S10 (40K SNP array): AVRIG14301, chromosome 1A, 119,712,432 bp, traits FDK21M
+PM6-004	AVRIG14317	1A	155.080985		Supplementary Table S10 (40K SNP array): AVRIG14317, chromosome 1A, 155,080,985 bp, traits FDK21M
+PM6-005	AVRIG15079	1A	551.490709		Supplementary Table S10 (40K SNP array): AVRIG15079, chromosome 1A, 551,490,709 bp, traits FDK21M
+PM6-006	AVRIG15452	1B	74.724521		Supplementary Table S10 (40K SNP array): AVRIG15452, chromosome 1B, 74,724,521 bp, traits FDK23G
+PM6-007	TA004123-0331	1B	87.732954		Supplementary Table S10 (90K SNP array): TA004123-0331, chromosome 1B, 87,732,954 bp, traits FDK23G
+PM6-008	AVRIG16403	1B	556.971289		Supplementary Table S10 (40K SNP array): AVRIG16403, chromosome 1B, 556,971,289 bp, traits IND20S
+PM6-009	AVRIG16516	1B	588.634586		Supplementary Table S10 (40K SNP array): AVRIG16516, chromosome 1B, 588,634,586 bp, traits INC19S
+PM6-010	Tdurum_contig62905_165	1B	673.784307	5.41-16.56	Supplementary Table S10 (90K SNP array): Tdurum_contig62905_165, chromosome 1B, 673,784,307 bp, traits DON23G,INC24S,IND24S
+PM6-011	AVRIG16896	1D	10.154447		Supplementary Table S10 (40K SNP array): AVRIG16896, chromosome 1D, 10,154,447 bp, traits FDK21M
+PM6-012	AVRIG17347	2A	3.864918		Supplementary Table S10 (40K SNP array): AVRIG17347, chromosome 2A, 3,864,918 bp, traits FDK23G
+PM6-013	BobWhite_c22714_132	2A	4.168375		Supplementary Table S10 (90K SNP array): BobWhite_c22714_132, chromosome 2A, 4,168,375 bp, traits IND23G
+PM6-014	AVRIG17359	2A	4.971791		Supplementary Table S10 (40K SNP array): AVRIG17359, chromosome 2A, 4,971,791 bp, traits FDK21G
+PM6-015	BS00080836_51	2A	15.948154		Supplementary Table S10 (90K SNP array): BS00080836_51, chromosome 2A, 15,948,154 bp, traits DON23G
+PM6-016	AVRIG17641	2A	80.479911		Supplementary Table S10 (40K SNP array): AVRIG17641, chromosome 2A, 80,479,911 bp, traits IND20S
+PM6-017	AVRIG18130	2A	553.489291		Supplementary Table S10 (40K SNP array): AVRIG18130, chromosome 2A, 553,489,291 bp, traits IND23G
+PM6-018	wsnp_Ex_c2337_4379619	2A	585.662192		Supplementary Table S10 (90K SNP array): wsnp_Ex_c2337_4379619, chromosome 2A, 585,662,192 bp, traits DS23G
+PM6-019	AVRIG18697	2B	24.273035		Supplementary Table S10 (40K SNP array): AVRIG18697, chromosome 2B, 24,273,035 bp, traits INC19S
+PM6-020	AVRIG18797	2B	52.937314		Supplementary Table S10 (40K SNP array): AVRIG18797, chromosome 2B, 52,937,314 bp, traits DON20S
+PM6-021	AVRIG19023	2B	119.051528	10.21-19.33	Supplementary Table S10 (40K SNP array): AVRIG19023, chromosome 2B, 119,051,528 bp, traits DS21G,IND21G
+PM6-022	CAP12_c2565_239	2B	243.790122		Supplementary Table S10 (90K SNP array): CAP12_c2565_239, chromosome 2B, 243,790,122 bp, traits DS24S
+PM6-023	BS00010829_51	2B	546.201881		Supplementary Table S10 (90K SNP array): BS00010829_51, chromosome 2B, 546,201,881 bp, traits DS23G
+PM6-024	GENE-0959_1163	2B	632.628066		Supplementary Table S10 (90K SNP array): GENE-0959_1163, chromosome 2B, 632,628,066 bp, traits DS20S
+PM6-025	AVRIG20813	2D	20.364813	5.94-7.26	Supplementary Table S10 (40K SNP array): AVRIG20813, chromosome 2D, 20,364,813 bp, traits IND23G,DS23G
+PM6-026	AVRIG21717	3A	423.480022		Supplementary Table S10 (40K SNP array): AVRIG21717, chromosome 3A, 423,480,022 bp, traits IND21G
+PM6-027	Ex_c18484_2026	3A	525.200861		Supplementary Table S10 (90K SNP array): Ex_c18484_2026, chromosome 3A, 525,200,861 bp, traits IND20S
+PM6-028	AVRIG23322	3B	463.093301		Supplementary Table S10 (40K SNP array): AVRIG23322, chromosome 3B, 463,093,301 bp, traits FDK21G
+PM6-029	JD_c6678_311	3B	520.371914	4.68	Supplementary Table S10 (90K SNP array): JD_c6678_311, chromosome 3B, 520,371,914 bp, traits IND23G,PH20S
+PM6-030	AVRIG23456	3B	528.635763	4.33-6.21	Supplementary Table S10 (40K SNP array): AVRIG23456, chromosome 3B, 528,635,763 bp, traits IND23G,DS23G
+PM6-031	Ra_c1117_1399	3B	664.888668		Supplementary Table S10 (90K SNP array): Ra_c1117_1399, chromosome 3B, 664,888,668 bp, traits IND24S
+PM6-032	AVRIG24167	3B	799.813608		Supplementary Table S10 (40K SNP array): AVRIG24167, chromosome 3B, 799,813,608 bp, traits DON21G
+PM6-033	Excalibur_c31960_1492	3D	506.174651	35.20-37.04	Supplementary Table S10 (90K SNP array): Excalibur_c31960_1492, chromosome 3D, 506,174,651 bp, traits INC24S,IND24S
+PM6-034	AVRIG25239	4A	614.41617	13.65-14.92	Supplementary Table S10 (40K SNP array): AVRIG25239, chromosome 4A, 614,416,170 bp, traits HD24S,INC24S,IND24S
+PM6-035	Ra_c1897_2401	4A	707.040312		Supplementary Table S10 (90K SNP array): Ra_c1897_2401, chromosome 4A, 707,040,312 bp, traits FDK21M
+PM6-036	wsnp_CAP12_c1101_569783	4B	609.513071		Supplementary Table S10 (90K SNP array): wsnp_CAP12_c1101_569783, chromosome 4B, 609,513,071 bp, traits IND21G
+PM6-037	AVRIG26466	4B	637.387658		Supplementary Table S10 (40K SNP array): AVRIG26466, chromosome 4B, 637,387,658 bp, traits IND23G
+PM6-038	Kukri_rep_c78644_408	4B	650.634817		Supplementary Table S10 (90K SNP array): Kukri_rep_c78644_408, chromosome 4B, 650,634,817 bp, traits DS24S
+PM6-039	Excalibur_rep_c114140_567	4B	651.992226		Supplementary Table S10 (90K SNP array): Excalibur_rep_c114140_567, chromosome 4B, 651,992,226 bp, traits FDK21M
+PM6-040	Kukri_c11570_1218	4B	652.290623		Supplementary Table S10 (90K SNP array): Kukri_c11570_1218, chromosome 4B, 652,290,623 bp, traits FDK21M
+PM6-041	AVRIG26525	4B	656.285982	5.79-9.92	Supplementary Table S10 (40K SNP array): AVRIG26525, chromosome 4B, 656,285,982 bp, traits INC20S,IND20S
+PM6-042	AVRIG26692	4D	278.199184	26.92-47.06	Supplementary Table S10 (40K SNP array): AVRIG26692, chromosome 4D, 278,199,184 bp, traits INC24S,IND24S
+PM6-043	BobWhite_rep_c49979_373	5A	381.301702		Supplementary Table S10 (90K SNP array): BobWhite_rep_c49979_373, chromosome 5A, 381,301,702 bp, traits INC19S
+PM6-044	AVRIG27081	5A	414.010255		Supplementary Table S10 (40K SNP array): AVRIG27081, chromosome 5A, 414,010,255 bp, traits IND23G
+PM6-045	BS00066127_51	5A	414.048494		Supplementary Table S10 (90K SNP array): BS00066127_51, chromosome 5A, 414,048,494 bp, traits IND23G
+PM6-046	BS00063823_51	5A	414.048756		Supplementary Table S10 (90K SNP array): BS00063823_51, chromosome 5A, 414,048,756 bp, traits DS23G
+PM6-047	AVRIG27099	5A	426.904797		Supplementary Table S10 (40K SNP array): AVRIG27099, chromosome 5A, 426,904,797 bp, traits DON21G
+PM6-048	AVRIG27336	5A	493.60553		Supplementary Table S10 (40K SNP array): AVRIG27336, chromosome 5A, 493,605,530 bp, traits IND21G
+PM6-049	AVRIG27381	5A	510.4478		Supplementary Table S10 (40K SNP array): AVRIG27381, chromosome 5A, 510,447,800 bp, traits IND24S
+PM6-050	AVRIG27416	5A	523.589032		Supplementary Table S10 (40K SNP array): AVRIG27416, chromosome 5A, 523,589,032 bp, traits DS20S
+PM6-051	AVRIG27619	5A	582.632102	7.40-14.73	Supplementary Table S10 (40K SNP array): AVRIG27619, chromosome 5A, 582,632,102 bp, traits DS20S,INC20S,IND20S
+PM6-052	wsnp_Ex_c40019_47166980	5A	611.562183		Supplementary Table S10 (90K SNP array): wsnp_Ex_c40019_47166980, chromosome 5A, 611,562,183 bp, traits DS24S
+PM6-053	AVRIG27969	5A	679.658792	10.83-35.05	Supplementary Table S10 (40K SNP array): AVRIG27969, chromosome 5A, 679,658,792 bp, traits DON20S,DON21M
+PM6-054	AVRIG28204	5B	44.783237		Supplementary Table S10 (40K SNP array): AVRIG28204, chromosome 5B, 44,783,237 bp, traits FDK21M
+PM6-055	AVRIG28673	5B	458.930615	15.62-18.24	Supplementary Table S10 (40K SNP array): AVRIG28673, chromosome 5B, 458,930,615 bp, traits IND23G,DS23G
+PM6-056	AVRIG29484	5B	690.035469		Supplementary Table S10 (40K SNP array): AVRIG29484, chromosome 5B, 690,035,469 bp, traits DS21G
+PM6-057	Kukri_c3576_1212	5D	530.645714		Supplementary Table S10 (90K SNP array): Kukri_c3576_1212, chromosome 5D, 530,645,714 bp, traits INC19S
+PM6-058	wsnp_Ex_rep_c69627_68580121	6A	109.986614		Supplementary Table S10 (90K SNP array): wsnp_Ex_rep_c69627_68580121, chromosome 6A, 109,986,614 bp, traits INC20S
+PM6-059	AVRIG30278	6A	202.009303		Supplementary Table S10 (40K SNP array): AVRIG30278, chromosome 6A, 202,009,303 bp, traits DON21M
+PM6-060	AVRIG30388	6A	467.039673		Supplementary Table S10 (40K SNP array): AVRIG30388, chromosome 6A, 467,039,673 bp, traits IND23G
+PM6-061	AVRIG30691	6A	601.474428		Supplementary Table S10 (40K SNP array): AVRIG30691, chromosome 6A, 601,474,428 bp, traits DON21G
+PM6-062	Ku_c12681_198	6B	408.241129		Supplementary Table S10 (90K SNP array): Ku_c12681_198, chromosome 6B, 408,241,129 bp, traits FDK21M
+PM6-063	AVRIG31392	6B	408.241179		Supplementary Table S10 (40K SNP array): AVRIG31392, chromosome 6B, 408,241,179 bp, traits DS23G
+PM6-064	AVRIG31697	6B	563.998354	10.20-10.99	Supplementary Table S10 (40K SNP array): AVRIG31697, chromosome 6B, 563,998,354 bp, traits INC19S,IND19S
+PM6-065	wsnp_Ex_c4124_7455225	6B	601.345723		Supplementary Table S10 (90K SNP array): wsnp_Ex_c4124_7455225, chromosome 6B, 601,345,723 bp, traits INC19S
+PM6-066	wsnp_Ex_c1276_2445537	6B	642.348216		Supplementary Table S10 (90K SNP array): wsnp_Ex_c1276_2445537, chromosome 6B, 642,348,216 bp, traits FDK21M
+PM6-067	AVRIG32946	7A	122.762014		Supplementary Table S10 (40K SNP array): AVRIG32946, chromosome 7A, 122,762,014 bp, traits IND21G
+PM6-068	BS00080365_51	7A	537.058949		Supplementary Table S10 (90K SNP array): BS00080365_51, chromosome 7A, 537,058,949 bp, traits FDK21M
+PM6-069	AVRIG33855	7A	645.081832		Supplementary Table S10 (40K SNP array): AVRIG33855, chromosome 7A, 645,081,832 bp, traits INC19S
+PM6-070	wsnp_JD_c1285_1848292	7B	3.700271		Supplementary Table S10 (90K SNP array): wsnp_JD_c1285_1848292, chromosome 7B, 3,700,271 bp, traits FDK23G
+PM6-071	Excalibur_c7966_1289	7B	283.100597		Supplementary Table S10 (90K SNP array): Excalibur_c7966_1289, chromosome 7B, 283,100,597 bp, traits FDK21G
+PM6-072	BobWhite_c13098_670	7B	489.827165	12.99-18.66	Supplementary Table S10 (90K SNP array): BobWhite_c13098_670, chromosome 7B, 489,827,165 bp, traits INC24S,IND24S,DS24S
+PM6-073	AVRIG34920	7B	538.879353	11.47-21.08	Supplementary Table S10 (40K SNP array): AVRIG34920, chromosome 7B, 538,879,353 bp, traits IND23G,DS23G
+PM6-074	BS00059062_51	7B	545.991407	57.72-71.34	Supplementary Table S10 (90K SNP array): BS00059062_51, chromosome 7B, 545,991,407 bp, traits DS23G,IND23G
+PM6-075	Ku_c25310_780	7B	642.48236		Supplementary Table S10 (90K SNP array): Ku_c25310_780, chromosome 7B, 642,482,360 bp, traits FDK23G
+PM6-076	AVRIG35849	7D	610.82089		Supplementary Table S10 (40K SNP array): AVRIG35849, chromosome 7D, 610,820,890 bp, traits FDK23G
