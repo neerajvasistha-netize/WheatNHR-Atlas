@@ -1,0 +1,35 @@
+id	marker	chr	peak_Mb_v1.0	evidence
+MM6-001	scaffold144365_794065	1B	15.829654	Supplementary Table S10: race HKHJC, scaffold144365_794065, chromosome 1B, 15,829,654 bp; status: Likely novel
+MM6-002	scaffold2823_6130171	1B	66.533346	Supplementary Table S10: race HKHJC, scaffold2823_6130171, chromosome 1B, 66,533,346 bp; status: Likely novel
+MM6-003	scaffold114299_6058218	2B	733.588746	Supplementary Table S10: race HKHJC, scaffold114299_6058218, chromosome 2B, 733,588,746 bp; status: QSr.rwg-2B.2
+MM6-004	scaffold15984_587285	3B	738.157635	Supplementary Table S10: race HKHJC, scaffold15984_587285, chromosome 3B, 738,157,635 bp; status: Likely novel
+MM6-005	scaffold10946_2139297	3B	13.453166	Supplementary Table S10: race HKHJC, scaffold10946_2139297, chromosome 3B, 13,453,166 bp; status: QSr.spa-3B.1
+MM6-006	scaffold46719_1994684	5A	693.120402	Supplementary Table S10: race HKHJC, scaffold46719_1994684, chromosome 5A, 693,120,402 bp; status: QSr.ipbb-5A.2
+MM6-007	scaffold110343_307900	5D	372.921081	Supplementary Table S10: race HKHJC, scaffold110343_307900, chromosome 5D, 372,921,081 bp; status: Likely novel
+MM6-008	scaffold96545_1167623	7B	13.885084	Supplementary Table S10: race HKHJC, scaffold96545_1167623, chromosome 7B, 13,885,084 bp; status: Likely novel
+MM6-009	scaffold125778_4692448	1B	9.199864	Supplementary Table S10: race LBBLC, scaffold125778_4692448, chromosome 1B, 9,199,864 bp; status: Likely novel
+MM6-010	scaffold114299_6058918	2B	733.589445	Supplementary Table S10: race LBBLC, scaffold114299_6058918, chromosome 2B, 733,589,445 bp; status: QSr.rwg-2B.2
+MM6-011	scaffold121348_6208883	5A	437.426929	Supplementary Table S10: race LBBLC, scaffold121348_6208883, chromosome 5A, 437,426,929 bp; status: Likely novel
+MM6-012	scaffold75176_495545	6B	575.493234	Supplementary Table S10: race LBBLC, scaffold75176_495545, chromosome 6B, 575,493,234 bp; status: Likely novel
+MM6-013	scaffold81933-2_98322	6D	454.81357	Supplementary Table S10: race LBBLC, scaffold81933-2_98322, chromosome 6D, 454,813,570 bp; status: Likely novel
+MM6-014	scaffold35254_29932899	1A	464.449945	Supplementary Table S10: race QFCSC, scaffold35254_29932899, chromosome 1A, 464,449,945 bp; status: Likely novel
+MM6-015	scaffold3971_698450	2B	576.997508	Supplementary Table S10: race QFCSC, scaffold3971_698450, chromosome 2B, 576,997,508 bp; status: Likely novel
+MM6-016	scaffold130853_960617	2B	256.06427	Supplementary Table S10: race QFCSC, scaffold130853_960617, chromosome 2B, 256,064,270 bp; status: Likely novel
+MM6-017	scaffold131852_4779657	2B	755.860934	Supplementary Table S10: race QFCSC, scaffold131852_4779657, chromosome 2B, 755,860,934 bp; status: QSr.rwg-2B.2
+MM6-018	scaffold57495_3377957	2B	757.038858	Supplementary Table S10: race QFCSC, scaffold57495_3377957, chromosome 2B, 757,038,858 bp; status: QSr.rwg-2B.2
+MM6-019	scaffold121910_9401824	2B	691.231473	Supplementary Table S10: race QFCSC, scaffold121910_9401824, chromosome 2B, 691,231,473 bp; status: Sr9h
+MM6-020	scaffold112878_6407036	2B	458.31258	Supplementary Table S10: race QFCSC, scaffold112878_6407036, chromosome 2B, 458,312,580 bp; status: Likely novel
+MM6-021	scaffold66179_989100	4A	751.827346	Supplementary Table S10: race QFCSC, scaffold66179_989100, chromosome 4A, 751,827,346 bp; status: not provided by the literature
+MM6-022	scaffold151695_496792	6B	725.396929	Supplementary Table S10: race QFCSC, scaffold151695_496792, chromosome 6B, 725,396,929 bp; status: not provided by the literature
+MM6-023	scaffold58591_872369	6D	487.736153	Supplementary Table S10: race QFCSC, scaffold58591_872369, chromosome 6D, 487,736,153 bp; status: Likely novel
+MM6-024	scaffold96044_884439	7A	725.73313	Supplementary Table S10: race QFCSC, scaffold96044_884439, chromosome 7A, 725,733,130 bp; status: Qsr.ace-7A2
+MM6-025	scaffold145719_3415472	1B	75.661071	Supplementary Table S10: race TMLKC, scaffold145719_3415472, chromosome 1B, 75,661,071 bp; status: Likely novel
+MM6-026	scaffold127133_122545	2B	32.930043	Supplementary Table S10: race TMLKC, scaffold127133_122545, chromosome 2B, 32,930,043 bp; status: QSr.rwg-2B.1
+MM6-027	scaffold13731-2_15585291	2B	464.840463	Supplementary Table S10: race TMLKC, scaffold13731-2_15585291, chromosome 2B, 464,840,463 bp; status: not provided by the literature
+MM6-028	scaffold123840_9779843	3B	541.622631	Supplementary Table S10: race TMLKC, scaffold123840_9779843, chromosome 3B, 541,622,631 bp; status: QSr.cdl-3B.2
+MM6-029	scaffold52930-1_2658441	3D	562.033236	Supplementary Table S10: race TMLKC, scaffold52930-1_2658441, chromosome 3D, 562,033,236 bp; status: Likely novel
+MM6-030	scaffold103506_971006	6A	3.514391	Supplementary Table S10: race TMLKC, scaffold103506_971006, chromosome 6A, 3,514,391 bp; status: QSr.ufs-6A
+MM6-031	scaffold72659_3079020	6A	459.202437	Supplementary Table S10: race TMLKC, scaffold72659_3079020, chromosome 6A, 459,202,437 bp; status: Likely novel
+MM6-032	scaffold8141_31629	6A	561.393015	Supplementary Table S10: race TMLKC, scaffold8141_31629, chromosome 6A, 561,393,015 bp; status: Likely novel
+MM6-033	scaffold50714_92239	7A	29.5917	Supplementary Table S10: race TMLKC, scaffold50714_92239, chromosome 7A, 29,591,700 bp; status: QSr.umn.7A
+MM6-034	scaffold23356_1911936	7D	447.220279	Supplementary Table S10: race TMLKC, scaffold23356_1911936, chromosome 7D, 447,220,279 bp; status: Likely novel
