@@ -1,0 +1,235 @@
+id	name	chr	start	end	lead_SNP_Mb	pve_%	evidence
+WJ6-001	Q1A_23.34_23.49	1A	23.34	23.49	23.348272	14.4	Supplemental Table 4: Q1A_23.34_23.49, Chr1A, SEQ, lead SNP Chr1A_23348272 (-log10 P 9.87), Additive model; Exp I; environments BOH2013
+WJ6-002	Q1A_504.96_505.61	1A	504.96	505.61	504.965068	4.7	Supplemental Table 4: Q1A_504.96_505.61, Chr1A, MEQ, lead SNP Chr1A_504965068 (-log10 P 9.04), Additive model; Exp III; environments CLA2018, Main, SEL2018
+WJ6-003	Q1A_510.74	1A			510.741521	3.0	Supplemental Table 4: Q1A_510.74, Chr1A, SEQ, lead SNP Chr1A_510741521 (-log10 P 8.27), Joint model; Exp III; environments SEL2018
+WJ6-004	Q1A_542.97_543.81	1A	542.97	543.81	543.58909	1.7	Supplemental Table 4: Q1A_542.97_543.81, Chr1A, SEQ, lead SNP Chr1A_543589090 (-log10 P 8.63), Joint model; Exp III; environments SEL2018
+WJ6-005	Q1A_569.35_569.81	1A	569.35	569.81	569.355125	0.3	Supplemental Table 4: Q1A_569.35_569.81, Chr1A, SEQ, lead SNP Chr1A_569355125 (-log10 P 7.44), Dominance model; Exp III; environments SEL2018
+WJ6-006	Q1A_586.55	1A			586.550533	11.9	Supplemental Table 4: Q1A_586.55, Chr1A, SEQ, lead SNP Chr1A_586550533 (-log10 P 9.96), Dominance model; Exp I; environments Main, ROS2012
+WJ6-007	Q1A_591.41_598.62	1A	591.41	598.62	596.91137	5.0	Supplemental Table 4: Q1A_591.41_598.62, Chr1A, MEQ, lead SNP Chr1A_596911370 (-log10 P 10.98), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-008	Q1B_55.67_101.14	1B	55.67	101.14	101.147476	6.2	Supplemental Table 4: Q1B_55.67_101.14, Chr1B, SEQ, lead SNP Chr1B_101147476 (-log10 P 7.46), Joint model; Exp I; environments BOH2013
+WJ6-009	Q1B_256.03_274.30	1B	256.03	274.3	274.306807	5.8	Supplemental Table 4: Q1B_256.03_274.30, Chr1B, SEQ, lead SNP Chr1B_274306807 (-log10 P 7.68), Joint model; Exp I; environments BOH2013
+WJ6-010	Q1B_362.74_365.86	1B	362.74	365.86	362.74638	7.1	Supplemental Table 4: Q1B_362.74_365.86, Chr1B, SEQ, lead SNP Chr1B_362746380 (-log10 P 7.71), Joint model; Exp I, Exp II; environments BOH2013, Main
+WJ6-011	Q1B_463.21	1B			463.215012	2.5	Supplemental Table 4: Q1B_463.21, Chr1B, MEQ, lead SNP Chr1B_463215012 (-log10 P 10.27), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-012	Q1B_469.55	1B			469.553045	1.4	Supplemental Table 4: Q1B_469.55, Chr1B, SEQ, lead SNP Chr1B_469553045 (-log10 P 9.19), Joint model; Exp III; environments SEL2018
+WJ6-013	Q1B_550.75_550.97	1B	550.75	550.97	550.853616	0.8	Supplemental Table 4: Q1B_550.75_550.97, Chr1B, SEQ, lead SNP Chr1B_550853616 (-log10 P 9.29), Dominance model; Exp III; environments SEL2018
+WJ6-014	Q1B_605.30_607.80	1B	605.3	607.8	605.304302	5.2	Supplemental Table 4: Q1B_605.30_607.80, Chr1B, SEQ, lead SNP Chr1B_605304302 (-log10 P 11.50), Joint model; Exp II; environments HAD2016, Main
+WJ6-015	Q1B_650.07	1B			650.070215	1.1	Supplemental Table 4: Q1B_650.07, Chr1B, SEQ, lead SNP Chr1B_650070215 (-log10 P 7.75), Dominance model; Exp II; environments HAD2016
+WJ6-016	Q1B_670.70	1B			670.708629	4.2	Supplemental Table 4: Q1B_670.70, Chr1B, SEQ, lead SNP Chr1B_670708629 (-log10 P 9.58), Joint model; Exp II; environments HAD2016
+WJ6-017	Q1D_72.20_152.06	1D	72.2	152.06	102.000363	1.7	Supplemental Table 4: Q1D_72.20_152.06, Chr1D, SEQ, lead SNP Chr1D_102000363 (-log10 P 12.69), Dominance model; Exp III; environments SEL2018
+WJ6-018	Q1D_167.44_205.48	1D	167.44	205.48	167.449207	1.4	Supplemental Table 4: Q1D_167.44_205.48, Chr1D, SEQ, lead SNP Chr1D_167449207 (-log10 P 10.89), Dominance model; Exp III; environments SEL2018
+WJ6-019	Q1D_246.76	1D			246.764547	7.0	Supplemental Table 4: Q1D_246.76, Chr1D, SEQ, lead SNP Chr1D_246764547 (-log10 P 9.07), Joint model; Exp I; environments Main
+WJ6-020	Q1D_306.23_317.76	1D	306.23	317.76	309.163205	2.3	Supplemental Table 4: Q1D_306.23_317.76, Chr1D, SEQ, lead SNP Chr1D_309163205 (-log10 P 8.79), Joint model; Exp II; environments HAD2016
+WJ6-021	Q1D_418.38_418.76	1D	418.38	418.76	418.387568	12.2	Supplemental Table 4: Q1D_418.38_418.76, Chr1D, SEQ, lead SNP Chr1D_418387568 (-log10 P 7.56), Joint model; Exp I; environments Main
+WJ6-022	Q1D_443.98_446.61	1D	443.98	446.61	445.877183	3.9	Supplemental Table 4: Q1D_443.98_446.61, Chr1D, SEQ, lead SNP Chr1D_445877183 (-log10 P 8.04), Additive model; Exp III; environments SEL2018
+WJ6-023	Q1D_463.40	1D			463.404782	1.4	Supplemental Table 4: Q1D_463.40, Chr1D, SEQ, lead SNP Chr1D_463404782 (-log10 P 7.18), Joint model; Exp III; environments CLA2018
+WJ6-024	Q2A_0.81_16.91	2A	0.81	16.91	16.914782	10.8	Supplemental Table 4: Q2A_0.81_16.91, Chr2A, SEQ, lead SNP Chr2A_16914782 (-log10 P 12.15), Additive model; Exp II; environments ROS2016
+WJ6-025	Q2A_3.00	2A			3.003534	2.0	Supplemental Table 4: Q2A_3.00, Chr2A, SEQ, lead SNP Chr2A_3003534 (-log10 P 7.49), Joint model; Exp II; environments HAD2016
+WJ6-026	Q2A_5.69_9.49	2A	5.69	9.49	5.695956	19.0	Supplemental Table 4: Q2A_5.69_9.49, Chr2A, MEQ, lead SNP Chr2A_5695956 (-log10 P 15.00), Joint model; Exp I; environments BOH2013, HAD2012, Main, ROS2012
+WJ6-027	Q2A_16.91	2A			16.91194	7.9	Supplemental Table 4: Q2A_16.91, Chr2A, SEQ, lead SNP Chr2A_16911940 (-log10 P 7.73), Joint model; Exp I; environments Main, ROS2012
+WJ6-028	Q2A_22.27_22.38	2A	22.27	22.38	22.277922	3.1	Supplemental Table 4: Q2A_22.27_22.38, Chr2A, SEQ, lead SNP Chr2A_22277922 (-log10 P 7.80), Additive model; Exp II; environments ROS2016
+WJ6-029	Q2A_22.27_36.52	2A	22.27	36.52	36.441786	6.3	Supplemental Table 4: Q2A_22.27_36.52, Chr2A, SEQ, lead SNP Chr2A_36441786 (-log10 P 8.28), Joint model; Exp II; environments ROS2016
+WJ6-030	Q2A_29.72_31.86	2A	29.72	31.86	31.865058	13.1	Supplemental Table 4: Q2A_29.72_31.86, Chr2A, SEQ, lead SNP Chr2A_31865058 (-log10 P 7.38), Joint model; Exp I; environments Main
+WJ6-031	Q2A_34.86_34.96	2A	34.86	34.96	34.964831	4.2	Supplemental Table 4: Q2A_34.86_34.96, Chr2A, SEQ, lead SNP Chr2A_34964831 (-log10 P 9.78), Joint model; Exp II; environments HAD2016, Main
+WJ6-032	Q2A_36.35_36.40	2A	36.35	36.4	36.402876	10.3	Supplemental Table 4: Q2A_36.35_36.40, Chr2A, SEQ, lead SNP Chr2A_36402876 (-log10 P 8.36), Additive model; Exp I; environments BOH2013
+WJ6-033	Q2A_39.71	2A			39.718492	5.4	Supplemental Table 4: Q2A_39.71, Chr2A, SEQ, lead SNP Chr2A_39718492 (-log10 P 8.80), Joint model; Exp II; environments HAD2016
+WJ6-034	Q2A_39.72_39.73	2A	39.72	39.73	39.729559	3.2	Supplemental Table 4: Q2A_39.72_39.73, Chr2A, MEQ, lead SNP Chr2A_39729559 (-log10 P 8.59), Additive model; Exp III; environments CLA2018, SEL2018
+WJ6-035	Q2A_40.76	2A			40.761625	8.8	Supplemental Table 4: Q2A_40.76, Chr2A, SEQ, lead SNP Chr2A_40761625 (-log10 P 7.76), Joint model; Exp I; environments ROS2012
+WJ6-036	Q2A_43.01	2A			43.012414	0.7	Supplemental Table 4: Q2A_43.01, Chr2A, SEQ, lead SNP Chr2A_43012414 (-log10 P 7.26), Joint model; Exp III; environments SEL2018
+WJ6-037	Q2A_45.33_56.31	2A	45.33	56.31	54.154387	22.7	Supplemental Table 4: Q2A_45.33_56.31, Chr2A, MEQ, lead SNP Chr2A_54154387 (-log10 P 24.57), Joint model; Exp I; environments BOH2013, HAD2012, HAR2012, Main, ROS2012
+WJ6-038	Q2A_53.45	2A			53.457116	22.1	Supplemental Table 4: Q2A_53.45, Chr2A, MEQ, lead SNP Chr2A_53457116 (-log10 P 11.27), Joint model; Exp I; environments BOH2013, HAD2012, Main
+WJ6-039	Q2A_62.21_62.58	2A	62.21	62.58	62.581873	14.9	Supplemental Table 4: Q2A_62.21_62.58, Chr2A, MEQ, lead SNP Chr2A_62581873 (-log10 P 13.36), Joint model; Exp I; environments BOH2013, HAD2012, Main, ROS2012
+WJ6-040	Q2A_75.08_75.50	2A	75.08	75.5	75.084895	9.0	Supplemental Table 4: Q2A_75.08_75.50, Chr2A, MEQ, lead SNP Chr2A_75084895 (-log10 P 9.86), Joint model; Exp II; environments ASE2016, HAD2016, Main
+WJ6-041	Q2A_75.52	2A			75.521538	0.9	Supplemental Table 4: Q2A_75.52, Chr2A, SEQ, lead SNP Chr2A_75521538 (-log10 P 7.23), Joint model; Exp II; environments HAD2016
+WJ6-042	Q2A_84.16_87.46	2A	84.16	87.46	87.463811	16.7	Supplemental Table 4: Q2A_84.16_87.46, Chr2A, SEQ, lead SNP Chr2A_87463811 (-log10 P 8.32), Joint model; Exp I; environments Main
+WJ6-043	Q2A_606.44	2A			606.441386	1.2	Supplemental Table 4: Q2A_606.44, Chr2A, SEQ, lead SNP Chr2A_606441386 (-log10 P 7.14), Joint model; Exp III; environments SEL2018
+WJ6-044	Q2A_606.99_607.19	2A	606.99	607.19	606.998944	15.6	Supplemental Table 4: Q2A_606.99_607.19, Chr2A, SEQ, lead SNP Chr2A_606998944 (-log10 P 8.35), Joint model; Exp I; environments Main, ROS2012
+WJ6-045	Q2A_623.65	2A			623.656727	0.4	Supplemental Table 4: Q2A_623.65, Chr2A, SEQ, lead SNP Chr2A_623656727 (-log10 P 7.41), Dominance model; Exp III; environments SEL2018
+WJ6-046	Q2A_685.23_689.92	2A	685.23	689.92	689.198862	15.6	Supplemental Table 4: Q2A_685.23_689.92, Chr2A, MEQ, lead SNP Chr2A_689198862 (-log10 P 9.01), Joint model; Exp I; environments BOH2013, HAD2012, Main
+WJ6-047	Q2A_686.50_690.14	2A	686.5	690.14	686.504807	13.1	Supplemental Table 4: Q2A_686.50_690.14, Chr2A, SEQ, lead SNP Chr2A_686504807 (-log10 P 9.61), Joint model; Exp I; environments BOH2013, Main
+WJ6-048	Q2A_706.06_706.69	2A	706.06	706.69	706.065458	1.4	Supplemental Table 4: Q2A_706.06_706.69, Chr2A, SEQ, lead SNP Chr2A_706065458 (-log10 P 7.69), Dominance model; Exp I; environments ROS2012
+WJ6-049	Q2A_737.51	2A			737.511621	1.4	Supplemental Table 4: Q2A_737.51, Chr2A, SEQ, lead SNP Chr2A_737511621 (-log10 P 7.64), Dominance model; Exp III; environments SEL2018
+WJ6-050	Q2A_747.88	2A			747.887707	12.5	Supplemental Table 4: Q2A_747.88, Chr2A, SEQ, lead SNP Chr2A_747887707 (-log10 P 7.25), Joint model; Exp I; environments Main
+WJ6-051	Q2A_784.84	2A			784.849083	4.5	Supplemental Table 4: Q2A_784.84, Chr2A, MEQ, lead SNP Chr2A_784849083 (-log10 P 8.08), Additive model; Exp III; environments CLA2018, SEL2018
+WJ6-052	Q2B_8.09_26.68	2B	8.09	26.68	26.680735	18.3	Supplemental Table 4: Q2B_8.09_26.68, Chr2B, MEQ, lead SNP Chr2B_26680735 (-log10 P 14.52), Joint model; Exp I; environments HAD2012, Main, ROS2012
+WJ6-053	Q2B_30.42	2B			30.421291	0.3	Supplemental Table 4: Q2B_30.42, Chr2B, SEQ, lead SNP Chr2B_30421291 (-log10 P 7.94), Dominance model; Exp III; environments SEL2018
+WJ6-054	Q2B_31.87	2B			31.879545	3.9	Supplemental Table 4: Q2B_31.87, Chr2B, SEQ, lead SNP Chr2B_31879545 (-log10 P 7.93), Joint model; Exp III; environments SEL2018
+WJ6-055	Q2B_32.95_33.74	2B	32.95	33.74	33.610827	9.2	Supplemental Table 4: Q2B_32.95_33.74, Chr2B, SEQ, lead SNP Chr2B_33610827 (-log10 P 8.79), Joint model; Exp I; environments Main, ROS2012
+WJ6-056	Q2B_77.15_82.39	2B	77.15	82.39	79.730523	1.6	Supplemental Table 4: Q2B_77.15_82.39, Chr2B, SEQ, lead SNP Chr2B_79730523 (-log10 P 8.96), Joint model; Exp III; environments SEL2018
+WJ6-057	Q2B_103.73_104.20	2B	103.73	104.2	104.202039	9.1	Supplemental Table 4: Q2B_103.73_104.20, Chr2B, SEQ, lead SNP Chr2B_104202039 (-log10 P 7.76), Joint model; Exp I; environments Main
+WJ6-058	Q2B_164.45_169.31	2B	164.45	169.31	168.0273	5.1	Supplemental Table 4: Q2B_164.45_169.31, Chr2B, MEQ, lead SNP Chr2B_168027300 (-log10 P 9.22), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-059	Q2B_192.83	2B			192.831187	5.3	Supplemental Table 4: Q2B_192.83, Chr2B, SEQ, lead SNP Chr2B_192831187 (-log10 P 7.47), Joint model; Exp III; environments SEL2018
+WJ6-060	Q2B_197.36_198.01	2B	197.36	198.01	198.019486	2.4	Supplemental Table 4: Q2B_197.36_198.01, Chr2B, SEQ, lead SNP Chr2B_198019486 (-log10 P 7.33), Joint model; Exp III; environments SEL2018
+WJ6-061	Q2B_217.09	2B			217.09164	3.0	Supplemental Table 4: Q2B_217.09, Chr2B, SEQ, lead SNP Chr2B_217091640 (-log10 P 7.86), Joint model; Exp III; environments CLA2018
+WJ6-062	Q2B_239.97_250.73	2B	239.97	250.73	248.667862	3.9	Supplemental Table 4: Q2B_239.97_250.73, Chr2B, SEQ, lead SNP Chr2B_248667862 (-log10 P 7.37), Joint model; Exp III; environments SEL2018
+WJ6-063	Q2B_267.68	2B			267.685487	6.5	Supplemental Table 4: Q2B_267.68, Chr2B, SEQ, lead SNP Chr2B_267685487 (-log10 P 8.54), Joint model; Exp II; environments HAD2016
+WJ6-064	Q2B_379.90	2B			379.909914	5.5	Supplemental Table 4: Q2B_379.90, Chr2B, SEQ, lead SNP Chr2B_379909914 (-log10 P 7.52), Joint model; Exp III; environments CLA2018
+WJ6-065	Q2B_381.55_405.91	2B	381.55	405.91	405.910321	1.5	Supplemental Table 4: Q2B_381.55_405.91, Chr2B, SEQ, lead SNP Chr2B_405910321 (-log10 P 8.23), Dominance model; Exp III; environments CLA2018
+WJ6-066	Q2B_446.83_469.55	2B	446.83	469.55	460.237402	6.1	Supplemental Table 4: Q2B_446.83_469.55, Chr2B, SEQ, lead SNP Chr2B_460237402 (-log10 P 7.84), Joint model; Exp II; environments HAD2016
+WJ6-067	Q2B_580.40	2B			580.40875	2.0	Supplemental Table 4: Q2B_580.40, Chr2B, SEQ, lead SNP Chr2B_580408750 (-log10 P 7.45), Joint model; Exp III; environments SEL2018
+WJ6-068	Q2B_596.12_610.29	2B	596.12	610.29	609.487851	1.0	Supplemental Table 4: Q2B_596.12_610.29, Chr2B, SEQ, lead SNP Chr2B_609487851 (-log10 P 8.60), Joint model; Exp III; environments SEL2018
+WJ6-069	Q2B_642.58_645.49	2B	642.58	645.49	642.589419	3.0	Supplemental Table 4: Q2B_642.58_645.49, Chr2B, SEQ, lead SNP Chr2B_642589419 (-log10 P 7.99), Joint model; Exp III; environments SEL2018
+WJ6-070	Q2B_645.87_646.93	2B	645.87	646.93	645.879951	3.0	Supplemental Table 4: Q2B_645.87_646.93, Chr2B, SEQ, lead SNP Chr2B_645879951 (-log10 P 7.63), Dominance model; Exp III; environments SEL2018
+WJ6-071	Q2B_683.14	2B			683.142628	2.3	Supplemental Table 4: Q2B_683.14, Chr2B, SEQ, lead SNP Chr2B_683142628 (-log10 P 8.01), Joint model; Exp III; environments SEL2018
+WJ6-072	Q2D_121.40_139.12	2D	121.4	139.12	135.782563	4.6	Supplemental Table 4: Q2D_121.40_139.12, Chr2D, SEQ, lead SNP Chr2D_135782563 (-log10 P 9.75), Dominance model; Exp III; environments CLA2018
+WJ6-073	Q2D_170.35	2D			170.356175	7.9	Supplemental Table 4: Q2D_170.35, Chr2D, SEQ, lead SNP Chr2D_170356175 (-log10 P 7.59), Additive model; Exp II; environments ROS2016
+WJ6-074	Q2D_293.17	2D			293.175496	11.4	Supplemental Table 4: Q2D_293.17, Chr2D, SEQ, lead SNP Chr2D_293175496 (-log10 P 7.52), Joint model; Exp I; environments BOH2013
+WJ6-075	Q2D_533.15	2D			533.156873	0.6	Supplemental Table 4: Q2D_533.15, Chr2D, SEQ, lead SNP Chr2D_533156873 (-log10 P 8.16), Dominance model; Exp III; environments SEL2018
+WJ6-076	Q2D_641.47	2D			641.470651	5.8	Supplemental Table 4: Q2D_641.47, Chr2D, SEQ, lead SNP Chr2D_641470651 (-log10 P 9.93), Joint model; Exp III; environments CLA2018
+WJ6-077	Q3A_0.55_7.69	3A	0.55	7.69	1.593322	0.4	Supplemental Table 4: Q3A_0.55_7.69, Chr3A, SEQ, lead SNP Chr3A_1593322 (-log10 P 9.52), Dominance model; Exp III; environments SEL2018
+WJ6-078	Q3A_22.73	3A			22.734749	11.3	Supplemental Table 4: Q3A_22.73, Chr3A, SEQ, lead SNP Chr3A_22734749 (-log10 P 7.60), Joint model; Exp I; environments Main
+WJ6-079	Q3A_47.15_52.44	3A	47.15	52.44	47.794894	2.3	Supplemental Table 4: Q3A_47.15_52.44, Chr3A, SEQ, lead SNP Chr3A_47794894 (-log10 P 10.46), Joint model; Exp III; environments CLA2018
+WJ6-080	Q3A_521.22_522.09	3A	521.22	522.09	522.094109	1.6	Supplemental Table 4: Q3A_521.22_522.09, Chr3A, SEQ, lead SNP Chr3A_522094109 (-log10 P 7.68), Joint model; Exp III; environments SEL2018
+WJ6-081	Q3A_522.10_558.61	3A	522.1	558.61	529.482719	2.8	Supplemental Table 4: Q3A_522.10_558.61, Chr3A, MEQ, lead SNP Chr3A_529482719 (-log10 P 8.42), Joint model; Exp III; environments CLA2018, Main, SEL2018
+WJ6-082	Q3A_550.96	3A			550.962624	10.9	Supplemental Table 4: Q3A_550.96, Chr3A, SEQ, lead SNP Chr3A_550962624 (-log10 P 7.14), Additive model; Exp I; environments BOH2013
+WJ6-083	Q3A_556.81_568.29	3A	556.81	568.29	568.165521	1.4	Supplemental Table 4: Q3A_556.81_568.29, Chr3A, SEQ, lead SNP Chr3A_568165521 (-log10 P 8.01), Dominance model; Exp III; environments CLA2018
+WJ6-084	Q3A_592.71_598.84	3A	592.71	598.84	592.71855	16.4	Supplemental Table 4: Q3A_592.71_598.84, Chr3A, SEQ, lead SNP Chr3A_592718550 (-log10 P 8.46), Dominance model; Exp I; environments Main
+WJ6-085	Q3A_658.80_659.99	3A	658.8	659.99	659.983317	1.9	Supplemental Table 4: Q3A_658.80_659.99, Chr3A, SEQ, lead SNP Chr3A_659983317 (-log10 P 8.28), Joint model; Exp III; environments SEL2018
+WJ6-086	Q3A_685.57_688.52	3A	685.57	688.52	685.579523	0.6	Supplemental Table 4: Q3A_685.57_688.52, Chr3A, SEQ, lead SNP Chr3A_685579523 (-log10 P 9.56), Dominance model; Exp III; environments SEL2018
+WJ6-087	Q3A_704.87	3A			704.870187	0.8	Supplemental Table 4: Q3A_704.87, Chr3A, SEQ, lead SNP Chr3A_704870187 (-log10 P 8.25), Joint model; Exp III; environments SEL2018
+WJ6-088	Q3A_711.92	3A			711.923281	1.3	Supplemental Table 4: Q3A_711.92, Chr3A, SEQ, lead SNP Chr3A_711923281 (-log10 P 7.28), Joint model; Exp III; environments SEL2018
+WJ6-089	Q3A_729.83_730.04	3A	729.83	730.04	729.837051	4.4	Supplemental Table 4: Q3A_729.83_730.04, Chr3A, MEQ, lead SNP Chr3A_729837051 (-log10 P 7.57), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-090	Q3B_1.60	3B			1.60471	0.1	Supplemental Table 4: Q3B_1.60, Chr3B, SEQ, lead SNP Chr3B_1604710 (-log10 P 7.60), Dominance model; Exp III; environments SEL2018
+WJ6-091	Q3B_24.50_24.72	3B	24.5	24.72	24.720725	0.5	Supplemental Table 4: Q3B_24.50_24.72, Chr3B, SEQ, lead SNP Chr3B_24720725 (-log10 P 7.56), Dominance model; Exp III; environments SEL2018
+WJ6-092	Q3B_27.89	3B			27.898711	4.1	Supplemental Table 4: Q3B_27.89, Chr3B, SEQ, lead SNP Chr3B_27898711 (-log10 P 7.32), Additive model; Exp III; environments SEL2018
+WJ6-093	Q3B_29.42	3B			29.424992	0.5	Supplemental Table 4: Q3B_29.42, Chr3B, SEQ, lead SNP Chr3B_29424992 (-log10 P 7.29), Joint model; Exp III; environments SEL2018
+WJ6-094	Q3B_40.92_41.17	3B	40.92	41.17	40.962968	7.0	Supplemental Table 4: Q3B_40.92_41.17, Chr3B, SEQ, lead SNP Chr3B_40962968 (-log10 P 9.05), Dominance model; Exp I; environments ROS2012
+WJ6-095	Q3B_42.36	3B			42.367996	0.7	Supplemental Table 4: Q3B_42.36, Chr3B, SEQ, lead SNP Chr3B_42367996 (-log10 P 7.38), Additive model; Exp III; environments SEL2018
+WJ6-096	Q3B_45.81	3B			45.813195	1.4	Supplemental Table 4: Q3B_45.81, Chr3B, SEQ, lead SNP Chr3B_45813195 (-log10 P 7.85), Joint model; Exp III; environments SEL2018
+WJ6-097	Q3B_141.49	3B			141.499023	1.7	Supplemental Table 4: Q3B_141.49, Chr3B, SEQ, lead SNP Chr3B_141499023 (-log10 P 7.28), Dominance model; Exp II; environments HAD2016
+WJ6-098	Q3B_336.20	3B			336.209783	0.9	Supplemental Table 4: Q3B_336.20, Chr3B, SEQ, lead SNP Chr3B_336209783 (-log10 P 7.61), Joint model; Exp III; environments CLA2018
+WJ6-099	Q3D_27.99	3D			27.99783	0.7	Supplemental Table 4: Q3D_27.99, Chr3D, SEQ, lead SNP Chr3D_27997830 (-log10 P 7.32), Dominance model; Exp II; environments HAD2016
+WJ6-100	Q3D_39.95_39.99	3D	39.95	39.99	39.997298	5.0	Supplemental Table 4: Q3D_39.95_39.99, Chr3D, SEQ, lead SNP Chr3D_39997298 (-log10 P 7.69), Joint model; Exp II; environments ROS2016
+WJ6-101	Q3D_44.11	3D			44.110323	2.1	Supplemental Table 4: Q3D_44.11, Chr3D, SEQ, lead SNP Chr3D_44110323 (-log10 P 7.98), Joint model; Exp III; environments SEL2018
+WJ6-102	Q3D_132.51_133.90	3D	132.51	133.9	132.519708	9.6	Supplemental Table 4: Q3D_132.51_133.90, Chr3D, SEQ, lead SNP Chr3D_132519708 (-log10 P 7.14), Joint model; Exp I; environments Main
+WJ6-103	Q3D_460.43_461.36	3D	460.43	461.36	461.366922	1.5	Supplemental Table 4: Q3D_460.43_461.36, Chr3D, SEQ, lead SNP Chr3D_461366922 (-log10 P 7.91), Joint model; Exp II; environments HAD2016
+WJ6-104	Q3D_482.70	3D			482.706375	1.6	Supplemental Table 4: Q3D_482.70, Chr3D, SEQ, lead SNP Chr3D_482706375 (-log10 P 7.92), Joint model; Exp III; environments SEL2018
+WJ6-105	Q3D_511.91_517.48	3D	511.91	517.48	511.911898	15.0	Supplemental Table 4: Q3D_511.91_517.48, Chr3D, MEQ, lead SNP Chr3D_511911898 (-log10 P 9.62), Joint model; Exp I; environments BOH2013, HAD2012, Main
+WJ6-106	Q3D_517.61_525.72	3D	517.61	525.72	524.431397	19.9	Supplemental Table 4: Q3D_517.61_525.72, Chr3D, SEQ, lead SNP Chr3D_524431397 (-log10 P 10.22), Joint model; Exp I; environments Main
+WJ6-107	Q3D_524.05_538.35	3D	524.05	538.35	538.35492	12.7	Supplemental Table 4: Q3D_524.05_538.35, Chr3D, SEQ, lead SNP Chr3D_538354920 (-log10 P 10.07), Additive model; Exp I; environments BOH2013, Main
+WJ6-108	Q3D_536.62	3D			536.62421	10.8	Supplemental Table 4: Q3D_536.62, Chr3D, SEQ, lead SNP Chr3D_536624210 (-log10 P 8.15), Joint model; Exp I; environments BOH2013, Main
+WJ6-109	Q3D_556.53	3D			556.531361	1.8	Supplemental Table 4: Q3D_556.53, Chr3D, SEQ, lead SNP Chr3D_556531361 (-log10 P 8.16), Dominance model; Exp III; environments SEL2018
+WJ6-110	Q3D_565.07_568.39	3D	565.07	568.39	568.396033	2.3	Supplemental Table 4: Q3D_565.07_568.39, Chr3D, SEQ, lead SNP Chr3D_568396033 (-log10 P 7.76), Joint model; Exp III; environments CLA2018
+WJ6-111	Q3D_594.62	3D			594.624476	10.8	Supplemental Table 4: Q3D_594.62, Chr3D, SEQ, lead SNP Chr3D_594624476 (-log10 P 8.33), Joint model; Exp I; environments Main
+WJ6-112	Q4A_45.71	4A			45.713501	0.3	Supplemental Table 4: Q4A_45.71, Chr4A, SEQ, lead SNP Chr4A_45713501 (-log10 P 7.12), Dominance model; Exp III; environments SEL2018
+WJ6-113	Q4A_155.54	4A			155.545371	7.1	Supplemental Table 4: Q4A_155.54, Chr4A, MEQ, lead SNP Chr4A_155545371 (-log10 P 8.32), Joint model; Exp II; environments HAD2016, ROS2016
+WJ6-114	Q4A_371.78	4A			371.782585	0.7	Supplemental Table 4: Q4A_371.78, Chr4A, SEQ, lead SNP Chr4A_371782585 (-log10 P 7.45), Dominance model; Exp III; environments SEL2018
+WJ6-115	Q4A_481.30_486.38	4A	481.3	486.38	481.304479	5.0	Supplemental Table 4: Q4A_481.30_486.38, Chr4A, SEQ, lead SNP Chr4A_481304479 (-log10 P 8.24), Joint model; Exp II; environments HAD2016
+WJ6-116	Q4A_612.43_612.88	4A	612.43	612.88	612.880765	8.7	Supplemental Table 4: Q4A_612.43_612.88, Chr4A, SEQ, lead SNP Chr4A_612880765 (-log10 P 7.97), Joint model; Exp I; environments BOH2013
+WJ6-117	Q4A_675.95	4A			675.950629	0.3	Supplemental Table 4: Q4A_675.95, Chr4A, SEQ, lead SNP Chr4A_675950629 (-log10 P 7.13), Dominance model; Exp II; environments HAD2016
+WJ6-118	Q4A_682.66	4A			682.668573	0.8	Supplemental Table 4: Q4A_682.66, Chr4A, SEQ, lead SNP Chr4A_682668573 (-log10 P 7.25), Dominance model; Exp III; environments CLA2018
+WJ6-119	Q4A_733.55_734.14	4A	733.55	734.14	734.148947	0.6	Supplemental Table 4: Q4A_733.55_734.14, Chr4A, MEQ, lead SNP Chr4A_734148947 (-log10 P 8.09), Additive model; Exp III; environments CLA2018, SEL2018
+WJ6-120	Q4B_6.39	4B			6.392709	0.3	Supplemental Table 4: Q4B_6.39, Chr4B, SEQ, lead SNP Chr4B_6392709 (-log10 P 7.14), Dominance model; Exp II; environments HAD2016
+WJ6-121	Q4B_14.25	4B			14.255488	1.5	Supplemental Table 4: Q4B_14.25, Chr4B, SEQ, lead SNP Chr4B_14255488 (-log10 P 7.56), Joint model; Exp III; environments SEL2018
+WJ6-122	Q4B_28.53_28.59	4B	28.53	28.59	28.591185	8.2	Supplemental Table 4: Q4B_28.53_28.59, Chr4B, SEQ, lead SNP Chr4B_28591185 (-log10 P 7.68), Additive model; Exp I; environments BOH2013
+WJ6-123	Q4B_42.24	4B			42.246507	0.2	Supplemental Table 4: Q4B_42.24, Chr4B, SEQ, lead SNP Chr4B_42246507 (-log10 P 7.21), Dominance model; Exp III; environments SEL2018
+WJ6-124	Q4B_66.23	4B			66.237902	0.5	Supplemental Table 4: Q4B_66.23, Chr4B, SEQ, lead SNP Chr4B_66237902 (-log10 P 7.98), Dominance model; Exp III; environments SEL2018
+WJ6-125	Q4B_236.25_287.39	4B	236.25	287.39	243.241075	10.2	Supplemental Table 4: Q4B_236.25_287.39, Chr4B, SEQ, lead SNP Chr4B_243241075 (-log10 P 8.88), Dominance model; Exp I; environments Main, ROS2012
+WJ6-126	Q4B_289.30_385.61	4B	289.3	385.61	339.566795	10.6	Supplemental Table 4: Q4B_289.30_385.61, Chr4B, SEQ, lead SNP Chr4B_339566795 (-log10 P 9.48), Dominance model; Exp I; environments Main, ROS2012
+WJ6-127	Q4B_391.79_403.14	4B	391.79	403.14	402.745473	10.6	Supplemental Table 4: Q4B_391.79_403.14, Chr4B, SEQ, lead SNP Chr4B_402745473 (-log10 P 9.48), Dominance model; Exp I; environments Main, ROS2012
+WJ6-128	Q4B_413.02_419.41	4B	413.02	419.41	413.02452	0.5	Supplemental Table 4: Q4B_413.02_419.41, Chr4B, SEQ, lead SNP Chr4B_413024520 (-log10 P 8.83), Dominance model; Exp III; environments SEL2018
+WJ6-129	Q4B_582.37_611.81	4B	582.37	611.81	611.815029	0.7	Supplemental Table 4: Q4B_582.37_611.81, Chr4B, SEQ, lead SNP Chr4B_611815029 (-log10 P 9.39), Dominance model; Exp III; environments SEL2018
+WJ6-130	Q4B_582.92_612.39	4B	582.92	612.39	601.873399	0.9	Supplemental Table 4: Q4B_582.92_612.39, Chr4B, SEQ, lead SNP Chr4B_601873399 (-log10 P 7.84), Joint model; Exp III; environments SEL2018
+WJ6-131	Q4B_645.18	4B			645.187722	0.4	Supplemental Table 4: Q4B_645.18, Chr4B, SEQ, lead SNP Chr4B_645187722 (-log10 P 7.13), Dominance model; Exp III; environments SEL2018
+WJ6-132	Q4D_16.66	4D			16.662311	3.3	Supplemental Table 4: Q4D_16.66, Chr4D, SEQ, lead SNP Chr4D_16662311 (-log10 P 7.46), Additive model; Exp I; environments BOH2013
+WJ6-133	Q4D_88.56_98.76	4D	88.56	98.76	98.768763	2.1	Supplemental Table 4: Q4D_88.56_98.76, Chr4D, SEQ, lead SNP Chr4D_98768763 (-log10 P 10.00), Dominance model; Exp III; environments CLA2018
+WJ6-134	Q4D_419.36_422.90	4D	419.36	422.9	422.072271	1.4	Supplemental Table 4: Q4D_419.36_422.90, Chr4D, SEQ, lead SNP Chr4D_422072271 (-log10 P 10.02), Dominance model; Exp III; environments SEL2018
+WJ6-135	Q4D_484.56	4D			484.560671	1.5	Supplemental Table 4: Q4D_484.56, Chr4D, SEQ, lead SNP Chr4D_484560671 (-log10 P 9.67), Dominance model; Exp II; environments HAD2016
+WJ6-136	Q4D_498.92	4D			498.924248	11.8	Supplemental Table 4: Q4D_498.92, Chr4D, SEQ, lead SNP Chr4D_498924248 (-log10 P 10.01), Dominance model; Exp I; environments Main, ROS2012
+WJ6-137	Q5A_14.90	5A			14.906608	2.2	Supplemental Table 4: Q5A_14.90, Chr5A, SEQ, lead SNP Chr5A_14906608 (-log10 P 7.91), Dominance model; Exp II; environments HAD2016
+WJ6-138	Q5A_327.26_342.15	5A	327.26	342.15	328.119207	12.2	Supplemental Table 4: Q5A_327.26_342.15, Chr5A, SEQ, lead SNP Chr5A_328119207 (-log10 P 10.04), Joint model; Exp I; environments BOH2013
+WJ6-139	Q5A_528.58_531.53	5A	528.58	531.53	531.53936	1.7	Supplemental Table 4: Q5A_528.58_531.53, Chr5A, SEQ, lead SNP Chr5A_531539360 (-log10 P 7.53), Additive model; Exp III; environments SEL2018
+WJ6-140	Q5A_531.25	5A			531.255811	0.4	Supplemental Table 4: Q5A_531.25, Chr5A, SEQ, lead SNP Chr5A_531255811 (-log10 P 7.21), Dominance model; Exp II; environments HAD2016
+WJ6-141	Q5A_536.95_540.46	5A	536.95	540.46	539.618719	0.9	Supplemental Table 4: Q5A_536.95_540.46, Chr5A, SEQ, lead SNP Chr5A_539618719 (-log10 P 12.74), Dominance model; Exp III; environments SEL2018
+WJ6-142	Q5A_545.11	5A			545.117227	0.2	Supplemental Table 4: Q5A_545.11, Chr5A, SEQ, lead SNP Chr5A_545117227 (-log10 P 7.12), Joint model; Exp III; environments SEL2018
+WJ6-143	Q5A_558.45	5A			558.456809	2.7	Supplemental Table 4: Q5A_558.45, Chr5A, SEQ, lead SNP Chr5A_558456809 (-log10 P 7.30), Joint model; Exp II; environments HAD2016
+WJ6-144	Q5A_588.62_593.18	5A	588.62	593.18	590.545435	14.3	Supplemental Table 4: Q5A_588.62_593.18, Chr5A, SEQ, lead SNP Chr5A_590545435 (-log10 P 8.25), Joint model; Exp I; environments Main
+WJ6-145	Q5A_599.78	5A			599.781918	0.3	Supplemental Table 4: Q5A_599.78, Chr5A, SEQ, lead SNP Chr5A_599781918 (-log10 P 7.69), Joint model; Exp III; environments SEL2018
+WJ6-146	Q5A_628.21_632.59	5A	628.21	632.59	630.797934	4.1	Supplemental Table 4: Q5A_628.21_632.59, Chr5A, SEQ, lead SNP Chr5A_630797934 (-log10 P 9.56), Additive model; Exp II; environments HAD2016
+WJ6-147	Q5A_664.82_664.95	5A	664.82	664.95	664.958396	15.3	Supplemental Table 4: Q5A_664.82_664.95, Chr5A, SEQ, lead SNP Chr5A_664958396 (-log10 P 7.78), Joint model; Exp I; environments BOH2013, Main
+WJ6-148	Q5A_681.81	5A			681.810963	1.5	Supplemental Table 4: Q5A_681.81, Chr5A, SEQ, lead SNP Chr5A_681810963 (-log10 P 7.68), Additive model; Exp III; environments SEL2018
+WJ6-149	Q5A_682.02	5A			682.024696	1.2	Supplemental Table 4: Q5A_682.02, Chr5A, SEQ, lead SNP Chr5A_682024696 (-log10 P 7.98), Dominance model; Exp III; environments SEL2018
+WJ6-150	Q5A_701.76	5A			701.767739	2.7	Supplemental Table 4: Q5A_701.76, Chr5A, SEQ, lead SNP Chr5A_701767739 (-log10 P 7.13), Joint model; Exp II; environments HAD2016
+WJ6-151	Q5B_46.65	5B			46.657238	12.5	Supplemental Table 4: Q5B_46.65, Chr5B, SEQ, lead SNP Chr5B_46657238 (-log10 P 8.23), Joint model; Exp I; environments Main
+WJ6-152	Q5B_407.74	5B			407.744201	0.9	Supplemental Table 4: Q5B_407.74, Chr5B, SEQ, lead SNP Chr5B_407744201 (-log10 P 7.57), Dominance model; Exp III; environments SEL2018
+WJ6-153	Q5B_455.96	5B			455.964496	0.4	Supplemental Table 4: Q5B_455.96, Chr5B, SEQ, lead SNP Chr5B_455964496 (-log10 P 7.77), Dominance model; Exp III; environments SEL2018
+WJ6-154	Q5B_458.74	5B			458.741823	1.3	Supplemental Table 4: Q5B_458.74, Chr5B, SEQ, lead SNP Chr5B_458741823 (-log10 P 9.03), Dominance model; Exp III; environments SEL2018
+WJ6-155	Q5B_550.07_550.47	5B	550.07	550.47	550.471744	3.7	Supplemental Table 4: Q5B_550.07_550.47, Chr5B, SEQ, lead SNP Chr5B_550471744 (-log10 P 7.41), Additive model; Exp III; environments SEL2018
+WJ6-156	Q5B_647.71	5B			647.717024	1.8	Supplemental Table 4: Q5B_647.71, Chr5B, SEQ, lead SNP Chr5B_647717024 (-log10 P 7.71), Dominance model; Exp III; environments CLA2018
+WJ6-157	Q5B_661.07_661.39	5B	661.07	661.39	661.075042	8.7	Supplemental Table 4: Q5B_661.07_661.39, Chr5B, SEQ, lead SNP Chr5B_661075042 (-log10 P 7.27), Joint model; Exp I; environments BOH2013, Main
+WJ6-158	Q5D_8.72	5D			8.726309	0.3	Supplemental Table 4: Q5D_8.72, Chr5D, SEQ, lead SNP Chr5D_8726309 (-log10 P 7.29), Dominance model; Exp II; environments HAD2016
+WJ6-159	Q5D_33.24	5D			33.24716	5.4	Supplemental Table 4: Q5D_33.24, Chr5D, SEQ, lead SNP Chr5D_33247160 (-log10 P 8.13), Joint model; Exp III; environments CLA2018
+WJ6-160	Q5D_328.10_334.66	5D	328.1	334.66	328.100684	9.8	Supplemental Table 4: Q5D_328.10_334.66, Chr5D, SEQ, lead SNP Chr5D_328100684 (-log10 P 10.19), Joint model; Exp II; environments ASE2016
+WJ6-161	Q5D_408.40_412.49	5D	408.4	412.49	408.408312	4.9	Supplemental Table 4: Q5D_408.40_412.49, Chr5D, SEQ, lead SNP Chr5D_408408312 (-log10 P 9.72), Joint model; Exp I; environments BOH2013
+WJ6-162	Q5D_430.93	5D			430.932903	1.0	Supplemental Table 4: Q5D_430.93, Chr5D, SEQ, lead SNP Chr5D_430932903 (-log10 P 8.49), Joint model; Exp III; environments SEL2018
+WJ6-163	Q5D_487.65	5D			487.659233	15.2	Supplemental Table 4: Q5D_487.65, Chr5D, SEQ, lead SNP Chr5D_487659233 (-log10 P 10.26), Dominance model; Exp I; environments Main
+WJ6-164	Q5D_497.87_498.52	5D	497.87	498.52	497.875875	10.8	Supplemental Table 4: Q5D_497.87_498.52, Chr5D, SEQ, lead SNP Chr5D_497875875 (-log10 P 7.96), Joint model; Exp I; environments Main, ROS2012
+WJ6-165	Q5D_516.04_522.66	5D	516.04	522.66	516.044651	0.6	Supplemental Table 4: Q5D_516.04_522.66, Chr5D, SEQ, lead SNP Chr5D_516044651 (-log10 P 8.52), Dominance model; Exp III; environments SEL2018
+WJ6-166	Q5D_555.96	5D			555.965361	1.1	Supplemental Table 4: Q5D_555.96, Chr5D, SEQ, lead SNP Chr5D_555965361 (-log10 P 7.16), Joint model; Exp II; environments HAD2016
+WJ6-167	Q6A_15.09	6A			15.099445	16.9	Supplemental Table 4: Q6A_15.09, Chr6A, MEQ, lead SNP Chr6A_15099445 (-log10 P 8.72), Joint model; Exp I; environments BOH2013, Main, ROS2012
+WJ6-168	Q6A_42.24_54.01	6A	42.24	54.01	42.249249	0.6	Supplemental Table 4: Q6A_42.24_54.01, Chr6A, SEQ, lead SNP Chr6A_42249249 (-log10 P 8.88), Dominance model; Exp III; environments SEL2018
+WJ6-169	Q6A_55.52_56.39	6A	55.52	56.39	56.265505	0.5	Supplemental Table 4: Q6A_55.52_56.39, Chr6A, SEQ, lead SNP Chr6A_56265505 (-log10 P 9.63), Dominance model; Exp III; environments SEL2018
+WJ6-170	Q6A_359.48	6A			359.48631	0.4	Supplemental Table 4: Q6A_359.48, Chr6A, SEQ, lead SNP Chr6A_359486310 (-log10 P 8.34), Dominance model; Exp III; environments SEL2018
+WJ6-171	Q6A_587.04	6A			587.045631	0.2	Supplemental Table 4: Q6A_587.04, Chr6A, SEQ, lead SNP Chr6A_587045631 (-log10 P 7.26), Dominance model; Exp II; environments HAD2016
+WJ6-172	Q6A_597.79	6A			597.791254	0.7	Supplemental Table 4: Q6A_597.79, Chr6A, SEQ, lead SNP Chr6A_597791254 (-log10 P 8.72), Dominance model; Exp III; environments SEL2018
+WJ6-173	Q6A_611.00_613.06	6A	611.0	613.06	612.858483	7.6	Supplemental Table 4: Q6A_611.00_613.06, Chr6A, MEQ, lead SNP Chr6A_612858483 (-log10 P 13.52), Joint model; Exp III; environments CLA2018, Main, SEL2018
+WJ6-174	Q6A_614.30	6A			614.309324	3.7	Supplemental Table 4: Q6A_614.30, Chr6A, SEQ, lead SNP Chr6A_614309324 (-log10 P 8.54), Joint model; Exp III; environments SEL2018
+WJ6-175	Q6A_614.50_614.57	6A	614.5	614.57	614.509512	3.7	Supplemental Table 4: Q6A_614.50_614.57, Chr6A, SEQ, lead SNP Chr6A_614509512 (-log10 P 10.22), Joint model; Exp III; environments SEL2018
+WJ6-176	Q6A_614.53	6A			614.531639	1.3	Supplemental Table 4: Q6A_614.53, Chr6A, SEQ, lead SNP Chr6A_614531639 (-log10 P 7.24), Additive model; Exp II; environments HAD2016
+WJ6-177	Q6B_42.77	6B			42.771811	0.2	Supplemental Table 4: Q6B_42.77, Chr6B, SEQ, lead SNP Chr6B_42771811 (-log10 P 7.28), Dominance model; Exp III; environments SEL2018
+WJ6-178	Q6B_50.43_50.51	6B	50.43	50.51	50.434133	8.0	Supplemental Table 4: Q6B_50.43_50.51, Chr6B, SEQ, lead SNP Chr6B_50434133 (-log10 P 8.14), Joint model; Exp I; environments BOH2013
+WJ6-179	Q6B_57.27_60.40	6B	57.27	60.4	57.273659	3.0	Supplemental Table 4: Q6B_57.27_60.40, Chr6B, SEQ, lead SNP Chr6B_57273659 (-log10 P 7.41), Joint model; Exp II; environments HAD2016
+WJ6-180	Q6B_172.01_176.37	6B	172.01	176.37	172.018892	3.1	Supplemental Table 4: Q6B_172.01_176.37, Chr6B, MEQ, lead SNP Chr6B_172018892 (-log10 P 11.46), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-181	Q6B_240.00_310.22	6B	240.0	310.22	263.183569	3.4	Supplemental Table 4: Q6B_240.00_310.22, Chr6B, MEQ, lead SNP Chr6B_263183569 (-log10 P 11.51), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-182	Q6B_469.53	6B			469.533768	0.6	Supplemental Table 4: Q6B_469.53, Chr6B, SEQ, lead SNP Chr6B_469533768 (-log10 P 7.20), Dominance model; Exp II; environments HAD2016
+WJ6-183	Q6B_470.67_523.65	6B	470.67	523.65	523.653531	10.2	Supplemental Table 4: Q6B_470.67_523.65, Chr6B, MEQ, lead SNP Chr6B_523653531 (-log10 P 14.60), Joint model; Exp I, Exp III; environments CLA2018, Main, SEL2018
+WJ6-184	Q6B_562.65	6B			562.650015	9.3	Supplemental Table 4: Q6B_562.65, Chr6B, SEQ, lead SNP Chr6B_562650015 (-log10 P 8.40), Joint model; Exp I; environments Main
+WJ6-185	Q6B_668.41_672.02	6B	668.41	672.02	671.229844	6.8	Supplemental Table 4: Q6B_668.41_672.02, Chr6B, MEQ, lead SNP Chr6B_671229844 (-log10 P 10.46), Joint model; Exp I; environments BOH2013, HAD2012, Main
+WJ6-186	Q6B_672.89	6B			672.891495	1.3	Supplemental Table 4: Q6B_672.89, Chr6B, SEQ, lead SNP Chr6B_672891495 (-log10 P 7.96), Dominance model; Exp III; environments SEL2018
+WJ6-187	Q6B_719.55	6B			719.554736	4.2	Supplemental Table 4: Q6B_719.55, Chr6B, SEQ, lead SNP Chr6B_719554736 (-log10 P 7.21), Joint model; Exp II; environments SOL2017
+WJ6-188	Q6D_2.25	6D			2.253027	0.3	Supplemental Table 4: Q6D_2.25, Chr6D, SEQ, lead SNP Chr6D_2253027 (-log10 P 7.11), Dominance model; Exp III; environments SEL2018
+WJ6-189	Q6D_438.62_441.76	6D	438.62	441.76	441.763439	1.5	Supplemental Table 4: Q6D_438.62_441.76, Chr6D, SEQ, lead SNP Chr6D_441763439 (-log10 P 7.25), Joint model; Exp III; environments SEL2018
+WJ6-190	Q7A_0.06_60.38	7A	0.06	60.38	14.223078	28.1	Supplemental Table 4: Q7A_0.06_60.38, Chr7A, MEQ, lead SNP Chr7A_14223078 (-log10 P 27.78), Joint model; Exp I; environments BOH2013, HAD2012, HAR2012, Main, ROS2012
+WJ6-191	Q7A_20.32	7A			20.320067	1.0	Supplemental Table 4: Q7A_20.32, Chr7A, SEQ, lead SNP Chr7A_20320067 (-log10 P 7.23), Dominance model; Exp I; environments BOH2013
+WJ6-192	Q7A_23.09	7A			23.099592	12.2	Supplemental Table 4: Q7A_23.09, Chr7A, SEQ, lead SNP Chr7A_23099592 (-log10 P 7.93), Joint model; Exp I; environments Main
+WJ6-193	Q7A_24.23	7A			24.237753	6.9	Supplemental Table 4: Q7A_24.23, Chr7A, SEQ, lead SNP Chr7A_24237753 (-log10 P 7.32), Joint model; Exp II; environments Main
+WJ6-194	Q7A_38.61	7A			38.616432	1.5	Supplemental Table 4: Q7A_38.61, Chr7A, SEQ, lead SNP Chr7A_38616432 (-log10 P 7.47), Joint model; Exp III; environments SEL2018
+WJ6-195	Q7A_58.27_59.90	7A	58.27	59.9	59.905617	9.3	Supplemental Table 4: Q7A_58.27_59.90, Chr7A, MEQ, lead SNP Chr7A_59905617 (-log10 P 14.76), Joint model; Exp I; environments BOH2013, HAD2012, Main, ROS2012
+WJ6-196	Q7A_58.74	7A			58.744719	18.6	Supplemental Table 4: Q7A_58.74, Chr7A, SEQ, lead SNP Chr7A_58744719 (-log10 P 8.48), Joint model; Exp I; environments BOH2013, Main
+WJ6-197	Q7A_60.09_79.65	7A	60.09	79.65	79.138982	13.8	Supplemental Table 4: Q7A_60.09_79.65, Chr7A, MEQ, lead SNP Chr7A_79138982 (-log10 P 13.83), Dominance model; Exp I; environments HAD2012, Main, ROS2012
+WJ6-198	Q7A_60.16	7A			60.162282	13.3	Supplemental Table 4: Q7A_60.16, Chr7A, SEQ, lead SNP Chr7A_60162282 (-log10 P 9.80), Joint model; Exp I; environments Main
+WJ6-199	Q7A_61.09_62.04	7A	61.09	62.04	61.168682	13.0	Supplemental Table 4: Q7A_61.09_62.04, Chr7A, SEQ, lead SNP Chr7A_61168682 (-log10 P 9.12), Joint model; Exp I; environments Main
+WJ6-200	Q7A_68.91	7A			68.912252	11.3	Supplemental Table 4: Q7A_68.91, Chr7A, SEQ, lead SNP Chr7A_68912252 (-log10 P 7.25), Joint model; Exp I; environments Main
+WJ6-201	Q7A_242.77_262.88	7A	242.77	262.88	254.214683	1.1	Supplemental Table 4: Q7A_242.77_262.88, Chr7A, SEQ, lead SNP Chr7A_254214683 (-log10 P 9.40), Joint model; Exp III; environments SEL2018
+WJ6-202	Q7A_301.20_302.70	7A	301.2	302.7	301.201017	1.0	Supplemental Table 4: Q7A_301.20_302.70, Chr7A, SEQ, lead SNP Chr7A_301201017 (-log10 P 7.61), Joint model; Exp III; environments SEL2018
+WJ6-203	Q7A_355.19	7A			355.191952	2.5	Supplemental Table 4: Q7A_355.19, Chr7A, SEQ, lead SNP Chr7A_355191952 (-log10 P 7.11), Joint model; Exp III; environments CLA2018
+WJ6-204	Q7A_408.45	7A			408.450133	1.1	Supplemental Table 4: Q7A_408.45, Chr7A, SEQ, lead SNP Chr7A_408450133 (-log10 P 8.22), Dominance model; Exp III; environments SEL2018
+WJ6-205	Q7A_447.12	7A			447.127173	3.5	Supplemental Table 4: Q7A_447.12, Chr7A, SEQ, lead SNP Chr7A_447127173 (-log10 P 8.34), Joint model; Exp III; environments CLA2018
+WJ6-206	Q7A_484.85_485.04	7A	484.85	485.04	484.856415	1.2	Supplemental Table 4: Q7A_484.85_485.04, Chr7A, SEQ, lead SNP Chr7A_484856415 (-log10 P 7.20), Dominance model; Exp III; environments SEL2018
+WJ6-207	Q7A_517.42	7A			517.422627	6.3	Supplemental Table 4: Q7A_517.42, Chr7A, SEQ, lead SNP Chr7A_517422627 (-log10 P 8.23), Joint model; Exp III; environments SEL2018
+WJ6-208	Q7A_631.98	7A			631.983822	2.8	Supplemental Table 4: Q7A_631.98, Chr7A, SEQ, lead SNP Chr7A_631983822 (-log10 P 9.67), Joint model; Exp III; environments SEL2018
+WJ6-209	Q7A_694.80_695.56	7A	694.8	695.56	694.958062	2.4	Supplemental Table 4: Q7A_694.80_695.56, Chr7A, SEQ, lead SNP Chr7A_694958062 (-log10 P 10.77), Joint model; Exp III; environments CLA2018
+WJ6-210	Q7A_732.83	7A			732.832758	2.7	Supplemental Table 4: Q7A_732.83, Chr7A, MEQ, lead SNP Chr7A_732832758 (-log10 P 7.33), Additive model; Exp III; environments CLA2018, SEL2018
+WJ6-211	Q7B_6.52	7B			6.521823	8.6	Supplemental Table 4: Q7B_6.52, Chr7B, SEQ, lead SNP Chr7B_6521823 (-log10 P 8.59), Additive model; Exp I; environments BOH2013
+WJ6-212	Q7B_37.82_40.99	7B	37.82	40.99	40.99708	0.7	Supplemental Table 4: Q7B_37.82_40.99, Chr7B, SEQ, lead SNP Chr7B_40997080 (-log10 P 10.50), Dominance model; Exp III; environments SEL2018
+WJ6-213	Q7B_208.03	7B			208.038265	2.8	Supplemental Table 4: Q7B_208.03, Chr7B, SEQ, lead SNP Chr7B_208038265 (-log10 P 9.64), Joint model; Exp III; environments SEL2018
+WJ6-214	Q7B_362.55	7B			362.559523	2.5	Supplemental Table 4: Q7B_362.55, Chr7B, MEQ, lead SNP Chr7B_362559523 (-log10 P 8.73), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-215	Q7B_602.15	7B			602.157341	6.3	Supplemental Table 4: Q7B_602.15, Chr7B, SEQ, lead SNP Chr7B_602157341 (-log10 P 8.15), Joint model; Exp III; environments CLA2018
+WJ6-216	Q7B_669.71_672.29	7B	669.71	672.29	669.719591	0.4	Supplemental Table 4: Q7B_669.71_672.29, Chr7B, SEQ, lead SNP Chr7B_669719591 (-log10 P 7.33), Joint model; Exp III; environments SEL2018
+WJ6-217	Q7B_710.28_710.28	7B			710.283082	0.3	Supplemental Table 4: Q7B_710.28_710.28, Chr7B, SEQ, lead SNP Chr7B_710283082 (-log10 P 8.53), Dominance model; Exp III; environments SEL2018
+WJ6-218	Q7D_11.87_14.94	7D	11.87	14.94	14.702561	3.9	Supplemental Table 4: Q7D_11.87_14.94, Chr7D, MEQ, lead SNP Chr7D_14702561 (-log10 P 11.23), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-219	Q7D_12.42	7D			12.429947	3.0	Supplemental Table 4: Q7D_12.42, Chr7D, SEQ, lead SNP Chr7D_12429947 (-log10 P 7.61), Joint model; Exp III; environments SEL2018
+WJ6-220	Q7D_13.79	7D			13.799368	0.6	Supplemental Table 4: Q7D_13.79, Chr7D, SEQ, lead SNP Chr7D_13799368 (-log10 P 7.43), Joint model; Exp II; environments HAD2016
+WJ6-221	Q7D_17.16_44.16	7D	17.16	44.16	40.674716	3.5	Supplemental Table 4: Q7D_17.16_44.16, Chr7D, MEQ, lead SNP Chr7D_40674716 (-log10 P 7.56), Joint model; Exp III; environments CLA2018, SEL2018
+WJ6-222	Q7D_24.67_25.22	7D	24.67	25.22	25.221598	0.6	Supplemental Table 4: Q7D_24.67_25.22, Chr7D, SEQ, lead SNP Chr7D_25221598 (-log10 P 10.11), Joint model; Exp III; environments SEL2018
+WJ6-223	Q7D_83.14	7D			83.145723	1.5	Supplemental Table 4: Q7D_83.14, Chr7D, SEQ, lead SNP Chr7D_83145723 (-log10 P 7.68), Joint model; Exp III; environments SEL2018
+WJ6-224	Q7D_113.46_115.69	7D	113.46	115.69	115.69518	1.4	Supplemental Table 4: Q7D_113.46_115.69, Chr7D, SEQ, lead SNP Chr7D_115695180 (-log10 P 7.77), Joint model; Exp II; environments HAD2016
+WJ6-225	Q7D_171.63_182.09	7D	171.63	182.09	179.508534	1.2	Supplemental Table 4: Q7D_171.63_182.09, Chr7D, SEQ, lead SNP Chr7D_179508534 (-log10 P 10.22), Dominance model; Exp III; environments SEL2018
+WJ6-226	Q7D_266.15	7D			266.154129	0.1	Supplemental Table 4: Q7D_266.15, Chr7D, SEQ, lead SNP Chr7D_266154129 (-log10 P 7.39), Dominance model; Exp III; environments SEL2018
+WJ6-227	Q7D_513.71_517.59	7D	513.71	517.59	516.124667	4.4	Supplemental Table 4: Q7D_513.71_517.59, Chr7D, SEQ, lead SNP Chr7D_516124667 (-log10 P 8.96), Joint model; Exp III; environments CLA2018, Main
+WJ6-228	Q7D_550.73_558.67	7D	550.73	558.67	550.86732	7.4	Supplemental Table 4: Q7D_550.73_558.67, Chr7D, MEQ, lead SNP Chr7D_550867320 (-log10 P 10.94), Additive model; Exp II; environments HAD2016, Main, ROS2016
+WJ6-229	Q7D_570.74_572.34	7D	570.74	572.34	570.74644	0.3	Supplemental Table 4: Q7D_570.74_572.34, Chr7D, SEQ, lead SNP Chr7D_570746440 (-log10 P 10.74), Dominance model; Exp III; environments SEL2018
+WJ6-230	Q7D_578.36_578.58	7D	578.36	578.58	578.582373	1.1	Supplemental Table 4: Q7D_578.36_578.58, Chr7D, SEQ, lead SNP Chr7D_578582373 (-log10 P 8.49), Dominance model; Exp III; environments SEL2018
+WJ6-231	Q7D_587.86_588.37	7D	587.86	588.37	588.375998	2.6	Supplemental Table 4: Q7D_587.86_588.37, Chr7D, SEQ, lead SNP Chr7D_588375998 (-log10 P 7.91), Joint model; Exp III; environments CLA2018
+WJ6-232	Q7D_614.10	7D			614.105435	1.2	Supplemental Table 4: Q7D_614.10, Chr7D, SEQ, lead SNP Chr7D_614105435 (-log10 P 8.36), Dominance model; Exp III; environments CLA2018
+WJ6-233	Q7D_633.11	7D			633.116659	0.2	Supplemental Table 4: Q7D_633.11, Chr7D, SEQ, lead SNP Chr7D_633116659 (-log10 P 7.21), Dominance model; Exp III; environments SEL2018
+WJ6-234	Q7D_642.48	7D			642.480132	12.0	Supplemental Table 4: Q7D_642.48, Chr7D, SEQ, lead SNP Chr7D_642480132 (-log10 P 7.70), Joint model; Exp I; environments Main
