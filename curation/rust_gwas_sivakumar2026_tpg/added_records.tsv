@@ -1,0 +1,16 @@
+id	marker	disease	chr	peak_Mb_v2.1	evidence
+SV6-001	AX-94704827	Leaf rust	2A	1.685819	Supplemental Table S6: AX94704827, 2A, 1,685,819 bp, P 2.69e-07, trait LR, models BLINK
+SV6-002	AX-94874313	Multiple rusts	3D	598.01138	Supplemental Table S6: AX94874313, 3D, 598,011,380 bp, P 3.56e-15, trait LR,SR, models FarmCPU, BLINK, multi-trait
+SV6-003	AX-94596238	Leaf rust	5B	530.622318	Supplemental Table S6: AX94596238, 5B, 530,622,318 bp, P 1.4e-06, trait LR, models BLINK
+SV6-004	AX-94981940	Stem rust	1B	112.203158	Supplemental Table S6: AX94981940, 1B, 112,203,158 bp, P 1.26e-06, trait SR, models FarmCPU, BLINK
+SV6-005	AX-94381257	Stem rust	4A	365.650112	Supplemental Table S6: AX94381257, 4A, 365,650,112 bp, P 1.81e-06, trait SR, models BLINK
+SV6-006	AX-94733734	Stripe rust	1D	101.094168	Supplemental Table S6: AX94733734, 1D, 101,094,168 bp, P 1.03e-09, trait YR, models FarmCPU, BLINK
+SV6-007	AX-94630238	Stripe rust	1D	142.660011	Supplemental Table S6: AX94630238, 1D, 142,660,011 bp, P 6.47e-11, trait YR, models BLINK
+SV6-008	AX-94948233	Stripe rust	4D	211.031928	Supplemental Table S6: AX94948233, 4D, 211,031,928 bp, P 2.94e-07, trait YR, models FarmCPU, BLINK
+SV6-009	AX-95157341	Leaf rust	1A	223.938573	Supplemental Table S6: AX95157341, 1A, 223,938,573 bp, P 2.72e-06, trait LR, models FarmCPU
+SV6-010	AX-94430906	Leaf rust	3B	251.651428	Supplemental Table S6: AX94430906, 3B, 251,651,428 bp, P 5.79e-10, trait LR, models FarmCPU
+SV6-011	AX-94533059	Leaf rust	4D	364.542522	Supplemental Table S6: AX94533059, 4D, 364,542,522 bp, P 3.07e-08, trait LR, models FarmCPU
+SV6-012	AX-94747135	Leaf rust	5D	544.279167	Supplemental Table S6: AX94747135, 5D, 544,279,167 bp, P 3.96e-06, trait LR, models FarmCPU
+SV6-013	AX-94477602	Leaf rust	7B	232.262634	Supplemental Table S6: AX94477602, 7B, 232,262,634 bp, P 4.48e-07, trait LR, models FarmCPU
+SV6-014	AX-94857819	Leaf rust	7D	619.993835	Supplemental Table S6: AX94857819, 7D, 619,993,835 bp, P 2.56e-06, trait LR, models FarmCPU
+SV6-015	AX-94455930	Stem rust	2D	641.485254	Supplemental Table S6: AX94455930, 2D, 641,485,254 bp, P 1.34e-06, trait SR, models FarmCPU
