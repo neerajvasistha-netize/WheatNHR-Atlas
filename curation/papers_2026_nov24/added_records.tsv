@@ -1,0 +1,76 @@
+id	name	class	disease	chr	start	end	peak	ref	grade	source	evidence
+Y6-001	TaFhb-6A	QTL	Fusarium head blight	6A	0.0	4.5		RefSeq v2.1	B	Li et al. (2026b)	"""we mapped a new major FHB resistance QTL, TaFhb-6A, to the 0-4.5 Mb interval on chromosome 6A"" (abstract; candidate genes TraesCS6A03G0005200, TraesCS6A03G0009000)"
+Y6-002	QFhb.jaas-7DS	QTL	Fusarium head blight	7D					D	Cai et al. (2026)	"""a previously unreported stable major QTL on chromosome arm 7DS (QFhb.jaas-7DS)"" (abstract)"
+Y6-003	QLr.iiwbr.2B.1	QTL	Leaf rust	2B					D	Vindhya et al. (2026)	"""QLr.iiwbr.2B.1 (2B) explaining phenotypic variance of 13.26% with a LOD score 8"" (abstract); flanked by TaDArTAG006007 and TaDArTAG006082"
+Y6-004	QLr.iiwbr.5B.1	QTL	Leaf rust	5B			366.008	RefSeq v1.0	C	Vindhya et al. (2026)	"QLr.iiwbr.5B.1 ""encodes Annexin (TraesCS5B02G201700)"" (Results); flanked by TaDArTAG007725 and TaDArTAG007717"
+Y6-005	QLr.iiwbr.6B.1	QTL	Leaf rust	6B					D	Vindhya et al. (2026)	"""one QTL for adult plant resistance (APR), QLr.iiwbr.6B.1 (PVE 14.21%)"" (abstract)"
+Y6-006	Qfcr.caas.7A-2	QTL	Fusarium crown rot	7A			713.022	RefSeq v1.0	C	Wu et al. (2026b)	"""A major QTL (Qfcr.caas.7A-2) on chromosome 7A was consistently detected ... TraesCS7A02G535100.1 (encoding an RGA5-like protein) was prioritized as a candidate gene"" (abstract)"
+Y6-007	Rmg13	DG	Wheat blast	4A					D	Su et al. (2026b)	"""The resistance genes in KU-7356 and KU-1062 were mapped to chromosome arms 4AL and 5AL and designated Rmg13 and Rmg14"" (abstract)"
+Y6-008	Rmg14	DG	Wheat blast	5A					D	Su et al. (2026b)	"""mapped to chromosome arms 4AL and 5AL and designated Rmg13 and Rmg14, respectively"" (abstract)"
+Y6-009	QYr.orst-1AS	QTL	Stripe rust	1A					D	Cobertera et al. (2026)	"""two major QTLs, QYr.orst-2AS ... and QYr.orst-1AS"" (abstract)"
+Y6-010	QYr.orst-2AS	QTL	Stripe rust	2A					D	Cobertera et al. (2026)	"""QYr.orst-2AS, which is probably associated with the known stripe rust resistance gene Yr17"" (abstract)"
+Y6-011	QYr.orst-2AS/DS	QTL	Stripe rust	2D					D	Cobertera et al. (2026)	"""Two additional minor QTLs, QYr.orst-2AS/DS and QYr.orst-4DL, were also found"" (abstract)"
+Y6-012	QYr.orst-4DL	QTL	Stripe rust	4D					D	Cobertera et al. (2026)	"""Two additional minor QTLs, QYr.orst-2AS/DS and QYr.orst-4DL"" (abstract)"
+Y6-013	YrCH806	DG	Stripe rust	4A	515.8	574.7		RefSeq v1.0	B	Bai et al. (2026)	"""YrCH806, was mapped to an interval flanked by markers Xwmc48/Xwmc89 and SSR4A-60 ... corresponding to a physical position of 515.8-574.7 Mb on the wheat reference genome"" (abstract)"
+Y6-014	QBLS emmer-1A	QTL	Bacterial leaf streak	1A					D	Khan et al. (2026)	"""One quantitative trait locus (QTL) on chromosome 1A was consistently identified"" (abstract)"
+Y6-015	TaRLK-1B	CG	Leaf rust	1B					D	Liu et al. (2026b)	"""identifying significant quantitative trait loci (QTLs) on chromosomes 1B, 2A, 2B, and 7D, with particular emphasis on the candidate gene TaRLK-1B on chromosome 1B ... Targeted knockout of TaRLK-1B in wheat led to reduced resistance to leaf rust"" (abstract)"
+Y6-016	MTA BLS S1B_372870844	MTA	Bacterial leaf streak	1B			372.871	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S1B_372,870,844, 1B, 372,870,844 bp
+Y6-017	MTA BLS S2B_175365127	MTA	Bacterial leaf streak	2B			175.365	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S2B_175,365,127, 2B, 175,365,127 bp
+Y6-018	MTA BLS S3B_625137880	MTA	Bacterial leaf streak	3B			625.138	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S3B_625,137,880, 3B, 625,137,880 bp
+Y6-019	MTA BLS S3D_618866799	MTA	Bacterial leaf streak	3D			618.867	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S3D_618,866,799, 3D, 618,866,799 bp
+Y6-020	MTA BLS S4A_440017300	MTA	Bacterial leaf streak	4A			440.017	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S4A_440,017,300, 4A, 440,017,300 bp
+Y6-021	MTA BLS S4B_322341647	MTA	Bacterial leaf streak	4B			322.342	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S4B_322,341,647, 4B, 322,341,647 bp
+Y6-022	MTA BLS S6B_548788571	MTA	Bacterial leaf streak	6B			548.789	RefSeq v1.0	A	Ahmad et al. (2026)	Table 3: S6B_548,788,571, 6B, 548,788,571 bp
+Y6-023	MTA multi-rust AX-94681641	MTA	Multiple rusts	3A			739.95	RefSeq v2.1	A	Sivakumar et al. (2026)	"""the MTA AX-94681641 identified at 739.95 Mb on chromosome 3A"" (Discussion)"
+Y6-024	MTA multi-rust AX-94723806	MTA	Multiple rusts	3D			607.09	RefSeq v2.1	A	Sivakumar et al. (2026)	"""MTA_AX-94723806 ... the position identified in the present study (607.09 Mb)"" (Discussion)"
+Y6-025	MTA multi-rust AX-94873612	MTA	Multiple rusts	3B			810.53	RefSeq v2.1	A	Sivakumar et al. (2026)	"""the MTA_AX-94873612 identified on chromosome 3B at 810.53 Mb"" (Discussion)"
+Y6-026	MTA multi-rust AX-94571854	MTA	Multiple rusts	7B			743.41	RefSeq v2.1	A	Sivakumar et al. (2026)	"""pleiotropic loci on 7B (MTA_AX94571854) at 743.41 Mb"" (Discussion)"
+Y6-027	QSr1B_1.47_67.79	QTL	Stem rust	1B	1.47	67.79		RefSeq v2.1	B	Wang et al. (2026)	"""Three of these QTL, QSr1B_1.47_67.79, QSr4A_716.31_716.32, and QSr7D_171.80_174.34, harbor five haplotypes that have likely not been used in breeding"" (abstract)"
+Y6-028	QSr4A_716.31_716.32	QTL	Stem rust	4A	716.31	716.32		RefSeq v2.1	B	Wang et al. (2026)	QTL name and representative MTA Chr4A:716319007 (abstract)
+Y6-029	QSr7D_171.80_174.34	QTL	Stem rust	7D	171.8	174.34		RefSeq v2.1	B	Wang et al. (2026)	QTL name and representative MTA Chr7D:171807054 (abstract)
+Y6-030	QLr.stars-1BS	QTL	Leaf rust	1B	64.67	66.06		RefSeq v2.1	B	Xu et al. (2026b)	"""QLr.stars-1BS and QLr.stars-5BS were mapped in the intervals 64.67-66.06 Mb on chromosome arm 1BS and 9.29-9.71 Mb on chromosome arm 5BS in the Chinese Spring IWGSC RefSeq 2.1"" (abstract)"
+Y6-031	QLr.stars-5BS	QTL	Leaf rust	5B	9.29	9.71		RefSeq v2.1	B	Xu et al. (2026b)	"""9.29-9.71 Mb on chromosome arm 5BS in the Chinese Spring IWGSC RefSeq 2.1"" (abstract)"
+Y6-032	Ym5	DG	Wheat yellow mosaic virus	5A					D	Kong et al. (2026)	"""Ym5, flanked by markers ARI_106 and ARI_218, was narrowed down to a 1.1 Mb interval (534.8-535.9 Mb in ArinaLrFor)"" (abstract)"
+Y6-033	YrBK	DG	Stripe rust	1B					D	Guan et al. (2026)	"""narrowed YrBK to a 0.181 cM genetic interval on chromosome arm 1BL"" (abstract)"
+Y6-034	Pm40	DG	Powdery mildew	7B	236.9	241.0		RefSeq v2.1	B	Yang et al. (2026b)	"""Subsequent marker development and genetic analysis localized the Pm40 locus to a region of 236.9-241.0 Mb"" (Results; candidate genes TraesCS7B03G0444100, TraesCS7B03G0444300)"
+Y6-035	QYr.iiwbr.2BL.1	QTL	Stripe rust	2B			525.521	RefSeq v1.0	C	Sharma et al. (2026b)	"""QYr.iiwbr.2BL.1, located at 525,519,604-525,519,754 ... encodes for Inositol Transporter 1 (TraesCS2B02G368200)"" (Results)"
+Y6-036	QYr.iiwbr.6DS.2	QTL	Stripe rust	6D			8.665	RefSeq v1.0	C	Sharma et al. (2026b)	"""QYr.iiwbr.6DS.2, located at 8,661,722-8,668,626 ... encodes Protein transport protein sec16 (TraesCS6D02G022300.1)"" (Results)"
+Y6-037	QYr.iiwbr.3BS.1	QTL	Stripe rust	3B					D	Sharma et al. (2026b)	"""QYr.iiwbr.3BS.1 ... delimited by molecular markers TaDArTAG002817 & wmc693"" (Results)"
+Y6-038	QYr.iiwbr.6DS.1	QTL	Stripe rust	6D					D	Sharma et al. (2026b)	"""QYr.iiwbr.6DS.1 ... delimited by TaDArTAG009545 & TaDArTAG009594"" (Results)"
+Y6-039	QYr.LHM-1AL	QTL	Stripe rust	1A	553.9	554.0		RefSeq v1.0	B	Xu et al. (2026c)	"""QYr.LHM-1AL ... mapped to a genetic interval of 3.51 cM between the markers 45KASP1A-4 and 45SSR1A-973 ... corresponding to a 553.9-to-54.0-Mb region in the Chinese Spring reference genome"" (abstract)"
+Y6-040	YrTX47	QTL	Stripe rust	5B					D	Wu et al. (2026c)	"""a major and stable quantitative trait locus (QTL), YrTX47, was identified on chromosome 5BS"" (abstract)"
+Y6-041	QYr.stars-2DS	QTL	Stripe rust	2D	2.58	5.54		RefSeq v2.1	B	Xu et al. (2026d)	"""QYr.stars-2DS ... identified in the interval of 2.58 to 5.54 Mb on chromosome arm 2DS based on the Chinese Spring IWGSC RefSeq v.2.1"" (abstract)"
+Y6-042	QYr.stars-5BS	QTL	Stripe rust	5B	8.1	9.0		RefSeq v2.1	B	Xu et al. (2026d)	"""QYr.stars-5BS, is close to Yr47 and was delimited to the interval 8.1 to 9.0 Mb"" (abstract)"
+Y6-043	QYr.stars-2AL	QTL	Stripe rust	2A	750.8	752.5		RefSeq v2.1	B	Xu et al. (2026d)	"""QYr.stars-2AL and QYr.stars-7BL were mapped to ... 2AL (750.8 to 752.5 Mb) and 7BL (718.1 to 721.2 Mb)"" (abstract)"
+Y6-044	QYr.stars-7BL	QTL	Stripe rust	7B	718.1	721.2		RefSeq v2.1	B	Xu et al. (2026d)	"""7BL (718.1 to 721.2 Mb)"" (abstract)"
+Y6-045	YrJ262	DG	Stripe rust	3B	0.0	73.0		RefSeq v1.0	B	Zeng et al. (2026)	"""the strongest candidate region for YrJ262 was the 73 Mbp segment lying close to the terminus of chromosome arm 3BS"" (Results)"
+Y6-046	QYr.L122-1BL	QTL	Stripe rust	1B					D	Guo et al. (2026)	"""Three stable loci, QYr.L122-1BL, QYr.L122-2DL, and QYr.L122-3BL, were identified"" (abstract)"
+Y6-047	QYr.L122-2DL	QTL	Stripe rust	2D					D	Guo et al. (2026)	"""QYr.L122-2DL"" (abstract)"
+Y6-048	QYr.L122-3BL	QTL	Stripe rust	3B					D	Guo et al. (2026)	"""QYr.L122-3BL"" (abstract)"
+Y6-049	Yr85 (fine map)	DG	Stripe rust	1B					D	Cheng et al. (2026)	"""we fine-mapped Yr85 to a 0.12 cM interval between ... XK1B-61 and XK1B-65, corresponding to a 1.76 Mb region on chromosome 1BS in the IWGSC RefSeq v2.1"" (abstract)"
+Y6-050	YrSA	DG	Stripe rust	2A					D	Xu et al. (2026e)	"""a stripe rust resistance gene, temporarily designated YrSA, in the terminal region of chromosome arm 2AL in Samara"" (abstract)"
+Y6-051	LrGR	DG	Leaf rust	2D					D	Wolabu et al. (2026)	"""SNPs closely associated with leaf rust resistance in the terminal region of chromosome arm 2DS"" (abstract)"
+Y6-052	QLr.caas-5AL	QTL	Leaf rust	5A	523.6	524.4		RefSeq v1.0	B	Song et al. (2026)	"""delimitation of the QTL to a 794.8-kb physical interval from 523.6 to 524.4 Mb based on the Chinese Spring reference genome v1.1"" (abstract)"
+Y6-053	Lr30	DG	Leaf rust	4A	522.0	548.0		RefSeq v2.1	B	Hiebert et al. (2026)	"""The physical location of Lr30 in the Chinese Spring wheat RefSeq.V.2.1 spans approximately between positions 522.0 Mb and 548.0 Mb of chromosome 4A"" (abstract)"
+Y6-054	PmXP544	DG	Powdery mildew	4A	712.0	714.1		RefSeq v1.0	B	Pan et al. (2026)	"""localized PmXP544 to a 2.1 Mb interval (712.0-714.1 Mb) on chromosome arm 4AL"" (abstract)"
+Y6-055	PmSA	DG	Powdery mildew	2B	686.69	701.12		RefSeq v2.1	B	Xu et al. (2026f)	"""located PmSA to a 14.43-Mb interval between 686.69 and 701.12 Mb in the Chinese Spring IWGSC RefSeq v2.1"" (abstract)"
+Y6-056	QPm.yaas-1A	QTL	Powdery mildew	1A					D	Jiang et al. (2026)	"""Three significant QTLs ... on 1A, 1B and 5D ... QPm.yaas-1A was localised adjacent to the region associated with Pm3"" (abstract)"
+Y6-057	QPm.yaas-1B	QTL	Powdery mildew	1B					D	Jiang et al. (2026)	"""QPm.yaas-1B was positioned near the interval of Yr29/Lr46/Pm39"" (abstract)"
+Y6-058	QPm.yaas-5D	QTL	Powdery mildew	5D					D	Jiang et al. (2026)	"""QPm.yaas-5D on chromosome 5D represents a novel APR locus"" (abstract)"
+Y6-059	PmR53M	DG	Powdery mildew	2B					D	Sun et al. (2026)	"""We mapped PmR53M to the short arm of chromosome 2B, at the same approximate location as Pm68/MlIW39/PmWR183"" (abstract)"
+Y6-060	QFhb.CIM-2D	QTL	Fusarium head blight	2D					D	Li et al. (2026c)	"""two major QTL, QFhb.CIM-2D ... and QFhb.CIM-3B"" (abstract)"
+Y6-061	QFhb.CIM-3B	QTL	Fusarium head blight	3B					D	Li et al. (2026c)	"""QFhb.CIM-3B"" (abstract)"
+Y6-062	TaROD1-7A	CG	Fusarium head blight	7A					D	Zhu et al. (2026)	"""A 101-bp InDel in TaROD1-7A defines two haplotypes differing in FHB resistance"" (key message)"
+Y6-063	YrHM	DG	Stripe rust	3D					D	Zhang et al. (2026b)	"""a dominant adult-plant resistance gene, provisionally designated YrHM, at the distal end of chromosome 3DS"" (abstract)"
+Y6-064	Pm72	DG	Powdery mildew	6A					D	Zhou et al. (2026)	"""Pm72 was mapped to a 1.28-cM genetic interval ... In T. boeoticum accession TA299, the Pm72 locus corresponded to a 940-kb physical region (Chr6A: 635,963,867-636,888,696)"" (abstract)"
+Y6-065	mta_nbpgr_pm_2B.1	MTA	Powdery mildew	2B			8.567379	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92564652, mta_nbpgr_pm_2B.1, 2B: 8,567,379 bp
+Y6-066	mta_nbpgr_pm_2B.2	MTA	Powdery mildew	2B			266.483247	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92598450, mta_nbpgr_pm_2B.2, 2B: 266,483,247 bp
+Y6-067	mta_nbpgr_pm_2D	MTA	Powdery mildew	2D			97.600929	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92806476, mta_nbpgr_pm_2D, 2D: 97,600,929 bp
+Y6-068	mta_nbpgr_pm_3A.1	MTA	Powdery mildew	3A			1.651051	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92516405, mta_nbpgr_pm_3A.1, 3A: 1,651,051 bp
+Y6-069	mta_nbpgr_pm_3A.2	MTA	Powdery mildew	3A			293.586207	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92652585, mta_nbpgr_pm_3A.2, 3A: 293,586,207 bp
+Y6-070	mta_nbpgr_pm_3A.3	MTA	Powdery mildew	3A			659.15831	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92519744, mta_nbpgr_pm_3A.3, 3A: 659,158,310 bp
+Y6-071	mta_nbpgr_pm_5B	MTA	Powdery mildew	5B			663.523422	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92565503, mta_nbpgr_pm_5B, 5B: 663,523,422 bp
+Y6-072	mta_nbpgr_pm_5D.1	MTA	Powdery mildew	5D			43.405817	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92145634, mta_nbpgr_pm_5D.1, 5D: 43,405,817 bp
+Y6-073	mta_nbpgr_pm_5D.2	MTA	Powdery mildew	5D			517.601345	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92805013, mta_nbpgr_pm_5D.2, 5D: 517,601,345 bp
+Y6-074	mta_nbpgr_pm_6A	MTA	Powdery mildew	6A			605.10264	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92585902, mta_nbpgr_pm_6A, 6A: 605,102,640 bp
+Y6-075	mta_nbpgr_pm_7B	MTA	Powdery mildew	7B			572.994708	RefSeq v2.1	A	Bashir et al. (2026)	Table 2: Affx-92664902, mta_nbpgr_pm_7B, 7B: 572,994,708 bp
