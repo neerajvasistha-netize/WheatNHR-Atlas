@@ -147,7 +147,7 @@ code,.mono{font-family:var(--mono);font-size:12.5px}
 td select,td input{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:3px 5px;font-size:13px;max-width:100%}
 td.mk{max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 td.ref a{white-space:nowrap}
-td.loc{min-width:12rem;max-width:24rem}.mqloc>rect{transition:fill .12s}.mqloc:hover>rect{fill:rgba(31,92,63,.16)}.mgdot{paint-order:stroke}.mgdot:hover{stroke:rgba(31,92,63,.28);stroke-width:9}td.loc b{white-space:normal;overflow-wrap:anywhere}
+td.loc{min-width:12rem;max-width:24rem}td.loc b{white-space:normal;overflow-wrap:anywhere}
 #tbl td:nth-child(2),#tbl td:nth-child(4),#tbl td:nth-child(9){white-space:nowrap}
 /* ---- Refreshed look ---- */
 .qs{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -935,7 +935,7 @@ function renderIdeo(list){const A=st.asm,CL=ALEN[A]||CHR;const W=1000,LM=52,top=
   for(let m=0;m<=800;m+=200){s+=`<line class="axis" x1="0" x2="${W}" y1="${sc(m)}" y2="${sc(m)}" stroke-dasharray="2 4"/><text x="2" y="${sc(m)-3}" style="font-weight:400">${m} Mb</text>`;}
   CHRS.forEach((c,i)=>{const x=LM+i*step+step/2;s+=`<rect class="chrlab chrhit" data-chr="${c}" x="${x-step/2+2}" y="0" width="${step-4}" height="${top-4}" rx="5" fill="${sel===c?"var(--accent-soft)":"transparent"}" style="cursor:pointer"><title>Show only ${c}</title></rect><text class="chrlab${sel===c?" sel":""}" data-chr="${c}" x="${x}" y="16" text-anchor="middle" style="cursor:pointer;${sel===c?"font-weight:800;fill:var(--accent)":""}"><title>Show only ${c}</title>${c}</text><rect class="chr${sel===c?" sel":""}" data-chr="${c}" x="${x-7}" y="${top}" width="14" height="${(CL[c]||CHR[c])/mx*H}" rx="7"${sel&&sel!==c?' opacity=".35"':""}><title>${c}: ${CL[c]||CHR[c]} Mb (${esc(A)})</title></rect>`;});
   renderMapLegend(list);const multi=st.dOn.size>1;list.filter(r=>anchored(r,A)&&st.dOn.has(r.disease)).forEach(r=>{const c0=co(r,A),i=CHRS.indexOf(c0.chr),x=LM+i*step+step/2,s0=num(c0.start),e0=num(c0.end),col=DCOL[r.disease]||"#888",tt=multi?`<title>${esc(r.name)} · ${esc(r.disease)}</title>`:"";
-    if(s0!=null&&e0!=null&&e0-s0>4){s+=`<rect class="mk" data-id="${r.id}" x="${x-6}" y="${sc(s0)}" width="12" height="${Math.max(2,sc(e0)-sc(s0))}" fill="${col}" style="cursor:pointer">${tt}</rect>`;}
+    if(s0!=null&&e0!=null&&e0-s0>4){s+=`<rect class="mk" data-id="${r.id}" x="${x-6}" y="${sc(s0)}" width="12" height="${Math.max(2,sc(e0)-sc(s0))}" fill="${col}" fill-opacity=".45" style="cursor:pointer">${tt}</rect>`;}
     else{const p=pos(r,A);s+=`<line class="mk" data-id="${r.id}" x1="${x-11}" x2="${x+11}" y1="${sc(p)}" y2="${sc(p)}" stroke="${col}" stroke-width="2.5" style="cursor:pointer">${tt}</line>`;}});
   $("#ideo").innerHTML=s;}
 function renderTable(){const list=filtered();renderIdeo(list);const rows=sorted(list);
@@ -2227,10 +2227,10 @@ function pmqView(i){const r=PMQ.res[i],el=$("#pmqDetail");const P=PMQ.IN.filter(
   const lo=Math.max(0,Math.min(r.lo,...r.mem.map(p=>p.x-1.96*p.sd))-2),hi=Math.max(r.hi,...r.mem.map(p=>p.x+1.96*p.sd))+2;const W=760,sx=x=>40+(x-lo)/(hi-lo)*(W-60);
   const mem=new Set(r.mem.map(p=>p.r.id));const vis=P.filter(p=>p.x+1.96*p.sd>=lo&&p.x-1.96*p.sd<=hi).sort((a,b)=>(mem.has(b.r.id)-mem.has(a.r.id))||a.x-b.x).slice(0,60);
   const H=60+vis.length*9;const bars=vis.map((p,k)=>{const y=50+k*9,a=sx(Math.max(lo,p.x-1.96*p.sd)),b=sx(Math.min(hi,p.x+1.96*p.sd));const t=esc(`${p.r.name} (${p.r.cls}) · ${p.r.disease} · ${srcShort(p.r.source)} · ${p.x.toFixed(2)} Mb${mem.has(p.r.id)?" · member of "+r.id:""}`);
-    return `<g class="mqloc" data-tip="${t}" style="cursor:pointer"><line x1="${a}" x2="${b}" y1="${y}" y2="${y}" stroke="${DCOL[p.r.disease]||"#888"}" stroke-width="${mem.has(p.r.id)?4:2}" stroke-linecap="round"/><circle cx="${sx(p.x)}" cy="${y}" r="2.6" fill="#333"/><rect x="${Math.min(a,sx(p.x)-4)}" y="${y-4}" width="${Math.max(8,b-a)}" height="8" fill="transparent"/></g>`;}).join("");
+    return `<g data-tip="${t}" style="cursor:pointer"><line x1="${a}" x2="${b}" y1="${y}" y2="${y}" stroke="${DCOL[p.r.disease]||"#888"}" stroke-width="${mem.has(p.r.id)?4:2}" opacity="${mem.has(p.r.id)?1:.35}" stroke-linecap="round"/><circle cx="${sx(p.x)}" cy="${y}" r="2.6" fill="#333"/><rect x="${Math.min(a,sx(p.x)-4)}" y="${y-4}" width="${Math.max(8,b-a)}" height="8" fill="transparent"/></g>`;}).join("");
   const dsh=[...new Set(vis.map(p=>p.r.disease))];let lgx=40,lgy=H+30;const leg=[];
   leg.push(`<line x1="${lgx}" x2="${lgx+18}" y1="${lgy-4}" y2="${lgy-4}" stroke="#555" stroke-width="4" stroke-linecap="round"/><text x="${lgx+22}" y="${lgy}" font-size="9.5">Member locus (95% interval)</text>`);lgx+=165;
-  leg.push(`<line x1="${lgx}" x2="${lgx+18}" y1="${lgy-4}" y2="${lgy-4}" stroke="#555" stroke-width="2" stroke-linecap="round"/><text x="${lgx+22}" y="${lgy}" font-size="9.5">Other locus nearby</text>`);lgx+=120;
+  leg.push(`<line x1="${lgx}" x2="${lgx+18}" y1="${lgy-4}" y2="${lgy-4}" stroke="#555" stroke-width="2" opacity=".35" stroke-linecap="round"/><text x="${lgx+22}" y="${lgy}" font-size="9.5">Other locus nearby</text>`);lgx+=120;
   leg.push(`<circle cx="${lgx+4}" cy="${lgy-4}" r="2.6" fill="#333"/><text x="${lgx+10}" y="${lgy}" font-size="9.5">Locus peak</text>`);lgx+=75;
   leg.push(`<rect x="${lgx}" y="${lgy-10}" width="16" height="10" fill="rgba(217,165,33,.22)" stroke="#c9961b"/><text x="${lgx+20}" y="${lgy}" font-size="9.5">This meta-QTL CI</text>`);lgx+=110;
   if(others.length>1){leg.push(`<rect x="${lgx}" y="${lgy-10}" width="16" height="10" fill="rgba(0,0,0,.05)"/><text x="${lgx+20}" y="${lgy}" font-size="9.5">Other meta-QTL CI</text>`);lgx+=115;}
@@ -2272,7 +2272,7 @@ function runPMG(){const o={win:+$("#pmgWin").value||1,assume:$("#pmgAssume").che
   sig.forEach((s,i)=>s.id=`pMGWAS-${s.c}.${i+1}`);PMG={sig,o,thr};
   const W=900,H=180,off={};let acc=0;const CL=ALEN[MAIN]||CHR;CHRS.forEach(c=>{off[c]=acc;acc+=(CL[c]||700)+20;});const sx=v=>30+v/acc*(W-40),ymax=Math.max(thr+1,...sig.map(s=>s.mlp))*1.05,sy=v=>H-20-v/ymax*(H-35);
   const pts=sig.map(s=>{const nm=s.best.slice().sort((a,b)=>a.p-b.p).map(a=>`${a.r.name} (${srcShort(a.r.source)}, p ${a.p.toExponential(1)})`);
-    return `<circle class="mgdot" cx="${sx(off[s.c]+s.mid)}" cy="${sy(s.mlp)}" r="${2+Math.min(5,s.k)}" fill="${s.dis.length>1?"#c9961b":(DCOL[s.dis[0]]||"#1f5c3f")}" data-tip="${esc(`${s.id} · ${s.c} ${s.lo.toFixed(2)}–${s.hi.toFixed(2)} Mb · ${s.k} studies · −log10 p ${s.mlp.toFixed(1)}\n`+nm.slice(0,8).join("\n")+(nm.length>8?`\n… and ${nm.length-8} more`:""))}" style="cursor:pointer"></circle>`;}).join("");
+    return `<circle cx="${sx(off[s.c]+s.mid)}" cy="${sy(s.mlp)}" r="${2+Math.min(5,s.k)}" fill="${s.dis.length>1?"#c9961b":(DCOL[s.dis[0]]||"#1f5c3f")}" opacity=".8" data-tip="${esc(`${s.id} · ${s.c} ${s.lo.toFixed(2)}–${s.hi.toFixed(2)} Mb · ${s.k} studies · −log10 p ${s.mlp.toFixed(1)}\n`+nm.slice(0,8).join("\n")+(nm.length>8?`\n… and ${nm.length-8} more`:""))}" style="cursor:pointer"></circle>`;}).join("");
   const dset=[...new Set(sig.filter(s=>s.dis.length===1).map(s=>s.dis[0]))],multi=sig.some(s=>s.dis.length>1);
   const legItems=dset.map(d=>[DCOL[d]||"#1f5c3f",d]).concat(multi?[["#c9961b","More than one disease"]]:[]);
   let lgx=30,lgy=H+14;const leg=[`<line x1="${lgx}" x2="${lgx+18}" y1="${lgy-4}" y2="${lgy-4}" stroke="#c0392b" stroke-dasharray="4 3"/><text x="${lgx+22}" y="${lgy}" font-size="9.5">Bonferroni threshold</text>`];lgx+=130;
@@ -2560,7 +2560,7 @@ function gbDraw(){const el=$("#gbTracks");const {genes,loci,mk,cand}=GB.view;con
   const th=Math.max(1,nl)*LH+10;o.push(`<rect x="0" y="${y}" width="${W}" height="${th}" fill="var(--accent-soft)" opacity=".35"/><text x="8" y="${y+13}" font-size="10" font-weight="700" fill="var(--ink)">Atlas loci</text><text x="8" y="${y+25}" font-size="9" fill="var(--muted)">${loci.length} in view</text>`);
   let hidden=0;loci.forEach(l=>{if(l.lane>=GB.lanesMax){hidden++;return;}const a=sx(Math.max(l.s,GB.s)),b=Math.max(sx(Math.min(l.e,GB.e)),a+3),yy=y+5+l.lane*LH,col=DCOL[l.r.disease]||"#888",c=co(l.r,"RefSeq v2.1");
     const tip=`${l.r.name} · ${l.r.disease} · ${l.r.cls}\n${l.s===l.e?gbFmt(l.s):gbFmt(l.s)+" – "+gbFmt(l.e)} (RefSeq v2.1)\n${srcShort(l.r.source)}`;
-    o.push(`<g class="gbloc" data-id="${esc(l.r.id)}" data-tip="${esc(tip)}" style="cursor:pointer"><rect x="${a}" y="${yy}" width="${b-a}" height="9" rx="2" fill="${col}"/>${l.s===l.e?`<path d="M${a+1.5} ${yy-2}l-3 -4h6z" fill="${col}"/>`:""}`+
+    o.push(`<g class="gbloc" data-id="${esc(l.r.id)}" data-tip="${esc(tip)}" style="cursor:pointer"><rect x="${a}" y="${yy}" width="${b-a}" height="9" rx="2" fill="${col}" fill-opacity="${l.s===l.e?1:.7}"/>${l.s===l.e?`<path d="M${a+1.5} ${yy-2}l-3 -4h6z" fill="${col}"/>`:""}`+
       (b-a>l.r.name.length*5.2+8?`<text x="${a+4}" y="${yy+7.5}" font-size="8.5" fill="#fff" pointer-events="none">${esc(l.r.name)}</text>`:(b+4+l.r.name.length*5.2<X1?`<text x="${b+3}" y="${yy+7.5}" font-size="8.5" fill="var(--ink)" pointer-events="none">${esc(l.r.name)}</text>`:""))+`</g>`);});
   if(hidden)o.push(`<text x="8" y="${y+37}" font-size="9" fill="#c0392b">+${hidden} not drawn</text>`);y+=th+6;
   /* genes track */
