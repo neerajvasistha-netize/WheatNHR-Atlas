@@ -3349,5 +3349,14 @@ async function exInit(){const s=$("#exSum");if(!s||s.dataset.ok)return;
 })();
 </script>
 
+<script>
+/* close the record panel when the user changes section or changes any filter or option */
+(function(){const close=()=>{const d=document.getElementById("drawer");if(d)d.classList.remove("on");};
+  window.addEventListener("hashchange",close);
+  document.querySelectorAll("nav.tabs a").forEach(a=>a.addEventListener("click",close));
+  ["change","input"].forEach(ev=>document.addEventListener(ev,e=>{const d=document.getElementById("drawer");if(d&&d.classList.contains("on")&&!d.contains(e.target))close();},true));
+  document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("#trBtn,#reset,#showRec,#ideoAll,.mselb,[data-gvall],[data-trall]");if(t)close();},true);
+})();
+</script>
 </body>
 </html>
