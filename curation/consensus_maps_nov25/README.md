@@ -38,3 +38,8 @@ old RFLP probes instead. Not used: Maccaferri et al. 2016 root QTL supplement (e
 127 records placed (`placements.tsv`): seed_cgsw 37, seed_ad62 28, seed_ad66 10, seed_ad94 4, seed_ad95 2, seed_ad60 1, and 45 live-database
 records (updated in the live database and in `web/seed_live.json`). Of the 1,228 records without a position, 471 name markers at all; the others
 (no markers, AFLP/RAPD only, alien chromosomes) cannot be placed this way.
+
+## Abeysekara et al. 2012 (Phytopathology 102:94-104), PDF supplied by the owner, 25 Nov 2026
+QSnb.fcu-7AS (S26-101) and its Catalogue duplicate K0507: interval read from Fig. 3B (peak at XBF293121, flanked by Xgwm60.1/Xbarc154
+and Xgwm130.3/Xwmc83): Xgwm60 54.96 Mb to Xwmc83 89.97 Mb, peak XBF293121 61.43 Mb (in-silico PCR of the Table 2 primers), RefSeq v1.0.
+K0507 also given marker XBF293121 and LOD 4.64; K0506 (QSnb.fcu-1A, Snn4) given LOD 7.03 (Table 5). S26-101 updated in the live database.
