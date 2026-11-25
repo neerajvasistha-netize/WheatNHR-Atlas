@@ -1,0 +1,308 @@
+id	file	doi	name	disease	chr	grade	start	end	peak	ref
+PE6-001	1-s2.0-S0885576525003832-main.txt	10.1016/j.pmpp.2025.102944	PmPh-3A	Powdery mildew	3A	B	7.215576	11.861282		RefSeq v2.1
+PE6-002	1-s2.0-S2095311922001174-main.txt	10.1016/j.jia.2022.08.039	Yr/Pm (Mexico Rye 1RS, T1DL.1RS)	Stripe rust	1D	D				alien (1RS.1DL translocation)
+PE6-003	1-s2.0-S2095311922001174-main.txt	10.1016/j.jia.2022.08.039	Pm (Mexico Rye 1RS, T1DL.1RS)	Powdery mildew	1D	D				alien (1RS.1DL translocation)
+PE6-004	1-s2.0-S2095311924001692-main.txt	10.1016/j.jia.2024.04.012	Pm (Th. ponticum 5E, CH97)	Powdery mildew	5D	D				alien (5E(5D) substitution)
+PE6-005	1-s2.0-S2214514120301768-main.txt	10.1016/j.cj.2020.09.012	Pm67	Powdery mildew	1D	D				alien (1VS.1DL translocation)
+PE6-006	1-s2.0-S221451412200191X-main.txt	10.1016/j.cj.2022.07.017	Pm (rye 6RL, JS016/JS110)	Powdery mildew	6B	D				alien (6RL/6BL translocation)
+PE6-007	1-s2.0-S2214514124001909-main.txt	10.1016/j.cj.2024.09.009	Yr (Th. ponticum, line A155)	Stripe rust	6B	D				alien (6B-6Ae translocation)
+PE6-008	1-s2.0-S2214514125000649-main.txt	10.1016/j.cj.2025.02.012	Sr59	Stem rust	2B	D				alien (2RL/2BS translocation)
+PE6-009	1-s2.0-S2214514125001497-main.txt	10.1016/j.cj.2025.05.015	YrAev	Stripe rust	2B	D				alien (2Sv-2B recombinant)
+PE6-010	1-s2.0-S2214514126000127-main.txt	10.1016/j.cj.2025.12.010	Pm (rye 6RLKu, T6BS.6BL-6RLKu)	Powdery mildew	6B	D				alien (6RL/6BL translocation)
+PE6-011	1-s2.0-S2662173825000827-main.txt	10.1007/s42994-021-00060-3	Yr (Th. intermedium, WTT11)	Stripe rust	1B	D				alien (Th. intermedium translocation on 1B)
+PE6-012	10.1046@j.1439-0523.2001.00598.x.txt	10.1046/j.1439-0523.2001.00598.x	Lr (Ae. triuncialis, 4BS)	Leaf rust	4B	C			59.6054	RefSeq v1.0
+PE6-013	25d352b10c107ffe983da18db02202e2d95f.txt	10.4238/2015.july.17.16	Yr (D. villosum 1V#3S, T1DL.1V#3S)	Stripe rust	1D	D				alien (1VS.1DL translocation)
+PE6-014	7A34F14EB0814FB9AD9E495ECDA80A13.txt	10.3724/sp.j.1145.2009.00044	YrY206	Stripe rust	3D	C	1.9372	12.3621		RefSeq v1.0
+PE6-015	8DBA48BF8A7049B2B285B9C8D1D17E2C.txt	10.3724/sp.j.1006.2015.00049	PmCH7124	Powdery mildew	2B	C			672.0827	RefSeq v1.0
+PE6-016	Crop Science - 2014 - Worthington - MlUM15  an Aegilops neglecta‐derived Powdery Mildew Resistance Gene in Common Wheat.txt	10.2135/cropsci2013.09.0634	MlUM15	Powdery mildew	7A	C	713.8517	732.3035		RefSeq v1.0
+PE6-017	Crop Science - 2015 - Dundas - Chromosome Engineering and Physical Mapping of the Thinopyrum ponticum Translocation in.txt	10.2135/cropsci2014.08.0590	Sr26	Stem rust	6A	D				alien (6Ae#1L/6AL translocation)
+PE6-018	Crop Science - 2021 - Xu - Characterization of PmBN418  a wheat powdery mildew resistance gene on the rye 1RS chromosome.txt	10.1002/csc2.20637	PmBN418	Powdery mildew	1B	D				alien (1RS.1BL translocation)
+PE6-019	Journal of Phytopathology - 2020 - Ma - Molecular mapping of stripe rust resistance gene YrH921 in a wheat introgression.txt	10.1111/jph.12945	YrH921	Stripe rust	5A	D				RefSeq v1.0
+PE6-020	Molecular Cytogenetic Identification of Wheat─Aegilops geniculata Derivative Line with Resistance to Powdery Mildew Encoded on Chromosome 6Ug - Science Explorer Abstract.txt	10.1094/pdis-02-25-0395-re	Pm (Ae. geniculata 6Ug, W181009)	Powdery mildew	6B	D				alien (6Ug substitution for 6B)
+PE6-021	Molecular and Cytogenetic Characterization of Novel Wheat–Rye T2AS.2RL Translocation Lines with Resistance to Powdery Mildew and Stripe Rust _ Phytopathology®.txt	10.1094/phyto-10-25-0323-r	Yr (rye 2RL, T2AS.2RL)	Stripe rust	2A	D				alien (2RL.2AS translocation)
+PE6-022	Molecular and Cytogenetic Characterization of Novel Wheat–Rye T2AS.2RL Translocation Lines with Resistance to Powdery Mildew and Stripe Rust _ Phytopathology®.txt	10.1094/phyto-10-25-0323-r	Pm (rye 2RL, T2AS.2RL)	Powdery mildew	2A	D				alien (2RL.2AS translocation)
+PE6-023	Molecular_genetic_description_of_the_cry.txt	10.1139/g09-076	Lr57	Leaf rust	5D	D				alien (5MgS/5DS translocation)
+PE6-024	Molecular_genetic_description_of_the_cry.txt	10.1139/g09-076	Yr40	Stripe rust	5D	D				alien (5MgS/5DS translocation)
+PE6-025	PDIS-04-22-0865-RE.txt	10.1094/pdis-04-22-0865-re	Yr (T. boeoticum 4Ab, Z1889)	Stripe rust	4B	D				alien (4Ab(4B) substitution)
+PE6-026	PDIS-06-22-1419-RE.txt	10.1094/pdis-06-22-1419-re	YrM1225	Stripe rust	2A	D				alien (2NS/2AS translocation)
+PE6-027	PDIS-07-22-1666-RE.txt	10.1094/pdis-07-22-1666-re	YrSLU	Stripe rust	6D	D				alien (6RL in 6DL)
+PE6-028	PDIS-08-21-1599-RE.txt	10.1094/pdis-08-21-1599-re	Yr/Pm (Th. scirpeum 4E, K16-730-3)	Stripe rust	4D	D				alien (4E(4D) substitution)
+PE6-029	PDIS-10-21-2274-RE.txt	10.1094/pdis-10-21-2274-re	Sr (Th. intermedium 7Js, TA5566/TA5567)	Stem rust	3A	D				alien (3A-7Js translocation)
+PE6-030	PDIS-11-23-2495-RE.txt	10.1094/pdis-11-23-2495-re	Pm3VS	Powdery mildew	3D	D				alien (3VS.3DL translocation)
+PE6-031	PDIS-12-20-2691-RE.txt	10.1094/pdis-12-20-2691-re	Pm (Ae. longissima 3Sl#2S)	Powdery mildew	3B	D				alien (3Sl#2 translocation)
+PE6-032	PDIS-12-24-2594-RE.txt	10.1094/pdis-12-24-2594-re	PmAm (Am. muticum 6T)	Powdery mildew	6A	D				alien (6T(6A) substitution)
+PE6-033	PHYTO-02-20-0061-R.txt	10.1094/phyto-02-20-0061-r	Yr/Pm (rye 7RL, 7BS.7RL RT14-245)	Powdery mildew	7B	D				alien (7RL.7BS translocation)
+PE6-034	PHYTO-02-20-0061-R.txt	10.1094/phyto-02-20-0061-r	Yr (rye 7RL, 7BS.7RL RT14-245)	Stripe rust	7B	D				alien (7RL.7BS translocation)
+PE6-035	PHYTO-07-21-0313-R.txt	10.1094/phyto-07-21-0313-r	Yr (rye BL1 1RS, new 1RS.1BL)	Stripe rust	1B	D				alien (1RS.1BL translocation)
+PE6-036	PHYTO-07-23-0236-R.txt	10.1094/phyto-07-23-0236-r	Yr/Pm (rye Qinling 1RS, T1RS.1AL)	Stripe rust	1A	D				alien (1RS.1AL translocation)
+PE6-037	PHYTO-08-24-0264-R.txt	10.1094/phyto-08-24-0264-r	Lr55 + Yr (E. trachycaulus 1HtS, TC282)	Leaf rust	1B	D				alien (1HtS.1BL translocation)
+PE6-038	Transfer to hexaploid wheat of linked genes for adult-plant leaf rust and seedling stem rust resistance from an amphiploid of Aegilops speltoides × Triticum monococcum.txt	10.1139/g90-079	Lr35	Leaf rust	2B	D				alien (Ae. speltoides segment on 2B)
+PE6-039	an2006.txt	10.1111/j.1744-7909.2006.00275.x	Pm (rye 2R, 2R(2D))	Powdery mildew	2D	D				alien (2R(2D) substitution)
+PE6-040	ando2019.txt	10.1094/pdis-05-18-0831-re	Sr (D. villosum 2V, MS2V(2D))	Stem rust	2D	D				alien (2V(2D) substitution)
+PE6-041	autrique1995.txt	10.1139/g95-009	Lr19	Leaf rust	7D	D				alien (7Ae#1L/7DL translocation)
+PE6-042	autrique1995.txt	10.1139/g95-009	Lr24	Leaf rust	3D	D				alien (3Ae#1L/3DL translocation)
+PE6-043	autrique1995.txt	10.1139/g95-009	Lr32	Leaf rust	3D	D				RefSeq v1.0
+PE6-044	bonhomme1995.txt	10.1007/bf00222919	Lr37 region (Ae. ventricosa, 2AS)	Leaf rust	2A	D				alien (2NS/2AS translocation)
+PE6-045	cao2008.txt	10.1016/j.plantsci.2008.02.007	YrHua	Stripe rust	6A	D				RefSeq v1.0
+PE6-046	chen1995.txt	10.1007/bf00223930	Pm21	Powdery mildew	6A	D				alien (6VS.6AL translocation)
+PE6-047	chen2012.txt	10.1007/s11032-012-9804-x	Pm21 (small 6VS segments)	Powdery mildew	6A	D				alien (6VS.6AL translocation)
+PE6-048	cherukuri2003.txt	10.1046/j.1439-0523.2003.00846.x	Lr19	Leaf rust	7D	D				alien (7Ae#1L/7DL translocation)
+PE6-049	donini1995.txt	10.1007/bf00220952	Pm13	Powdery mildew	3B	D				alien (3Sl#1S/3BS translocation)
+PE6-050	friebe1993.txt	10.1007/bf00222072	Lr38	Leaf rust	2A	D				alien (7Ai#2L translocations)
+PE6-051	gupta2005.txt	10.1139/g05-051	Lr9	Leaf rust	6B	D				alien (Ae. umbellulata segment on 6BL)
+PE6-052	han2020.txt	10.1094/pdis-02-20-0323-re	Yr/Pm (rye 1RS, elite T1RS.1BL)	Powdery mildew	1B	D				alien (1RS.1BL translocation)
+PE6-053	hou2013.txt	10.1016/s2095-3119(13)60293-2	YrV3	Stripe rust	1B	C			638.8985	RefSeq v1.0
+PE6-054	hsam2000.txt	10.1046/j.1439-0523.2000.00444.x	Pm8 / Lr26 (1RS)	Powdery mildew	1B	D				alien (1RS.1BL translocation)
+PE6-055	hussien1997.txt	10.2135/cropsci1997.0011183x003700060016x	Lr43	Leaf rust	7D	D				RefSeq v1.0
+PE6-056	imtiaz2004.txt	10.1111/j.1439-0523.2004.01002.x	QYr 7DS (Yr18, Otane)	Stripe rust	7D	D				RefSeq v1.0
+PE6-057	imtiaz2004.txt	10.1111/j.1439-0523.2004.01002.x	QYr 5DL (Otane)	Stripe rust	5D	D				RefSeq v1.0
+PE6-058	imtiaz2004.txt	10.1111/j.1439-0523.2004.01002.x	QYr 7BL (Tiritea)	Stripe rust	7B	D				RefSeq v1.0
+PE6-059	jia1996.txt	10.1007/s001220050163	Pm12	Powdery mildew	6B	D				alien (Ae. speltoides segment on 6B)
+PE6-060	leonova2004.txt	10.1046/j.0179-9541.2003.00906.x	Lr (T. timopheevii, line 842)	Leaf rust	2A	C			158.8071	RefSeq v1.0
+PE6-061	li2005.txt	10.1111/j.1439-0523.2004.01062.x	Pm21 (6VS translocations, Wan7107)	Powdery mildew	6D	D				alien (6V translocation)
+PE6-062	li2012.txt	10.1094/pdis-03-11-0204-re	YrH9020	Stripe rust	2D	C	15.5838	19.6232		RefSeq v1.0
+PE6-063	liu2013.txt	10.1007/s00122-013-2044-6	Sr44	Stem rust	7D	D				alien (7J#1S.7DL translocation)
+PE6-064	liu2017.txt	10.1007/s00122-017-2855-y	Pm57	Powdery mildew	2B	D				alien (2Ss#1L/2BL recombinant)
+PE6-065	lu2016.txt	10.1007/s00425-016-2538-y	PmPB74	Powdery mildew	5D	C			44.567	RefSeq v1.0
+PE6-066	ma2016.txt	10.1094/pdis-11-15-1352-re	PmWE99	Powdery mildew	2B	C			100.8481	RefSeq v1.0
+PE6-067	ma2019.txt	10.1016/s2095-3119(18)62048-9	YrH9017	Stripe rust	2A	D				RefSeq v1.0
+PE6-068	mago2002.txt	10.1007/s00122-002-0879-3	Lr26/Sr31/Yr9 (1RS Petkus)	Stem rust	1B	D				alien (1RS.1BL translocation)
+PE6-069	mago2002.txt	10.1007/s00122-002-0879-3	SrR (1RS Imperial)	Stem rust	1B	D				alien (1RS translocation)
+PE6-070	mago2018.txt	10.1007/s00122-018-3224-1	SrB	Stem rust	6A	D				alien (6Ae#3/6AL recombinant)
+PE6-071	marais2005.txt	10.1111/j.1439-0523.2005.01116.x	Lr54 / Yr37 (Ae. kotschyi)	Leaf rust	2D	D				alien (Ae. kotschyi segment on 2DL)
+PE6-072	marais2008.txt	10.1111/j.1439-0523.2008.01513.x	Lr59	Leaf rust	1A	D				alien (Ae. peregrina segment on 1AL)
+PE6-073	marais2009 (1).txt	10.1007/s10681-009-9973-9	Lr56 / Yr38	Leaf rust	6A	D				alien (Ae. sharonensis segment on 6A)
+PE6-074	marais2009 (2).txt	10.2135/cropsci2008.06.0317	Lr62 / Yr42	Leaf rust	6A	D				alien (Ae. neglecta segment on 6A)
+PE6-075	marais2009.txt	10.1007/s10681-009-9996-2	S13 introgression (Lr/Yr/Sr)	Leaf rust	3A	D				alien (Ae. speltoides segment on 3A)
+PE6-076	mater2004.txt	10.1139/g03-101	Pm17 (recombinant 1RS Amigo)	Powdery mildew	1A	D				alien (1RS.1AL translocation)
+PE6-077	mcintosh1995.txt	10.1007/bf00027060	Lr45	Leaf rust	2A	D				alien (2R/2A translocation)
+PE6-078	mohler2001.txt	10.1046/j.1439-0523.2001.00622.x	Pm17	Powdery mildew	1A	D				alien (1RS.1AL translocation)
+PE6-079	naik1998.txt	10.1007/s001220050928	Lr28	Leaf rust	4A	D				alien (7S/4AL translocation)
+PE6-080	niranjana2017.txt		LrS2427	Leaf rust	3B	D				RefSeq v1.0
+PE6-081	olson2010.txt	10.2135/cropsci2009.11.0652	Sr22	Stem rust	7A	D				alien (T. boeoticum segment on 7AL)
+PE6-082	prabhu2003.txt	10.1007/bf03263172	Lr28	Leaf rust	4A	D				alien (7S/4AL translocation)
+PE6-083	rong2000.txt	10.1023/a:1003950431049	Pm26	Powdery mildew	2B	D				RefSeq v1.0
+PE6-084	s00122-014-2430-8.txt	10.1007/s00122-014-2430-8	Pm53	Powdery mildew	5B	D				RefSeq v1.0
+PE6-085	s00122-014-2442-4.txt	10.1007/s00122-014-2442-4	Sr46	Stem rust	2D	D				RefSeq v1.0
+PE6-086	s00122-014-2449-x.txt	10.1007/s00122-014-2449-x	PmL962	Powdery mildew	2B	D				RefSeq v1.0
+PE6-087	s00122-015-2536-7.txt	10.1007/s00122-015-2536-7	MlIW170	Powdery mildew	2B	D				RefSeq v1.0
+PE6-088	s00122-015-2590-1.txt	10.1007/s00122-015-2590-1	Sr47	Stem rust	2B	D				alien (Ae. speltoides segment on 2BL)
+PE6-089	s00122-020-03625-w.txt	10.1007/s00122-020-03625-w	LrM	Leaf rust	2A	D				RefSeq v1.0
+PE6-090	s00122-022-04092-1.txt	10.1007/s00122-022-04092-1	Yr (Th. ponticum, TTh-1DS.1DL)	Stripe rust	1D	D				alien (Th. ponticum segment on 1DS)
+PE6-091	s00122-025-04955-3.txt	10.1007/s00122-025-04955-3	PmYT9	Powdery mildew	2D	D				alien (2R(2D) substitution)
+PE6-092	s00122-025-05005-8.txt	10.1007/s00122-025-05005-8	Sr68	Stem rust	1B	D				alien (Th. junceum segment on 1BS)
+PE6-093	s10681-013-1059-z.txt	10.1007/s10681-013-1059-z	Pm (Th. intermedium, line 08-723)	Powdery mildew	6A	D				alien (Th. intermedium translocation on 6A)
+PE6-094	s11032-015-0234-4.txt	10.1007/s11032-015-0234-4	Lr45	Leaf rust	2A	C			203.3149	RefSeq v1.0
+PE6-095	saluja2017.txt	10.1017/s1479262116000460	Lr (Ae. tauschii, WH542, 2DS)	Leaf rust	2D	C	5.2279	13.7542		RefSeq v1.0
+PE6-096	schachermayr1995.txt	10.1007/bf00222911	Lr24	Leaf rust	3D	D				alien (3Ae#1L/3DL translocation)
+PE6-097	singh2003.txt	10.1007/s00122-003-1477-8	Lr39/Lr41 (WX93D246R-1)	Leaf rust	2D	D				RefSeq v1.0
+PE6-098	sun2002.txt	10.1046/j.1439-0523.2002.00754.x	Yr5	Stripe rust	2B	C			672.0827	RefSeq v1.0
+PE6-099	sun2006.txt	10.1111/j.1744-7909.2006.00328.x	PmY201	Powdery mildew	5D	C			431.8938	RefSeq v1.0
+PE6-100	sun2006.txt	10.1111/j.1744-7909.2006.00328.x	PmY212	Powdery mildew	5D	C			439.2246	RefSeq v1.0
+PE6-101	sun2018.txt	10.1080/07060661.2018.1523230	YrH9015	Stripe rust	5D	D				RefSeq v1.0
+PE6-102	toor2016.txt	10.1007/s12041-016-0718-y	YrAc	Stripe rust	5D	D				RefSeq v1.0
+PE6-103	vikal2004.txt	10.1007/bf03263190	Lr28	Leaf rust	4A	C			719.2605	RefSeq v1.0
+PE6-104	wang2009.txt	10.1094/pdis-93-2-0124	Yr/Pm (rye 1RS, T2BL.1RS)	Stripe rust	2B	D				alien (1RS.2BL translocation)
+PE6-105	weidner2012.txt	10.1017/s1479262112000123	QPm.ipk-1A	Powdery mildew	1A	D				RefSeq v1.0
+PE6-106	weidner2012.txt	10.1017/s1479262112000123	QPm.ipk-7A	Powdery mildew	7A	D				RefSeq v1.0
+PE6-107	yu2010.txt	10.2135/cropsci2009.10.0633	Sr39	Stem rust	2B	D				alien (Ae. speltoides segment on 2B)
+PE6-108	zhang2018 (1).txt	10.1007/s00122-018-3176-5	Pm62	Powdery mildew	2B	D				alien (2VL whole-arm translocation T2BS.2V#5L)
+PE6-109	1-s2.0-S1674205225003624-main.txt	10.1016/j.molp.2025.10.012	Pm6 (cloned, NLR)	Powdery mildew	2B	D				alien (2G/2B introgression)
+PE6-110	1-s2.0-S2095311925001157-main.txt	10.1016/j.jia.2025.04.030	YrAK58.1-3 (7BL)	Stripe rust	7B	B	715.77	733.25		RefSeq v2.1
+PE6-111	1-s2.0-S2095311925001157-main.txt	10.1016/j.jia.2025.04.030	QYrak.nwafu-2BL (Yr5b)	Stripe rust	2B	D				RefSeq v1.0
+PE6-112	1-s2.0-S209531192500379X-main.txt	10.1016/j.jia.2025.12.048	QLr.hwwg-2BL	Leaf rust	2B	B	786.4	789.0		RefSeq v2.1
+PE6-113	1-s2.0-S209531192500379X-main.txt	10.1016/j.jia.2025.12.048	QLr.hwwg-4AL	Leaf rust	4A	B	625.5	628.9		RefSeq v2.1
+PE6-114	1-s2.0-S2095809926001323-main.txt	10.1016/j.eng.2026.02.027	PmNCA6	Powdery mildew	7A	B	680.1	697.1		RefSeq v2.1
+PE6-115	1-s2.0-S2214514121001525-main.txt	10.1016/j.cj.2021.06.009	Yr041133	Stripe rust	7B	B	608.9	609.7		RefSeq v1.0
+PE6-116	1-s2.0-S221451412200006X-main.txt	10.1016/j.cj.2021.10.011	QYr.YBZR-6AL	Stripe rust	6A	D				RefSeq v1.0
+PE6-117	1-s2.0-S221451412200006X-main.txt	10.1016/j.cj.2021.10.011	QYr.YBZR-7DS	Stripe rust	7D	B	46.7	49.9	47.7	RefSeq v1.0
+PE6-118	1-s2.0-S2214514123000715-main.txt	10.1016/j.cj.2023.04.011	YrAS1676	Stripe rust	1A	B	485.36	490.13		RefSeq v1.0
+PE6-119	1-s2.0-S2214514124000758-main.txt	10.1016/j.cj.2024.03.009	YrAYH	Stripe rust	5B	B	519.0	538.2		RefSeq v1.0
+PE6-120	1-s2.0-S2214514125000169-main.txt	10.1016/j.cj.2025.01.003	Pm71	Powdery mildew	6A	D				RefSeq v1.0
+PE6-121	1-s2.0-S2667064X24002239-main.txt	10.1016/j.stress.2024.100570	QLr.arc-1B	Leaf rust	1B	A			57.01	RefSeq v1.0
+PE6-122	1-s2.0-S2667064X24002239-main.txt	10.1016/j.stress.2024.100570	QLr.arc-3D	Leaf rust	3D	D				RefSeq v1.0
+PE6-123	46B2D8A854A94A36805BC59A6B796542.txt	10.3724/sp.j.1006.2019.91026	QYr.gaas-5AL	Stripe rust	5A	D				RefSeq v1.0
+PE6-124	46B2D8A854A94A36805BC59A6B796542.txt	10.3724/sp.j.1006.2019.91026	QYr.gaas-7AL	Stripe rust	7A	D				RefSeq v1.0
+PE6-125	692874A6627D4E6788AB53747D2DCF73.txt	10.3724/sp.j.1006.2024.31081	QYr.HM-7AL	Stripe rust	7A	D				RefSeq v1.0
+PE6-126	692874A6627D4E6788AB53747D2DCF73.txt	10.3724/sp.j.1006.2024.31081	QYr.HM-7DS	Stripe rust	7D	D				RefSeq v1.0
+PE6-127	81B2395AA8DE4FCEB7787140B88EE43C.txt	10.3724/sp.j.1006.2022.11039	YrC271	Stripe rust	3B	B	6.1	8.0		RefSeq v1.0
+PE6-128	C80B8207C9EE48299CEEAA43B90FD988.txt	10.3724/sp.j.1006.2025.51040	QYr.CLM-2DS	Stripe rust	2D	D				RefSeq v1.0
+PE6-129	Crop Science - 2025 - Kumssa - QTL mapping of stem rust resistance in a Bill Brown Gage winter wheat population.txt	10.1002/csc2.21445	QSr 3B (Gage)	Stem rust	3B	D				RefSeq v1.0
+PE6-130	Fine-mapping-of-the-powdery-mildew-resistance-gene-PmXQ-0508-in-bread-wheat.txt	10.1016/j.cj.2024.05.016	PmXQ-0508	Powdery mildew	2B	D				RefSeq v1.0
+PE6-131	Fine-mapping-of-two-recessive-powdery-mildew-resistance-genes-from-Aegilops-tauschii-accession.txt	10.1007/s00122-023-04454-3	pmAeCIae8_2DS	Powdery mildew	2D	D				RefSeq v1.0
+PE6-132	Fine-mapping-of-two-recessive-powdery-mildew-resistance-genes-from-Aegilops-tauschii-accession.txt	10.1007/s00122-023-04454-3	pmAeCIae8_7DS	Powdery mildew	7D	D				RefSeq v1.0
+PE6-133	Genetic analysis revealed a quantitative trait loci (QTL2A.K) on short arm of chromosome 2A associated with yellow rust resistance in wheat (Triticum aestivum L.) _ INDIAN JOURNAL OF GENETICS AND PLANT BREEDING.txt	10.31742/ijgpb.80.3.1	QTL2A.K	Stripe rust	2A	D				RefSeq v1.0
+PE6-134	Genetic-mapping-of-the-wheat-leaf-rust-resistance-gene-Lr2a-and-its-importance-in-Canadian.txt	10.1007/s00122-023-04440-9	Lr2a	Leaf rust	2D	B	64.454627	64.759929		RefSeq v2.1
+PE6-135	Genome-Wide-Association-Mapping-for-Stripe-Rust-Resistance-in-Domesticated-Emmer-Wheat-i.txt	10.1094/pdis-01-25-0215-re	QYr.emmer-4A.2	Stripe rust	4A	D				RefSeq v1.0
+PE6-136	Genome-Wide-Association-Mapping-for-Stripe-Rust-Resistance-in-Domesticated-Emmer-Wheat-i.txt	10.1094/pdis-01-25-0215-re	QYr.emmer-6A	Stripe rust	6A	D				RefSeq v1.0
+PE6-137	Gireesh_Trinakriapaper.txt	10.5958/j.0975-6906.74.1.002	Lr (durum Trinakria, 5BS)	Leaf rust	5B	C			8.189	RefSeq v1.0
+PE6-138	High-resolution-genetic-mapping-and-identification-of-candidate-genes-for-the-wheat-stem.txt	10.1016/j.cj.2023.09.006	Sr8155B1	Stem rust	6A	B	3.85	6.5		RefSeq v1.0
+PE6-139	Identification-and-fine-mapping-of-PmNJ3946-for-powdery-mildew-resistance-in-einkorn-wheat.txt	10.1016/j.cj.2023.05.010	PmNJ3946	Powdery mildew	3A	D				RefSeq v1.0
+PE6-140	Journal of Phytopathology - 2026 - Regasa - Unlocking Stripe Rust  Puccinia striiformis f  sp  tritici  Resistance and.txt	10.1111/jph.70356	MTA Yr 6B 709.5 Mb (Regasa)	Stripe rust	6B	A			709.5	RefSeq v2.1
+PE6-141	Journal of Phytopathology - 2026 - Regasa - Unlocking Stripe Rust  Puccinia striiformis f  sp  tritici  Resistance and.txt	10.1111/jph.70356	MTA Yr 5D 426.6 Mb (Regasa)	Stripe rust	5D	A			426.6	RefSeq v2.1
+PE6-142	Journal of Phytopathology - 2026 - Regasa - Unlocking Stripe Rust  Puccinia striiformis f  sp  tritici  Resistance and.txt	10.1111/jph.70356	MTA Yr 5A 670.8 Mb (Regasa)	Stripe rust	5A	A			670.8	RefSeq v2.1
+PE6-143	Mapping and Transfer of the Powdery Mildew Resistance Gene Pm26 from Wild Emmer Wheat to Bread Wheat _ Plant Disease.txt	10.1094/pdis-12-25-2526-re	Pm26	Powdery mildew	2B	D				RefSeq v1.0
+PE6-144	Mapping-of-powdery-mildew-resistance-genes-transferred-to-common-wheat-from-wild-emmer-wheat.txt	10.1016/j.cj.2024.01.015	MlIW6 (Pm60 region)	Powdery mildew	7A	D				RefSeq v1.0
+PE6-145	Mapping-of-quantitative-trait-loci-for-leaf-rust-resistance-in-the-wheat-population-Xinmai.txt	10.1093/jxb/erad085	QLr.hnau-2BS	Leaf rust	2B	B	140.78	157.97		RefSeq v1.0
+PE6-146	Mapping-of-quantitative-trait-loci-for-leaf-rust-resistance-in-the-wheat-population-Xinmai.txt	10.1093/jxb/erad085	QLr.hnau-2DS	Leaf rust	2D	B	5.91	11.4		RefSeq v1.0
+PE6-147	Mapping-of-quantitative-trait-loci-for-leaf-rust-resistance-in-the-wheat-population-Xinmai.txt	10.1093/jxb/erad085	QLr.hnau-3BS	Leaf rust	3B	B	66.42	70.87		RefSeq v1.0
+PE6-148	Mapping-the-quantitative-field-resistance-to-stripe-rust-in-a-hard-winter-wheat-population.txt	10.1002/csc2.20977	QYr.hwwg-2A (Overley)	Stripe rust	2A	B	6.17	13.66		RefSeq v2.1
+PE6-149	Molecular Tagging Wheat Powdery Mildew Resistance Gene Pm21 by EST-SSR and STS Markers _ Qi 1 _ Molecular Plant Breeding.txt	10.5376/mpb.2010.01.0004	Pm21	Powdery mildew	6A	D				alien (6VS.6AL translocation)
+PE6-150	Molecular tagging of a novel stripe rust resistance gene, YrSp, derived from a spelt wheat derivative _ Chinese Journal of Agricultural Biotechnology _ Cambridge Core.txt	10.1079/cjb20049	YrSp (spelt derivative)	Stripe rust	3A	D				RefSeq v1.0
+PE6-151	Molecular-mapping-of-all-stage-stripe-rust-resistance-in-Indian-wheat-scp-i-Triticum-aestivum.txt	10.1111/pbr.13021	YrVL	Stripe rust	2B	B	769.1	779.3		RefSeq v1.0
+PE6-152	PDIS-01-23-0105-SR.txt	10.1094/pdis-01-23-0105-sr	QLr.hebau-1AL	Leaf rust	1A	B	478.5	483.3		RefSeq v2.1
+PE6-153	PDIS-02-23-0399-RE.txt	10.1094/pdis-02-23-0399-re	QPmja.caas-2AL	Powdery mildew	2A	B	761.8	765.3		RefSeq v1.0
+PE6-154	PDIS-02-23-0399-RE.txt	10.1094/pdis-02-23-0399-re	QPmja.caas-2DS	Powdery mildew	2D	B	15.8	16.2		RefSeq v1.0
+PE6-155	PDIS-02-23-0399-RE.txt	10.1094/pdis-02-23-0399-re	QPmja.caas-6BL.1	Powdery mildew	6B	B	497.6	506.4		RefSeq v1.0
+PE6-156	PDIS-02-23-0399-RE.txt	10.1094/pdis-02-23-0399-re	QPmja.caas-1DL	Powdery mildew	1D	B	401.8	415.3		RefSeq v1.0
+PE6-157	PDIS-02-23-0399-RE.txt	10.1094/pdis-02-23-0399-re	QPmja.caas-4DL	Powdery mildew	4D	B	434.8	435.6		RefSeq v1.0
+PE6-158	PDIS-03-21-0672-RE.txt	10.1094/pdis-03-21-0672-re	QSr.umn.2A	Stem rust	2A	B	2.6	27.8		RefSeq v1.0
+PE6-159	PDIS-03-21-0672-RE.txt	10.1094/pdis-03-21-0672-re	QSr.umn.6A.1	Stem rust	6A	A			2.41	RefSeq v1.0
+PE6-160	PDIS-03-22-0702-RE.txt	10.1094/pdis-03-22-0702-re	QYr.sicau-7DS	Stripe rust	7D	B	75.61	91.43		RefSeq v1.0
+PE6-161	PDIS-03-22-0702-RE.txt	10.1094/pdis-03-22-0702-re	QYr.sicau-3DL	Stripe rust	3D	D				RefSeq v1.0
+PE6-162	PDIS-07-22-1518-RE.txt	10.1094/pdis-07-22-1518-re	QYr.sicau-6B (N2496)	Stripe rust	6B	B	519.35	526.55		RefSeq v2.1
+PE6-163	PDIS-07-22-1545-RE.txt	10.1094/pdis-07-22-1545-re	PmAL11	Powdery mildew	7B	B	705.0	720.0		RefSeq v1.0
+PE6-164	PDIS-09-21-1946-RE.txt	10.1094/pdis-09-21-1946-re	QYr.sicau-1BL	Stripe rust	1B	B	667.64	670.37		RefSeq v1.0
+PE6-165	PDIS-09-21-1946-RE.txt	10.1094/pdis-09-21-1946-re	QYr.sicau-2AS	Stripe rust	2A	B	4.97	7.72		RefSeq v1.0
+PE6-166	PDIS-09-21-1946-RE.txt	10.1094/pdis-09-21-1946-re	QYr.sicau-2AL	Stripe rust	2A	B	528.21	657.9		RefSeq v1.0
+PE6-167	PDIS-09-22-2242-RE.txt	10.1094/pdis-09-22-2242-re	QSr.nbpgr-2AL_40A	Stem rust	2A	A			778.91	RefSeq v1.0
+PE6-168	PDIS-09-22-2242-RE.txt	10.1094/pdis-09-22-2242-re	QSr.nbpgr-4AL_APR	Stem rust	4A	D				RefSeq v1.0
+PE6-169	PDIS-10-23-2037-RE.txt	10.1094/pdis-10-23-2037-re	YrM488	Stripe rust	2D	B	574.11	602.51		RefSeq v1.0
+PE6-170	PDIS-11-21-2564-RE.txt	10.1094/pdis-11-21-2564-re	YrCf75	Stripe rust	2A	B	577.0	638.0		RefSeq v1.0
+PE6-171	PDIS-11-22-2600-RE.txt	10.1094/pdis-11-22-2600-re	Yr85 (YrTr1)	Stripe rust	1B	B	30.675	60.382		RefSeq v2.1
+PE6-172	PDIS-11-22-2683-RE.txt	10.1094/pdis-11-22-2683-re	YrFL	Stripe rust	5A	B	37.1	70.7		RefSeq v1.0
+PE6-173	PDIS-11-23-2363-RE.txt	10.1094/pdis-11-23-2363-re	YrZ15-1949	Stripe rust	7D	D				RefSeq v1.0
+PE6-174	PDIS-12-20-2648-RE.txt	10.1094/pdis-12-20-2648-re	YrXk	Stripe rust	1B	B	297.175343	309.601693		RefSeq v1.0
+PE6-175	PDIS-12-21-2627-RE.txt	10.1094/pdis-12-21-2627-re	QYrJD.wsu-1B	Stripe rust	1B	D				RefSeq v1.0
+PE6-176	PDIS-12-21-2659-RE (2).txt	10.1094/pdis-12-21-2659-re	QPm.nwafu-2AL	Powdery mildew	2A	B	758.0	759.0		RefSeq v1.0
+PE6-177	PDIS-12-22-2842-RE.txt	10.1094/pdis-12-22-2842-re	QYr.nwsuaf-2A	Stripe rust	2A	B	76.4	76.94		RefSeq v1.0
+PE6-178	PDIS-12-22-2894-RE.txt	10.1094/pdis-12-22-2894-re	QPmbdt.nwafu-2AS	Powdery mildew	2A	D				RefSeq v1.0
+PE6-179	PDIS-12-23-2754-RE.txt	10.1094/pdis-12-23-2754-re	PmHSM	Powdery mildew	4A	D				RefSeq v1.0
+PE6-180	PHYTO-03-24-0108-R.txt	10.1094/phyto-03-24-0108-r	QLr.hwwg-2DS (CI 13227)	Leaf rust	2D	B	2.8	5.5		RefSeq v2.1
+PE6-181	PHYTO-09-23-0320-R.txt	10.1094/phyto-09-23-0320-r	QLrStars-2DS	Leaf rust	2D	B	46.4	65.9		RefSeq v2.1
+PE6-182	PHYTO-09-23-0320-R.txt	10.1094/phyto-09-23-0320-r	QLr.Stars-7BL	Leaf rust	7B	B	762.41	762.76		RefSeq v2.1
+PE6-183	PHYTO-09-23-0348-R.txt	10.1094/phyto-09-23-0348-r	QLr-Spa-1B.1	Leaf rust	1B	D				RefSeq v1.0
+PE6-184	PHYTO-09-23-0348-R.txt	10.1094/phyto-09-23-0348-r	QLr-Spa-3A	Leaf rust	3A	D				RefSeq v1.0
+PE6-185	asad2013.txt	10.1016/s2095-3119(13)60297-x	Qpm.caas-3BS	Powdery mildew	3B	D				RefSeq v1.0
+PE6-186	asad2013.txt	10.1016/s2095-3119(13)60297-x	Qpm.caas-5BL.1	Powdery mildew	5B	D				RefSeq v1.0
+PE6-187	asad2013.txt	10.1016/s2095-3119(13)60297-x	Qpm.caas-7DS	Powdery mildew	7D	D				RefSeq v1.0
+PE6-188	babiker2017.txt	10.1094/phyto-08-16-0294-r	Sr (Ug99 seedling, 2BL)	Stem rust	2B	D				RefSeq v1.0
+PE6-189	babiker2017.txt	10.1094/phyto-08-16-0294-r	Sr (Ug99 seedling, 6DS)	Stem rust	6D	D				RefSeq v1.0
+PE6-190	bai1998.txt	10.4141/p97-136	Lr (T. timopheevii, 1A)	Leaf rust	1A	D				RefSeq v1.0
+PE6-191	bokore2021.txt	10.1080/07060661.2021.1966651	QSr 2BS (BW961)	Stem rust	2B	D				RefSeq v1.0
+PE6-192	bokore2021.txt	10.1080/07060661.2021.1966651	QSr 7AL (AAC Prevail)	Stem rust	7A	D				RefSeq v1.0
+PE6-193	brown-guedira2003.txt	10.1094/phyto.2003.93.7.784	Lr18	Leaf rust	5B	D				RefSeq v1.0
+PE6-194	chao2018.txt	10.1094/pdis-05-17-0671-re	YrM8664-3	Stripe rust	4A	D				RefSeq v1.0
+PE6-195	chao2019.txt	10.1094/phyto-03-18-0092-r	PmTx45	Powdery mildew	4B	D				RefSeq v1.0
+PE6-196	chen2019 (1).txt	10.1111/nph.16169	Sr60 (cloned)	Stem rust	5A	D				RefSeq v1.0
+PE6-197	chen2019.txt	10.1016/j.cj.2019.08.004	PmCH1357 (Pm2 allele)	Powdery mildew	5D	D				RefSeq v1.0
+PE6-198	cobo2019.txt	10.3835/plantgenome2018.08.0055	QYr.ucw-1BL	Stripe rust	1B	D				RefSeq v1.0
+PE6-199	dracatos2016.txt	10.1111/ppa.12580	Rps (P. striiformis f. sp. pseudo-hordei) 3DL/5BL	Stripe rust	3D	D				RefSeq v1.0
+PE6-200	dunckel2015.txt	10.2135/cropsci2014.11.0755	QSr 1AS/2BS/6AS/6AL (W7984 x Opata)	Stem rust	6A	D				RefSeq v1.0
+PE6-201	feng2018.txt	10.1094/phyto-11-17-0375-r	Yr79	Stripe rust	7B	D				RefSeq v1.0
+PE6-202	gessese2019.txt	10.1094/pdis-06-18-1055-re	Yr81 (YrAW5)	Stripe rust	6A	D				RefSeq v1.0
+PE6-203	hou2016.txt		Yr69 (YrCH86)	Stripe rust	2A	D				RefSeq v1.0
+PE6-204	hsam1997.txt	10.1111/j.1439-0523.1997.tb02164.x	Pm17	Powdery mildew	1A	D				alien (1RS.1AL translocation)
+PE6-205	huang2021.txt	10.1094/pdis-07-20-1516-re	QYrsn.nwafu-1BL	Stripe rust	1B	B	661.9	668.7		RefSeq v1.0
+PE6-206	isgpb.txt	10.31742/ijgpb.79.1.1	LrSel212	Leaf rust	2B	C			172.6873	RefSeq v1.0
+PE6-207	isgpb.txt	10.31742/ijgpb.79.1.1	SrSel212	Stem rust	2B	C			172.6873	RefSeq v1.0
+PE6-208	jin2020.txt	10.1094/pdis-07-19-1347-re	mlxbd	Powdery mildew	7B	D				RefSeq v1.0
+PE6-209	jkac274.txt	10.1093/g3journal/jkac274	Lr32	Leaf rust	3D	D				RefSeq v1.0
+PE6-210	kolmer2018.txt	10.1094/phyto-07-17-0254-r	Lr78	Leaf rust	5D	D				RefSeq v1.0
+PE6-211	kolmer2022.txt	10.1002/tpg2.20215	QLr 2AL (CI13227, 411A)	Leaf rust	2A	D				RefSeq v1.0
+PE6-212	kumar2021.txt	10.1080/07060661.2020.1843073	QSr 6AS (A9919-BY5C, Ug99)	Stem rust	6A	D				RefSeq v1.0
+PE6-213	li2019.txt	10.1016/j.cj.2019.01.005	QPm.stars-2BL1	Powdery mildew	2B	B	457.7	461.7		RefSeq v1.0
+PE6-214	li2019.txt	10.1016/j.cj.2019.01.005	QPm.stars-2BL3	Powdery mildew	2B	B	696.6	715.9		RefSeq v1.0
+PE6-215	li2020.txt	10.1094/pdis-08-19-1745-re	PmQ	Powdery mildew	2B	B	710.523186	730.866838		RefSeq v1.0
+PE6-216	liu2014 (1).txt	10.1093/mp/ssu112	Yr10 (cloned)	Stripe rust	1B	D				RefSeq v1.0
+PE6-217	liu2016.txt	10.1007/s00122-016-2841-9	Yrdurum-1BS.1	Stripe rust	1B	D				RefSeq v1.0
+PE6-218	liu2018.txt	10.1007/s00122-018-3116-4	Yr (Madsen, 1AS)	Stripe rust	1A	D				RefSeq v1.0
+PE6-219	liu2021.txt	10.1007/s00122-021-03801-6	YrP10090	Stripe rust	6A	D				RefSeq v1.0
+PE6-220	lodhi2019.txt	10.1111/pbr.12674	Yr57	Stripe rust	3B	D				RefSeq v1.0
+PE6-221	lu2014.txt	10.1007/s00122-014-2312-0	Yr62	Stripe rust	4B	D				RefSeq v1.0
+PE6-222	lu2016.txt	10.1016/s2095-3119(16)61379-5	YrZM175	Stripe rust	2A	D				RefSeq v1.0
+PE6-223	lu2017.txt	10.1094/phyto-09-16-0347-r	QLr.hwwg-2DS (CI13227 x Lakin)	Leaf rust	2D	D				RefSeq v1.0
+PE6-224	lu2017.txt	10.1094/phyto-09-16-0347-r	QLr.hwwg-7AL / -7BL (CI13227)	Leaf rust	7B	D				RefSeq v1.0
+PE6-225	luo2020.txt	10.1016/s2095-3119(19)62638-9	QYr.saas-5BL	Stripe rust	5B	A			570.0	RefSeq v1.0
+PE6-226	luo2020.txt	10.1016/s2095-3119(19)62638-9	QYr.saas-7DS	Stripe rust	7D	B	40.0	46.0		RefSeq v1.0
+PE6-227	ma2001.txt	10.1023/a:1017510331721	Yr (H. villosa 6VS, R55)	Stripe rust	6A	D				alien (6VS.6AL translocation)
+PE6-228	ma2013 (1).txt	10.1016/s2095-3119(13)60479-7	YrLT1	Stripe rust	2D	D				RefSeq v1.0
+PE6-229	ma2014.txt	10.1111/jph.12284	Yrzhong12-1	Stripe rust	7A	C			611.8378	RefSeq v1.0
+PE6-230	ma2015 (1).txt	10.1007/s11032-015-0244-2	YrBai	Stripe rust	6D	D				RefSeq v1.0
+PE6-231	ma2015.txt	10.1016/j.cropro.2015.04.006	Yrzhong16-1	Stripe rust	2A	C			1.5828	RefSeq v1.0
+PE6-232	mu2019.txt	10.1007/s11032-019-0991-6	Yrcen	Stripe rust	1D	B	9.0	12.5		RefSeq v1.0
+PE6-233	narang2019.txt	10.1007/s00122-019-03293-5	LrP / YrP (Ae. peregrina)	Leaf rust	5D	A			7.96	RefSeq v1.0
+PE6-234	nelson1997.txt	10.2135/cropsci1997.0011183x003700060043x	Lr suppressor (Ae. tauschii, 2DS)	Leaf rust	2D	D				RefSeq v1.0
+PE6-235	nelson1998.txt	10.2135/cropsci1998.0011183x003800010039x	QKb 3BS (synthetic)	Karnal bunt	3B	D				RefSeq v1.0
+PE6-236	nelson1998.txt	10.2135/cropsci1998.0011183x003800010039x	QKb 5AL (synthetic)	Karnal bunt	5A	D				RefSeq v1.0
+PE6-237	neu2002.txt	10.1139/g02-040	Lr20-Pm1	Leaf rust	7A	D				RefSeq v1.0
+PE6-238	niu2013.txt	10.1007/s00122-013-2245-z	Cr1	Crown rust	5D	D				RefSeq v1.0
+PE6-239	park2014.txt	10.1007/s00122-014-2359-y	Lr73	Leaf rust	2B	D				RefSeq v1.0
+PE6-240	periyannan2013.txt	10.1126/science.1239028	Sr33 (cloned)	Stem rust	1D	D				RefSeq v1.0
+PE6-241	peusha1996.txt	10.1007/bf00021064	Pm22	Powdery mildew	1D	D				RefSeq v1.0
+PE6-242	prins2001.txt	10.1007/pl00002918	Lr19	Leaf rust	7D	D				alien (7Ae#1L/7DL translocation)
+PE6-243	qi2016.txt	10.1016/s2095-3119(14)60974-6	QLr.hbu-1BL.1 (W014204)	Leaf rust	1B	D				RefSeq v1.0
+PE6-244	qie2019.txt	10.1094/pdis-02-19-0401-re	pmDHT	Powdery mildew	7B	C			700.632	RefSeq v1.0
+PE6-245	qureshi2018.txt	10.1007/s00122-018-3060-3	Lr79	Leaf rust	3B	D				RefSeq v1.0
+PE6-246	rauf2022.txt	10.1002/csc2.20728	QLr.umn-1B	Leaf rust	1B	A			670.2	RefSeq v1.0
+PE6-247	raupp2001.txt	10.1007/s001220051652	Lr39	Leaf rust	2D	D				RefSeq v1.0
+PE6-248	ren2012.txt	10.1007/s00122-012-1877-8	Yr52	Stripe rust	7B	D				RefSeq v1.0
+PE6-249	ren2015 (2).txt	10.1111/pbr.12290	QYr 2B (Lumai 21 x Jingshuang 16)	Stripe rust	2B	D				RefSeq v1.0
+PE6-250	s10343-026-01408-9.txt	10.1007/s10343-026-01408-9	Lr13	Leaf rust	2B	D				RefSeq v1.0
+PE6-251	sacco1998.txt	10.1139/g98-067	Lr3 (Sinvalocho MA)	Leaf rust	6B	D				RefSeq v1.0
+PE6-252	sainisharma2019.txt	10.1080/07060661.2019.1669076	SrMcN	Stem rust	2D	D				RefSeq v1.0
+PE6-253	sapkota2018.txt	10.1007/s11032-018-0909-8	LrA2K	Leaf rust	2B	B	92.16	105.99		RefSeq v1.0
+PE6-254	sapkota2019.txt	10.3835/plantgenome2019.05.0033	QLr.uga-6AL1 / 6AL2	Leaf rust	6A	D				RefSeq v1.0
+PE6-255	senturkakfirat2013.txt	10.1007/s12041-013-0254-y	Lr (Xgwm382/Xgwm311, group 2)	Leaf rust	2A	C	772.9673	772.9674		RefSeq v1.0
+PE6-256	sharma2019 (1).txt	10.1007/s13562-019-00511-5	QYrtm.pau-2A	Stripe rust	2A	D				RefSeq v1.0
+PE6-257	singh2000.txt	10.2135/cropsci2000.4041148x	Yr28	Stripe rust	4D	D				RefSeq v1.0
+PE6-258	singh2001.txt	10.1046/j.1439-0523.2001.00561.x	LrH (Harrier)	Leaf rust	2A	D				RefSeq v1.0
+PE6-259	singh2012 (1).txt	10.1007/s11032-012-9798-4	QLr 7B (Sachem, Xgwm146)	Leaf rust	7B	C			740.7204	RefSeq v1.0
+PE6-260	singh2012.txt	10.1007/s10681-012-0786-x	Lr71 (LrARK12c)	Leaf rust	1B	C	212.5519	222.5777		RefSeq v1.0
+PE6-261	singh2017.txt	10.1007/s12041-017-0760-4	Lr (T. timopheevii, 3BL)	Leaf rust	3B	D				RefSeq v1.0
+PE6-262	sourdille1999.txt	10.1023/a:1003713219799	Mlar	Powdery mildew	1A	D				RefSeq v1.0
+PE6-263	steffan2017.txt	10.1007/s00122-017-2868-6	Bt9	Common bunt	6D	D				RefSeq v1.0
+PE6-264	tao2000.txt	10.1007/s001220050074	Pm6	Powdery mildew	2B	D				alien (2G/2B introgression)
+PE6-265	toor2013.txt	10.1007/s11032-013-9903-3	QFs.sun-3AL	Flag smut	3A	D				RefSeq v1.0
+PE6-266	toor2013.txt	10.1007/s11032-013-9903-3	QFs.sun-6AS	Flag smut	6A	D				RefSeq v1.0
+PE6-267	toor2013.txt	10.1007/s11032-013-9903-3	QFs.sun-1BL	Flag smut	1B	D				RefSeq v1.0
+PE6-268	toor2013.txt	10.1007/s11032-013-9903-3	QFs.sun-5BS	Flag smut	5B	D				RefSeq v1.0
+PE6-269	ullah2018.txt	10.1007/s00425-018-2998-3	Pm4e	Powdery mildew	2A	D				RefSeq v1.0
+PE6-270	wan2020.txt	10.1007/s00122-020-03546-8	Pm6	Powdery mildew	2B	D				alien (2G/2B introgression)
+PE6-271	wang2002.txt	10.1023/a:1015689817857	Yr10	Stripe rust	1B	C			5.1376	RefSeq v1.0
+PE6-272	wang2014.txt	10.1007/s00122-014-2336-5	Pm41	Powdery mildew	3B	D				RefSeq v1.0
+PE6-273	wang2017.txt	10.1007/s00122-017-2950-0	YrZH22	Stripe rust	4B	D				RefSeq v1.0
+PE6-274	wang2018 (1).txt	10.1016/j.cj.2017.03.002	YrMM58 / YrHY1	Stripe rust	2A	B	0.0	16.0		RefSeq v1.0
+PE6-275	wang2019.txt	10.1007/s00122-019-03385-2	Q.DB.ui-6DL	Dwarf bunt	6D	D				RefSeq v1.0
+PE6-276	wang2019.txt	10.1007/s00122-019-03385-2	Q.DB.ui-7AL	Dwarf bunt	7A	D				RefSeq v1.0
+PE6-277	wiersma2016.txt	10.1007/s00122-016-2776-1	SrTA10187	Stem rust	6D	D				RefSeq v1.0
+PE6-278	winzeler1995.txt	10.1111/j.1439-0523.1995.tb00753.x	Lr19	Leaf rust	7D	D				alien (7Ae#1L/7DL translocation)
+PE6-279	wu2018 (1).txt	10.1007/s00122-018-3113-7	QYr.nwafu-4BL	Stripe rust	4B	D				RefSeq v1.0
+PE6-280	wu2018 (2).txt	10.1007/s00122-018-3092-8	Yr26	Stripe rust	1B	D				RefSeq v1.0
+PE6-281	wu2019.txt	10.1007/s00122-019-03291-7	Pm52	Powdery mildew	2B	D				RefSeq v1.0
+PE6-282	wu2020.txt	10.1094/pdis-12-19-2663-re	QYr.nwafu-1AS	Stripe rust	1A	A			28.72	RefSeq v1.0
+PE6-283	wu2021.txt		QYr.GTM-5DL	Stripe rust	5D	B	449.29	451.17		RefSeq v1.0
+PE6-284	xiang2016.txt	10.1094/phyto-01-16-0045-fi	Yr76 (YrTye)	Stripe rust	3A	D				RefSeq v1.0
+PE6-285	xie2017.txt	10.1016/s2095-3119(16)61377-1	PmTm4	Powdery mildew	7B	D				RefSeq v1.0
+PE6-286	xu2012.txt	10.1007/s00122-012-1998-0	Yr53	Stripe rust	2B	D				RefSeq v1.0
+PE6-287	xu2018 (2).txt	10.1007/s11032-018-0783-4	PmSGD	Powdery mildew	7B	D				RefSeq v1.0
+PE6-288	xu2018.txt	10.1016/s2095-3119(16)61610-6	PmBYYT	Powdery mildew	7B	D				RefSeq v1.0
+PE6-289	xu2020.txt	10.1094/pdis-01-20-0118-re	pmYBL	Powdery mildew	7B	B	695.0	715.0		RefSeq v1.0
+PE6-290	xue2022.txt	10.1007/s00122-022-04061-8	Pm58	Powdery mildew	2D	B	13.5	22.1		RefSeq v1.0
+PE6-291	yang2019.txt	10.2135/cropsci2018.05.0349	QYr.tamu-1A.2	Stripe rust	1A	A			579.8	RefSeq v1.0
+PE6-292	yang2019.txt	10.2135/cropsci2018.05.0349	QYr.tamu-4A1.1	Stripe rust	4A	A			68.6	RefSeq v1.0
+PE6-293	yang2019.txt	10.2135/cropsci2018.05.0349	QYr.tamu-4A1.2	Stripe rust	4A	A			361.0	RefSeq v1.0
+PE6-294	yao2017.txt	10.1007/s13313-017-0478-z	Yr (Lankao 5, 7B)	Stripe rust	7B	D				RefSeq v1.0
+PE6-295	yao2020.txt	10.1016/j.plantsci.2020.110688	QYrcl.sicau-2B.1	Stripe rust	2B	A			336.69	RefSeq v1.0
+PE6-296	yin2021.txt	10.1007/s00122-020-03741-7	MlNFS10	Powdery mildew	4A	D				RefSeq v1.0
+PE6-297	yuan2020.txt	10.1094/pdis-10-19-2198-re	QLr.cim-1BL.1 / QYr.cim-1BL.1	Leaf rust	1B	B	672.6	673.8		RefSeq v1.0
+PE6-298	zhang2019 (1).txt	10.1094/pdis-02-19-0380-re	QLr.hebau-5AL	Leaf rust	5A	B	589.3	591.5		RefSeq v1.0
+PE6-299	zhang2019 (1).txt	10.1094/pdis-02-19-0380-re	QYr.hebau-5AL	Stripe rust	5A	B	578.2	580.4		RefSeq v1.0
+PE6-300	zhang2021.txt	10.1007/s00122-021-03769-3	Lr-3BS	Leaf rust	3B	A			11.1	RefSeq v1.0
+PE6-301	zhang2022.txt	10.1007/s00122-022-04206-9	Pm5V / Yr5V	Powdery mildew	5D	D				alien (5VS translocation)
+PE6-302	zhao2016.txt	10.4238/gmr.15028056	TmPm3	Powdery mildew	1A	D				RefSeq v1.0
+PE6-303	zhou2013.txt	10.1094/phyto-08-12-0186-r	LrZH84	Leaf rust	1B	D				RefSeq v1.0
+PE6-304	zhou2015.txt	10.1007/s10681-014-1349-0	QYrcx.nafu-3BS	Stripe rust	3B	D				RefSeq v1.0
+PE6-305	zhou2015.txt	10.1007/s10681-014-1349-0	QYrcx.nafu-6AL	Stripe rust	6A	D				RefSeq v1.0
+PE6-306	zhou2021.txt	10.1094/pdis-09-20-1933-re	QYrsv.swust-1BL.1	Stripe rust	1B	D				RefSeq v1.0
+PE6-307	zhou2022.txt	10.1016/j.cj.2021.09.006	QYrSM155.1	Stripe rust	2B	D				RefSeq v1.0
