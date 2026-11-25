@@ -1,0 +1,920 @@
+[
+ {
+  "id": "R0660",
+  "name": "5B:5324846",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 5.3248,
+  "hi": 5.3248,
+  "P": [
+   [
+    "5B:5324846",
+    5.3248,
+    5.3248,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "R0661",
+  "name": "5B:3955588",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 3.9556,
+  "hi": 3.9556,
+  "P": [
+   [
+    "5B:3955588",
+    3.9556,
+    3.9556,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "R0662",
+  "name": "4A:1082366",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 1.0824,
+  "hi": 1.0824,
+  "P": [
+   [
+    "4A:1082366",
+    1.0824,
+    1.0824,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0022",
+  "name": "Kukri_rep_c79491_139",
+  "chr": "6B",
+  "status": "placed",
+  "lo": 715.5627,
+  "hi": 716.2112,
+  "P": [
+   [
+    "Kukri_rep_c79491_139",
+    715.5627,
+    716.2112,
+    "interpolated on the IntegratedMQTLmap 160.8 cM, 41 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0031",
+  "name": "Tdurum_contig12066_126",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 561.174,
+  "hi": 565.7531,
+  "P": [
+   [
+    "Tdurum_contig12066_126",
+    561.174,
+    565.7531,
+    "interpolated on the IntegratedMQTLmap 136.0 cM, 21 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0140",
+  "name": "wPt2748",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 6.1723,
+  "hi": 6.1723,
+  "P": [
+   [
+    "wPt2748",
+    6.1723,
+    6.1723,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0141",
+  "name": "wPt6116",
+  "chr": "6B",
+  "status": "placed",
+  "lo": 704.7333,
+  "hi": 704.7333,
+  "P": [
+   [
+    "wPt6116",
+    704.7333,
+    704.7333,
+    "interpolated on the Maccaferri2014 157.2 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0146",
+  "name": "wPt8650",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 3.7831,
+  "hi": 3.7831,
+  "P": [
+   [
+    "wPt8650",
+    3.7831,
+    3.7831,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0148",
+  "name": "wPt8455",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 4.0536,
+  "hi": 6.1983,
+  "P": [
+   [
+    "wPt8455",
+    4.0536,
+    6.1983,
+    "interpolated on the IntegratedMQTLmap 23.9 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0153",
+  "name": "wPt0049",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 785.2508,
+  "hi": 794.7582,
+  "P": [
+   [
+    "wPt0049",
+    785.2508,
+    794.7582,
+    "interpolated on the Maccaferri2014 219.8 cM, 4 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0156",
+  "name": "wPt3451",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 457.0858,
+  "hi": 457.0858,
+  "P": [
+   [
+    "wPt3451",
+    457.0858,
+    457.0858,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0159",
+  "name": "wPt0832",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 1.2525,
+  "hi": 1.8796,
+  "P": [
+   [
+    "wPt0832",
+    1.2525,
+    1.8796,
+    "interpolated on the IntegratedMQTLmap 14.5 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0160",
+  "name": "wPt7599",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 32.6679,
+  "hi": 32.6679,
+  "P": [
+   [
+    "wPt7599",
+    32.6679,
+    32.6679,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0170",
+  "name": "wPt7027",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 11.7862,
+  "hi": 11.7862,
+  "P": [
+   [
+    "wPt7027",
+    11.7862,
+    11.7862,
+    "interpolated on the Marone2012 343.5 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0174",
+  "name": "wPt0950",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 685.7422,
+  "hi": 685.7422,
+  "P": [
+   [
+    "wPt0950",
+    685.7422,
+    685.7422,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0178",
+  "name": "wPt9380",
+  "chr": "1D",
+  "status": "placed",
+  "lo": 41.7681,
+  "hi": 41.7681,
+  "P": [
+   [
+    "wPt9380",
+    41.7681,
+    41.7681,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0179",
+  "name": "wPt5503",
+  "chr": "1D",
+  "status": "placed",
+  "lo": 35.0887,
+  "hi": 35.0887,
+  "P": [
+   [
+    "wPt5503",
+    35.0887,
+    35.0887,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0183",
+  "name": "wPt4916",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 9.012,
+  "hi": 9.012,
+  "P": [
+   [
+    "wPt4916",
+    9.012,
+    9.012,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0185",
+  "name": "wPt7623",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 16.5652,
+  "hi": 18.706,
+  "P": [
+   [
+    "wPt7623",
+    16.5652,
+    18.706,
+    "interpolated on the IntegratedMQTLmap 58.8 cM, 10 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0188",
+  "name": "wPt0408",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 100.8481,
+  "hi": 104.0806,
+  "P": [
+   [
+    "wPt0408",
+    100.8481,
+    104.0806,
+    "interpolated on the Maccaferri2014 60.0 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0191",
+  "name": "wPt2151",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 743.1828,
+  "hi": 743.1828,
+  "P": [
+   [
+    "wPt2151",
+    743.1828,
+    743.1828,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0192",
+  "name": "wPt0959",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 26.9772,
+  "hi": 32.751,
+  "P": [
+   [
+    "wPt0959",
+    26.9772,
+    32.751,
+    "interpolated on the IntegratedMQTLmap 75.8 cM, 36 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0195",
+  "name": "wPt6495",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 726.4835,
+  "hi": 733.0291,
+  "P": [
+   [
+    "wPt6495",
+    726.4835,
+    733.0291,
+    "interpolated on the IntegratedMQTLmap 323.5 cM, 18 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0204",
+  "name": "wPt7063",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 62.923,
+  "hi": 62.923,
+  "P": [
+   [
+    "wPt7063",
+    62.923,
+    62.923,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0205",
+  "name": "wPt7954",
+  "chr": "6B",
+  "status": "placed",
+  "lo": 22.0821,
+  "hi": 22.1052,
+  "P": [
+   [
+    "wPt7954",
+    22.0821,
+    22.1052,
+    "interpolated on the IntegratedMQTLmap 39.3 cM, flanking anchors at 38.2 and 39.9 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0206",
+  "name": "wPt1241",
+  "chr": "6B",
+  "status": "placed",
+  "lo": 26.2924,
+  "hi": 26.2924,
+  "P": [
+   [
+    "wPt1241",
+    26.2924,
+    26.2924,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0537",
+  "name": "wPt-9380",
+  "chr": "1D",
+  "status": "placed",
+  "lo": 41.7681,
+  "hi": 41.7681,
+  "P": [
+   [
+    "wPt-9380",
+    41.7681,
+    41.7681,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0538",
+  "name": "wPt-664609",
+  "chr": "1D",
+  "status": "placed",
+  "lo": 50.7095,
+  "hi": 50.7095,
+  "P": [
+   [
+    "wPt-664609",
+    50.7095,
+    50.7095,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0541",
+  "name": "wPt-4301",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 47.8401,
+  "hi": 49.8457,
+  "P": [
+   [
+    "wPt-4301",
+    47.8401,
+    49.8457,
+    "interpolated on the IntegratedMQTLmap 57.5 cM, flanking anchors at 56.0 and 59.3 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0589",
+  "name": "wsnp_Ex_c13421_21142520",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 11.8591,
+  "hi": 17.7907,
+  "P": [
+   [
+    "wsnp_Ex_c13421_21142520",
+    11.8591,
+    17.7907,
+    "interpolated on the Wen2017 54.3 cM, 14 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V0840",
+  "name": "wPt9848",
+  "chr": "2D",
+  "status": "placed",
+  "lo": 648.0583,
+  "hi": 648.0583,
+  "P": [
+   [
+    "wPt9848",
+    648.0583,
+    648.0583,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "id": "V1127",
+  "name": "Excalibur_c25211_828",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 26.3911,
+  "hi": 27.0838,
+  "P": [
+   [
+    "Excalibur_c25211_828",
+    26.3911,
+    27.0838,
+    "interpolated on the Wen2017 174.0 cM, flanking anchors at 172.7 and 175.6 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V1144",
+  "name": "GENE-2768_150",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 99.0344,
+  "hi": 101.7574,
+  "P": [
+   [
+    "GENE-2768_150",
+    99.0344,
+    101.7574,
+    "interpolated on the Wen2017 377.9 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V1149",
+  "name": "Kukri_c13107_100",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 498.5367,
+  "hi": 505.3383,
+  "P": [
+   [
+    "Kukri_c13107_100",
+    498.5367,
+    505.3383,
+    "interpolated on the Wen2017 199.7 cM, 13 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V1165",
+  "name": "wPt-5674",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 619.0769,
+  "hi": 619.0769,
+  "P": [
+   [
+    "wPt-5674",
+    619.0769,
+    619.0769,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V1181",
+  "name": "wPt-7757",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 76.4885,
+  "hi": 76.4885,
+  "P": [
+   [
+    "wPt-7757",
+    76.4885,
+    76.4885,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V1184",
+  "name": "wPt-671708",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 34.2107,
+  "hi": 34.2107,
+  "P": [
+   [
+    "wPt-671708",
+    34.2107,
+    34.2107,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V1186",
+  "name": "wPt-1859",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 570.6484,
+  "hi": 571.7178,
+  "P": [
+   [
+    "wPt-1859",
+    570.6484,
+    571.7178,
+    "interpolated on the IntegratedMQTLmap 136.1 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3244",
+  "name": "QUt.mrc-5B",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 12.8492,
+  "hi": 13.1788,
+  "P": [
+   [
+    "Excalibur_c11605_156",
+    12.8492,
+    13.1788,
+    "interpolated on the Wen2017 610.6 cM, flanking anchors at 610.0 and 611.9 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3246",
+  "name": "QUtp.mrc-5B",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 12.8492,
+  "hi": 13.1788,
+  "P": [
+   [
+    "Excalibur_c11605_156",
+    12.8492,
+    13.1788,
+    "interpolated on the Wen2017 610.6 cM, flanking anchors at 610.0 and 611.9 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3282",
+  "name": "WDV_PH_1B1",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 11.8591,
+  "hi": 17.7907,
+  "P": [
+   [
+    "Ku_c31363_2165",
+    11.8591,
+    17.7907,
+    "interpolated on the Wen2017 54.3 cM, 14 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3286",
+  "name": "WDV_PH_1B5",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 11.8591,
+  "hi": 17.7907,
+  "P": [
+   [
+    "BS00068182_51",
+    11.8591,
+    17.7907,
+    "interpolated on the Wen2017 54.3 cM, 14 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3290",
+  "name": "WDV_PH_3A1",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 608.3799,
+  "hi": 610.0433,
+  "P": [
+   [
+    "Excalibur_c48047_90",
+    608.3799,
+    610.0433,
+    "interpolated on the Wen2017 313.7 cM, flanking anchors at 312.4 and 313.7 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3296",
+  "name": "WDV_PH_4A2",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 735.7797,
+  "hi": 737.3406,
+  "P": [
+   [
+    "Excalibur_rep_c69170_425",
+    735.7797,
+    737.3406,
+    "interpolated on the Wen2017 42.2 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3297",
+  "name": "WDV_PH_4A3",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 739.3136,
+  "hi": 739.9798,
+  "P": [
+   [
+    "BobWhite_c25163_178",
+    739.3136,
+    739.9798,
+    "interpolated on the IntegratedMQTLmap 163.3 cM, 7 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3298",
+  "name": "WDV_PH_4B1",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 663.1067,
+  "hi": 664.7629,
+  "P": [
+   [
+    "wsnp_BE638137B_Ta_2_2",
+    663.1067,
+    664.7629,
+    "interpolated on the Wen2017 359.2 cM, flanking anchors at 358.0 and 359.7 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3305",
+  "name": "WDV_PH_7A2",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 41.9597,
+  "hi": 42.1276,
+  "P": [
+   [
+    "Excalibur_rep_c68955_286",
+    41.9597,
+    42.1276,
+    "interpolated on the Wen2017 162.3 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "V3314",
+  "name": "WDV_Yield_3A1",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 608.3799,
+  "hi": 610.0433,
+  "P": [
+   [
+    "Excalibur_c48047_90",
+    608.3799,
+    610.0433,
+    "interpolated on the Wen2017 313.7 cM, flanking anchors at 312.4 and 313.7 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "id": "K0371",
+  "name": "QSb.bhu-6DL",
+  "chr": "6D",
+  "status": "rejected (arm)",
+  "lo": 8.1461,
+  "hi": 9.063,
+  "P": [
+   [
+    "Xbarc173",
+    8.1461,
+    9.063,
+    "interpolated on the IntegratedMQTLmap 23.1 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "id": "K0378",
+  "name": "QPm.caas-7AL",
+  "chr": "7A",
+  "status": "rejected (arm)",
+  "lo": 116.0027,
+  "hi": 116.0027,
+  "P": [
+   [
+    "Xbarc174",
+    116.0027,
+    116.0027,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "id": "OA0461",
+  "name": "QYr.caas-7AL",
+  "chr": "7A",
+  "status": "rejected (arm)",
+  "lo": 30.03,
+  "hi": 30.1344,
+  "P": [
+   [
+    "Excalibur_c25335_306",
+    30.03,
+    30.1344,
+    "interpolated on the Wen2017 137.7 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "id": "OA0487",
+  "name": "QPm.heau-6BS",
+  "chr": "6B",
+  "status": "rejected (arm)",
+  "lo": 639.9159,
+  "hi": 639.9159,
+  "P": [
+   [
+    "wPt-3581",
+    639.9159,
+    639.9159,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "id": "OA0544",
+  "name": "QKb.cim-3DL",
+  "chr": "3D",
+  "status": "rejected (arm)",
+  "lo": 66.2474,
+  "hi": 66.2474,
+  "P": [
+   [
+    "2252592",
+    66.2474,
+    66.2474,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "id": "S179-003",
+  "name": "4BL FHB region (Stoa) (Sumai 3 x Stoa)",
+  "chr": "4B",
+  "status": "rejected (arm)",
+  "lo": 10.8072,
+  "hi": 11.3501,
+  "P": [
+   [
+    "Xwg909",
+    10.8072,
+    11.3501,
+    "interpolated on the IntegratedMQTLmap 65.1 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ }
+]

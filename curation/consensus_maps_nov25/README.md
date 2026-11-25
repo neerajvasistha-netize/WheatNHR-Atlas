@@ -43,3 +43,16 @@ records (updated in the live database and in `web/seed_live.json`). Of the 1,228
 QSnb.fcu-7AS (S26-101) and its Catalogue duplicate K0507: interval read from Fig. 3B (peak at XBF293121, flanked by Xgwm60.1/Xbarc154
 and Xgwm130.3/Xwmc83): Xgwm60 54.96 Mb to Xwmc83 89.97 Mb, peak XBF293121 61.43 Mb (in-silico PCR of the Table 2 primers), RefSeq v1.0.
 K0507 also given marker XBF293121 and LOD 4.64; K0506 (QSnb.fcu-1A, Snn4) given LOD 7.03 (Table 5). S26-101 updated in the live database.
+
+## Second pass, 25 Nov 2026 (seed_ad96.json)
+- `place_all.py` repeated the placement over every record without a position as the page shows it (the first pass covered only the seed
+  files, not the records built into index.html): 45 more records placed (R0660-R0662 were skipped: their names are marker IDs, not positions).
+- Aguilar et al. 2005 (Theor Appl Genet 111:325-336, Forno x Oberkulmer, PDF supplied by the owner): flanking markers, LOD and R2 from Table 5
+  added to the existing records; QSnl.eth-2D (V0075), QSnl.eth-3B (V0081), QSnl.eth-5B2 (V0080), QSng.eth-5A2 (K0149) and QSnl.eth-7B3 (K0152)
+  placed by interpolating their RFLP flanking markers on the consensus maps (`relaxi.py`: anchors within 3 cM where the strict rule found none;
+  stated in each note). Eight QTL of Table 5 that were missing were added (PF6-001 to PF6-008; three placed). Most glk/psr probes have no
+  GenBank sequence, so QSnl.eth-4B, QSng.eth-1BS, -2B, -7AL, QSnl.eth-2A2, -2B1, -2B2, QSng.eth-3A2, -4DL2 and -5B1 stay arm-only.
+- Adhikari et al. 2012 (Plant Genome 5:1-16, PDF and supplement supplied by the owner): wPt-663764 and wPt-5674 are bacterial leaf streak MTAs in
+  Table 2 (the atlas had them as spot blotch; corrected); wPt-5674 and wPt-2838 placed; seven Table 2 MTAs that were missing were added
+  (PG6-001 to PG6-007; six placed).
+- All changed and new records are in `web/seed_ad96.json` (loaded after the other seeds, so it replaces the earlier copies).
