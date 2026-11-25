@@ -1,0 +1,2530 @@
+[
+ {
+  "file": "seed_ad60.json",
+  "id": "V2566",
+  "name": "-",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 570.6484,
+  "hi": 571.7178,
+  "P": [
+   [
+    "XwPt-1859",
+    570.6484,
+    571.7178,
+    "interpolated on the IntegratedMQTLmap 136.1 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0359",
+  "name": "QYr.xjau-2B.4",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 794.8865,
+  "hi": 794.8865,
+  "P": [
+   [
+    "RFL_Contig2324_729",
+    794.8865,
+    794.8865,
+    "Sun et al. 2020 PBJ (90K)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0456",
+  "name": "QYr.caas-2BL.3",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 781.5362,
+  "hi": 785.8865,
+  "P": [
+   [
+    "IACX8602",
+    781.5362,
+    785.8865,
+    "interpolated on the IntegratedMQTLmap 153.4 cM, 14 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0457",
+  "name": "QYr.caas-3AS",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 19.4858,
+  "hi": 19.4859,
+  "P": [
+   [
+    "Kukri_c96747_274",
+    19.4858,
+    19.4859,
+    "interpolated on the IntegratedMQTLmap 23.5 cM, flanking anchors at 21.7 and 23.5 cM"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0461",
+  "name": "QYr.caas-7AL",
+  "chr": "7A",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "Excalibur_c25335_306",
+    30.03,
+    30.1344,
+    "interpolated on the Wen2017 137.7 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0468",
+  "name": "QYrEDWL.par-2BS",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 1.3307,
+  "hi": 1.3307,
+  "P": [
+   [
+    "IWB52168",
+    1.3307,
+    1.3307,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0469",
+  "name": "QYrEDWL-2BS",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 21.9515,
+  "hi": 21.9515,
+  "P": [
+   [
+    "IWB59815",
+    21.9515,
+    21.9515,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0471",
+  "name": "QYrEDWL-4AL",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 737.0976,
+  "hi": 737.0976,
+  "P": [
+   [
+    "IWB2634",
+    737.0976,
+    737.0976,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0472",
+  "name": "QYrEDWL.par-4B.1",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 58.2321,
+  "hi": 58.2321,
+  "P": [
+   [
+    "IWB47531",
+    58.2321,
+    58.2321,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0473",
+  "name": "QYrEDWL.par-4BL.2",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 634.4596,
+  "hi": 634.4596,
+  "P": [
+   [
+    "IWB74594",
+    634.4596,
+    634.4596,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0487",
+  "name": "QPm.heau-6BS",
+  "chr": "6B",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "wPt-3581",
+    639.9159,
+    639.9159,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0518",
+  "name": "QYrTtd-1A",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 376.1466,
+  "hi": 377.4291,
+  "P": [
+   [
+    "IWA1279",
+    377.4291,
+    377.4291,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ],
+   [
+    "IWB49698",
+    376.1466,
+    376.1466,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0543",
+  "name": "QKb.cim-2BL",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 749.9859,
+  "hi": 749.9859,
+  "P": [
+   [
+    "1086228",
+    749.9859,
+    749.9859,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0544",
+  "name": "QKb.cim-3DL",
+  "chr": "3D",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "2252592",
+    66.2474,
+    66.2474,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0545",
+  "name": "QKb.cim-7AL",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 540.8721,
+  "hi": 552.68,
+  "P": [
+   [
+    "2261714",
+    540.8721,
+    540.8721,
+    "DArT tag BLAST (this atlas)"
+   ],
+   [
+    "2275699",
+    552.68,
+    552.68,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0546",
+  "name": "QKb.cim-1BL",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 646.8955,
+  "hi": 647.1956,
+  "P": [
+   [
+    "5323931",
+    646.8955,
+    646.8955,
+    "DArT tag BLAST (this atlas)"
+   ],
+   [
+    "992991",
+    647.1956,
+    647.1956,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0548",
+  "name": "QKb.cim-6AS",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 13.8153,
+  "hi": 13.8153,
+  "P": [
+   [
+    "1091666",
+    13.8153,
+    13.8153,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0551",
+  "name": "QKb.cim-5BS2",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 47.5929,
+  "hi": 53.7959,
+  "P": [
+   [
+    "2253589",
+    53.7959,
+    53.7959,
+    "DArT tag BLAST (this atlas)"
+   ],
+   [
+    "1011847",
+    47.5929,
+    47.5929,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0555",
+  "name": "QKb.cim-5AL1",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 478.8504,
+  "hi": 487.7552,
+  "P": [
+   [
+    "2253865",
+    487.7552,
+    487.7552,
+    "DArT tag BLAST (this atlas)"
+   ],
+   [
+    "1013608",
+    478.8504,
+    478.8504,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0557",
+  "name": "QKb.cim-4BL",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 535.0961,
+  "hi": 548.1854,
+  "P": [
+   [
+    "1132777",
+    535.0961,
+    535.0961,
+    "DArT tag BLAST (this atlas)"
+   ],
+   [
+    "1863994",
+    548.1854,
+    548.1854,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0633",
+  "name": "QLr.spa-1A",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 33.3758,
+  "hi": 33.3758,
+  "P": [
+   [
+    "IACX1465",
+    33.3758,
+    33.3758,
+    "Sun et al. 2020 PBJ (90K)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0637",
+  "name": "QLr.spa-2D.1",
+  "chr": "2D",
+  "status": "placed",
+  "lo": 435.0452,
+  "hi": 435.0452,
+  "P": [
+   [
+    "Ex_c2115_3369",
+    435.0452,
+    435.0452,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0642",
+  "name": "QLr.spa-6A",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 0.6184,
+  "hi": 0.7964,
+  "P": [
+   [
+    "BobWhite_c39821_195",
+    0.6184,
+    0.7964,
+    "interpolated on the IntegratedMQTLmap 12.1 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0643",
+  "name": "QLr.spa-7A",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 723.2608,
+  "hi": 724.0848,
+  "P": [
+   [
+    "BS00063860_51",
+    723.2608,
+    724.0848,
+    "interpolated on the Wen2017 624.5 cM, flanking anchors at 623.5 and 626.4 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0644",
+  "name": "QLr.spa-7B.1",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 24.0605,
+  "hi": 24.0605,
+  "P": [
+   [
+    "Ex_c101666_634",
+    24.0605,
+    24.0605,
+    "Sun et al. 2020 PBJ (90K)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0645",
+  "name": "QLr.spa-7B.2",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 697.0779,
+  "hi": 706.4855,
+  "P": [
+   [
+    "RAC875_c57326_85",
+    697.0779,
+    706.4855,
+    "interpolated on the IntegratedMQTLmap 181.8 cM, 70 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0650",
+  "name": "QLr.spa-4A",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 476.9806,
+  "hi": 476.9806,
+  "P": [
+   [
+    "Ex_c70424_465",
+    476.9806,
+    476.9806,
+    "Sun et al. 2020 PBJ (90K)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0800",
+  "name": "QYr.uaf-7D.1",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 518.7813,
+  "hi": 518.7813,
+  "P": [
+   [
+    "IWB26628",
+    518.7813,
+    518.7813,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0885",
+  "name": "QLr.spa-4B",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 32.8068,
+  "hi": 35.5209,
+  "P": [
+   [
+    "BS00095286_51",
+    32.8068,
+    35.5209,
+    "interpolated on the Wen2017 104.3 cM, 15 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0958",
+  "name": "QLr.tw.ipbb_6A.1",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 51.5011,
+  "hi": 51.5011,
+  "P": [
+   [
+    "IWB67075",
+    51.5011,
+    51.5011,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0963",
+  "name": "QLr.tw.ipbb_7B.1",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 190.8008,
+  "hi": 190.8008,
+  "P": [
+   [
+    "IWB11945",
+    190.8008,
+    190.8008,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad62.json",
+  "id": "OA0976",
+  "name": "QSr.tw.ipbb_5B.1",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 336.2381,
+  "hi": 336.2381,
+  "P": [
+   [
+    "IWB68299",
+    336.2381,
+    336.2381,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0716",
+  "name": "QLr.ipbb-1B.2",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 456.1853,
+  "hi": 465.5894,
+  "P": [
+   [
+    "BS00078431_51",
+    456.1853,
+    465.5894,
+    "interpolated on the Wen2017 212.9 cM, 23 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0720",
+  "name": "QLr.ipbb-2A.2",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 83.8273,
+  "hi": 87.8912,
+  "P": [
+   [
+    "BobWhite_c14476_80",
+    83.8273,
+    87.8912,
+    "interpolated on the Wen2017 197.2 cM, 15 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0725",
+  "name": "QLr.ipbb-4B.2",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 618.5935,
+  "hi": 620.0587,
+  "P": [
+   [
+    "Excalibur_c27349_166",
+    618.5935,
+    620.0587,
+    "interpolated on the Wen2017 279.6 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0728",
+  "name": "QLr.ipbb-5B.1",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 672.0877,
+  "hi": 672.5947,
+  "P": [
+   [
+    "GENE-2307_1216",
+    672.0877,
+    672.5947,
+    "interpolated on the Wen2017 138.1 cM, flanking anchors at 137.9 and 139.2 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0731",
+  "name": "QLr.ipbb-6A.3",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 581.8948,
+  "hi": 584.6787,
+  "P": [
+   [
+    "BobWhite_c17385_55",
+    581.8948,
+    584.6787,
+    "interpolated on the Wen2017 404.9 cM, 4 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0733",
+  "name": "QLr.ipbb-7A.1",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 78.4345,
+  "hi": 79.5428,
+  "P": [
+   [
+    "BS00063555_51",
+    78.4345,
+    79.5428,
+    "interpolated on the Wen2017 233.4 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0736",
+  "name": "QLr.ipbb-7B.2",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 697.0779,
+  "hi": 699.9236,
+  "P": [
+   [
+    "TA005127-0595",
+    697.0779,
+    699.9236,
+    "interpolated on the Wen2017 373.0 cM, 22 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0740",
+  "name": "QSr.ipbb-1B.2",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 456.1853,
+  "hi": 465.5894,
+  "P": [
+   [
+    "BS00078431_51",
+    456.1853,
+    465.5894,
+    "interpolated on the Wen2017 212.9 cM, 23 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0747",
+  "name": "QSr.ipbb-6B.3",
+  "chr": "6B",
+  "status": "placed",
+  "lo": 17.4055,
+  "hi": 17.4186,
+  "P": [
+   [
+    "BS00022032_51",
+    17.4055,
+    17.4186,
+    "interpolated on the IntegratedMQTLmap 28.3 cM, flanking anchors at 27.2 and 28.7 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad66.json",
+  "id": "OA0750",
+  "name": "QSr.ipbb-7B.1",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 697.0779,
+  "hi": 699.9236,
+  "P": [
+   [
+    "TA005127-0595",
+    697.0779,
+    699.9236,
+    "interpolated on the Wen2017 373.0 cM, 22 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad94.json",
+  "id": "PD6-048",
+  "name": "QLr.sfr-7DS (Lr34)",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 53.6409,
+  "hi": 53.6409,
+  "P": [
+   [
+    "Xgwm295",
+    53.6409,
+    53.6409,
+    "in-silico PCR of the Somers et al. 2004 primer pair"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad94.json",
+  "id": "PD6-056",
+  "name": "Pm31",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 52.3972,
+  "hi": 57.6675,
+  "P": [
+   [
+    "Xpsp3029",
+    52.3972,
+    57.6675,
+    "interpolated on the IntegratedMQTLmap 83.2 cM, 7 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_ad94.json",
+  "id": "PD6-106",
+  "name": "QLr.ubo-7B.2",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 734.2703,
+  "hi": 739.2706,
+  "P": [
+   [
+    "Xbarc340",
+    734.2703,
+    739.2706,
+    "interpolated on the Maccaferri2014 191.3 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad94.json",
+  "id": "PD6-142",
+  "name": "LrBi16",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 729.0673,
+  "hi": 731.537,
+  "P": [
+   [
+    "Xgwm344",
+    729.0673,
+    731.537,
+    "interpolated on the Maccaferri2014 188.0 cM, flanking anchors at 186.3 and 188.0 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_ad95.json",
+  "id": "PE6-089",
+  "name": "LrM",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 16.6326,
+  "hi": 16.6326,
+  "P": [
+   [
+    "Xcfd36",
+    16.6326,
+    16.6326,
+    "in-silico PCR of the Somers et al. 2004 primer pair"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_ad95.json",
+  "id": "PE6-261",
+  "name": "Lr (T. timopheevii, 3BL)",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 826.2338,
+  "hi": 826.2339,
+  "P": [
+   [
+    "Xgwm547",
+    826.2338,
+    826.2339,
+    "interpolated on the KOMUGIcomposite 100.0 cM, flanking anchors at 98.9 and 101.1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0008",
+  "name": "QFhs.inra-3B",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 540.4821,
+  "hi": 541.0837,
+  "P": [
+   [
+    "Xgwm383",
+    540.4821,
+    541.0837,
+    "interpolated on the IntegratedMQTLmap 105.2 cM, flanking anchors at 103.5 and 106.3 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0018",
+  "name": "FHB QTL 5BL (Patterson)",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 670.6986,
+  "hi": 670.6986,
+  "P": [
+   [
+    "Xbarc59",
+    670.6986,
+    670.6986,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0038",
+  "name": "QStb.riso-7B",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 651.5005,
+  "hi": 651.5005,
+  "P": [
+   [
+    "Xwmc517",
+    651.5005,
+    651.5005,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0078",
+  "name": "Pm4a",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 782.0147,
+  "hi": 782.8579,
+  "P": [
+   [
+    "Xgwm356",
+    782.0147,
+    782.8579,
+    "interpolated on the IntegratedMQTLmap 194.7 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0088",
+  "name": "FHB QTL 3BS (Wangshuibai x Wheaton)",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 7.1371,
+  "hi": 7.1371,
+  "P": [
+   [
+    "Xbarc147",
+    7.1371,
+    7.1371,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0109",
+  "name": "Lr50",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 788.5385,
+  "hi": 788.5385,
+  "P": [
+   [
+    "Xgwm382",
+    788.5385,
+    788.5385,
+    "Zhao et al. 2019 J Genet (Table S1)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0114",
+  "name": "QLr.osu-7BL",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 732.3962,
+  "hi": 732.3962,
+  "P": [
+   [
+    "Xbarc182",
+    732.3962,
+    732.3962,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0123",
+  "name": "PmPS5A",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 782.0147,
+  "hi": 782.8579,
+  "P": [
+   [
+    "Xgwm356",
+    782.0147,
+    782.8579,
+    "interpolated on the IntegratedMQTLmap 194.7 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0178",
+  "name": "Pm2",
+  "chr": "5D",
+  "status": "placed",
+  "lo": 44.567,
+  "hi": 44.567,
+  "P": [
+   [
+    "Xcfd81",
+    44.567,
+    44.567,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0179",
+  "name": "Pm35",
+  "chr": "5D",
+  "status": "placed",
+  "lo": 434.2791,
+  "hi": 434.2791,
+  "P": [
+   [
+    "Xcfd26",
+    434.2791,
+    434.2791,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0196",
+  "name": "Qfhs.crc-2BL",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 478.9131,
+  "hi": 485.0403,
+  "P": [
+   [
+    "Xgwm55",
+    478.9131,
+    485.0403,
+    "interpolated on the Wen2017 255.5 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0198",
+  "name": "Qfhs.fcu-7AL",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 611.8378,
+  "hi": 611.8378,
+  "P": [
+   [
+    "Xbarc121",
+    611.8378,
+    611.8378,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0206",
+  "name": "Stb14",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 27.5303,
+  "hi": 27.5303,
+  "P": [
+   [
+    "Xwmc500",
+    27.5303,
+    27.5303,
+    "in-silico PCR of the Somers et al. 2004 primer pair"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0284",
+  "name": "QYrtb.pau-5A",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 558.34,
+  "hi": 562.8957,
+  "P": [
+   [
+    "Xbarc151",
+    558.34,
+    558.34,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ],
+   [
+    "Xcfd12",
+    562.8957,
+    562.8957,
+    "Zhao et al. 2019 J Genet (Table S1)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0299",
+  "name": "Pm36 (map)",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 562.4872,
+  "hi": 562.4877,
+  "P": [
+   [
+    "Xcfd7",
+    562.4872,
+    562.4877,
+    "interpolated on the Maccaferri2014 112.2 cM, 4 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0322",
+  "name": "Sr17",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 718.4324,
+  "hi": 718.4324,
+  "P": [
+   [
+    "Xwmc273",
+    718.4324,
+    718.4324,
+    "Zhao et al. 2019 J Genet (Table S1)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0346",
+  "name": "YR QTL 7BL (Avocet S x Attila)",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 729.0673,
+  "hi": 731.537,
+  "P": [
+   [
+    "Xgwm344",
+    729.0673,
+    731.537,
+    "interpolated on the Maccaferri2014 188.0 cM, flanking anchors at 186.3 and 188.0 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0363",
+  "name": "QLr.ubo-7B.2",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 729.0673,
+  "hi": 731.537,
+  "P": [
+   [
+    "Xgwm344",
+    729.0673,
+    731.537,
+    "interpolated on the Maccaferri2014 188.0 cM, flanking anchors at 186.3 and 188.0 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0365",
+  "name": "Qts.ksu-3AS",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 54.3688,
+  "hi": 54.4748,
+  "P": [
+   [
+    "Xbarc45",
+    54.4748,
+    54.4748,
+    "atlas marker dictionary"
+   ],
+   [
+    "Xbarc86",
+    54.3688,
+    54.3688,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0371",
+  "name": "QSb.bhu-6DL",
+  "chr": "6D",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "Xbarc173",
+    8.1461,
+    9.063,
+    "interpolated on the IntegratedMQTLmap 23.1 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0378",
+  "name": "QPm.caas-7AL",
+  "chr": "7A",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "Xbarc174",
+    116.0027,
+    116.0027,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0386",
+  "name": "Yr4 (YrRub)",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 3.3954,
+  "hi": 3.3954,
+  "P": [
+   [
+    "Xbarc75",
+    3.3954,
+    3.3954,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0394",
+  "name": "QYr.caas-2BS",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 117.2499,
+  "hi": 117.2499,
+  "P": [
+   [
+    "Xbarc13",
+    117.2499,
+    117.2499,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0409",
+  "name": "QLr.fcu-3AL (map)",
+  "chr": "3A",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "Xgwm666",
+    180.0306,
+    180.0306,
+    "in-silico PCR / tag match on IWGSC RefSeq v1.0 (this atlas)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0412",
+  "name": "QLr.fcu-4DL (map)",
+  "chr": "4D",
+  "status": "placed",
+  "lo": 483.0583,
+  "hi": 484.7417,
+  "P": [
+   [
+    "Xcfa2173",
+    483.0583,
+    484.7417,
+    "interpolated on the IntegratedMQTLmap 60.9 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0423",
+  "name": "QCre.pau-1A",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 7.2268,
+  "hi": 7.2268,
+  "P": [
+   [
+    "Xcfa2153",
+    7.2268,
+    7.2268,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0463",
+  "name": "QLr.pser-1BL",
+  "chr": "1B",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "Xgwm264",
+    15.0324,
+    15.0324,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0486",
+  "name": "QCs.orp-2B",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 90.5588,
+  "hi": 92.1657,
+  "P": [
+   [
+    "Xwmc453",
+    90.5588,
+    92.1657,
+    "interpolated on the Maccaferri2014 56.8 cM, 4 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0532",
+  "name": "Yrxy2",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 674.4759,
+  "hi": 674.4759,
+  "P": [
+   [
+    "Xbarc5",
+    674.4759,
+    674.4759,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0621",
+  "name": "LrBi16",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 729.0673,
+  "hi": 731.537,
+  "P": [
+   [
+    "Xgwm344",
+    729.0673,
+    731.537,
+    "interpolated on the Maccaferri2014 188.0 cM, flanking anchors at 186.3 and 188.0 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0623",
+  "name": "LrGam6",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 788.5385,
+  "hi": 788.5385,
+  "P": [
+   [
+    "Xgwm382",
+    788.5385,
+    788.5385,
+    "Zhao et al. 2019 J Genet (Table S1)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0632",
+  "name": "Pm2b",
+  "chr": "5D",
+  "status": "placed",
+  "lo": 44.567,
+  "hi": 44.567,
+  "P": [
+   [
+    "Xcfd81",
+    44.567,
+    44.567,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0639",
+  "name": "PmSE5785",
+  "chr": "2D",
+  "status": "placed",
+  "lo": 635.9519,
+  "hi": 641.9636,
+  "P": [
+   [
+    "Xwmc817",
+    635.9519,
+    641.9636,
+    "interpolated on the Wen2017 318.3 cM, 21 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0650",
+  "name": "Sr49 (map)",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 704.7286,
+  "hi": 704.7286,
+  "P": [
+   [
+    "Xwmc471",
+    704.7286,
+    704.7286,
+    "in-silico PCR of the Somers et al. 2004 primer pair"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0667",
+  "name": "YrC591 (map)",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 732.3962,
+  "hi": 732.3962,
+  "P": [
+   [
+    "Xbarc182",
+    732.3962,
+    732.3962,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0669",
+  "name": "YrSD",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 662.4558,
+  "hi": 670.6986,
+  "P": [
+   [
+    "Xwmc640",
+    662.4558,
+    665.8105,
+    "interpolated on the Wen2017 152.8 cM, 5 anchor(s) within 1 cM"
+   ],
+   [
+    "Xbarc59",
+    670.6986,
+    670.6986,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0673",
+  "name": "Lr13 (Ne2)",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 133.5216,
+  "hi": 133.5216,
+  "P": [
+   [
+    "Xbarc55",
+    133.5216,
+    133.5216,
+    "atlas marker dictionary"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0678",
+  "name": "LrBi16 (map)",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 729.0673,
+  "hi": 731.537,
+  "P": [
+   [
+    "Xgwm344",
+    729.0673,
+    731.537,
+    "interpolated on the Maccaferri2014 188.0 cM, flanking anchors at 186.3 and 188.0 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0689",
+  "name": "PmTb7A.1",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 688.9404,
+  "hi": 688.9404,
+  "P": [
+   [
+    "Xcfa2019",
+    688.9404,
+    688.9404,
+    "interpolated on the Maccaferri2014 186.6 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0717",
+  "name": "QYr.ar-3BS",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 7.1371,
+  "hi": 7.1371,
+  "P": [
+   [
+    "Xbarc147",
+    7.1371,
+    7.1371,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_cgsw.json",
+  "id": "K0718",
+  "name": "QYr.ar-4BL",
+  "chr": "4B",
+  "status": "placed",
+  "lo": 608.2523,
+  "hi": 610.5639,
+  "P": [
+   [
+    "Xbarc163",
+    608.2523,
+    608.2523,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ],
+   [
+    "Xcfd39",
+    610.5639,
+    610.5639,
+    "Zhao et al. 2019 J Genet (Table S1)"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S122-003",
+  "name": "QTs.fcu-2B (race 5, ITMI)",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 749.8945,
+  "hi": 752.7875,
+  "P": [
+   [
+    "Xmwg2025",
+    749.8945,
+    752.7875,
+    "interpolated on the IntegratedMQTLmap 111.3 cM, 15 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S123-002",
+  "name": "QTs.ndsu-4A at Xfba211 (ITMI, Pti2)",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 597.1265,
+  "hi": 601.2797,
+  "P": [
+   [
+    "Xfba211",
+    597.1265,
+    601.2797,
+    "interpolated on the IntegratedMQTLmap 69.1 cM, 17 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S123-003",
+  "name": "QTs.ndsu-4A at Xfbb1 (ITMI, Pti2)",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 16.9694,
+  "hi": 17.2657,
+  "P": [
+   [
+    "Xfbb1",
+    16.9694,
+    17.2657,
+    "interpolated on the IntegratedMQTLmap 35.8 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S131-003",
+  "name": "FHB incidence association at Xgwm344",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 729.0673,
+  "hi": 731.537,
+  "P": [
+   [
+    "Xgwm344",
+    729.0673,
+    731.537,
+    "interpolated on the Maccaferri2014 188.0 cM, flanking anchors at 186.3 and 188.0 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S156-001",
+  "name": "C_5A FHB QTL (triticale HeTi117-06 x Pigmej)",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 465.5419,
+  "hi": 465.5419,
+  "P": [
+   [
+    "wPt-6825",
+    465.5419,
+    465.5419,
+    "interpolated on the Maccaferri2014 45.6 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S163-006",
+  "name": "FHB association 3A (Xwmc11; European winter wheat)",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 17.3761,
+  "hi": 17.3761,
+  "P": [
+   [
+    "Xwmc11",
+    17.3761,
+    17.3761,
+    "in-silico PCR of the Somers et al. 2004 primer pair"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S165-003",
+  "name": "QStb.ipk-6B",
+  "chr": "6B",
+  "status": "placed",
+  "lo": 632.9662,
+  "hi": 641.397,
+  "P": [
+   [
+    "Xksuh14b",
+    632.9662,
+    641.397,
+    "interpolated on the IntegratedMQTLmap 92.6 cM, 18 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S179-002",
+  "name": "QFhs.ndsu-2A (Sumai 3 x Stoa)",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 782.0147,
+  "hi": 782.8579,
+  "P": [
+   [
+    "XksuH16",
+    782.0147,
+    782.8579,
+    "interpolated on the IntegratedMQTLmap 194.3 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S179-003",
+  "name": "4BL FHB region (Stoa) (Sumai 3 x Stoa)",
+  "chr": "4B",
+  "status": "rejected (arm)",
+  "P": [
+   [
+    "Xwg909",
+    10.8072,
+    11.3501,
+    "interpolated on the IntegratedMQTLmap 65.1 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S19-072",
+  "name": "Qsb_rpcau_2A (Gwm614\u2013gwm497)",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 3.4475,
+  "hi": 4.7901,
+  "P": [
+   [
+    "Gwm614",
+    3.4475,
+    3.5952,
+    "interpolated on the IntegratedMQTLmap 94.5 cM, flanking anchors at 94.0 and 95.5 cM"
+   ],
+   [
+    "gwm497",
+    3.5952,
+    4.7901,
+    "interpolated on the IntegratedMQTLmap 96.2 cM, 12 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S19-073",
+  "name": "Qsb_rpcau_4D (Gwm213\u2013gwm608)",
+  "chr": "4D",
+  "status": "placed",
+  "lo": 434.8363,
+  "hi": 438.2572,
+  "P": [
+   [
+    "gwm608",
+    434.8363,
+    438.2572,
+    "interpolated on the IntegratedMQTLmap 51.2 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S19-081",
+  "name": "QSb-CC-5B 522.08-525.15 cM (Roy 2021)",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 406.9345,
+  "hi": 406.9345,
+  "P": [
+   [
+    "1137742",
+    406.9345,
+    406.9345,
+    "DArT tag BLAST (this atlas)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S199-007",
+  "name": "Eyespot SSR MTA 7A (wmc488; Zanke 2017)",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 608.2054,
+  "hi": 608.3978,
+  "P": [
+   [
+    "Xwmc488",
+    608.2054,
+    608.3978,
+    "interpolated on the Wen2017 415.4 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S199-010",
+  "name": "Eyespot SNP MTA 2B (132 cM; Zanke 2017)",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 775.0532,
+  "hi": 775.1699,
+  "P": [
+   [
+    "BobWhite_c10520_1517",
+    775.0532,
+    775.1699,
+    "interpolated on the Wen2017 412.2 cM, 7 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S199-011",
+  "name": "Eyespot SNP MTAs 2D (127-129 cM; Zanke 2017)",
+  "chr": "2D",
+  "status": "placed",
+  "lo": 10.3216,
+  "hi": 13.6825,
+  "P": [
+   [
+    "BS00093111_51",
+    12.332,
+    13.6825,
+    "interpolated on the Wen2017 24.2 cM, 14 anchor(s) within 1 cM"
+   ],
+   [
+    "GENE-1273_59",
+    10.3216,
+    11.4028,
+    "interpolated on the IntegratedMQTLmap 42.8 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-030",
+  "name": "QTs.cim-5B.1",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 486.077,
+  "hi": 486.077,
+  "P": [
+   [
+    "wPt-4936",
+    486.077,
+    486.077,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-032",
+  "name": "QTs.cim-7B",
+  "chr": "7B",
+  "status": "placed",
+  "lo": 678.364,
+  "hi": 678.364,
+  "P": [
+   [
+    "wPt-5892",
+    678.364,
+    678.364,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-035",
+  "name": "QTs.cim-1A.1",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 4.0536,
+  "hi": 6.1983,
+  "P": [
+   [
+    "wPt-0595",
+    4.0536,
+    6.1983,
+    "interpolated on the IntegratedMQTLmap 23.3 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-041",
+  "name": "QSnb.cim-5A",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 494.8706,
+  "hi": 494.8707,
+  "P": [
+   [
+    "wPt-1370",
+    494.8706,
+    494.8707,
+    "interpolated on the IntegratedMQTLmap 78.3 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-097",
+  "name": "QSng.ihar-3A.1",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 9.136,
+  "hi": 9.136,
+  "P": [
+   [
+    "wPt-3041",
+    9.136,
+    9.136,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-098",
+  "name": "QSng.ihar-3A.2",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 711.0885,
+  "hi": 711.4041,
+  "P": [
+   [
+    "wPt-9049",
+    711.0885,
+    711.4041,
+    "interpolated on the Wen2017 436.9 cM, 3 anchor(s) within 1 cM"
+   ],
+   [
+    "wPt-2698",
+    711.0885,
+    711.4041,
+    "interpolated on the Wen2017 436.9 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-110",
+  "name": "QSnl.daw-2A (2005)",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 3.4475,
+  "hi": 3.5952,
+  "P": [
+   [
+    "gwm614a",
+    3.4475,
+    3.5952,
+    "interpolated on the IntegratedMQTLmap 94.5 cM, flanking anchors at 94.0 and 95.5 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-118",
+  "name": "QSnb-5BS (wPt-5346; Lu and Lillemo 2014)",
+  "chr": "5B",
+  "status": "placed",
+  "lo": 38.1667,
+  "hi": 39.191,
+  "P": [
+   [
+    "wPt-5346",
+    38.1667,
+    39.191,
+    "interpolated on the IntegratedMQTLmap 82.0 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "S"
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-150",
+  "name": "QSnb-1A seedling (RAC875_c10083_800; Ruud 2017)",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 531.0528,
+  "hi": 531.0543,
+  "P": [
+   [
+    "RAC875_c10083_800",
+    531.0528,
+    531.0543,
+    "interpolated on the Wen2017 251.4 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S26-170",
+  "name": "QSnb 4AL (XksuG12; Liu 2004)",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 601.6573,
+  "hi": 601.6573,
+  "P": [
+   [
+    "XksuG12",
+    601.6573,
+    601.6573,
+    "interpolated on the IntegratedMQTLmap 74.4 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S44-031",
+  "name": "QStb 7DL (Apache)",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 570.6484,
+  "hi": 571.7178,
+  "P": [
+   [
+    "wPt-1859",
+    570.6484,
+    571.7178,
+    "interpolated on the IntegratedMQTLmap 136.1 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": "L"
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S44-048",
+  "name": "QStb.ihar-6A",
+  "chr": "6A",
+  "status": "placed",
+  "lo": 11.7862,
+  "hi": 11.7862,
+  "P": [
+   [
+    "wPt9679",
+    11.7862,
+    11.7862,
+    "interpolated on the Marone2012 343.4 cM, 2 anchor(s) within 1 cM"
+   ],
+   [
+    "wPt7027",
+    11.7862,
+    11.7862,
+    "interpolated on the Marone2012 343.5 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S44-073",
+  "name": "QStb-7A (Mergoum 2013)",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 621.5737,
+  "hi": 621.5737,
+  "P": [
+   [
+    "XwPt8043",
+    621.5737,
+    621.5737,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S44-085",
+  "name": "QStb.B22-1D.a",
+  "chr": "1D",
+  "status": "placed",
+  "lo": 0.2169,
+  "hi": 0.4178,
+  "P": [
+   [
+    "GENE_0014_822",
+    0.2169,
+    0.4178,
+    "interpolated on the Wen2017 6.2 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S44-097",
+  "name": "QStb.Z86-5A",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 19.9776,
+  "hi": 21.167,
+  "P": [
+   [
+    "BobWhite_c51109_415",
+    19.9776,
+    21.167,
+    "interpolated on the Wen2017 396.0 cM, 5 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S44-098",
+  "name": "QStb.Z86-7A",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 78.4329,
+  "hi": 78.4342,
+  "P": [
+   [
+    "RAC875_c3450_836",
+    78.4329,
+    78.4342,
+    "interpolated on the Wen2017 232.4 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S52-052",
+  "name": "QTs-1A (Batavia/Ernie)",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 20.9774,
+  "hi": 22.2973,
+  "P": [
+   [
+    "wPt-5776",
+    20.9774,
+    22.2973,
+    "interpolated on the IntegratedMQTLmap 56.5 cM, 9 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S52-054",
+  "name": "QTs-3B (Batavia/Ernie)",
+  "chr": "3B",
+  "status": "placed",
+  "lo": 18.2524,
+  "hi": 18.2524,
+  "P": [
+   [
+    "wPt-0571",
+    18.2524,
+    18.2524,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S52-058",
+  "name": "QTs-7A (Batavia/Ernie)",
+  "chr": "7A",
+  "status": "placed",
+  "lo": 27.2884,
+  "hi": 28.4442,
+  "P": [
+   [
+    "wPt-6447",
+    27.2884,
+    28.4442,
+    "interpolated on the IntegratedMQTLmap 58.2 cM, 4 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S52-082",
+  "name": "QTs-2B (C/W, distal; Shankar 2017)",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 745.717,
+  "hi": 749.0283,
+  "P": [
+   [
+    "wPt-7004",
+    745.717,
+    749.0283,
+    "interpolated on the IntegratedMQTLmap 107.3 cM, 14 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S52-089",
+  "name": "QTs-1A (I/A, distal; Shankar 2017)",
+  "chr": "1A",
+  "status": "placed",
+  "lo": 1.233,
+  "hi": 1.865,
+  "P": [
+   [
+    "wPt-2527",
+    1.233,
+    1.865,
+    "interpolated on the Wen2017 14.7 cM, 4 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S70-011",
+  "name": "Excalibur_rep_c69522_83",
+  "chr": "1B",
+  "status": "placed",
+  "lo": 691.3782,
+  "hi": 691.3806,
+  "P": [
+   [
+    "Excalibur_rep_c69522_83",
+    691.3782,
+    691.3806,
+    "interpolated on the Wen2017 503.8 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S70-074",
+  "name": "qSTB.5",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 570.503,
+  "hi": 570.7163,
+  "P": [
+   [
+    "Tdurum_contig10210_425",
+    570.503,
+    570.7163,
+    "interpolated on the Wen2017 145.6 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S70-157",
+  "name": "IWB45442 (Pti2)",
+  "chr": "5D",
+  "status": "placed",
+  "lo": 312.6059,
+  "hi": 312.6059,
+  "P": [
+   [
+    "IWB45442",
+    312.6059,
+    312.6059,
+    "consensus marker table of the Crop J 2021 FHB meta-QTL study (Table S3)"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-026",
+  "name": "Epistatic locus 5A 102 cM",
+  "chr": "5A",
+  "status": "placed",
+  "lo": 688.1411,
+  "hi": 688.3183,
+  "P": [
+   [
+    "Kukri_rep_c101800_175",
+    688.1411,
+    688.3183,
+    "interpolated on the IntegratedMQTLmap 228.8 cM, flanking anchors at 227.2 and 228.8 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-042",
+  "name": "Epistatic locus 4D 37 cM",
+  "chr": "4D",
+  "status": "placed",
+  "lo": 16.2335,
+  "hi": 18.7256,
+  "P": [
+   [
+    "CAP7_c1893_424",
+    16.2335,
+    18.7256,
+    "interpolated on the Wen2017 72.0 cM, 6 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-052",
+  "name": "Epistatic locus 7D 39 cM",
+  "chr": "7D",
+  "status": "placed",
+  "lo": 44.5248,
+  "hi": 44.5691,
+  "P": [
+   [
+    "Excalibur_c52102_630",
+    44.5248,
+    44.5691,
+    "interpolated on the Wen2017 249.7 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-060",
+  "name": "Epistatic locus 2A 119.8 cM",
+  "chr": "2A",
+  "status": "placed",
+  "lo": 770.1708,
+  "hi": 785.8937,
+  "P": [
+   [
+    "BS00021937_51",
+    770.1708,
+    776.5527,
+    "interpolated on the Wen2017 506.5 cM, 10 anchor(s) within 1 cM"
+   ],
+   [
+    "Kukri_c52608_142",
+    784.0433,
+    785.8937,
+    "interpolated on the IntegratedMQTLmap 199.6 cM, 2 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-075",
+  "name": "Epistatic locus 4A 111 cM",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 625.2494,
+  "hi": 627.8204,
+  "P": [
+   [
+    "JD_c6741_185",
+    625.2494,
+    625.8622,
+    "interpolated on the IntegratedMQTLmap 130.8 cM, flanking anchors at 129.7 and 132.6 cM"
+   ],
+   [
+    "Kukri_c29142_1046",
+    626.0635,
+    627.8204,
+    "interpolated on the Wen2017 246.1 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-086",
+  "name": "BS00021967_51",
+  "chr": "3A",
+  "status": "placed",
+  "lo": 725.7389,
+  "hi": 726.1378,
+  "P": [
+   [
+    "BS00021967_51",
+    725.7389,
+    726.1378,
+    "interpolated on the Wen2017 479.6 cM, flanking anchors at 477.7 and 481.2 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "S83-092",
+  "name": "RAC875_c6538_136",
+  "chr": "2B",
+  "status": "placed",
+  "lo": 11.2911,
+  "hi": 11.3898,
+  "P": [
+   [
+    "RAC875_c6538_136",
+    11.2911,
+    11.3898,
+    "interpolated on the Wen2017 35.7 cM, flanking anchors at 34.2 and 36.0 cM"
+   ]
+  ],
+  "arm": null
+ },
+ {
+  "file": "seed_live.json",
+  "id": "V3191",
+  "name": "QCcn.ha-4A",
+  "chr": "4A",
+  "status": "placed",
+  "lo": 626.0635,
+  "hi": 627.8204,
+  "P": [
+   [
+    "Kukri_c29142_1046",
+    626.0635,
+    627.8204,
+    "interpolated on the Wen2017 246.1 cM, 3 anchor(s) within 1 cM"
+   ]
+  ],
+  "arm": null
+ }
+]
