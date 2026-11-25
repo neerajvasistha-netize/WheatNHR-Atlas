@@ -309,6 +309,8 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 .gbinfo details{margin:8px 0}.gbinfo summary{cursor:pointer}
 .blprog{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:10px}.blprog div{height:100%;background:var(--accent)}
 .filters .trsel{display:inline-block;margin:0;align-self:flex-end}
+.filters .trmenu label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;flex:1;font:400 13.5px/1.4 var(--body);color:var(--ink)}
+.filters .trmenu input{padding:0;margin:0;width:auto;min-width:0;font-size:inherit;border-radius:3px;background:revert;border:revert}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -500,8 +502,8 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
     <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
     <label for="fChr">Chromosome<select id="fChr"><option value="">All</option></select></label>
     <span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span><div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
-    <label for="fGrade">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
-    <label for="fCur">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
+    <label for="fGrade" hidden style="display:none">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
+    <label for="fCur" hidden style="display:none">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
     <label for="fTo">To (Mb)<input class="mb" type="number" id="fTo" step="0.1" min="0"></label>
     <button class="btn primary" id="showRec" type="button" aria-expanded="false" aria-controls="recWrap">Show records</button>
