@@ -50,7 +50,17 @@ for r in R:
     s=S.get(r.get('source'),{})
     rows.append([r['id'],r.get('name',''),r.get('cls',''),r.get('disease',''),ch,'; '.join(mks),'; '.join(found[:8]),how,hint,s.get('short',r.get('source','')),s.get('citation',''),s.get('url',''),ev[:300],note[:300]])
 rows.sort(key=lambda x:(x[9],x[4],x[1]))
-# LOD sheet: linkage-mapping QTL without LOD
+# LOD sheet: linkage-mapping QTL without LOD; average LOD to use in meta-QTL projection
+import statistics
+LV=collections.defaultdict(list);DV=collections.defaultdict(list);AV=[]
+for r in R:
+    if r.get('cls')!='QTL': continue
+    m=re.search(r'\bLOD\b[^0-9]{0,6}(\d+(?:\.\d+)?)',r.get('stat') or '',re.I)
+    if m and float(m.group(1))>=1:
+        x=float(m.group(1));LV[r.get('source')].append(x);DV[r.get('disease')].append(x);AV.append(x)
+def avg(r):
+    for L,lab in ((LV.get(r.get('source')),'mean of the other QTL of the same paper'),(DV.get(r.get('disease')),'mean of all atlas QTL for this disease'),(AV,'mean of all atlas QTL')):
+        if L: return round(statistics.mean(L),2),f'{lab} (n = {len(L)})'
 lod=[]
 for r in R:
     if r.get('cls')!='QTL': continue
@@ -58,10 +68,11 @@ for r in R:
     if re.search(r'\bLOD\b',st,re.I): continue
     s=S.get(r.get('source'),{}); pos=r.get('peak') if r.get('peak') is not None else (f"{r['start']}-{r['end']}" if r.get('start') is not None else '')
     gw=bool(re.search(r'log10|p-?value|\bP\b',st))
-    lod.append([r['id'],r.get('name',''),r.get('disease',''),r.get('chr',''),pos,r.get('pve',''),st,
+    a,b=avg(r)
+    lod.append([r['id'],r.get('name',''),r.get('disease',''),r.get('chr',''),pos,r.get('pve',''),st,a,b,
        'Statistic given is -log10(P) (association test), not a LOD; check whether the paper also reports LOD from interval mapping' if gw else 'QTL table of the paper (LOD column), or its supplementary file; for ICIM/CIM papers the LOD is usually beside PVE',
        s.get('short',r.get('source','')),s.get('citation',''),s.get('url','')])
-lod.sort(key=lambda x:(x[8],x[3],x[1]))
+lod.sort(key=lambda x:(x[10],x[3],x[1]))
 wb=Workbook();F=Font(name='Arial',size=10);H=Font(name='Arial',size=10,bold=True,color='FFFFFF');FILL=PatternFill('solid',fgColor='2F5D3A')
 def sheet(ws,head,data,widths):
     ws.append(head)
@@ -78,13 +89,13 @@ def sheet(ws,head,data,widths):
 ws=wb.active;ws.title='Summary'
 ws1=wb.create_sheet('Unpositioned records');ws2=wb.create_sheet('QTL without LOD')
 sheet(ws1,['Atlas ID','Locus','Class','Disease','Chromosome','Markers in atlas record','Other marker names in the evidence or note','Status','Where to get the position (hint)','Reference','Full citation','DOI / link','Evidence (from the paper)','Atlas note'],rows,[10,28,7,18,8,22,22,16,60,20,50,28,45,45])
-sheet(ws2,['Atlas ID','QTL','Disease','Chromosome','Position (Mb, RefSeq v1.0)','PVE (%)','Statistic in atlas','Where to get the LOD (hint)','Reference','Full citation','DOI / link'],lod,[10,28,18,8,14,8,20,55,20,50,28])
+sheet(ws2,['Atlas ID','QTL','Disease','Chromosome','Position (Mb, RefSeq v1.0)','PVE (%)','Statistic in atlas','Average LOD for meta-QTL analysis','Basis of the average LOD','Where to get the LOD (hint)','Reference','Full citation','DOI / link'],lod,[10,28,18,8,14,8,20,12,34,55,20,50,28])
 by=collections.Counter(x[7] for x in rows)
 info=[['WheatTraitMap: records still needing a position or a LOD value (25 Nov 2026)'],[],
  ['Sheet "Unpositioned records"',f'{len(rows)} records with a wheat chromosome but no physical position, for which a position can still be found'],
  ['  markers known but no physical position',by.get('markers known but no physical position',0)],['  no marker in atlas (paper must be read)',by.get('no marker in atlas',0)],[],
  ['Left out (position cannot be found this way)']]+[[f'  {k}',v] for k,v in skip.most_common()]+[[],
- ['Sheet "QTL without LOD"',f'{len(lod)} linkage-mapping QTL records whose LOD value is not yet in the atlas (needed for meta-QTL projection). Meta-QTL records are not included.'],[],
+ ['Sheet "QTL without LOD"',f'{len(lod)} linkage-mapping QTL records whose LOD value is not yet in the atlas (needed for meta-QTL projection). Meta-QTL records are not included. Column "Average LOD for meta-QTL analysis" gives a value to use until the real LOD is found: the mean LOD of the other QTL of the same paper, otherwise the mean for the same disease, otherwise the mean of all atlas QTL (values below 1 ignored).'],[],
  ['How to use','Filter by Reference to work paper by paper. The hint column says where the missing value is usually found. Positions found can be sent back for in-silico placement.']]
 for x in info: ws.append(x)
 ws['A1'].font=Font(name='Arial',size=12,bold=True)
