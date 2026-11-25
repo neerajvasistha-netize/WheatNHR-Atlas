@@ -308,6 +308,7 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 .gbtracks{border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:4px 6px;background:var(--surface);overflow:hidden;user-select:none}
 .gbinfo details{margin:8px 0}.gbinfo summary{cursor:pointer}
 .blprog{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:10px}.blprog div{height:100%;background:var(--accent)}
+.filters .trsel{display:inline-block;margin:0;align-self:flex-end}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -446,7 +447,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
     <a href="#downloads" data-view="downloads">Downloads</a>
     <a href="#about" data-view="about">About &amp; changes</a>
   </nav>
-  <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.0 snapshot</span><button class="cnlink" id="cnOpen" type="button">Curation notice</button></div>
+  <div class="status"><span class="dot" id="dot"></span><span id="statusText">Showing release v1.0 snapshot</span></div>
   </div>
 </header>
 <main>
@@ -488,7 +489,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
   
   <div class="stats" id="stats"></div>
   <div class="gvrow"><div class="panel gvmain">
-    <h2>Genome view <span class="muted small" id="ideoNote">· Click a chromosome to filter or <button type="button" id="ideoAll" class="cnlink" style="padding:0;font-size:inherit">select all</button></span><span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span></h2>
+    <h2>Genome view <span class="muted small" id="ideoNote">· Click a chromosome to filter or <button type="button" id="ideoAll" class="cnlink" style="padding:0;font-size:inherit">select all</button></span></h2>
     <div class="ideo-wrap"><svg class="ideo" id="ideo" viewBox="0 0 1000 345" role="img" aria-label="Positions of anchored reports on the 21 wheat chromosomes"></svg></div>
     <div class="legend" id="legend"></div>
   </div>
@@ -498,7 +499,7 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
     <select id="fAsm" hidden aria-hidden="true"><option>RefSeq v2.1</option></select>
     <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
     <label for="fChr">Chromosome<select id="fChr"><option value="">All</option></select></label>
-    <div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
+    <span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span><div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
     <label for="fGrade">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
     <label for="fCur">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
@@ -2776,7 +2777,6 @@ const EXTJSON=[['gokegg','gokegg_lite.json'],['markerslite','markers_lite.json']
   document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!pop.hidden)close();});
   var o=document.getElementById("cnOpen");if(o)o.onclick=open;
   var seen=false;try{seen=sessionStorage.getItem("wrlaCurationSeen")==="1";}catch(e){}
-  if(!seen&&!/[?&]gene=/.test(location.search))open();
 })();
 </script>
 <script>
