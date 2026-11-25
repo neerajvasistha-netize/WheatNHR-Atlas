@@ -1154,7 +1154,7 @@ const gcp=s=>s.length?100*(s.match(/[GC]/gi)||[]).length/s.length:0;
 const RC={A:"T",T:"A",G:"C",C:"G",N:"N",R:"Y",Y:"R",S:"S",W:"W",K:"M",M:"K",B:"V",V:"B",D:"H",H:"D"};
 const revc=s=>s.toUpperCase().split("").reverse().map(b=>RC[b]||"N").join("");
 function selfBad(p,q){const t=p.slice(-4),rc=revc(t);return (q||p).includes(rc);}
-function primerOK(p,o){if(/N/.test(p))return false;const g=gcp(p);if(g<o.gcMin||g>o.gcMax)return false;if(/(A{5,}|C{5,}|G{5,}|T{5,})/.test(p))return false;if(/(AT|TA|AC|CA|AG|GA|TC|CT|TG|GT|GC|CG){4,}/.test(p))return false;
+function primerOK(p,o){if(/N/.test(p))return false;const g=gcp(p);if(g<o.gcMin||g>o.gcMax)return false;if(/(A{5,}|C{5,}|G{5,}|T{5,})/.test(p))return false;if(/([ACGT]{2})\1{3,}/.test(p))return false;
   const e=p.slice(-5),ge=(e.match(/[GC]/g)||[]).length;if(ge<1||ge>3)return false;if(!/[GC]$/.test(p))return false;if(selfBad(p))return false;return true;}
 function bestAt(seq,i,dir,o){/* dir 1: forward primer starting at i; dir -1: reverse primer whose 5' end is at i (on +strand, primer = revcomp of seq[i-L+1..i]) */
   let best=null;for(let L=o.lmin;L<=o.lmax;L++){let p;if(dir>0){if(i+L>seq.length)break;p=seq.slice(i,i+L);}else{if(i-L+1<0)break;p=revc(seq.slice(i-L+1,i+1));}
