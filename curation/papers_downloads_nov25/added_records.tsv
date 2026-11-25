@@ -1,0 +1,166 @@
+id	first_author	year	doi	name	disease	chr	grade	start	end	peak	markers
+PD6-001	Howes, N. K.	1986	10.1139/g86-087	Lr10	Leaf rust	1A	D				
+PD6-002	Tosa, Y.	1988	10.1139/g88-103	Pm11	Powdery mildew	6B	D				
+PD6-003	Dvořák, J.	1990	10.1139/g90-134	Lr36	Leaf rust	6B	D				
+PD6-004	Heun, M.	1990	10.1094/phyto-80-1129	Pm17 (Amigo, 1RS)	Powdery mildew	1A	D				
+PD6-005	Czarnecki, E. M.	1992	10.1139/g92-084	Sr33	Stem rust	1D	D				
+PD6-006	MCINTOSH, R. A.	1992	10.1111/j.1365-3059.1992.tb02450.x	Lr34-Yr18 (linkage)	Leaf rust	7D	D				
+PD6-007	Bariana, H. S.	1993	10.1139/g93-065	Lr37-Yr17-Sr38 (VPM1)	Leaf rust	2A	D				
+PD6-008	Zeller, Friedrich J.	1993	10.1007/bf00029876	Pm3d (Mlk)	Powdery mildew	1A	D				
+PD6-009	Zeller, Friedrich J.	1993	10.1007/bf00029876	Pm3e	Powdery mildew	1A	D				
+PD6-010	Zeller, Friedrich J.	1993	10.1007/bf00029876	Pm3f	Powdery mildew	1A	D				
+PD6-011	Knox, R. E.	1994	10.1007/bf00223720	Ut (loose smut, race T19)	Loose smut	6A	D				
+PD6-012	Chen, X.	1995	10.1094/phyto-85-375	YrLem	Stripe rust	1B	D				
+PD6-013	Chen, X.	1995	10.1094/phyto-85-375	YrLe1	Stripe rust	4D	D				
+PD6-014	Chen, X.	1995	10.1094/phyto-85-375	YrLe2	Stripe rust	6D	D				
+PD6-015	Chen, X.	1995	10.1094/phyto-85-375	YrCom	Stripe rust	5B	D				
+PD6-016	Chen, X.	1995	10.1094/phyto-85-375	Yr6 (Fielder)	Stripe rust	7B	D				
+PD6-017	Chen, X.	1995	10.1094/phyto-85-375	Yr8 (Compair)	Stripe rust	2D	D				
+PD6-018	Riede, C. R.	1995	10.1007/bf00222937	Sr41	Stem rust	4D	D				
+PD6-019	Riede, C. R.	1995	10.1007/bf00222937	SrWld2 (WDR-C2)	Stem rust	7A	D				
+PD6-020	Riede, C. R.	1995	10.1007/bf00222937	SrWld1 (WDR-E4)	Stem rust	2A	D				
+PD6-021	Riede, C. R.	1995	10.1007/bf00222937	Sr11 (WDR-F1)	Stem rust	6B	D				
+PD6-022	Chen, Xianming	1996	10.1094/phyto-86-1228	Yr3a / Yr3c	Stripe rust	1B	D				
+PD6-023	Chen, Xianming	1996	10.1094/phyto-86-1228	Yr4a / Yr4b	Stripe rust	6B	D				
+PD6-024	Chen, Xianming	1996	10.1094/phyto-86-1228	YrMin / YrND	Stripe rust	4A	D				
+PD6-025	Chen, Xianming	1996	10.1094/phyto-86-1228	YrDru	Stripe rust	5B	D				
+PD6-026	McIntosh, R. A.	1996	10.1007/bf00022298	Yr15	Stripe rust	1B	D				
+PD6-027	McIntosh, R. A.	1996	10.1007/bf00022299	Yr1	Stripe rust	2A	D				
+PD6-028	Qi, Lili	1996	10.1139/g96-025	Pm21	Powdery mildew	6A	D				
+PD6-029	Sun, G. L.	1997	10.1007/s001220050604	Yr15	Stripe rust	1B	D				
+PD6-030	William, H. M.	1997	10.1139/g97-036	QLr 7BL (Parula)	Leaf rust	7B	D				
+PD6-031	William, H. M.	1997	10.1139/g97-036	QLr 1BS (Parula)	Leaf rust	1B	D				
+PD6-032	Marais, G. F.	1998	10.1080/02571862.1998.10635119	Sr45	Stem rust	1D	D				
+PD6-033	Ma, Jianxin	1999	10.1007/bf02886157	Yr (T. turgidum, 1BS)	Stripe rust	1B	C	216.0366	222.5777		Xgwm11; Xgwm18
+PD6-034	Robert, Olivier	1999	10.1023/a:1009672021411	Yr17	Stripe rust	2A	D				
+PD6-035	Laroche, André	2000	10.1139/g99-113	Bt10	Common bunt	6D	D				
+PD6-036	Liu, D.	2000	10.1007/s001229900096	Pm6	Powdery mildew	2B	D				
+PD6-037	Peng, J.H.	2000	10.1023/a:1017573726512	YrH52	Stripe rust	1B	C			73.1351	Xgwm413; Xgwm273
+PD6-038	Bariana, H. S.	2001	10.1071/ar01040	Yr29 (Pavon, distal 1BL)	Stripe rust	1B	D				
+PD6-039	Bariana, H. S.	2001	10.1071/ar01040	YrKat	Stripe rust	2D	D				
+PD6-040	Bariana, H. S.	2001	10.1071/ar01040	Sr30	Stem rust	5D	D				
+PD6-041	Bariana, H. S.	2001	10.1071/ar01040	YrCK	Stripe rust	2D	D				
+PD6-042	HUANG, XIU QIANG	2002	10.1034/j.1601-5223.2002.1360306.x	Pm8 (Jieyan 94-1-1, 1B/1R)	Powdery mildew	1B	D				
+PD6-043	HUANG, XIU QIANG	2002	10.1034/j.1601-5223.2002.1360306.x	pm5 allele (Jieyan 94-1-1 / Siyan 94-1-2)	Powdery mildew	7B	D				
+PD6-044	HUANG, XIU QIANG	2002	10.1034/j.1601-5223.2002.1360306.x	Pm (Siyan 94-1-2, 5D)	Powdery mildew	5D	D				
+PD6-045	Feuillet, Catherine	2003	10.1073/pnas.2435133100	Lr10 (cloned)	Leaf rust	1A	D				
+PD6-046	Huang, Li	2003	10.1093/genetics/164.2.655	Lr21 (cloned)	Leaf rust	1D	D				
+PD6-047	Ling, H.-Q.	2003	10.1007/s00122-002-1139-2	Lr1	Leaf rust	5D	D				
+PD6-048	Schnurbusch, T.	2003	10.1007/s00122-003-1444-4	QLr.sfr-7DS (Lr34)	Leaf rust	7D	D				Xgwm295
+PD6-049	Schnurbusch, T.	2003	10.1007/s00122-003-1444-4	QLr.sfr-1BS	Leaf rust	1B	D				Xgwm604
+PD6-050	Sukhwinder-Singh	2003	10.1007/s00122-002-1112-0	QKb 4BL (HD29)	Karnal bunt	4B	C			641.4823	Xgwm538
+PD6-051	William, M.	2003	10.1094/phyto.2003.93.2.153	Lr46	Leaf rust	1B	D				
+PD6-052	Xie, Chaojie	2003	10.1007/s00122-002-1022-1	Pm31 (MlG, 6AL)	Powdery mildew	6A	C			447.1172	Xpsp3029; Xpsp3071
+PD6-053	Huang, Xiu-Qiang	2004	10.1139/g04-079	Pm3h / Pm3i / Pm3j	Powdery mildew	1A	D				Xgwm905
+PD6-054	McDonald, D.B.	2004	10.1023/b:euph.0000032709.59324.45	Yr27	Stripe rust	2B	D				
+PD6-055	Peusha, Hilma	2004	10.1111/j.1601-5223.2000.00029.x	Pm28	Powdery mildew	1B	D				
+PD6-056	XIE, C.	2004	10.1046/j.1439-0523.2003.00940.x	Pm31	Powdery mildew	6A	D				Xpsp3029
+PD6-057	Yahiaoui, Nabila	2004	10.1046/j.1365-313x.2003.01977.x	Pm3b (cloned)	Powdery mildew	1A	D				
+PD6-058	., Imtiaz Muhammad	2005	10.3923/ppj.2005.8.13	QYr Otane 7B	Stripe rust	7B	D				
+PD6-059	., Imtiaz Muhammad	2005	10.3923/ppj.2005.8.13	QYr Otane 7D	Stripe rust	7D	D				
+PD6-060	., Imtiaz Muhammad	2005	10.3923/ppj.2005.8.13	QYr Otane 5D	Stripe rust	5D	D				
+PD6-061	., Imtiaz Muhammad	2005	10.3923/ppj.2005.8.13	QYr Otane 3D	Stripe rust	3D	D				
+PD6-062	Chen, X. M.	2005	10.1111/j.1439-0523.2005.01094.x	Pm16	Powdery mildew	5B	D				
+PD6-063	Luo, P. G.	2005	10.1094/phyto-95-1266	YrCN19	Stripe rust	2B	C			95.3352	Xgwm410
+PD6-064	Mateos-Hernandez, Maria	2005	10.1007/s10142-005-0017-9	Lr46	Leaf rust	1B	D				
+PD6-065	McCartney, C. A.	2005	10.1007/s11032-004-5948-7	Lr16	Leaf rust	2B	C	1.2713	7.9034		Xwmc764; Xgwm210
+PD6-066	Navabi, A	2005	10.1139/g04-100	QTL 7D (Lr34/Yr18, Cook)	Leaf rust	7D	D				
+PD6-067	Obert, D. E.	2005	10.1007/s00122-005-1974-z	Lr (PI 289824, 5BS)	Leaf rust	5B	D				Xgwm443
+PD6-068	Pahalawatta, Vihanga	2005	10.1094/phyto-95-0427	Yr (Lemhi, closely linked to Yr21)	Stripe rust	1B	D				
+PD6-069	Qiu, Y. C.	2005	10.1007/s00122-005-0081-5	Pm (T. urartu UR206, 7AL)	Powdery mildew	7A	D				
+PD6-070	Wang, Zhenying	2005	10.1626/pps.8.578	Pm (Brock, 3BL)	Powdery mildew	3B	D				
+PD6-071	Chen, Ya‐Ping	2006	10.1111/j.1744-7909.2006.00257.x	Ta-LRR2 (Pm21 region)	Powdery mildew	6A	D				
+PD6-072	Das, B. K.	2006	10.1111/j.1439-0523.2006.01282.x	Sr31	Stem rust	1B	D				
+PD6-073	Menzies, J. G.	2006	10.4141/p06-106	Bt10	Common bunt	6D	C			16.1489	Xgwm469
+PD6-074	Tucker, D. M.	2006	10.1007/s10681-006-9295-0	QPm.vt-1BL	Powdery mildew	1B	D				
+PD6-075	Tucker, D. M.	2006	10.1007/s10681-006-9295-0	QPm.vt-2AL	Powdery mildew	2A	C			709.0487	Xgwm304; Xgwm312
+PD6-076	Tucker, D. M.	2006	10.1007/s10681-006-9295-0	QPm.vt-2BL	Powdery mildew	2B	D				Xbarc200; Xgwm191
+PD6-077	Yao, Guoqi	2006	10.1007/s00122-006-0438-4	Mlm2033 / Mlm80	Powdery mildew	7A	C			727.412	Xgwm344
+PD6-078	Herrera‐Foessel, Sybil A.	2007	10.2135/cropsci2006.10.0663	Lr3 (Storlom)	Leaf rust	6B	D				
+PD6-079	Herrera‐Foessel, Sybil A.	2007	10.2135/cropsci2006.10.0663	LrCamayo	Leaf rust	6B	D				
+PD6-080	Lin, F.	2007	10.1007/s00122-007-0518-0	YrAlp	Stripe rust	1B	D				
+PD6-081	Lin, F.	2007	10.1007/s00122-007-0518-0	QYr HTAP 7BL (Alpowa)	Stripe rust	7B	D				
+PD6-082	Liu, Fanghui	2007	10.1016/s1673-8527(07)60128-3	Yr (Chike, 1BL)	Stripe rust	1B	C	662.1952	672.3333		Xwmc44; Xgwm259
+PD6-083	Miranda, L. M.	2007	10.2135/cropsci2007.01.0053	Pm (NCA6, T. monococcum)	Powdery mildew	7A	C			611.8378	Xbarc121; Xcfa2019; Xcfa2123
+PD6-084	Nematollahi, Ghazaleh	2007	10.1007/s10681-007-9494-3	Pm5d	Powdery mildew	7B	D				
+PD6-085	Qiu, Ji-Wen	2007	10.1007/s00122-007-0551-z	Lr1	Leaf rust	5D	D				
+PD6-086	Singh, Sukhwinder	2007	10.1007/s00122-007-0654-6	Qkb.ksu-5BL.1	Karnal bunt	5B	C	618.1485	634.1797		Xgdm116; Xwmc235
+PD6-087	Singh, Sukhwinder	2007	10.1007/s00122-007-0654-6	Qkb.ksu-6BS.1	Karnal bunt	6B	D				Xwmc105; Xgwm88
+PD6-088	Singh, Sukhwinder	2007	10.1007/s00122-007-0654-6	Qkb.ksu-4BL.1	Karnal bunt	4B	C			640.9766	Xgwm6; Xwmc349
+PD6-089	Zeng, Zhu	2007	10.1007/s10681-007-9355-0	Pm (line 101-3, 6B)	Powdery mildew	6B	D				
+PD6-090	Zeng, Zhu	2007	10.1007/s10681-007-9355-0	Yr (line 101-3, 1B)	Stripe rust	1B	D				
+PD6-091	Badakhshan, H.	2008	10.1080/13102818.2008.10817575	QYr AUDPC 1B (Badakhshan)	Stripe rust	1B	C			5.1376	Xpsp3000; Xgwm18
+PD6-092	Badakhshan, H.	2008	10.1080/13102818.2008.10817575	QYr AUDPC 2B (Badakhshan)	Stripe rust	2B	C			165.5785	Xgwm374; Xgwm47
+PD6-093	Badakhshan, H.	2008	10.1080/13102818.2008.10817575	QYr AUDPC 2D (Badakhshan)	Stripe rust	2D	C			647.51	Xgwm382; Xgwm261
+PD6-094	Badakhshan, H.	2008	10.1080/13102818.2008.10817575	QYr AUDPC 3B (Badakhshan)	Stripe rust	3B	C			0.8064	Xgwm389; Xgwm181
+PD6-095	Badakhshan, H.	2008	10.1080/13102818.2008.10817575	QYr AUDPC 4A (Badakhshan)	Stripe rust	4A	C			617.0005	Xwmc468; Xgwm637
+PD6-096	Badakhshan, H.	2008	10.1080/13102818.2008.10817575	QYr AUDPC 4B (Badakhshan)	Stripe rust	4B	C			59.6054	Xgwm368; Xgwm6
+PD6-097	Bremenkamp‐Barrett, Barbara	2008	10.2135/cropsci2007.07.0379	Lr17a	Leaf rust	2A	C			7.8087	Xgwm614; Xwmc407
+PD6-098	CHEN, Guo-yue	2008	10.1016/s1671-2927(08)60065-6	YrAm	Stripe rust	3B	C			214.8165	Xgwm131; Xgwm77; Xgwm285
+PD6-099	Guo, Q.	2008	10.1094/phyto-98-7-0803	QYraq.cau-2BL	Stripe rust	2B	C			670.5972	Xwmc175; Xwmc332
+PD6-100	HU, Tie-Zhu	2008	10.1016/s1875-2780(08)60043-7	PmTm4	Powdery mildew	7D	D				Xgwm611; Xbarc1073
+PD6-101	Herrera-Foessel, S. A.	2008	10.1094/pdis-92-12-1650	Lr (Guayacan INIA, 6BS)	Leaf rust	6B	D				
+PD6-102	Hiebert, Colin W.	2008	10.2135/cropsci2007.08.0480	Lr60	Leaf rust	1D	C			4.1514	Xbarc149
+PD6-103	Lin, F.	2008	10.1007/s00122-008-0894-0	QYrex.wgp-6AS	Stripe rust	6A	C			9.2493	Xgwm334
+PD6-104	Lin, F.	2008	10.1007/s00122-008-0894-0	QYrex.wgp-3BL	Stripe rust	3B	C			804.7995	Xgwm299
+PD6-105	Lin, F.	2008	10.1007/s00122-008-0894-0	QYrex.wgp-1BL	Stripe rust	1B	D				Xwmc631
+PD6-106	Maccaferri, M.	2008	10.1007/s00122-008-0857-5	QLr.ubo-7B.2	Leaf rust	7B	D				Xbarc340
+PD6-107	Niu, J. S.	2008	10.1111/j.1439-0523.2007.01480.x	PmLK906	Powdery mildew	2A	C			760.5756	Xgwm265; Xgdm93
+PD6-108	Rosewarne, G. M.	2008	10.1007/s00122-008-0736-0	Lr46/Yr29 QTL (Attila)	Leaf rust	1B	D				
+PD6-109	Rosewarne, G. M.	2008	10.1007/s00122-008-0736-0	QLr 2BS (Attila)	Leaf rust	2B	D				Xgwm682
+PD6-110	Rosewarne, G. M.	2008	10.1007/s00122-008-0736-0	QLr 7BL (Attila)	Leaf rust	7B	C	718.4324	740.7204		Xwmc273; Xgwm146
+PD6-111	Santra, D. K.	2008	10.1007/s00122-008-0820-5	QYrst.wgp-6BS.1	Stripe rust	6B	C			151.3781	Xbarc101; Xbarc136
+PD6-112	Santra, D. K.	2008	10.1007/s00122-008-0820-5	QYrst.wgp-6BS.2	Stripe rust	6B	C			77.1378	Xgwm132; Xgdm113
+PD6-113	Xu, Hongxing	2008	10.1007/s00122-008-0791-6	pm2026	Powdery mildew	5A	C	661.1483	671.3937		Xcfd39; Xgwm126
+PD6-114	YANG, Min-na	2008	10.1016/s1671-2927(08)60128-5	Yr88375	Stripe rust	5B	C			618.1485	Xgdm116; Xwmc810
+PD6-115	Yin, Jing	2008	10.1007/s11703-008-0040-4	Sr (mutant D51, 5DS)	Stem rust	5D	C			8.7469	Xgwm190; Xwmc150
+PD6-116	Zhao, X. L.	2008	10.1007/s00122-008-0845-9	LrZH84	Leaf rust	1B	D				Xgwm582; Xbarc8
+PD6-117	Luo, P. G.	2009	10.1007/s00122-009-0962-0	Pm40	Powdery mildew	7B	C	233.1608	237.5023		Xwmc335; Xgwm297
+PD6-118	Muranty, H.	2009	10.1007/s11032-008-9248-5	QPm.inra-5D	Powdery mildew	5D	D				Xcfd22; Xcfd55
+PD6-119	Muranty, H.	2009	10.1007/s11032-008-9248-5	QPm.inra-6A2	Powdery mildew	6A	D				
+PD6-120	Murphy, Lesley R.	2009	10.2135/cropsci2008.10.0621	Yr5	Stripe rust	2B	D				
+PD6-121	Murphy, Lesley R.	2009	10.2135/cropsci2008.10.0621	Yr15	Stripe rust	1B	D				
+PD6-122	Singh, D.	2009	10.1007/s10681-009-9959-7	QLr 1B (Beaver/Soissons)	Leaf rust	1B	D				Xgdm72
+PD6-123	Singh, D.	2009	10.1007/s10681-009-9959-7	QLr 4B (Beaver/Soissons)	Leaf rust	4B	C			544.6499	Xgwm149; Xgwm495
+PD6-124	Singh, D.	2009	10.1007/s10681-009-9959-7	QLr 5A (Beaver/Soissons)	Leaf rust	5A	D				Xbarc10
+PD6-125	Sui, X. X.	2009	10.1094/phyto-99-10-1209	YrZak	Stripe rust	2B	C			672.0827	Xgwm501
+PD6-126	Wang, Shu	2009	10.1007/s00122-009-1063-9	Bt (Blizzard, 1BS)	Common bunt	1B	C	15.0324	16.2276		Xgwm374; Xgwm264; Xbarc128
+PD6-127	Wu, Shuangye	2009	10.2135/cropsci2008.11.0666	Sr40	Stem rust	2B	C	165.5783	172.6873		Xwmc344; Xwmc474
+PD6-128	XUE, Fei	2009	10.1016/s1875-2780(08)60109-1	mlxbd	Powdery mildew	7B	C			711.2341	Xgwm577; Xgwm1267
+PD6-129	Kolmer, J. A.	2010	10.2135/cropsci2010.01.0005	Lr63	Leaf rust	3A	C			11.6858	Xbarc57; Xbarc321
+PD6-130	Pu, Z. J.	2010	10.1111/j.1439-0523.2009.01649.x	YrP81	Stripe rust	2B	C	73.6182	88.8333		Xgwm429; Xwmc770
+PD6-131	Samsampour, D.	2010	10.1007/s10681-009-0114-2	Lr48	Leaf rust	2B	D				
+PD6-132	Simons, Kristin	2010	10.1007/s00122-010-1444-0	Sr13	Stem rust	6A	D				
+PD6-133	Singh, A.	2010	10.1111/j.1439-0523.2010.01820.x	Lr48	Leaf rust	2B	C			739.3961	Xwmc332; Xwmc175
+PD6-134	Singh, B.	2010	10.1007/s10681-010-0179-y	LrWo	Leaf rust	5B	C			8.189	Xgwm234
+PD6-135	Singh, S.	2010	10.1007/s11032-010-9467-4	Lr12	Leaf rust	4B	C	544.6499	568.5562		Xgwm251; Xgwm149
+PD6-136	Sun, Xiaochun	2010	10.2135/cropsci2009.01.0049	Lr42	Leaf rust	1D	D				Xwmc432
+PD6-137	Tsilo, Toi J.	2010	10.2135/cropsci2009.11.0648	Sr6	Stem rust	2D	D				Xcfd43; Xwmc453
+PD6-138	Wang, Yanjie	2010	10.1007/s10681-010-0134-y	LrAlt	Leaf rust	2A	C	1.5828	2.3205		Xbarc212; Xwmc382
+PD6-139	XU, Zhong-Qing	2010	10.1016/s1875-2780(09)60090-0	YrM8003	Stripe rust	7D	C			39.7697	Xwmc702; Xwmc438
+PD6-140	YUE, Yan-li	2010	10.1016/s1671-2927(09)60218-2	YrP138	Stripe rust	1B	C			557.1161	Xwmc52; Xbarc61
+PD6-141	Zhang, Hongtao	2010	10.1007/s00122-010-1414-6	Ml3D232	Powdery mildew	5B	D				
+PD6-142	Zhang, Hai	2010	10.1007/s11032-010-9501-6	LrBi16	Leaf rust	7B	D				Xcfa2257; Xgwm344
+PD6-143	Kolmer, J. A.	2011	10.2135/cropsci2010.06.0381	QSr 2BL (Thatcher APR)	Stem rust	2B	C			670.5972	Xwmc175
+PD6-144	Liu, Ziji	2011	10.1007/s00122-011-1767-5	MlIW170	Powdery mildew	2B	C	26.592	29.8488		Xcfd238; Xwmc243
+PD6-145	Ma, Hongqi	2011	10.1007/s00122-011-1651-3	Pm (5DS, Ma 2011)	Powdery mildew	5D	C			34.0765	Xgwm205
+PD6-146	Ma, Hongqi	2011	10.1007/s00122-011-1651-3	Pm (6DS, Ma 2011)	Powdery mildew	6D	D				
+PD6-147	Qin, Bi	2011	10.1007/s00122-011-1577-9	Pm6	Powdery mildew	2B	D				
+PD6-148	Singh, Anupam	2011	10.1007/s13353-011-0070-0	Lr25	Leaf rust	4B	D				
+PD6-149	Xu, Weigang	2011	10.1111/j.1439-0523.2011.01882.x	PmHNK54	Powdery mildew	2A	C			674.4759	Xbarc5; Xgwm312
+PD6-150	ZHANG, Na	2011	10.1016/s1671-2927(11)60190-9	Lr24	Leaf rust	3D	D				
+PD6-151	Zhou, X. L.	2011	10.1007/s00122-011-1595-7	Yrxy1	Stripe rust	7A	D				
+PD6-152	Zhou, X. L.	2011	10.1007/s00122-011-1595-7	Yrxy2	Stripe rust	2A	D				
+PD6-153	Akfirat, Funda Senturk	2012	10.1016/j.nbt.2012.08.500	QYr 2AL (Akfirat)	Stripe rust	2A	D				
+PD6-154	Christopher, Mark D.	2012	10.1111/pbr.12015	QYrus.vt-4BL	Stripe rust	4B	C			608.2523	Xbarc163; Xwmc692; Xgwm251
+PD6-155	Christopher, Mark D.	2012	10.1111/pbr.12015	QYrus.vt-1AS	Stripe rust	1A	D				
+PD6-156	Christopher, Mark D.	2012	10.1111/pbr.12015	QYrus.vt-7D	Stripe rust	7D	D				
+PD6-157	MA, Dong-Fang	2012	10.1016/s1875-2780(11)60055-2	Yrzhong21	Stripe rust	5A	C	455.4598	471.7112		Xbarc165; Xgwm186
+PD6-158	Piarulli, Luciana	2012	10.1016/j.plantsci.2012.07.015	Ml5323	Powdery mildew	2B	D				
+PD6-159	REN, Qiang	2012	10.1016/s2095-3119(12)60038-0	YrC110	Stripe rust	1B	D				
+PD6-160	Aiyong, QI	2015	10.17221/2/2015-cjgpb	LrLB88	Leaf rust	5D	C			555.02	Xbarc144
+PD6-161	Zhang, Runze	2026	10.1007/s00122-026-05182-0	Pm62	Powdery mildew	2D	D				
+PD6-162	Galaev, A.V.	2006	10.17221/6234-cjgpb	Bt (Ae. cylindrica, 1BL)	Common bunt	1B	C			672.3333	Xgwm259
+PD6-163	Ahmadi, Hadi	2007	10.3923/ppj.2007.164.168	Pm (T. dicoccoides TA1055/TA1150, 2A)	Powdery mildew	2A	D				
+PD6-164	Yu, Long-Xi	2011	10.1007/s00122-011-1664-y	Sr2 locus (CIMMYT AM)	Stem rust	3B	D				
+PD6-165	Yu, Long-Xi	2011	10.1007/s00122-011-1664-y	wPt1859 locus (7DL)	Stem rust	7D	D				
