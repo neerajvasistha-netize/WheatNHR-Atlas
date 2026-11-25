@@ -1830,21 +1830,67 @@ async function tisWidget(el,rows,opts){if(!el)return;let T;
 function encTissue(){const el=document.getElementById("tkgTis");if(!el)return;const terms=tisTerms();if(!terms.length){el.innerHTML="";return;}
   tisWidget(el,terms.map(r=>({id:r.id,nm:r.sh+" · "+r.nm,g:r.g,dim:!(r.q<0.05),opt:`${r.typ}: ${encTrunc(r.nm,70)} (${r.k} genes${r.q<0.05?", FDR "+r.q.toExponential(1):""})`,tip:`${r.typ} ${r.id} ${r.nm}\n${r.k} list genes · FDR ${r.q.toExponential(2)}`,foot:r.typ+": "+r.nm})),
     {fig:"Figure 5",max:24,selLabel:"Term shown on the plant",heading:"Enriched terms by organ",rowWord:"enriched term: the 6 most enriched (lowest p, 2 or more list genes) of each of KEGG pathways and GO biological process (BP), molecular function (MF) and cellular component (CC)",sigNote:true,lead:"Where the enriched terms are expressed.",title:"Where the enriched terms are expressed in the wheat plant"});}
+/* Naturalistic wheat plant for the organ-expression figure: fibrous roots, tapering culm with leaf sheaths and nodes,
+   arching lanceolate leaves, a secondary tiller, a nodding awned spike with two rows of spikelets, and a grain inset.
+   c(organ) gives the fill colour of each organ (Root, Stem, Leaf, Spike, Grain). */
+function wtmPlant(c){
+  const f=v=>v.toFixed(1),bz=(p,t)=>{const u=1-t;return [u*u*u*p[0][0]+3*u*u*t*p[1][0]+3*u*t*t*p[2][0]+t*t*t*p[3][0],u*u*u*p[0][1]+3*u*u*t*p[1][1]+3*u*t*t*p[2][1]+t*t*t*p[3][1]];};
+  let rs=7;const rnd=()=>{rs=(rs*9301+49297)%233280;return rs/233280;};
+  const blade=(ax,ay,s,L,h,d,W)=>{const P=[[ax,ay],[ax+s*L*.32,ay-h],[ax+s*L*.78,ay-h*.55],[ax+s*L,ay+d]],N=26,up=[],lo=[],mid=[];
+    for(let i=0;i<=N;i++){const t=i/N,p=bz(P,t),q=bz(P,Math.min(1,t+.01)),r=bz(P,Math.max(0,t-.01));let dx=q[0]-r[0],dy=q[1]-r[1];const m=Math.hypot(dx,dy)||1;dx/=m;dy/=m;
+      const w=W*(t<.12?.55+t*3.4:Math.pow(1-t,.75)*1.06)*(i===N?0:1);up.push([p[0]-dy*w,p[1]+dx*w]);lo.push([p[0]+dy*w,p[1]-dx*w]);mid.push(p);}
+    const path="M"+up.map(p=>f(p[0])+" "+f(p[1])).join(" L")+" L"+lo.reverse().map(p=>f(p[0])+" "+f(p[1])).join(" L")+"Z";
+    return {path,mid:"M"+mid.map(p=>f(p[0])+" "+f(p[1])).join(" L"),pt:t=>bz(P,t)};};
+  const culm=(x0,y0,x1,y1,bend,w0,w1)=>{const P=[[x0,y0],[x0+bend*.2,y0-(y0-y1)*.35],[x1+bend*.2,y1+(y0-y1)*.3],[x1,y1]],N=20,a=[],b=[];
+    for(let i=0;i<=N;i++){const t=i/N,p=bz(P,t),w=(w0+(w1-w0)*t)/2;a.push([p[0]-w,p[1]]);b.push([p[0]+w,p[1]]);}
+    return {path:"M"+a.map(p=>f(p[0])+" "+f(p[1])).join(" L")+" L"+b.reverse().map(p=>f(p[0])+" "+f(p[1])).join(" L")+"Z",at:y=>{let best=P[0],bd=1e9;for(let i=0;i<=60;i++){const p=bz(P,i/60),d=Math.abs(p[1]-y);if(d<bd){bd=d;best=p;}}return best;},w:y=>w0+(w1-w0)*(y0-y)/(y0-y1)};};
+  const spike=(bx,by,tx,ty,n,k,awn)=>{let aw="",sd="",ct="";const P=[[bx,by],[bx+(tx-bx)*.1,by-(by-ty)*.4],[tx-(tx-bx)*.15,ty+(by-ty)*.25],[tx,ty]];
+    const tilt=Math.atan2(tx-bx,by-ty);
+    for(let i=0;i<n;i++){const t=(i+.4)/n,p=bz(P,t),q=bz(P,Math.min(1,t+.02)),r=bz(P,Math.max(0,t-.02)),ang=Math.atan2(q[0]-r[0],r[1]-q[1]);
+      const s=i%2?1:-1,sz=k*(1-.38*t*t),L=19*sz,Wd=12.5*sz,a=ang+s*.5,cx=p[0]+Math.cos(ang)*s*5.6*sz,cy=p[1]+Math.sin(ang)*s*5.6*sz;
+      const tipx=cx+Math.sin(a)*L*.5,tipy=cy-Math.cos(a)*L*.5,aa=ang+s*.2,A=awn*(0.75+.35*(1-t));
+      aw+=`<path d="M${f(tipx)} ${f(tipy)} Q${f(tipx+Math.sin(aa)*A*.5+s*1.5)} ${f(tipy-Math.cos(aa)*A*.5)} ${f(tipx+Math.sin(aa)*A)} ${f(tipy-Math.cos(aa)*A)}" fill="none" stroke="#b9a46a" stroke-width=".55" stroke-linecap="round"/>`;
+      const g=(a*180/Math.PI).toFixed(1);
+      sd+=`<g transform="translate(${f(cx)} ${f(cy)}) rotate(${g})"><path d="M0 ${f(-L/2)} C${f(Wd/2)} ${f(-L/4)} ${f(Wd/2)} ${f(L/3)} 0 ${f(L/2)} C${f(-Wd/2)} ${f(L/3)} ${f(-Wd/2)} ${f(-L/4)} 0 ${f(-L/2)}Z" fill="${c("Spike")}" stroke="#56612f" stroke-width=".6"/><path d="M0 ${f(-L/2+1.5)} L0 ${f(L/2-1.5)}" stroke="#56612f" stroke-width=".35" opacity=".7"/></g>`;
+      if(i<n-1){const cs=sz*.82,cL=15*cs,cW=9*cs,cg=(ang*180/Math.PI).toFixed(1);ct+=`<g transform="translate(${f(p[0])} ${f(p[1]-3*sz)}) rotate(${cg})"><path d="M0 ${f(-cL/2)} C${f(cW/2)} ${f(-cL/4)} ${f(cW/2)} ${f(cL/3)} 0 ${f(cL/2)} C${f(-cW/2)} ${f(cL/3)} ${f(-cW/2)} ${f(-cL/4)} 0 ${f(-cL/2)}Z" fill="${c("Spike")}" stroke="#56612f" stroke-width=".5" opacity=".95"/></g>`;
+        const ex=p[0],ey=p[1]-3*sz-cL/2;aw+=`<line x1="${f(ex)}" y1="${f(ey)}" x2="${f(ex+Math.sin(ang)*awn*.8)}" y2="${f(ey-Math.cos(ang)*awn*.8)}" stroke="#b9a46a" stroke-width=".5"/>`;}}
+    const rach=`<path d="M${f(bx)} ${f(by)} C${f(P[1][0])} ${f(P[1][1])} ${f(P[2][0])} ${f(P[2][1])} ${f(tx)} ${f(ty)}" fill="none" stroke="#56612f" stroke-width="1.3"/>`;
+    return aw+rach+sd+ct;};
+  const out=[];
+  /* soil */
+  out.push(`<path d="M8 374 Q60 370 120 373 T238 372 L238 378 L8 378Z" fill="#cdb98f"/><path d="M8 378 L238 378" stroke="#b39d70" stroke-width=".8"/>`);
+  /* roots: fibrous system, each root tapering in three segments, with fine laterals */
+  let rt="";
+  const roots=[[-58,52],[-40,74],[-20,86],[-4,92],[12,90],[30,80],[50,62],[66,40],[-70,30],[78,26]];
+  roots.forEach(([dx,dy],j)=>{const x0=118+(rnd()-.5)*6,y0=377,pts=[[x0,y0]];for(let k=1;k<=3;k++){const t=k/3;pts.push([x0+dx*t+(rnd()-.5)*8*t,y0+dy*t+(rnd()-.5)*5*t]);}
+    [2.6,1.7,.9].forEach((w,k)=>{const a=pts[k],b=pts[k+1],mx=(a[0]+b[0])/2+(rnd()-.5)*6,my=(a[1]+b[1])/2+(rnd()-.5)*4;rt+=`<path d="M${f(a[0])} ${f(a[1])} Q${f(mx)} ${f(my)} ${f(b[0])} ${f(b[1])}" fill="none" stroke="${c("Root")}" stroke-width="${w}" stroke-linecap="round"/>`;
+      if(k>0)for(let m=0;m<2;m++){const sx=a[0]+(b[0]-a[0])*(.3+m*.4),sy=a[1]+(b[1]-a[1])*(.3+m*.4),sg=m?1:-1,l=5+rnd()*7;rt+=`<path d="M${f(sx)} ${f(sy)} q${f(sg*l*.6)} ${f(l*.3)} ${f(sg*l)} ${f(l*.9)}" fill="none" stroke="${c("Root")}" stroke-width=".6" stroke-linecap="round"/>`;}});});
+  out.push(`<g data-org="Root">${rt}<g opacity=".35">${rt.replace(/stroke="[^"]+"/g,'stroke="#5a4a2e"').replace(/stroke-width="([\d.]+)"/g,(m,w)=>`stroke-width="${(w*.25).toFixed(2)}"`)}</g></g>`);
+  /* main culm and a secondary tiller */
+  const C=culm(118,376,125,124,4,7,4),T=culm(114,376,90,196,-6,5.5,3.2);
+  const nodesC=[330,268,206,158],nodesT=[318,256];
+  const stem=`<path d="${T.path}" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".6" opacity=".92"/>`+nodesT.map(y=>{const p=T.at(y),w=T.w(y);return `<ellipse cx="${f(p[0])}" cy="${f(p[1])}" rx="${f(w/2+1.1)}" ry="1.8" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".6"/>`;}).join("")
+    +`<path d="${C.path}" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".7"/><path d="${culm(117,376,124.4,124,4,1.6,1).path}" fill="#fff" opacity=".22"/>`
+    +nodesC.map(y=>{const p=C.at(y),w=C.w(y);return `<ellipse cx="${f(p[0])}" cy="${f(p[1])}" rx="${f(w/2+1.3)}" ry="2" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".7"/>`;}).join("");
+  /* leaves: sheath from each node, then an arching blade; flag leaf shorter and more upright */
+  const LV=[[C,330,-1,104,14,44,6.6],[C,268,1,108,24,34,7],[C,206,-1,98,30,16,6.8],[C,158,1,68,34,-12,6],[T,318,-1,74,12,40,5.4],[T,256,1,58,20,18,5],[C,366,1,62,6,8,4.6]];
+  let lf="",mr="";const leafPts=[];
+  LV.forEach(([K,y,s,L,h,d,W])=>{const p=K.at(y),top=K.at(y-30),w=K.w(y);
+    lf+=`<path d="M${f(p[0]-w/2-1)} ${f(p[1])} L${f(top[0]-w/2-.6)} ${f(top[1])} Q${f(top[0]+s*2)} ${f(top[1]-4)} ${f(top[0]+w/2+.6)} ${f(top[1])} L${f(p[0]+w/2+1)} ${f(p[1])}Z" fill="${c("Leaf")}" stroke="#3f5f3a" stroke-width=".55"/>`;
+    const b=blade(top[0]+s*(w/2),top[1],s,L,h,d,W);lf+=`<path d="${b.path}" fill="${c("Leaf")}" stroke="#3f5f3a" stroke-width=".6" stroke-linejoin="round"/>`;mr+=`<path d="${b.mid}" fill="none" stroke="#3f5f3a" stroke-width=".4" opacity=".6"/>`;leafPts.push(b.pt(.7));});
+  /* spikes: main nodding spike and a smaller tiller spike */
+  const spk=spike(125,124,138,30,12,1,30)+spike(90,196,82,132,9,.74,24);
+  out.push(`<g data-org="Stem">${stem}</g>`);
+  out.push(`<g data-org="Leaf">${lf}${mr}</g>`);
+  out.push(`<g data-org="Spike"><path d="M125 126 L125 122" stroke="#56612f" stroke-width="1.2"/>${spk}</g>`);
+  /* grain inset (dorsal view with crease, germ and brush) */
+  out.push(`<g data-org="Grain"><path d="M205 28 C218 30 221 50 219 62 C217 74 210 79 205 79 C200 79 193 74 191 62 C189 50 192 30 205 28Z" fill="${c("Grain")}" stroke="#7a5a2a" stroke-width=".9"/><path d="M205 33 C203 46 203 62 205 75" fill="none" stroke="#7a5a2a" stroke-width=".8"/><path d="M200 72 Q205 79 210 72" fill="none" stroke="#7a5a2a" stroke-width=".6"/>${[-3,-1.5,0,1.5,3].map(o=>`<path d="M${205+o} 29 l${o*.6} -5" stroke="#9a7a4a" stroke-width=".45"/>`).join("")}<path d="M170 66 L189 58" stroke="#999" stroke-width=".6" stroke-dasharray="2 2"/></g>`);
+  return out.join("");}
 function tisSvg(terms,prof,i0,vmax,T,rel,opts){opts=opts||{};const P=prof[i0],r0=terms[i0];
   const sc=p=>{if(!rel)return o=>p[o].mean/vmax;const v=TISORG.map(o=>p[o].mean),lo=Math.min(...v),hi=Math.max(...v);return o=>hi<0.05?0:hi-lo<0.05?0.5:(p[o].mean-lo)/(hi-lo);};
   const s0=sc(P),c=o=>tisCol(s0(o));
   const W=860,PX=0,PW=330;const out=[];
-  /* plant (original drawing): soil, roots, culm with nodes, four leaves, spike with spikelets and awns, grain */
-  const sx=120;// culm x
-  out.push(`<rect x="10" y="372" width="230" height="4" rx="2" fill="#c8b48a"/>`);
-  const roots=["M120 376 C112 400 96 418 80 440","M120 376 C118 404 114 428 112 452","M121 376 C128 402 140 420 158 438","M120 378 C104 396 84 404 62 410","M121 378 C136 394 158 400 182 404","M120 380 C124 410 132 432 136 456"];
-  out.push(`<g data-org="Root">${roots.map(d=>`<path d="${d}" fill="none" stroke="${c("Root")}" stroke-width="3.2" stroke-linecap="round"/>`).join("")}${roots.map(d=>`<path d="${d}" fill="none" stroke="#6b5a3a" stroke-width=".5" opacity=".6"/>`).join("")}</g>`);
-  out.push(`<g data-org="Stem"><rect x="${sx-4}" y="120" width="8" height="256" rx="3" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".7"/>${[176,246,316].map(y=>`<rect x="${sx-5.5}" y="${y}" width="11" height="5" rx="2" fill="${c("Stem")}" stroke="#3f5f3a" stroke-width=".7"/>`).join("")}</g>`);
-  const leaves=["M120 318 C80 300 48 300 22 318 C52 312 84 314 120 324Z","M120 248 C160 226 196 222 226 236 C196 236 160 240 120 254Z","M120 178 C84 154 54 146 28 152 C58 160 88 168 120 184Z","M121 128 C146 102 168 88 192 84 C170 98 148 114 122 134Z"];
-  out.push(`<g data-org="Leaf">${leaves.map(d=>`<path d="${d}" fill="${c("Leaf")}" stroke="#3f5f3a" stroke-width=".7"/>`).join("")}${["M120 321 C86 308 54 306 30 316","M120 251 C158 234 192 230 218 236","M120 181 C88 162 58 154 34 154","M121 131 C144 108 166 94 186 87"].map(d=>`<path d="${d}" fill="none" stroke="#3f5f3a" stroke-width=".4" opacity=".7"/>`).join("")}</g>`);
-  let sp="";for(let i=0;i<9;i++){const y=114-i*10.5,s=i%2?1:-1;sp+=`<ellipse cx="${sx+s*6}" cy="${y}" rx="6.2" ry="8.2" transform="rotate(${s*22} ${sx+s*6} ${y})" fill="${c("Spike")}" stroke="#4d5a2a" stroke-width=".7"/><line x1="${sx+s*9}" y1="${y-6}" x2="${sx+s*18}" y2="${y-34}" stroke="#8a8a5a" stroke-width=".6"/>`;}
-  out.push(`<g data-org="Spike"><line x1="${sx}" y1="120" x2="${sx}" y2="22" stroke="#4d5a2a" stroke-width="1.4"/>${sp}</g>`);
-  out.push(`<g data-org="Grain"><ellipse cx="205" cy="52" rx="15" ry="24" fill="${c("Grain")}" stroke="#7a5a2a" stroke-width=".9"/><path d="M205 31 C201 44 201 60 205 73" fill="none" stroke="#7a5a2a" stroke-width=".7"/><path d="M168 66 L190 56" stroke="#999" stroke-width=".6" stroke-dasharray="2 2"/></g>`);
+  out.push(wtmPlant(c));
   /* organ labels with leader lines, fixed rows so they never overlap */
   const anchor={Spike:[132,70],Grain:[220,52],Leaf:[200,236],Stem:[124,290],Root:[150,428]},ly={Spike:92,Grain:40,Leaf:208,Stem:286,Root:420};
   const lx=246;for(const o of TISORG){const [ax,ay]=anchor[o],y=ly[o];out.push(`<path d="M${ax} ${ay} L${lx-6} ${y}" stroke="#888" stroke-width=".6" fill="none"/><text x="${lx}" y="${y+3.5}" font-size="10.5" font-weight="700" fill="#222">${o}</text><text x="${lx}" y="${y+16}" font-size="9.5" fill="#444">${P[o].mean.toFixed(2)} (${P[o].on}/${P[o].n})</text>`);}
