@@ -837,7 +837,10 @@ SEED.reports.forEach(r=>st.reports[r.id]=r);
 const SEED_ASM=Object.fromEntries((SEED.preLive||SEED.reports).map(r=>[r.id,{asm:r.asm||{},sig:[r.chr,r.start,r.end,r.peak,r.ref].join("|")}]));
 /* converted positions: computed offline and shipped with the page; ignored once a record's position has been edited */
 function asmOf(r){const s=SEED_ASM[r.id];const sig=[r.chr,r.start,r.end,r.peak,r.ref].join("|");
-  if(s&&s.sig===sig)return s.asm;return (r.asm&&!s)?r.asm:{_note:"position edited; conversion pending"};}
+  if(s&&s.sig===sig)return s.asm;
+  /* a later data file that re-converted the record carries its own assemblies: use them (an edit that kept the old conversion stays pending) */
+  if(r.asm&&s&&Object.keys(r.asm).some(k=>k[0]!=="_")&&JSON.stringify(r.asm)!==JSON.stringify(s.asm))return r.asm;
+  return (r.asm&&!s)?r.asm:{_note:"position edited; conversion pending"};}
 Object.entries(SEED.sources).forEach(([k,v])=>st.sources[k]=v);
 if(!SEED.livePapers)SEED.papers.forEach(p=>st.papers[p.id]=p);
 const $=s=>document.querySelector(s);
