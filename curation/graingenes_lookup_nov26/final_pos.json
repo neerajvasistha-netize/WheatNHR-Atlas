@@ -1,0 +1,140 @@
+{
+ "XBarc239": [
+  "5D",
+  420964208,
+  420964501,
+  "in-silico PCR of the primers supplied by the owner (294 bp, 4 mismatches)"
+ ],
+ "Xbarc105": [
+  "4D",
+  36448304,
+  36448449,
+  "in-silico PCR of the primers supplied by the owner (146 bp, 3 mismatches)"
+ ],
+ "Xbarc1147": [
+  "2B",
+  775497704,
+  775497814,
+  "in-silico PCR of the primers supplied by the owner (111 bp, 2 mismatches)"
+ ],
+ "Xbarc207": [
+  "1B",
+  506333152,
+  506333397,
+  "in-silico PCR of the primers supplied by the owner (246 bp, 2 mismatches)"
+ ],
+ "Xgpw5176": [
+  "6D",
+  21365472,
+  21365827,
+  "in-silico PCR of the primers supplied by the owner (356 bp, 0 mismatches)"
+ ],
+ "Xwmc11": [
+  "3A",
+  17376054,
+  17376234,
+  "in-silico PCR of the primers supplied by the owner (181 bp, 0 mismatches)"
+ ],
+ "Xwmc120.2": [
+  "1A",
+  344704937,
+  344705097,
+  "in-silico PCR of the primers supplied by the owner (161 bp, 0 mismatches)"
+ ],
+ "Xwmc489d": [
+  "5A",
+  35190120,
+  35190395,
+  "in-silico PCR of the primers supplied by the owner (276 bp, 0 mismatches)"
+ ],
+ "Xwmc489d-wPt-8226": [
+  "5A",
+  35190120,
+  35190395,
+  "in-silico PCR of the primers supplied by the owner (276 bp, 0 mismatches)"
+ ],
+ "Xwmc687": [
+  "3B",
+  778900639,
+  778900781,
+  "in-silico PCR of the primers supplied by the owner (143 bp, 0 mismatches)"
+ ],
+ "Xwmc693": [
+  "3B",
+  256433059,
+  256433486,
+  "in-silico PCR of the primers supplied by the owner (428 bp, 0 mismatches)"
+ ],
+ "Xmwg68": [
+  "1B",
+  19048149,
+  19048556,
+  "in-silico PCR of the primers supplied by the owner (408 bp, 2 mismatches)"
+ ],
+ "Xbcd135": [
+  "2B",
+  723443075,
+  723443232,
+  "alignment of the clone sequence supplied by the owner (identity 92.5%, coverage 100%)"
+ ],
+ "Xabg3": [
+  "5D",
+  454022754,
+  454022936,
+  "alignment of the clone sequence supplied by the owner (identity 92.3%, coverage 57%)"
+ ],
+ "Xbcd873": [
+  "5D",
+  7501603,
+  7501935,
+  "alignment of the clone sequence supplied by the owner (identity 93.1%, coverage 100%)"
+ ],
+ "Xksu916(Oxo)": [
+  "4A",
+  586682072,
+  586682704,
+  "alignment of the clone sequence supplied by the owner (identity 91.4%, coverage 66%)"
+ ],
+ "xbcd266": [
+  "2B",
+  736247292,
+  736247445,
+  "alignment of the clone sequence supplied by the owner (identity 98.1%, coverage 92%)"
+ ],
+ "Xwmc105": [
+  "6B",
+  416110066,
+  416110257,
+  "relaxed in-silico PCR of the primers supplied by the owner (192 bp, 1 mismatches)"
+ ],
+ "Xcfa2240": [
+  "7D",
+  631882731,
+  631882978,
+  "relaxed in-silico PCR of the primers supplied by the owner (248 bp, 1 mismatches)"
+ ],
+ "Xgpw3087": [
+  "6D",
+  26130666,
+  26130831,
+  "relaxed in-silico PCR of the primers supplied by the owner (166 bp, 1 mismatches)"
+ ],
+ "Xgwm274": [
+  "3B",
+  291048199,
+  291048342,
+  "relaxed in-silico PCR of the primers supplied by the owner (144 bp, 1 mismatches)"
+ ],
+ "Xwmc695b": [
+  "3A",
+  544200199,
+  544200450,
+  "relaxed in-silico PCR of the primers supplied by the owner (252 bp, 4 mismatches)"
+ ],
+ "Xcfa2076": [
+  "3A",
+  720595896,
+  720596028,
+  "relaxed in-silico PCR of the primers supplied by the owner (133 bp, 2 mismatches)"
+ ]
+}
