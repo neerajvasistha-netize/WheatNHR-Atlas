@@ -969,7 +969,7 @@ function qAuto(){const q=qStr();const SEL=window.WTM_clsSel;
     if(SEL){SEL.clear();window.WTM_clsSync&&window.WTM_clsSync();}mapDefault();QAUTO=null;};
   if(q.length<2){undo();renderLegend();renderTable();return;}
   const all=Object.values(st.reports).filter(qHit);const re=new RegExp("(^|[^a-z0-9])"+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"($|[^a-z0-9])","i");
-  const st0=all.filter(r=>{const n=(r.name||"").toLowerCase();return n.startsWith(q)&&!/[a-z0-9]/.test(n.charAt(q.length));});const ex=all.filter(r=>re.test(r.name||"")||re.test(r.marker||""));const m=st0.length?st0:(ex.length?ex:all);
+  const st0=all.filter(r=>{const n=(r.name||"").toLowerCase();return n.startsWith(q)&&!/[a-z0-9]/.test(n.charAt(q.length));});const ex=all.filter(r=>re.test(r.name||"")||re.test(r.marker||""));const cur=st0.filter(r=>!/reported on|re-located/i.test(r.name||""));const m=cur.length?cur:(st0.length?st0:(ex.length?ex:all));
   if(!m.length||m.length>150){undo();renderLegend();renderTable();return;}
   undo();
   const chrs=[...new Set(m.map(r=>r.chr))];const ch=chrs.length===1?chrs[0]:"";
