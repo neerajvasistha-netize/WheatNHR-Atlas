@@ -315,7 +315,7 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 #tbl tr.qhit td{background:#fff3c4}#tbl tr.qhit td mark{background:#ffd44d;color:inherit;padding:0 1px;border-radius:2px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #tbl tr.qhit td{background:#4a3f12}:root:not([data-theme="light"]) #tbl tr.qhit td mark{background:#8a6d10}}
 :root[data-theme="dark"] #tbl tr.qhit td{background:#4a3f12}:root[data-theme="dark"] #tbl tr.qhit td mark{background:#8a6d10}
-#homeFilt label[for="q"]{flex:1 1 260px;min-width:240px}
+#homeFilt label[for="q"]{flex:0 0 230px;min-width:0}#homeFilt label[for="fChr"]{flex:0 0 110px;min-width:0}#homeFilt label[for="fChr"] select{width:110px}#homeFilt .mselw{flex:0 0 160px;min-width:0}#homeFilt .mselw .msel,#homeFilt .mselw .mselb{width:160px}#homeFilt label[for="fFrom"],#homeFilt label[for="fTo"]{flex:0 0 95px;min-width:0}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -504,11 +504,11 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
   </div>
   <div class="filters" id="homeFilt">
     <span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span>
+    <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
     <label for="fChr">Chromosome<select id="fChr"><option value="">All</option></select></label>
     <div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
     <label for="fTo">To (Mb)<input class="mb" type="number" id="fTo" step="0.1" min="0"></label>
-    <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
     <select id="fAsm" hidden aria-hidden="true"><option>RefSeq v2.1</option></select>
     <label for="fGrade" hidden style="display:none">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
     <label for="fCur" hidden style="display:none">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
