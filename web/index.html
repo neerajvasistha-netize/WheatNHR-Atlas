@@ -311,6 +311,11 @@ header.top.hero .navbar{padding-top:0!important;padding-bottom:0!important;margi
 .filters .trsel{display:inline-block;margin:0;align-self:flex-end}
 .filters .trmenu label{display:inline-flex;flex-direction:row;align-items:center;gap:6px;flex:1;font:400 13.5px/1.4 var(--body);color:var(--ink)}
 .filters .trmenu input{padding:0;margin:0;width:auto;min-width:0;font-size:inherit;border-radius:3px;background:revert;border:revert}
+
+#tbl tr.qhit td{background:#fff3c4}#tbl tr.qhit td mark{background:#ffd44d;color:inherit;padding:0 1px;border-radius:2px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #tbl tr.qhit td{background:#4a3f12}:root:not([data-theme="light"]) #tbl tr.qhit td mark{background:#8a6d10}}
+:root[data-theme="dark"] #tbl tr.qhit td{background:#4a3f12}:root[data-theme="dark"] #tbl tr.qhit td mark{background:#8a6d10}
+#homeFilt label[for="q"]{flex:1 1 260px;min-width:240px}
 </style>
 <style id="restyle-v14">
 /* VOICE work: a reference atlas for wheat pathologists and breeders
@@ -498,14 +503,15 @@ label.chk{display:flex!important;flex-direction:row!important;align-items:flex-s
   
   </div>
   <div class="filters" id="homeFilt">
-    <select id="fAsm" hidden aria-hidden="true"><option>RefSeq v2.1</option></select>
-    <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
+    <span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span>
     <label for="fChr">Chromosome<select id="fChr"><option value="">All</option></select></label>
-    <span class="trsel"><button type="button" class="btn trbtn" id="trBtn" aria-haspopup="true" aria-expanded="false" aria-controls="trMenu"><svg class="tricon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2 3h12l-4.6 5.4V13l-2.8 1.2V8.4z" fill="currentColor"/></svg><span>Explore by trait</span><span class="trbadge" id="trLab">All 32 diseases</span><span class="trchev" aria-hidden="true">▾</span></button><div class="trmenu" id="trMenu" role="dialog" aria-label="Choose traits to show" hidden></div></span><div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
-    <label for="fGrade" hidden style="display:none">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
-    <label for="fCur" hidden style="display:none">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
+    <div class="mselw"><span class="msl" id="fClsLab">Class</span><div class="msel" id="fCls" role="group" aria-labelledby="fClsLab"><button type="button" class="mselb" id="fClsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="fClsP"><span id="fClsTxt">All classes</span><span aria-hidden="true">▾</span></button><div class="mselp" id="fClsP" hidden></div></div></div>
     <label for="fFrom">From (Mb)<input class="mb" type="number" id="fFrom" step="0.1" min="0"></label>
     <label for="fTo">To (Mb)<input class="mb" type="number" id="fTo" step="0.1" min="0"></label>
+    <label for="q">Search name, marker, gene or source<input type="search" id="q" placeholder="e.g. Tsn1, 5B, Fhb1, AX-94"></label>
+    <select id="fAsm" hidden aria-hidden="true"><option>RefSeq v2.1</option></select>
+    <label for="fGrade" hidden style="display:none">Grade<select id="fGrade"><option value="">All</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label>
+    <label for="fCur" hidden style="display:none">Curation<select id="fCur"><option value="">All</option><option value="hand">Hand-curated</option><option value="auto">Auto-extracted (to check)</option><option value="atlas v1.2">Atlas v1.2</option></select></label>
     <button class="btn primary" id="showRec" type="button" aria-expanded="false" aria-controls="recWrap">Show records</button>
     <button class="btn" id="reset" type="button">Clear filters</button>
     <button class="btn" id="dlCsv" type="button">Download CSV</button>
@@ -950,11 +956,32 @@ function lodAvg(r){if(!r||r.cls!=="QTL"||lodOf(r)!=null)return null;
   const mean=a=>Math.round(a.reduce((p,q)=>p+q,0)/a.length*100)/100;
   for(const [L,lab] of [[LODAVG.P[r.source],"mean LOD of the other QTL of the same paper"],[LODAVG.D[r.disease],"mean LOD of all atlas QTL for "+r.disease],[LODAVG.A,"mean LOD of all atlas QTL"]])if(L&&L.length)return {v:mean(L),basis:lab,n:L.length};return null;}
 function lodCell(r){const v=lodOf(r);if(v!=null)return esc(String(v));const a=lodAvg(r);return a?`<i class="muted" title="LOD not given by the paper. Average LOD for meta-QTL analysis: ${esc(a.basis)} (n = ${a.n})">${a.v} avg</i>`:"";}
+/* search: highlight matching records, and set trait, chromosome, class and From/To to the loci found */
+function qStr(){return ($("#q").value||"").trim().toLowerCase();}
+function qHit(r){const q=qStr();return q.length>=2&&((r.name||"").toLowerCase().includes(q)||(r.marker||"").toLowerCase().includes(q));}
+function markQ(t){const q=qStr();t=String(t||"");const i=t.toLowerCase().indexOf(q);return i<0?esc(t):esc(t.slice(0,i))+"<mark>"+esc(t.slice(i,i+q.length))+"</mark>"+esc(t.slice(i+q.length));}
+let QAUTO=null,QT=null;
+function qAuto(){const q=qStr();const SEL=window.WTM_clsSel;
+  const undo=()=>{if(!QAUTO)return;if($("#fChr").value===QAUTO.chr)$("#fChr").value="";if($("#fFrom").value===QAUTO.f)$("#fFrom").value="";if($("#fTo").value===QAUTO.t)$("#fTo").value="";
+    if(SEL){SEL.clear();window.WTM_clsSync&&window.WTM_clsSync();}mapDefault();QAUTO=null;};
+  if(q.length<2){undo();renderLegend();renderTable();return;}
+  const all=Object.values(st.reports).filter(qHit);const re=new RegExp("(^|[^a-z0-9])"+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"($|[^a-z0-9])","i");
+  const st0=all.filter(r=>{const n=(r.name||"").toLowerCase();return n.startsWith(q)&&!/[a-z0-9]/.test(n.charAt(q.length));});const ex=all.filter(r=>re.test(r.name||"")||re.test(r.marker||""));const m=st0.length?st0:(ex.length?ex:all);
+  if(!m.length||m.length>150){undo();renderLegend();renderTable();return;}
+  undo();
+  const chrs=[...new Set(m.map(r=>r.chr))];const ch=chrs.length===1?chrs[0]:"";
+  $("#fChr").value=ch;
+  if(SEL){SEL.clear();m.forEach(r=>SEL.add(r.cls));window.WTM_clsSync&&window.WTM_clsSync();}
+  st.dOn=new Set(m.map(r=>r.disease));
+  let f="",t="";if(ch){const v=m.map(r=>iv(r,st.asm)).filter(Boolean);if(v.length){f=String(Math.floor(Math.min(...v.map(x=>x[0]))*100)/100);t=String(Math.ceil(Math.max(...v.map(x=>x[1]))*100)/100);}}
+  $("#fFrom").value=f;$("#fTo").value=t;QAUTO={chr:ch,f,t};
+  renderLegend();renderTable();
+  const rw=$("#recWrap"),sb=$("#showRec");if(rw&&rw.hidden){rw.hidden=false;if(sb){sb.textContent="Hide records";sb.setAttribute("aria-expanded","true");}}}
 function renderTable(){LODAVG=null;const list=filtered();renderIdeo(list);const rows=sorted(list);
   const nd=rows.filter(r=>!anchored(r,st.asm)).length;
   $("#countLine").textContent=`${rows.length} of ${Object.keys(st.reports).length} reports shown${nd?` (${nd} without a position on ${st.asm})`:""}. Positions in Mb on IWGSC ${st.asm}; ⚑ marks a conversion to check (see record details).`;
   $("#tbl tbody").innerHTML=rows.length?rows.map(r=>{const c=co(r,st.asm)||{};const fl=c.flag&&!OKFLAGS.has(c.flag)?c.flag:"";const na=!anchored(r,st.asm);
-    return `<tr data-id="${r.id}"><td class="loc"><b>${esc(r.name)}</b></td><td>${esc(r.cls)}</td>
+    const hq=qHit(r);return `<tr data-id="${r.id}"${hq?' class="qhit"':''}><td class="loc"><b>${hq?markQ(r.name):esc(r.name)}</b></td><td>${esc(r.cls)}</td>
     <td><span class="dchip"><span class="sw" style="background:${DCOL[r.disease]||"#888"}"></span>${esc(r.disease)}</span></td>
     <td>${esc(c.chr||r.chr)}</td>${na?`<td class="num muted" colspan="3" title="No physical position in the paper; shown in the table only">${r.arm?esc(r.arm)+" arm only":"chromosome only"}</td>`:`<td class="num">${fmt(c.start)}</td><td class="num">${fmt(c.end)}</td><td class="num">${fmt(c.peak!=null&&c.peak!==""?c.peak:(c.start!=null&&c.end!=null&&c.start!==""?(+c.start + +c.end)/2:""))}${fl?` <span class="muted" title="${esc(FLAGTXT[fl]||fl)}">⚑</span>`:""}</td>`}
     <td class="small mono mk" title="${esc(r.marker)}">${esc(r.marker)}</td><td class="num">${lodCell(r)}</td><td><span class="pill g-${esc(r.grade)}">${esc(r.grade)}</span></td><td class="small ref">${srcLink(r.source)}</td></tr>`;}).join("")
@@ -2421,8 +2448,9 @@ function init(){CHRS.forEach(c=>{$("#fChr").insertAdjacentHTML("beforeend",`<opt
    document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!P.hidden){P.hidden=true;B.setAttribute("aria-expanded","false");B.focus();}});}
   [...new Set(Object.values(st.papers).map(p=>p.disease))].sort().forEach(d=>$("#pDis").insertAdjacentHTML("beforeend",`<option>${esc(d)}</option>`));
     ["#q","#fChr","#fCls","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).addEventListener("input",renderTable));
+     $("#q").addEventListener("input",()=>{clearTimeout(QT);QT=setTimeout(qAuto,450);});
   
-  $("#reset").onclick=()=>{["#q","#fChr","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.mapD=null;if(window.WTM_clsSel){window.WTM_clsSel.clear();window.WTM_clsSync&&window.WTM_clsSync();}st.wild=false;if($("#wildMap"))runWild();mapDefault();renderLegend();renderTable();};
+  $("#reset").onclick=()=>{QAUTO=null;["#q","#fChr","#fGrade","#fFrom","#fTo","#fCur"].forEach(s=>$(s).value="");st.mapD=null;if(window.WTM_clsSel){window.WTM_clsSel.clear();window.WTM_clsSync&&window.WTM_clsSync();}st.wild=false;if($("#wildMap"))runWild();mapDefault();renderLegend();renderTable();};
   $("#legend").onclick=e=>{const b=e.target.closest("button");if(!b)return;
      if(b.dataset.g){const ls=b.dataset.g==="Biotrophs"?["Biotroph"]:["Necrotroph","Hemibiotroph"];const names=DIS.filter(x=>ls.includes(x[2])).map(x=>x[0]);const on=names.every(n=>st.dOn.has(n));names.forEach(n=>on?st.dOn.delete(n):st.dOn.add(n));renderLegend();renderTable();return;}
      const d=b.dataset.d;if(!d)return;st.mapD=d;renderIdeo(filtered());};
