@@ -58,9 +58,13 @@ for r in R:
     m=re.search(r'\bLOD\b[^0-9]{0,6}(\d+(?:\.\d+)?)',r.get('stat') or '',re.I)
     if m and float(m.group(1))>=1:
         x=float(m.group(1));LV[r.get('source')].append(x);DV[r.get('disease')].append(x);AV.append(x)
-def avg(r):
-    for L,lab in ((LV.get(r.get('source')),'mean of the other QTL of the same paper'),(DV.get(r.get('disease')),'mean of all atlas QTL for this disease'),(AV,'mean of all atlas QTL')):
-        if L: return round(statistics.mean(L),2),f'{lab} (n = {len(L)})'
+CAT={}
+try:
+    for k,v in json.load(open('../lod/lodcats.json')).items():
+        for x in v: CAT[x[0] if isinstance(x,list) else x]=k
+except Exception: pass
+CATTXT={'LOD in paper':'paper reports LOD values (QTL table): to be read','GWAS / no LOD':'association study: p-values only, no LOD exists','no LOD mentioned':'paper gives no LOD','no pdf':'paper PDF not available'}
+def avg(r): return 2.5,'default LOD 2.5 (not given by the paper); '+CATTXT.get(CAT.get(r.get('source')),'')
 lod=[]
 for r in R:
     if r.get('cls')!='QTL': continue
@@ -89,13 +93,13 @@ def sheet(ws,head,data,widths):
 ws=wb.active;ws.title='Summary'
 ws1=wb.create_sheet('Unpositioned records');ws2=wb.create_sheet('QTL without LOD')
 sheet(ws1,['Atlas ID','Locus','Class','Disease','Chromosome','Markers in atlas record','Other marker names in the evidence or note','Status','Where to get the position (hint)','Reference','Full citation','DOI / link','Evidence (from the paper)','Atlas note'],rows,[10,28,7,18,8,22,22,16,60,20,50,28,45,45])
-sheet(ws2,['Atlas ID','QTL','Disease','Chromosome','Position (Mb, RefSeq v1.0)','PVE (%)','Statistic in atlas','Average LOD for meta-QTL analysis','Basis of the average LOD','Where to get the LOD (hint)','Reference','Full citation','DOI / link'],lod,[10,28,18,8,14,8,20,12,34,55,20,50,28])
+sheet(ws2,['Atlas ID','QTL','Disease','Chromosome','Position (Mb, RefSeq v1.0)','PVE (%)','Statistic in atlas','LOD used for meta-QTL analysis','Basis','Where to get the LOD (hint)','Reference','Full citation','DOI / link'],lod,[10,28,18,8,14,8,20,12,34,55,20,50,28])
 by=collections.Counter(x[7] for x in rows)
 info=[['WheatTraitMap: records still needing a position or a LOD value (25 Nov 2026)'],[],
  ['Sheet "Unpositioned records"',f'{len(rows)} records with a wheat chromosome but no physical position, for which a position can still be found'],
  ['  markers known but no physical position',by.get('markers known but no physical position',0)],['  no marker in atlas (paper must be read)',by.get('no marker in atlas',0)],[],
  ['Left out (position cannot be found this way)']]+[[f'  {k}',v] for k,v in skip.most_common()]+[[],
- ['Sheet "QTL without LOD"',f'{len(lod)} linkage-mapping QTL records whose LOD value is not yet in the atlas (needed for meta-QTL projection). Meta-QTL records are not included. Column "Average LOD for meta-QTL analysis" gives a value to use until the real LOD is found: the mean LOD of the other QTL of the same paper, otherwise the mean for the same disease, otherwise the mean of all atlas QTL (values below 1 ignored).'],[],
+ ['Sheet "QTL without LOD"',f'{len(lod)} linkage-mapping QTL records whose LOD value is not yet in the atlas (needed for meta-QTL projection). Meta-QTL records are not included. Column "LOD used for meta-QTL analysis" is the default LOD 2.5 for QTL whose paper gives no LOD; the Basis column says whether the paper reports LOD values (to be read), is an association study (p-values only) or gives none.'],[],
  ['How to use','Filter by Reference to work paper by paper. The hint column says where the missing value is usually found. Positions found can be sent back for in-silico placement.']]
 for x in info: ws.append(x)
 ws['A1'].font=Font(name='Arial',size=12,bold=True)
